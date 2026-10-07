@@ -50,7 +50,7 @@ def _sim(sid: str) -> Simulation:
 
 def _response(sim: Simulation) -> dict:
     state = sim.state
-    return {"card": sim.pact.card,
+    return {"card": sim.pact.snapshot(),
             "simulation": {"bot_turns": state["bot_turns"], "max_bot_turns": state["max_bot_turns"]},
             "calls": getattr(sim.pact.llm.client, "calls", 0)}
 
@@ -172,7 +172,7 @@ class DecisionRequest(BaseModel):
 def record_decision(sid: str, req: DecisionRequest):
     sim = _sim(sid)
     try:
-        sim.pact.record_decision(req.proposal_id, req.rationale)
+        sim.pact.record_decision(req.proposal_id, req.rationale)  # proposal_id carries an option id
         return _response(sim)
     except (ValueError, KeyError) as exc:
         raise HTTPException(400, str(exc))
@@ -195,12 +195,8 @@ def confirm_interpretation(sid: str, iid: str, req: ConfirmRequest):
 # ── Simulation routes (the test harness) ──────────────────────────────────────
 
 def _bg_observe(sim: Simulation, msg: dict):
-    """Let Pact observe a simulated message after the response is sent."""
-    try:
-        sim.pact.observe(msg)
-        sim.pact.save()
-    except Exception:
-        pass  # observation errors are non-fatal; card stays at current version
+    """Let Pact observe a simulated message after the response is sent (errors are logged on the card)."""
+    sim.pact.observe(msg)
 
 
 @app.post("/api/sessions/{sid}/bot-turn")

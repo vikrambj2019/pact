@@ -55,7 +55,8 @@ Bot messages are round-robin. The bot-message limit excludes your messages. High
 
 ## Data and guardrails
 
-- Card changes must cite exact text from a recorded source message.
+- The observer proposes typed actions (add an option, supersede a constraint, record someone's explicit yes, ...); Python validates each one. Every change must quote its source message exactly, and every item keeps a history of who said what, when, with the quote.
+- An agreement counts only explicit yeses ("agreed", "fine", "ok", 👍 count); it is "agreed by all" only when every participant said yes. Silence never counts.
 - Individual positions must be attributed to their speaker and are only recorded with mapping permission. Shared display also checks the participant's sharing permission.
 - Ambiguous human interpretations stay outside confirmed card state until explicitly confirmed. Ambiguous simulated-participant interpretations are skipped and recorded in the audit because simulated participants cannot confirm items in this MVP.
 - Models cannot write decision, permission, participant, or history fields. Only the admin UI can record the session decision.

@@ -38,23 +38,6 @@ def test_simulation_state_is_saved_beside_the_card_not_in_it(tmp_path):
     assert saved_models(tmp_path / "session.json") == (None, None)  # fake model names are not claude-*
 
 
-def test_loads_session_saved_before_the_split(tmp_path):
-    sim = setup_sim(tmp_path)
-    card = sim.pact.card
-    card.update({"bot_turns": 3, "max_bot_turns": 9, "bot_order": ["sim_1", "sim_2"], "next_bot_index": 3,
-                 "run_settings": {"backend": "live", "participant_model": "claude-haiku-x",
-                                  "research_model": "claude-sonnet-x"},
-                 "claims": [{"id": "claim_1", "statement": "Old claim", "made_by": "sim_1"}]})
-    path = tmp_path / "old.json"
-    path.write_text(json.dumps({"card": card, "profiles": sim.profiles}))
-    assert saved_models(path) == ("claude-sonnet-x", "claude-haiku-x")
-    loaded = Simulation.load(path, FakePactLLM(), FakeParticipants())
-    assert loaded.state["bot_turns"] == 3 and loaded.state["max_bot_turns"] == 9
-    assert "bot_turns" not in loaded.pact.card
-    assert loaded.pact.card["claims"][0]["checkable"] is True
-    assert loaded.bot_turn()["speaker_id"] == "sim_2"
-
-
 def test_setup_validation(tmp_path):
     with pytest.raises(ValueError, match="one and five"):
         setup_sim(tmp_path, bots=0)

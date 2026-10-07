@@ -44,10 +44,7 @@ class Simulation:
 
     @classmethod
     def load(cls, path: Path, pact_llm, participant_llm):
-        pact = PactSession.load(path, pact_llm)
-        if "simulation" not in pact.extras:
-            _migrate_v1(pact)
-        return cls(pact, participant_llm)
+        return cls(PactSession.load(path, pact_llm), participant_llm)
 
     @property
     def profiles(self) -> list[dict]:
@@ -76,27 +73,9 @@ class Simulation:
 
 
 def saved_models(path: Path) -> tuple[str | None, str | None]:
-    """(pact_model, participant_model) recorded in a saved session, in either file format."""
+    """(pact_model, participant_model) recorded in a saved session."""
     data = json.loads(path.read_text())
-    settings = data["card"].get("run_settings", {})
-    pact_model = settings.get("pact_model") or settings.get("research_model")
-    participant_model = data.get("simulation", {}).get("participant_model") or settings.get("participant_model")
+    pact_model = data["card"].get("run_settings", {}).get("pact_model")
+    participant_model = data.get("simulation", {}).get("participant_model")
     keep = lambda m: m if m and m.startswith("claude-") else None
     return keep(pact_model), keep(participant_model)
-
-
-def _migrate_v1(pact: PactSession) -> None:
-    """Move simulation bookkeeping out of a card saved before Pact and the harness were separated."""
-    card = pact.card
-    old_settings = card.get("run_settings", {})
-    pact.extras["simulation"] = {
-        "profiles": pact.extras.pop("profiles", []),
-        "bot_order": card.pop("bot_order", []),
-        "next_bot_index": card.pop("next_bot_index", 0),
-        "bot_turns": card.pop("bot_turns", 0),
-        "max_bot_turns": card.pop("max_bot_turns", 18),
-        "participant_model": old_settings.get("participant_model"),
-    }
-    card["run_settings"] = {"pact_model": old_settings.get("research_model")}
-    for claim in card.get("claims", []):
-        claim.setdefault("checkable", True)  # v1 treated every recorded claim as checkable

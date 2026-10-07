@@ -1,9 +1,9 @@
-"""Pact on its own: observe, check, interpret, and the admin's authority. No simulation involved."""
+"""Pact on its own: session basics, check, interpret, and the admin's authority. Observe is in test_observe.py."""
 import json
 
 import pytest
 
-from fakes import FakePactLLM, change, claim
+from fakes import FakePactLLM, act, claim
 from mvp1_c2c.pact import AnthropicClient, PactSession
 
 MEMBERS = [{"id": "p_1", "name": "Alex", "mapping_allowed": True, "share_allowed": True},
@@ -43,83 +43,12 @@ def test_json_file_does_not_contain_backend_credentials(tmp_path):
     assert "api_key" not in text
 
 
-# ── 1. observe ───────────────────────────────────────────────────────────────
-
-def test_observe_records_proposal_and_claim_with_provenance(tmp_path):
-    message = "I propose the small pilot. It could save $2 million annually if teams adopt it."
-    session = make_session(tmp_path, {message: [
-        change("proposals", "proposal_1", "I propose the small pilot",
-               {"title": "Small pilot", "proposed_by": "human_admin", "status": "proposed"}),
-        claim("claim_1", "It could save $2 million annually", "human_admin"),
-    ]})
-    msg = session.add_admin_message(message)
-    assert session.card["proposals"][0]["source_message_ids"] == [msg["id"]]
-    assert session.card["claims"][0]["checkable"] is True
-    assert [e["quote"] for e in session.card["change_log"]] == ["I propose the small pilot",
-                                                                "It could save $2 million annually"]
-
-
-def test_observe_requires_exact_quote_and_correct_claim_attribution(tmp_path):
-    session = make_session(tmp_path)
-    msg = session.add_admin_message("I prefer the pilot.")
-    before = len(session.card["change_log"])
-    with pytest.raises(ValueError, match="exact source quote"):
-        session.apply_change(claim("claim_bad", "fabricated quote", "human_admin"), msg)
-    with pytest.raises(ValueError, match="attribution"):
-        session.apply_change(claim("claim_bad", "I prefer the pilot", "p_1"), msg)
-    assert len(session.card["change_log"]) == before
-
-
-def test_observe_requires_claims_to_say_if_checkable(tmp_path):
-    session = make_session(tmp_path)
-    msg = session.add_admin_message("Tickets cost $40.")
-    unlabeled = change("claims", "claim_1", "Tickets cost $40", {"statement": "Tickets cost $40",
-                                                                 "made_by": "human_admin"})
-    with pytest.raises(ValueError, match="checkable"):
-        session.apply_change(unlabeled, msg)
-
-
-def test_observe_cannot_decide_or_verify(tmp_path):
-    session = make_session(tmp_path)
-    msg = session.add_admin_message("Let's do the pilot, it's verified.")
-    with pytest.raises(ValueError, match="decide"):
-        session.apply_change(change("proposals", "proposal_1", "Let's do the pilot",
-                                    {"title": "Pilot", "status": "agreed"}), msg)
-    verified = change("claims", "claim_1", "it's verified",
-                      {"statement": "verified", "made_by": "human_admin", "checkable": True,
-                       "verification": {"status": "verified"}})
-    with pytest.raises(ValueError, match="verified"):
-        session.apply_change(verified, msg)
-
-
-def test_observe_failure_leaves_card_unchanged(tmp_path):
-    session = make_session(tmp_path, {"Bad": [claim("claim_1", "not in message", "human_admin")]})
-    session.add_admin_message("Bad")
-    assert session.card["claims"] == []
-    assert session.card["audit"][-1]["event"] == "observation_error"
-
-
-def test_personal_mapping_requires_opt_in_and_ambiguous_member_items_are_skipped(tmp_path):
-    session = make_session(tmp_path)
-    session.card["individual_mapping"]["participant_permissions"][1]["mapping"]["status"] = "not_requested"
-    msg = {"id": "msg_1", "speaker_id": "p_1", "text": "I prefer this option."}
-    position = change("positions", "position_1", "I prefer this option", {"statement": "prefers option"},
-                      participant="p_1", needs_confirmation=True)
-    session.apply_change(position, msg)
-    assert session.card["audit"][-1]["event"] == "mapping_skipped"
-    session.card["individual_mapping"]["participant_permissions"][1]["mapping"]["status"] = "granted"
-    session.apply_change(position, msg)
-    assert not session.card["positions"]
-    assert session.card["individual_mapping"]["pending_interpretations"] == []
-    assert session.card["audit"][-1]["event"] == "interpretation_skipped"
-
-
 # ── 2. check ─────────────────────────────────────────────────────────────────
 
 def claims_session(tmp_path, intent=None):
-    texts = {"Entry is $35 per car.": [claim("claim_1", "Entry is $35 per car", "p_1")],
-             "The trail is 12 miles.": [claim("claim_2", "The trail is 12 miles", "p_2")],
-             "We'll all love it.": [claim("claim_3", "We'll all love it", "p_2", checkable=False)]}
+    texts = {"Entry is $35 per car.": [claim("Entry is $35 per car")],
+             "The trail is 12 miles.": [claim("The trail is 12 miles")],
+             "We'll all love it.": [claim("We'll all love it", checkable=False, kind="prediction")]}
     session = make_session(tmp_path, texts, intent)
     for speaker, text in [("p_1", "Entry is $35 per car."), ("p_2", "The trail is 12 miles."),
                           ("p_2", "We'll all love it.")]:
@@ -186,43 +115,36 @@ def test_interpret_is_explicit_and_cites_real_messages(tmp_path):
 
 def test_decision_snapshot_preserves_decision_and_source(tmp_path):
     message = "I propose a small pilot."
-    session = make_session(tmp_path, {message: [change("proposals", "proposal_1", message,
-                                                       {"title": "Small pilot", "status": "proposed",
-                                                        "proposed_by": "human_admin"})]})
+    session = make_session(tmp_path, {message: [act("add_option", "a small pilot", text="Small pilot")]})
     session.add_admin_message(message)
-    proposal = session.card["proposals"][0]
-    session.record_decision(proposal["id"], "Test feasibility before expanding.")
+    option = session.card["options"][0]
+    session.record_decision(option["id"], "Test feasibility before expanding.")
     assert session.card["decision"]["status"] == "recorded"
-    assert session.card["snapshots"][0]["decision"]["selected_proposal_id"] == proposal["id"]
+    assert session.card["snapshots"][0]["decision"]["selected_option_id"] == option["id"]
+    assert session.card["snapshots"][0]["options"][0]["text"] == "Small pilot"
     assert session.card["decision"]["recorded_snapshot_id"] == "snapshot_1"
     assert session.card["decision"]["rationale"]["source_message_ids"][-1] == session.card["messages"][-1]["id"]
 
 
-def test_admin_can_confirm_own_pending_interpretation(tmp_path):
-    statement = "I might prefer the pilot."
-    pending_change = change("positions", "position_pending", "I might prefer the pilot",
-                            {"stance": "prefers", "statement": "might prefer pilot"},
-                            participant="human_admin", needs_confirmation=True)
-    session = make_session(tmp_path, {statement: [pending_change]})
-    session.add_admin_message(statement)
-    pending = session.card["individual_mapping"]["pending_interpretations"][0]
-    assert not session.card["positions"]
-    session.confirm_interpretation(pending["id"], "Confirm this interpretation.")
-    assert session.card["positions"][0]["statement"] == "might prefer pilot"
-    stored = session.card["individual_mapping"]["pending_interpretations"][0]
-    assert stored["included_in_confirmed_state"] is True
-
-
 def test_pending_interpretation_requires_recheck_after_card_changes(tmp_path):
     statement = "I may prefer the pilot."
-    pending_change = change("positions", "position_pending", statement,
-                            {"statement": statement}, participant="human_admin", needs_confirmation=True)
-    session = make_session(tmp_path, {statement: [pending_change]})
+    pending = act("set_preference", statement, stance="pilot", ambiguous=True)
+    session = make_session(tmp_path, {statement: [pending]})
     session.add_admin_message(statement)
     pending = session.card["individual_mapping"]["pending_interpretations"][0]
     say(session, "p_1", "What about the cost?")
     with pytest.raises(ValueError, match="card changed"):
         session.confirm_interpretation(pending["id"], "Confirm this interpretation.")
+
+
+def test_old_card_format_is_refused(tmp_path):
+    make_session(tmp_path)
+    path = tmp_path / "session.json"
+    data = json.loads(path.read_text())
+    data["card"]["schema_version"] = "mvp1_c2c.2"
+    path.write_text(json.dumps(data))
+    with pytest.raises(ValueError, match="older card format"):
+        PactSession.load(path, FakePactLLM())
 
 
 # ── transport ────────────────────────────────────────────────────────────────

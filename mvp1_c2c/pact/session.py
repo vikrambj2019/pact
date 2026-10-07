@@ -1,6 +1,6 @@
 """A Pact session: one decision card and Pact's three functions on it.
 
-  1. observe(message)      — runs on every message; fills the card with source-quoted changes.
+  1. observe(message)      — runs on every message; fills the card with who said what, when, quoted.
   2. check_claims(...)     — on request; checks one claim, one person's claims, or all claims.
   3. interpret()           — on request; explains where the decision stands.
 
@@ -13,11 +13,14 @@ from __future__ import annotations
 import json
 import os
 import re
+import threading
 from pathlib import Path
 
-from .card import ADMIN_ID, apply_change, json_copy, new_card, now_iso
+from .card import (ADMIN_ID, SCHEMA_VERSION, SECTIONS, apply_action, json_copy, new_card, now_iso,
+                   observer_view)
 from .check import select_claims
 
+CONTEXT_MESSAGES = 15
 PACT_COMMAND = re.compile(r"^\s*pact[,\s]", re.IGNORECASE)
 
 
@@ -26,6 +29,7 @@ class PactSession:
         # `extras` is opaque data saved next to the card (e.g. a harness's own state); Pact never reads it.
         self.card, self.llm, self.path = card, llm, path
         self.extras = extras if extras is not None else {}
+        self.lock = threading.RLock()  # observation can finish in the background while other requests run
 
     @classmethod
     def create(cls, question: str, admin_name: str, members: list[dict], llm, path: Path | None = None,
@@ -42,6 +46,9 @@ class PactSession:
     def load(cls, path: Path, llm):
         data = json.loads(path.read_text())
         card = data.pop("card")
+        if card.get("schema_version") != SCHEMA_VERSION:
+            raise ValueError(f"This session uses an older card format ({card.get('schema_version')}) "
+                             f"and cannot be opened. Start a new session.")
         return cls(card, llm, path, extras=data)
 
     @property
@@ -51,48 +58,88 @@ class PactSession:
     def save(self):
         if not self.path:
             return
+        with self.lock:
+            text = json.dumps({"card": self.card, **self.extras}, ensure_ascii=False, indent=2)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         tmp = self.path.with_suffix(self.path.suffix + ".tmp")
-        tmp.write_text(json.dumps({"card": self.card, **self.extras}, ensure_ascii=False, indent=2))
+        tmp.write_text(text)
         os.replace(tmp, self.path)
+
+    def snapshot(self) -> dict:
+        """A consistent copy of the card, safe to serialize while observation runs in the background."""
+        with self.lock:
+            return json_copy(self.card)
 
     def log(self, event, detail, **extra):
         self.card["audit"].append({"at": now_iso(), "event": event, "detail": detail, **extra})
 
     # ── 1. OBSERVE ───────────────────────────────────────────────────────────
 
-    def add_message(self, speaker_id: str, text: str, source: str, observe: bool = True):
+    def add_message(self, speaker_id: str, text: str, source: str, observe: bool = True,
+                    reply_to: str | None = None):
         text = text.strip()
-        known = {p["id"] for p in self.card["participants"]}
-        if speaker_id not in known:
-            raise ValueError("Unknown participant.")
-        if not text:
-            raise ValueError("Message cannot be empty.")
-        message = {"id": f"msg_{len(self.card['messages']) + 1}", "speaker_id": speaker_id,
-                   "text": text, "source": source, "recorded_at": now_iso()}
-        self.card["messages"].append(message)
+        with self.lock:
+            known = {p["id"] for p in self.card["participants"]}
+            if speaker_id not in known:
+                raise ValueError("Unknown participant.")
+            if not text:
+                raise ValueError("Message cannot be empty.")
+            message = {"id": f"msg_{len(self.card['messages']) + 1}", "speaker_id": speaker_id,
+                       "text": text, "source": source, "recorded_at": now_iso()}
+            if reply_to:
+                if reply_to not in {m["id"] for m in self.card["messages"]}:
+                    raise ValueError("Reply target is not in this conversation.")
+                message["reply_to"] = reply_to
+            self.card["messages"].append(message)
+            self.card["card_version"] += 1
+            self.save()
         if observe:
             self.observe(message)
-        self.card["card_version"] += 1
-        self.save()
         return message
 
     def add_admin_message(self, text: str):
         return self.add_message(ADMIN_ID, text, "human")
 
-    def observe(self, message):
-        staged = json_copy(self.card)
-        try:
-            changes = self.llm.observer.observe(self.card, message)
-            for change in changes:
-                self.apply_change(change, message)
-            self.log("observation", f"Processed {len(changes)} proposed card change(s).", message_id=message["id"])
-        except Exception as exc:
-            self.card = staged
-            self.log("observation_error", type(exc).__name__, message_id=message["id"])
+    def observe(self, message: dict) -> dict:
+        return self.observe_messages([message])
 
-    def apply_change(self, change: dict, message: dict):
-        apply_change(self.card, change, message)
+    def observe_messages(self, messages: list[dict]) -> dict:
+        """Ask the observer for actions on messages already in the conversation, then apply each action on
+        its own: a rejected action is logged with its reason and never blocks the others. The model call
+        runs outside the lock; applying runs inside it. The card version goes up once per observation."""
+        with self.lock:
+            ids = [m["id"] for m in self.card["messages"]]
+            start = ids.index(messages[0]["id"])
+            context = json_copy(self.card["messages"][max(0, start - CONTEXT_MESSAGES):start])
+            view = observer_view(self.card)
+        try:
+            actions = self.llm.observer.propose(view, messages, context)
+        except Exception as exc:
+            with self.lock:
+                self.log("observation_error", f"{type(exc).__name__}: {exc}"[:300],
+                         message_ids=[m["id"] for m in messages])
+                self.card["card_version"] += 1
+            self.save()
+            return {"applied": 0, "rejected": 0, "error": type(exc).__name__}
+        by_id = {m["id"]: m for m in messages}
+        refs, applied, rejected = {}, 0, 0
+        with self.lock:
+            for action in actions:
+                message = by_id.get(action.get("message_id"))
+                try:
+                    if message is None:
+                        raise ValueError("Action cites a message that is not part of this observation.")
+                    apply_action(self.card, action, message, refs)
+                    applied += 1
+                except ValueError as exc:
+                    rejected += 1
+                    self.log("observation_rejected", str(exc), action=action.get("action"),
+                             message_id=action.get("message_id"), quote=action.get("quote"))
+            self.log("observation", f"Applied {applied} action(s), rejected {rejected}.",
+                     message_ids=list(by_id))
+            self.card["card_version"] += 1
+        self.save()
+        return {"applied": applied, "rejected": rejected}
 
     # ── 2. CHECK ─────────────────────────────────────────────────────────────
 
@@ -122,10 +169,11 @@ class PactSession:
             raise ValueError("Select a claim recorded on the card.")
         if not claim.get("checkable"):
             raise ValueError("This claim is not checkable against public sources.")
-        request_message = self.add_message(ADMIN_ID, f"Pact, check this claim: {claim['statement']}",
+        request_message = self.add_message(ADMIN_ID, f"Pact, check this claim: {claim.get('corrected_to') or claim['statement']}",
                                            "explicit_request", observe=False)
         try:
-            result = self.llm.checker.check(self.card, claim, self.card["topic"]["title"])
+            current = {**claim, "statement": claim.get("corrected_to") or claim["statement"]}
+            result = self.llm.checker.check(self.card, current, self.card["topic"]["title"])
         except Exception as exc:
             self.log("claim_check_error", type(exc).__name__, claim_id=claim_id,
                      request_message_id=request_message["id"])
@@ -167,8 +215,9 @@ class PactSession:
         if not statement:
             raise ValueError("Claim statement cannot be empty.")
         claim = {"id": f"claim_{len(self.card['claims']) + 1}", "statement": statement,
-                 "made_by": ADMIN_ID, "source_message_ids": [], "checkable": True,
-                 "verification": {"status": "not_checked", "check_ids": []}}
+                 "made_by": ADMIN_ID, "kind": "fact", "checkable": True, "status": "unchallenged",
+                 "challenges": [], "verification": {"status": "not_checked", "check_ids": []},
+                 "source_message_ids": [], "history": [{"event": "added_by_admin", "at": now_iso()}]}
         self.card["claims"].append(claim)
         self.card["card_version"] += 1
         self.save()
@@ -247,9 +296,9 @@ class PactSession:
         if is_confirmation:
             original_id = pending["source_message_ids"][0]
             original = next(m for m in self.card["messages"] if m["id"] == original_id)
-            change = json_copy(pending["change"])
-            change["needs_confirmation"] = False
-            self.apply_change(change, original)
+            action = {**json_copy(pending["action"]), "ambiguous": False}
+            with self.lock:
+                apply_action(self.card, action, original)
             pending["confirmation"] = {"status": "confirmed", "confirmed_by": ADMIN_ID,
                                         "source_message_id": confirmation["id"]}
             pending["included_in_confirmed_state"] = True
@@ -262,30 +311,29 @@ class PactSession:
         self.save()
         return pending
 
-    def record_decision(self, proposal_id: str, rationale: str):
+    def record_decision(self, option_id: str, rationale: str):
         approvers = self.card["decision_process"]["approver_ids"]
         if ADMIN_ID not in approvers:
             raise ValueError("The human participant is not an authorized approver in this session.")
-        if not any(p["id"] == proposal_id for p in self.card["proposals"]):
-            raise ValueError("Choose a proposal on the card.")
+        if not any(o["id"] == option_id for o in self.card["options"]):
+            raise ValueError("Choose an option on the card.")
         if not rationale.strip():
             raise ValueError("Add the rationale for the decision.")
         authorization = self.add_message(ADMIN_ID,
-                                         f"I record the decision to select {proposal_id}. Rationale: {rationale.strip()}",
+                                         f"I record the decision to select {option_id}. Rationale: {rationale.strip()}",
                                          "decision_record", observe=False)
-        decision = {"status": "recorded", "selected_proposal_id": proposal_id,
+        decision = {"status": "recorded", "selected_option_id": option_id,
                     "decided_at": now_iso(), "authorized_by": [ADMIN_ID],
                     "rationale": {"statement": rationale.strip(),
                                   "source_message_ids": [authorization["id"]]}}
         snapshot = {"id": f"snapshot_{len(self.card['snapshots']) + 1}", "recorded_at": now_iso(),
                     "decision": json_copy(decision), "topic": json_copy(self.card["topic"]),
-                    "proposals": json_copy(self.card["proposals"]), "claims": json_copy(self.card["claims"]),
-                    "assumptions": json_copy(self.card["assumptions"]), "positions": json_copy(self.card["positions"]),
-                    "unresolved": json_copy(self.card["unresolved"]), "source_message_ids": [m["id"] for m in self.card["messages"]]}
+                    **{section: json_copy(self.card[section]) for section in SECTIONS},
+                    "source_message_ids": [m["id"] for m in self.card["messages"]]}
         self.card["snapshots"].append(snapshot)
         decision["decided_at"] = snapshot["recorded_at"]
         decision["recorded_snapshot_id"] = snapshot["id"]
         self.card["decision"] = decision
         self.card["card_version"] += 1
-        self.log("decision_recorded", "Human admin recorded an authorized decision.", proposal_id=proposal_id)
+        self.log("decision_recorded", "Human admin recorded an authorized decision.", option_id=option_id)
         self.save()

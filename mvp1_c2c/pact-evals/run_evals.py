@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Run the Pact observer against each eval transcript and score against gold.
+"""Run Pact's observe function against each eval transcript and score against gold.
+
+Uses the pact package only; no simulated participants are involved.
 
 Usage (from repo root):
     python3 mvp1_c2c/pact-evals/run_evals.py [stem ...]
@@ -19,7 +21,7 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent.parent
 sys.path.insert(0, str(REPO))
 
-from mvp1_c2c.core import AnthropicBackend, apply_change, initial_card, now_iso  # noqa: E402
+from mvp1_c2c.pact import AnthropicClient, PactLLM, apply_change, new_card, now_iso  # noqa: E402
 
 OUT_DIR = ROOT / "out"
 GOLD_DIR = ROOT / "gold"
@@ -32,21 +34,19 @@ RESULTS_DIR.mkdir(exist_ok=True)
 def build_card(transcript: dict) -> tuple[dict, dict]:
     """Create a card from a transcript using initial_card(). Returns (card, name→id map)."""
     names = transcript["participants"]
-    human_name = names[0]
-    human = {"id": "human_admin", "name": human_name, "role": "admin and participant"}
-    bots = [
-        {"id": f"sim_{i}", "name": n, "role": "participant",
+    members = [
+        {"id": f"p_{i}", "name": n, "role": "participant",
          "mapping_allowed": True, "share_allowed": True}
         for i, n in enumerate(names[1:], 1)
     ]
-    card = initial_card(transcript.get("title", transcript["id"]), human, bots, mapping_allowed=True)
+    card = new_card(transcript.get("title", transcript["id"]), names[0], members)
     name_to_id = {p["name"]: p["id"] for p in card["participants"]}
     return card, name_to_id
 
 
 # ── observer runner ───────────────────────────────────────────────────────────
 
-def run_transcript(stem: str, backend: AnthropicBackend) -> dict:
+def run_transcript(stem: str, pact: PactLLM) -> dict:
     transcript = json.loads((OUT_DIR / f"{stem}.json").read_text())
     gold = json.loads((GOLD_DIR / f"{stem}.gold.json").read_text())
 
@@ -72,7 +72,7 @@ def run_transcript(stem: str, backend: AnthropicBackend) -> dict:
 
     # One API call for the whole conversation
     try:
-        batch_result = backend.batch_observe(card, records)
+        batch_result = pact.observer.observe_batch(card, records)
         total_applied = 0
         for record in records:
             changes = batch_result.get(record["id"], [])
@@ -90,7 +90,7 @@ def run_transcript(stem: str, backend: AnthropicBackend) -> dict:
               f" unresolved={len(card['unresolved'])})")
     except Exception as exc:
         import traceback
-        errors.append({"error": f"batch_observe failed: {exc}"})
+        errors.append({"error": f"observe_batch failed: {exc}"})
         print(f"  ERROR: {exc}")
         traceback.print_exc()
 
@@ -201,12 +201,12 @@ def main():
         "hiking-05-chaos",
     ]
 
-    backend = AnthropicBackend()
+    pact = PactLLM(AnthropicClient())
     all_scores = {}
 
     for stem in stems:
         t0 = time.time()
-        result = run_transcript(stem, backend)
+        result = run_transcript(stem, pact)
         elapsed = time.time() - t0
         s = score(result)
         all_scores[stem] = s
@@ -218,7 +218,7 @@ def main():
             print(f"     {k:30s} {v}")
         for m in s.get("must_not_detail", []):
             print(f"     {'':30s} ⚠ LEAKED: {m}")
-        print(f"  elapsed: {elapsed:.1f}s  |  API calls: {backend.calls}")
+        print(f"  elapsed: {elapsed:.1f}s  |  API calls: {pact.client.calls}")
 
     print(f"\n{'='*60}")
     print("  SUMMARY")

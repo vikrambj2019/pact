@@ -18,7 +18,7 @@ INSTRUCTIONS = f"""Brief a group on where its decision stands. Be succinct: abou
 - headline: one sentence (at most 25 words) on what is leading and what is NOT decided. "Leading" means
   explicit support in the data (said_yes, preferences); say so plainly if nothing leads.
 - open_items: at most {MAX_OPEN_ITEMS}, most important first, each at most 15 words, naming the people involved.
-  Include a disputed or contradicted claim only if it affects a leading option.
+  Include a disputed claim, or a check verdict of contradicted or mixed, only if it affects a leading option.
 - next_step: one sentence (at most 20 words), concrete, naming who.
 - cited_ids: the card ids (opt_, con_, claim_, issue_, agr_) your answer relies on.
 Use people's names. Keep real disagreement and uncertainty. Never choose an option, never say the group
@@ -45,7 +45,6 @@ def interpret_view(card: dict) -> dict:
     who = lambda ids: [names.get(i, i) for i in ids]
     agreements = {a["subject_id"]: a for a in card["agreements"]}
     prefs = visible["preferences"]
-    checks = {c["id"]: c for c in card["claim_checks"]}
 
     def support(item_id):
         agreement = agreements.get(item_id)
@@ -60,11 +59,11 @@ def interpret_view(card: dict) -> dict:
                 **({"condition": p["conditional"]} if p.get("conditional") else {})}
 
     def latest_check(claim):
-        ids = claim.get("verification", {}).get("check_ids", [])
-        if not ids or ids[-1] not in checks:
+        verification = claim.get("verification", {})
+        if verification.get("status") != "checked":
             return None
-        check = checks[ids[-1]]
-        return {"status": check.get("status"), "finding": (check.get("finding") or "")[:400]}
+        return {"verdict": verification.get("verdict"), "summary": verification.get("summary"),
+                "as_of": verification.get("as_of")}
 
     weighed_in = {p["participant_id"] for p in card["preferences"]}
     for agreement in card["agreements"]:

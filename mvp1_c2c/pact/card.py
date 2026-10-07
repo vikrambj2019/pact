@@ -23,6 +23,7 @@ ID_PREFIX = {"options": "opt", "constraints": "con", "criteria": "crit", "claims
 OPTION_STATUSES = {"considering", "dropped"}
 CONSTRAINT_KINDS = {"budget", "dates", "people", "logistics", "other"}
 CLAIM_KINDS = {"fact", "prediction", "opinion"}
+CHECK_TYPES = ("price", "distance", "weather", "schedule", "rule", "availability", "other")
 REASON_STANCES = {"for", "against"}
 
 ACTIONS = {
@@ -313,9 +314,13 @@ def _apply(card: dict, name: str, action: dict, message: dict, quote: str) -> tu
         option_id = action.get("option_id") or None
         if option_id:
             _find(card, ("options",), option_id)
+        checkable = action["checkable"] and kind != "opinion"
+        check_type = (action.get("check_type") or "other") if checkable else None
+        if check_type and check_type not in CHECK_TYPES:
+            raise ValueError(f"check_type must be one of {list(CHECK_TYPES)}.")
         return "claims", _create(card, "claims", {
             "statement": _text(action), "made_by": speaker, "kind": kind, "option_id": option_id,
-            "checkable": action["checkable"] and kind != "opinion", "status": "unchallenged",
+            "checkable": checkable, "check_type": check_type, "status": "unchallenged",
             "challenges": [], "verification": {"status": "not_checked", "check_ids": []}}, message, quote)
 
     if name == "challenge_claim":

@@ -23,7 +23,12 @@ class FakeChecker:
 
     def check(self, card, claim, question):
         self.checked.append(claim["statement"])
-        return {"finding": "Fixture response; no external research.", "sources": [], "status": "test_fixture"}
+        if claim["statement"].startswith("FAIL"):
+            raise RuntimeError("search down")
+        return {"checked_statement": claim["statement"], "assumptions": [], "verdict": "contradicted",
+                "summary": "Fixture: no external research.", "as_of": "2026",
+                "evidence": [{"url": "https://example.gov/a", "title": "A", "quote": "q", "stance": "contradicts"}],
+                "evidence_dropped": 0, "search_results": 1, "domains": []}
 
 
 class FakeInterpreter:

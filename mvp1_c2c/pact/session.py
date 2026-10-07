@@ -14,14 +14,16 @@ import json
 import os
 import re
 import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from .card import (ADMIN_ID, SCHEMA_VERSION, SECTIONS, apply_action, json_copy, new_card, now_iso,
-                   observer_view)
+                   observer_view, provenance)
 from .check import select_claims
 from .interpret import MAX_OPEN_ITEMS
 
 CONTEXT_MESSAGES = 15
+MAX_PARALLEL_CHECKS = 4
 PACT_COMMAND = re.compile(r"^\s*pact[,\s]", re.IGNORECASE)
 
 
@@ -144,91 +146,115 @@ class PactSession:
 
     # ── 2. CHECK ─────────────────────────────────────────────────────────────
 
-    def check_claims(self, claim_ids: list[str] | None = None, made_by: str | None = None) -> dict:
+    def check_claims(self, claim_ids: list[str] | None = None, made_by: str | None = None,
+                     request_message: dict | None = None) -> dict:
         """Check claims by ID, every claim one participant made, or (neither given) every claim.
-        Claims the observer marked not checkable are skipped and reported, never researched."""
-        selected = select_claims(self.card, claim_ids, made_by)
-        checkable = [c for c in selected if c.get("checkable")]
-        skipped = [c["id"] for c in selected if not c.get("checkable")]
+        Claims the observer marked not checkable are skipped and reported, never researched.
+        Research runs in parallel; results are recorded in the order the claims appear on the card."""
+        with self.lock:
+            selected = select_claims(self.card, claim_ids, made_by)
+            checkable = [json_copy(c) for c in selected if c.get("checkable")]
+            skipped = [c["id"] for c in selected if not c.get("checkable")]
         if not checkable:
             raise ValueError("None of those claims can be checked against public sources "
                              "(opinions, predictions, and personal facts are not checked).")
-        results = []
-        for claim in checkable:
-            try:
-                results.append(self.check_claim(claim["id"]))
-            except Exception as exc:
-                results.append({"claim_id": claim["id"], "error": str(exc)})
-        if skipped:
-            self.log("claims_not_checkable", "Skipped claims that are not checkable.", claim_ids=skipped)
-            self.save()
-        return {"checks": results, "skipped_not_checkable": skipped}
+        if request_message is None:
+            request_message = self.add_message(
+                ADMIN_ID, "Pact, check " + "; ".join(self._claim_text(c) for c in checkable),
+                "explicit_request", observe=False)
+        card = self.snapshot()
+        question = card["topic"]["title"]
 
-    def check_claim(self, claim_id: str):
+        def research(claim):
+            try:
+                return self.llm.checker.check(card, {**claim, "statement": self._claim_text(claim)}, question)
+            except Exception as exc:  # recorded per claim below
+                return exc
+
+        with ThreadPoolExecutor(max_workers=min(MAX_PARALLEL_CHECKS, len(checkable))) as pool:
+            outcomes = list(pool.map(research, checkable))
+        checks = []
+        with self.lock:
+            for claim, outcome in zip(checkable, outcomes):
+                if isinstance(outcome, Exception):
+                    self.log("claim_check_error", f"{type(outcome).__name__}: {outcome}"[:300],
+                             claim_id=claim["id"], request_message_id=request_message["id"])
+                    checks.append({"claim_id": claim["id"], "error": outcome})
+                else:
+                    checks.append(self._record_check(claim["id"], outcome, request_message))
+            if skipped:
+                self.log("claims_not_checkable", "Skipped claims that are not checkable.", claim_ids=skipped)
+        self.save()
+        return {"checks": checks, "skipped_not_checkable": skipped}
+
+    def check_claim(self, claim_id: str, request_message: dict | None = None) -> dict:
         claim = next((c for c in self.card["claims"] if c["id"] == claim_id), None)
         if not claim:
             raise ValueError("Select a claim recorded on the card.")
         if not claim.get("checkable"):
             raise ValueError("This claim is not checkable against public sources.")
-        request_message = self.add_message(ADMIN_ID, f"Pact, check this claim: {claim.get('corrected_to') or claim['statement']}",
-                                           "explicit_request", observe=False)
-        try:
-            current = {**claim, "statement": claim.get("corrected_to") or claim["statement"]}
-            result = self.llm.checker.check(self.card, current, self.card["topic"]["title"])
-        except Exception as exc:
-            self.log("claim_check_error", type(exc).__name__, claim_id=claim_id,
-                     request_message_id=request_message["id"])
-            self.save()
-            raise
-        entry = {"id": f"check_{len(self.card['claim_checks']) + 1}", "claim_id": claim_id,
-                 "requested_by": ADMIN_ID, "request_message_id": request_message["id"],
-                 "requested_at": now_iso(), **result}
-        self.card["claim_checks"].append(entry)
-        self.card["evidence"].extend({"id": f"{entry['id']}_source_{i+1}", "claim_check_id": entry["id"], **src}
-                                     for i, src in enumerate(result.get("sources", [])))
-        verification = claim.setdefault("verification", {"status": "not_checked", "check_ids": []})
-        verification["status"] = "checked"
-        verification.setdefault("check_ids", []).append(entry["id"])
-        self.log("claim_check", "Explicitly requested claim research completed.", claim_id=claim_id,
-                 status=result.get("status"))
-        self.card["card_version"] += 1
-        self.save()
+        [entry] = self.check_claims([claim_id], request_message=request_message)["checks"]
+        if "error" in entry:
+            raise entry["error"]
         return entry
 
-    def check_statement(self, statement: str):
-        """Check a fact the admin names that is not recorded as a claim on the card."""
-        statement = statement.strip()
-        if not statement:
-            raise ValueError("Could not extract a verifiable statement from your request.")
-        adhoc_claim = {"statement": statement, "made_by": ADMIN_ID, "source_message_ids": []}
-        result = self.llm.checker.check(self.card, adhoc_claim, self.card["topic"]["title"])
-        entry = {"id": f"check_{len(self.card['claim_checks']) + 1}",
-                 "claim_id": None, "requested_by": ADMIN_ID,
-                 "request_message_id": None, "requested_at": now_iso(), **result,
-                 "ad_hoc_statement": statement}
-        self.card["claim_checks"].append(entry)
-        self.card["card_version"] += 1
-        self.add_message(ADMIN_ID, f"Pact checked (ad-hoc): {statement}", "explicit_request", observe=False)
-        return entry
+    def check_statement(self, statement: str, request_message: dict | None = None) -> dict:
+        """Check a fact the admin names: it becomes the admin's claim on the card, then is checked like any other."""
+        claim = self.add_admin_claim(statement, request_message)
+        return self.check_claim(claim["id"], request_message)
 
-    def add_manual_claim(self, statement: str):
+    def add_admin_claim(self, statement: str, source_message: dict | None = None) -> dict:
         statement = statement.strip()
         if not statement:
             raise ValueError("Claim statement cannot be empty.")
-        claim = {"id": f"claim_{len(self.card['claims']) + 1}", "statement": statement,
-                 "made_by": ADMIN_ID, "kind": "fact", "checkable": True, "status": "unchallenged",
-                 "challenges": [], "verification": {"status": "not_checked", "check_ids": []},
-                 "source_message_ids": [], "history": [{"event": "added_by_admin", "at": now_iso()}]}
-        self.card["claims"].append(claim)
-        self.card["card_version"] += 1
+        with self.lock:
+            origin = (provenance(source_message, source_message["text"]) if source_message
+                      else {"speaker_id": ADMIN_ID, "at": now_iso()})
+            claim = {"id": f"claim_{len(self.card['claims']) + 1}", "statement": statement,
+                     "made_by": ADMIN_ID, "kind": "fact", "option_id": None, "checkable": True,
+                     "check_type": "other", "status": "unchallenged", "challenges": [],
+                     "verification": {"status": "not_checked", "check_ids": []},
+                     "source_message_ids": [source_message["id"]] if source_message else [],
+                     "history": [{"event": "added_by_admin", **origin}]}
+            self.card["claims"].append(claim)
+            self.card["card_version"] += 1
         self.save()
         return claim
 
+    add_manual_claim = add_admin_claim
+
+    @staticmethod
+    def _claim_text(claim: dict) -> str:
+        return claim.get("corrected_to") or claim["statement"]
+
+    def _record_check(self, claim_id: str, result: dict, request_message: dict) -> dict:
+        """Write a check result: the check entry, its evidence, and the verdict on the claim. Caller holds the lock."""
+        entry = {"id": f"check_{len(self.card['claim_checks']) + 1}", "claim_id": claim_id,
+                 "requested_by": ADMIN_ID, "request_message_id": request_message["id"],
+                 "requested_at": request_message.get("recorded_at"), "completed_at": now_iso(), **result}
+        self.card["claim_checks"].append(entry)
+        self.card["evidence"].extend({"id": f"{entry['id']}_ev_{i + 1}", "claim_check_id": entry["id"],
+                                      "claim_id": claim_id, **ev} for i, ev in enumerate(result.get("evidence", [])))
+        claim = next(c for c in self.card["claims"] if c["id"] == claim_id)
+        check_ids = claim.get("verification", {}).get("check_ids", []) + [entry["id"]]
+        claim["verification"] = {"status": "checked", "verdict": result.get("verdict"),
+                                 "summary": result.get("summary", ""), "as_of": result.get("as_of", ""),
+                                 "checked_at": entry["completed_at"], "check_ids": check_ids}
+        claim.setdefault("history", []).append({"event": "checked", "verdict": result.get("verdict"),
+                                                "check_id": entry["id"], "message_id": request_message["id"],
+                                                "speaker_id": request_message["speaker_id"],
+                                                "at": request_message.get("recorded_at")})
+        self.log("claim_check", "Explicitly requested claim check completed.", claim_id=claim_id,
+                 verdict=result.get("verdict"))
+        self.card["card_version"] += 1
+        return entry
+
     # ── 3. INTERPRET ─────────────────────────────────────────────────────────
 
-    def interpret(self):
-        request_message = self.add_message(ADMIN_ID, "Pact, help us understand where this decision stands.",
-                                           "explicit_request", observe=False)
+    def interpret(self, request_message: dict | None = None):
+        if request_message is None:
+            request_message = self.add_message(ADMIN_ID, "Pact, help us understand where this decision stands.",
+                                               "explicit_request", observe=False)
         try:
             result = self.llm.interpreter.interpret(self.card)
         except Exception as exc:
@@ -256,29 +282,30 @@ class PactSession:
     # ── 'pact, ...' commands route to check or interpret ────────────────────
 
     def handle_command(self, text: str) -> bool:
-        """Handle a 'pact, ...' message. Returns False when it is not a command Pact acts on."""
+        """Handle a 'pact, ...' message. The admin's own words are recorded as the request.
+        Returns False when it is not a command Pact acts on (the caller records it as a normal message)."""
         if not PACT_COMMAND.match(text):
             return False
         intent = self.llm.commands.parse(text, self.card)
         action = intent.get("action", "unknown")
+        if action == "check_claims" and not (intent.get("check_all") or intent.get("claim_ids")
+                                             or intent.get("made_by")):
+            raise ValueError("Say which claims to check: a claim, a person's claims, or all claims.")
+        if action == "check_statement" and not (intent.get("statement") or "").strip():
+            raise ValueError("Could not tell which fact to check.")
+        if action not in {"check_claims", "check_statement", "interpret"}:
+            return False
+        request = self.add_message(ADMIN_ID, text, "pact_command", observe=False)
         if action == "check_claims":
-            claim_ids = [] if intent.get("check_all") else intent.get("claim_ids", [])
-            made_by = None if intent.get("check_all") else (intent.get("made_by") or None)
-            if not (claim_ids or made_by or intent.get("check_all")):
-                raise ValueError("Say which claims to check: a claim, a person's claims, or all claims.")
-            outcome = self.check_claims(claim_ids or None, made_by)
-            checked = len([r for r in outcome["checks"] if "error" not in r])
-            skipped = len(outcome["skipped_not_checkable"])
-            self.add_message(ADMIN_ID, f"Pact checked {checked} claim(s); skipped {skipped} not checkable.",
-                             "explicit_request", observe=False)
-            return True
-        if action == "check_statement":
-            self.check_statement(intent.get("statement", ""))
-            return True
-        if action == "interpret":
-            self.interpret()
-            return True
-        return False
+            if intent.get("check_all"):
+                self.check_claims(request_message=request)
+            else:
+                self.check_claims(intent.get("claim_ids") or None, intent.get("made_by") or None, request)
+        elif action == "check_statement":
+            self.check_statement(intent["statement"], request)
+        else:
+            self.interpret(request)
+        return True
 
     # ── admin authority ──────────────────────────────────────────────────────
 

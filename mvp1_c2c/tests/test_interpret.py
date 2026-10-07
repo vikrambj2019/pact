@@ -75,7 +75,8 @@ def test_interpret_view_includes_latest_check_and_drops_retracted(tmp_path):
     session = chat_session(tmp_path)
     session.check_claim("claim_1")
     view = interpret_view(session.card)
-    assert view["claims"][0]["check"]["status"] == "test_fixture"
+    assert view["claims"][0]["check"] == {"verdict": "contradicted", "summary": "Fixture: no external research.",
+                                          "as_of": "2026"}
     session.card["claims"][0]["status"] = "retracted"
     assert interpret_view(session.card)["claims"] == []
 

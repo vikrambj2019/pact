@@ -26,7 +26,9 @@ mvp1_c2c/
 
 ### What Pact checks
 
-A claim is checkable only when it is a factual statement about the outside world that public web sources can confirm or contradict (prices, distances, dates, weather, closures, permits, rules, availability). Opinions, predictions about the group, and facts about a participant themselves are recorded but never researched. The observer marks each claim `checkable`; the definition lives in `pact/check.py`. To restrict which websites a check may search, set `PACT_CHECK_DOMAINS` (comma-separated, e.g. `nps.gov,weather.gov`); unset means any site.
+A claim is checkable only when it is a factual statement about the outside world that public web sources can confirm or contradict (prices, distances, dates, weather, closures, permits, rules, availability). Opinions, predictions about the group, and facts about a participant themselves are recorded but never researched. The observer writes each claim as a standalone statement, marks it `checkable`, and gives it a `check_type`; the definition lives in `pact/check.py`.
+
+A check researches the claim with web search, then reports the exact statement checked, any assumptions, a verdict (`supported`, `contradicted`, `mixed`, `insufficient`), a short summary and an as-of date. Only sources the research actually cited count as evidence, and each evidence quote must match that source's cited text; with no such evidence the verdict is `insufficient`. The verdict is written onto the claim. Allowed websites can be set per claim type in `DOMAINS_BY_TYPE` (`pact/check.py`), or for all checks with `PACT_CHECK_DOMAINS` (comma-separated); empty means any site.
 
 ## Run it
 

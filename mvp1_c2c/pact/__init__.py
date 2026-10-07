@@ -9,11 +9,11 @@ card.py holds the card and the rules every change must pass; session.py ties it 
 Nothing in this package knows about simulated participants.
 """
 from .card import ADMIN_ID, SCHEMA_VERSION, apply_action, new_card, now_iso, observer_view, public_card
-from .check import ALLOWED_DOMAINS, CHECKABLE_DEFINITION, select_claims
+from .check import ALLOWED_DOMAINS, CHECKABLE_DEFINITION, DOMAINS_BY_TYPE, select_claims
 from .llm import PactLLM
 from .llm_client import AnthropicClient
 from .session import PactSession
 
-__all__ = ["ADMIN_ID", "ALLOWED_DOMAINS", "AnthropicClient", "CHECKABLE_DEFINITION", "PactLLM",
+__all__ = ["ADMIN_ID", "ALLOWED_DOMAINS", "DOMAINS_BY_TYPE", "AnthropicClient", "CHECKABLE_DEFINITION", "PactLLM",
            "PactSession", "SCHEMA_VERSION", "apply_action", "new_card", "now_iso", "observer_view",
            "public_card", "select_claims"]

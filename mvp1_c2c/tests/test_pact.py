@@ -1,4 +1,4 @@
-"""Pact on its own: session basics, check, interpret, and the admin's authority. Observe is in test_observe.py."""
+"""Pact on its own: session basics, the admin's authority, transport. Each function has its own test file."""
 import json
 
 import pytest
@@ -41,64 +41,6 @@ def test_json_file_does_not_contain_backend_credentials(tmp_path):
     text = (tmp_path / "session.json").read_text()
     assert "ANTHROPIC_API_KEY" not in text
     assert "api_key" not in text
-
-
-# ── 2. check ─────────────────────────────────────────────────────────────────
-
-def claims_session(tmp_path, intent=None):
-    texts = {"Entry is $35 per car.": [claim("Entry is $35 per car")],
-             "The trail is 12 miles.": [claim("The trail is 12 miles")],
-             "We'll all love it.": [claim("We'll all love it", checkable=False, kind="prediction")]}
-    session = make_session(tmp_path, texts, intent)
-    for speaker, text in [("p_1", "Entry is $35 per car."), ("p_2", "The trail is 12 miles."),
-                          ("p_2", "We'll all love it.")]:
-        say(session, speaker, text)
-    return session
-
-
-def test_check_one_claim_records_request_evidence_and_verification(tmp_path):
-    session = claims_session(tmp_path)
-    entry = session.check_claim("claim_1")
-    assert entry["status"] == "test_fixture"
-    assert entry["request_message_id"] == session.card["messages"][-1]["id"]
-    assert session.card["messages"][-1]["source"] == "explicit_request"
-    assert session.card["claims"][0]["verification"] == {"status": "checked", "check_ids": [entry["id"]]}
-    assert session.card["audit"][-1]["event"] == "claim_check"
-
-
-def test_check_one_persons_claims_skips_the_uncheckable(tmp_path):
-    session = claims_session(tmp_path)
-    outcome = session.check_claims(made_by="p_2")
-    assert [c["claim_id"] for c in outcome["checks"]] == ["claim_2"]
-    assert outcome["skipped_not_checkable"] == ["claim_3"]
-    assert session.llm.checker.checked == ["The trail is 12 miles"]
-
-
-def test_check_all_claims(tmp_path):
-    session = claims_session(tmp_path)
-    outcome = session.check_claims()
-    assert [c["claim_id"] for c in outcome["checks"]] == ["claim_1", "claim_2"]
-    assert outcome["skipped_not_checkable"] == ["claim_3"]
-
-
-def test_check_refuses_uncheckable_or_unknown_claims(tmp_path):
-    session = claims_session(tmp_path)
-    with pytest.raises(ValueError, match="not checkable"):
-        session.check_claim("claim_3")
-    with pytest.raises(ValueError, match="None of those claims can be checked"):
-        session.check_claims(claim_ids=["claim_3"])
-    with pytest.raises(ValueError, match="Not claims on this card"):
-        session.check_claims(claim_ids=["claim_99"])
-    assert session.llm.checker.checked == []
-
-
-def test_pact_command_routes_person_check(tmp_path):
-    intent = {"action": "check_claims", "claim_ids": [], "made_by": "p_1", "check_all": False,
-              "statement": "", "reasoning": "Asked for Alex's claims."}
-    session = claims_session(tmp_path, intent)
-    assert session.handle_command("Pact, check Alex's claims") is True
-    assert session.llm.checker.checked == ["Entry is $35 per car"]
-    assert session.handle_command("not a command") is False
 
 
 # ── admin authority ──────────────────────────────────────────────────────────

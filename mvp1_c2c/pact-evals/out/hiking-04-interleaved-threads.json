@@ -1,0 +1,612 @@
+{
+ "id": "hiking-04-interleaved-threads",
+ "title": "Hiking 04 - interleaved decisions, sarcasm, misquotes, a retraction, a returning member",
+ "group": "Hiking Crew 🥾",
+ "level": 4,
+ "timezone": "America/Los_Angeles",
+ "participants": [
+  "Sam",
+  "Alex",
+  "Priya",
+  "Jordan",
+  "Maya",
+  "Leo"
+ ],
+ "nicknames": "J and JD = Jordan; Al = Alex",
+ "messages": [
+  {
+   "id": "m001",
+   "ts": "2026-09-17T12:30:00",
+   "sender": "Sam",
+   "text": "Team. November hiking trip. Let's actually decide this week. Destination, dates, budget."
+  },
+  {
+   "id": "m002",
+   "ts": "2026-09-17T12:31:00",
+   "sender": "Alex",
+   "text": "Patagonia. Torres del Paine. I've been saying it for two years."
+  },
+  {
+   "id": "m003",
+   "ts": "2026-09-17T12:32:00",
+   "sender": "Priya",
+   "text": "Dolomites, hut to hut. Rifugio dinners, mountains, done."
+  },
+  {
+   "id": "m004",
+   "ts": "2026-09-17T12:34:00",
+   "sender": "Jordan",
+   "text": "I'm good with either honestly, just tell me where to show up."
+  },
+  {
+   "id": "m005",
+   "ts": "2026-09-17T12:35:00",
+   "sender": "Maya",
+   "text": "Either is fine if it's not crazy expensive."
+  },
+  {
+   "id": "m006",
+   "ts": "2026-09-17T12:37:00",
+   "sender": "Leo",
+   "text": "I'm flexible on almost everything, but I'd love a proper hut-to-hut trip. Never done one."
+  },
+  {
+   "id": "m007",
+   "ts": "2026-09-17T12:39:00",
+   "sender": "Sam",
+   "text": "Dates: Nov 14 to 21?"
+  },
+  {
+   "id": "m008",
+   "ts": "2026-09-17T12:40:00",
+   "sender": "Alex",
+   "text": "Yes."
+  },
+  {
+   "id": "m009",
+   "ts": "2026-09-17T12:41:00",
+   "sender": "Priya",
+   "text": "Yes."
+  },
+  {
+   "id": "m010",
+   "ts": "2026-09-17T12:42:00",
+   "sender": "Jordan",
+   "text": "Yes"
+  },
+  {
+   "id": "m011",
+   "ts": "2026-09-17T12:43:00",
+   "sender": "Maya",
+   "text": "Yes."
+  },
+  {
+   "id": "m012",
+   "ts": "2026-09-17T12:44:00",
+   "sender": "Leo",
+   "text": "Yes, good for me. Need to be back by the 22nd."
+  },
+  {
+   "id": "m013",
+   "ts": "2026-09-17T12:46:00",
+   "sender": "Sam",
+   "text": "Budget $2,500 per person all in?"
+  },
+  {
+   "id": "m014",
+   "ts": "2026-09-17T12:47:00",
+   "sender": "Alex",
+   "text": "Fine."
+  },
+  {
+   "id": "m015",
+   "ts": "2026-09-17T12:48:00",
+   "sender": "Priya",
+   "text": "Fine."
+  },
+  {
+   "id": "m016",
+   "ts": "2026-09-17T12:49:00",
+   "sender": "Jordan",
+   "text": "Sure."
+  },
+  {
+   "id": "m017",
+   "ts": "2026-09-17T12:50:00",
+   "sender": "Maya",
+   "text": "Fine, ideally less."
+  },
+  {
+   "id": "m018",
+   "ts": "2026-09-17T12:51:00",
+   "sender": "Leo",
+   "text": "Fine by me. Heading into a meeting, back tonight."
+  },
+  {
+   "id": "m019",
+   "ts": "2026-09-17T12:57:00",
+   "sender": "Alex",
+   "text": "Patagonia flights are about $1,300 round trip. I checked earlier."
+  },
+  {
+   "id": "m020",
+   "ts": "2026-09-17T12:59:00",
+   "sender": "Priya",
+   "text": "I just checked for Nov 14 to 21 specifically and I'm seeing $1,800 from SFO.",
+   "reply_to": "m019"
+  },
+  {
+   "id": "m021",
+   "ts": "2026-09-17T13:00:00",
+   "sender": "Alex",
+   "text": "Then wait a week, they'll drop. They always drop.",
+   "reply_to": "m020"
+  },
+  {
+   "id": "m022",
+   "ts": "2026-09-17T13:01:00",
+   "sender": "Jordan",
+   "text": "Oh sure, because airfare famously only goes down.",
+   "reply_to": "m021"
+  },
+  {
+   "id": "m023",
+   "ts": "2026-09-17T13:03:00",
+   "sender": "Priya",
+   "text": "Dolomites is around $900 into Venice, and there's a train to Cortina."
+  },
+  {
+   "id": "m024",
+   "ts": "2026-09-17T13:04:00",
+   "sender": "Alex",
+   "text": "Fair, but the Dolomites huts are basically all closed by mid-November."
+  },
+  {
+   "id": "m025",
+   "ts": "2026-09-17T13:05:00",
+   "sender": "Maya",
+   "text": "Oh great, $1,800 for flights. Budget's just a suggestion I guess.",
+   "reply_to": "m020"
+  },
+  {
+   "id": "m026",
+   "ts": "2026-09-17T13:07:00",
+   "sender": "Priya",
+   "text": "Alex, hut opening dates vary. I'll check the actual dates tonight.",
+   "reply_to": "m024"
+  },
+  {
+   "id": "m027",
+   "ts": "2026-09-17T13:08:00",
+   "sender": "Alex",
+   "text": "Priya's flight number can't be right, I saw $1,300.",
+   "reply_to": "m020"
+  },
+  {
+   "id": "m028",
+   "ts": "2026-09-17T13:09:00",
+   "sender": "Priya",
+   "text": "Al, mine is for the exact dates. Yours may have been for another month.",
+   "reply_to": "m027"
+  },
+  {
+   "id": "m029",
+   "ts": "2026-09-17T13:11:00",
+   "sender": "Alex",
+   "text": "Could be. Patagonia is still worth it."
+  },
+  {
+   "id": "m030",
+   "ts": "2026-09-18T07:11:00",
+   "sender": "Priya",
+   "text": "Hut update. I went through the websites of the main rifugi around Cortina and Val Gardena. Most close between late October and about Nov 5.",
+   "reply_to": "m026"
+  },
+  {
+   "id": "m031",
+   "ts": "2026-09-18T07:12:00",
+   "sender": "Priya",
+   "text": "So for Nov 14 to 21, hut to hut is basically off the table. Al was right about that."
+  },
+  {
+   "id": "m032",
+   "ts": "2026-09-18T07:13:00",
+   "sender": "Alex",
+   "text": "Told you."
+  },
+  {
+   "id": "m033",
+   "ts": "2026-09-18T07:15:00",
+   "sender": "Jordan",
+   "text": "So it's just valley hiking in the Dolomites then? Day hikes from a base?"
+  },
+  {
+   "id": "m034",
+   "ts": "2026-09-18T07:16:00",
+   "sender": "Priya",
+   "text": "Yes, and that could be great. I think the cable cars in the valleys still run until early December.",
+   "reply_to": "m033"
+  },
+  {
+   "id": "m035",
+   "ts": "2026-09-18T07:18:00",
+   "sender": "Sam",
+   "text": "Leo said he's fine with anything, so that's Leo covered."
+  },
+  {
+   "id": "m036",
+   "ts": "2026-09-18T07:19:00",
+   "sender": "Maya",
+   "text": "Valley hiking is cheaper too, no hut fees."
+  },
+  {
+   "id": "m037",
+   "ts": "2026-09-18T07:20:00",
+   "sender": "Sam",
+   "text": "J, are you on team Dolomites then?"
+  },
+  {
+   "id": "m038",
+   "ts": "2026-09-18T07:21:00",
+   "sender": "Jordan",
+   "text": "Yeah, if it's cheaper. Dolomites."
+  },
+  {
+   "id": "m039",
+   "ts": "2026-09-18T07:22:00",
+   "sender": "Alex",
+   "text": "JD, come on, you said either.",
+   "reply_to": "m038"
+  },
+  {
+   "id": "m040",
+   "ts": "2026-09-18T07:23:00",
+   "sender": "Jordan",
+   "text": "I said either, then Priya found the price difference.",
+   "reply_to": "m039"
+  },
+  {
+   "id": "m041",
+   "ts": "2026-09-18T07:26:00",
+   "sender": "Priya",
+   "text": "Separate thing. I found a chalet in Ortisei. Six beds, $2,240 for the week, so about $373 each."
+  },
+  {
+   "id": "m042",
+   "ts": "2026-09-18T07:28:00",
+   "sender": "Maya",
+   "text": "$373 is fine. Flights $900, chalet $373, food maybe $500. That's about $1,800, so there's room."
+  },
+  {
+   "id": "m043",
+   "ts": "2026-09-18T07:30:00",
+   "sender": "Sam",
+   "text": "So Patagonia flights are $1,300 like Alex said and the Dolomites total is about $1,800."
+  },
+  {
+   "id": "m044",
+   "ts": "2026-09-18T07:31:00",
+   "sender": "Priya",
+   "text": "Sam, I said $1,800 for the Patagonia flights. Alex's $1,300 was an older number.",
+   "reply_to": "m043"
+  },
+  {
+   "id": "m045",
+   "ts": "2026-09-18T07:33:00",
+   "sender": "Alex",
+   "text": "She's right. Scratch my $1,300, that was a spring fare. $1,800 is right for these dates.",
+   "reply_to": "m044"
+  },
+  {
+   "id": "m046",
+   "ts": "2026-09-18T07:34:00",
+   "sender": "Alex",
+   "text": "But Patagonia is still the better trip."
+  },
+  {
+   "id": "m047",
+   "ts": "2026-09-18T07:37:00",
+   "sender": "Sam",
+   "text": "Ok, calling it. Vote. Patagonia or the Dolomites (valley-based)? One word please."
+  },
+  {
+   "id": "m048",
+   "ts": "2026-09-18T07:38:00",
+   "sender": "Priya",
+   "text": "Dolomites."
+  },
+  {
+   "id": "m049",
+   "ts": "2026-09-18T07:39:00",
+   "sender": "Jordan",
+   "text": "Dolomites."
+  },
+  {
+   "id": "m050",
+   "ts": "2026-09-18T07:40:00",
+   "sender": "Maya",
+   "text": "Dolomites."
+  },
+  {
+   "id": "m051",
+   "ts": "2026-09-18T07:41:00",
+   "sender": "Alex",
+   "text": "Patagonia."
+  },
+  {
+   "id": "m052",
+   "ts": "2026-09-18T07:43:00",
+   "sender": "Sam",
+   "text": "Dolomites from me too. That's 4 to 1, and Leo's fine with anything, so it's decided."
+  },
+  {
+   "id": "m053",
+   "ts": "2026-09-18T07:45:00",
+   "sender": "Alex",
+   "text": "Fine. I'm not thrilled but fine."
+  },
+  {
+   "id": "m054",
+   "ts": "2026-09-18T07:50:00",
+   "sender": "Priya",
+   "text": "Back to the chalet. It's free that week, but I think it'll be gone by Friday."
+  },
+  {
+   "id": "m055",
+   "ts": "2026-09-18T07:52:00",
+   "sender": "Jordan",
+   "text": "Looks great. I'm in on the chalet."
+  },
+  {
+   "id": "m056",
+   "ts": "2026-09-18T07:53:00",
+   "sender": "Maya",
+   "text": "Chalet is fine cost-wise. I'd want to see the kitchen though, I'd cook to save money."
+  },
+  {
+   "id": "m057",
+   "ts": "2026-09-18T07:55:00",
+   "sender": "Sam",
+   "text": "Leaning yes on the chalet. Alex?"
+  },
+  {
+   "id": "m058",
+   "ts": "2026-09-18T07:56:00",
+   "sender": "Alex",
+   "text": "I'll go wherever. Chalet's fine."
+  },
+  {
+   "id": "m059",
+   "ts": "2026-09-18T08:00:00",
+   "sender": "Jordan",
+   "text": "Rental cars? Two cars for the week is about $560 total, so about $93 each plus fuel."
+  },
+  {
+   "id": "m060",
+   "ts": "2026-09-18T08:01:00",
+   "sender": "Maya",
+   "text": "Careful, I think Italy requires winter tires or chains from Nov 15. Our dates straddle that."
+  },
+  {
+   "id": "m061",
+   "ts": "2026-09-18T08:02:00",
+   "sender": "Jordan",
+   "text": "Rental companies include them, no?",
+   "reply_to": "m060"
+  },
+  {
+   "id": "m062",
+   "ts": "2026-09-18T08:03:00",
+   "sender": "Maya",
+   "text": "Not sure. Probably costs extra.",
+   "reply_to": "m061"
+  },
+  {
+   "id": "m063",
+   "ts": "2026-09-18T08:06:00",
+   "sender": "Priya",
+   "text": "We could also take the train from Venice to Bolzano and then a bus into the valley. Slower but cheap."
+  },
+  {
+   "id": "m064",
+   "ts": "2026-09-18T08:08:00",
+   "sender": "Sam",
+   "text": "Let's not decide transport yet. Jordan, can you price cars including tires?"
+  },
+  {
+   "id": "m065",
+   "ts": "2026-09-18T08:09:00",
+   "sender": "Jordan",
+   "text": "Yes."
+  },
+  {
+   "id": "m066",
+   "ts": "2026-09-18T08:10:00",
+   "sender": "Priya",
+   "text": "I'll look at the train and bus times."
+  },
+  {
+   "id": "m067",
+   "ts": "2026-09-18T23:10:00",
+   "sender": "Leo",
+   "text": "Catching up. Dolomites valley hiking? I thought we were doing huts?"
+  },
+  {
+   "id": "m068",
+   "ts": "2026-09-18T23:14:00",
+   "sender": "Sam",
+   "text": "The huts close before mid-Nov, Priya checked. So valley hiking from a chalet. Everyone's on board, and you said you're fine with anything.",
+   "reply_to": "m067"
+  },
+  {
+   "id": "m069",
+   "ts": "2026-09-18T23:16:00",
+   "sender": "Leo",
+   "text": "I said I was flexible, not that I didn't care. I was really excited about the huts.",
+   "reply_to": "m068"
+  },
+  {
+   "id": "m070",
+   "ts": "2026-09-18T23:18:00",
+   "sender": "Priya",
+   "text": "Sorry Leo, the huts really do close before our dates.",
+   "reply_to": "m069"
+  },
+  {
+   "id": "m071",
+   "ts": "2026-09-18T23:21:00",
+   "sender": "Leo",
+   "text": "Ok. Then honestly I'd rather do Patagonia with the refugios, that's the hut experience."
+  },
+  {
+   "id": "m072",
+   "ts": "2026-09-18T23:22:00",
+   "sender": "Alex",
+   "text": "Yes! Leo gets it. Patagonia."
+  },
+  {
+   "id": "m073",
+   "ts": "2026-09-18T23:25:00",
+   "sender": "Sam",
+   "text": "Leo, we voted while you were away. It was 4 to 1 for the Dolomites. With you it's 4 to 2."
+  },
+  {
+   "id": "m074",
+   "ts": "2026-09-18T23:27:00",
+   "sender": "Leo",
+   "text": "Fine, majority rules. I'll go along. Just wanted it noted."
+  },
+  {
+   "id": "m075",
+   "ts": "2026-09-18T23:28:00",
+   "sender": "Alex",
+   "text": "Same here. I'll go along. Also noted."
+  },
+  {
+   "id": "m076",
+   "ts": "2026-09-18T23:30:00",
+   "sender": "Sam",
+   "text": "Thanks both, I appreciate it."
+  },
+  {
+   "id": "m077",
+   "ts": "2026-09-18T23:33:00",
+   "sender": "Leo",
+   "text": "Chalet's fine. Is it close to a cable car though? I'd want a couple of high days."
+  },
+  {
+   "id": "m078",
+   "ts": "2026-09-18T23:35:00",
+   "sender": "Priya",
+   "text": "It's a short walk to the Seceda lift in Ortisei. I'll double check the November operating dates."
+  },
+  {
+   "id": "m079",
+   "ts": "2026-09-18T23:37:00",
+   "sender": "Sam",
+   "text": "Great, so the chalet is Ortisei, six of us. Priya, can you book before Friday?"
+  },
+  {
+   "id": "m080",
+   "ts": "2026-09-18T23:38:00",
+   "sender": "Priya",
+   "text": "Not until everyone confirms. Alex, Maya, Jordan, Leo, can you each confirm the chalet?"
+  },
+  {
+   "id": "m081",
+   "ts": "2026-09-18T23:39:00",
+   "sender": "Jordan",
+   "text": "Confirmed."
+  },
+  {
+   "id": "m082",
+   "ts": "2026-09-18T23:40:00",
+   "sender": "Maya",
+   "text": "Confirmed, once I've seen the kitchen photos."
+  },
+  {
+   "id": "m083",
+   "ts": "2026-09-18T23:41:00",
+   "sender": "Alex",
+   "text": "Confirmed."
+  },
+  {
+   "id": "m084",
+   "ts": "2026-09-18T23:42:00",
+   "sender": "Leo",
+   "text": "Confirmed."
+  },
+  {
+   "id": "m085",
+   "ts": "2026-09-18T23:45:00",
+   "sender": "Priya",
+   "text": "Sent the kitchen photos."
+  },
+  {
+   "id": "m086",
+   "ts": "2026-09-18T23:46:00",
+   "sender": "Priya",
+   "text": "<Media omitted>"
+  },
+  {
+   "id": "m087",
+   "ts": "2026-09-18T23:48:00",
+   "sender": "Maya",
+   "text": "Kitchen is fine. Fully confirmed."
+  },
+  {
+   "id": "m088",
+   "ts": "2026-09-18T23:49:00",
+   "sender": "Priya",
+   "text": "Ok, I'll book it tonight."
+  },
+  {
+   "id": "m089",
+   "ts": "2026-09-18T23:54:00",
+   "sender": "Sam",
+   "text": "Recap: Dolomites, valley-based, Ortisei chalet, Nov 14 to 21, $2,500 cap. Transport still open. Right?"
+  },
+  {
+   "id": "m090",
+   "ts": "2026-09-18T23:55:00",
+   "sender": "Jordan",
+   "text": "Right. I'll post car prices with tires by tomorrow."
+  },
+  {
+   "id": "m091",
+   "ts": "2026-09-18T23:56:00",
+   "sender": "Priya",
+   "text": "I'll post train and bus times."
+  },
+  {
+   "id": "m092",
+   "ts": "2026-09-18T23:57:00",
+   "sender": "Maya",
+   "text": "I'll check whether we need chains, unless Jordan finds out first."
+  },
+  {
+   "id": "m093",
+   "ts": "2026-09-18T23:59:00",
+   "sender": "Leo",
+   "text": "I'll research day hike routes from Ortisei, Seceda and Alpe di Siusi at least."
+  },
+  {
+   "id": "m094",
+   "ts": "2026-09-19T00:00:00",
+   "sender": "Alex",
+   "text": "I'll look at the November lift schedules."
+  },
+  {
+   "id": "m095",
+   "ts": "2026-09-19T00:02:00",
+   "sender": "Sam",
+   "text": "Perfect. Thanks all."
+  },
+  {
+   "id": "m096",
+   "ts": "2026-09-19T04:02:00",
+   "sender": "Priya",
+   "text": "Booked. Confirmation is in the app."
+  }
+ ]
+}

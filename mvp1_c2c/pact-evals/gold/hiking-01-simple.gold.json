@@ -1,0 +1,70 @@
+{
+  "id": "hiking-01-simple",
+  "level": 1,
+  "scenario_notes": "Clean, linear. Every member says exactly 10 messages. Options proposed, dates and budget confirmed by each person, two options withdrawn by their proposers, explicit unanimous choice, then next steps. Tests baseline extraction with no traps beyond claim handling.",
+  "decision_question": "Where should the group go on its November hiking trip?",
+  "options": [
+    {"name": "Patagonia (Torres del Paine)", "status": "chosen", "proposed_by": "Alex", "msgs": ["m002", "m043", "m049"]},
+    {"name": "Dolomites", "status": "not chosen", "proposed_by": "Priya", "msgs": ["m003", "m035", "m038"]},
+    {"name": "Banff", "status": "dropped", "proposed_by": "Jordan", "msgs": ["m004", "m032"]},
+    {"name": "Yosemite", "status": "dropped", "proposed_by": "Maya", "msgs": ["m005", "m033"]}
+  ],
+  "constraints": [
+    {"text": "Dates Nov 14 to 21 (7 days)", "status": "agreed", "msgs": ["m007", "m008", "m009", "m010", "m011", "m012", "m013"]},
+    {"text": "Leo must be home by Sunday Nov 22", "status": "stated", "msgs": ["m006", "m012"]},
+    {"text": "Budget about $2,500 per person all in", "status": "agreed", "msgs": ["m014", "m015", "m016", "m017", "m018", "m019"], "note": "Maya would prefer lower (m017); a soft preference that does not block agreement."}
+  ],
+  "criteria": [
+    {"text": "Hiking quality", "raised_by": ["Sam", "Alex", "Priya", "Leo"], "msgs": ["m020", "m021", "m022", "m025"]},
+    {"text": "Views", "raised_by": ["Sam", "Leo"], "msgs": ["m020", "m025"]},
+    {"text": "Cost", "raised_by": ["Alex", "Jordan"], "msgs": ["m021", "m023"]},
+    {"text": "Weather", "raised_by": ["Jordan", "Maya"], "msgs": ["m023", "m024"]},
+    {"text": "Easy logistics", "raised_by": ["Maya"], "msgs": ["m024"]},
+    {"text": "Trail variety", "raised_by": ["Priya"], "msgs": ["m022"]}
+  ],
+  "claims": [
+    {"text": "Patagonia flights are around $1,300 round trip", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m026", "m031"]},
+    {"text": "Dolomites flights are around $900", "by": "Priya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m027", "m031"]},
+    {"text": "Dolomites hut availability in November could be tight", "by": "Priya", "type": "prediction, hedged", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m027", "m035"]},
+    {"text": "Banff in mid-November is usually snowy and many trails would be hard to hike", "by": "Jordan", "type": "generalization, hedged", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m028", "m032"]},
+    {"text": "Yosemite is a bit tame for a week of hiking", "by": "Maya", "type": "opinion", "checkable": false, "status_in_chat": "unchallenged", "msgs": ["m029"]},
+    {"text": "Patagonia in November is spring: mild with longer days", "by": "Leo", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m030"]}
+  ],
+  "agreements": [
+    {"text": "Dates Nov 14 to 21", "explicit_affirmers": ["Alex", "Priya", "Jordan", "Maya", "Leo", "Sam"], "msgs": ["m008", "m009", "m010", "m011", "m012", "m013"]},
+    {"text": "Budget about $2,500 per person all in", "explicit_affirmers": ["Priya", "Jordan", "Maya", "Alex", "Leo", "Sam"], "msgs": ["m014", "m015", "m016", "m017", "m018", "m019"]},
+    {"text": "Destination: Patagonia", "explicit_affirmers": ["Priya", "Jordan", "Maya", "Alex", "Leo", "Sam"], "msgs": ["m038", "m039", "m040", "m041", "m042", "m044", "m045", "m046", "m047", "m048", "m049"]},
+    {"text": "Banff dropped", "explicit_affirmers": ["Jordan"], "msgs": ["m032"], "note": "Withdrawn by its proposer; nobody objected."},
+    {"text": "Yosemite dropped", "explicit_affirmers": ["Maya"], "msgs": ["m033"], "note": "Withdrawn by its proposer; nobody objected."}
+  ],
+  "open_issues": [],
+  "outcome": "Patagonia (Torres del Paine), Nov 14 to 21, about $2,500 per person, explicitly agreed by all six.",
+  "next_steps": [
+    {"who": "Sam", "task": "Book flights by Friday", "msgs": ["m050"]},
+    {"who": "Everyone", "task": "Confirm passports are valid (all six confirmed or asked)", "msgs": ["m050", "m051", "m052", "m053", "m054", "m055"]},
+    {"who": "Alex", "task": "Post W trek itinerary options tonight", "msgs": ["m051"]},
+    {"who": "Alex", "task": "Find the best way from Punta Arenas to the park", "msgs": ["m056"]},
+    {"who": "Priya", "task": "Research refugio and campsite bookings and report back", "msgs": ["m052", "m057"]},
+    {"who": "Jordan", "task": "Post travel insurance options", "msgs": ["m053"]},
+    {"who": "Maya", "task": "Set up a shared expense sheet (link tomorrow)", "msgs": ["m054", "m059"]},
+    {"who": "Leo", "task": "Check gear rental in Puerto Natales", "msgs": ["m055"]}
+  ],
+  "traps": [
+    {"msgs": ["m031"], "note": "Sam restates Alex's and Priya's flight prices as plain fact. They stay attributed, unverified claims."},
+    {"msgs": ["m017", "m039"], "note": "Soft concerns (Maya prefers a lower budget, Jordan calls flights a stretch) are not conditions and do not block agreement."},
+    {"msgs": ["m035", "m038"], "note": "Priya's worry is that hut availability could be tight. Nobody says the huts are closed."}
+  ],
+  "card_must_include": [
+    "Patagonia (Torres del Paine) chosen, agreed by all six",
+    "Dates Nov 14 to 21 and budget about $2,500 per person",
+    "Banff and Yosemite withdrawn by their proposers; Dolomites not chosen",
+    "Next steps with owners: Sam flights, Alex itineraries and the Punta Arenas transfer, Priya refugios, Jordan insurance, Maya expense sheet, Leo gear rental",
+    "Flight prices shown as unverified claims with their source"
+  ],
+  "card_must_not_include": [
+    "The Dolomites huts are closed",
+    "Any unresolved disagreement about the destination",
+    "Flight prices presented as verified",
+    "Banff or Yosemite rejected by the whole group (only their proposers withdrew them)"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "hiking-04-interleaved-threads",
+  "level": 4,
+  "scenario_notes": "Three decisions run at once (destination, lodging, transport). Includes nicknames (J and JD = Jordan, Al = Alex), reply links in the JSON, sarcasm, a misquote and its correction, a retraction, a claim about a person's stance that the person later contradicts, a member who is absent then returns and reopens a decided question, and a conditional confirmation. The destination is decided by a vote called by Sam without an agreed decision rule; two members accept with stated reservations.",
+  "decision_question": "Where should the group go on its November hiking trip?",
+  "aliases": {"Jordan": ["J", "JD"], "Alex": ["Al"]},
+  "options": [
+    {"name": "Dolomites, valley-based day hikes", "status": "chosen (4 to 2 vote, all accepted, two with reservations)", "proposed_by": "Priya", "msgs": ["m003", "m033", "m047", "m048", "m049", "m050", "m052"]},
+    {"name": "Patagonia (Torres del Paine)", "status": "not chosen", "proposed_by": "Alex", "msgs": ["m002", "m051", "m071", "m072"]}
+  ],
+  "preferences": [
+    {"person": "Alex", "stance": "Patagonia; accepts the Dolomites with reservation ('not thrilled')", "msgs": ["m002", "m051", "m053", "m075"]},
+    {"person": "Leo", "stance": "wanted hut-to-hut; on return prefers Patagonia refugios; accepts the Dolomites with reservation", "msgs": ["m006", "m069", "m071", "m074"]},
+    {"person": "Priya", "stance": "Dolomites", "msgs": ["m003", "m048"]},
+    {"person": "Jordan", "stance": "either at first, then Dolomites if cheaper", "msgs": ["m004", "m038", "m040", "m049"]},
+    {"person": "Maya", "stance": "either if not expensive; votes Dolomites", "msgs": ["m005", "m050"]},
+    {"person": "Sam", "stance": "Dolomites", "msgs": ["m052"]}
+  ],
+  "constraints": [
+    {"text": "Dates Nov 14 to 21", "status": "agreed by all six", "msgs": ["m007", "m008", "m009", "m010", "m011", "m012"]},
+    {"text": "Leo must be back by the 22nd", "status": "stated", "msgs": ["m012"]},
+    {"text": "Budget $2,500 per person all in (Maya: ideally less)", "status": "agreed by all six", "msgs": ["m013", "m014", "m015", "m016", "m017", "m018"]},
+    {"text": "Hut-to-hut is off the table for Nov 14 to 21 because the main rifugi close between late October and about Nov 5 (Priya's reading of their websites)", "status": "accepted in chat; unverified externally", "msgs": ["m030", "m031", "m032"]}
+  ],
+  "criteria": [
+    {"text": "Cost", "raised_by": ["Maya", "Jordan"], "msgs": ["m005", "m017", "m036", "m038"]},
+    {"text": "Hut-to-hut experience", "raised_by": ["Leo", "Priya"], "msgs": ["m003", "m006", "m069"]},
+    {"text": "Access to cable cars or lifts for high days", "raised_by": ["Leo"], "msgs": ["m077"]},
+    {"text": "A kitchen, so meals can be cooked to save money", "raised_by": ["Maya"], "msgs": ["m056"]}
+  ],
+  "claims": [
+    {"text": "Patagonia flights are about $1,300 round trip", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "RETRACTED by Alex: a spring fare, older number", "msgs": ["m019", "m027", "m045"]},
+    {"text": "Patagonia flights are $1,800 from SFO for Nov 14 to 21", "by": "Priya", "type": "factual", "checkable": true, "status_in_chat": "accepted by Alex; unverified externally", "msgs": ["m020", "m028", "m044", "m045"]},
+    {"text": "Dolomites flights around $900 into Venice; train to Cortina", "by": "Priya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m023"]},
+    {"text": "Dolomites huts are basically all closed by mid-November", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "supported by Priya's website check (m030, m031); Alex accepts (m032)", "msgs": ["m024", "m030", "m031", "m032"]},
+    {"text": "Cable cars in the valleys run until early December", "by": "Priya", "type": "factual, hedged ('I think')", "checkable": true, "status_in_chat": "unchallenged, unverified", "msgs": ["m034"]},
+    {"text": "Ortisei chalet: six beds, $2,240 for the week, about $373 each", "by": "Priya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged; booked", "msgs": ["m041", "m096"]},
+    {"text": "Dolomites total about $1,800 per person (flights $900, chalet $373, food about $500)", "by": "Maya", "type": "estimate", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m042"]},
+    {"text": "Patagonia flights are $1,300 like Alex said (Sam's restatement)", "by": "Sam", "type": "misquote", "checkable": false, "status_in_chat": "CORRECTED by Priya, accepted by Alex", "msgs": ["m043", "m044", "m045"]},
+    {"text": "The chalet will probably be gone by Friday", "by": "Priya", "type": "prediction, hedged ('I think')", "checkable": true, "status_in_chat": "unchallenged; booked before Friday", "msgs": ["m054", "m096"]},
+    {"text": "Two rental cars for the week cost about $560 total, about $93 each plus fuel", "by": "Jordan", "type": "factual", "checkable": true, "status_in_chat": "unchallenged, unverified", "msgs": ["m059"]},
+    {"text": "Italy requires winter tires or chains from Nov 15", "by": "Maya", "type": "factual, hedged ('I think')", "checkable": true, "status_in_chat": "UNRESOLVED: Jordan wonders if rentals include them; Maya unsure; both assigned to check", "msgs": ["m060", "m061", "m062", "m064", "m092"]},
+    {"text": "Leo is fine with anything", "by": "Sam", "type": "claim about a person's stance", "checkable": false, "status_in_chat": "CONTRADICTED by Leo: 'flexible, not that I didn't care'", "msgs": ["m035", "m052", "m068", "m069"]},
+    {"text": "The chalet is a short walk to the Seceda lift; November operating dates to be checked", "by": "Priya", "type": "factual, partly pending", "checkable": true, "status_in_chat": "pending check", "msgs": ["m078"]}
+  ],
+  "agreements": [
+    {"text": "Dates Nov 14 to 21", "explicit_affirmers": ["Alex", "Priya", "Jordan", "Maya", "Leo", "Sam"], "msgs": ["m007", "m008", "m009", "m010", "m011", "m012"]},
+    {"text": "Budget $2,500 per person all in", "explicit_affirmers": ["Alex", "Priya", "Jordan", "Maya", "Leo", "Sam"], "msgs": ["m013", "m014", "m015", "m016", "m017", "m018"]},
+    {"text": "Destination: Dolomites, valley-based", "explicit_affirmers": ["Priya", "Jordan", "Maya", "Sam"], "msgs": ["m047", "m048", "m049", "m050", "m052"], "accepted_with_reservation": ["Alex", "Leo"], "reservation_msgs": ["m053", "m074", "m075"], "note": "Vote called by Sam while Leo was away; no decision rule was agreed beforehand. Leo says 'majority rules' when accepting (m074)."},
+    {"text": "Lodging: Ortisei chalet for six", "explicit_affirmers": ["Jordan", "Alex", "Leo", "Maya", "Sam", "Priya"], "msgs": ["m055", "m056", "m058", "m077", "m079", "m081", "m082", "m083", "m084", "m087"], "note": "Maya's confirmation was conditional on the kitchen photos (m082) and became unconditional at m087."}
+  ],
+  "other_decisions": [
+    {
+      "question": "Where should the group stay?",
+      "status": "decided: Ortisei chalet, booked by Priya",
+      "options": [{"name": "Ortisei chalet, six beds, $2,240 for the week", "msgs": ["m041", "m096"]}],
+      "msgs": ["m041", "m054", "m055", "m056", "m057", "m058", "m077", "m078", "m079", "m080", "m081", "m082", "m083", "m084", "m085", "m086", "m087", "m088", "m096"]
+    },
+    {
+      "question": "How will the group get around?",
+      "status": "open",
+      "options": [
+        {"name": "Two rental cars, about $93 each plus fuel", "msgs": ["m059"]},
+        {"name": "Train Venice to Bolzano, then a bus into the valley", "msgs": ["m063"]}
+      ],
+      "open_questions": ["Do rentals include winter tires or chains, and are they required from Nov 15?"],
+      "msgs": ["m059", "m060", "m061", "m062", "m063", "m064", "m065", "m066", "m090", "m091", "m092"]
+    }
+  ],
+  "open_issues": [
+    {"text": "Transport not decided: cars versus train and bus; winter tire rules unverified", "msgs": ["m059", "m060", "m061", "m062", "m063", "m064"]},
+    {"text": "Alex and Leo accepted the Dolomites with reservations; Leo's stance was misreported earlier", "msgs": ["m053", "m069", "m071", "m074", "m075"]},
+    {"text": "Seceda lift November operating dates not yet confirmed", "msgs": ["m078", "m094"]}
+  ],
+  "outcome": "Destination: Dolomites, valley-based, Nov 14 to 21, $2,500 cap. Lodging: Ortisei chalet booked. Transport open.",
+  "next_steps": [
+    {"who": "Jordan", "task": "Price rental cars including winter tires; post tomorrow", "msgs": ["m064", "m065", "m090"]},
+    {"who": "Priya", "task": "Post train and bus times", "msgs": ["m066", "m091"]},
+    {"who": "Priya", "task": "Double-check Seceda lift November operating dates", "msgs": ["m078"]},
+    {"who": "Maya", "task": "Check whether chains are needed, unless Jordan finds out first", "msgs": ["m092"]},
+    {"who": "Leo", "task": "Research day hike routes from Ortisei, Seceda and Alpe di Siusi", "msgs": ["m093"]},
+    {"who": "Alex", "task": "Look at the November lift schedules", "msgs": ["m094"]}
+  ],
+  "traps": [
+    {"msgs": ["m022"], "note": "Sarcasm: 'airfare famously only goes down' means airfares may not drop. Not a real claim that they do."},
+    {"msgs": ["m025"], "note": "Sarcasm: 'budget's just a suggestion' means Maya objects to the $1,800 flight price. It is not agreement."},
+    {"msgs": ["m028", "m037", "m039", "m040"], "note": "Nicknames: Al is Alex, J and JD are Jordan. Map them to the right people."},
+    {"msgs": ["m035", "m052", "m068"], "note": "Sam says Leo is fine with anything. Leo said the opposite (m006, m069). Do not record 'fine with anything' as Leo's stance."},
+    {"msgs": ["m043", "m044", "m045"], "note": "Misquote, correction, retraction. Final Patagonia flight figure is $1,800 for these dates. $1,300 is retracted."},
+    {"msgs": ["m047", "m052"], "note": "A vote was called without an agreed rule while Leo was away."},
+    {"msgs": ["m067", "m068", "m069", "m071", "m073", "m074"], "note": "Leo returns, objects, and reopens the question. Sam recaps incorrectly ('everyone's on board'). Final state: accepted by all, with reservations from Alex and Leo."},
+    {"msgs": ["m082", "m087"], "note": "Conditional confirmation from Maya, later made unconditional."},
+    {"msgs": ["m086"], "note": "'<Media omitted>' carries no content. Do not infer it."},
+    {"msgs": ["m030", "m031"], "note": "Priya's hut finding rests on her reading of the huts' own websites. Record the source and mark it unverified externally."}
+  ],
+  "card_must_include": [
+    "Destination Dolomites, valley-based; hut-to-hut dropped because the main huts close before Nov 14 (per Priya's website check)",
+    "Alex and Leo accepted the Dolomites with reservations; Leo said he had wanted huts",
+    "Dates Nov 14 to 21 and budget $2,500 per person, agreed by all six",
+    "Lodging: Ortisei chalet, booked by Priya",
+    "Transport still open with owners: Jordan prices cars with tires, Priya train and bus times, Maya checks chains",
+    "Winter tire and chain requirement shown as unverified"
+  ],
+  "card_must_not_include": [
+    "Everyone was on board or the decision was unanimous without reservations",
+    "Leo is fine with anything",
+    "Patagonia flights are $1,300",
+    "The Dolomites huts are open in mid-November",
+    "Transport decided",
+    "Jordan or Alex confused with each other by nickname"
+  ]
+}

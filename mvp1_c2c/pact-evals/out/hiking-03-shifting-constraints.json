@@ -1,0 +1,498 @@
+{
+ "id": "hiking-03-shifting-constraints",
+ "title": "Hiking 03 - shifting constraints, a revived option, an ambiguous \"sounds good\"",
+ "group": "Hiking Crew 🥾",
+ "level": 3,
+ "timezone": "America/Los_Angeles",
+ "participants": [
+  "Sam",
+  "Alex",
+  "Priya",
+  "Jordan",
+  "Maya",
+  "Leo"
+ ],
+ "nicknames": "",
+ "messages": [
+  {
+   "id": "m001",
+   "ts": "2026-09-16T20:15:00",
+   "sender": "Sam",
+   "text": "Time to decide the November hiking trip. Options, dates, budget. Go."
+  },
+  {
+   "id": "m002",
+   "ts": "2026-09-16T20:16:00",
+   "sender": "Alex",
+   "text": "Patagonia. Torres del Paine, the W trek. It's the trip."
+  },
+  {
+   "id": "m003",
+   "ts": "2026-09-16T20:17:00",
+   "sender": "Priya",
+   "text": "Dolomites, please. Huts and food."
+  },
+  {
+   "id": "m004",
+   "ts": "2026-09-16T20:19:00",
+   "sender": "Jordan",
+   "text": "Banff for me, it's close and cheap."
+  },
+  {
+   "id": "m005",
+   "ts": "2026-09-16T20:20:00",
+   "sender": "Maya",
+   "text": "Yosemite? Cheap and easy."
+  },
+  {
+   "id": "m006",
+   "ts": "2026-09-16T20:23:00",
+   "sender": "Leo",
+   "text": "I'd like to add Zion to the list. Utah in November is underrated."
+  },
+  {
+   "id": "m007",
+   "ts": "2026-09-16T20:25:00",
+   "sender": "Sam",
+   "text": "Five options then. Dates first. I proposed Nov 14 to 21. Anyone blocked?"
+  },
+  {
+   "id": "m008",
+   "ts": "2026-09-16T20:27:00",
+   "sender": "Jordan",
+   "text": "I can only do the 14th to the 18th. I have a work thing on the 19th that I can't move."
+  },
+  {
+   "id": "m009",
+   "ts": "2026-09-16T20:28:00",
+   "sender": "Alex",
+   "text": "That's five days. Patagonia isn't worth flying to for five days."
+  },
+  {
+   "id": "m010",
+   "ts": "2026-09-16T20:29:00",
+   "sender": "Priya",
+   "text": "The Dolomites also needs six or seven days."
+  },
+  {
+   "id": "m011",
+   "ts": "2026-09-16T20:31:00",
+   "sender": "Maya",
+   "text": "Can the rest of us do the full week?"
+  },
+  {
+   "id": "m012",
+   "ts": "2026-09-16T20:32:00",
+   "sender": "Sam",
+   "text": "I can."
+  },
+  {
+   "id": "m013",
+   "ts": "2026-09-16T20:33:00",
+   "sender": "Priya",
+   "text": "I can."
+  },
+  {
+   "id": "m014",
+   "ts": "2026-09-16T20:34:00",
+   "sender": "Alex",
+   "text": "I can."
+  },
+  {
+   "id": "m015",
+   "ts": "2026-09-16T20:35:00",
+   "sender": "Maya",
+   "text": "I can do the full week too."
+  },
+  {
+   "id": "m016",
+   "ts": "2026-09-16T20:37:00",
+   "sender": "Leo",
+   "text": "I can, but I need to be home by the 22nd."
+  },
+  {
+   "id": "m017",
+   "ts": "2026-09-16T20:38:00",
+   "sender": "Sam",
+   "text": "Ok, so five of us can do Nov 14 to 21 and Jordan can only do the 14th to 18th. Parking that."
+  },
+  {
+   "id": "m018",
+   "ts": "2026-09-16T20:41:00",
+   "sender": "Sam",
+   "text": "Budget. $2,500 per person all in?"
+  },
+  {
+   "id": "m019",
+   "ts": "2026-09-16T20:42:00",
+   "sender": "Alex",
+   "text": "Fine."
+  },
+  {
+   "id": "m020",
+   "ts": "2026-09-16T20:43:00",
+   "sender": "Priya",
+   "text": "Fine."
+  },
+  {
+   "id": "m021",
+   "ts": "2026-09-16T20:44:00",
+   "sender": "Jordan",
+   "text": "Fine."
+  },
+  {
+   "id": "m022",
+   "ts": "2026-09-16T20:46:00",
+   "sender": "Sam",
+   "text": "Alex, Priya and Jordan are OK with $2,500. Maya, Leo?"
+  },
+  {
+   "id": "m023",
+   "ts": "2026-09-16T20:47:00",
+   "sender": "Leo",
+   "text": "Fine."
+  },
+  {
+   "id": "m024",
+   "ts": "2026-09-16T20:51:00",
+   "sender": "Maya",
+   "text": "I'd be more comfortable at $2,000. Could we do that instead?"
+  },
+  {
+   "id": "m025",
+   "ts": "2026-09-16T20:53:00",
+   "sender": "Sam",
+   "text": "I'm OK with $2,000 if everyone else is."
+  },
+  {
+   "id": "m026",
+   "ts": "2026-09-16T20:54:00",
+   "sender": "Priya",
+   "text": "$2,000 works for me."
+  },
+  {
+   "id": "m027",
+   "ts": "2026-09-16T20:55:00",
+   "sender": "Jordan",
+   "text": "$2,000 is fine, it's easier for Banff anyway."
+  },
+  {
+   "id": "m028",
+   "ts": "2026-09-16T20:57:00",
+   "sender": "Leo",
+   "text": "$2,000 works."
+  },
+  {
+   "id": "m029",
+   "ts": "2026-09-16T20:59:00",
+   "sender": "Alex",
+   "text": "Fine with $2,000, but then Patagonia is basically out. Flights alone are $1,300."
+  },
+  {
+   "id": "m030",
+   "ts": "2026-09-16T21:00:00",
+   "sender": "Sam",
+   "text": "Ok, so budget is now $2,000 per person all in. Patagonia is the one at risk."
+  },
+  {
+   "id": "m031",
+   "ts": "2026-09-16T21:06:00",
+   "sender": "Jordan",
+   "text": "Fair warning on Banff. Mid-November is hit or miss, lots of trails are under snow."
+  },
+  {
+   "id": "m032",
+   "ts": "2026-09-16T21:07:00",
+   "sender": "Sam",
+   "text": "If Banff is snowy I'd rather drop it. Any objections?"
+  },
+  {
+   "id": "m033",
+   "ts": "2026-09-16T21:08:00",
+   "sender": "Maya",
+   "text": "Fine with dropping Banff."
+  },
+  {
+   "id": "m034",
+   "ts": "2026-09-16T21:09:00",
+   "sender": "Priya",
+   "text": "Drop it, I think."
+  },
+  {
+   "id": "m035",
+   "ts": "2026-09-16T21:11:00",
+   "sender": "Jordan",
+   "text": "Ok, dropping Banff. It was my suggestion anyway."
+  },
+  {
+   "id": "m036",
+   "ts": "2026-09-16T21:12:00",
+   "sender": "Alex",
+   "text": "Good, less to argue about."
+  },
+  {
+   "id": "m037",
+   "ts": "2026-09-16T21:17:00",
+   "sender": "Leo",
+   "text": "Now Zion. Mid-November is usually in the 60s and sunny in the canyon, and there's hardly any crowds."
+  },
+  {
+   "id": "m038",
+   "ts": "2026-09-16T21:19:00",
+   "sender": "Maya",
+   "text": "Zion sounds great. Better than Yosemite for November, so I'm happy dropping Yosemite if Zion stays."
+  },
+  {
+   "id": "m039",
+   "ts": "2026-09-16T21:20:00",
+   "sender": "Priya",
+   "text": "Are there enough hikes for a full week though?"
+  },
+  {
+   "id": "m040",
+   "ts": "2026-09-16T21:21:00",
+   "sender": "Leo",
+   "text": "Yes. Zion, Bryce and Snow Canyon are all within a couple of hours of each other."
+  },
+  {
+   "id": "m041",
+   "ts": "2026-09-16T21:24:00",
+   "sender": "Alex",
+   "text": "That's a road trip more than a hike trip. I'd rather do Patagonia or the Dolomites."
+  },
+  {
+   "id": "m042",
+   "ts": "2026-09-16T21:25:00",
+   "sender": "Sam",
+   "text": "Alex, Patagonia is over budget on flights alone though."
+  },
+  {
+   "id": "m043",
+   "ts": "2026-09-16T21:27:00",
+   "sender": "Alex",
+   "text": "Flights are $1,300 and the W trek refugios are about $600. That's $1,900. Tight but it fits."
+  },
+  {
+   "id": "m044",
+   "ts": "2026-09-16T21:28:00",
+   "sender": "Priya",
+   "text": "That leaves $100 for food, buses and gear. It doesn't fit."
+  },
+  {
+   "id": "m045",
+   "ts": "2026-09-16T21:29:00",
+   "sender": "Alex",
+   "text": "I'd skip the gear rental and cook my own food. It can work."
+  },
+  {
+   "id": "m046",
+   "ts": "2026-09-16T21:31:00",
+   "sender": "Maya",
+   "text": "Then it's not a budget trip, it's a stretch trip."
+  },
+  {
+   "id": "m047",
+   "ts": "2026-09-16T21:34:00",
+   "sender": "Jordan",
+   "text": "While we're on budgets, I just found Calgary flights for $380 round trip."
+  },
+  {
+   "id": "m048",
+   "ts": "2026-09-16T21:35:00",
+   "sender": "Jordan",
+   "text": "And a lodge in Canmore at $90 a night. Banff might come in well under $2,000 with money to spare."
+  },
+  {
+   "id": "m049",
+   "ts": "2026-09-16T21:37:00",
+   "sender": "Maya",
+   "text": "Ok that's very tempting. Maybe I want Banff back on the list."
+  },
+  {
+   "id": "m050",
+   "ts": "2026-09-16T21:38:00",
+   "sender": "Alex",
+   "text": "Banff in November isn't hiking. It's snowshoeing."
+  },
+  {
+   "id": "m051",
+   "ts": "2026-09-16T21:39:00",
+   "sender": "Jordan",
+   "text": "The lower trails around Canmore stay walkable. And snowshoeing counts."
+  },
+  {
+   "id": "m052",
+   "ts": "2026-09-16T21:41:00",
+   "sender": "Sam",
+   "text": "I'm fine reopening Banff if people want it."
+  },
+  {
+   "id": "m053",
+   "ts": "2026-09-16T21:42:00",
+   "sender": "Priya",
+   "text": "I'm not against it, but Alex has a point about the hiking."
+  },
+  {
+   "id": "m054",
+   "ts": "2026-09-16T21:45:00",
+   "sender": "Jordan",
+   "text": "What if we do just 5 days somewhere closer like Banff so I can be there for all of it?"
+  },
+  {
+   "id": "m055",
+   "ts": "2026-09-16T21:46:00",
+   "sender": "Alex",
+   "text": "Or we do the full 7 days somewhere else and Jordan joins for part of it?"
+  },
+  {
+   "id": "m056",
+   "ts": "2026-09-16T21:48:00",
+   "sender": "Leo",
+   "text": "Sounds good."
+  },
+  {
+   "id": "m057",
+   "ts": "2026-09-16T21:49:00",
+   "sender": "Sam",
+   "text": "Leo, sounds good to which one, the 5-day Banff or the split trip?"
+  },
+  {
+   "id": "m058",
+   "ts": "2026-09-16T21:51:00",
+   "sender": "Leo",
+   "text": "Ha, honestly both. I'm fine either way."
+  },
+  {
+   "id": "m059",
+   "ts": "2026-09-16T21:55:00",
+   "sender": "Maya",
+   "text": "Weather-wise, Zion in the 60s sounds nicer than Banff at 20°F for a week."
+  },
+  {
+   "id": "m060",
+   "ts": "2026-09-16T21:56:00",
+   "sender": "Jordan",
+   "text": "You'd layer up, but Banff is beautiful. And there are ice walks and hot springs."
+  },
+  {
+   "id": "m061",
+   "ts": "2026-09-16T21:57:00",
+   "sender": "Alex",
+   "text": "Zion is the same idea as Yosemite. Comfortable, close, not special."
+  },
+  {
+   "id": "m062",
+   "ts": "2026-09-16T21:59:00",
+   "sender": "Leo",
+   "text": "Zion is special. The Narrows in November is empty and gorgeous. Too cold to wade some days though, honestly."
+  },
+  {
+   "id": "m063",
+   "ts": "2026-09-16T22:03:00",
+   "sender": "Sam",
+   "text": "Let me try to summarize. Budget is $2,000. Dates are Nov 14 to 21 for five of us, Jordan is limited to the 14th to 18th. Options are Patagonia, Dolomites, Banff (Jordan reopened it) and Zion. Yosemite is dropped. Right?"
+  },
+  {
+   "id": "m064",
+   "ts": "2026-09-16T22:04:00",
+   "sender": "Maya",
+   "text": "Yes, but I think Patagonia is basically out on budget."
+  },
+  {
+   "id": "m065",
+   "ts": "2026-09-16T22:05:00",
+   "sender": "Alex",
+   "text": "Not out. Tight."
+  },
+  {
+   "id": "m066",
+   "ts": "2026-09-16T22:07:00",
+   "sender": "Priya",
+   "text": "I'd also like to check the Dolomites budget. I haven't looked at flights yet."
+  },
+  {
+   "id": "m067",
+   "ts": "2026-09-16T22:08:00",
+   "sender": "Jordan",
+   "text": "The summary is right."
+  },
+  {
+   "id": "m068",
+   "ts": "2026-09-16T22:09:00",
+   "sender": "Leo",
+   "text": "Yes."
+  },
+  {
+   "id": "m069",
+   "ts": "2026-09-16T22:11:00",
+   "sender": "Sam",
+   "text": "Ok. Let's do a poll tomorrow night with all four options and a price for each."
+  },
+  {
+   "id": "m070",
+   "ts": "2026-09-16T22:12:00",
+   "sender": "Alex",
+   "text": "I'll price Patagonia properly, including food and transfers."
+  },
+  {
+   "id": "m071",
+   "ts": "2026-09-16T22:13:00",
+   "sender": "Priya",
+   "text": "I'll price the Dolomites."
+  },
+  {
+   "id": "m072",
+   "ts": "2026-09-16T22:14:00",
+   "sender": "Jordan",
+   "text": "I'll price Banff, and check if I can move my work thing."
+  },
+  {
+   "id": "m073",
+   "ts": "2026-09-16T22:15:00",
+   "sender": "Leo",
+   "text": "I'll price Zion."
+  },
+  {
+   "id": "m074",
+   "ts": "2026-09-16T22:16:00",
+   "sender": "Maya",
+   "text": "I'll build the comparison sheet."
+  },
+  {
+   "id": "m075",
+   "ts": "2026-09-16T22:20:00",
+   "sender": "Alex",
+   "text": "The dates question should be settled before the poll though. 5 days or 7."
+  },
+  {
+   "id": "m076",
+   "ts": "2026-09-16T22:21:00",
+   "sender": "Jordan",
+   "text": "Agree. Let me see if I can move the work thing before you all commit."
+  },
+  {
+   "id": "m077",
+   "ts": "2026-09-16T22:22:00",
+   "sender": "Priya",
+   "text": "Good, thanks Jordan."
+  },
+  {
+   "id": "m078",
+   "ts": "2026-09-16T22:24:00",
+   "sender": "Sam",
+   "text": "Ok, then we wait for Jordan's answer on dates before the poll."
+  },
+  {
+   "id": "m079",
+   "ts": "2026-09-16T22:25:00",
+   "sender": "Maya",
+   "text": "Sounds good."
+  },
+  {
+   "id": "m080",
+   "ts": "2026-09-16T22:26:00",
+   "sender": "Leo",
+   "text": "Works for me."
+  }
+ ]
+}

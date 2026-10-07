@@ -1,0 +1,20 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Session data (local only)
+mvp1_c2c/runs/
+
+# Eval results (generated, not source)
+mvp1_c2c/pact-evals/results/
+
+# OS
+.DS_Store

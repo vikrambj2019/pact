@@ -1,0 +1,84 @@
+{
+  "id": "hiking-02-one-dispute",
+  "level": 2,
+  "scenario_notes": "Adds one disputed factual claim (Dolomites huts in November), one changed mind (Jordan Banff to Dolomites), side chatter, and a quiet member (Leo, 4 messages, never states a destination or budget). No decision is reached. Tests: do not count silence as agreement, keep a dispute open, replace an old stance with the new one.",
+  "decision_question": "Where should the group go on its November hiking trip?",
+  "options": [
+    {"name": "Patagonia (Torres del Paine)", "status": "considering", "proposed_by": "Alex", "msgs": ["m002", "m039", "m040"]},
+    {"name": "Dolomites", "status": "considering", "proposed_by": "Priya", "msgs": ["m003", "m035", "m041"]},
+    {"name": "Banff", "status": "dropped", "proposed_by": "Jordan", "msgs": ["m004", "m035"]},
+    {"name": "Yosemite", "status": "dropped", "proposed_by": "Maya", "msgs": ["m005", "m038"]}
+  ],
+  "preferences": [
+    {"person": "Alex", "stance": "Patagonia", "msgs": ["m002", "m040"]},
+    {"person": "Sam", "stance": "leans Patagonia", "msgs": ["m039"]},
+    {"person": "Priya", "stance": "Dolomites, unless the huts turn out to be closed", "msgs": ["m003", "m041"]},
+    {"person": "Jordan", "stance": "Dolomites (changed from Banff), because of cost", "msgs": ["m004", "m035"]},
+    {"person": "Maya", "stance": "neutral, fine with Patagonia or the Dolomites", "msgs": ["m038"]},
+    {"person": "Leo", "stance": "none stated", "msgs": ["m006"]}
+  ],
+  "constraints": [
+    {"text": "Dates Nov 14 to 21 (7 days)", "status": "agreed", "msgs": ["m007", "m008", "m009", "m010", "m011", "m012"]},
+    {"text": "Leo must be home by the 22nd", "status": "stated", "msgs": ["m006"]},
+    {"text": "Budget about $2,500 per person all in", "status": "agreed by five of six; Leo never confirmed", "msgs": ["m013", "m014", "m015", "m016", "m017"]}
+  ],
+  "criteria": [
+    {"text": "Hiking quality and big views", "raised_by": ["Alex", "Priya"], "msgs": ["m019", "m020"]},
+    {"text": "Food", "raised_by": ["Priya"], "msgs": ["m020"]},
+    {"text": "Cost", "raised_by": ["Jordan", "Maya"], "msgs": ["m021", "m022"]},
+    {"text": "Not cold and wet", "raised_by": ["Jordan"], "msgs": ["m021"]},
+    {"text": "Low-stress logistics", "raised_by": ["Maya"], "msgs": ["m022"]}
+  ],
+  "claims": [
+    {"text": "Patagonia flights are about $1,300 round trip", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "unchallenged; also used in m045", "msgs": ["m027", "m045"]},
+    {"text": "Dolomites flights around $900; trains from Venice are cheap", "by": "Priya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m028"]},
+    {"text": "Most Dolomites huts are closed in November", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "DISPUTED: Priya says some rifugi stay open into early November, unsure about Nov 14 to 21", "msgs": ["m029", "m030", "m031", "m032"]},
+    {"text": "Banff in mid-November is mostly snow; half the trails were closed last year", "by": "Jordan", "type": "generalization from past conditions", "checkable": true, "status_in_chat": "accepted by Jordan when Sam raised it", "msgs": ["m033", "m034"]},
+    {"text": "Tioga Pass usually closes in November", "by": "Maya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m036"]},
+    {"text": "Patagonia all-in fits under $2,500 (flights, W trek refugios, food)", "by": "Alex", "type": "factual, own calculation", "checkable": true, "status_in_chat": "doubted by Jordan, not resolved", "msgs": ["m045", "m046", "m047"]},
+    {"text": "Patagonia buses run daily in November; season is October to April", "by": "Alex", "type": "factual, hedged", "checkable": true, "status_in_chat": "Priya also unsure ('around October, I think')", "msgs": ["m050", "m051", "m052"]}
+  ],
+  "agreements": [
+    {"text": "Dates Nov 14 to 21", "explicit_affirmers": ["Alex", "Priya", "Jordan", "Maya", "Leo", "Sam"], "msgs": ["m007", "m008", "m009", "m010", "m011", "m012"]},
+    {"text": "Budget about $2,500 per person", "explicit_affirmers": ["Sam", "Alex", "Priya", "Maya", "Jordan"], "msgs": ["m013", "m014", "m015", "m016", "m017"], "note": "Leo did not confirm. Silence is not agreement."},
+    {"text": "Banff dropped", "explicit_affirmers": ["Jordan"], "msgs": ["m035"]},
+    {"text": "Yosemite dropped", "explicit_affirmers": ["Maya"], "msgs": ["m038"]},
+    {"text": "Decide the hut question first; if the Dolomites huts are closed, Patagonia by default", "explicit_affirmers": ["Sam", "Priya", "Jordan", "Maya"], "msgs": ["m054", "m055", "m057", "m058"], "note": "Alex acts on it (m056) without stating agreement. Leo's 'Sounds good' (m060) answers the regroup message, not this rule."},
+    {"text": "Regroup Wednesday evening after Priya and Alex report back", "explicit_affirmers": ["Sam", "Leo"], "msgs": ["m059", "m060"]}
+  ],
+  "open_issues": [
+    {"text": "Are the Dolomites huts open for Nov 14 to 21? (disputed factual question)", "msgs": ["m029", "m030", "m031", "m032"]},
+    {"text": "Does Patagonia really fit under $2,500?", "msgs": ["m045", "m046", "m047"]},
+    {"text": "Leo has stated no destination preference and has not confirmed the budget", "msgs": ["m006", "m043", "m044"]},
+    {"text": "Tiebreak method if both destinations remain viable", "msgs": ["m053"]}
+  ],
+  "outcome": "None yet. Patagonia versus the Dolomites, waiting on hut and refugio checks.",
+  "next_steps": [
+    {"who": "Priya", "task": "Check refugio opening dates, post Wednesday morning", "msgs": ["m055", "m064"]},
+    {"who": "Alex", "task": "Check what is open in Torres del Paine in November", "msgs": ["m056", "m065"]},
+    {"who": "Maya", "task": "Build a shared sheet with options, flights and notes", "msgs": ["m061", "m062"]},
+    {"who": "Everyone", "task": "Regroup Wednesday evening", "msgs": ["m059"]}
+  ],
+  "traps": [
+    {"msgs": ["m044"], "note": "Maya guesses Leo is busy. Do not record any stance or reason for Leo."},
+    {"msgs": ["m060"], "note": "Leo's 'Sounds good' follows the regroup plan. It does not mean Leo agrees with the default rule or has a destination preference."},
+    {"msgs": ["m041"], "note": "Priya's preference is conditional on huts being open."},
+    {"msgs": ["m004", "m035"], "note": "Jordan changed his mind. The current stance replaces Banff."},
+    {"msgs": ["m029", "m030", "m031", "m032"], "note": "Factual dispute between Alex and Priya. Pact records both sides and does not declare either wrong."},
+    {"msgs": ["m023", "m024", "m025", "m026"], "note": "Side chatter about a podcast. Not decision content."}
+  ],
+  "card_must_include": [
+    "Two options remain: Patagonia and the Dolomites; Banff and Yosemite dropped",
+    "Dates Nov 14 to 21 agreed by all six",
+    "Budget about $2,500 agreed by five; Leo has not confirmed",
+    "Still unresolved: whether Dolomites huts are open for those dates (Alex says mostly closed, Priya says some stay open)",
+    "Next steps: Priya and Alex report back; regroup Wednesday evening"
+  ],
+  "card_must_not_include": [
+    "Alex was wrong or right about the huts",
+    "Leo prefers or agrees to any destination",
+    "Everyone agreed on the budget",
+    "The Dolomites huts are closed (as a settled fact)",
+    "A destination decision"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "hiking-03-shifting-constraints",
+  "level": 3,
+  "scenario_notes": "Constraints move during the chat. Budget is superseded ($2,500 to $2,000). One member cannot do the full week, so dates are contested. An option is dropped and then revived. A 'Sounds good' is ambiguous between two proposals. A budget calculation is disputed. Yosemite is dropped only conditionally. The poll plan is superseded by a wait for Jordan's answer. No decision is reached.",
+  "decision_question": "Where should the group go on its November hiking trip?",
+  "options": [
+    {"name": "Patagonia (Torres del Paine)", "status": "at risk on budget, disputed", "proposed_by": "Alex", "msgs": ["m002", "m029", "m042", "m043", "m044", "m046", "m064", "m065"]},
+    {"name": "Dolomites", "status": "considering, not yet priced", "proposed_by": "Priya", "msgs": ["m003", "m066", "m071"]},
+    {"name": "Banff", "status": "dropped, then reopened; contested", "proposed_by": "Jordan", "msgs": ["m004", "m035", "m049", "m050", "m052", "m053"]},
+    {"name": "Yosemite", "status": "dropped, but only if Zion stays", "proposed_by": "Maya", "msgs": ["m005", "m038", "m063"]},
+    {"name": "Zion", "status": "considering", "proposed_by": "Leo", "msgs": ["m006", "m037", "m038", "m041", "m061", "m062"]}
+  ],
+  "constraints": [
+    {"text": "Dates Nov 14 to 21 (7 days)", "status": "contested: five can do the full week, Jordan only Nov 14 to 18", "msgs": ["m007", "m008", "m012", "m013", "m014", "m015", "m016", "m017", "m075", "m076"]},
+    {"text": "Leo must be home by the 22nd", "status": "stated", "msgs": ["m016"]},
+    {"text": "Budget $2,500 per person all in", "status": "superseded by $2,000", "msgs": ["m018", "m019", "m020", "m021", "m023"]},
+    {"text": "Budget $2,000 per person all in", "status": "agreed by all six", "msgs": ["m024", "m025", "m026", "m027", "m028", "m029", "m030"], "note": "Alex accepts but says Patagonia is then basically out (m029). Sam's OK is conditional on everyone else (m025)."}
+  ],
+  "criteria": [
+    {"text": "Hiking (real hiking, not a road trip or snowshoeing)", "raised_by": ["Alex", "Priya"], "msgs": ["m041", "m050", "m053"]},
+    {"text": "Budget fit", "raised_by": ["Maya", "Alex", "Priya", "Jordan"], "msgs": ["m024", "m043", "m044", "m046", "m048"]},
+    {"text": "Weather", "raised_by": ["Maya", "Leo", "Jordan"], "msgs": ["m031", "m037", "m059", "m060"]}
+  ],
+  "claims": [
+    {"text": "Patagonia flights alone are $1,300", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m029", "m043"]},
+    {"text": "Patagonia costs about $1,900 (flights plus about $600 W trek refugios) and fits the budget", "by": "Alex", "type": "factual, own calculation", "checkable": true, "status_in_chat": "DISPUTED: Priya says only $100 remains for food, buses and gear; Maya calls it a stretch; Alex says he would skip gear rental and cook", "msgs": ["m043", "m044", "m045", "m046"]},
+    {"text": "Banff in mid-November is hit or miss, lots of trails under snow", "by": "Jordan", "type": "generalization, hedged", "checkable": true, "status_in_chat": "later softened: lower trails around Canmore stay walkable", "msgs": ["m031", "m051"]},
+    {"text": "Calgary flights are $380 round trip; Canmore lodge $90 a night; Banff could come in well under $2,000", "by": "Jordan", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m047", "m048"]},
+    {"text": "Banff in November is snowshoeing, not hiking", "by": "Alex", "type": "opinion / generalization", "checkable": false, "status_in_chat": "contested by Jordan (m051)", "msgs": ["m050", "m051"]},
+    {"text": "Zion in mid-November is usually in the 60s and sunny with hardly any crowds", "by": "Leo", "type": "factual, hedged", "checkable": true, "status_in_chat": "repeated by Maya (m059)", "msgs": ["m037", "m059"]},
+    {"text": "Zion, Bryce and Snow Canyon are within a couple of hours of each other", "by": "Leo", "type": "factual", "checkable": true, "status_in_chat": "Alex calls it a road trip, not a hike trip", "msgs": ["m040", "m041"]},
+    {"text": "Banff is about 20F in November", "by": "Maya", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m059"]},
+    {"text": "The Narrows in November is empty; too cold to wade some days", "by": "Leo", "type": "factual, hedged", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m062"]}
+  ],
+  "agreements": [
+    {"text": "Budget $2,000 per person all in (supersedes $2,500)", "explicit_affirmers": ["Maya", "Sam", "Priya", "Jordan", "Leo", "Alex"], "msgs": ["m024", "m025", "m026", "m027", "m028", "m029", "m030"]},
+    {"text": "Banff dropped (first time)", "explicit_affirmers": ["Jordan", "Maya", "Priya"], "msgs": ["m032", "m033", "m034", "m035"], "note": "Later reopened; see traps."},
+    {"text": "Yosemite dropped, conditional on Zion staying on the list", "explicit_affirmers": ["Maya"], "msgs": ["m038"], "note": "Sam's summary lists it as dropped; Jordan and Leo say the summary is right (m063, m067, m068)."},
+    {"text": "Wait for Jordan's answer on dates before running the poll", "explicit_affirmers": ["Sam", "Maya", "Leo"], "msgs": ["m078", "m079", "m080"], "note": "Alex and Jordan proposed it (m075, m076), Priya thanked Jordan (m077). Supersedes the poll-tomorrow plan in m069."}
+  ],
+  "open_issues": [
+    {"text": "Dates: 7 days for five people versus Jordan's Nov 14 to 18 limit; Jordan will try to move his work commitment", "msgs": ["m008", "m017", "m054", "m055", "m072", "m075", "m076"]},
+    {"text": "Does Patagonia fit under $2,000? (disputed calculation)", "msgs": ["m043", "m044", "m045", "m046", "m064", "m065"]},
+    {"text": "Is Banff in November a hiking trip? Reopened by Jordan and Maya, questioned by Alex and Priya", "msgs": ["m049", "m050", "m051", "m052", "m053"]},
+    {"text": "Dolomites budget not yet checked", "msgs": ["m066"]},
+    {"text": "Poll timing and format", "msgs": ["m069", "m078"]}
+  ],
+  "outcome": "None yet. Budget settled at $2,000; dates contested; four options remain (Patagonia, Dolomites, Banff, Zion), poll waiting on Jordan.",
+  "next_steps": [
+    {"who": "Alex", "task": "Price Patagonia properly including food and transfers", "msgs": ["m070"]},
+    {"who": "Priya", "task": "Price the Dolomites", "msgs": ["m071"]},
+    {"who": "Jordan", "task": "Price Banff and check whether he can move his work commitment", "msgs": ["m072", "m076"]},
+    {"who": "Leo", "task": "Price Zion", "msgs": ["m073"]},
+    {"who": "Maya", "task": "Build the comparison sheet", "msgs": ["m074"]},
+    {"who": "Sam", "task": "Run the poll after Jordan answers on dates", "msgs": ["m078"]}
+  ],
+  "traps": [
+    {"msgs": ["m024", "m030"], "note": "Budget constraint changes from $2,500 to $2,000. The card must show the current value and not the old one."},
+    {"msgs": ["m054", "m055", "m056", "m057", "m058"], "note": "Leo says 'Sounds good' after two conflicting proposals. Sam asks which one; Leo says 'both, fine either way'. This is not agreement to either proposal."},
+    {"msgs": ["m035", "m049", "m052"], "note": "Banff is dropped, then reopened. Status is 'reopened, contested', not dropped and not agreed."},
+    {"msgs": ["m053"], "note": "'I'm not against it' is not agreement."},
+    {"msgs": ["m038", "m063"], "note": "Yosemite is dropped only if Zion stays. Record the condition."},
+    {"msgs": ["m063", "m064", "m065"], "note": "Sam's summary is affirmed by Jordan and Leo, but Maya and Alex dispute the Patagonia budget status inside the same exchange."},
+    {"msgs": ["m067", "m068"], "note": "'The summary is right' and 'Yes' affirm the summary as an accurate record, not a preference for any option."},
+    {"msgs": ["m069", "m078"], "note": "The poll-tomorrow plan is superseded by waiting for Jordan."},
+    {"msgs": ["m043", "m044"], "note": "Arithmetic dispute: $1,300 plus $600 is $1,900, leaving $100 of a $2,000 budget. Both readings are recorded, and neither person is judged."}
+  ],
+  "card_must_include": [
+    "Budget now $2,000 per person (replaced $2,500), agreed by all six",
+    "Dates Nov 14 to 21 for five people; Jordan limited to Nov 14 to 18; unresolved",
+    "Options: Patagonia (budget disputed), Dolomites, Banff (reopened, contested), Zion; Yosemite dropped if Zion stays",
+    "Poll waits for Jordan's answer on dates; each person to price their option",
+    "Open issues: dates, Patagonia budget fit, whether Banff counts as hiking"
+  ],
+  "card_must_not_include": [
+    "Leo agreed to the 5-day Banff trip or to the split trip",
+    "Patagonia has been eliminated",
+    "Budget $2,500",
+    "Banff permanently dropped",
+    "Dates settled",
+    "A poll scheduled for tomorrow night"
+  ]
+}

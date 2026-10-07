@@ -1,0 +1,756 @@
+{
+ "id": "hiking-05-chaos",
+ "title": "Hiking 05 - complex: everyone raising different points and claims, no decision reached",
+ "group": "Hiking Crew 🥾",
+ "level": 5,
+ "timezone": "America/Los_Angeles",
+ "participants": [
+  "Sam",
+  "Alex",
+  "Jordan",
+  "Priya",
+  "Maya",
+  "Leo"
+ ],
+ "nicknames": "JD = Jordan; Al = Alex",
+ "messages": [
+  {
+   "id": "m001",
+   "ts": "2026-09-18T21:00:00",
+   "sender": "Sam",
+   "text": "Ok. Final attempt at deciding November. Options so far: Patagonia, Dolomites, Banff, Zion, Yosemite. I'll run a poll if we don't decide by Sunday."
+  },
+  {
+   "id": "m002",
+   "ts": "2026-09-18T21:01:00",
+   "sender": "Alex",
+   "text": "Patagonia. Everyone knows it's the best hiking on earth. Not even a debate."
+  },
+  {
+   "id": "m003",
+   "ts": "2026-09-18T21:02:00",
+   "sender": "Jordan",
+   "text": "<Media omitted>"
+  },
+  {
+   "id": "m004",
+   "ts": "2026-09-18T21:03:00",
+   "sender": "Jordan",
+   "text": "That's my dog after his haircut. Anyway I'm open to anything, mostly."
+  },
+  {
+   "id": "m005",
+   "ts": "2026-09-18T21:05:00",
+   "sender": "Priya",
+   "text": "https://example.com/torres-del-paine-weather This is the climate page for Torres del Paine. Winds gust over 100 km/h a lot of days in November, apparently."
+  },
+  {
+   "id": "m006",
+   "ts": "2026-09-18T21:06:00",
+   "sender": "Maya",
+   "text": "What dates are we even doing? I lost track."
+  },
+  {
+   "id": "m007",
+   "ts": "2026-09-18T21:07:00",
+   "sender": "Sam",
+   "text": "Nov 14 to 21 was the plan."
+  },
+  {
+   "id": "m008",
+   "ts": "2026-09-18T21:10:00",
+   "sender": "Leo",
+   "text": "[Voice note transcript] Hey so, um, I listened to the messages. Dates, I can probably do the 12th to the 19th better because of a thing at work on the 20th, but I also only have like five days of PTO left, so honestly maybe the 15th to the 19th? I don't know, I'll figure it out. Also Patagonia sounds great but I heard the refugios don't open until like the 20th of November, I'm not sure."
+  },
+  {
+   "id": "m009",
+   "ts": "2026-09-18T21:12:00",
+   "sender": "Alex",
+   "text": "Refugios are open in November. Everyone knows the season starts in October. Leo is thinking of something else."
+  },
+  {
+   "id": "m010",
+   "ts": "2026-09-18T21:13:00",
+   "sender": "Priya",
+   "text": "I'd like to check that before we say either way. Al, do you have a source?"
+  },
+  {
+   "id": "m011",
+   "ts": "2026-09-18T21:15:00",
+   "sender": "Alex",
+   "text": "I've read it in like three places."
+  },
+  {
+   "id": "m012",
+   "ts": "2026-09-18T21:16:00",
+   "sender": "Priya",
+   "text": "Which places?"
+  },
+  {
+   "id": "m013",
+   "ts": "2026-09-18T21:19:00",
+   "sender": "Alex",
+   "text": "This message was deleted"
+  },
+  {
+   "id": "m014",
+   "ts": "2026-09-18T21:20:00",
+   "sender": "Alex",
+   "text": "Ok fine, I don't have a source handy. But I'm pretty sure."
+  },
+  {
+   "id": "m015",
+   "ts": "2026-09-18T21:24:00",
+   "sender": "Sam",
+   "text": "Can we get back to dates? Nov 14 to 21 works for who?"
+  },
+  {
+   "id": "m016",
+   "ts": "2026-09-18T21:25:00",
+   "sender": "Maya",
+   "text": "Fine with 14 to 21. 👍"
+  },
+  {
+   "id": "m017",
+   "ts": "2026-09-18T21:26:00",
+   "sender": "Jordan",
+   "text": "Me too. I'm off all month anyway, new job starts in December."
+  },
+  {
+   "id": "m018",
+   "ts": "2026-09-18T21:28:00",
+   "sender": "Priya",
+   "text": "I can do 14 to 21 or 12 to 19. Both fine."
+  },
+  {
+   "id": "m019",
+   "ts": "2026-09-18T21:29:00",
+   "sender": "Alex",
+   "text": "14 to 21."
+  },
+  {
+   "id": "m020",
+   "ts": "2026-09-18T21:32:00",
+   "sender": "Jordan",
+   "text": "Oh right, I forgot to say, I got the job!! Starting Dec 1. Thanks for all the encouragement everyone."
+  },
+  {
+   "id": "m021",
+   "ts": "2026-09-18T21:33:00",
+   "sender": "Maya",
+   "text": "Congrats Jordan!!"
+  },
+  {
+   "id": "m022",
+   "ts": "2026-09-18T21:34:00",
+   "sender": "Priya",
+   "text": "Congrats!"
+  },
+  {
+   "id": "m023",
+   "ts": "2026-09-18T21:35:00",
+   "sender": "Alex",
+   "text": "Nice one JD. Also, did anyone see the Niners game?"
+  },
+  {
+   "id": "m024",
+   "ts": "2026-09-18T21:36:00",
+   "sender": "Sam",
+   "text": "Congrats Jordan. Alex, focus."
+  },
+  {
+   "id": "m025",
+   "ts": "2026-09-18T21:38:00",
+   "sender": "Alex",
+   "text": "Sorry. Fantasy football is ruining my life. Anyway, Patagonia."
+  },
+  {
+   "id": "m026",
+   "ts": "2026-09-18T21:43:00",
+   "sender": "Sam",
+   "text": "Ok. Budget. I was thinking $2,500 all in."
+  },
+  {
+   "id": "m027",
+   "ts": "2026-09-18T21:44:00",
+   "sender": "Alex",
+   "text": "Budget shouldn't matter for a once-in-a-lifetime trip. If we need to spend $3,500 we spend $3,500."
+  },
+  {
+   "id": "m028",
+   "ts": "2026-09-18T21:45:00",
+   "sender": "Priya",
+   "text": "$2,200 is what I was thinking."
+  },
+  {
+   "id": "m029",
+   "ts": "2026-09-18T21:47:00",
+   "sender": "Maya",
+   "text": "I can't go over $1,800. I'm honestly pretty broke after the move and the car repair."
+  },
+  {
+   "id": "m030",
+   "ts": "2026-09-18T21:48:00",
+   "sender": "Jordan",
+   "text": "Maya that's fine, we'll make it work."
+  },
+  {
+   "id": "m031",
+   "ts": "2026-09-18T21:50:00",
+   "sender": "Sam",
+   "text": "So somewhere between $1,800 and $3,500. Great."
+  },
+  {
+   "id": "m032",
+   "ts": "2026-09-18T21:53:00",
+   "sender": "Leo",
+   "text": "[Voice note transcript] Yeah, budget wise I'm probably fine with whatever, but the other thing is my knee has been acting up, so I can't do more than like five or six hours of hiking a day and nothing with big steep descents, so that might rule out some of the tougher routes. Sorry, that's annoying."
+  },
+  {
+   "id": "m033",
+   "ts": "2026-09-18T21:54:00",
+   "sender": "Priya",
+   "text": "Not annoying at all. That actually helps narrow things."
+  },
+  {
+   "id": "m034",
+   "ts": "2026-09-18T21:55:00",
+   "sender": "Alex",
+   "text": "The W trek is around 5 to 6 hours a day. There are a couple of steep descents though."
+  },
+  {
+   "id": "m035",
+   "ts": "2026-09-18T21:57:00",
+   "sender": "Maya",
+   "text": "Zion has short hikes, so it fits Leo's limit. Also I read that the Narrows needs a permit in November."
+  },
+  {
+   "id": "m036",
+   "ts": "2026-09-18T21:58:00",
+   "sender": "Leo",
+   "text": "Zion's fine for me. The Narrows sounds fun but the water will be cold."
+  },
+  {
+   "id": "m037",
+   "ts": "2026-09-18T22:00:00",
+   "sender": "Jordan",
+   "text": "What about Iceland?"
+  },
+  {
+   "id": "m038",
+   "ts": "2026-09-18T22:01:00",
+   "sender": "Sam",
+   "text": "Is Iceland a serious option or a joke?"
+  },
+  {
+   "id": "m039",
+   "ts": "2026-09-18T22:02:00",
+   "sender": "Jordan",
+   "text": "Half serious. Flights are like $600 from here."
+  },
+  {
+   "id": "m040",
+   "ts": "2026-09-18T22:03:00",
+   "sender": "Alex",
+   "text": "Iceland in November is dark and rainy. Absolutely not."
+  },
+  {
+   "id": "m041",
+   "ts": "2026-09-18T22:04:00",
+   "sender": "Priya",
+   "text": "Iceland in November has like 5 hours of daylight. That's a big deal for hiking."
+  },
+  {
+   "id": "m042",
+   "ts": "2026-09-18T22:06:00",
+   "sender": "Sam",
+   "text": "Ok I'm not adding Iceland unless someone really wants it."
+  },
+  {
+   "id": "m043",
+   "ts": "2026-09-18T22:07:00",
+   "sender": "Jordan",
+   "text": "I said half serious. Leave it as a maybe."
+  },
+  {
+   "id": "m044",
+   "ts": "2026-09-18T22:11:00",
+   "sender": "Sam",
+   "text": "<Media omitted>"
+  },
+  {
+   "id": "m045",
+   "ts": "2026-09-18T22:12:00",
+   "sender": "Sam",
+   "text": "That's a Facebook post saying most Dolomites huts are open until Nov 20."
+  },
+  {
+   "id": "m046",
+   "ts": "2026-09-18T22:14:00",
+   "sender": "Priya",
+   "text": "Which hut? The websites I looked at said they close between Oct 26 and Nov 2."
+  },
+  {
+   "id": "m047",
+   "ts": "2026-09-18T22:15:00",
+   "sender": "Sam",
+   "text": "It didn't say. It was a group post."
+  },
+  {
+   "id": "m048",
+   "ts": "2026-09-18T22:16:00",
+   "sender": "Priya",
+   "text": "I'd trust the actual hut websites more than a group post, honestly."
+  },
+  {
+   "id": "m049",
+   "ts": "2026-09-18T22:19:00",
+   "sender": "Maya",
+   "text": "👍"
+  },
+  {
+   "id": "m050",
+   "ts": "2026-09-18T22:21:00",
+   "sender": "Alex",
+   "text": "Does anyone want to hear my Patagonia itinerary? I've been working on it for two years."
+  },
+  {
+   "id": "m051",
+   "ts": "2026-09-18T22:22:00",
+   "sender": "Jordan",
+   "text": "Two years?? lol"
+  },
+  {
+   "id": "m052",
+   "ts": "2026-09-18T22:23:00",
+   "sender": "Alex",
+   "text": "Yes. It's 8 days though. We only have 7."
+  },
+  {
+   "id": "m053",
+   "ts": "2026-09-18T22:26:00",
+   "sender": "Sam",
+   "text": "Ok. Let's simplify. Can we at least say the shortlist is Patagonia, Dolomites, Zion?"
+  },
+  {
+   "id": "m054",
+   "ts": "2026-09-18T22:27:00",
+   "sender": "Priya",
+   "text": "Fine with me. Banff and Yosemite are out for me but I'm not the only vote."
+  },
+  {
+   "id": "m055",
+   "ts": "2026-09-18T22:28:00",
+   "sender": "Maya",
+   "text": "I'd still consider Banff if the flights are cheap."
+  },
+  {
+   "id": "m056",
+   "ts": "2026-09-18T22:29:00",
+   "sender": "Jordan",
+   "text": "I looked up Banff. Hotels are about $90 a night."
+  },
+  {
+   "id": "m057",
+   "ts": "2026-09-18T22:32:00",
+   "sender": "Jordan",
+   "text": "Wait, that's Canadian dollars. Ignore the $90. It's more like $65 USD."
+  },
+  {
+   "id": "m058",
+   "ts": "2026-09-18T22:34:00",
+   "sender": "Leo",
+   "text": "[Voice note transcript] Sorry, one more thing. I don't want to be the reason we pick the boring option, so if the knee thing is an issue just tell me and I'll skip the hikes and hang out at the lodge, that's fine, I don't mind."
+  },
+  {
+   "id": "m059",
+   "ts": "2026-09-18T22:35:00",
+   "sender": "Priya",
+   "text": "Leo, no. We're choosing something you can do."
+  },
+  {
+   "id": "m060",
+   "ts": "2026-09-18T22:36:00",
+   "sender": "Sam",
+   "text": "Agreed. That's a real constraint, not a burden."
+  },
+  {
+   "id": "m061",
+   "ts": "2026-09-18T22:41:00",
+   "sender": "Alex",
+   "text": "Alright. Voting time. I vote Patagonia."
+  },
+  {
+   "id": "m062",
+   "ts": "2026-09-18T22:42:00",
+   "sender": "Sam",
+   "text": "Alex, wait for the poll. I said Sunday."
+  },
+  {
+   "id": "m063",
+   "ts": "2026-09-18T22:43:00",
+   "sender": "Alex",
+   "text": "I'm just saying. Patagonia."
+  },
+  {
+   "id": "m064",
+   "ts": "2026-09-18T22:46:00",
+   "sender": "Maya",
+   "text": "Zion is better for the budget. Cheaper flights and I could drive with someone."
+  },
+  {
+   "id": "m065",
+   "ts": "2026-09-18T22:47:00",
+   "sender": "Jordan",
+   "text": "Zion is a road trip. I'd want mountains, not desert canyons. So I'd say Dolomites or Banff."
+  },
+  {
+   "id": "m066",
+   "ts": "2026-09-18T22:48:00",
+   "sender": "Priya",
+   "text": "Dolomites. Valley-based if the huts are closed."
+  },
+  {
+   "id": "m067",
+   "ts": "2026-09-18T22:49:00",
+   "sender": "Leo",
+   "text": "Zion or Dolomites valley for me."
+  },
+  {
+   "id": "m068",
+   "ts": "2026-09-18T22:51:00",
+   "sender": "Sam",
+   "text": "I'm torn between Patagonia and Dolomites honestly. I'll decide when I see prices."
+  },
+  {
+   "id": "m069",
+   "ts": "2026-09-18T22:52:00",
+   "sender": "Alex",
+   "text": "So Patagonia is winning."
+  },
+  {
+   "id": "m070",
+   "ts": "2026-09-18T22:53:00",
+   "sender": "Priya",
+   "text": "How? You've got one vote."
+  },
+  {
+   "id": "m071",
+   "ts": "2026-09-18T22:54:00",
+   "sender": "Alex",
+   "text": "Sam said he's torn towards Patagonia. That's a lean."
+  },
+  {
+   "id": "m072",
+   "ts": "2026-09-18T22:55:00",
+   "sender": "Sam",
+   "text": "I said torn between Patagonia and the Dolomites, Alex. Not leaning either way."
+  },
+  {
+   "id": "m073",
+   "ts": "2026-09-18T22:59:00",
+   "sender": "Maya",
+   "text": "Can someone put all this in a sheet? I can't follow anymore."
+  },
+  {
+   "id": "m074",
+   "ts": "2026-09-18T23:00:00",
+   "sender": "Sam",
+   "text": "I'll try. Priya, could you help?"
+  },
+  {
+   "id": "m075",
+   "ts": "2026-09-18T23:01:00",
+   "sender": "Priya",
+   "text": "Yes. I'll make a sheet with options, dates, budget and the claims we haven't verified."
+  },
+  {
+   "id": "m076",
+   "ts": "2026-09-18T23:03:00",
+   "sender": "Alex",
+   "text": "Verified by who? My source is fine."
+  },
+  {
+   "id": "m077",
+   "ts": "2026-09-18T23:04:00",
+   "sender": "Priya",
+   "text": "Alex, you said you didn't have one handy. The sheet just marks it unverified. That's all."
+  },
+  {
+   "id": "m078",
+   "ts": "2026-09-18T23:07:00",
+   "sender": "Jordan",
+   "text": "Random question, who's driving to SFO? Should we carpool from the East Bay?"
+  },
+  {
+   "id": "m079",
+   "ts": "2026-09-18T23:08:00",
+   "sender": "Maya",
+   "text": "I can drive. I'm in Oakland."
+  },
+  {
+   "id": "m080",
+   "ts": "2026-09-18T23:09:00",
+   "sender": "Sam",
+   "text": "Airport plans can wait until we know which airport. If it's Zion we might fly into Las Vegas."
+  },
+  {
+   "id": "m081",
+   "ts": "2026-09-18T23:10:00",
+   "sender": "Alex",
+   "text": "I'd rather take the shuttle. Whatever."
+  },
+  {
+   "id": "m082",
+   "ts": "2026-09-18T23:14:00",
+   "sender": "Leo",
+   "text": "[Voice note transcript] Hey, sorry to derail, are we sure about the Sunday poll? I have a thing Sunday night. Can we do Saturday? Also, can we make sure the poll includes a none of the above option in case nothing works."
+  },
+  {
+   "id": "m083",
+   "ts": "2026-09-18T23:15:00",
+   "sender": "Sam",
+   "text": "Sure, Saturday night. Poll with a none-of-the-above option."
+  },
+  {
+   "id": "m084",
+   "ts": "2026-09-18T23:16:00",
+   "sender": "Alex",
+   "text": "Great idea Leo. I'd still vote Patagonia."
+  },
+  {
+   "id": "m085",
+   "ts": "2026-09-18T23:18:00",
+   "sender": "Priya",
+   "text": "I'd like the poll to include price and the hut and refugio status for each option. Otherwise we're just voting on vibes."
+  },
+  {
+   "id": "m086",
+   "ts": "2026-09-18T23:19:00",
+   "sender": "Jordan",
+   "text": "Vibes are underrated."
+  },
+  {
+   "id": "m087",
+   "ts": "2026-09-18T23:20:00",
+   "sender": "Maya",
+   "text": "Vibes and budgets 😂"
+  },
+  {
+   "id": "m088",
+   "ts": "2026-09-18T23:23:00",
+   "sender": "Sam",
+   "text": "Ok. Poll Saturday 8pm. Priya makes the sheet, I'll post the poll. Everyone please look at the sheet before voting."
+  },
+  {
+   "id": "m089",
+   "ts": "2026-09-18T23:24:00",
+   "sender": "Alex",
+   "text": "Fine. Torres del Paine wins anyway."
+  },
+  {
+   "id": "m090",
+   "ts": "2026-09-18T23:25:00",
+   "sender": "Priya",
+   "text": "Alex."
+  },
+  {
+   "id": "m091",
+   "ts": "2026-09-18T23:26:00",
+   "sender": "Alex",
+   "text": "Joking. Mostly."
+  },
+  {
+   "id": "m092",
+   "ts": "2026-09-19T00:11:00",
+   "sender": "Maya",
+   "text": "Also, meal plan? Can we agree on doing some group dinners and not eating out every night? Food is where my budget goes."
+  },
+  {
+   "id": "m093",
+   "ts": "2026-09-19T00:13:00",
+   "sender": "Jordan",
+   "text": "I'll cook. I make a great pasta."
+  },
+  {
+   "id": "m094",
+   "ts": "2026-09-19T00:14:00",
+   "sender": "Alex",
+   "text": "I'll grill."
+  },
+  {
+   "id": "m095",
+   "ts": "2026-09-19T00:15:00",
+   "sender": "Priya",
+   "text": "In the Dolomites we'd want to eat at the huts though. That's half the point."
+  },
+  {
+   "id": "m096",
+   "ts": "2026-09-19T00:16:00",
+   "sender": "Sam",
+   "text": "OK ok. That's for later."
+  },
+  {
+   "id": "m097",
+   "ts": "2026-09-19T20:16:00",
+   "sender": "Sam",
+   "text": "Reminder: poll Saturday at 8. Please read the sheet."
+  },
+  {
+   "id": "m098",
+   "ts": "2026-09-19T20:20:00",
+   "sender": "Priya",
+   "text": "Sheet is up. It has options, dates, budget range, and a list of claims we haven't verified. Flags: refugio opening dates, Dolomites hut dates, Zion Narrows permit, wind in Torres del Paine."
+  },
+  {
+   "id": "m099",
+   "ts": "2026-09-19T20:21:00",
+   "sender": "Priya",
+   "text": "<Media omitted>"
+  },
+  {
+   "id": "m100",
+   "ts": "2026-09-19T20:23:00",
+   "sender": "Alex",
+   "text": "Wind? Wind is fine. People exaggerate."
+  },
+  {
+   "id": "m101",
+   "ts": "2026-09-19T20:24:00",
+   "sender": "Priya",
+   "text": "I posted the climate page earlier. It says gusts over 100 km/h are common in November."
+  },
+  {
+   "id": "m102",
+   "ts": "2026-09-19T20:25:00",
+   "sender": "Leo",
+   "text": "Sorry, I've only just seen the sheet. The knee line is right but can you make it just \"max 5-6 hours a day, no steep descents\"? I'd rather not put the knee thing in a sheet."
+  },
+  {
+   "id": "m103",
+   "ts": "2026-09-19T20:26:00",
+   "sender": "Priya",
+   "text": "Of course, changed. Sorry Leo."
+  },
+  {
+   "id": "m104",
+   "ts": "2026-09-19T20:27:00",
+   "sender": "Maya",
+   "text": "Same for me, can you take the \"broke\" comment out? I'd rather it just say a $1,800 limit."
+  },
+  {
+   "id": "m105",
+   "ts": "2026-09-19T20:28:00",
+   "sender": "Priya",
+   "text": "Done for both. I'm sorry, I should have summarized instead of copying."
+  },
+  {
+   "id": "m106",
+   "ts": "2026-09-19T20:31:00",
+   "sender": "Sam",
+   "text": "Thanks Priya. Ok, poll is live. Reply with a number: 1 Patagonia, 2 Dolomites, 3 Zion, 4 Banff, 5 Iceland, 6 None."
+  },
+  {
+   "id": "m107",
+   "ts": "2026-09-19T20:32:00",
+   "sender": "Alex",
+   "text": "1"
+  },
+  {
+   "id": "m108",
+   "ts": "2026-09-19T20:33:00",
+   "sender": "Jordan",
+   "text": "2"
+  },
+  {
+   "id": "m109",
+   "ts": "2026-09-19T20:34:00",
+   "sender": "Maya",
+   "text": "3"
+  },
+  {
+   "id": "m110",
+   "ts": "2026-09-19T20:35:00",
+   "sender": "Sam",
+   "text": "I'll wait to vote."
+  },
+  {
+   "id": "m111",
+   "ts": "2026-09-19T20:37:00",
+   "sender": "Leo",
+   "text": "I'll vote 3 or 2, whichever is cheaper."
+  },
+  {
+   "id": "m112",
+   "ts": "2026-09-19T20:38:00",
+   "sender": "Priya",
+   "text": "2, valley-based Dolomites."
+  },
+  {
+   "id": "m113",
+   "ts": "2026-09-19T20:40:00",
+   "sender": "Alex",
+   "text": "Patagonia is winning! Told you."
+  },
+  {
+   "id": "m114",
+   "ts": "2026-09-19T20:41:00",
+   "sender": "Priya",
+   "text": "Alex, Dolomites has two votes and Patagonia has one."
+  },
+  {
+   "id": "m115",
+   "ts": "2026-09-19T20:42:00",
+   "sender": "Alex",
+   "text": "Ok, ok. Recount. Sam's vote decides."
+  },
+  {
+   "id": "m116",
+   "ts": "2026-09-19T20:43:00",
+   "sender": "Sam",
+   "text": "No vote from me until prices are in. Sorry."
+  },
+  {
+   "id": "m117",
+   "ts": "2026-09-19T20:45:00",
+   "sender": "Jordan",
+   "text": "So no decision."
+  },
+  {
+   "id": "m118",
+   "ts": "2026-09-19T20:46:00",
+   "sender": "Maya",
+   "text": "Guess so."
+  },
+  {
+   "id": "m119",
+   "ts": "2026-09-19T20:49:00",
+   "sender": "Sam",
+   "text": "Right. Summary: no decision yet. Dates are between 14 to 21 and 12 to 19, budget between $1,800 and $3,500, and I'd say the shortlist is Patagonia, Dolomites, Zion. I'll post prices tomorrow."
+  },
+  {
+   "id": "m120",
+   "ts": "2026-09-19T20:50:00",
+   "sender": "Priya",
+   "text": "I'll chase the hut and refugio dates."
+  },
+  {
+   "id": "m121",
+   "ts": "2026-09-19T20:51:00",
+   "sender": "Alex",
+   "text": "And I'll try to find a source for the refugios. A real one."
+  },
+  {
+   "id": "m122",
+   "ts": "2026-09-19T20:52:00",
+   "sender": "Leo",
+   "text": "Thanks everyone. Sorry for being complicated."
+  },
+  {
+   "id": "m123",
+   "ts": "2026-09-19T20:53:00",
+   "sender": "Priya",
+   "text": "You're not. Goodnight all."
+  }
+ ]
+}

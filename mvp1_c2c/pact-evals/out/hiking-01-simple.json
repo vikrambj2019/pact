@@ -1,0 +1,378 @@
+{
+ "id": "hiking-01-simple",
+ "title": "Hiking 01 - simple",
+ "group": "Hiking Crew 🥾",
+ "level": 1,
+ "timezone": "America/Los_Angeles",
+ "participants": [
+  "Sam",
+  "Alex",
+  "Priya",
+  "Jordan",
+  "Maya",
+  "Leo"
+ ],
+ "nicknames": "",
+ "messages": [
+  {
+   "id": "m001",
+   "ts": "2026-09-14T19:40:00",
+   "sender": "Sam",
+   "text": "Hey all, should we lock in our November hiking trip? Let's use this thread to decide where we're going."
+  },
+  {
+   "id": "m002",
+   "ts": "2026-09-14T19:41:00",
+   "sender": "Alex",
+   "text": "Yes! I've been thinking Patagonia. Torres del Paine has been on my list for years."
+  },
+  {
+   "id": "m003",
+   "ts": "2026-09-14T19:42:00",
+   "sender": "Priya",
+   "text": "I'd like the Dolomites. Hut-to-hut hiking would be amazing."
+  },
+  {
+   "id": "m004",
+   "ts": "2026-09-14T19:44:00",
+   "sender": "Jordan",
+   "text": "I'll throw in Banff. It's close and the flights are cheap."
+  },
+  {
+   "id": "m005",
+   "ts": "2026-09-14T19:45:00",
+   "sender": "Maya",
+   "text": "What about Yosemite? Even cheaper and no passports needed."
+  },
+  {
+   "id": "m006",
+   "ts": "2026-09-14T19:48:00",
+   "sender": "Leo",
+   "text": "Any of those work for me. I just need to be back by Sunday the 22nd."
+  },
+  {
+   "id": "m007",
+   "ts": "2026-09-14T19:50:00",
+   "sender": "Sam",
+   "text": "Good to know, Leo. So the dates would be Nov 14 to 21?"
+  },
+  {
+   "id": "m008",
+   "ts": "2026-09-14T19:51:00",
+   "sender": "Alex",
+   "text": "Nov 14-21 works for me."
+  },
+  {
+   "id": "m009",
+   "ts": "2026-09-14T19:52:00",
+   "sender": "Priya",
+   "text": "Works for me too."
+  },
+  {
+   "id": "m010",
+   "ts": "2026-09-14T19:54:00",
+   "sender": "Jordan",
+   "text": "Same here, I already put it on my calendar."
+  },
+  {
+   "id": "m011",
+   "ts": "2026-09-14T19:55:00",
+   "sender": "Maya",
+   "text": "I'm free those dates too."
+  },
+  {
+   "id": "m012",
+   "ts": "2026-09-14T19:57:00",
+   "sender": "Leo",
+   "text": "Nov 14-21 is perfect, that gets me home on the 21st."
+  },
+  {
+   "id": "m013",
+   "ts": "2026-09-14T19:58:00",
+   "sender": "Sam",
+   "text": "Great, dates are locked: Nov 14 to 21, seven days."
+  },
+  {
+   "id": "m014",
+   "ts": "2026-09-14T20:02:00",
+   "sender": "Sam",
+   "text": "Next, budget. I was thinking around $2,500 per person all in. Does that work?"
+  },
+  {
+   "id": "m015",
+   "ts": "2026-09-14T20:03:00",
+   "sender": "Priya",
+   "text": "$2,500 is fine for me."
+  },
+  {
+   "id": "m016",
+   "ts": "2026-09-14T20:04:00",
+   "sender": "Jordan",
+   "text": "Fine for me. Banff would come in well under that."
+  },
+  {
+   "id": "m017",
+   "ts": "2026-09-14T20:06:00",
+   "sender": "Maya",
+   "text": "Works for me, though I'd rather come in lower if we can."
+  },
+  {
+   "id": "m018",
+   "ts": "2026-09-14T20:07:00",
+   "sender": "Alex",
+   "text": "$2,500 works. Patagonia flights would eat a lot of it though."
+  },
+  {
+   "id": "m019",
+   "ts": "2026-09-14T20:09:00",
+   "sender": "Leo",
+   "text": "$2,500 is OK by me."
+  },
+  {
+   "id": "m020",
+   "ts": "2026-09-14T20:14:00",
+   "sender": "Sam",
+   "text": "What matters most to everyone? I care mostly about great hiking and good views."
+  },
+  {
+   "id": "m021",
+   "ts": "2026-09-14T20:15:00",
+   "sender": "Alex",
+   "text": "Same, hiking quality first. Then cost."
+  },
+  {
+   "id": "m022",
+   "ts": "2026-09-14T20:16:00",
+   "sender": "Priya",
+   "text": "Hiking first, and I'd like some variety in the trail types."
+  },
+  {
+   "id": "m023",
+   "ts": "2026-09-14T20:18:00",
+   "sender": "Jordan",
+   "text": "For me it's cost and weather. I don't love cold rain."
+  },
+  {
+   "id": "m024",
+   "ts": "2026-09-14T20:19:00",
+   "sender": "Maya",
+   "text": "Weather too. And how easy the logistics are."
+  },
+  {
+   "id": "m025",
+   "ts": "2026-09-14T20:21:00",
+   "sender": "Leo",
+   "text": "Hiking and views, like Sam. I'm flexible on everything else."
+  },
+  {
+   "id": "m026",
+   "ts": "2026-09-14T20:25:00",
+   "sender": "Alex",
+   "text": "Patagonia flights are usually around $1,300 round trip for us, I checked last week."
+  },
+  {
+   "id": "m027",
+   "ts": "2026-09-14T20:26:00",
+   "sender": "Priya",
+   "text": "The Dolomites are around $900 for flights, but hut availability in November could be tight."
+  },
+  {
+   "id": "m028",
+   "ts": "2026-09-14T20:28:00",
+   "sender": "Jordan",
+   "text": "Banff in mid-November is usually snowy, so I'd guess a lot of trails would be hard to hike."
+  },
+  {
+   "id": "m029",
+   "ts": "2026-09-14T20:30:00",
+   "sender": "Maya",
+   "text": "Yosemite is easy to reach, but I think it's a bit tame for a week of hiking."
+  },
+  {
+   "id": "m030",
+   "ts": "2026-09-14T20:31:00",
+   "sender": "Leo",
+   "text": "Patagonia in November is spring, so it should be mild with longer days."
+  },
+  {
+   "id": "m031",
+   "ts": "2026-09-14T20:34:00",
+   "sender": "Sam",
+   "text": "Thanks all. So flights are about $1,300 for Patagonia and $900 for the Dolomites."
+  },
+  {
+   "id": "m032",
+   "ts": "2026-09-14T20:39:00",
+   "sender": "Jordan",
+   "text": "Given the snow thing, I'm happy to drop Banff. Let's not hike in a foot of snow."
+  },
+  {
+   "id": "m033",
+   "ts": "2026-09-14T20:40:00",
+   "sender": "Maya",
+   "text": "I'll drop Yosemite too, it's better for a long weekend anyway."
+  },
+  {
+   "id": "m034",
+   "ts": "2026-09-14T20:42:00",
+   "sender": "Alex",
+   "text": "So it's down to Patagonia and the Dolomites?"
+  },
+  {
+   "id": "m035",
+   "ts": "2026-09-14T20:43:00",
+   "sender": "Priya",
+   "text": "Yes. And honestly the hut availability worries me for the Dolomites in November."
+  },
+  {
+   "id": "m036",
+   "ts": "2026-09-14T20:45:00",
+   "sender": "Leo",
+   "text": "Then Patagonia sounds better to me on the weather too."
+  },
+  {
+   "id": "m037",
+   "ts": "2026-09-14T20:46:00",
+   "sender": "Sam",
+   "text": "Anyone still strongly for the Dolomites?"
+  },
+  {
+   "id": "m038",
+   "ts": "2026-09-14T20:49:00",
+   "sender": "Priya",
+   "text": "Not strongly. I'm happy with Patagonia, it's been on my list too."
+  },
+  {
+   "id": "m039",
+   "ts": "2026-09-14T20:50:00",
+   "sender": "Jordan",
+   "text": "Patagonia works for me. Flights are a stretch but still inside $2,500."
+  },
+  {
+   "id": "m040",
+   "ts": "2026-09-14T20:52:00",
+   "sender": "Maya",
+   "text": "I'm in for Patagonia too."
+  },
+  {
+   "id": "m041",
+   "ts": "2026-09-14T20:53:00",
+   "sender": "Alex",
+   "text": "Great, I'm obviously in for Patagonia."
+  },
+  {
+   "id": "m042",
+   "ts": "2026-09-14T20:55:00",
+   "sender": "Leo",
+   "text": "Patagonia, yes."
+  },
+  {
+   "id": "m043",
+   "ts": "2026-09-14T20:56:00",
+   "sender": "Sam",
+   "text": "Then Patagonia it is. Are all six of us agreed?"
+  },
+  {
+   "id": "m044",
+   "ts": "2026-09-14T20:57:00",
+   "sender": "Alex",
+   "text": "Yes, all in. Torres del Paine, here we come."
+  },
+  {
+   "id": "m045",
+   "ts": "2026-09-14T20:58:00",
+   "sender": "Priya",
+   "text": "Yes from me."
+  },
+  {
+   "id": "m046",
+   "ts": "2026-09-14T20:59:00",
+   "sender": "Jordan",
+   "text": "Yes."
+  },
+  {
+   "id": "m047",
+   "ts": "2026-09-14T21:00:00",
+   "sender": "Maya",
+   "text": "Yes, I'm in."
+  },
+  {
+   "id": "m048",
+   "ts": "2026-09-14T21:02:00",
+   "sender": "Leo",
+   "text": "Yes, count me in."
+  },
+  {
+   "id": "m049",
+   "ts": "2026-09-14T21:03:00",
+   "sender": "Sam",
+   "text": "I'm in too."
+  },
+  {
+   "id": "m050",
+   "ts": "2026-09-15T09:03:00",
+   "sender": "Sam",
+   "text": "Morning! I'll book flights by Friday. Please all confirm your passports are valid."
+  },
+  {
+   "id": "m051",
+   "ts": "2026-09-15T09:11:00",
+   "sender": "Alex",
+   "text": "Passport is good. I'll look at W trek itineraries and post options tonight."
+  },
+  {
+   "id": "m052",
+   "ts": "2026-09-15T09:14:00",
+   "sender": "Priya",
+   "text": "Passport is fine. I'll research refugio and campsite bookings."
+  },
+  {
+   "id": "m053",
+   "ts": "2026-09-15T09:18:00",
+   "sender": "Jordan",
+   "text": "Passport good. I'll look at travel insurance and post options here."
+  },
+  {
+   "id": "m054",
+   "ts": "2026-09-15T09:20:00",
+   "sender": "Maya",
+   "text": "Passport good. I'll set up a shared expense sheet."
+  },
+  {
+   "id": "m055",
+   "ts": "2026-09-15T09:25:00",
+   "sender": "Leo",
+   "text": "Passport good. I'll check gear rental in Puerto Natales."
+  },
+  {
+   "id": "m056",
+   "ts": "2026-09-15T09:31:00",
+   "sender": "Alex",
+   "text": "Also, I'll find out the best way to get from Punta Arenas to the park."
+  },
+  {
+   "id": "m057",
+   "ts": "2026-09-15T09:34:00",
+   "sender": "Priya",
+   "text": "Great. I'll ping the group when I hear back from the refugios."
+  },
+  {
+   "id": "m058",
+   "ts": "2026-09-15T09:38:00",
+   "sender": "Jordan",
+   "text": "Nice, this went fast. Thanks Sam for organizing."
+  },
+  {
+   "id": "m059",
+   "ts": "2026-09-15T09:40:00",
+   "sender": "Maya",
+   "text": "Agreed, thanks Sam. Sheet link coming tomorrow."
+  },
+  {
+   "id": "m060",
+   "ts": "2026-09-15T09:43:00",
+   "sender": "Leo",
+   "text": "Thanks all, this is going to be a great trip."
+  }
+ ]
+}

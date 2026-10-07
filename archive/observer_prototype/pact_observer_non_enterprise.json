@@ -1,0 +1,62 @@
+{
+  "individual_mapping": {
+    "mvp_version": 1,
+    "policy": {
+      "require_opt_in": true,
+      "record_clear_statements_with_provenance": true,
+      "require_confirmation_for_ambiguous_interpretations": true,
+      "silence_counts_as_confirmation": false
+    },
+    "participant_permissions": [
+      {
+        "participant_id": "person_1",
+        "mapping": {
+          "status": "not_requested",
+          "source_message_id": null
+        },
+        "share_in_group_card": {
+          "status": "not_requested",
+          "source_message_id": null
+        }
+      }
+    ],
+    "pending_interpretations": [
+      {
+        "id": "interpretation_1",
+        "participant_id": "person_1",
+        "proposed_type": "constraint",
+        "proposed_statement": "Dinner must cost no more than $40 per person",
+        "source_message_ids": ["msg_1"],
+        "confirmation": {
+          "status": "pending",
+          "confirmed_by": null,
+          "source_message_id": null
+        },
+        "included_in_confirmed_state": false
+      }
+    ]
+  },
+  "sharing_policy": {
+    "individual_positions_location": "card",
+    "group_card_requires_sharing_permission": true,
+    "automatically_post_individual_positions_to_chat": false,
+    "on_chat_request": "share_only_permitted_positions",
+    "unconfirmed_interpretations": "keep_out_of_shared_card"
+  },
+  "roadmap": [
+    {
+      "id": "todo_1",
+      "feature": "Private interpretation confirmation",
+      "description": "Ask a participant privately to confirm or correct an ambiguous preference or constraint.",
+      "target": "after_mvp",
+      "status": "planned"
+    },
+    {
+      "id": "todo_2",
+      "feature": "Per-item sharing controls",
+      "description": "Let participants choose which individual preferences, constraints, and positions appear in the group card.",
+      "target": "after_mvp",
+      "status": "planned"
+    }
+  ]
+}

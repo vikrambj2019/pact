@@ -1,0 +1,5 @@
+streamlit>=1.40,<2
+certifi
+pytest
+fastapi>=0.111
+uvicorn[standard]>=0.29

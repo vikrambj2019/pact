@@ -1,0 +1,414 @@
+{
+ "id": "hiking-02-one-dispute",
+ "title": "Hiking 02 - one dispute, one changed mind, one quiet member",
+ "group": "Hiking Crew 🥾",
+ "level": 2,
+ "timezone": "America/Los_Angeles",
+ "participants": [
+  "Sam",
+  "Alex",
+  "Priya",
+  "Jordan",
+  "Maya",
+  "Leo"
+ ],
+ "nicknames": "",
+ "messages": [
+  {
+   "id": "m001",
+   "ts": "2026-09-15T18:05:00",
+   "sender": "Sam",
+   "text": "Ok team, November hiking trip. Let's pick a place this week."
+  },
+  {
+   "id": "m002",
+   "ts": "2026-09-15T18:06:00",
+   "sender": "Alex",
+   "text": "I vote Patagonia. Torres del Paine, the W trek, done."
+  },
+  {
+   "id": "m003",
+   "ts": "2026-09-15T18:07:00",
+   "sender": "Priya",
+   "text": "Dolomites for me. Rifugio to rifugio, pasta every night."
+  },
+  {
+   "id": "m004",
+   "ts": "2026-09-15T18:09:00",
+   "sender": "Jordan",
+   "text": "Banff. Cheap flights and I know the area."
+  },
+  {
+   "id": "m005",
+   "ts": "2026-09-15T18:10:00",
+   "sender": "Maya",
+   "text": "Yosemite! Nobody needs a passport and we could drive."
+  },
+  {
+   "id": "m006",
+   "ts": "2026-09-15T18:13:00",
+   "sender": "Leo",
+   "text": "I'm easy. Only constraint is I have to be home by the 22nd."
+  },
+  {
+   "id": "m007",
+   "ts": "2026-09-15T18:15:00",
+   "sender": "Sam",
+   "text": "Noted. Dates Nov 14 to 21 then? Seven days."
+  },
+  {
+   "id": "m008",
+   "ts": "2026-09-15T18:16:00",
+   "sender": "Alex",
+   "text": "Works for me."
+  },
+  {
+   "id": "m009",
+   "ts": "2026-09-15T18:17:00",
+   "sender": "Priya",
+   "text": "Yes, works."
+  },
+  {
+   "id": "m010",
+   "ts": "2026-09-15T18:19:00",
+   "sender": "Jordan",
+   "text": "Works."
+  },
+  {
+   "id": "m011",
+   "ts": "2026-09-15T18:20:00",
+   "sender": "Maya",
+   "text": "Works for me."
+  },
+  {
+   "id": "m012",
+   "ts": "2026-09-15T18:22:00",
+   "sender": "Leo",
+   "text": "Nov 14-21 is good."
+  },
+  {
+   "id": "m013",
+   "ts": "2026-09-15T18:24:00",
+   "sender": "Sam",
+   "text": "Budget? I was thinking $2,500 a head all in."
+  },
+  {
+   "id": "m014",
+   "ts": "2026-09-15T18:25:00",
+   "sender": "Alex",
+   "text": "Fine."
+  },
+  {
+   "id": "m015",
+   "ts": "2026-09-15T18:26:00",
+   "sender": "Priya",
+   "text": "Fine with me."
+  },
+  {
+   "id": "m016",
+   "ts": "2026-09-15T18:28:00",
+   "sender": "Maya",
+   "text": "Same."
+  },
+  {
+   "id": "m017",
+   "ts": "2026-09-15T18:29:00",
+   "sender": "Jordan",
+   "text": "Yep."
+  },
+  {
+   "id": "m018",
+   "ts": "2026-09-15T18:32:00",
+   "sender": "Sam",
+   "text": "Great. What matters most to each of you?"
+  },
+  {
+   "id": "m019",
+   "ts": "2026-09-15T18:33:00",
+   "sender": "Alex",
+   "text": "Hiking quality. I want proper mountains and big views."
+  },
+  {
+   "id": "m020",
+   "ts": "2026-09-15T18:34:00",
+   "sender": "Priya",
+   "text": "Same, plus food. I'm a foodie, sorry."
+  },
+  {
+   "id": "m021",
+   "ts": "2026-09-15T18:36:00",
+   "sender": "Jordan",
+   "text": "Cost, and not being cold and wet."
+  },
+  {
+   "id": "m022",
+   "ts": "2026-09-15T18:37:00",
+   "sender": "Maya",
+   "text": "Cost and low-stress logistics."
+  },
+  {
+   "id": "m023",
+   "ts": "2026-09-15T18:41:00",
+   "sender": "Maya",
+   "text": "Random, but did anyone listen to that podcast about the Camino? Made me want to walk for a month."
+  },
+  {
+   "id": "m024",
+   "ts": "2026-09-15T18:42:00",
+   "sender": "Sam",
+   "text": "Ha, one week first, Maya."
+  },
+  {
+   "id": "m025",
+   "ts": "2026-09-15T18:43:00",
+   "sender": "Leo",
+   "text": "lol"
+  },
+  {
+   "id": "m026",
+   "ts": "2026-09-15T18:45:00",
+   "sender": "Alex",
+   "text": "I'd do the Camino after Patagonia."
+  },
+  {
+   "id": "m027",
+   "ts": "2026-09-15T18:51:00",
+   "sender": "Alex",
+   "text": "Patagonia flights are about $1,300 round trip, I checked yesterday."
+  },
+  {
+   "id": "m028",
+   "ts": "2026-09-15T18:53:00",
+   "sender": "Priya",
+   "text": "Dolomites flights are around $900. Trains from Venice are cheap too."
+  },
+  {
+   "id": "m029",
+   "ts": "2026-09-15T18:56:00",
+   "sender": "Alex",
+   "text": "Just so you know, most Dolomites huts are closed in November."
+  },
+  {
+   "id": "m030",
+   "ts": "2026-09-15T18:57:00",
+   "sender": "Priya",
+   "text": "Some rifugi stay open into early November though. I'm not sure about the 14th to the 21st."
+  },
+  {
+   "id": "m031",
+   "ts": "2026-09-15T18:59:00",
+   "sender": "Alex",
+   "text": "I read that almost everything shuts by late October."
+  },
+  {
+   "id": "m032",
+   "ts": "2026-09-15T19:00:00",
+   "sender": "Priya",
+   "text": "I've read the opposite for a few of the big ones. I'll check."
+  },
+  {
+   "id": "m033",
+   "ts": "2026-09-15T19:04:00",
+   "sender": "Sam",
+   "text": "Jordan, Banff in mid-November, isn't that all snow?"
+  },
+  {
+   "id": "m034",
+   "ts": "2026-09-15T19:06:00",
+   "sender": "Jordan",
+   "text": "Probably. I looked at trail conditions last year and half the trails were closed by then."
+  },
+  {
+   "id": "m035",
+   "ts": "2026-09-15T19:07:00",
+   "sender": "Jordan",
+   "text": "Ok, I'm dropping Banff. If it's not Banff I'd take the Dolomites over Patagonia because of cost."
+  },
+  {
+   "id": "m036",
+   "ts": "2026-09-15T19:09:00",
+   "sender": "Maya",
+   "text": "Yosemite in November is also unpredictable. Tioga Pass usually closes."
+  },
+  {
+   "id": "m037",
+   "ts": "2026-09-15T19:10:00",
+   "sender": "Sam",
+   "text": "Do we still want Yosemite, Maya?"
+  },
+  {
+   "id": "m038",
+   "ts": "2026-09-15T19:11:00",
+   "sender": "Maya",
+   "text": "Not really. Let's drop it. I'm fine with either Patagonia or the Dolomites."
+  },
+  {
+   "id": "m039",
+   "ts": "2026-09-15T19:14:00",
+   "sender": "Sam",
+   "text": "I lean Patagonia, it's a bucket list thing for me too."
+  },
+  {
+   "id": "m040",
+   "ts": "2026-09-15T19:15:00",
+   "sender": "Alex",
+   "text": "Obviously Patagonia."
+  },
+  {
+   "id": "m041",
+   "ts": "2026-09-15T19:16:00",
+   "sender": "Priya",
+   "text": "I'm Dolomites, unless the huts turn out to be closed."
+  },
+  {
+   "id": "m042",
+   "ts": "2026-09-15T19:18:00",
+   "sender": "Jordan",
+   "text": "So it's 2 and 2 with Maya neutral. Leo?"
+  },
+  {
+   "id": "m043",
+   "ts": "2026-09-15T19:19:00",
+   "sender": "Sam",
+   "text": "Leo, any preference?"
+  },
+  {
+   "id": "m044",
+   "ts": "2026-09-15T19:22:00",
+   "sender": "Maya",
+   "text": "He's probably busy. Let's not wait on him."
+  },
+  {
+   "id": "m045",
+   "ts": "2026-09-15T19:26:00",
+   "sender": "Jordan",
+   "text": "Cost check. Patagonia is $1,300 in flights plus park fees. Is $2,500 realistic?"
+  },
+  {
+   "id": "m046",
+   "ts": "2026-09-15T19:28:00",
+   "sender": "Alex",
+   "text": "Yes, I did the math last week. Flights, the W trek refugios, food, all under $2,500."
+  },
+  {
+   "id": "m047",
+   "ts": "2026-09-15T19:30:00",
+   "sender": "Jordan",
+   "text": "Ok. Still, the Dolomites would leave more room."
+  },
+  {
+   "id": "m048",
+   "ts": "2026-09-15T19:31:00",
+   "sender": "Sam",
+   "text": "Fair. It's a tradeoff between the bucket-list factor and cost."
+  },
+  {
+   "id": "m049",
+   "ts": "2026-09-15T19:34:00",
+   "sender": "Priya",
+   "text": "Also, the Dolomites have decent public transport. Patagonia needs buses and ferries."
+  },
+  {
+   "id": "m050",
+   "ts": "2026-09-15T19:36:00",
+   "sender": "Alex",
+   "text": "The buses run daily in season. November is early season but they run."
+  },
+  {
+   "id": "m051",
+   "ts": "2026-09-15T19:38:00",
+   "sender": "Priya",
+   "text": "Season starts around October, I think? I'm not sure."
+  },
+  {
+   "id": "m052",
+   "ts": "2026-09-15T19:39:00",
+   "sender": "Alex",
+   "text": "Yeah, October to April, I think."
+  },
+  {
+   "id": "m053",
+   "ts": "2026-09-15T19:43:00",
+   "sender": "Maya",
+   "text": "Can we decide the tiebreak method? A vote?"
+  },
+  {
+   "id": "m054",
+   "ts": "2026-09-15T19:45:00",
+   "sender": "Sam",
+   "text": "Let's settle the hut question first. If the Dolomites huts are closed it's Patagonia by default."
+  },
+  {
+   "id": "m055",
+   "ts": "2026-09-15T19:46:00",
+   "sender": "Priya",
+   "text": "Agreed, that's the fair way. I'll check the refugio opening dates."
+  },
+  {
+   "id": "m056",
+   "ts": "2026-09-15T19:47:00",
+   "sender": "Alex",
+   "text": "And I'll check what's open in Torres del Paine in November so it's apples to apples."
+  },
+  {
+   "id": "m057",
+   "ts": "2026-09-15T19:48:00",
+   "sender": "Jordan",
+   "text": "Good plan."
+  },
+  {
+   "id": "m058",
+   "ts": "2026-09-15T19:49:00",
+   "sender": "Maya",
+   "text": "Works for me."
+  },
+  {
+   "id": "m059",
+   "ts": "2026-09-15T19:51:00",
+   "sender": "Sam",
+   "text": "Ok. Let's regroup Wednesday evening after Priya and Alex report back."
+  },
+  {
+   "id": "m060",
+   "ts": "2026-09-15T19:52:00",
+   "sender": "Leo",
+   "text": "Sounds good."
+  },
+  {
+   "id": "m061",
+   "ts": "2026-09-15T19:55:00",
+   "sender": "Jordan",
+   "text": "Also, can someone make a shared doc for all of this?"
+  },
+  {
+   "id": "m062",
+   "ts": "2026-09-15T19:57:00",
+   "sender": "Maya",
+   "text": "I'll do it. A sheet with options, flights and notes."
+  },
+  {
+   "id": "m063",
+   "ts": "2026-09-15T19:58:00",
+   "sender": "Sam",
+   "text": "Thanks Maya."
+  },
+  {
+   "id": "m064",
+   "ts": "2026-09-15T20:00:00",
+   "sender": "Priya",
+   "text": "Thanks. I'll post what I find here Wednesday morning."
+  },
+  {
+   "id": "m065",
+   "ts": "2026-09-15T20:01:00",
+   "sender": "Alex",
+   "text": "Same."
+  },
+  {
+   "id": "m066",
+   "ts": "2026-09-15T20:02:00",
+   "sender": "Sam",
+   "text": "Great. Talk Wednesday."
+  }
+ ]
+}

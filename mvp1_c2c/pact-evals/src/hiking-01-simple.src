@@ -1,0 +1,65 @@
+# title: Hiking 01 - simple
+# group: Hiking Crew 🥾
+# start: 2026-09-14 19:40
+# level: 1
+# expect_each: 10
+m001|0|Sam|Hey all, should we lock in our November hiking trip? Let's use this thread to decide where we're going.
+m002|1|Alex|Yes! I've been thinking Patagonia. Torres del Paine has been on my list for years.
+m003|1|Priya|I'd like the Dolomites. Hut-to-hut hiking would be amazing.
+m004|2|Jordan|I'll throw in Banff. It's close and the flights are cheap.
+m005|1|Maya|What about Yosemite? Even cheaper and no passports needed.
+m006|3|Leo|Any of those work for me. I just need to be back by Sunday the 22nd.
+m007|2|Sam|Good to know, Leo. So the dates would be Nov 14 to 21?
+m008|1|Alex|Nov 14-21 works for me.
+m009|1|Priya|Works for me too.
+m010|2|Jordan|Same here, I already put it on my calendar.
+m011|1|Maya|I'm free those dates too.
+m012|2|Leo|Nov 14-21 is perfect, that gets me home on the 21st.
+m013|1|Sam|Great, dates are locked: Nov 14 to 21, seven days.
+m014|4|Sam|Next, budget. I was thinking around $2,500 per person all in. Does that work?
+m015|1|Priya|$2,500 is fine for me.
+m016|1|Jordan|Fine for me. Banff would come in well under that.
+m017|2|Maya|Works for me, though I'd rather come in lower if we can.
+m018|1|Alex|$2,500 works. Patagonia flights would eat a lot of it though.
+m019|2|Leo|$2,500 is OK by me.
+m020|5|Sam|What matters most to everyone? I care mostly about great hiking and good views.
+m021|1|Alex|Same, hiking quality first. Then cost.
+m022|1|Priya|Hiking first, and I'd like some variety in the trail types.
+m023|2|Jordan|For me it's cost and weather. I don't love cold rain.
+m024|1|Maya|Weather too. And how easy the logistics are.
+m025|2|Leo|Hiking and views, like Sam. I'm flexible on everything else.
+m026|4|Alex|Patagonia flights are usually around $1,300 round trip for us, I checked last week.
+m027|1|Priya|The Dolomites are around $900 for flights, but hut availability in November could be tight.
+m028|2|Jordan|Banff in mid-November is usually snowy, so I'd guess a lot of trails would be hard to hike.
+m029|2|Maya|Yosemite is easy to reach, but I think it's a bit tame for a week of hiking.
+m030|1|Leo|Patagonia in November is spring, so it should be mild with longer days.
+m031|3|Sam|Thanks all. So flights are about $1,300 for Patagonia and $900 for the Dolomites.
+m032|5|Jordan|Given the snow thing, I'm happy to drop Banff. Let's not hike in a foot of snow.
+m033|1|Maya|I'll drop Yosemite too, it's better for a long weekend anyway.
+m034|2|Alex|So it's down to Patagonia and the Dolomites?
+m035|1|Priya|Yes. And honestly the hut availability worries me for the Dolomites in November.
+m036|2|Leo|Then Patagonia sounds better to me on the weather too.
+m037|1|Sam|Anyone still strongly for the Dolomites?
+m038|3|Priya|Not strongly. I'm happy with Patagonia, it's been on my list too.
+m039|1|Jordan|Patagonia works for me. Flights are a stretch but still inside $2,500.
+m040|2|Maya|I'm in for Patagonia too.
+m041|1|Alex|Great, I'm obviously in for Patagonia.
+m042|2|Leo|Patagonia, yes.
+m043|1|Sam|Then Patagonia it is. Are all six of us agreed?
+m044|1|Alex|Yes, all in. Torres del Paine, here we come.
+m045|1|Priya|Yes from me.
+m046|1|Jordan|Yes.
+m047|1|Maya|Yes, I'm in.
+m048|2|Leo|Yes, count me in.
+m049|1|Sam|I'm in too.
+m050|720|Sam|Morning! I'll book flights by Friday. Please all confirm your passports are valid.
+m051|8|Alex|Passport is good. I'll look at W trek itineraries and post options tonight.
+m052|3|Priya|Passport is fine. I'll research refugio and campsite bookings.
+m053|4|Jordan|Passport good. I'll look at travel insurance and post options here.
+m054|2|Maya|Passport good. I'll set up a shared expense sheet.
+m055|5|Leo|Passport good. I'll check gear rental in Puerto Natales.
+m056|6|Alex|Also, I'll find out the best way to get from Punta Arenas to the park.
+m057|3|Priya|Great. I'll ping the group when I hear back from the refugios.
+m058|4|Jordan|Nice, this went fast. Thanks Sam for organizing.
+m059|2|Maya|Agreed, thanks Sam. Sheet link coming tomorrow.
+m060|3|Leo|Thanks all, this is going to be a great trip.

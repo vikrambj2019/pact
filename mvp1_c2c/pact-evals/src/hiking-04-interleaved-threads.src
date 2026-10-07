@@ -1,0 +1,101 @@
+# title: Hiking 04 - interleaved decisions, sarcasm, misquotes, a retraction, a returning member
+# group: Hiking Crew 🥾
+# start: 2026-09-17 12:30
+# level: 4
+# nicknames: J and JD = Jordan; Al = Alex
+m001|0|Sam|Team. November hiking trip. Let's actually decide this week. Destination, dates, budget.
+m002|1|Alex|Patagonia. Torres del Paine. I've been saying it for two years.
+m003|1|Priya|Dolomites, hut to hut. Rifugio dinners, mountains, done.
+m004|2|Jordan|I'm good with either honestly, just tell me where to show up.
+m005|1|Maya|Either is fine if it's not crazy expensive.
+m006|2|Leo|I'm flexible on almost everything, but I'd love a proper hut-to-hut trip. Never done one.
+m007|2|Sam|Dates: Nov 14 to 21?
+m008|1|Alex|Yes.
+m009|1|Priya|Yes.
+m010|1|Jordan|Yes
+m011|1|Maya|Yes.
+m012|1|Leo|Yes, good for me. Need to be back by the 22nd.
+m013|2|Sam|Budget $2,500 per person all in?
+m014|1|Alex|Fine.
+m015|1|Priya|Fine.
+m016|1|Jordan|Sure.
+m017|1|Maya|Fine, ideally less.
+m018|1|Leo|Fine by me. Heading into a meeting, back tonight.
+m019|6|Alex|Patagonia flights are about $1,300 round trip. I checked earlier.
+m020|2|Priya|I just checked for Nov 14 to 21 specifically and I'm seeing $1,800 from SFO.|>m019
+m021|1|Alex|Then wait a week, they'll drop. They always drop.|>m020
+m022|1|Jordan|Oh sure, because airfare famously only goes down.|>m021
+m023|2|Priya|Dolomites is around $900 into Venice, and there's a train to Cortina.
+m024|1|Alex|Fair, but the Dolomites huts are basically all closed by mid-November.
+m025|1|Maya|Oh great, $1,800 for flights. Budget's just a suggestion I guess.|>m020
+m026|2|Priya|Alex, hut opening dates vary. I'll check the actual dates tonight.|>m024
+m027|1|Alex|Priya's flight number can't be right, I saw $1,300.|>m020
+m028|1|Priya|Al, mine is for the exact dates. Yours may have been for another month.|>m027
+m029|2|Alex|Could be. Patagonia is still worth it.
+m030|1080|Priya|Hut update. I went through the websites of the main rifugi around Cortina and Val Gardena. Most close between late October and about Nov 5.|>m026
+m031|1|Priya|So for Nov 14 to 21, hut to hut is basically off the table. Al was right about that.
+m032|1|Alex|Told you.
+m033|2|Jordan|So it's just valley hiking in the Dolomites then? Day hikes from a base?
+m034|1|Priya|Yes, and that could be great. I think the cable cars in the valleys still run until early December.|>m033
+m035|2|Sam|Leo said he's fine with anything, so that's Leo covered.
+m036|1|Maya|Valley hiking is cheaper too, no hut fees.
+m037|1|Sam|J, are you on team Dolomites then?
+m038|1|Jordan|Yeah, if it's cheaper. Dolomites.
+m039|1|Alex|JD, come on, you said either.|>m038
+m040|1|Jordan|I said either, then Priya found the price difference.|>m039
+m041|3|Priya|Separate thing. I found a chalet in Ortisei. Six beds, $2,240 for the week, so about $373 each.
+m042|2|Maya|$373 is fine. Flights $900, chalet $373, food maybe $500. That's about $1,800, so there's room.
+m043|2|Sam|So Patagonia flights are $1,300 like Alex said and the Dolomites total is about $1,800.
+m044|1|Priya|Sam, I said $1,800 for the Patagonia flights. Alex's $1,300 was an older number.|>m043
+m045|2|Alex|She's right. Scratch my $1,300, that was a spring fare. $1,800 is right for these dates.|>m044
+m046|1|Alex|But Patagonia is still the better trip.
+m047|3|Sam|Ok, calling it. Vote. Patagonia or the Dolomites (valley-based)? One word please.
+m048|1|Priya|Dolomites.
+m049|1|Jordan|Dolomites.
+m050|1|Maya|Dolomites.
+m051|1|Alex|Patagonia.
+m052|2|Sam|Dolomites from me too. That's 4 to 1, and Leo's fine with anything, so it's decided.
+m053|2|Alex|Fine. I'm not thrilled but fine.
+m054|5|Priya|Back to the chalet. It's free that week, but I think it'll be gone by Friday.
+m055|2|Jordan|Looks great. I'm in on the chalet.
+m056|1|Maya|Chalet is fine cost-wise. I'd want to see the kitchen though, I'd cook to save money.
+m057|2|Sam|Leaning yes on the chalet. Alex?
+m058|1|Alex|I'll go wherever. Chalet's fine.
+m059|4|Jordan|Rental cars? Two cars for the week is about $560 total, so about $93 each plus fuel.
+m060|1|Maya|Careful, I think Italy requires winter tires or chains from Nov 15. Our dates straddle that.
+m061|1|Jordan|Rental companies include them, no?|>m060
+m062|1|Maya|Not sure. Probably costs extra.|>m061
+m063|3|Priya|We could also take the train from Venice to Bolzano and then a bus into the valley. Slower but cheap.
+m064|2|Sam|Let's not decide transport yet. Jordan, can you price cars including tires?
+m065|1|Jordan|Yes.
+m066|1|Priya|I'll look at the train and bus times.
+m067|900|Leo|Catching up. Dolomites valley hiking? I thought we were doing huts?
+m068|4|Sam|The huts close before mid-Nov, Priya checked. So valley hiking from a chalet. Everyone's on board, and you said you're fine with anything.|>m067
+m069|2|Leo|I said I was flexible, not that I didn't care. I was really excited about the huts.|>m068
+m070|2|Priya|Sorry Leo, the huts really do close before our dates.|>m069
+m071|3|Leo|Ok. Then honestly I'd rather do Patagonia with the refugios, that's the hut experience.
+m072|1|Alex|Yes! Leo gets it. Patagonia.
+m073|3|Sam|Leo, we voted while you were away. It was 4 to 1 for the Dolomites. With you it's 4 to 2.
+m074|2|Leo|Fine, majority rules. I'll go along. Just wanted it noted.
+m075|1|Alex|Same here. I'll go along. Also noted.
+m076|2|Sam|Thanks both, I appreciate it.
+m077|3|Leo|Chalet's fine. Is it close to a cable car though? I'd want a couple of high days.
+m078|2|Priya|It's a short walk to the Seceda lift in Ortisei. I'll double check the November operating dates.
+m079|2|Sam|Great, so the chalet is Ortisei, six of us. Priya, can you book before Friday?
+m080|1|Priya|Not until everyone confirms. Alex, Maya, Jordan, Leo, can you each confirm the chalet?
+m081|1|Jordan|Confirmed.
+m082|1|Maya|Confirmed, once I've seen the kitchen photos.
+m083|1|Alex|Confirmed.
+m084|1|Leo|Confirmed.
+m085|3|Priya|Sent the kitchen photos.
+m086|1|Priya|<Media omitted>
+m087|2|Maya|Kitchen is fine. Fully confirmed.
+m088|1|Priya|Ok, I'll book it tonight.
+m089|5|Sam|Recap: Dolomites, valley-based, Ortisei chalet, Nov 14 to 21, $2,500 cap. Transport still open. Right?
+m090|1|Jordan|Right. I'll post car prices with tires by tomorrow.
+m091|1|Priya|I'll post train and bus times.
+m092|1|Maya|I'll check whether we need chains, unless Jordan finds out first.
+m093|2|Leo|I'll research day hike routes from Ortisei, Seceda and Alpe di Siusi at least.
+m094|1|Alex|I'll look at the November lift schedules.
+m095|2|Sam|Perfect. Thanks all.
+m096|240|Priya|Booked. Confirmation is in the app.

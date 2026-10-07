@@ -1,0 +1,84 @@
+# title: Hiking 03 - shifting constraints, a revived option, an ambiguous "sounds good"
+# group: Hiking Crew 🥾
+# start: 2026-09-16 20:15
+# level: 3
+m001|0|Sam|Time to decide the November hiking trip. Options, dates, budget. Go.
+m002|1|Alex|Patagonia. Torres del Paine, the W trek. It's the trip.
+m003|1|Priya|Dolomites, please. Huts and food.
+m004|2|Jordan|Banff for me, it's close and cheap.
+m005|1|Maya|Yosemite? Cheap and easy.
+m006|3|Leo|I'd like to add Zion to the list. Utah in November is underrated.
+m007|2|Sam|Five options then. Dates first. I proposed Nov 14 to 21. Anyone blocked?
+m008|2|Jordan|I can only do the 14th to the 18th. I have a work thing on the 19th that I can't move.
+m009|1|Alex|That's five days. Patagonia isn't worth flying to for five days.
+m010|1|Priya|The Dolomites also needs six or seven days.
+m011|2|Maya|Can the rest of us do the full week?
+m012|1|Sam|I can.
+m013|1|Priya|I can.
+m014|1|Alex|I can.
+m015|1|Maya|I can do the full week too.
+m016|2|Leo|I can, but I need to be home by the 22nd.
+m017|1|Sam|Ok, so five of us can do Nov 14 to 21 and Jordan can only do the 14th to 18th. Parking that.
+m018|3|Sam|Budget. $2,500 per person all in?
+m019|1|Alex|Fine.
+m020|1|Priya|Fine.
+m021|1|Jordan|Fine.
+m022|2|Sam|Alex, Priya and Jordan are OK with $2,500. Maya, Leo?
+m023|1|Leo|Fine.
+m024|4|Maya|I'd be more comfortable at $2,000. Could we do that instead?
+m025|2|Sam|I'm OK with $2,000 if everyone else is.
+m026|1|Priya|$2,000 works for me.
+m027|1|Jordan|$2,000 is fine, it's easier for Banff anyway.
+m028|2|Leo|$2,000 works.
+m029|2|Alex|Fine with $2,000, but then Patagonia is basically out. Flights alone are $1,300.
+m030|1|Sam|Ok, so budget is now $2,000 per person all in. Patagonia is the one at risk.
+m031|6|Jordan|Fair warning on Banff. Mid-November is hit or miss, lots of trails are under snow.
+m032|1|Sam|If Banff is snowy I'd rather drop it. Any objections?
+m033|1|Maya|Fine with dropping Banff.
+m034|1|Priya|Drop it, I think.
+m035|2|Jordan|Ok, dropping Banff. It was my suggestion anyway.
+m036|1|Alex|Good, less to argue about.
+m037|5|Leo|Now Zion. Mid-November is usually in the 60s and sunny in the canyon, and there's hardly any crowds.
+m038|2|Maya|Zion sounds great. Better than Yosemite for November, so I'm happy dropping Yosemite if Zion stays.
+m039|1|Priya|Are there enough hikes for a full week though?
+m040|1|Leo|Yes. Zion, Bryce and Snow Canyon are all within a couple of hours of each other.
+m041|3|Alex|That's a road trip more than a hike trip. I'd rather do Patagonia or the Dolomites.
+m042|1|Sam|Alex, Patagonia is over budget on flights alone though.
+m043|2|Alex|Flights are $1,300 and the W trek refugios are about $600. That's $1,900. Tight but it fits.
+m044|1|Priya|That leaves $100 for food, buses and gear. It doesn't fit.
+m045|1|Alex|I'd skip the gear rental and cook my own food. It can work.
+m046|2|Maya|Then it's not a budget trip, it's a stretch trip.
+m047|3|Jordan|While we're on budgets, I just found Calgary flights for $380 round trip.
+m048|1|Jordan|And a lodge in Canmore at $90 a night. Banff might come in well under $2,000 with money to spare.
+m049|2|Maya|Ok that's very tempting. Maybe I want Banff back on the list.
+m050|1|Alex|Banff in November isn't hiking. It's snowshoeing.
+m051|1|Jordan|The lower trails around Canmore stay walkable. And snowshoeing counts.
+m052|2|Sam|I'm fine reopening Banff if people want it.
+m053|1|Priya|I'm not against it, but Alex has a point about the hiking.
+m054|3|Jordan|What if we do just 5 days somewhere closer like Banff so I can be there for all of it?
+m055|1|Alex|Or we do the full 7 days somewhere else and Jordan joins for part of it?
+m056|2|Leo|Sounds good.
+m057|1|Sam|Leo, sounds good to which one, the 5-day Banff or the split trip?
+m058|2|Leo|Ha, honestly both. I'm fine either way.
+m059|4|Maya|Weather-wise, Zion in the 60s sounds nicer than Banff at 20°F for a week.
+m060|1|Jordan|You'd layer up, but Banff is beautiful. And there are ice walks and hot springs.
+m061|1|Alex|Zion is the same idea as Yosemite. Comfortable, close, not special.
+m062|2|Leo|Zion is special. The Narrows in November is empty and gorgeous. Too cold to wade some days though, honestly.
+m063|4|Sam|Let me try to summarize. Budget is $2,000. Dates are Nov 14 to 21 for five of us, Jordan is limited to the 14th to 18th. Options are Patagonia, Dolomites, Banff (Jordan reopened it) and Zion. Yosemite is dropped. Right?
+m064|1|Maya|Yes, but I think Patagonia is basically out on budget.
+m065|1|Alex|Not out. Tight.
+m066|2|Priya|I'd also like to check the Dolomites budget. I haven't looked at flights yet.
+m067|1|Jordan|The summary is right.
+m068|1|Leo|Yes.
+m069|2|Sam|Ok. Let's do a poll tomorrow night with all four options and a price for each.
+m070|1|Alex|I'll price Patagonia properly, including food and transfers.
+m071|1|Priya|I'll price the Dolomites.
+m072|1|Jordan|I'll price Banff, and check if I can move my work thing.
+m073|1|Leo|I'll price Zion.
+m074|1|Maya|I'll build the comparison sheet.
+m075|4|Alex|The dates question should be settled before the poll though. 5 days or 7.
+m076|1|Jordan|Agree. Let me see if I can move the work thing before you all commit.
+m077|1|Priya|Good, thanks Jordan.
+m078|2|Sam|Ok, then we wait for Jordan's answer on dates before the poll.
+m079|1|Maya|Sounds good.
+m080|1|Leo|Works for me.

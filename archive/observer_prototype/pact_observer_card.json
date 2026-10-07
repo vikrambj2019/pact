@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0",
+  "organization_id": "org_example",
+  "decision_id": "decision_001",
+  "card_version": 4,
+  "topic": {
+    "title": "Funding for workflow automation",
+    "problem": "Manual processing consumes substantial staff time",
+    "decision_requested": "Determine whether and how to fund automation",
+    "scope": "Operations workflow",
+    "status": "decision_recorded",
+    "source_message_ids": ["msg_1"]
+  },
+  "participants": [
+    {"id": "person_1", "name": "Alex", "decision_role": "proposal_owner"},
+    {"id": "person_2", "name": "Sam", "decision_role": "consulted"},
+    {"id": "person_3", "name": "Jordan", "decision_role": "approver"}
+  ],
+  "decision_process": {
+    "method": "designated_approver_after_consultation",
+    "approver_ids": ["person_3"],
+    "authority_source": {"type": "configured_workflow", "reference_id": "funding_workflow_01"},
+    "unanimity_required": false,
+    "silence_counts_as_agreement": false
+  },
+  "individual_mapping": {
+    "require_opt_in": true,
+    "require_confirmation_for_ambiguous_interpretations": true,
+    "participant_permissions": [
+      {"participant_id": "person_1", "mapping": "granted", "share_in_group_card": "granted", "permission_record_id": "permission_1"},
+      {"participant_id": "person_2", "mapping": "granted", "share_in_group_card": "granted", "permission_record_id": "permission_2"},
+      {"participant_id": "person_3", "mapping": "granted", "share_in_group_card": "granted", "permission_record_id": "permission_3"}
+    ],
+    "pending_interpretations": [],
+    "automatically_post_positions_to_chat": false
+  },
+  "criteria": [
+    {"id": "criterion_1", "statement": "Validate adoption before committing full funding", "type": "decision_requirement", "status": "specified_by_approver", "source_message_ids": ["msg_4"]},
+    {"id": "criterion_2", "statement": "Compare investment priority with competing projects", "type": "proposed_criterion", "status": "unresolved", "proposed_by": "person_2", "source_message_ids": ["msg_2"]}
+  ],
+  "proposals": [
+    {"id": "proposal_1", "title": "Full implementation", "requested_amount": {"value": 500000, "currency": "USD"}, "proposed_by": "person_1", "status": "deferred", "source_message_ids": ["msg_1", "msg_4"]},
+    {"id": "proposal_2", "title": "Limited pilot", "requested_amount": {"value": 50000, "currency": "USD"}, "proposed_by": "person_1", "status": "approved", "source_message_ids": ["msg_3", "msg_4"]}
+  ],
+  "claims": [
+    {"id": "claim_1", "type": "forecast", "statement": "Full implementation could save $2 million annually", "made_by": "person_1", "related_proposal_id": "proposal_1", "source_message_ids": ["msg_1"], "verification": {"status": "not_checked", "check_ids": []}}
+  ],
+  "assumptions": [
+    {"id": "assumption_1", "statement": "At least 70% of eligible teams adopt the workflow", "stated_by": "person_1", "status": "disputed", "source_message_ids": ["msg_1", "msg_2"]}
+  ],
+  "arguments": [
+    {"id": "argument_1", "made_by": "person_1", "conclusion": {"action": "fund", "proposal_id": "proposal_1"}, "premise_ids": ["claim_1"], "assumption_ids": ["assumption_1"], "reasoning": "Expected annual savings justify the upfront investment", "attribution_status": "explicitly_stated", "source_message_ids": ["msg_1"]}
+  ],
+  "positions": [
+    {"id": "position_1", "participant_id": "person_2", "target_id": "assumption_1", "stance": "questions", "statement": "Team adoption has not been demonstrated", "source_message_ids": ["msg_2"]},
+    {"id": "position_2", "participant_id": "person_2", "target_id": "proposal_1", "stance": "raises_concern", "statement": "Competing projects may deserve funding first", "source_message_ids": ["msg_2"]}
+  ],
+  "relationships": [
+    {"from_id": "assumption_1", "relation": "underpins", "to_id": "claim_1", "source_message_ids": ["msg_1"]},
+    {"from_id": "position_1", "relation": "questions", "to_id": "assumption_1", "source_message_ids": ["msg_2"]},
+    {"from_id": "argument_1", "relation": "supports", "to_id": "proposal_1", "source_message_ids": ["msg_1"]},
+    {"from_id": "proposal_2", "relation": "alternative_to", "to_id": "proposal_1", "source_message_ids": ["msg_3"]}
+  ],
+  "evidence": [],
+  "claim_checks": [],
+  "research_policy": {
+    "trigger": "explicit_request",
+    "allowed_sources": ["authorized_internal_repositories", "participant_supplied_documents"],
+    "external_web": "only_when_explicitly_in_scope",
+    "require_document_version_and_locator": true,
+    "possible_findings": ["supported_within_scope", "contradicted_within_scope", "mixed", "insufficient_evidence"],
+    "finding_does_not_establish_participant_agreement": true
+  },
+  "unresolved": [
+    {"id": "issue_1", "type": "disputed_assumption", "question": "Will enough teams adopt the workflow?", "related_ids": ["assumption_1", "claim_1"], "status": "open", "source_message_ids": ["msg_2"]},
+    {"id": "issue_2", "type": "priority_tradeoff", "question": "How does full implementation compare with other investments?", "related_ids": ["proposal_1", "criterion_2"], "status": "open", "source_message_ids": ["msg_2"]}
+  ],
+  "decision": {
+    "status": "recorded",
+    "selected_proposal_id": "proposal_2",
+    "decided_at": "2026-10-02T18:30:00-07:00",
+    "authorized_by": ["person_3"],
+    "authorization_message_ids": ["msg_4"],
+    "rationale": {"statement": "Test adoption before committing full funding", "source_message_ids": ["msg_4"], "criterion_ids": ["criterion_1"]},
+    "known_uncertainties": ["issue_1", "issue_2"],
+    "participant_agreement": {"explicit_support_ids": ["person_1", "person_3"], "no_explicit_response_ids": ["person_2"], "source_message_ids": ["msg_3", "msg_4"]},
+    "execution": {"owner_id": "person_1", "assignment_source_message_ids": ["msg_4"], "next_step": "Define and run the pilot", "review_trigger": "Pilot results available"},
+    "recorded_snapshot_id": "snapshot_001"
+  },
+  "pact": {
+    "observer": {"last_processed_message_id": "msg_4", "research_enabled": false},
+    "interpreter": {"trigger": "explicit_help_request", "mode": "facilitate", "rank_participants": false, "choose_for_participants": false, "latest_output": null}
+  },
+  "history": {
+    "message_store_id": "conversation_001",
+    "change_log_id": "changes_001",
+    "snapshot_store_id": "snapshots_001",
+    "changes_record_actor_source_and_previous_value": true,
+    "recorded_snapshots_are_immutable": true
+  },
+  "organizational_memory": {
+    "entity_ids": ["project_automation", "team_operations"],
+    "related_decision_ids": [],
+    "supersedes_decision_id": null,
+    "outcome_record_ids": [],
+    "access_policy_id": "access_operations_funding",
+    "historical_similarity_is_not_authority": true
+  },
+  "messages": [
+    {"id": "msg_1", "speaker_id": "person_1", "text": "Our manual workflow consumes substantial staff time. I request $500,000 for automation. It could save $2 million annually if at least 70% of eligible teams adopt it. Those expected savings justify the investment."},
+    {"id": "msg_2", "speaker_id": "person_2", "text": "We haven't demonstrated that adoption level. Also, competing projects may deserve funding first."},
+    {"id": "msg_3", "speaker_id": "person_1", "text": "Then I propose a $50,000 pilot to test adoption before we commit the full amount."},
+    {"id": "msg_4", "speaker_id": "person_3", "text": "I approve the $50,000 pilot. Alex owns execution. Validate adoption before full funding; defer the full implementation decision and review when pilot results are available."}
+  ]
+}

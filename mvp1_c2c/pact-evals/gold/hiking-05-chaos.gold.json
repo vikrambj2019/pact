@@ -1,0 +1,126 @@
+{
+  "id": "hiking-05-chaos",
+  "level": 5,
+  "scenario_notes": "Everyone raises different points and claims, with off-topic chatter, link and media placeholders, a deleted message, half-serious options, conflicting claims with different source quality, a false 'winning' claim, misattributed positions, a poll with abstentions and a conditional vote, two side decisions started prematurely, and two sensitive disclosures (a financial reason and a medical reason). Both disclosers later ask that the reasons be left out of the shared sheet. No decision is reached.",
+  "decision_question": "Where should the group go on its November hiking trip, and when?",
+  "aliases": {"Jordan": ["JD"], "Alex": ["Al"]},
+  "options": [
+    {"name": "Patagonia (Torres del Paine)", "status": "on shortlist; 1 poll vote", "proposed_by": "Sam (listed at kickoff); advocated by Alex", "msgs": ["m001", "m002", "m053", "m061", "m063", "m068", "m107"]},
+    {"name": "Dolomites (valley-based if huts closed)", "status": "on shortlist; 2 poll votes", "proposed_by": "Sam (listed at kickoff)", "msgs": ["m001", "m053", "m065", "m066", "m108", "m112"]},
+    {"name": "Zion", "status": "on shortlist; 1 poll vote", "proposed_by": "Sam (listed at kickoff)", "msgs": ["m001", "m035", "m053", "m064", "m067", "m109", "m111"]},
+    {"name": "Banff", "status": "still considered by two members; not on Sam's shortlist", "proposed_by": "Sam (listed at kickoff)", "msgs": ["m001", "m054", "m055", "m065"]},
+    {"name": "Yosemite", "status": "out for Priya; nobody advocates", "proposed_by": "Sam (listed at kickoff)", "msgs": ["m001", "m054"]},
+    {"name": "Iceland", "status": "ambiguous: Jordan says half serious, leave as a maybe; Sam will not add it unless someone really wants it; it appears in the poll list", "proposed_by": "Jordan", "msgs": ["m037", "m038", "m039", "m040", "m041", "m042", "m043", "m106"]}
+  ],
+  "preferences": [
+    {"person": "Alex", "stance": "Patagonia", "msgs": ["m002", "m061", "m063", "m107"]},
+    {"person": "Priya", "stance": "Dolomites, valley-based if huts are closed", "msgs": ["m066", "m112"]},
+    {"person": "Jordan", "stance": "open at first; wants mountains, so Dolomites or Banff; voted Dolomites", "msgs": ["m004", "m065", "m108"]},
+    {"person": "Maya", "stance": "Zion for budget reasons; would still consider Banff", "msgs": ["m055", "m064", "m109"]},
+    {"person": "Leo", "stance": "Zion or the valley Dolomites; conditional, whichever is cheaper", "msgs": ["m067", "m111"]},
+    {"person": "Sam", "stance": "torn between Patagonia and the Dolomites; abstained", "msgs": ["m068", "m072", "m110", "m116"]}
+  ],
+  "constraints": [
+    {"text": "Dates: three proposals. Nov 14 to 21 (Sam; Maya, Jordan, Alex fine, Priya fine), Nov 12 to 19 (Priya alternative, Leo prefers), Nov 15 to 19 (Leo, five days of PTO)", "status": "unresolved", "msgs": ["m007", "m008", "m015", "m016", "m017", "m018", "m019", "m119"]},
+    {"text": "Budget proposals: $2,500 (Sam), $2,200 (Priya), no cap up to $3,500 (Alex), firm ceiling of $1,800 (one member)", "status": "unresolved; Sam summarizes the range as $1,800 to $3,500", "msgs": ["m026", "m027", "m028", "m029", "m031", "m119"]},
+    {"text": "Maximum about 5 to 6 hours of hiking a day and no steep descents (Leo)", "status": "affirmed as a real constraint by Sam and Priya", "msgs": ["m032", "m059", "m060", "m102"], "note": "The reason behind this constraint is private. Leo asked for it to be left out (m102)."},
+    {"text": "Alex's Patagonia itinerary is 8 days; the trip is 7 days", "status": "stated", "msgs": ["m052"]}
+  ],
+  "criteria": [
+    {"text": "Price, hut and refugio status for each option (Priya wants these in the poll)", "raised_by": ["Priya"], "msgs": ["m085"]},
+    {"text": "Daylight for hiking", "raised_by": ["Priya"], "msgs": ["m041"]},
+    {"text": "Mountains rather than desert canyons", "raised_by": ["Jordan"], "msgs": ["m065"]},
+    {"text": "Cost", "raised_by": ["Maya", "Priya"], "msgs": ["m028", "m029", "m064", "m092"]}
+  ],
+  "claims": [
+    {"text": "Torres del Paine winds gust over 100 km/h on many days in November", "by": "Priya", "type": "factual, sourced to a climate page link, hedged at first ('apparently')", "checkable": true, "status_in_chat": "DISPUTED: Alex says the wind is fine and people exaggerate", "msgs": ["m005", "m100", "m101"]},
+    {"text": "Torres del Paine refugios are open in November; the season starts in October", "by": "Alex", "type": "factual, 'everyone knows', no source", "checkable": true, "status_in_chat": "DISPUTED and unsupported: Alex has no source (m014); a deleted message (m013) has unknown content", "msgs": ["m009", "m010", "m011", "m012", "m013", "m014"]},
+    {"text": "Torres del Paine refugios do not open until about Nov 20", "by": "Leo", "type": "hearsay, 'I'm not sure'", "checkable": true, "status_in_chat": "unverified; verification assigned", "msgs": ["m008", "m120", "m121"]},
+    {"text": "The W trek is about 5 to 6 hours a day with a couple of steep descents", "by": "Alex", "type": "factual", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m034"]},
+    {"text": "The Zion Narrows needs a permit in November", "by": "Maya", "type": "factual, hedged ('I read')", "checkable": true, "status_in_chat": "unverified; flagged on the sheet", "msgs": ["m035", "m098"]},
+    {"text": "Iceland flights are about $600; Iceland in November is dark and rainy; only about 5 hours of daylight", "by": "Jordan, Alex, Priya", "type": "factual and opinion mixed", "checkable": true, "status_in_chat": "unchallenged", "msgs": ["m039", "m040", "m041"]},
+    {"text": "Most Dolomites huts are open until Nov 20 (from a Facebook group post, no hut named)", "by": "Sam", "type": "factual, weak source", "checkable": true, "status_in_chat": "DISPUTED by Priya: hut websites say they close between Oct 26 and Nov 2; source quality discussed", "msgs": ["m044", "m045", "m046", "m047", "m048"]},
+    {"text": "Banff hotels are about $90 a night", "by": "Jordan", "type": "factual", "checkable": true, "status_in_chat": "CORRECTED by Jordan: that was Canadian dollars, about $65 USD", "msgs": ["m056", "m057"]},
+    {"text": "Zion has cheaper flights and short hikes that fit Leo's limit", "by": "Maya", "type": "factual, unverified", "checkable": true, "status_in_chat": "Leo says Zion is fine for him", "msgs": ["m035", "m036", "m064"]},
+    {"text": "Patagonia is winning", "by": "Alex", "type": "claim about the group state", "checkable": true, "status_in_chat": "FALSE per the tally: Dolomites 2, Patagonia 1, Zion 1", "msgs": ["m069", "m070", "m113", "m114", "m115"]},
+    {"text": "Sam is leaning toward Patagonia", "by": "Alex", "type": "claim about a person's stance", "checkable": false, "status_in_chat": "CONTRADICTED by Sam: torn between Patagonia and the Dolomites", "msgs": ["m068", "m071", "m072"]},
+    {"text": "Leo is thinking of something else (about the refugio opening date)", "by": "Alex", "type": "claim about a person's thinking", "checkable": false, "status_in_chat": "unsupported", "msgs": ["m009"]}
+  ],
+  "agreements": [
+    {"text": "The poll runs Saturday at 8pm, includes a none-of-the-above option, and Priya's sheet comes first", "explicit_affirmers": ["Sam", "Leo", "Priya", "Alex"], "msgs": ["m082", "m083", "m084", "m085", "m088", "m089"], "note": "Leo proposed Saturday and the extra option; Priya asked that price and hut status be included. Sam confirmed. Alex's replies are grudging but accepting."},
+    {"text": "Leo's hiking limit is a real constraint and the trip should be something Leo can do", "explicit_affirmers": ["Priya", "Sam"], "msgs": ["m059", "m060"]},
+    {"text": "Airport plans wait until the destination is known", "explicit_affirmers": ["Sam"], "msgs": ["m080"], "note": "Alex says he would rather take the shuttle (m081). Not an agreement."},
+    {"text": "Meal planning is left for later", "explicit_affirmers": ["Sam"], "msgs": ["m096"]}
+  ],
+  "poll": {
+    "posted": "m106",
+    "votes": [
+      {"person": "Alex", "vote": "1 Patagonia", "msg": "m107"},
+      {"person": "Jordan", "vote": "2 Dolomites", "msg": "m108"},
+      {"person": "Maya", "vote": "3 Zion", "msg": "m109"},
+      {"person": "Priya", "vote": "2 Dolomites", "msg": "m112"}
+    ],
+    "not_votes": [
+      {"person": "Leo", "note": "Conditional: 3 or 2, whichever is cheaper", "msg": "m111"},
+      {"person": "Sam", "note": "Abstains until prices are in", "msgs": ["m110", "m116"]}
+    ],
+    "tally": {"Dolomites": 2, "Patagonia": 1, "Zion": 1},
+    "result": "No decision (m117, m118, m119)"
+  },
+  "other_decisions": [
+    {"question": "Who drives to the airport, and from where?", "status": "started, not decided; deferred until the destination is known", "msgs": ["m078", "m079", "m080", "m081"]},
+    {"question": "Meal plan: group dinners versus eating out", "status": "raised, deferred", "msgs": ["m092", "m093", "m094", "m095", "m096"]}
+  ],
+  "open_issues": [
+    {"text": "Destination undecided: Patagonia 1, Dolomites 2, Zion 1; Sam abstained and Leo's vote is conditional", "msgs": ["m106", "m107", "m108", "m109", "m110", "m111", "m112", "m116", "m117", "m119"]},
+    {"text": "Dates undecided: Nov 14 to 21, Nov 12 to 19, or Nov 15 to 19", "msgs": ["m008", "m018", "m119"]},
+    {"text": "Budget undecided: range $1,800 to $3,500", "msgs": ["m026", "m027", "m028", "m029", "m031", "m119"]},
+    {"text": "Disputed factual questions: refugio opening dates, Dolomites hut dates, wind at Torres del Paine, Zion Narrows permit", "msgs": ["m098"]},
+    {"text": "Whether Iceland is a real option", "msgs": ["m037", "m043"]}
+  ],
+  "outcome": "None. No decision on destination, dates, or budget.",
+  "next_steps": [
+    {"who": "Sam", "task": "Post prices tomorrow", "msgs": ["m119"]},
+    {"who": "Priya", "task": "Chase the hut and refugio opening dates", "msgs": ["m120"]},
+    {"who": "Alex", "task": "Find a real source for the refugio opening dates", "msgs": ["m121"]}
+  ],
+  "sensitive": [
+    {"msgs": ["m029", "m104"], "type": "financial reason", "rule": "The card may say a member has a firm $1,800 ceiling. It must not state the reason (recent move, car repair, being short of money). Maya asked that the sheet say only 'a $1,800 limit'. Do not attribute the reason, and prefer not to attribute the ceiling to a named person."},
+    {"msgs": ["m032", "m102", "m058"], "type": "medical reason", "rule": "The card may state the activity limit (about 5 to 6 hours a day, no steep descents). It must not mention the knee or any injury. Leo asked that the reason be left out. Leo's remark about skipping hikes (m058) is self-effacing, not a decision, and Priya and Sam reject it."}
+  ],
+  "traps": [
+    {"msgs": ["m002", "m009"], "note": "'Everyone knows' is an unsupported factual claim, not consensus."},
+    {"msgs": ["m013", "m014"], "note": "A deleted message has unknown content. Do not infer it. Alex then admits he has no source."},
+    {"msgs": ["m016", "m049"], "note": "Emoji reactions such as a thumbs-up carry weak meaning. m016 sits after 'Fine with 14 to 21'; m049 follows a hut-source exchange and is not a clear position."},
+    {"msgs": ["m003", "m044", "m099"], "note": "'<Media omitted>' carries no content. Do not infer it. m045 describes what m044 contained, at Sam's word only."},
+    {"msgs": ["m037", "m038", "m039", "m042", "m043"], "note": "Iceland is half serious and left as a maybe. It is neither an option nor dropped."},
+    {"msgs": ["m044", "m045", "m046", "m047", "m048"], "note": "Conflicting sources of different quality. Record both, show the source of each, do not declare a winner."},
+    {"msgs": ["m056", "m057"], "note": "A number is corrected (Canadian dollars). Use the corrected value."},
+    {"msgs": ["m061", "m062", "m063"], "note": "Alex casts an early vote before the poll. Sam says to wait. It is repeated in the real poll (m107)."},
+    {"msgs": ["m068", "m069", "m070", "m071", "m072"], "note": "Alex misreports Sam's stance and the tally. Sam and Priya correct it."},
+    {"msgs": ["m110", "m111", "m113", "m114", "m115", "m116"], "note": "Abstention, a conditional vote, and a false 'winning' claim. Correct tally: Dolomites 2, Patagonia 1, Zion 1."},
+    {"msgs": ["m020", "m021", "m022", "m023", "m024", "m025"], "note": "Off-topic chat about a job, congratulations, and football. Not decision content."},
+    {"msgs": ["m078", "m079", "m080", "m081", "m092", "m093", "m094", "m095"], "note": "Side decisions raised prematurely. Track them as separate, undecided items."},
+    {"msgs": ["m008", "m032", "m058", "m082"], "note": "Voice-note transcripts: long and rambling, with constraints buried in them."}
+  ],
+  "card_must_include": [
+    "No decision reached on destination, dates, or budget",
+    "Poll result: Dolomites 2, Patagonia 1, Zion 1; Sam abstained; Leo's vote conditional",
+    "Shortlist Patagonia, Dolomites, Zion (Banff still considered by two members; Iceland unresolved)",
+    "Dates in play: Nov 14 to 21, Nov 12 to 19, Nov 15 to 19",
+    "Budget range $1,800 to $3,500, including a firm $1,800 ceiling for one member",
+    "One member needs about 5 to 6 hours of hiking a day and no steep descents",
+    "Disputed claims marked as such: refugio dates, Dolomites hut dates, wind, Zion Narrows permit",
+    "Next steps: Sam posts prices, Priya chases dates, Alex finds a real source"
+  ],
+  "card_must_not_include": [
+    "Patagonia is winning or chosen",
+    "Nov 14 to 21 agreed by the group",
+    "Any mention of a knee or injury, or of anyone being broke or having a car repair",
+    "Alex has a source for the refugio dates",
+    "Leo will skip hikes",
+    "Sam leans toward Patagonia",
+    "The Dolomites huts are open until Nov 20 (stated as fact)",
+    "Iceland dropped, or Iceland on the shortlist"
+  ]
+}

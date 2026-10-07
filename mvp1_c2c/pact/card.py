@@ -123,7 +123,8 @@ def observer_view(card: dict) -> dict:
                         "affirmed_by": [x["participant_id"] for x in a["affirmers"]],
                         "objected_by": [x["participant_id"] for x in a["objectors"]]}
                        for a in card["agreements"]],
-        "preferences": [pick(p, "participant_id", "stance", "option_id", "conditional") for p in card["preferences"]],
+        "preferences": [pick(p, "participant_id", "stance", "option_id", "leaning", "conditional")
+                        for p in card["preferences"]],
         "open_issues": [pick(i, "text", "status") for i in card["open_issues"]],
     }
 
@@ -354,17 +355,23 @@ def _apply(card: dict, name: str, action: dict, message: dict, quote: str) -> tu
     if name == "set_preference":
         stance = _text(action, "stance")
         option_id = action.get("option_id") or None
+        leaning = None
         if option_id:
             _find(card, ("options",), option_id)
+            leaning = action.get("leaning")
+            if leaning not in REASON_STANCES:
+                raise ValueError("A stance on an option must say whether it leans 'for' or 'against' it.")
         conditional = (action.get("conditional") or "").strip()
         current = next((p for p in card["preferences"]
                         if p["participant_id"] == speaker and p.get("option_id") == option_id), None)
         if current is None:
             return "preferences", _create(card, "preferences", {"participant_id": speaker, "stance": stance,
-                                                                "option_id": option_id, "conditional": conditional},
+                                                                "option_id": option_id, "leaning": leaning,
+                                                                "conditional": conditional},
                                           message, quote)
-        _touch(current, "changed", message, quote, previous_stance=current["stance"])
-        current["stance"], current["conditional"] = stance, conditional
+        _touch(current, "changed", message, quote, previous_stance=current["stance"],
+               previous_leaning=current.get("leaning"))
+        current["stance"], current["leaning"], current["conditional"] = stance, leaning, conditional
         return "preferences", current
 
     if name == "add_issue":

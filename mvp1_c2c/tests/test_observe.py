@@ -153,7 +153,8 @@ def test_changed_mind_replaces_stance_and_keeps_previous():
     msg = say(session, "priya", "Switching to Dolomites, it's cheaper")
     [pref] = session.card["preferences"]
     assert pref["participant_id"] == "priya" and pref["stance"] == "Dolomites, because of cost"
-    assert pref["history"][-1] == {"event": "changed", "previous_stance": "Banff", "message_id": msg["id"],
+    assert pref["history"][-1] == {"event": "changed", "previous_stance": "Banff", "previous_leaning": None,
+                                   "message_id": msg["id"],
                                    "speaker_id": "priya", "at": msg["recorded_at"],
                                    "quote": "Switching to Dolomites"}
 
@@ -184,7 +185,7 @@ def test_public_card_hides_unshared_preferences():
 def test_new_items_can_be_referenced_within_one_observation():
     text = "Dolomites, but only if the huts are open"
     session = make({text: [act("add_option", "Dolomites", text="Dolomites", ref="new_dolo"),
-                           act("set_preference", text, stance="Dolomites", option_id="new_dolo",
+                           act("set_preference", text, stance="Dolomites", option_id="new_dolo", leaning="for",
                                conditional="only if the huts are open")]})
     say(session, "priya", text)
     assert session.card["preferences"][0]["option_id"] == "opt_1"

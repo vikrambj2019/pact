@@ -16,15 +16,15 @@ CHAT = [
       act("add_constraint", "budget $2,000 each", text="Budget $2,000 per person", kind="budget")]),
     ("alex", "Patagonia! Flights alone are $1,300.",
      [act("add_option", "Patagonia", text="Patagonia", ref="new_pat"),
-      act("set_preference", "Patagonia!", stance="Patagonia", option_id="new_pat"),
+      act("set_preference", "Patagonia!", stance="Patagonia", option_id="new_pat", leaning="for"),
       act("add_claim", "Flights alone are $1,300", kind="fact", checkable=True, option_id="new_pat",
           text="Round-trip flights to Patagonia for Nov 14-21 cost about $1,300")]),
     ("priya", "No way, flights are more like $1,800. Dolomites instead.",
      [act("challenge_claim", "flights are more like $1,800", target_id="claim_1", text="Flights cost about $1,800"),
       act("add_option", "Dolomites", text="Dolomites", ref="new_dol"),
-      act("set_preference", "Dolomites instead", stance="Dolomites", option_id="new_dol")]),
+      act("set_preference", "Dolomites instead", stance="Dolomites", option_id="new_dol", leaning="for")]),
     ("human_admin", "Patagonia works for me", [act("record_affirmation", "works for me", target_id="opt_1")]),
-    ("leo", "Patagonia is fine I guess", [act("set_preference", "Patagonia is fine", stance="Patagonia", option_id="opt_1")]),
+    ("leo", "Patagonia is fine I guess", [act("set_preference", "Patagonia is fine", stance="Patagonia", option_id="opt_1", leaning="for")]),
     ("priya", "Who checks the hut schedule?", [act("add_issue", "Who checks the hut schedule?",
                                                      text="Check Dolomites hut schedule", participant_ids=["priya"])]),
 ]
@@ -67,7 +67,7 @@ def test_interpret_view_counts_support_from_the_card(tmp_path):
     assert [s["who"] for s in dol["stances"]] == ["Priya"]
     assert view["claims"][0]["status"] == "disputed" and view["claims"][0]["disputed_by"] == ["Priya"]
     assert view["open_issues"] == [{"id": "issue_1", "text": "Check Dolomites hut schedule", "involves": ["Priya"]}]
-    assert view["no_stance_recorded"] == []
+    assert view["no_shared_stance"] == ["Leo"]  # Leo has a stance, but it is private
     assert "messages" not in view and "history" not in str(view)
 
 
@@ -75,15 +75,15 @@ def test_interpret_view_includes_latest_check_and_drops_retracted(tmp_path):
     session = chat_session(tmp_path)
     session.check_claim("claim_1")
     view = interpret_view(session.card)
-    assert view["claims"][0]["check"] == {"verdict": "contradicted", "summary": "Fixture: no external research.",
-                                          "as_of": "2026"}
+    assert view["claims"][0]["check"] == "contradicted"
+    assert view["options"][0]["claims"] == [{"id": "claim_1", "check": "contradicted", "status": "disputed"}]
     session.card["claims"][0]["status"] = "retracted"
     assert interpret_view(session.card)["claims"] == []
 
 
 def test_no_stance_lists_people_who_have_not_weighed_in(tmp_path):
     session = PactSession.create("Q?", "Sam", [dict(m) for m in MEMBERS], FakePactLLM())
-    assert interpret_view(session.card)["no_stance_recorded"] == ["Sam", "Alex", "Priya", "Leo"]
+    assert interpret_view(session.card)["no_shared_stance"] == ["Sam", "Alex", "Priya", "Leo"]
 
 
 def test_interpretation_is_short_composed_and_cites_real_items(tmp_path):
@@ -109,3 +109,90 @@ def test_interpretation_citing_unknown_items_is_rejected(tmp_path):
         session.interpret()
     assert session.card["facilitation"] == []
     assert session.card["audit"][-1]["event"] == "help_rejected"
+
+
+# ── standing is computed, not judged by the model ────────────────────────────
+
+def test_standing_counts_backers_minus_opposers(tmp_path):
+    view = interpret_view(chat_session(tmp_path).card)
+    pat, dol = view["options"]
+    assert pat["backers"] == ["Alex", "Sam"] and dol["backers"] == ["Priya"]  # Leo's private stance not counted
+    assert view["standing"] == {"leading": "opt_1", "tied": []}
+
+
+def stance_session(stances):
+    """stances: (speaker, option_id, leaning) on two options, Banff and Dolomites."""
+    texts = {"Banff or Dolomites?": [act("add_option", "Banff", text="Banff"),
+                                     act("add_option", "Dolomites", text="Dolomites")]}
+    session = PactSession.create("Where?", "Sam", [dict(m) for m in MEMBERS], FakePactLLM(texts))
+    session.add_message("human_admin", "Banff or Dolomites?", "human")
+    for i, (speaker, option_id, leaning) in enumerate(stances):
+        text = f"stance {i}"
+        session.llm.observer.responses[text] = [act("set_preference", text, stance=text, option_id=option_id,
+                                                    leaning=leaning)]
+        session.add_message(speaker, text, "human")
+    return session
+
+
+def test_opposition_counts_against_and_ties_are_reported():
+    view = interpret_view(stance_session([("alex", "opt_1", "for"), ("priya", "opt_2", "for")]).card)
+    assert view["standing"] == {"leading": None, "tied": ["opt_1", "opt_2"]}
+    view = interpret_view(stance_session([("alex", "opt_1", "for"), ("priya", "opt_1", "against"),
+                                          ("human_admin", "opt_2", "for")]).card)
+    assert view["options"][0]["opposers"] == ["Priya"]
+    assert view["standing"]["leading"] == "opt_2"
+
+
+def test_nothing_leads_without_support_and_dropped_options_never_lead():
+    assert interpret_view(stance_session([]).card)["standing"] == {"leading": None, "tied": []}
+    session = stance_session([("alex", "opt_1", "for")])
+    session.card["options"][0]["status"] = "dropped"
+    assert interpret_view(session.card)["standing"] == {"leading": None, "tied": []}
+
+
+def test_stance_on_an_option_must_lean_for_or_against():
+    texts = {"Banff?": [act("add_option", "Banff", text="Banff")],
+             "Hmm Banff": [act("set_preference", "Hmm Banff", stance="unsure", option_id="opt_1")]}
+    session = PactSession.create("Where?", "Sam", [dict(m) for m in MEMBERS], FakePactLLM(texts))
+    session.add_message("alex", "Banff?", "human")
+    session.add_message("alex", "Hmm Banff", "human")
+    assert session.card["preferences"] == []
+
+
+def test_recorded_decision_is_in_the_view(tmp_path):
+    session = chat_session(tmp_path)
+    session.record_decision("opt_2", "Cheaper and Priya will check the huts.")
+    decision = interpret_view(session.card)["decision"]
+    assert decision == {"status": "recorded", "option": "Dolomites",
+                        "rationale": "Cheaper and Priya will check the huts."}
+
+
+# ── length is enforced ───────────────────────────────────────────────────────
+
+class ScriptedClient:
+    def __init__(self, *answers):
+        self.answers, self.payloads = list(answers), []
+
+    def structured(self, instructions, payload, name, schema, model, **kwargs):
+        self.payloads.append(payload)
+        return self.answers.pop(0)
+
+
+SHORT = {"headline": "Patagonia leads; not agreed.", "open_items": ["Priya disputes flight cost."],
+         "next_step": "Alex checks flights.", "cited_ids": ["opt_1"]}
+
+
+def test_long_answer_gets_one_retry_with_what_to_shorten(tmp_path):
+    from mvp1_c2c.pact.interpret import Interpreter
+    long = {**SHORT, "headline": " ".join(["word"] * 40)}
+    client = ScriptedClient(long, SHORT)
+    result = Interpreter(client, "m").interpret(chat_session(tmp_path).card)
+    assert result["headline"] == SHORT["headline"] and result["over_length"] == []
+    assert client.payloads[1]["shorten"] == ["headline over 25 words"]
+
+
+def test_short_answer_is_not_retried(tmp_path):
+    from mvp1_c2c.pact.interpret import Interpreter
+    client = ScriptedClient(SHORT)
+    assert Interpreter(client, "m").interpret(chat_session(tmp_path).card) == SHORT
+    assert len(client.payloads) == 1

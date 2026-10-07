@@ -53,8 +53,9 @@ Actions:
   message it replies to, or else the single item just before it. If it could refer to more than one item
   (e.g. "sounds good" after two competing proposals), set ambiguous=true.
 - record_objection(target_id) — the speaker explicitly says no to an option or constraint.
-- set_preference(stance, option_id?, conditional?) — the speaker's own stance. Set option_id whenever the stance
-  is for or against an option on the card (leave it empty only for general stances like "anywhere cheap").
+- set_preference(stance, option_id?, leaning?, conditional?) — the speaker's own stance. Set option_id whenever
+  the stance is about an option on the card, with leaning "for" or "against" it ("not Banff, too cold" is
+  against Banff). Leave option_id empty only for general stances like "anywhere cheap".
   Add a condition when there is one ("only if the huts are open"). A later stance replaces the earlier one.
   Vague flexibility ("I'm easy", "whatever works") is not a preference; skip it.
 - add_issue(text, participant_ids?) — an open question or a to-do that still has to be settled.
@@ -83,6 +84,7 @@ FIELDS = {
     "checkable": {"type": "boolean"},
     "check_type": {"type": "string"},
     "option_id": {"type": "string"},
+    "leaning": {"type": "string", "enum": sorted(REASON_STANCES)},
     "conditional": {"type": "string"},
     "participant_ids": {"type": "array", "items": {"type": "string"}},
 }

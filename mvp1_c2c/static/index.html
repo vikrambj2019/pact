@@ -197,6 +197,7 @@
 // ── state ──────────────────────────────────────────────────────────────────
 let SID = null;
 let card = null;
+let simulation = null;
 
 const BOT_DEFAULTS = [
   ["Alex",   "experienced hiker",         "Prioritize challenging trails and explain what makes a route worthwhile."],
@@ -427,6 +428,7 @@ async function confirmInterp(iid, text) {
 // ── render ─────────────────────────────────────────────────────────────────
 function renderAll(data) {
   card = data.card;
+  simulation = data.simulation;
   renderMessages();
   renderCard(data.calls || 0);
 }
@@ -448,11 +450,11 @@ function renderMessages() {
   }).join("");
   container.scrollTop = container.scrollHeight;
 
-  const disabled = card.bot_turns >= card.max_bot_turns;
+  const disabled = simulation.bot_turns >= simulation.max_bot_turns;
   document.getElementById("btn-next-bot").disabled = disabled;
   document.getElementById("btn-round").disabled = disabled;
   document.getElementById("turn-counter").textContent =
-    `${card.bot_turns}/${card.max_bot_turns} bot msgs`;
+    `${simulation.bot_turns}/${simulation.max_bot_turns} bot msgs`;
 }
 
 function renderCard(calls) {
@@ -515,8 +517,12 @@ function renderCard(calls) {
     if (card.claims?.length) {
       html += `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">`;
       for (const c of card.claims) {
-        html += `<button class="btn-secondary btn-sm" onclick="checkClaim('${c.id}')"
-          title="${esc(c.statement)}">Check: ${esc(c.statement.slice(0,42))}${c.statement.length>42?"…":""}</button>`;
+        const label = `${esc(c.statement.slice(0,42))}${c.statement.length>42?"…":""}`;
+        html += c.checkable === false
+          ? `<button class="btn-secondary btn-sm" disabled
+              title="Not checkable against public sources: ${esc(c.statement)}">Not checkable: ${label}</button>`
+          : `<button class="btn-secondary btn-sm" onclick="checkClaim('${c.id}')"
+              title="${esc(c.statement)}">Check: ${label}</button>`;
       }
       html += `</div>`;
     }

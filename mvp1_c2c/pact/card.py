@@ -23,7 +23,7 @@ ID_PREFIX = {"options": "opt", "constraints": "con", "criteria": "crit", "claims
 OPTION_STATUSES = {"considering", "dropped"}
 CONSTRAINT_KINDS = {"budget", "dates", "people", "logistics", "other"}
 CLAIM_KINDS = {"fact", "prediction", "opinion"}
-CHECK_TYPES = ("price", "distance", "weather", "schedule", "rule", "availability", "other")
+CHECK_TYPES = ("flight", "price", "distance", "weather", "schedule", "rule", "availability", "other")
 REASON_STANCES = {"for", "against"}
 
 ACTIONS = {

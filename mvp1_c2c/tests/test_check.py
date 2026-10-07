@@ -202,3 +202,60 @@ def test_quote_matching_ignores_case_and_spacing():
     kept = validate_report(report(evidence=[{"url": "https://a.gov", "quote": "fee: $35 per car", "stance": "supports"}]),
                            {"https://a.gov": {**cited["https://a.gov"], "cited_text": ["Fee:  $35\nper car"]}})
     assert len(kept["evidence"]) == 1
+
+
+# ── flights: Google Flights ──────────────────────────────────────────────────
+
+class FlightClient:
+    def __init__(self, route):
+        self.route, self.calls = route, []
+
+    def call(self, *args, **kwargs):
+        raise AssertionError("flight checks do not run a general web search")
+
+    def structured(self, instructions, payload, name, schema, model, **kwargs):
+        self.calls.append((name, payload))
+        return self.route
+
+
+def flight_check(route):
+    client = FlightClient(route)
+    claim_ = {"id": "claim_1", "statement": "Round-trip flights SFO to Punta Arenas for Nov 14-21 cost about $1,300",
+              "made_by": "alex", "check_type": "flight", "source_message_ids": [], "challenges": []}
+    card = PactSession.create("Where to hike?", "Sam", [dict(m) for m in MEMBERS], FakePactLLM()).card
+    return ClaimChecker(client, "m").check(card, claim_, "Where to hike?"), client
+
+
+ROUTE = {"origin": "SFO", "destination": "Punta Arenas", "depart_date": "2026-11-14", "return_date": "2026-11-21",
+         "passengers": 1, "cabin": "economy", "claimed_price": 1300, "currency": "USD",
+         "assumptions": ["economy assumed"]}
+
+
+def test_flight_claim_becomes_an_exact_google_flights_search():
+    result, client = flight_check(ROUTE)
+    assert client.calls[0][0] == "flight_search"
+    gf = result["google_flights"]
+    assert gf["query"] == "Flights from SFO to Punta Arenas on 2026-11-14 through 2026-11-21"
+    assert gf["url"] == ("https://www.google.com/travel/flights?q=Flights+from+SFO+to+Punta+Arenas+on+"
+                         "2026-11-14+through+2026-11-21")
+    assert gf["missing"] == []
+    assert result["checked_statement"] == ("Round-trip economy flights SFO → Punta Arenas, 2026-11-14 to 2026-11-21, "
+                                           "cost about USD 1,300 per person")
+    assert result["verdict"] == "needs_manual_check" and result["assumptions"] == ["economy assumed"]
+    assert result["evidence"] == []
+
+
+def test_flight_search_flags_what_nobody_said_and_rejects_bad_dates():
+    result, _ = flight_check({**ROUTE, "origin": "", "depart_date": "mid November", "return_date": ""})
+    gf = result["google_flights"]
+    assert gf["missing"] == ["origin", "depart_date"]
+    assert "Google Flights needs origin, depart_date" in result["summary"]
+    assert gf["query"] == "Flights from ? to Punta Arenas one way"
+
+
+def test_flight_check_is_recorded_on_the_claim():
+    texts = {"Flights are $1,300.": [act("add_claim", "Flights are $1,300", text="Flights to Patagonia cost $1,300",
+                                         kind="fact", checkable=True, check_type="flight")]}
+    session = PactSession.create("Where to hike?", "Sam", [dict(m) for m in MEMBERS], FakePactLLM(texts))
+    session.add_message("alex", "Flights are $1,300.", "human")
+    assert session.card["claims"][0]["check_type"] == "flight"

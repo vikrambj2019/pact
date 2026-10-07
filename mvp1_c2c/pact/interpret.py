@@ -19,6 +19,7 @@ INSTRUCTIONS = f"""Brief a group on where its decision stands. Be succinct: abou
   explicit support in the data (said_yes, preferences); say so plainly if nothing leads.
 - open_items: at most {MAX_OPEN_ITEMS}, most important first, each at most 15 words, naming the people involved.
   Include a disputed claim, or a check verdict of contradicted or mixed, only if it affects a leading option.
+  needs_manual_check means nobody has verified it yet (e.g. a flight price to look up on Google Flights).
 - next_step: one sentence (at most 20 words), concrete, naming who.
 - cited_ids: the card ids (opt_, con_, claim_, issue_, agr_) your answer relies on.
 Use people's names. Keep real disagreement and uncertainty. Never choose an option, never say the group

@@ -44,7 +44,8 @@ Actions:
   alone are $1,300" → "Round-trip flights to Patagonia for the Nov 14-21 trip cost about $1,300"). Never add
   facts nobody said. Set option_id when the claim is about an option on the card.
   kind is one of {sorted(CLAIM_KINDS)}. checkable=true only when {CHECKABLE_DEFINITION}
-  For checkable claims set check_type to one of {list(CHECK_TYPES)}.
+  For checkable claims set check_type to one of {list(CHECK_TYPES)} ("flight" for airfares and flight
+  schedules; "price" for other costs).
 - challenge_claim(target_id, text) — the speaker disputes someone else's claim.
 - retract_claim(target_id) / correct_claim(target_id, text) — the speaker takes back or corrects their OWN claim.
 - record_affirmation(target_id) — the speaker explicitly says yes to an option or constraint. Short replies

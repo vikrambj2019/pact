@@ -102,6 +102,10 @@ def public_card(card: dict) -> dict:
     return result
 
 
+def current_constraints(card: dict) -> list[dict]:
+    return [c for c in card["constraints"] if c["status"] != "superseded"]
+
+
 def observer_view(card: dict) -> dict:
     """A compact card for the observer: current items, IDs and statuses; no messages or history."""
     def pick(item, *keys):
@@ -112,7 +116,8 @@ def observer_view(card: dict) -> dict:
         "options": [pick(o, "text", "aliases", "status", "proposed_by") for o in card["options"]],
         "constraints": [pick(c, "text", "kind", "status", "superseded_by") for c in card["constraints"]],
         "criteria": [pick(c, "text") for c in card["criteria"]],
-        "claims": [pick(c, "statement", "made_by", "kind", "status", "corrected_to") for c in card["claims"]],
+        "claims": [pick(c, "statement", "made_by", "kind", "status", "corrected_to", "option_id")
+                   for c in card["claims"]],
         "agreements": [{"id": a["id"], "subject_id": a["subject_id"], "status": a["status"],
                         "affirmed_by": [x["participant_id"] for x in a["affirmers"]],
                         "objected_by": [x["participant_id"] for x in a["objectors"]]}
@@ -305,8 +310,11 @@ def _apply(card: dict, name: str, action: dict, message: dict, quote: str) -> tu
             raise ValueError(f"Claim kind must be one of {sorted(CLAIM_KINDS)}.")
         if not isinstance(action.get("checkable"), bool):
             raise ValueError("A new claim must say whether it is checkable.")
+        option_id = action.get("option_id") or None
+        if option_id:
+            _find(card, ("options",), option_id)
         return "claims", _create(card, "claims", {
-            "statement": _text(action), "made_by": speaker, "kind": kind,
+            "statement": _text(action), "made_by": speaker, "kind": kind, "option_id": option_id,
             "checkable": action["checkable"] and kind != "opinion", "status": "unchallenged",
             "challenges": [], "verification": {"status": "not_checked", "check_ids": []}}, message, quote)
 

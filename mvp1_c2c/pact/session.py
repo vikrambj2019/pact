@@ -19,6 +19,7 @@ from pathlib import Path
 from .card import (ADMIN_ID, SCHEMA_VERSION, SECTIONS, apply_action, json_copy, new_card, now_iso,
                    observer_view)
 from .check import select_claims
+from .interpret import MAX_OPEN_ITEMS
 
 CONTEXT_MESSAGES = 15
 PACT_COMMAND = re.compile(r"^\s*pact[,\s]", re.IGNORECASE)
@@ -234,10 +235,16 @@ class PactSession:
             self.log("help_error", type(exc).__name__, request_message_id=request_message["id"])
             self.save()
             raise
-        if isinstance(result, dict):
-            valid_ids = {m["id"] for m in self.card["messages"]}
-            if not set(result.get("source_message_ids", [])) <= valid_ids:
-                raise ValueError("Pact help cited a message ID that is not in this conversation.")
+        known = {item["id"] for section in SECTIONS for item in self.card[section]}
+        unknown = sorted(set(result.get("cited_ids", [])) - known)
+        if unknown:
+            self.log("help_rejected", f"Interpretation cited ids not on the card: {', '.join(unknown)}.",
+                     request_message_id=request_message["id"])
+            self.save()
+            raise ValueError("Pact's interpretation cited items that are not on the card; ask again.")
+        result = {**result, "open_items": result.get("open_items", [])[:MAX_OPEN_ITEMS]}
+        result["summary"] = "\n".join([result["headline"], *(f"• {x}" for x in result["open_items"]),
+                                       f"Next: {result['next_step']}"])
         item = {"id": f"help_{len(self.card['facilitation']) + 1}", "requested_by": ADMIN_ID,
                 "request_message_id": request_message["id"], "requested_at": now_iso(),
                 "output": result, "status": "Pact interpretation"}

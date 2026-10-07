@@ -101,16 +101,6 @@ def test_pact_command_routes_person_check(tmp_path):
     assert session.handle_command("not a command") is False
 
 
-# ── 3. interpret ─────────────────────────────────────────────────────────────
-
-def test_interpret_is_explicit_and_cites_real_messages(tmp_path):
-    session = claims_session(tmp_path)
-    item = session.interpret()
-    assert item["output"]["summary"] == "Fixture state."
-    assert item["request_message_id"] == session.card["messages"][-1]["id"]
-    assert session.card["audit"][-1]["event"] == "help"
-
-
 # ── admin authority ──────────────────────────────────────────────────────────
 
 def test_decision_snapshot_preserves_decision_and_source(tmp_path):

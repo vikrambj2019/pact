@@ -27,8 +27,12 @@ class FakeChecker:
 
 
 class FakeInterpreter:
+    def __init__(self):
+        self.result = {"headline": "Nothing leads yet.", "open_items": [], "next_step": "Alex proposes dates.",
+                       "cited_ids": []}
+
     def interpret(self, card):
-        return {"summary": "Fixture state.", "source_message_ids": [m["id"] for m in card["messages"]]}
+        return dict(self.result)
 
 
 class FakeCommands:

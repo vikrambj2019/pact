@@ -38,7 +38,11 @@ Actions:
 - supersede_constraint(target_id, text, kind?) — a new value replaces an existing constraint (e.g. budget
   $2,500 becomes $2,000). The card keeps both and shows which is current.
 - add_criterion(text) — something the group uses to judge options (cost, scenery, low stress).
-- add_claim(text, kind, checkable) — a statement asserted as true, including hedged ones ("I think", "about").
+- add_claim(text, kind, checkable, option_id?) — a statement asserted as true, including hedged ones ("I think",
+  "about"). Write text as a STANDALONE statement someone could check without reading the chat: resolve "it",
+  "there", "they" and implied places, routes, dates and units from the conversation and card (e.g. "flights
+  alone are $1,300" → "Round-trip flights to Patagonia for the Nov 14-21 trip cost about $1,300"). Never add
+  facts nobody said. Set option_id when the claim is about an option on the card.
   kind is one of {sorted(CLAIM_KINDS)}. checkable=true only when {CHECKABLE_DEFINITION}
 - challenge_claim(target_id, text) — the speaker disputes someone else's claim.
 - retract_claim(target_id) / correct_claim(target_id, text) — the speaker takes back or corrects their OWN claim.
@@ -47,8 +51,9 @@ Actions:
   message it replies to, or else the single item just before it. If it could refer to more than one item
   (e.g. "sounds good" after two competing proposals), set ambiguous=true.
 - record_objection(target_id) — the speaker explicitly says no to an option or constraint.
-- set_preference(stance, option_id?, conditional?) — the speaker's own stance, optionally about one option,
-  optionally with a condition ("only if the huts are open"). A later stance replaces the earlier one.
+- set_preference(stance, option_id?, conditional?) — the speaker's own stance. Set option_id whenever the stance
+  is for or against an option on the card (leave it empty only for general stances like "anywhere cheap").
+  Add a condition when there is one ("only if the huts are open"). A later stance replaces the earlier one.
   Vague flexibility ("I'm easy", "whatever works") is not a preference; skip it.
 - add_issue(text, participant_ids?) — an open question or a to-do that still has to be settled.
 - resolve_issue(target_id) — an open issue is clearly settled.

@@ -58,11 +58,14 @@ Bot messages are round-robin. The bot-message limit excludes your messages. High
 ## Data and guardrails
 
 - The observer proposes typed actions (add an option, supersede a constraint, record someone's explicit yes, ...); Python validates each one. Every change must quote its source message exactly, and every item keeps a history of who said what, when, with the quote.
+- Observations drain pending messages in conversation order, including delayed background tasks. Completed messages are not replayed. If the card view changes while a model call runs, its proposals are discarded and retried; failed work stays pending. This is a single-process session guarantee, not distributed coordination.
 - An agreement counts only explicit yeses ("agreed", "fine", "ok", 👍 count); it is "agreed by all" only when every participant said yes. Silence never counts.
 - Individual positions must be attributed to their speaker and are only recorded with mapping permission. Shared display also checks the participant's sharing permission.
 - Ambiguous human interpretations stay outside confirmed card state until explicitly confirmed. Ambiguous simulated-participant interpretations are skipped and recorded in the audit because simulated participants cannot confirm items in this MVP.
 - Models cannot write decision, permission, participant, or history fields. Only the admin UI can record the session decision.
 - Claim checks record reports and citations as evidence; they do not set agreement or establish truth.
+- Correcting or retracting a claim increments its revision and clears its current verdict. Historical reports remain visible as historical. A check that finishes for an older revision cannot verify the new statement; retracted claims are skipped.
+- Interpretation uses one immutable card snapshot. The model selects current blocker IDs; Python renders the standing, source-quoted blockers, and a suggested next step with fixed word limits. Model-written prose is ignored. If the card changes during selection, the interpretation is rejected rather than displayed as current.
 - Decision snapshots preserve the selected proposal, rationale, current evidence/objections, and source message IDs.
 
 ## Verify
@@ -72,4 +75,6 @@ python -m pytest -q mvp1_c2c/tests
 python -m compileall -q mvp1_c2c
 ```
 
-`tests/test_pact.py` exercises Pact alone, organized by observe / check / interpret; `tests/test_simulation.py` covers the harness. Both use fixed LLM-shaped responses from `tests/fakes.py` and never contact Anthropic.
+The product tests cover observe, check, interpret, session authority, and overlapping operations. `tests/test_simulation.py` covers the harness; `tests/test_evals.py` replays the evaluator offline. All use fixed LLM-shaped responses and never contact Anthropic. `tests/test_ui.py` executes the browser renderer in a small DOM stub when Node.js is available (otherwise those two tests skip).
+
+For live observer evaluation, see [`pact-evals/README.md`](pact-evals/README.md). Offline replay checks the runner and data format; it does not measure model extraction quality.

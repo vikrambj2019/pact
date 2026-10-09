@@ -23,6 +23,20 @@ Five synthetic group chats about the same November hiking trip, six people each 
 
 ## Suggested scoring
 
+Run the live observer against all five transcripts from the repository root (requires `ANTHROPIC_API_KEY`):
+
+```bash
+python3 mvp1_c2c/pact-evals/run_evals.py
+python3 mvp1_c2c/pact-evals/run_evals.py hiking-03-shifting-constraints --batch-size 1
+python3 mvp1_c2c/pact-evals/run_evals.py hiking-03-shifting-constraints --batch-size 0
+```
+
+The default is six-message incremental batches using the same `PactSession.observe_messages` API as the product. `--batch-size 1` tests one-message updates; `0` tests one whole-transcript batch. Reply metadata is preserved, and later messages are not exposed before their batch. Cards, errors, gold labels and batch size are saved under `results/`. An observation error makes the command exit nonzero.
+
+The current scorer uses `options`, `constraints`, `agreements`, and `open_issues`. It reports approximate text matches, participant-level false affirmations, and structural provenance violations. Free-text matching is heuristic: a passing score does not establish semantic correctness or prove a quote supports an extracted statement. Review each generated card against gold, particularly ambiguous replies and sensitivity traps. Current-value checks exclude historical quotes and superseded constraints so preserved history does not count as a current-state leak.
+
+`python -m pytest -q mvp1_c2c/tests/test_evals.py` verifies the runner offline without contacting Anthropic. These tests do not report live model accuracy.
+
 * **Option and constraint accuracy:** the current value, not a superseded one (for example the $2,000 budget in 03).
 * **False-agreement rate:** any agreement the engine reports without an explicit affirmer in the gold. This is the most important number; a false "agreed" is worse than a missed one.
 * **Claim handling:** attributed to the right person, typed correctly (fact, prediction, opinion), status right (unchallenged, disputed, retracted, corrected).

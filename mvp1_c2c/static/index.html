@@ -462,9 +462,9 @@ function renderCard(calls) {
   const body = document.getElementById("card-body");
 
   // Build public card (strip private fields) same logic as Python public_card()
-  const publicPositions = (card.individual_mapping?.confirmed_positions || []).filter(p => {
+  const publicPositions = (card.preferences || []).filter(p => {
     const perm = (card.individual_mapping?.participant_permissions || []).find(pp => pp.participant_id === p.participant_id);
-    return perm?.sharing?.status === "granted" || p.participant_id === "human_admin";
+    return perm?.share_in_group_card?.status === "granted";
   });
 
   let html = "";
@@ -476,6 +476,8 @@ function renderCard(calls) {
     const text = typeof o === "object" ? (o.summary || o.decision_state || JSON.stringify(o)) : String(o);
     html += `<div class="card-section"><h3>Pact summary</h3>
       <div class="card-item" style="font-size:13px;white-space:pre-wrap;line-height:1.7">${esc(text)}</div>`;
+    if (latest.card_version !== undefined && latest.card_version !== card.card_version)
+      html += `<div style="font-size:12px;color:var(--muted)">Summary from card v${latest.card_version}; ask Pact for an update.</div>`;
     if (card.facilitation.length > 1)
       html += `<div style="font-size:11px;color:var(--muted);margin-top:4px">${card.facilitation.length} summaries — showing latest</div>`;
     html += `</div>`;
@@ -489,22 +491,25 @@ function renderCard(calls) {
 
   // Sections
   const sections = [
-    ["proposals", "Proposals", card.proposals],
+    ["options", "Options", card.options],
     ["criteria", "Criteria", card.criteria],
     ["claims", "Claims", card.claims],
-    ["assumptions", "Assumptions", card.assumptions],
-    ["arguments", "Arguments", card.arguments],
+    ["constraints", "Constraints", (card.constraints || []).filter(c => c.status !== "superseded")],
+    ["agreements", "Explicit agreements", card.agreements],
     ["positions", "Shared individual positions", publicPositions],
-    ["unresolved", "Open questions", card.unresolved],
+    ["open_issues", "Open questions", (card.open_issues || []).filter(i => i.status === "open")],
   ];
   for (const [key, label, entries] of sections) {
     if (!entries?.length) continue;
     html += `<div class="card-section"><h3>${label}</h3>`;
     for (const entry of entries) {
-      const title = entry.title || entry.statement || entry.question || JSON.stringify(entry);
+      const title = entry.corrected_to || entry.text || entry.statement || entry.stance || entry.title || entry.question || entry.id;
+      const state = key === "claims"
+        ? `${entry.status} · ${entry.verification?.status === "checked" ? entry.verification.verdict : "not checked"}`
+        : entry.status || entry.leaning || "";
       const src = (entry.source_message_ids || []).join(", ");
       html += `<div class="card-item">
-        <div>${esc(title)}</div>
+        <div>${esc(title)}${state ? ` <span class="tag">${esc(state)}</span>` : ""}</div>
         <div class="item-id">${entry.id}${src ? " · src " + esc(src) : ""}</div>
       </div>`;
     }
@@ -513,16 +518,17 @@ function renderCard(calls) {
 
   // Claim checks
   {
-    html += `<div class="card-section"><h3>Claims</h3>`;
+    html += `<div class="card-section"><h3>Claim checks</h3>`;
     if (card.claims?.length) {
       html += `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">`;
       for (const c of card.claims) {
-        const label = `${esc(c.statement.slice(0,42))}${c.statement.length>42?"…":""}`;
-        html += c.checkable === false
+        const statement = c.corrected_to || c.statement;
+        const label = `${esc(statement.slice(0,42))}${statement.length>42?"…":""}`;
+        html += c.checkable === false || c.status === "retracted"
           ? `<button class="btn-secondary btn-sm" disabled
-              title="Not checkable against public sources: ${esc(c.statement)}">Not checkable: ${label}</button>`
+              title="Not checkable against public sources: ${esc(statement)}">Not checkable: ${label}</button>`
           : `<button class="btn-secondary btn-sm" onclick="checkClaim('${c.id}')"
-              title="${esc(c.statement)}">Check: ${label}</button>`;
+              title="${esc(statement)}">Check: ${label}</button>`;
       }
       html += `</div>`;
     }
@@ -532,16 +538,22 @@ function renderCard(calls) {
       <button class="btn-secondary btn-sm" onclick="addClaim()" style="white-space:nowrap">+ Add claim</button>
     </div>`;
     for (const result of (card.claim_checks || [])) {
-      const label = result.ad_hoc_statement
-        ? `Ad-hoc: ${result.ad_hoc_statement.slice(0,50)}…`
-        : `Check ${result.id}`;
+      const label = `${result.id}: ${result.checked_statement || result.claim_id}`;
+      const state = result.stale ? `Historical · ${result.verdict}` : result.verdict;
       html += `<details style="margin-bottom:6px">
-        <summary>${esc(label)} · <span class="tag">${result.status}</span></summary>
-        <div style="padding:8px 0;font-size:13px;white-space:pre-wrap">${esc(result.finding)}</div>`;
-      for (const s of (result.sources || [])) {
-        html += `<div style="margin-top:4px"><a href="${esc(s.url)}" target="_blank"
-          style="color:var(--accent);font-size:12px">${esc(s.title)}</a></div>`;
+        <summary>${esc(label)} · <span class="tag">${esc(state || "insufficient")}</span></summary>
+        <div style="padding:8px 0;font-size:13px;white-space:pre-wrap">${esc(result.summary || "")}</div>`;
+      if (result.stale)
+        html += `<div style="font-size:12px;color:var(--muted)">The claim changed; this report does not verify its current statement.</div>`;
+      if (result.as_of)
+        html += `<div style="font-size:12px">Evidence as of ${esc(result.as_of)}</div>`;
+      for (const evidence of (result.evidence || [])) {
+        html += `<div style="margin-top:4px"><a href="${esc(evidence.url)}" target="_blank" rel="noopener noreferrer"
+          style="color:var(--accent);font-size:12px">${esc(evidence.title || evidence.url)}</a>
+          <div style="font-size:12px">${esc(evidence.quote)} · ${esc(evidence.stance)}</div></div>`;
       }
+      if (result.google_flights?.url)
+        html += `<a href="${esc(result.google_flights.url)}" target="_blank" rel="noopener noreferrer">Open Google Flights search</a>`;
       html += `</details>`;
     }
     html += `</div>`;
@@ -569,17 +581,17 @@ function renderCard(calls) {
   }
 
   // Record decision
-  if (card.proposals?.length) {
+  if (card.options?.length) {
     html += `<div class="card-section"><h3>Record a decision</h3>
       <div class="card-item">
-        <label style="margin-top:0">Select proposal</label>
+        <label style="margin-top:0">Select option</label>
         <select id="decision-proposal">`;
-    for (const p of card.proposals) {
-      html += `<option value="${p.id}">${esc(p.title || p.id)}</option>`;
+    for (const p of card.options) {
+      html += `<option value="${p.id}">${esc(p.text || p.id)}</option>`;
     }
     html += `</select>
         <label>Rationale</label>
-        <input type="text" id="decision-rationale" placeholder="Optional rationale">
+        <input type="text" id="decision-rationale" placeholder="Required rationale">
         <div style="margin-top:8px">
           <button class="btn-secondary btn-sm" onclick="recordDecision(
             document.getElementById('decision-proposal').value,

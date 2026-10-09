@@ -83,6 +83,7 @@ def new_card(question: str, admin_name: str, members: list[dict], admin_mapping_
         **{section: [] for section in SECTIONS},
         "evidence": [], "claim_checks": [], "decision": {"status": "not_recorded"},
         "messages": [], "snapshots": [], "change_log": [], "audit": [], "facilitation": [],
+        "observation": {"pending": [], "completed": []},
     }
 
 
@@ -95,7 +96,7 @@ def _permission(card: dict, participant_id: str, kind: str) -> bool:
 
 def public_card(card: dict) -> dict:
     """What participants may see: admin bookkeeping removed, preferences only where sharing is granted."""
-    private = {"audit", "snapshots", "facilitation", "run_settings", "change_log"}
+    private = {"audit", "snapshots", "facilitation", "run_settings", "change_log", "observation"}
     result = {k: json_copy(v) for k, v in card.items() if k not in private}
     result["preferences"] = [p for p in result["preferences"]
                              if _permission(card, p["participant_id"], "share_in_group_card")]
@@ -321,7 +322,7 @@ def _apply(card: dict, name: str, action: dict, message: dict, quote: str) -> tu
             raise ValueError(f"check_type must be one of {list(CHECK_TYPES)}.")
         return "claims", _create(card, "claims", {
             "statement": _text(action), "made_by": speaker, "kind": kind, "option_id": option_id,
-            "checkable": checkable, "check_type": check_type, "status": "unchallenged",
+            "checkable": checkable, "check_type": check_type, "status": "unchallenged", "revision": 0,
             "challenges": [], "verification": {"status": "not_checked", "check_ids": []}}, message, quote)
 
     if name == "challenge_claim":
@@ -344,6 +345,15 @@ def _apply(card: dict, name: str, action: dict, message: dict, quote: str) -> tu
         else:
             claim["status"], claim["corrected_to"] = "corrected", _text(action)
             _touch(claim, "corrected", message, quote, corrected_to=claim["corrected_to"])
+        claim["revision"] = claim.get("revision", 0) + 1
+        previous = claim.get("verification", {})
+        claim["verification"] = {"status": "not_checked", "check_ids": previous.get("check_ids", [])}
+        for check in card["claim_checks"]:
+            if check.get("claim_id") == claim["id"]:
+                check["stale"] = True
+        if previous.get("status") == "checked":
+            _touch(claim, "verification_invalidated", message, quote,
+                   previous_verdict=previous.get("verdict"))
         return "claims", claim
 
     if name == "record_affirmation":

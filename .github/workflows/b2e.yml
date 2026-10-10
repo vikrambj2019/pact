@@ -1,0 +1,34 @@
+name: B2E foundation
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: pact
+          POSTGRES_PASSWORD: pact
+          POSTGRES_DB: pact_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U pact -d pact_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql+asyncpg://pact:pact@localhost:5432/pact_test
+      PACT_TEST_DATABASE_URL: postgresql+asyncpg://pact:pact@localhost:5432/pact_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r mvp1_b2e/requirements-dev.txt -r mvp1_c2c/requirements.txt
+      - name: Validate migrations against PostgreSQL
+        run: |
+          python -m alembic -c mvp1_b2e/alembic.ini upgrade head
+          python -m alembic -c mvp1_b2e/alembic.ini downgrade base
+      - run: python -m pytest -q mvp1_b2e/tests mvp1_c2c/tests

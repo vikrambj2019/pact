@@ -1,8 +1,9 @@
 """Job worker — polls the jobs table, claims work with a lease, runs handlers, retries on failure."""
 import asyncio
 import logging
+from contextlib import suppress
 from datetime import datetime, timedelta, timezone
-from sqlalchemy import select, update
+from sqlalchemy import select, update, or_, and_
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from ..api.config import settings
 from ..api.models import Job, JobStatus, JobType
@@ -14,17 +15,28 @@ async def _claim_job(session: AsyncSession) -> Job | None:
     """Atomically claim one pending job with a lease. Returns None if nothing is available."""
     now = datetime.now(timezone.utc)
     lease_until = now + timedelta(seconds=settings.job_lease_seconds)
+    # A worker can die after claiming its final attempt. Mark those abandoned
+    # jobs terminal rather than leaving them running forever.
+    await session.execute(update(Job).where(
+        Job.status == JobStatus.running, Job.lease_until <= now,
+        Job.attempt_count >= settings.max_job_attempts,
+    ).values(status=JobStatus.failed, lease_until=None,
+             error_code="LeaseExpired", error_detail="Worker lease expired on final attempt")
+        .execution_options(synchronize_session=False))
     result = await session.execute(
         select(Job)
         .where(
-            Job.status == JobStatus.pending,
+            or_(Job.status == JobStatus.pending,
+                and_(Job.status == JobStatus.running, Job.lease_until <= now)),
             Job.attempt_count < settings.max_job_attempts,
         )
         .with_for_update(skip_locked=True)
+        .order_by(Job.created_at)
         .limit(1)
     )
     job = result.scalar_one_or_none()
     if job is None:
+        await session.commit()
         return None
     job.status = JobStatus.running
     job.attempt_count += 1
@@ -51,31 +63,58 @@ async def _run_job(job: Job, session: AsyncSession):
     return await handler(job, session)
 
 
+async def _heartbeat(factory, job_id, attempt):
+    while True:
+        await asyncio.sleep(max(0.1, settings.job_lease_seconds / 3))
+        async with factory() as session:
+            await session.execute(update(Job).where(
+                Job.id == job_id, Job.status == JobStatus.running,
+                Job.attempt_count == attempt,
+            ).values(lease_until=datetime.now(timezone.utc) + timedelta(seconds=settings.job_lease_seconds)))
+            await session.commit()
+
+
 async def process_one(session_factory: async_sessionmaker) -> bool:
-    """Try to claim and run one job. Returns True if a job was processed."""
+    """Claim, execute transactionally, and fence results from superseded attempts."""
     async with session_factory() as session:
         job = await _claim_job(session)
         if job is None:
             return False
-        job_id = job.id
-        logger.info("Running job %s type=%s attempt=%d", job_id, job.type, job.attempt_count)
-
-    async with session_factory() as session:
-        job = await session.get(Job, job_id)
-        try:
-            output = await _run_job(job, session)
-            job.status = JobStatus.done
-            job.output_payload = output
-            job.error_code = None
-            job.error_detail = None
-        except Exception as exc:
-            logger.exception("Job %s failed: %s", job_id, exc)
-            exhausted = job.attempt_count >= settings.max_job_attempts
-            job.status = JobStatus.failed if exhausted else JobStatus.pending
-            job.error_code = type(exc).__name__
-            job.error_detail = str(exc)[:1000]
-            job.lease_until = None
-        await session.commit()
+        job_id, attempt = job.id, job.attempt_count
+    heartbeat = asyncio.create_task(_heartbeat(session_factory, job_id, attempt))
+    try:
+        async with session_factory() as session:
+            job = await session.get(Job, job_id)
+            error = None
+            try:
+                output = await _run_job(job, session)
+            except Exception as exc:
+                # Roll back all handler writes before recording the failure.
+                await session.rollback()
+                error = exc
+                logger.warning("Job %s failed (%s)", job_id, type(exc).__name__)
+            with session.no_autoflush:
+                current = (await session.execute(select(Job).where(Job.id == job_id)
+                    .with_for_update().execution_options(populate_existing=True))).scalar_one()
+            if current.status != JobStatus.running or current.attempt_count != attempt:
+                await session.rollback()
+                return True
+            current.lease_until = None
+            if error is None:
+                current.status = JobStatus.done
+                current.output_payload = output
+                current.error_code = current.error_detail = None
+            else:
+                permanent = isinstance(error, (NotImplementedError, ValueError))
+                current.status = JobStatus.failed if permanent or attempt >= settings.max_job_attempts else JobStatus.pending
+                current.error_code = type(error).__name__
+                # Do not expose source text or credentials embedded in exceptions.
+                current.error_detail = "Handler failed; see error_code"
+            await session.commit()
+    finally:
+        heartbeat.cancel()
+        with suppress(asyncio.CancelledError):
+            await heartbeat
     return True
 
 

@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
-"""Run Pact's observe function against each eval transcript and score against gold.
+"""Replay observer evals through the product's current PactSession API.
 
-Uses the pact package only; no simulated participants are involved.
-
-Usage (from repo root):
-    python3 mvp1_c2c/pact-evals/run_evals.py [stem ...]
-
-Examples:
-    python3 mvp1_c2c/pact-evals/run_evals.py                   # all five
-    python3 mvp1_c2c/pact-evals/run_evals.py hiking-01-simple  # one
+Default: incremental six-message batches. --batch-size 0 uses a whole-transcript batch.
+Matching of free-text gold labels is heuristic; inspect output cards alongside scores.
+No claim research is performed: these transcripts contain invented external facts.
 """
 from __future__ import annotations
 
+import argparse
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -21,214 +18,147 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent.parent
 sys.path.insert(0, str(REPO))
 
-from mvp1_c2c.pact import AnthropicClient, PactLLM, apply_change, new_card, now_iso  # noqa: E402
+from mvp1_c2c.pact import AnthropicClient, PactLLM, PactSession, new_card, now_iso  # noqa: E402
 
 OUT_DIR = ROOT / "out"
 GOLD_DIR = ROOT / "gold"
 RESULTS_DIR = ROOT / "results"
-RESULTS_DIR.mkdir(exist_ok=True)
+STEMS = ["hiking-01-simple", "hiking-02-one-dispute", "hiking-03-shifting-constraints",
+         "hiking-04-interleaved-threads", "hiking-05-chaos"]
 
-
-# ── card builder ──────────────────────────────────────────────────────────────
 
 def build_card(transcript: dict) -> tuple[dict, dict]:
-    """Create a card from a transcript using initial_card(). Returns (card, name→id map)."""
     names = transcript["participants"]
-    members = [
-        {"id": f"p_{i}", "name": n, "role": "participant",
-         "mapping_allowed": True, "share_allowed": True}
-        for i, n in enumerate(names[1:], 1)
-    ]
+    members = [{"id": f"p_{i}", "name": name, "role": "participant",
+                "mapping_allowed": True, "share_allowed": True}
+               for i, name in enumerate(names[1:], 1)]
     card = new_card(transcript.get("title", transcript["id"]), names[0], members)
-    name_to_id = {p["name"]: p["id"] for p in card["participants"]}
-    return card, name_to_id
+    return card, {p["name"]: p["id"] for p in card["participants"]}
 
 
-# ── observer runner ───────────────────────────────────────────────────────────
-
-def run_transcript(stem: str, pact: PactLLM) -> dict:
+def run_transcript(stem: str, pact: PactLLM, batch_size: int = 6) -> dict:
+    if batch_size < 0:
+        raise ValueError("batch_size must be nonnegative")
     transcript = json.loads((OUT_DIR / f"{stem}.json").read_text())
     gold = json.loads((GOLD_DIR / f"{stem}.gold.json").read_text())
-
     card, name_to_id = build_card(transcript)
-    errors = []
-    n = len(transcript["messages"])
-
-    print(f"\n{'='*60}")
-    print(f"  {stem}  ({n} messages — single API call)")
-    print(f"{'='*60}")
-
-    # Build message records using real participant IDs
+    session = PactSession(card, pact)
     records = []
+    errors = []
     for msg in transcript["messages"]:
-        speaker_id = name_to_id.get(msg["sender"])
-        if not speaker_id:
-            continue
-        record = {"id": msg["id"], "speaker_id": speaker_id,
+        if msg["sender"] not in name_to_id:
+            raise ValueError(f"Unknown transcript sender: {msg['sender']}")
+        record = {"id": msg["id"], "speaker_id": name_to_id[msg["sender"]],
                   "text": msg["text"], "source": "simulated",
-                  "recorded_at": msg.get("ts", now_iso())}
+                  "recorded_at": msg.get("ts") or now_iso()}
+        if msg.get("reply_to"):
+            record["reply_to"] = msg["reply_to"]
         records.append(record)
-        card["messages"].append(record)
-
-    # One API call for the whole conversation
-    try:
-        batch_result = pact.observer.observe_batch(card, records)
-        total_applied = 0
-        for record in records:
-            changes = batch_result.get(record["id"], [])
-            for change in changes:
-                try:
-                    apply_change(card, change, record)
-                    total_applied += 1
-                except ValueError as e:
-                    errors.append({"msg": record["id"], "error": str(e)})
-        card["card_version"] += 1
-        print(f"  → {total_applied} changes applied"
-              f"  (proposals={len(card['proposals'])}"
-              f" claims={len(card['claims'])}"
-              f" criteria={len(card['criteria'])}"
-              f" unresolved={len(card['unresolved'])})")
-    except Exception as exc:
-        import traceback
-        errors.append({"error": f"observe_batch failed: {exc}"})
-        print(f"  ERROR: {exc}")
-        traceback.print_exc()
-
-    result = {"stem": stem, "card": card, "gold": gold, "errors": errors}
-    (RESULTS_DIR / f"{stem}.json").write_text(
-        json.dumps({"card": card, "gold": gold, "errors": errors}, indent=2)
-    )
+    size = batch_size or max(1, len(records))
+    for start in range(0, len(records), size):
+        batch = records[start:start + size]
+        # Append only the messages available at this point: no look-ahead to later discussion.
+        card["messages"].extend(batch)
+        card["observation"]["pending"].extend(m["id"] for m in batch)
+        card["card_version"] += len(batch)
+        observation = session.observe_messages(batch)
+        if observation.get("error"):
+            errors.append({"message_ids": [m["id"] for m in batch], "error": observation["error"]})
+            break  # Later batches cannot fairly bypass failed earlier work.
+    errors += [{"msg": event.get("message_id"), "error": event["detail"]}
+               for event in card["audit"] if event["event"] == "observation_rejected"]
+    result = {"stem": stem, "card": card, "gold": gold, "errors": errors, "batch_size": batch_size}
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    (RESULTS_DIR / f"{stem}.json").write_text(json.dumps(result, indent=2, ensure_ascii=False))
     return result
 
 
-# ── scorer ────────────────────────────────────────────────────────────────────
+STOPWORDS = {"a", "an", "the", "is", "are", "in", "of", "to", "for", "and", "or", "that",
+             "it", "its", "by", "with", "as", "per", "person", "all", "six"}
+
+
+def tokens(text: str) -> set[str]:
+    text = re.sub(r"(?<=\d),(?=\d)", "", text.lower())
+    return set(re.findall(r"[a-z0-9]+", text)) - STOPWORDS
+
+
+def similar(a: str, b: str) -> bool:
+    """Conservative lexical overlap for approximate discovery scores, never semantic proof."""
+    left, right = tokens(a), tokens(b)
+    return bool(left and right) and len(left & right) / min(len(left), len(right)) >= 0.6
+
 
 def score(result: dict) -> dict:
-    card = result["card"]
-    gold = result["gold"]
-
-    scores = {}
-
-    # 1. Proposals vs gold options
-    gold_opts = {o["name"].lower() for o in gold.get("options", [])}
-    card_props = {(p.get("title") or "").lower() for p in card["proposals"]}
-    matched_opts = sum(1 for g in gold_opts
-                       if any(word in g for word in (next(iter(p.split()), "") for p in card_props))
-                       or any(g in p or p in g for p in card_props))
-    scores["options"] = f"{matched_opts}/{len(gold_opts)}"
-
-    # 2. Claims vs gold claims (checkable ones)
+    card, gold = result["card"], result["gold"]
+    scores = {"matching": "heuristic; manually review cards and gold"}
+    scores["options"] = f"{sum(any(similar(g['name'], o['text']) for o in card['options']) for g in gold.get('options', []))}/{len(gold.get('options', []))}"
     gold_claims = [c for c in gold.get("claims", []) if c.get("checkable")]
-    card_claim_texts = [
-        (c.get("statement") or c.get("description") or c.get("text") or "").lower()
-        for c in card["claims"]
-    ]
-    matched_claims = 0
-    for gc in gold_claims:
-        stopwords = {"a","an","the","is","are","in","of","to","for","and","or","that","it","its","by"}
-        words = [w for w in gc["text"].lower().split() if w not in stopwords]
-        key = words[:5]
-        if any(sum(1 for w in key if w in ct) >= 3 for ct in card_claim_texts):
-            matched_claims += 1
-    scores["claims"] = f"{matched_claims}/{len(gold_claims)}"
-
-    # 3. False agreement rate
-    gold_agreements = gold.get("agreements", [])
-    gold_agreed_texts = [a["text"].lower() for a in gold_agreements]
-    card_agreements = [p for p in card["proposals"] if p.get("status") == "agreed"]
-    false_agreements = 0
-    for ca in card_agreements:
-        ct = (ca.get("title") or "").lower()
-        if not any(ct in ga or ga in ct for ga in gold_agreed_texts):
-            false_agreements += 1
-    scores["false_agreements"] = false_agreements
-
-    # 4. Criteria
-    gold_criteria = gold.get("criteria", [])
-    card_criteria_texts = [
-        (c.get("description") or c.get("title") or c.get("text") or "").lower()
-        for c in card["criteria"]
-    ]
-    stopwords_crit = {"a","an","the","is","are","in","of","to","for","and","or","that","it","its","by","with","as"}
-    matched_crit = 0
-    for gc in gold_criteria:
-        words = [w.strip(".,;:()") for w in gc["text"].lower().split() if w not in stopwords_crit and len(w) > 2]
-        key = words[:5]
-        if any(sum(1 for w in key if w in ct) >= min(2, len(key)) for ct in card_criteria_texts):
-            matched_crit += 1
-    scores["criteria"] = f"{matched_crit}/{len(gold_criteria)}"
-
-    # 5. card_must_include / card_must_not_include (keyword heuristic)
-    # Search only structured fields — exclude raw messages so we don't match things the observer correctly ignored
-    stopwords = {"a","an","the","is","are","in","of","to","for","and","or","that","it","its","by","with","as"}
-    structured_card = {k: v for k, v in card.items()
-                       if k not in ("messages", "audit", "change_log", "snapshots")}
-    full_card_text = json.dumps(structured_card).lower()
-
-    def content_words(s):
-        return [w.strip(".,;:()") for w in s.lower().split() if w not in stopwords and len(w) > 2]
-
-    must_hits = 0
-    for m in gold.get("card_must_include", []):
-        words = content_words(m)
-        if sum(1 for w in words[:6] if w in full_card_text) >= min(3, len(words)):
-            must_hits += 1
-    must_not_hits = 0
-    must_not_detail = []
-    for m in gold.get("card_must_not_include", []):
-        words = content_words(m)
-        if sum(1 for w in words[:6] if w in full_card_text) >= min(4, len(words)):
-            must_not_hits += 1
-            must_not_detail.append(m)
-    scores["must_include"] = f"{must_hits}/{len(gold.get('card_must_include', []))}"
-    scores["must_not_violations"] = must_not_hits
-    scores["must_not_detail"] = must_not_detail
-
-    # 6. Observer errors
+    claims = [c for c in card["claims"] if c["status"] != "retracted"]
+    matched = sum(any(similar(g["text"], c.get("corrected_to") or c["statement"]) for c in claims)
+                  for g in gold_claims)
+    scores["claims"] = f"{matched}/{len(gold_claims)}"
+    criteria = gold.get("criteria", [])
+    scores["criteria"] = f"{sum(any(similar(g['text'], c['text']) for c in card['criteria']) for g in criteria)}/{len(criteria)}"
+    names = {p["id"]: p["name"] for p in card["participants"]}
+    false = []
+    for agreement in card["agreements"]:
+        sources = set(agreement["source_message_ids"])
+        candidates = [g for g in gold.get("agreements", [])
+                      if sources & set(g.get("msgs", [])) and similar(agreement["text"], g["text"])]
+        for affirmation in agreement["affirmers"]:
+            name = names[affirmation["participant_id"]]
+            if not any(name in g.get("explicit_affirmers", []) and
+                       affirmation["message_id"] in g.get("msgs", []) for g in candidates):
+                false.append({"subject_id": agreement["subject_id"], "who": name,
+                              "message_id": affirmation["message_id"]})
+    scores["false_affirmations"] = len(false)
+    scores["false_affirmation_detail"] = false
+    scores["false_agreements"] = len({f["subject_id"] for f in false})
+    messages = {m["id"]: m for m in card["messages"]}
+    bad_provenance = []
+    for section in ("options", "constraints", "criteria", "claims", "agreements", "preferences", "open_issues"):
+        for item in card[section]:
+            for event in item["history"]:
+                source = messages.get(event.get("message_id"))
+                if (not source or source["speaker_id"] != event.get("speaker_id")
+                        or not event.get("quote") or event["quote"] not in source["text"]):
+                    bad_provenance.append({"item_id": item["id"], "message_id": event.get("message_id")})
+    scores["provenance_violations"] = len(bad_provenance)
+    # Test only current visible field values. Historical quotes are expected to retain superseded values.
+    visible = {
+        "options": [{"text": o["text"], "status": o["status"]} for o in card["options"]],
+        "constraints": [{"text": c["text"], "status": c["status"]} for c in card["constraints"] if c["status"] != "superseded"],
+        "claims": [{"statement": c.get("corrected_to") or c["statement"], "status": c["status"]} for c in claims],
+        "preferences": [{k: p.get(k) for k in ("stance", "leaning", "conditional")} for p in card["preferences"]],
+        "open_issues": [i["text"] for i in card["open_issues"] if i["status"] == "open"],
+    }
+    current_text = json.dumps(visible)
+    scores["must_include"] = f"{sum(similar(g, current_text) for g in gold.get('card_must_include', []))}/{len(gold.get('card_must_include', []))}"
+    violations = [g for g in gold.get("card_must_not_include", []) if similar(g, current_text)]
+    scores["must_not_violations"] = len(violations)
+    scores["must_not_detail"] = violations
     scores["observer_errors"] = len(result["errors"])
-
     return scores
 
 
-# ── main ──────────────────────────────────────────────────────────────────────
-
-def main():
-    stems = sys.argv[1:] or [
-        "hiking-01-simple",
-        "hiking-02-one-dispute",
-        "hiking-03-shifting-constraints",
-        "hiking-04-interleaved-threads",
-        "hiking-05-chaos",
-    ]
-
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("stems", nargs="*", choices=None)
+    parser.add_argument("--batch-size", type=int, default=6, help="Messages per batch; 0 means entire transcript")
+    args = parser.parse_args()
+    stems = args.stems or STEMS
+    if args.batch_size < 0 or any(stem not in STEMS for stem in stems):
+        parser.error("Use known hiking stems and a nonnegative batch size.")
     pact = PactLLM(AnthropicClient())
-    all_scores = {}
-
+    failed = False
     for stem in stems:
-        t0 = time.time()
-        result = run_transcript(stem, pact)
-        elapsed = time.time() - t0
-        s = score(result)
-        all_scores[stem] = s
-
-        print(f"\n  ── scores ({stem}) ──")
-        for k, v in s.items():
-            if k == "must_not_detail":
-                continue
-            print(f"     {k:30s} {v}")
-        for m in s.get("must_not_detail", []):
-            print(f"     {'':30s} ⚠ LEAKED: {m}")
-        print(f"  elapsed: {elapsed:.1f}s  |  API calls: {pact.client.calls}")
-
-    print(f"\n{'='*60}")
-    print("  SUMMARY")
-    print(f"{'='*60}")
-    header = f"  {'stem':40s}  opts  claims  crit  !agree  errors"
-    print(header)
-    for stem, s in all_scores.items():
-        print(f"  {stem:40s}  {s['options']:5s}  {s['claims']:6s}  "
-              f"{s['criteria']:4s}  {s['false_agreements']:6}  {s['observer_errors']}")
+        start = time.monotonic()
+        result = run_transcript(stem, pact, args.batch_size)
+        scores = score(result)
+        failed |= bool(result["errors"])
+        print(json.dumps({"stem": stem, "scores": scores, "seconds": round(time.monotonic() - start, 1)}, indent=2))
+    return int(failed)
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

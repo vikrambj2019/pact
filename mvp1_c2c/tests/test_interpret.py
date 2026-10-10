@@ -95,8 +95,8 @@ def test_interpretation_is_short_composed_and_cites_real_items(tmp_path):
         "next_step": "Check claim_1 before Alex and Priya go further.",
         "cited_ids": ["opt_1", "claim_1", "issue_1"]}
     item = session.interpret()
-    assert len(item["output"]["open_items"]) == 3
-    assert item["output"]["summary"].splitlines()[0] == "Patagonia leads on stated support; nothing is decided."
+    assert len(item["output"]["open_items"]) == 2
+    assert item["output"]["summary"].splitlines()[0] == "Patagonia leads on stated support; not agreed by all."
     assert item["output"]["summary"].splitlines()[-1].startswith("Next: ")
     assert item["request_message_id"] == session.card["messages"][-1]["id"]
 
@@ -178,21 +178,45 @@ class ScriptedClient:
         return self.answers.pop(0)
 
 
-SHORT = {"headline": "Patagonia leads; not agreed.", "open_items": ["Priya disputes flight cost."],
-         "next_step": "Alex checks flights.", "cited_ids": ["opt_1"]}
-
-
-def test_long_answer_gets_one_retry_with_what_to_shorten(tmp_path):
-    from mvp1_c2c.pact.interpret import Interpreter
-    long = {**SHORT, "headline": " ".join(["word"] * 40)}
-    client = ScriptedClient(long, SHORT)
-    result = Interpreter(client, "m").interpret(chat_session(tmp_path).card)
-    assert result["headline"] == SHORT["headline"] and result["over_length"] == []
-    assert client.payloads[1]["shorten"] == ["headline over 25 words"]
-
-
-def test_short_answer_is_not_retried(tmp_path):
-    from mvp1_c2c.pact.interpret import Interpreter
-    client = ScriptedClient(SHORT)
-    assert Interpreter(client, "m").interpret(chat_session(tmp_path).card) == SHORT
+def test_model_selects_blockers_and_cannot_supply_the_summary(tmp_path):
+    from mvp1_c2c.pact.interpret import Interpreter, render_interpretation
+    card = chat_session(tmp_path).card
+    client = ScriptedClient({"cited_ids": ["issue_1", "claim_1"], "next_item_id": "issue_1",
+                             "headline": "Everyone agrees to Dolomites.", "next_step": "Book it now."})
+    selection = Interpreter(client, "m").interpret(card)
+    result = render_interpretation(card, selection)
+    assert result["headline"] == "Patagonia leads on stated support; not agreed by all."
+    assert result["open_items"][0].startswith("Open:")
+    assert result["next_step"] == "Priya: resolve issue_1 before deciding."
+    assert "Book" not in str(result) and "Everyone agrees" not in str(result)
     assert len(client.payloads) == 1
+
+
+def test_model_cannot_select_a_real_but_nonblocking_item(tmp_path):
+    from mvp1_c2c.pact.interpret import Interpreter
+    client = ScriptedClient({"cited_ids": ["opt_1"], "next_item_id": "opt_1"})
+    with pytest.raises(ValueError, match="current blocker"):
+        Interpreter(client, "m").interpret(chat_session(tmp_path).card)
+
+
+def test_empty_card_needs_no_model_call_and_stays_short():
+    from mvp1_c2c.pact.interpret import Interpreter, render_interpretation
+    session = PactSession.create("Q?", "Sam", MEMBERS, FakePactLLM())
+    client = ScriptedClient()
+    result = render_interpretation(session.card, Interpreter(client, "m").interpret(session.card))
+    assert client.payloads == []
+    assert result["headline"] == "Nothing leads on stated support yet."
+    assert result["open_items"] == []
+    assert result["cited_ids"] == []
+
+
+def test_long_source_text_is_bounded_without_model_retries(tmp_path):
+    from mvp1_c2c.pact.interpret import render_interpretation, WORD_LIMITS
+    card = chat_session(tmp_path).card
+    card["options"][0]["text"] = " ".join(["place"] * 60)
+    card["claims"][0]["statement"] = " ".join(["fact"] * 60)
+    result = render_interpretation(card, {"cited_ids": ["claim_1"]})
+    assert len(result["headline"].split()) <= WORD_LIMITS["headline"]
+    assert all(len(item.split()) <= WORD_LIMITS["open_item"] for item in result["open_items"])
+    assert len(result["next_step"].split()) <= WORD_LIMITS["next_step"]
+    assert "claim_1" in result["cited_ids"]

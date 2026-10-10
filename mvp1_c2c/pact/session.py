@@ -20,7 +20,7 @@ from pathlib import Path
 from .card import (ADMIN_ID, SCHEMA_VERSION, SECTIONS, apply_action, json_copy, new_card, now_iso,
                    observer_view, provenance)
 from .check import select_claims
-from .interpret import MAX_OPEN_ITEMS
+from .interpret import render_interpretation
 
 CONTEXT_MESSAGES = 15
 MAX_PARALLEL_CHECKS = 4
@@ -32,7 +32,17 @@ class PactSession:
         # `extras` is opaque data saved next to the card (e.g. a harness's own state); Pact never reads it.
         self.card, self.llm, self.path = card, llm, path
         self.extras = extras if extras is not None else {}
-        self.lock = threading.RLock()  # observation can finish in the background while other requests run
+        self.lock = threading.RLock()  # guards card state and persistence
+        self.observation_lock = threading.RLock()  # one ordered observer worker per session
+        # Older v3 sessions already have observation audit records; do not replay those messages.
+        if "observation" not in self.card:
+            completed = list(dict.fromkeys(mid for event in self.card.get("audit", [])
+                                           if event.get("event") == "observation"
+                                           for mid in event.get("message_ids", [])))
+            self.card["observation"] = {"completed": completed, "pending": [
+                m["id"] for m in self.card["messages"] if m["id"] not in completed
+                and m.get("source") not in {"pact_command", "explicit_request", "decision_record",
+                                            "human_confirmation"}]}
 
     @classmethod
     def create(cls, question: str, admin_name: str, members: list[dict], llm, path: Path | None = None,
@@ -63,10 +73,10 @@ class PactSession:
             return
         with self.lock:
             text = json.dumps({"card": self.card, **self.extras}, ensure_ascii=False, indent=2)
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = self.path.with_suffix(self.path.suffix + ".tmp")
-        tmp.write_text(text)
-        os.replace(tmp, self.path)
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = self.path.with_suffix(self.path.suffix + ".tmp")
+            tmp.write_text(text)
+            os.replace(tmp, self.path)
 
     def snapshot(self) -> dict:
         """A consistent copy of the card, safe to serialize while observation runs in the background."""
@@ -94,6 +104,8 @@ class PactSession:
                     raise ValueError("Reply target is not in this conversation.")
                 message["reply_to"] = reply_to
             self.card["messages"].append(message)
+            if source not in {"pact_command", "explicit_request", "decision_record", "human_confirmation"}:
+                self.card["observation"]["pending"].append(message["id"])
             self.card["card_version"] += 1
             self.save()
         if observe:
@@ -107,42 +119,73 @@ class PactSession:
         return self.observe_messages([message])
 
     def observe_messages(self, messages: list[dict]) -> dict:
-        """Ask the observer for actions on messages already in the conversation, then apply each action on
-        its own: a rejected action is logged with its reason and never blocks the others. The model call
-        runs outside the lock; applying runs inside it. The card version goes up once per observation."""
-        with self.lock:
-            ids = [m["id"] for m in self.card["messages"]]
-            start = ids.index(messages[0]["id"])
-            context = json_copy(self.card["messages"][max(0, start - CONTEXT_MESSAGES):start])
-            view = observer_view(self.card)
-        try:
-            actions = self.llm.observer.propose(view, messages, context)
-        except Exception as exc:
+        """Drain pending messages through the requested message in conversation order.
+
+        Background tasks may arrive out of order. A later task also processes earlier pending
+        messages; completed messages are never replayed. Calls run outside the card lock, but one
+        observer worker runs at a time. If the observer's card view changed during a call, discard
+        its proposals and retry against the new view. Failed work stays pending for a later retry.
+        """
+        if not messages:
+            raise ValueError("Observation needs at least one message.")
+        with self.observation_lock:
             with self.lock:
-                self.log("observation_error", f"{type(exc).__name__}: {exc}"[:300],
-                         message_ids=[m["id"] for m in messages])
-                self.card["card_version"] += 1
-            self.save()
-            return {"applied": 0, "rejected": 0, "error": type(exc).__name__}
-        by_id = {m["id"]: m for m in messages}
-        refs, applied, rejected = {}, 0, 0
-        with self.lock:
-            for action in actions:
-                message = by_id.get(action.get("message_id"))
+                ids = [m["id"] for m in self.card["messages"]]
+                requested = [m["id"] for m in messages]
+                if any(mid not in ids for mid in requested):
+                    raise ValueError("Observation message is not in this conversation.")
+                end = max(ids.index(mid) for mid in requested)
+                pending = set(self.card["observation"]["pending"])
+                work = json_copy([m for m in self.card["messages"][:end + 1] if m["id"] in pending])
+                if not work:
+                    return {"applied": 0, "rejected": 0}
+                start = ids.index(work[0]["id"])
+                context = json_copy(self.card["messages"][max(0, start - CONTEXT_MESSAGES):start])
+            for attempt in range(3):
+                with self.lock:
+                    view = observer_view(self.card)
                 try:
-                    if message is None:
-                        raise ValueError("Action cites a message that is not part of this observation.")
-                    apply_action(self.card, action, message, refs)
-                    applied += 1
-                except ValueError as exc:
-                    rejected += 1
-                    self.log("observation_rejected", str(exc), action=action.get("action"),
-                             message_id=action.get("message_id"), quote=action.get("quote"))
-            self.log("observation", f"Applied {applied} action(s), rejected {rejected}.",
-                     message_ids=list(by_id))
-            self.card["card_version"] += 1
-        self.save()
-        return {"applied": applied, "rejected": rejected}
+                    actions = self.llm.observer.propose(view, work, context)
+                except Exception as exc:
+                    with self.lock:
+                        self.log("observation_error", f"{type(exc).__name__}: {exc}"[:300],
+                                 message_ids=[m["id"] for m in work])
+                        self.card["card_version"] += 1
+                        self.save()
+                    return {"applied": 0, "rejected": 0, "error": type(exc).__name__}
+                with self.lock:
+                    if observer_view(self.card) != view:
+                        self.log("observation_stale", "Card changed; discarded observer proposals.",
+                                 message_ids=[m["id"] for m in work], attempt=attempt + 1)
+                        continue
+                    by_id = {m["id"]: m for m in work}
+                    order = {m["id"]: i for i, m in enumerate(work)}
+                    refs, applied, rejected = {}, 0, 0
+                    # Preserve action order within a message, even when a model groups messages backwards.
+                    for action in sorted(actions, key=lambda a: order.get(a.get("message_id"), len(work))):
+                        message = by_id.get(action.get("message_id"))
+                        try:
+                            if message is None:
+                                raise ValueError("Action cites a message that is not part of this observation.")
+                            apply_action(self.card, action, message, refs)
+                            applied += 1
+                        except ValueError as exc:
+                            rejected += 1
+                            self.log("observation_rejected", str(exc), action=action.get("action"),
+                                     message_id=action.get("message_id"), quote=action.get("quote"))
+                    state = self.card["observation"]
+                    state["completed"].extend(by_id)
+                    state["pending"] = [mid for mid in state["pending"] if mid not in by_id]
+                    self.log("observation", f"Applied {applied} action(s), rejected {rejected}.",
+                             message_ids=list(by_id))
+                    self.card["card_version"] += 1
+                    self.save()
+                    return {"applied": applied, "rejected": rejected}
+            with self.lock:
+                self.log("observation_error", "Card kept changing; messages remain pending.",
+                         message_ids=[m["id"] for m in work])
+                self.save()
+            return {"applied": 0, "rejected": 0, "error": "StaleObservation"}
 
     # ── 2. CHECK ─────────────────────────────────────────────────────────────
 
@@ -153,8 +196,8 @@ class PactSession:
         Research runs in parallel; results are recorded in the order the claims appear on the card."""
         with self.lock:
             selected = select_claims(self.card, claim_ids, made_by)
-            checkable = [json_copy(c) for c in selected if c.get("checkable")]
-            skipped = [c["id"] for c in selected if not c.get("checkable")]
+            checkable = [json_copy(c) for c in selected if c.get("checkable") and c["status"] != "retracted"]
+            skipped = [c["id"] for c in selected if not c.get("checkable") or c["status"] == "retracted"]
         if not checkable:
             raise ValueError("None of those claims can be checked against public sources "
                              "(opinions, predictions, and personal facts are not checked).")
@@ -181,7 +224,7 @@ class PactSession:
                              claim_id=claim["id"], request_message_id=request_message["id"])
                     checks.append({"claim_id": claim["id"], "error": outcome})
                 else:
-                    checks.append(self._record_check(claim["id"], outcome, request_message))
+                    checks.append(self._record_check(claim["id"], outcome, request_message, claim.get("revision", 0)))
             if skipped:
                 self.log("claims_not_checkable", "Skipped claims that are not checkable.", claim_ids=skipped)
         self.save()
@@ -212,7 +255,7 @@ class PactSession:
                       else {"speaker_id": ADMIN_ID, "at": now_iso()})
             claim = {"id": f"claim_{len(self.card['claims']) + 1}", "statement": statement,
                      "made_by": ADMIN_ID, "kind": "fact", "option_id": None, "checkable": True,
-                     "check_type": "other", "status": "unchallenged", "challenges": [],
+                     "check_type": "other", "status": "unchallenged", "revision": 0, "challenges": [],
                      "verification": {"status": "not_checked", "check_ids": []},
                      "source_message_ids": [source_message["id"]] if source_message else [],
                      "history": [{"event": "added_by_admin", **origin}]}
@@ -227,9 +270,12 @@ class PactSession:
     def _claim_text(claim: dict) -> str:
         return claim.get("corrected_to") or claim["statement"]
 
-    def _record_check(self, claim_id: str, result: dict, request_message: dict) -> dict:
+    def _record_check(self, claim_id: str, result: dict, request_message: dict, checked_revision: int) -> dict:
         """Write a check result: the check entry, its evidence, and the verdict on the claim. Caller holds the lock."""
+        claim = next(c for c in self.card["claims"] if c["id"] == claim_id)
+        stale = claim.get("revision", 0) != checked_revision or claim["status"] == "retracted"
         entry = {"id": f"check_{len(self.card['claim_checks']) + 1}", "claim_id": claim_id,
+                 "claim_revision": checked_revision, "stale": stale,
                  "requested_by": ADMIN_ID, "request_message_id": request_message["id"],
                  "requested_at": request_message.get("recorded_at"), "completed_at": now_iso(), **result}
         self.card["claim_checks"].append(entry)
@@ -237,6 +283,17 @@ class PactSession:
                                       "claim_id": claim_id, **ev} for i, ev in enumerate(result.get("evidence", [])))
         claim = next(c for c in self.card["claims"] if c["id"] == claim_id)
         check_ids = claim.get("verification", {}).get("check_ids", []) + [entry["id"]]
+        if stale:
+            # Preserve the historical report, but never endorse a newer statement with old evidence.
+            claim["verification"]["check_ids"] = check_ids
+            self.log("claim_check_stale", "Claim changed while research ran; result kept as history only.",
+                     claim_id=claim_id, check_id=entry["id"])
+            claim.setdefault("history", []).append({"event": "stale_check_completed", "check_id": entry["id"],
+                                                    "message_id": request_message["id"],
+                                                    "speaker_id": request_message["speaker_id"],
+                                                    "at": request_message.get("recorded_at")})
+            self.card["card_version"] += 1
+            return entry
         claim["verification"] = {"status": "checked", "verdict": result.get("verdict"),
                                  "summary": result.get("summary", ""), "as_of": result.get("as_of", ""),
                                  "checked_at": entry["completed_at"], "check_ids": check_ids}
@@ -255,28 +312,31 @@ class PactSession:
         if request_message is None:
             request_message = self.add_message(ADMIN_ID, "Pact, help us understand where this decision stands.",
                                                "explicit_request", observe=False)
+        # Interpret one immutable snapshot and save the version it describes.
+        card = self.snapshot()
         try:
-            result = self.llm.interpreter.interpret(self.card)
+            selection = self.llm.interpreter.interpret(card)
+            result = render_interpretation(card, selection)
         except Exception as exc:
-            self.log("help_error", type(exc).__name__, request_message_id=request_message["id"])
-            self.save()
+            with self.lock:
+                self.log("help_rejected" if isinstance(exc, ValueError) else "help_error", str(exc)[:300],
+                         request_message_id=request_message["id"])
+                self.save()
             raise
-        known = {item["id"] for section in SECTIONS for item in self.card[section]}
-        unknown = sorted(set(result.get("cited_ids", [])) - known)
-        if unknown:
-            self.log("help_rejected", f"Interpretation cited ids not on the card: {', '.join(unknown)}.",
-                     request_message_id=request_message["id"])
-            self.save()
-            raise ValueError("Pact's interpretation cited items that are not on the card; ask again.")
-        result = {**result, "open_items": result.get("open_items", [])[:MAX_OPEN_ITEMS]}
         result["summary"] = "\n".join([result["headline"], *(f"• {x}" for x in result["open_items"]),
                                        f"Next: {result['next_step']}"])
-        item = {"id": f"help_{len(self.card['facilitation']) + 1}", "requested_by": ADMIN_ID,
-                "request_message_id": request_message["id"], "requested_at": now_iso(),
-                "output": result, "status": "Pact interpretation"}
-        self.card["facilitation"].append(item)
-        self.log("help", "Pact help explicitly requested.", help_id=item["id"])
-        self.save()
+        with self.lock:
+            if card["card_version"] != self.card["card_version"]:
+                self.log("help_rejected", "Card changed during interpretation; ask again.",
+                         request_message_id=request_message["id"])
+                self.save()
+                raise ValueError("The card changed during interpretation; ask again.")
+            item = {"id": f"help_{len(self.card['facilitation']) + 1}", "requested_by": ADMIN_ID,
+                    "request_message_id": request_message["id"], "requested_at": now_iso(),
+                    "card_version": card["card_version"], "output": result, "status": "Pact interpretation"}
+            self.card["facilitation"].append(item)
+            self.log("help", "Pact help explicitly requested.", help_id=item["id"])
+            self.save()
         return item
 
     # ── 'pact, ...' commands route to check or interpret ────────────────────

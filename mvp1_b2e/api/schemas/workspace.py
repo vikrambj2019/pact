@@ -30,4 +30,4 @@ class QuestionConfirmation(BaseModel):
     scope: Optional[str] = None
     decision_owner_label: Optional[str] = None
     decision_rule: Optional[str] = None
-    expected_revision: int
+    expected_revision: int = Field(ge=0)

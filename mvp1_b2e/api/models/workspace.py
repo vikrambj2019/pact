@@ -24,7 +24,8 @@ class Workspace(UUIDMixin, TimestampMixin, Base):
         String(50), nullable=False, default=LifecycleStatus.draft
     )
     current_revision_id: Mapped[Optional[uuid.UUID]] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("brief_revisions.id", use_alter=True), nullable=True
+        UUID(as_uuid=True), ForeignKey("brief_revisions.id", use_alter=True,
+                                      name="fk_workspaces_current_revision"), nullable=True
     )
     decision_owner_label: Mapped[Optional[str]] = mapped_column(String(300), nullable=True)
     decision_rule: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -48,7 +49,7 @@ class BriefRevision(UUIDMixin, Base):
     )
     structured_snapshot: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     event_id: Mapped[Optional[uuid.UUID]] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("events.id", use_alter=True), nullable=True
+        UUID(as_uuid=True), ForeignKey("events.id"), nullable=True
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, nullable=False

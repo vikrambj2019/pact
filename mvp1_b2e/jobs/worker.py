@@ -2,7 +2,7 @@
 import asyncio
 import logging
 from datetime import datetime, timedelta, timezone
-from sqlalchemy import select, update
+from sqlalchemy import select, update, or_, and_
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from ..api.config import settings
 from ..api.models import Job, JobStatus, JobType
@@ -17,8 +17,11 @@ async def _claim_job(session: AsyncSession) -> Job | None:
     result = await session.execute(
         select(Job)
         .where(
-            Job.status == JobStatus.pending,
             Job.attempt_count < settings.max_job_attempts,
+            or_(
+                Job.status == JobStatus.pending,
+                and_(Job.status == JobStatus.running, Job.lease_until < now),
+            ),
         )
         .with_for_update(skip_locked=True)
         .limit(1)
@@ -34,13 +37,59 @@ async def _claim_job(session: AsyncSession) -> Job | None:
     return job
 
 
+async def _reap_exhausted_jobs(session: AsyncSession) -> int:
+    """Mark running jobs whose lease expired AND attempts are exhausted as failed.
+
+    These jobs cannot be reclaimed for retry, so they would otherwise stay
+    stuck in 'running' forever after a worker crash on the final attempt.
+    """
+    now = datetime.now(timezone.utc)
+    result = await session.execute(
+        select(Job)
+        .where(
+            Job.status == JobStatus.running,
+            Job.lease_until < now,
+            Job.attempt_count >= settings.max_job_attempts,
+        )
+        .with_for_update(skip_locked=True)
+    )
+    jobs = result.scalars().all()
+    for job in jobs:
+        logger.warning("Reaping exhausted job %s (type=%s, attempts=%d)", job.id, job.type, job.attempt_count)
+        job.status = JobStatus.failed
+        job.error_code = "LeaseExpiredExhausted"
+        job.error_detail = "Worker crashed on final attempt; lease expired without completion"
+        job.lease_until = None
+    if jobs:
+        await session.commit()
+    return len(jobs)
+
+
 async def _handle_parse_source(job: Job, session: AsyncSession) -> dict:
     from ..worker.parser import parse_source
     return await parse_source(job.input_payload, session)
 
 
+async def _handle_extract_brief(job: Job, session: AsyncSession) -> dict:
+    from ..worker.synthesizer import run_extract_brief
+    return await run_extract_brief(job.input_payload, session)
+
+
+async def _handle_synthesize_brief(job: Job, session: AsyncSession) -> dict:
+    from ..worker.synthesizer import run_synthesize_brief
+    return await run_synthesize_brief(job.input_payload, session)
+
+
+async def _handle_claim_review(job: Job, session: AsyncSession) -> dict:
+    from ..worker.reviewer import run_claim_review
+    return await run_claim_review(job.input_payload, session)
+
+
 HANDLERS = {
     JobType.parse_source: _handle_parse_source,
+    JobType.extract_brief: _handle_extract_brief,
+    JobType.synthesize_brief: _handle_synthesize_brief,
+    JobType.claim_review: _handle_claim_review,
 }
 
 
@@ -86,6 +135,8 @@ async def run_worker():
     logger.info("Worker started, polling every %ds", settings.job_poll_interval_seconds)
     while True:
         try:
+            async with factory() as session:
+                await _reap_exhausted_jobs(session)
             did_work = await process_one(factory)
             if not did_work:
                 await asyncio.sleep(settings.job_poll_interval_seconds)

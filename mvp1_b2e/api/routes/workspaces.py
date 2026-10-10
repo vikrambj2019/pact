@@ -9,6 +9,14 @@ from ..schemas.workspace import WorkspaceCreate, WorkspaceResponse, QuestionConf
 router = APIRouter(prefix="/workspaces", tags=["workspaces"])
 
 
+@router.get("", response_model=list[WorkspaceResponse])
+async def list_workspaces(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(
+        select(Workspace).order_by(Workspace.created_at.desc())
+    )
+    return result.scalars().all()
+
+
 @router.post("", response_model=WorkspaceResponse, status_code=201)
 async def create_workspace(body: WorkspaceCreate, db: AsyncSession = Depends(get_db)):
     ws = Workspace(

@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .db import engine
 from .models import Base
-from .routes import workspaces, sources, jobs
+from .routes import workspaces, sources, jobs, brief, deliberation, claims, decisions
 
 
 @asynccontextmanager
@@ -34,6 +34,10 @@ PREFIX = "/api/v1"
 app.include_router(workspaces.router, prefix=PREFIX)
 app.include_router(sources.router, prefix=PREFIX)
 app.include_router(jobs.router, prefix=PREFIX)
+app.include_router(brief.router, prefix=PREFIX)
+app.include_router(deliberation.router, prefix=PREFIX)
+app.include_router(claims.router, prefix=PREFIX)
+app.include_router(decisions.router, prefix=PREFIX)
 
 
 @app.get("/health")

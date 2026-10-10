@@ -1,5 +1,8 @@
 import uuid
+from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form
+from pydantic import BaseModel
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Optional
 from ..db import get_db
@@ -8,11 +11,36 @@ from ..models import Workspace, SourceDocument, SourceUnit, Job, ParseStatus, Jo
 from ..schemas.source import SourceUploadResponse, SourceUnitResponse
 from ..config import settings
 
+
+class SourceDocumentResponse(BaseModel):
+    id: uuid.UUID
+    workspace_id: uuid.UUID
+    type: str
+    original_filename: Optional[str]
+    parse_status: str
+    word_count: Optional[int]
+    warnings: list
+    created_at: datetime
+
+    model_config = {"from_attributes": True}
+
 router = APIRouter(tags=["sources"])
 
-ALLOWED_TYPES = {"text/plain", "text/markdown", "message/rfc822", "application/pdf"}
+
+@router.get("/workspaces/{workspace_id}/sources", response_model=list[SourceDocumentResponse])
+async def list_sources(workspace_id: uuid.UUID, db: AsyncSession = Depends(get_db)):
+    ws = await db.get(Workspace, workspace_id)
+    if not ws:
+        raise HTTPException(404, "Workspace not found")
+    result = await db.execute(
+        select(SourceDocument)
+        .where(SourceDocument.workspace_id == workspace_id)
+        .order_by(SourceDocument.created_at.asc())
+    )
+    return result.scalars().all()
+
 SUFFIX_MAP = {
-    ".txt": "txt", ".md": "markdown", ".eml": "email_chain", ".pdf": "pdf",
+    ".txt": "txt", ".md": "markdown", ".eml": "email_chain",
 }
 
 
@@ -36,8 +64,12 @@ async def upload_source(
         if len(data) > settings.max_upload_bytes:
             raise HTTPException(422, f"File exceeds {settings.max_upload_bytes} byte limit")
         filename = file.filename or "upload"
-        suffix = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
-        doc_type = SUFFIX_MAP.get(suffix, "txt")
+        suffix = ("." + filename.rsplit(".", 1)[-1].lower()) if "." in filename else ""
+        if suffix == ".pdf":
+            raise HTTPException(422, "PDF parsing is not yet supported. Convert to plain text and upload as .txt")
+        if suffix not in SUFFIX_MAP:
+            raise HTTPException(422, f"Unsupported file type '{suffix}'. Accepted: .txt .md .eml")
+        doc_type = SUFFIX_MAP[suffix]
         storage_key, content_hash = await storage.put(data, suffix=suffix)
     else:
         data = pasted_text.encode()

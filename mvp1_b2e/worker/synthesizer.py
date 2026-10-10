@@ -194,6 +194,217 @@ _BRIEF_SECTIONS = ("criteria", "constraints", "options", "claims",
                    "positions", "objections", "blockers", "separate_issues", "actions")
 
 
+# ---------------------------------------------------------------------------
+# Exec summary — verifier pass
+# ---------------------------------------------------------------------------
+
+_BANNED_WORDS = [
+    "consensus", "agreed", "decided", "leans",
+    "converging", "converged", "effectively", "eliminated",
+]
+
+_BANNED_PLACEHOLDERS = ["(source)", "(cite)", "(id)", "[source]"]
+
+
+def _check_banned_words(text: str) -> list[str]:
+    lower = text.lower()
+    found = [w for w in _BANNED_WORDS if w in lower]
+    found += [p for p in _BANNED_PLACEHOLDERS if p.lower() in lower]
+    return found
+
+
+def _sanitize_emerging_preference(brief_body: dict) -> None:
+    """Clear emerging_preference if its summary contains banned inference words."""
+    ep = brief_body.get("emerging_preference")
+    if not ep or not isinstance(ep, dict):
+        return
+    if _check_banned_words(ep.get("summary", "")):
+        brief_body["emerging_preference"] = None
+
+
+_VERIFIER_SYSTEM = """\
+You are the summary step of Pact, a facilitator for group decisions.
+Produce a structured executive summary from the Decision State.
+
+FIELD RULES
+- title: the decision question. Append "(inferred)" if the question basis is inferred.
+- status: counts only — options, explicit support, open objections, blockers, unowned actions.
+  Compute from the state; do not estimate.
+- needs_attention: at most 5 items. Rank: open objections, blockers, unowned actions, disputed claims.
+- proposed: each option with proposer and exact support level. Write "explicit support from A",
+  "acknowledged by B", "opposed by C". Never merge acknowledged into supported.
+- committed: actions with a named owner. Include due date if stated.
+- unverified_claims: claims with evidence_status unverified, disputed, or subjective.
+- preference: print emerging_preference summary verbatim if not null, else
+  "No directional preference recorded."
+
+REQUIRED FOR EVERY ITEM in needs_attention, proposed, committed, unverified_claims:
+  verbatim_quote  — exact consecutive words copied from the source message, MAX 15 WORDS.
+                    Do NOT paraphrase, summarize, or alter even one word.
+  source_unit_id  — the id of the source unit that contains that exact quote.
+
+If you cannot find an exact quote in the source for an item, OMIT THAT ITEM ENTIRELY.
+Never invent a quote. Never use placeholder ids.
+
+BANNED WORDS (never use): consensus, agreed, decided, leans, converging, converged,
+  effectively, eliminated.
+BANNED PLACEHOLDERS (never use): (source), (cite), (id), [source].
+"""
+
+
+def _cited_item_schema() -> dict:
+    return {
+        "type": "object",
+        "required": ["text", "verbatim_quote", "source_unit_id"],
+        "properties": {
+            "text": {"type": "string"},
+            "verbatim_quote": {
+                "type": "string",
+                "description": "Exact consecutive words from the cited source unit, max 15 words",
+            },
+            "source_unit_id": {"type": "string"},
+        },
+    }
+
+
+_VERIFIER_TOOL = {
+    "name": "produce_exec_summary",
+    "description": "Produce a structured executive summary with verbatim quotes per item.",
+    "input_schema": {
+        "type": "object",
+        "required": ["title", "status", "needs_attention", "proposed",
+                     "committed", "unverified_claims", "preference"],
+        "properties": {
+            "title": {"type": "string"},
+            "status": {"type": "string"},
+            "needs_attention": {"type": "array", "items": _cited_item_schema()},
+            "proposed": {"type": "array", "items": _cited_item_schema()},
+            "committed": {"type": "array", "items": _cited_item_schema()},
+            "unverified_claims": {"type": "array", "items": _cited_item_schema()},
+            "preference": {"type": "string"},
+        },
+    },
+}
+
+_VERIFIABLE_SECTIONS = ("needs_attention", "proposed", "committed", "unverified_claims")
+
+
+def _verify_items(
+    items: list[dict], unit_text_map: dict[str, str]
+) -> tuple[list[dict], list[dict]]:
+    """Return (verified, rejected).
+
+    An item passes if its verbatim_quote is a case-insensitive substring
+    of the cited source unit's normalized_text.
+    """
+    verified, rejected = [], []
+    for item in items:
+        quote = item.get("verbatim_quote", "").strip()
+        uid = item.get("source_unit_id", "")
+        source_text = unit_text_map.get(uid, "")
+        if quote and source_text and quote.lower() in source_text.lower():
+            verified.append(item)
+        else:
+            rejected.append(item)
+    return verified, rejected
+
+
+def _render_verified_summary(summary: dict) -> str:
+    """Render a verified summary dict to the plain-text format used by BriefTab."""
+    lines: list[str] = []
+    lines.append(summary.get("title", ""))
+    lines.append("")
+    lines.append(summary.get("status", ""))
+
+    section_headings = {
+        "needs_attention": "NEEDS ATTENTION",
+        "proposed": "PROPOSED",
+        "committed": "COMMITTED",
+        "unverified_claims": "UNVERIFIED",
+    }
+    for key, heading in section_headings.items():
+        items = summary.get(key, [])
+        if not items:
+            continue
+        lines.append("")
+        lines.append(heading)
+        for item in items:
+            uid = item.get("source_unit_id", "")
+            ref = f" [m{uid[:6]}]" if uid else ""
+            lines.append(f"· {item['text']}{ref}")
+
+    pref = (summary.get("preference") or "").strip()
+    if pref:
+        lines.append("")
+        lines.append("PREFERENCE")
+        lines.append(pref)
+
+    return "\n".join(lines)
+
+
+async def _generate_exec_summary(
+    brief_body: dict, llm, unit_text_map: dict[str, str]
+) -> str:
+    state = {k: brief_body.get(k) for k in (
+        "question", "options", "criteria", "constraints", "claims",
+        "positions", "objections", "blockers", "separate_issues",
+        "actions", "emerging_preference",
+    )}
+
+    # Collect only the source unit ids referenced anywhere in the brief so we
+    # don't bloat the prompt with irrelevant units.
+    referenced_ids: set[str] = set()
+    for section in _BRIEF_SECTIONS:
+        for item in brief_body.get(section, []):
+            referenced_ids.update(item.get("source_unit_ids", []))
+
+    source_lines = "\n".join(
+        f"{uid}: {unit_text_map[uid]}"
+        for uid in sorted(referenced_ids)
+        if uid in unit_text_map
+    )
+    source_block = f"\nSource Messages (id: text):\n{source_lines}\n" if source_lines else ""
+
+    user_base = f"Decision State:\n{json.dumps(state, indent=2)}{source_block}"
+    user = user_base
+
+    rendered = ""
+    for _attempt in range(2):
+        summary = await llm.extract(_VERIFIER_SYSTEM, user, _VERIFIER_TOOL, timeout=60)
+
+        # Verifier pass: strip any item whose quote isn't in its cited source
+        all_rejected: list[dict] = []
+        for section in _VERIFIABLE_SECTIONS:
+            verified, rejected = _verify_items(summary.get(section, []), unit_text_map)
+            summary[section] = verified
+            all_rejected.extend(rejected)
+
+        rendered = _render_verified_summary(summary)
+        violations = _check_banned_words(rendered)
+
+        if not all_rejected and not violations:
+            return rendered
+
+        # Build retry feedback
+        feedback: list[str] = []
+        if all_rejected:
+            bad = [
+                f"'{r.get('verbatim_quote', '')}' (cited unit {r.get('source_unit_id', '')})"
+                for r in all_rejected
+            ]
+            feedback.append(
+                f"These quotes could not be found verbatim in their cited source units "
+                f"and were removed: {bad}. Only include items whose exact words appear in the source."
+            )
+        if violations:
+            feedback.append(
+                f"Banned words or placeholders found: {violations}. Rewrite without them."
+            )
+        user = user_base + "\n\n" + " ".join(feedback)
+
+    return rendered
+
+
 def _assign_server_ids(brief_body: dict) -> dict:
     """Replace any LLM-generated IDs with server-assigned UUIDs.
 
@@ -265,14 +476,18 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
     workspace = await session.get(Workspace, workspace_id)
     if workspace is None:
         raise ValueError(f"Workspace {workspace_id} not found")
-    if not workspace.primary_question:
-        raise ValueError("Primary question not confirmed — call /question-confirmation first")
 
     extract_job = await session.get(Job, extract_job_id)
     if extract_job is None or extract_job.status != JobStatus.done:
         raise ValueError(f"extract_brief job {extract_job_id} is not done")
 
     merged = extract_job.output_payload.get("merged_draft", {})
+
+    # Use confirmed question if set, otherwise fall back to top extracted candidate
+    primary_question = workspace.primary_question
+    if not primary_question:
+        candidates = merged.get("candidate_questions", [])
+        primary_question = candidates[0]["text"] if candidates else None
 
     # Build user prompt from merged candidates
     candidates_json = json.dumps({
@@ -281,8 +496,9 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
                   "positions", "objections", "blockers", "separate_issues", "actions")
     }, indent=2)
 
+    question_line = f"Decision question: {primary_question}" if primary_question else "Decision question: not specified"
     user = (
-        f"Confirmed decision question: {workspace.primary_question}\n"
+        f"{question_line}\n"
         f"Scope: {workspace.scope or 'Not specified'}\n\n"
         f"Extracted candidates from the full discussion:\n{candidates_json}\n\n"
         "Synthesize a structured decision brief."
@@ -297,11 +513,27 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
     # Validate and strip any source_unit_ids that don't belong to this workspace
     ref_warnings = await _validate_source_refs(brief_body, workspace_id, session)
 
-    # Add the confirmed question metadata
+    # Add the question metadata
     brief_body["question"] = {
-        "text": workspace.primary_question,
+        "text": primary_question,
         "scope": workspace.scope,
     }
+
+    # Sanitize emerging_preference before summary (banned words in that field
+    # would be copied verbatim into the exec summary per the prompt rules)
+    _sanitize_emerging_preference(brief_body)
+
+    # Build unit_text_map for the verifier pass (unit_id -> normalized_text)
+    units_result = await session.execute(
+        select(SourceUnit.id, SourceUnit.normalized_text)
+        .where(SourceUnit.workspace_id == workspace_id)
+    )
+    unit_text_map = {str(row.id): (row.normalized_text or "") for row in units_result}
+
+    # Generate exec summary — verifier pass strips items with unverifiable quotes
+    brief_body["executive_summary"] = await _generate_exec_summary(
+        brief_body, llm, unit_text_map
+    )
 
     # Re-acquire workspace lock after the LLM call so current_revision_id is fresh.
     # Without this, a concurrent accept/review that committed between the initial

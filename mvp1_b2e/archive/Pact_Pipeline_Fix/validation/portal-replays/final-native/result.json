@@ -1,0 +1,963 @@
+{
+  "mode": "deterministic replay of live extraction",
+  "input": "validation/portal-final-native/run-1.json",
+  "model": "claude-sonnet-5",
+  "score": {
+    "passed": 25,
+    "total": 25,
+    "checks": {
+      "teams_messages_and_authors": true,
+      "three_options": true,
+      "january_dropped": true,
+      "otp_fallback": true,
+      "explicit_A_supporters": true,
+      "elena_conditional": true,
+      "priya_proposer": true,
+      "hal_not_option_vote": true,
+      "dpa_open": true,
+      "review_open": true,
+      "finding_open": true,
+      "exact_open_gate_counts": true,
+      "funding_objection_open": true,
+      "recovery_objection_open": true,
+      "exact_unowned_action_count": true,
+      "checkpoint_unowned": true,
+      "funding_ask_unowned": true,
+      "commitment_Marcus": true,
+      "commitment_Rosa": true,
+      "commitment_Elena": true,
+      "commitment_Dev": true,
+      "revised_B_cost_visible": true,
+      "disputed_effort_visible": true,
+      "stale_arrival_hidden": true,
+      "citation_integrity": true
+    },
+    "failed": []
+  },
+  "brief": {
+    "criteria": [
+      {
+        "text": "Cost relative to $180k launch envelope",
+        "source_unit_ids": [
+          "fixture-007"
+        ],
+        "quote": "the launch envelope is $180k all in. we're at about $150k committed",
+        "name": "Cost relative to $180k launch envelope",
+        "id": "cbe5c314-972a-4d9e-a1c7-8d11e881ec80"
+      },
+      {
+        "text": "Security/account recovery completeness",
+        "source_unit_ids": [
+          "fixture-015"
+        ],
+        "quote": "absolutely not skipping recovery. that's how accounts get taken over",
+        "name": "Security/account recovery completeness",
+        "id": "9d77013c-3285-4fc8-a142-18b54466364f"
+      },
+      {
+        "text": "Timeline relative to Nov 16 target and Dec 15 change freeze",
+        "source_unit_ids": [
+          "fixture-019"
+        ],
+        "quote": "exec team wants this live before the Dec 15 change freeze. January is a non-starter.",
+        "name": "Timeline relative to Nov 16 target and Dec 15 change freeze",
+        "id": "98fc35dc-f56e-4c27-b91b-f3350f13991d"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Cannot go live with member data flowing to Acme without signed DPA",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-006"
+        ],
+        "quote": "not blocked, but we can't go live with member data flowing to them without it signed",
+        "id": "b316d671-7c5f-4737-bec6-8ded4f2b203a"
+      },
+      {
+        "text": "Launch envelope is $180k all in",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-007"
+        ],
+        "quote": "the launch envelope is $180k all in. we're at about $150k committed",
+        "id": "6a22f234-8c41-4562-aa3d-d1156cb87329"
+      },
+      {
+        "text": "Account recovery flows must not be skipped",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-015"
+        ],
+        "quote": "absolutely not skipping recovery. that's how accounts get taken over",
+        "id": "77aaab85-dde0-4b5b-b7cc-1990353da524"
+      },
+      {
+        "text": "Launch must occur before Dec 15 change freeze",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-019"
+        ],
+        "quote": "exec team wants this live before the Dec 15 change freeze. January is a non-starter.",
+        "id": "47a3b7f1-efcf-49e2-951d-e48fef18873d"
+      },
+      {
+        "text": "Launch requires security sign-off and signed DPA in addition to code complete",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-032"
+        ],
+        "quote": "launch also needs security sign-off and the DPA",
+        "id": "758001ed-6b37-4d70-a404-11d7ae4d721a"
+      },
+      {
+        "text": "Security finding #3 must be closed before any launch, whichever vendor",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-034"
+        ],
+        "quote": "One open finding on the existing auth service has to be closed before any launch, whichever vendor.",
+        "id": "eba9ad24-155d-4ef0-a538-a96acb904853"
+      },
+      {
+        "text": "Elena will not sign off without SOC 2 report in writing",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-051"
+        ],
+        "quote": "as long as I see the SOC 2 report in writing before I sign off. I won't sign off on a rep's word",
+        "id": "5aa484d6-815c-46ff-a777-f842e97bec3c"
+      },
+      {
+        "text": "Jon cannot approve option B at $215k without escalation to Hal",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-052"
+        ],
+        "quote": "I can't approve B at $215k. if we end up there someone has to take that to Hal",
+        "id": "63fa959e-3ff0-43a2-b622-608238d0826c"
+      },
+      {
+        "text": "If B needs money, the ask must be sent to Hal by Oct 30",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-059"
+        ],
+        "quote": "if B needs money, send me the ask by Oct 30",
+        "id": "0a6df5ca-bcab-42fa-96af-d2b75be03dd3"
+      },
+      {
+        "text": "$180k cap is the budget for option A",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-061"
+        ],
+        "quote": "I want the $180k cap noted as the budget for A",
+        "private": false,
+        "id": "b4180e0f-6ac1-426b-a4a0-70fca4ba803a"
+      },
+      {
+        "text": "Option B at $215k requires Hal's approval before it can proceed",
+        "kind": "mandatory",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-052",
+          "fixture-053"
+        ],
+        "quote": "I can't approve B at $215k. if we end up there someone has to take that to Hal",
+        "id": "99efe848-12d6-4649-bf7a-7073364d8baf"
+      },
+      {
+        "text": "Won't sign off on SOC 2 compliance based on a rep's word, needs it in writing",
+        "author_label": "Elena Ruiz",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-051"
+        ],
+        "quote": "A is fine for me, as long as I see the SOC 2 report in writing before I sign off. I won't sign off on a rep's word",
+        "option_ids": [
+          "a11fef23-9aa7-4c20-b0ad-2b88ec589392"
+        ],
+        "option_titles": [
+          "Nov 16 with Acme as planned"
+        ],
+        "kind": "mandatory",
+        "id": "b4822036-43f3-4dca-a0c6-6788a7dc8664"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "A",
+        "title": "Nov 16 with Acme as planned",
+        "decision": "launch plan",
+        "status": "active",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-048"
+        ],
+        "quote": "Proposal: go with A. Nov 16 launch with Acme.",
+        "description": "",
+        "id": "4680adc9-183b-478e-97dc-8856674222f6"
+      },
+      {
+        "temp_id": "B",
+        "title": "Nov 16 with our own email OTP verification, switch to Acme later",
+        "decision": "launch plan",
+        "status": "fallback",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-053"
+        ],
+        "quote": "noted. so B is a fallback pending Hal's approval",
+        "description": "",
+        "id": "8b816710-2cb6-4ef4-a4a6-2f6817879c64"
+      },
+      {
+        "temp_id": "C",
+        "title": "Slip to January",
+        "decision": "launch plan",
+        "status": "dropped",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-020"
+        ],
+        "quote": "Understood, so C is out",
+        "description": "",
+        "id": "ea086d8f-dedd-442a-9f2d-7ce51d79e204"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Acme IDV integration is done in staging",
+        "kind": "factual",
+        "author_label": "Marcus Webb",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-001"
+        ],
+        "quote": "Acme IDV integration is done in staging.",
+        "id": "dbb52e61-35f6-42b0-99d6-967dbe0e7fe4"
+      },
+      {
+        "text": "Acme's SOC 2 Type II report rep said Oct 23, not yet received in writing",
+        "kind": "factual",
+        "author_label": "Elena Ruiz",
+        "evidence_status": "superseded",
+        "source_unit_ids": [
+          "fixture-003"
+        ],
+        "quote": "Their rep told me Oct 23. I haven't seen that in writing.",
+        "id": "3048ff56-73eb-4383-9941-50f3bab15afb"
+      },
+      {
+        "text": "Cannot go live with member data flowing to Acme without signed DPA",
+        "kind": "constraint",
+        "author_label": "Rosa Alvarez",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-006"
+        ],
+        "quote": "not blocked, but we can't go live with member data flowing to them without it signed",
+        "id": "299d15af-1923-4f37-a72c-8c5f3ffa742b"
+      },
+      {
+        "text": "Launch envelope is $180k all in, currently ~$150k committed",
+        "kind": "factual",
+        "author_label": "Jon Becker",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-007"
+        ],
+        "quote": "the launch envelope is $180k all in. we're at about $150k committed",
+        "id": "344fdff7-df85-4a24-a2cc-1af45b8383cb"
+      },
+      {
+        "text": "Data pipeline run costs are not part of launch budget, they're in ops budget",
+        "kind": "factual",
+        "author_label": "Jon Becker",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-009"
+        ],
+        "quote": "no, those are in ops budget",
+        "id": "41974781-1f94-40b5-a47e-4f6750065eb0"
+      },
+      {
+        "text": "Option B is about 3 weeks of work for Marcus's team",
+        "kind": "predictive",
+        "author_label": "Marcus Webb",
+        "evidence_status": "conflicting",
+        "source_unit_ids": [
+          "fixture-012"
+        ],
+        "quote": "B is about 3 weeks of work for my team",
+        "id": "068f2b65-5bde-42cd-81e4-c7b525f0595f"
+      },
+      {
+        "text": "Option B is more like 5 weeks once account recovery flows are built",
+        "kind": "predictive",
+        "author_label": "Dev Patel",
+        "evidence_status": "conflicting",
+        "source_unit_ids": [
+          "fixture-013"
+        ],
+        "quote": "3 weeks? more like 5 once you build the account recovery flows",
+        "id": "81d9ac60-aff9-4332-866f-dbf2d486f7c4"
+      },
+      {
+        "text": "Option B would skip recovery flows for v1",
+        "kind": "other",
+        "author_label": "Marcus Webb",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-014"
+        ],
+        "quote": "we'd skip recovery for v1",
+        "id": "317fa64b-143a-4e4c-afd7-453dd2fe04e6"
+      },
+      {
+        "text": "Skipping recovery flows risks account takeover",
+        "kind": "causal",
+        "author_label": "Elena Ruiz",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-015"
+        ],
+        "quote": "absolutely not skipping recovery. that's how accounts get taken over",
+        "id": "1c616d98-2e6c-439f-8719-1e6e5d81acb4"
+      },
+      {
+        "text": "Option B costs an extra $40k to build",
+        "kind": "predictive",
+        "author_label": "Jon Becker",
+        "evidence_status": "superseded",
+        "source_unit_ids": [
+          "fixture-016"
+        ],
+        "quote": "B also costs more. I'd guess $40k for the extra build",
+        "id": "86fde091-2804-426e-9fd5-5dc28f600ab9"
+      },
+      {
+        "text": "150 + 40 = 190, so the $40k is not inside the $180k budget",
+        "kind": "factual",
+        "author_label": "Jon Becker",
+        "evidence_status": "superseded",
+        "source_unit_ids": [
+          "fixture-018"
+        ],
+        "quote": "150 + 40 = 190, so no",
+        "id": "2792ef50-2476-4cd1-b43e-00e38549d978"
+      },
+      {
+        "text": "Exec team wants launch live before Dec 15 change freeze",
+        "kind": "constraint",
+        "author_label": "Hal Okonkwo",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-019",
+          "fixture-059"
+        ],
+        "quote": "I'll back whichever you pick as long as it's live before the freeze.",
+        "id": "5522c1a0-d6be-46ad-a8d3-1ff9f1c7503b"
+      },
+      {
+        "text": "Option B cost corrected to ~$65k, not $40k, due to recovery flows",
+        "kind": "factual",
+        "author_label": "Jon Becker",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-024"
+        ],
+        "quote": "correction on B. I was rough. closer to $65k, not $40k. recovery flows add a lot",
+        "id": "a16c877d-eccd-4176-9769-5af2d0f7d846"
+      },
+      {
+        "text": "Option B would put total at $215k, over budget by $35k",
+        "kind": "factual",
+        "author_label": "Jon Becker",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-026"
+        ],
+        "quote": "yes. over by $35k",
+        "id": "1fd76c78-6de0-4847-8033-5d6dce0f4623"
+      },
+      {
+        "text": "Launch needs security sign-off and the DPA in addition to code complete by Nov 6",
+        "kind": "constraint",
+        "author_label": "Marcus Webb",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-032"
+        ],
+        "quote": "No. I said code complete by Nov 6. launch also needs security sign-off and the DPA",
+        "id": "e9e14453-133b-4b09-bf5f-c719de9fca9d"
+      },
+      {
+        "text": "Pen test found one open finding (#3) on the existing auth service that must be closed before any launch, regardless of vendor",
+        "kind": "constraint",
+        "author_label": "Elena Ruiz",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-034"
+        ],
+        "quote": "One open finding on the existing auth service has to be closed before any launch, whichever vendor.",
+        "id": "08157ea9-54f8-4c94-beee-6970e26605dc"
+      },
+      {
+        "text": "Closing finding #3 by Nov 6 is possible if Dev's team prioritizes the token fix",
+        "kind": "predictive",
+        "author_label": "Elena Ruiz",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-036"
+        ],
+        "quote": "I think so if Dev's team prioritizes the token fix",
+        "id": "82884cab-22f0-4f73-a775-7b9dd5ed2eec"
+      },
+      {
+        "text": "Fixing the token issue is a week of work",
+        "kind": "predictive",
+        "author_label": "Dev Patel",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-037"
+        ],
+        "quote": "that's a week of work. I can start tomorrow",
+        "id": "bbd2128b-b9a1-4b65-ae87-1c21c5c014f7"
+      },
+      {
+        "text": "Cannot approve option B at $215k; would need to go to Hal for approval",
+        "kind": "constraint",
+        "author_label": "Jon Becker",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "fixture-052"
+        ],
+        "quote": "I can't approve B at $215k. if we end up there someone has to take that to Hal",
+        "id": "a740251a-6889-4b80-8749-2cc4ed647fa4"
+      },
+      {
+        "text": "Acme sent the SOC 2 Type II report earlier than expected",
+        "kind": "factual",
+        "author_label": "Elena Ruiz",
+        "source_unit_ids": [
+          "fixture-063"
+        ],
+        "quote": "Acme sent the SOC 2 Type II report today, earlier than expected.",
+        "evidence_status": "unverified",
+        "id": "b862987f-c285-4da7-9304-a24d22f04ca3"
+      },
+      {
+        "text": "One clause on the DPA, data retention, is still open with Acme's counsel",
+        "kind": "factual",
+        "author_label": "Rosa Alvarez",
+        "source_unit_ids": [
+          "fixture-064"
+        ],
+        "quote": "One clause still open, data retention.",
+        "evidence_status": "unverified",
+        "id": "eb127509-8af6-4904-91e3-8c06f790ecd4"
+      },
+      {
+        "text": "Token fix started Wednesday and is on track",
+        "kind": "factual",
+        "author_label": "Dev Patel",
+        "source_unit_ids": [
+          "fixture-065"
+        ],
+        "quote": "token fix started Wednesday, on track",
+        "evidence_status": "unverified",
+        "id": "3c71a09c-7720-4b85-a7e9-2c4fe4a2caf1"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Priya Nair",
+        "decision": "launch plan",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-048"
+        ],
+        "quote": "A) Nov 16 with Acme as planned.",
+        "proposer": true,
+        "first_unit_sequence": 11,
+        "option_id": "4680adc9-183b-478e-97dc-8856674222f6",
+        "id": "712ed7b0-98d6-43ac-9f39-2361d169e4f6"
+      },
+      {
+        "participant_label": "Priya Nair",
+        "decision": "launch plan",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "fixture-011"
+        ],
+        "quote": "B) Nov 16 with our own email OTP verification, switch to Acme later.",
+        "proposer": true,
+        "first_unit_sequence": 11,
+        "option_id": "8b816710-2cb6-4ef4-a4a6-2f6817879c64",
+        "id": "a6aeb487-8527-4807-8916-2e1f46170dd1"
+      },
+      {
+        "participant_label": "Priya Nair",
+        "decision": "launch plan",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-020"
+        ],
+        "quote": "Understood, so C is out",
+        "proposer": false,
+        "first_unit_sequence": 20,
+        "option_id": "ea086d8f-dedd-442a-9f2d-7ce51d79e204",
+        "id": "215c884e-0615-4826-b10d-eae3c33c67e2"
+      },
+      {
+        "participant_label": "Marcus Webb",
+        "decision": "launch plan",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-021"
+        ],
+        "quote": "+1",
+        "proposer": false,
+        "first_unit_sequence": 21,
+        "option_id": "ea086d8f-dedd-442a-9f2d-7ce51d79e204",
+        "id": "1cb08700-8ada-4714-8d96-d2358b462767"
+      },
+      {
+        "participant_label": "Elena Ruiz",
+        "decision": "launch plan",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-022"
+        ],
+        "quote": "fine with dropping C",
+        "proposer": false,
+        "first_unit_sequence": 22,
+        "option_id": "ea086d8f-dedd-442a-9f2d-7ce51d79e204",
+        "id": "cc535485-4f26-4c6c-83ed-c56b16da08c6"
+      },
+      {
+        "participant_label": "Rosa Alvarez",
+        "decision": "launch plan",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-023"
+        ],
+        "quote": "me too",
+        "proposer": false,
+        "first_unit_sequence": 23,
+        "option_id": "ea086d8f-dedd-442a-9f2d-7ce51d79e204",
+        "id": "0772f06a-f726-4dc9-9e4d-025f0fc2cabc"
+      },
+      {
+        "participant_label": "Jon Becker",
+        "decision": "launch plan",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-052"
+        ],
+        "quote": "I can't approve B at $215k. if we end up there someone has to take that to Hal",
+        "proposer": false,
+        "first_unit_sequence": 52,
+        "option_id": "8b816710-2cb6-4ef4-a4a6-2f6817879c64",
+        "id": "46297b63-61e4-480c-8fbf-a82eb4b78b70"
+      },
+      {
+        "participant_label": "Dev Patel",
+        "decision": "launch plan",
+        "stance": "acknowledged",
+        "source_unit_ids": [
+          "fixture-054"
+        ],
+        "quote": "fine",
+        "proposer": false,
+        "first_unit_sequence": 54,
+        "option_id": "4680adc9-183b-478e-97dc-8856674222f6",
+        "id": "d827091b-a33e-452a-b181-bdccc820159a"
+      },
+      {
+        "participant_label": "Marcus Webb",
+        "decision": "launch plan",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-049",
+          "fixture-056"
+        ],
+        "quote": "confirmed",
+        "proposer": false,
+        "first_unit_sequence": 56,
+        "option_id": "4680adc9-183b-478e-97dc-8856674222f6",
+        "id": "9e4fb3bc-4001-43f6-b2f0-5ebbd7cee910"
+      },
+      {
+        "participant_label": "Rosa Alvarez",
+        "decision": "launch plan",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-050",
+          "fixture-057"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 57,
+        "option_id": "4680adc9-183b-478e-97dc-8856674222f6",
+        "id": "07e1eeda-1f9e-4984-aa46-c76ea25a4686"
+      },
+      {
+        "participant_label": "Elena Ruiz",
+        "decision": "launch plan",
+        "stance": "conditional",
+        "conditions": "as long as I see the SOC 2 report in writing before I sign off",
+        "source_unit_ids": [
+          "fixture-051",
+          "fixture-058"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 58,
+        "option_id": "4680adc9-183b-478e-97dc-8856674222f6",
+        "id": "e0bc5527-da50-42e0-95a0-eb81a7a35576"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Skipping account recovery flows for v1 is unacceptable",
+        "author_label": "Elena Ruiz",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-015"
+        ],
+        "quote": "absolutely not skipping recovery. that's how accounts get taken over",
+        "option_ids": [
+          "8b816710-2cb6-4ef4-a4a6-2f6817879c64"
+        ],
+        "id": "ca954c99-f247-4197-a685-11e679379c09"
+      },
+      {
+        "text": "Cannot approve option B's budget without Hal's sign-off",
+        "author_label": "Jon Becker",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-052"
+        ],
+        "quote": "I can't approve B at $215k. if we end up there someone has to take that to Hal",
+        "option_ids": [
+          "8b816710-2cb6-4ef4-a4a6-2f6817879c64"
+        ],
+        "id": "fa384951-a678-4d97-9ae6-535c57c60598"
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Acme SOC 2 Type II report not yet received in writing",
+        "kind": "missing_info",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "fixture-003",
+          "fixture-051",
+          "fixture-063"
+        ],
+        "quote": "Acme sent the SOC 2 Type II report today, earlier than expected.",
+        "id": "8356cbcf-eff6-48cc-ba1e-11904d26773d"
+      },
+      {
+        "text": "DPA with Acme not signed",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-004",
+          "fixture-050",
+          "fixture-064"
+        ],
+        "quote": "One clause still open, data retention. I'll know more Monday.",
+        "id": "4687700f-07d1-402c-a10c-6ae103c63451"
+      },
+      {
+        "text": "Security finding #3 on existing auth service must be closed before launch",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-034",
+          "fixture-035",
+          "fixture-036"
+        ],
+        "quote": "One open finding on the existing auth service has to be closed before any launch, whichever vendor.",
+        "id": "4de87337-d927-49b2-928a-3778a751bb29"
+      },
+      {
+        "text": "Review remains pending: Obtain and review Acme SOC 2 Type II report in writing before sign-off",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-051",
+          "fixture-055",
+          "fixture-058",
+          "fixture-063"
+        ],
+        "quote": "I'll finish the review by Oct 14.",
+        "derived": true,
+        "id": "d02fd8a3-1655-443d-8363-17bdca3e31bf"
+      }
+    ],
+    "separate_issues": [
+      {
+        "title": "Figma link for onboarding screens",
+        "rationale": "Unrelated design asset lookup, not part of the launch decision.",
+        "source_unit_ids": [
+          "fixture-027",
+          "fixture-028"
+        ],
+        "id": "e9184c41-03f6-4eb5-a9cb-da375bae5fb3"
+      },
+      {
+        "title": "On-call coverage for Thursday",
+        "rationale": "Unrelated staffing logistics, not part of the launch decision.",
+        "source_unit_ids": [
+          "fixture-029",
+          "fixture-030"
+        ],
+        "id": "25f74221-2f89-43b4-abd2-ca1fc9dfb953"
+      },
+      {
+        "title": "All-hands meeting day change",
+        "rationale": "Off-topic scheduling question explicitly flagged as off topic.",
+        "source_unit_ids": [
+          "fixture-045",
+          "fixture-046",
+          "fixture-047"
+        ],
+        "id": "c73a4a70-1073-4bd3-ba01-b5cbf8030409"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Code complete for the portal",
+        "owner_kind": "named",
+        "owner_label": "Marcus Webb",
+        "due": "Nov 6",
+        "source_unit_ids": [
+          "fixture-001",
+          "fixture-032",
+          "fixture-055",
+          "fixture-056"
+        ],
+        "quote": "confirmed",
+        "status": "committed",
+        "id": "00219ba1-e2ef-4651-a069-4e35731f41b4"
+      },
+      {
+        "text": "Close security finding #3 (token fix)",
+        "owner_kind": "named",
+        "owner_label": "Dev Patel",
+        "due": "",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-037",
+          "fixture-039"
+        ],
+        "quote": "that's a week of work. I can start tomorrow",
+        "unaccepted_requests": [
+          {
+            "due": "",
+            "quote": "Dev on fix #3",
+            "source_unit_ids": [
+              "fixture-055"
+            ]
+          }
+        ],
+        "id": "cc31c69d-73a6-42e6-9de3-14f4dd01d8c5"
+      },
+      {
+        "text": "Chase the DPA",
+        "owner_kind": "named",
+        "owner_label": "Rosa Alvarez",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-050",
+          "fixture-055",
+          "fixture-057"
+        ],
+        "quote": "I'll chase the DPA. I'm out on leave from Oct 20 so I need it signed before then.",
+        "private": false,
+        "due": "before Oct 20",
+        "sensitive": true,
+        "id": "3ecaaaf7-dc00-44ff-be1d-f6067ed54362"
+      },
+      {
+        "text": "Obtain and review Acme SOC 2 Type II report in writing before sign-off",
+        "owner_kind": "named",
+        "owner_label": "Elena Ruiz",
+        "due": "by Oct 14",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-051",
+          "fixture-055",
+          "fixture-058",
+          "fixture-063"
+        ],
+        "quote": "I'll finish the review by Oct 14.",
+        "id": "5e897797-c707-4ba9-b0e4-20278f4f3fa0"
+      },
+      {
+        "text": "Send budget ask to Hal if option B needs money",
+        "owner_kind": "unassigned",
+        "due": "by Oct 30",
+        "status": "requested",
+        "source_unit_ids": [
+          "fixture-059"
+        ],
+        "quote": "if B needs money, send me the ask by Oct 30",
+        "id": "4c370281-b6ff-4269-b11e-91652bee44d0"
+      },
+      {
+        "text": "Provide a status update",
+        "owner_kind": "named",
+        "owner_label": "Rosa Alvarez",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-064"
+        ],
+        "quote": "I'll know more Monday.",
+        "id": "19eece50-dfde-4769-aeca-53d156206205"
+      },
+      {
+        "text": "Run the go/no-go checkpoint",
+        "owner_kind": "unassigned",
+        "status": "requested",
+        "due": "Oct 30",
+        "source_unit_ids": [
+          "fixture-048"
+        ],
+        "quote": "Proposal: go with A. Nov 16 launch with Acme. Go/no-go checkpoint Oct 30. By then we need 1) Acme SOC 2 report in hand, 2) DPA signed, 3) finding #3 fix on track. If any is missing on Oct 30, we move to B for launch and accept the extra cost.",
+        "derived": true,
+        "id": "51245b9b-f432-4b04-ae30-b1c30b58f33e"
+      }
+    ],
+    "agreements": [
+      {
+        "subject": "January launch is a non-starter / C dropped",
+        "participant_label": "Marcus Webb",
+        "stance": "affirm",
+        "quote": "+1",
+        "source_unit_ids": [
+          "fixture-021"
+        ],
+        "id": "de4a544f-c2e4-49be-a370-999697adae30"
+      },
+      {
+        "subject": "January launch is a non-starter / C dropped",
+        "participant_label": "Elena Ruiz",
+        "stance": "affirm",
+        "quote": "fine with dropping C",
+        "source_unit_ids": [
+          "fixture-022"
+        ],
+        "id": "32528c64-f4ce-4987-b6fe-73260c74ecc1"
+      },
+      {
+        "subject": "January launch is a non-starter / C dropped",
+        "participant_label": "Rosa Alvarez",
+        "stance": "affirm",
+        "quote": "me too",
+        "source_unit_ids": [
+          "fixture-023"
+        ],
+        "id": "f4d0c22e-3526-40dd-83ae-32eba84d1a07"
+      },
+      {
+        "subject": "compliance first, speed second priority shift",
+        "participant_label": "Marcus Webb",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-041"
+        ],
+        "quote": "Agree",
+        "id": "47f07f7d-54e2-423e-8ef9-1a2795592fb8"
+      },
+      {
+        "subject": "compliance first, speed second priority shift",
+        "participant_label": "Rosa Alvarez",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-042"
+        ],
+        "quote": "Agree",
+        "id": "fa5d19ac-502d-47b6-9c2e-9c252b9acdc7"
+      },
+      {
+        "subject": "compliance first, speed second priority shift",
+        "participant_label": "Elena Ruiz",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-043"
+        ],
+        "quote": "yes",
+        "id": "705044c9-eb83-4b72-8f3c-9e40d3c3c75f"
+      },
+      {
+        "subject": "January launch is a non-starter / C dropped",
+        "participant_label": "Priya Nair",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-048"
+        ],
+        "quote": "Proposal: go with A. Nov 16 launch with Acme.",
+        "id": "78b3e2f2-d934-4121-900d-fff32a1cf97d"
+      },
+      {
+        "subject": "$180k cap is the budget for option A",
+        "participant_label": "Jon Becker",
+        "stance": "affirm",
+        "quote": "I want the $180k cap noted as the budget for A",
+        "source_unit_ids": [
+          "fixture-061"
+        ],
+        "id": "383e98d2-feff-45dc-8c93-d829daf583c3"
+      }
+    ],
+    "superseded_positions": [],
+    "dropped_items": [
+      {
+        "section": "constraints",
+        "reason": "no_valid_source",
+        "text": "Budget ask for option B must be sent to Hal by Oct 30"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "Hal will back whichever option is picked as long as it's live before the freeze"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "If option B needs money, the ask should be sent to Hal by Oct 30"
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      }
+    ],
+    "question": {
+      "text": "Member portal launch: Nov 16 with vendor, security and legal dependencies"
+    },
+    "executive_summary": "Member portal launch: Nov 16 with vendor, security and legal dependencies\nStatus: 3 options (1 dropped), 2 open objections, 3 blockers, 2 actions without an owner.\nAffirmers are listed individually; group consensus is not inferred.\n\nPROPOSED\n\u00b7 Nov 16 with Acme as planned \u2014 active proposal [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:12 AM]\n\u00b7 Nov 16 with our own email OTP verification, switch to Acme later \u2014 fallback only [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:19 AM]\n\nAGREED \u2014 EXPLICIT AFFIRMERS\n\u00b7 Nov 16 with Acme as planned: Marcus Webb and Rosa Alvarez [Marcus Webb, 10/7/26 10:14 AM; Marcus Webb, 10/7/26 10:26 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/7/26 10:27 AM]\n\u00b7 January launch is a non-starter / C dropped: Marcus Webb, Elena Ruiz, Rosa Alvarez and Priya Nair [Marcus Webb, 10/5/26 9:31 AM; Elena Ruiz, 10/5/26 9:32 AM; Rosa Alvarez, 10/5/26 9:33 AM; Priya Nair, 10/7/26 10:12 AM]\n\u00b7 compliance first, speed second priority shift: Marcus Webb, Rosa Alvarez and Elena Ruiz [Marcus Webb, 10/6/26 8:51 AM; Rosa Alvarez, 10/6/26 8:52 AM; Elena Ruiz, 10/6/26 8:53 AM]\n\u00b7 $180k cap is the budget for option A: Jon Becker [Jon Becker, 10/7/26 10:33 AM]\n\nOTHER POSITIONS\n\u00b7 Nov 16 with Acme as planned: Elena Ruiz \u2014 conditional support (as long as I see the SOC 2 report in writing before I sign off) [Elena Ruiz, 10/7/26 10:16 AM; Elena Ruiz, 10/7/26 10:28 AM]\n\u00b7 Nov 16 with Acme as planned: Dev Patel \u2014 acknowledgment only [Dev Patel, 10/7/26 10:20 AM]\n\u00b7 Nov 16 with Acme as planned: Priya Nair \u2014 proposed [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:12 AM]\n\u00b7 Nov 16 with our own email OTP verification, switch to Acme later: Jon Becker \u2014 opposed [Jon Becker, 10/7/26 10:18 AM]\n\u00b7 Nov 16 with our own email OTP verification, switch to Acme later: Priya Nair \u2014 proposed [Priya Nair, 10/5/26 9:20 AM]\n\nCONSTRAINTS\n\u00b7 Cannot go live with member data flowing to Acme without signed DPA (stated; not independently verified) [Rosa Alvarez, 10/5/26 9:11 AM]\n\u00b7 Launch envelope is $180k all in (stated; not independently verified) [Jon Becker, 10/5/26 9:13 AM]\n\u00b7 Account recovery flows must not be skipped (stated; not independently verified) [Elena Ruiz, 10/5/26 9:24 AM]\n\u00b7 Launch must occur before Dec 15 change freeze (stated; not independently verified) [Hal Okonkwo, 10/5/26 9:30 AM]\n\u00b7 Launch requires security sign-off and signed DPA in addition to code complete (stated; not independently verified) [Marcus Webb, 10/5/26 9:45 AM]\n\u00b7 Security finding #3 must be closed before any launch, whichever vendor (stated; not independently verified) [Elena Ruiz, 10/6/26 8:40 AM]\n\u00b7 Elena will not sign off without SOC 2 report in writing (stated; not independently verified) [Elena Ruiz, 10/7/26 10:16 AM]\n\u00b7 Jon cannot approve option B at $215k without escalation to Hal (stated; not independently verified) [Jon Becker, 10/7/26 10:18 AM]\n\u00b7 If B needs money, the ask must be sent to Hal by Oct 30 (stated; not independently verified) [Hal Okonkwo, 10/7/26 10:30 AM]\n\u00b7 $180k cap is the budget for option A (stated; not independently verified) [Jon Becker, 10/7/26 10:33 AM]\n\u00b7 Option B at $215k requires Hal's approval before it can proceed (stated; not independently verified) [Jon Becker, 10/7/26 10:18 AM; Priya Nair, 10/7/26 10:19 AM]\n\u00b7 Won't sign off on SOC 2 compliance based on a rep's word, needs it in writing (stated; not independently verified) [Elena Ruiz, 10/7/26 10:16 AM]\n\nELIMINATED\n\u00b7 Slip to January [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/5/26 9:31 AM]\n\nOPEN\n\u00b7 DPA with Acme not signed [Rosa Alvarez, 10/5/26 9:09 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/9/26 2:12 PM]\n\u00b7 Security finding #3 on existing auth service must be closed before launch [Elena Ruiz, 10/6/26 8:40 AM; Marcus Webb, 10/6/26 8:42 AM; Elena Ruiz, 10/6/26 8:43 AM]\n\u00b7 Review remains pending: Obtain and review Acme SOC 2 Type II report in writing before sign-off [Elena Ruiz, 10/7/26 10:16 AM; Priya Nair, 10/7/26 10:25 AM; Elena Ruiz, 10/7/26 10:28 AM; Elena Ruiz, 10/9/26 2:10 PM]\n\u00b7 Skipping account recovery flows for v1 is unacceptable [Elena Ruiz, 10/5/26 9:24 AM]\n\u00b7 Cannot approve option B's budget without Hal's sign-off [Jon Becker, 10/7/26 10:18 AM]\n\nACTIONS \u2014 COMMITTED\n\u00b7 Marcus Webb: Code complete for the portal \u2014 promised Nov 6 [Marcus Webb, 10/5/26 9:05 AM; Marcus Webb, 10/5/26 9:45 AM; Priya Nair, 10/7/26 10:25 AM; Marcus Webb, 10/7/26 10:26 AM]\n\u00b7 Dev Patel: Close security finding #3 (token fix) [Dev Patel, 10/6/26 8:44 AM; Dev Patel, 10/6/26 8:46 AM]\n\u00b7 Rosa Alvarez: Chase the DPA \u2014 promised before Oct 20 [Rosa Alvarez, 10/7/26 10:15 AM; Priya Nair, 10/7/26 10:25 AM; Rosa Alvarez, 10/7/26 10:27 AM]\n\u00b7 Elena Ruiz: Obtain and review Acme SOC 2 Type II report in writing before sign-off \u2014 promised by Oct 14 [Elena Ruiz, 10/7/26 10:16 AM; Priya Nair, 10/7/26 10:25 AM; Elena Ruiz, 10/7/26 10:28 AM; Elena Ruiz, 10/9/26 2:10 PM]\n\u00b7 Rosa Alvarez: Provide a status update [Rosa Alvarez, 10/9/26 2:12 PM]\n\nACTIONS \u2014 REQUESTED, NOT ACCEPTED\n\u00b7 Owner not named: Send budget ask to Hal if option B needs money \u2014 requested target by Oct 30 [Hal Okonkwo, 10/7/26 10:30 AM]\n\u00b7 Owner not named: Run the go/no-go checkpoint \u2014 requested target Oct 30 [Priya Nair, 10/7/26 10:12 AM]\n\nREPORTED / UNVERIFIED\n\u00b7 Marcus Webb reports: Acme IDV integration is done in staging (unverified) [Marcus Webb, 10/5/26 9:05 AM]\n\u00b7 Rosa Alvarez reports: Cannot go live with member data flowing to Acme without signed DPA (unverified) [Rosa Alvarez, 10/5/26 9:11 AM]\n\u00b7 Jon Becker reports: Launch envelope is $180k all in, currently ~$150k committed (unverified) [Jon Becker, 10/5/26 9:13 AM]\n\u00b7 Jon Becker reports: Data pipeline run costs are not part of launch budget, they're in ops budget (unverified) [Jon Becker, 10/5/26 9:15 AM]\n\u00b7 Marcus Webb reports: Option B is about 3 weeks of work for Marcus's team (conflicting) [Marcus Webb, 10/5/26 9:22 AM]\n\u00b7 Dev Patel reports: Option B is more like 5 weeks once account recovery flows are built (conflicting) [Dev Patel, 10/5/26 9:23 AM]\n\u00b7 Marcus Webb reports: Option B would skip recovery flows for v1 (unverified) [Marcus Webb, 10/5/26 9:24 AM]\n\u00b7 Elena Ruiz reports: Skipping recovery flows risks account takeover (unverified) [Elena Ruiz, 10/5/26 9:24 AM]\n\u00b7 Hal Okonkwo reports: Exec team wants launch live before Dec 15 change freeze (unverified) [Hal Okonkwo, 10/5/26 9:30 AM; Hal Okonkwo, 10/7/26 10:30 AM]\n\u00b7 Jon Becker reports: Option B cost corrected to ~$65k, not $40k, due to recovery flows (unverified) [Jon Becker, 10/5/26 9:35 AM]\n\u00b7 Jon Becker reports: Option B would put total at $215k, over budget by $35k (unverified) [Jon Becker, 10/5/26 9:36 AM]\n\u00b7 Marcus Webb reports: Launch needs security sign-off and the DPA in addition to code complete by Nov 6 (unverified) [Marcus Webb, 10/5/26 9:45 AM]\n\u00b7 Elena Ruiz reports: Pen test found one open finding (#3) on the existing auth service that must be closed before any launch, regardless of vendor (unverified) [Elena Ruiz, 10/6/26 8:40 AM]\n\u00b7 Elena Ruiz reports: Closing finding #3 by Nov 6 is possible if Dev's team prioritizes the token fix (unverified) [Elena Ruiz, 10/6/26 8:43 AM]\n\u00b7 Dev Patel reports: Fixing the token issue is a week of work (unverified) [Dev Patel, 10/6/26 8:44 AM]\n\u00b7 Jon Becker reports: Cannot approve option B at $215k; would need to go to Hal for approval (unverified) [Jon Becker, 10/7/26 10:18 AM]\n\u00b7 Elena Ruiz reports: Acme sent the SOC 2 Type II report earlier than expected (unverified) [Elena Ruiz, 10/9/26 2:10 PM]\n\u00b7 Rosa Alvarez reports: One clause on the DPA, data retention, is still open with Acme's counsel (unverified) [Rosa Alvarez, 10/9/26 2:12 PM]\n\u00b7 Dev Patel reports: Token fix started Wednesday and is on track (unverified) [Dev Patel, 10/9/26 2:15 PM]\n\nSEPARATE\n\u00b7 Figma link for onboarding screens [Dev Patel, 10/5/26 9:38 AM; Priya Nair, 10/5/26 9:39 AM]\n\u00b7 On-call coverage for Thursday [Marcus Webb, 10/5/26 9:40 AM; Dev Patel, 10/5/26 9:41 AM]\n\u00b7 All-hands meeting day change [Hal Okonkwo, 10/6/26 9:00 AM; Priya Nair, 10/6/26 9:01 AM; Hal Okonkwo, 10/6/26 9:02 AM]\n\nPREFERENCE: Nov 16 with Acme as planned \u2014 supporters: Marcus Webb, Rosa Alvarez and Elena Ruiz; conditional: Elena Ruiz. No unanimous agreement inferred. [Marcus Webb, 10/7/26 10:14 AM; Marcus Webb, 10/7/26 10:26 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/7/26 10:27 AM; Elena Ruiz, 10/7/26 10:16 AM; Elena Ruiz, 10/7/26 10:28 AM]"
+  },
+  "report": {
+    "verified": true,
+    "verification_scope": "source references and quote presence only",
+    "external_fact_check": false,
+    "rendering": "deterministic",
+    "omitted_items": 0,
+    "privacy_omitted_items": 0,
+    "issues": []
+  }
+}

@@ -1,0 +1,1375 @@
+{
+  "model": "claude-sonnet-5",
+  "score": {
+    "passed": 23,
+    "total": 26,
+    "checks": {
+      "date_affirmers": true,
+      "venue_affirmers": true,
+      "yusuf_not_venue_support": true,
+      "initial_date_vote_superseded": true,
+      "budget_affirmers": true,
+      "guest_cap_affirmers": true,
+      "dropped_Harbor Hall": true,
+      "dropped_Alma": false,
+      "dropped_Seoul House": true,
+      "dropped_home_catering": true,
+      "step_free_constraint": true,
+      "drinks_open": true,
+      "overage_owner_open": false,
+      "deposit_committed_monday": true,
+      "deposit_external_deadline": true,
+      "trim_committed_sunday": true,
+      "cake_committed": true,
+      "booking_requested_not_accepted": true,
+      "omar_not_drinks_owner": true,
+      "photographer_separate": true,
+      "anniversary_dispute_separate": false,
+      "secrecy_separate": true,
+      "private_details_absent": true,
+      "venue_reports_not_verified_facts": true,
+      "all_items_have_valid_sources": true,
+      "all_quotes_exist": true
+    },
+    "failed": [
+      "dropped_Alma",
+      "overage_owner_open",
+      "anniversary_dispute_separate"
+    ]
+  },
+  "brief": {
+    "criteria": [
+      {
+        "text": "Dinner should be around the anniversary weekend",
+        "source_unit_ids": [
+          "fixture-005"
+        ],
+        "quote": "their anniversary is Wed Dec 9 so the weekend around it",
+        "name": "Dinner should be around the anniversary weekend",
+        "id": "917284b7-869c-48cd-a641-acab242cf478"
+      },
+      {
+        "text": "Cost per head is a factor in venue choice",
+        "source_unit_ids": [
+          "fixture-022"
+        ],
+        "quote": "Alma is $150 a head. 18 people is 2,700 before tip",
+        "name": "Cost per head is a factor in venue choice",
+        "id": "5405ed3c-12b0-4809-9e1e-ce466917be05"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Dec 5 is out for Tariq",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-008"
+        ],
+        "quote": "the 5th is out for me",
+        "id": "2e50755b-b83f-49f9-bdb8-bebf21aef912"
+      },
+      {
+        "text": "$400 per sibling cap, totaling 2,400 for six",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-027"
+        ],
+        "quote": "I'm not paying more than $400 each. thats 2,400 for six of us",
+        "id": "98003c52-3102-4ea8-8873-9743ad57751e"
+      },
+      {
+        "text": "Guest list capped at 20 due to room capacity",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-044",
+          "fixture-047"
+        ],
+        "quote": "room is 20 max omg",
+        "id": "1b314154-bf80-487a-adbe-81b2caa7dbc5"
+      },
+      {
+        "text": "Step-free access required",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "fixture-050"
+        ],
+        "quote": "whatever place we pick has to be step-free",
+        "sensitive": true,
+        "id": "615b92ec-3dd6-4b48-b718-9b20a30cf3cb"
+      },
+      {
+        "text": "Outside cake must be allowed at venue",
+        "kind": "negotiable",
+        "source_unit_ids": [
+          "fixture-057"
+        ],
+        "quote": "Casa Verde is fine with me as long as I can bring my own cake. I'm doing the cake",
+        "id": "d75241e2-5f34-44e4-9f96-e0b0de91764b"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "opt-1",
+        "title": "Dec 5",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "fixture-009"
+        ],
+        "quote": "ok Dec 5 or Dec 12. poll",
+        "description": "",
+        "id": "20053a31-d1d9-4d55-b1d2-fdf5d9334721"
+      },
+      {
+        "temp_id": "opt-2",
+        "title": "Dec 12",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "fixture-009"
+        ],
+        "quote": "ok Dec 5 or Dec 12. poll",
+        "description": "",
+        "id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "temp_id": "opt-3",
+        "title": "Seoul House",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "fixture-015",
+          "fixture-016"
+        ],
+        "quote": "lol no. mom smells like smoke for 3 days",
+        "description": "",
+        "id": "5721c544-a15b-43c4-ba07-272e9dac9ed5"
+      },
+      {
+        "temp_id": "opt-4",
+        "title": "Casa Verde",
+        "decision": "venue",
+        "status": "active",
+        "source_unit_ids": [
+          "fixture-017"
+        ],
+        "quote": "I'd say Casa Verde, the italian place they love. they have a private room.",
+        "description": "",
+        "id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      },
+      {
+        "temp_id": "opt-5",
+        "title": "Catering at Nadia's",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "fixture-017",
+          "fixture-051"
+        ],
+        "quote": "my house has 5 steps at the front so catering at mine is out",
+        "description": "",
+        "id": "acd7cb4a-496f-4884-bdb3-10fdd98cb7d7"
+      },
+      {
+        "temp_id": "opt-6",
+        "title": "Alma",
+        "decision": "venue",
+        "status": "active",
+        "source_unit_ids": [
+          "fixture-021"
+        ],
+        "quote": "or Alma downtown if we want to do it properly. 40 years is a big deal",
+        "description": "",
+        "id": "2e2473cb-6697-4de1-8ae9-05ae0ea6ad75"
+      },
+      {
+        "temp_id": "opt-7",
+        "title": "Harbor Hall",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "fixture-024",
+          "fixture-053"
+        ],
+        "quote": "Harbor Hall is out then. Casa Verde's private room is ground floor, I asked",
+        "description": "",
+        "id": "26cddacd-75b0-4d1a-a7ef-5c54578141a8"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Dad's 40th anniversary dinner needs planning before parents plan their own",
+        "kind": "other",
+        "source_unit_ids": [
+          "fixture-000"
+        ],
+        "quote": "mom and dad's 40th is in december and we need a plan before they start making their own \ud83d\ude44",
+        "author_label": "Nadia",
+        "evidence_status": "unverified",
+        "id": "c70d2104-a610-42d0-8367-7336ae0a0e57"
+      },
+      {
+        "text": "Their anniversary is Wednesday Dec 9",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-005"
+        ],
+        "quote": "their anniversary is Wed Dec 9 so the weekend around it",
+        "author_label": "Nadia",
+        "evidence_status": "conflicting",
+        "id": "8e45b54a-b6d8-463d-af85-edc687cea368"
+      },
+      {
+        "text": "The anniversary is actually the 8th",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-006"
+        ],
+        "quote": "its the 8th. dad always says the 8th",
+        "author_label": "Omar",
+        "evidence_status": "conflicting",
+        "id": "df3ccd9f-eab8-423e-8a8d-aff45c45cccd"
+      },
+      {
+        "text": "Mom said the anniversary was the 9th last year",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-007"
+        ],
+        "quote": "mom said the 9th last year",
+        "author_label": "Leila",
+        "evidence_status": "conflicting",
+        "id": "d33577b8-72a4-4c96-9a15-aab7be8c9c2d"
+      },
+      {
+        "text": "Tariq is in Denver for work until the 11th",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-008"
+        ],
+        "quote": "I'm in Denver for work till the 11th",
+        "author_label": "Tariq",
+        "evidence_status": "unverified",
+        "id": "24fde73c-90f6-42f0-98d3-24865b16ea48"
+      },
+      {
+        "text": "Dec 5 is out for Tariq",
+        "kind": "constraint",
+        "source_unit_ids": [
+          "fixture-008"
+        ],
+        "quote": "the 5th is out for me",
+        "author_label": "Tariq",
+        "evidence_status": "unverified",
+        "id": "61c2ed5c-5547-4d19-b597-7cfe8dd256fd"
+      },
+      {
+        "text": "Mom smells like smoke for 3 days after korean bbq",
+        "kind": "predictive",
+        "source_unit_ids": [
+          "fixture-016"
+        ],
+        "quote": "mom smells like smoke for 3 days",
+        "author_label": "Nadia",
+        "evidence_status": "unverified",
+        "id": "817a18a8-3f2d-4782-a0b2-b549da2d556c"
+      },
+      {
+        "text": "Catering at Nadia's for 18 people costs around $1,400",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-017"
+        ],
+        "quote": "around $1,400 for 18",
+        "author_label": "Nadia",
+        "evidence_status": "superseded",
+        "id": "ddf51da5-b0ef-49d5-9bed-7ee1143f1088"
+      },
+      {
+        "text": "Catering for 18 is closer to $2,200 once rentals are added",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-018"
+        ],
+        "quote": "catering for 18 is closer to 2,200 once you add rentals",
+        "author_label": "Omar",
+        "evidence_status": "unverified",
+        "id": "2c4bbb57-8d3d-4dfe-b547-2ec0b0ba4f47"
+      },
+      {
+        "text": "Nadia's quote was for 10 people, not 18",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-020"
+        ],
+        "quote": "for 10 people",
+        "author_label": "Omar",
+        "evidence_status": "unverified",
+        "id": "12de8556-3168-4980-8d1b-b67ef2e87da2"
+      },
+      {
+        "text": "Alma is $150 a head, 18 people is $2,700 before tip",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-022"
+        ],
+        "quote": "Alma is $150 a head. 18 people is 2,700 before tip",
+        "author_label": "Nadia",
+        "evidence_status": "superseded",
+        "id": "83ea6524-a1e7-40a5-a625-1db62b8879e6"
+      },
+      {
+        "text": "The $150 figure is the a la carte price; prix fixe is $95",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-023"
+        ],
+        "quote": "that's the a la carte number. prix fixe is $95",
+        "author_label": "Tariq",
+        "evidence_status": "unverified",
+        "id": "d6f5bcd6-3fb1-497e-b372-249b41796869"
+      },
+      {
+        "text": "Harbor Hall costs $3,200",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-025"
+        ],
+        "quote": "$3,200 though",
+        "author_label": "Omar",
+        "evidence_status": "unverified",
+        "id": "d0ecd5e3-0b38-4f8d-93e1-51a6929343e2"
+      },
+      {
+        "text": "Harbor Hall is on the second floor",
+        "kind": "factual",
+        "source_unit_ids": [
+          "fixture-026"
+        ],
+        "quote": "and its on the second floor, I think",
+        "author_label": "Leila",
+        "evidence_status": "unverified",
+        "id": "84850621-48f3-484f-ab63-328c318bd047"
+      },
+      {
+        "text": "Casa Verde private room fits 20 max, $2,100 for 18 people with food, drinks extra, $500 deposit needed by Oct 16 to hold the 12th",
+        "kind": "factual",
+        "author_label": "Leila",
+        "source_unit_ids": [
+          "fixture-037"
+        ],
+        "quote": "called Casa Verde. private room fits 20 max. $2,100 for 18 people with food. drinks extra. they need a $500 deposit by Oct 16 to hold the 12th",
+        "evidence_status": "unverified",
+        "id": "b9c6ce98-1fa5-43ff-b9e6-de82852a505d"
+      },
+      {
+        "text": "Drinks cost about $20 a head at Casa Verde",
+        "kind": "factual",
+        "author_label": "Leila",
+        "source_unit_ids": [
+          "fixture-040"
+        ],
+        "quote": "she said about $20 a head, I didn't write it down",
+        "evidence_status": "unverified",
+        "id": "eb847cb5-2b11-4f8c-93ae-dab1c980b0e2"
+      },
+      {
+        "text": "Total cost of $2,100 plus drinks is $2,460, over the $2,400 budget",
+        "kind": "factual",
+        "author_label": "Omar",
+        "source_unit_ids": [
+          "fixture-041"
+        ],
+        "quote": "2,100 + 360 is 2,460. thats over 2,400",
+        "evidence_status": "unverified",
+        "id": "3a07b84b-c708-4700-8b33-45c9f29f7364"
+      },
+      {
+        "text": "Aunt Reema's family adds 4 more people, making the guest list 22",
+        "kind": "factual",
+        "author_label": "Leila",
+        "source_unit_ids": [
+          "fixture-043"
+        ],
+        "quote": "also aunt Reema's family is 4 more so the list is 22",
+        "evidence_status": "unverified",
+        "id": "e7067eec-0d04-4a76-9a46-9422d074b1ac"
+      },
+      {
+        "text": "Dad's knee surgery went fine but he's not allowed stairs this winter",
+        "kind": "factual",
+        "author_label": "Yusuf",
+        "source_unit_ids": [
+          "fixture-050"
+        ],
+        "quote": "mom told me dad's knee surgery went fine but he's not allowed stairs this winter",
+        "evidence_status": "unverified",
+        "sensitive": true,
+        "private": true,
+        "id": "0cd28a63-4759-4771-a1ef-382c2101d32f"
+      },
+      {
+        "text": "Nadia's house has 5 steps at the front, so catering at her place is out",
+        "kind": "factual",
+        "author_label": "Nadia",
+        "source_unit_ids": [
+          "fixture-051"
+        ],
+        "quote": "my house has 5 steps at the front so catering at mine is out",
+        "evidence_status": "unverified",
+        "id": "89d8b8f1-51c7-4386-9d99-2704429aa54d"
+      },
+      {
+        "text": "Casa Verde's private room is ground floor",
+        "kind": "factual",
+        "author_label": "Leila",
+        "source_unit_ids": [
+          "fixture-053"
+        ],
+        "quote": "Casa Verde's private room is ground floor, I asked",
+        "evidence_status": "unverified",
+        "id": "cf56ff0e-f63b-4227-aef9-53ae6db3fb37"
+      },
+      {
+        "text": "Alma has an elevator",
+        "kind": "factual",
+        "author_label": "Tariq",
+        "source_unit_ids": [
+          "fixture-054"
+        ],
+        "quote": "Alma has an elevator I'm pretty sure",
+        "evidence_status": "unverified",
+        "id": "944a4183-a6f9-4278-a264-bf49c19da197"
+      },
+      {
+        "text": "Yusuf is fine with anything and doesn't care",
+        "kind": "other",
+        "author_label": "Nadia",
+        "source_unit_ids": [
+          "fixture-059"
+        ],
+        "quote": "Yusuf is fine with anything, he doesn't care",
+        "evidence_status": "unverified",
+        "id": "fc32f2c3-0bd9-443a-8317-7eb079e187c7"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Omar",
+        "stance": "proposed",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-015"
+        ],
+        "quote": "Seoul House. korean bbq. everyone's happy, nobody cooks",
+        "proposer": true,
+        "first_unit_sequence": 15,
+        "id": "cae22fe5-6c36-49ad-8e53-7880083e8189",
+        "option_id": "5721c544-a15b-43c4-ba07-272e9dac9ed5"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "oppose",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-016"
+        ],
+        "quote": "lol no. mom smells like smoke for 3 days",
+        "proposer": false,
+        "first_unit_sequence": 16,
+        "id": "ca62bcb8-35b5-4664-a5f6-2935cbd89dad",
+        "option_id": "5721c544-a15b-43c4-ba07-272e9dac9ed5"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "proposed",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-017"
+        ],
+        "quote": "or I cater at mine, around $1,400 for 18",
+        "proposer": true,
+        "first_unit_sequence": 17,
+        "id": "dc1a4ce7-18cd-4816-9d56-d482a60efb3e",
+        "option_id": "acd7cb4a-496f-4884-bdb3-10fdd98cb7d7"
+      },
+      {
+        "participant_label": "Omar",
+        "stance": "oppose",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-018"
+        ],
+        "quote": "no way. catering for 18 is closer to 2,200 once you add rentals",
+        "proposer": false,
+        "first_unit_sequence": 18,
+        "id": "7e3ab0e2-02c6-4a5c-98dc-6a0416435496",
+        "option_id": "acd7cb4a-496f-4884-bdb3-10fdd98cb7d7"
+      },
+      {
+        "participant_label": "Yusuf",
+        "stance": "proposed",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-024"
+        ],
+        "quote": "what about Harbor Hall, the ballroom with the lake view",
+        "proposer": true,
+        "first_unit_sequence": 24,
+        "id": "3451be6c-af22-4016-9611-11a0ed38ceed",
+        "option_id": "26cddacd-75b0-4d1a-a7ef-5c54578141a8"
+      },
+      {
+        "participant_label": "Omar",
+        "stance": "oppose",
+        "decision": "venue",
+        "source_unit_ids": [
+          "fixture-025"
+        ],
+        "quote": "$3,200 though",
+        "proposer": false,
+        "first_unit_sequence": 25,
+        "id": "cbc8f8c2-6ae5-4ac6-86a1-a46aa4eefd4e",
+        "option_id": "26cddacd-75b0-4d1a-a7ef-5c54578141a8"
+      },
+      {
+        "participant_label": "Tariq",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-069",
+          "fixture-070"
+        ],
+        "quote": "booked my flight, landing 4pm on the 11th. so the 12th works",
+        "proposer": false,
+        "first_unit_sequence": 70,
+        "id": "6bb6dfa0-351b-488b-bc26-8407f7ada43f",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Tariq",
+        "decision": "venue",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "fixture-021",
+          "fixture-072"
+        ],
+        "quote": "ok so Casa Verde. does it have parking though? dad won't walk far",
+        "proposer": false,
+        "first_unit_sequence": 72,
+        "id": "28f9fc08-a871-42c2-bbf4-3b3f9b6dca67",
+        "option_id": "2e2473cb-6697-4de1-8ae9-05ae0ea6ad75"
+      },
+      {
+        "participant_label": "Tariq",
+        "decision": "venue",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-069",
+          "fixture-074",
+          "fixture-076"
+        ],
+        "quote": "ok yes. Casa Verde",
+        "proposer": false,
+        "first_unit_sequence": 76,
+        "id": "e9285269-3fc5-4de9-9cef-b2e1e0d3a2c7",
+        "option_id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      },
+      {
+        "participant_label": "Yusuf",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-063",
+          "fixture-077"
+        ],
+        "quote": "fine, I moved my thing. 12th works",
+        "proposer": false,
+        "first_unit_sequence": 77,
+        "id": "7fa61863-8e2f-4221-878e-a392a061afb0",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Hana",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-010",
+          "fixture-078"
+        ],
+        "quote": "I'm ok with Casa Verde and the 12th.",
+        "proposer": false,
+        "first_unit_sequence": 78,
+        "id": "fff50e66-f62e-495c-9529-77e276d7a794",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Hana",
+        "decision": "venue",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-078"
+        ],
+        "quote": "I'm ok with Casa Verde and the 12th.",
+        "proposer": false,
+        "first_unit_sequence": 78,
+        "id": "817fd925-0941-433f-9a2d-c9da9286e0f4",
+        "option_id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      },
+      {
+        "participant_label": "Omar",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-012",
+          "fixture-082"
+        ],
+        "quote": "then yes, Casa Verde, 12th. cake is mine",
+        "proposer": false,
+        "first_unit_sequence": 82,
+        "id": "23883bd4-3f28-4067-98fc-65cf709ccc91",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Omar",
+        "decision": "venue",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-057",
+          "fixture-082"
+        ],
+        "quote": "then yes, Casa Verde, 12th. cake is mine",
+        "proposer": false,
+        "first_unit_sequence": 82,
+        "id": "76d1f6e8-84c1-4511-bc75-b5ea70144a15",
+        "option_id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      },
+      {
+        "participant_label": "Nadia",
+        "decision": "venue",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-017",
+          "fixture-038",
+          "fixture-084",
+          "fixture-083"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 84,
+        "id": "40119b88-40bf-4e42-a9ba-5b4f40354f31",
+        "option_id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      },
+      {
+        "participant_label": "Nadia",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-084",
+          "fixture-083"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 84,
+        "id": "35434d7f-f538-4996-ad5b-bcc247dbc999",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Leila",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-011",
+          "fixture-083",
+          "fixture-085"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 85,
+        "id": "2cc5749e-6b1a-4f40-bc6b-00d9ef955027",
+        "option_id": "02e92a0a-09be-432f-8e50-4792f3b06bd6"
+      },
+      {
+        "participant_label": "Leila",
+        "decision": "venue",
+        "stance": "support",
+        "source_unit_ids": [
+          "fixture-083",
+          "fixture-085"
+        ],
+        "quote": "yes",
+        "proposer": false,
+        "first_unit_sequence": 85,
+        "id": "5d09c84b-f066-4fa9-abbf-4bb6d39de1e4",
+        "option_id": "ef868a73-35f0-4104-8907-bcf72304451c"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Korean BBQ rejected because mom smells like smoke for 3 days",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "fixture-016"
+        ],
+        "quote": "lol no. mom smells like smoke for 3 days",
+        "moot": true,
+        "id": "f3321380-7ffb-4e0d-86f9-28d2da551e70",
+        "option_ids": [
+          "5721c544-a15b-43c4-ba07-272e9dac9ed5"
+        ]
+      },
+      {
+        "text": "Catering cost estimate disputed as too low",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-018"
+        ],
+        "quote": "catering for 18 is closer to 2,200 once you add rentals",
+        "moot": true,
+        "id": "f984abcd-450a-40b3-8a6c-7921856e87a5",
+        "option_ids": [
+          "acd7cb4a-496f-4884-bdb3-10fdd98cb7d7"
+        ]
+      },
+      {
+        "text": "Harbor Hall possibly inaccessible due to being on second floor",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "fixture-025",
+          "fixture-026",
+          "fixture-052",
+          "fixture-053"
+        ],
+        "quote": "great, love an upstairs ballroom for a guy who can't do stairs",
+        "author_label": "Omar",
+        "moot": true,
+        "id": "4cb0a99d-8806-4a9e-9ad0-61a223ead1f2",
+        "option_ids": [
+          "26cddacd-75b0-4d1a-a7ef-5c54578141a8"
+        ]
+      },
+      {
+        "text": "Drinks cost pushes total over budget",
+        "author_label": "Omar",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-041"
+        ],
+        "quote": "2,100 + 360 is 2,460. thats over 2,400",
+        "id": "68af3343-c276-457f-9bb7-6551a797154a",
+        "option_ids": [
+          "ef868a73-35f0-4104-8907-bcf72304451c"
+        ]
+      }
+    ],
+    "blockers": [
+      {
+        "text": "disagreement over whether anniversary is Dec 8 or Dec 9",
+        "kind": "open_question",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-006",
+          "fixture-007"
+        ],
+        "quote": "its the 8th. dad always says the 8th",
+        "id": "7ed50948-04ad-4fd9-9e1a-b545ec7236f0"
+      },
+      {
+        "text": "Tariq's attendance on Dec 12 depends on getting a flight",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-008"
+        ],
+        "quote": "the 12th might work if I can get a flight",
+        "id": "c4191257-5000-4de8-a5b2-9a6e7ee81876"
+      },
+      {
+        "text": "conflicting catering cost figures for 18 people at Nadia's",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-017",
+          "fixture-018"
+        ],
+        "quote": "catering for 18 is closer to 2,200 once you add rentals",
+        "id": "c4d57290-2d47-4c09-8df1-40f10c47a174"
+      },
+      {
+        "text": "Harbor Hall accessibility unclear (second floor)",
+        "kind": "unresolved_dependency",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "fixture-026",
+          "fixture-053"
+        ],
+        "quote": "Harbor Hall is out then. Casa Verde's private room is ground floor, I asked",
+        "id": "36632265-88c6-4d6d-8178-072aba6ffe33"
+      },
+      {
+        "text": "Drinks cost per head unclear, not written down",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-040"
+        ],
+        "quote": "she said about $20 a head, I didn't write it down",
+        "id": "bcb8f2ab-0a43-4551-8083-5dcca22ca191"
+      },
+      {
+        "text": "Total cost with drinks may exceed $2,400 budget",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-041"
+        ],
+        "quote": "2,100 + 360 is 2,460. thats over 2,400",
+        "id": "07034c92-e50d-471d-9977-b3e1a9edfaaa"
+      },
+      {
+        "text": "Guest list exceeds room capacity of 20",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-043",
+          "fixture-044"
+        ],
+        "quote": "room is 20 max omg",
+        "id": "44cdbd08-3410-4ed3-926f-4af585d5c1e0"
+      },
+      {
+        "text": "Alma elevator access unconfirmed",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-054",
+          "fixture-055",
+          "fixture-056"
+        ],
+        "quote": "Alma has an elevator I'm pretty sure",
+        "id": "11aef86a-1481-4b56-8815-ba96f35b5e9b"
+      },
+      {
+        "text": "Whether Casa Verde allows outside cake is unconfirmed",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "fixture-058"
+        ],
+        "quote": "I'll ask if outside cake is ok",
+        "id": "5754ce9f-df93-4ef8-9581-973e4245ef4d"
+      }
+    ],
+    "separate_issues": [
+      {
+        "title": "2019 cruise surprise joke",
+        "rationale": "Tangential joke about a past surprise, unrelated to planning the 40th anniversary dinner",
+        "source_unit_ids": [
+          "fixture-003",
+          "fixture-004"
+        ],
+        "id": "91416b2d-58a3-46d7-8599-0af8d9c4c00b"
+      },
+      {
+        "title": "Game discussion",
+        "rationale": "Unrelated to dinner planning decision",
+        "source_unit_ids": [
+          "fixture-031",
+          "fixture-032"
+        ],
+        "id": "5803f8db-fa5b-4746-83c2-e2f4d1402554"
+      },
+      {
+        "title": "Boiler repair guy",
+        "rationale": "Unrelated personal request, not part of dinner decision",
+        "source_unit_ids": [
+          "fixture-033",
+          "fixture-034",
+          "fixture-035"
+        ],
+        "id": "084d003b-bf9b-44aa-876f-1a1fec909399"
+      },
+      {
+        "title": "Thanksgiving plans",
+        "rationale": "Separate event unrelated to the anniversary dinner decision",
+        "source_unit_ids": [
+          "fixture-048",
+          "fixture-049"
+        ],
+        "id": "3a4055e9-df05-41f0-99ee-521999ba813e"
+      },
+      {
+        "title": "Secrecy of group chat / mom noticing phone buzzing",
+        "rationale": "Side discussion about hiding the chat from mom, unrelated to the date/venue decision",
+        "source_unit_ids": [
+          "fixture-064",
+          "fixture-065"
+        ],
+        "id": "7366c1e6-cf18-4e14-963b-758585fe6a70"
+      },
+      {
+        "title": "Hiring a photographer",
+        "rationale": "Deferred topic about photographer, explicitly tabled as 'later'",
+        "source_unit_ids": [
+          "fixture-066",
+          "fixture-067",
+          "fixture-068"
+        ],
+        "id": "fa66513b-9a3a-4aa4-8797-38f1f9d1bc39"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Call boiler guy",
+        "owner_kind": "unassigned",
+        "source_unit_ids": [
+          "fixture-033",
+          "fixture-034"
+        ],
+        "quote": "random but does anyone have the number for the boiler guy mom used",
+        "status": "requested",
+        "id": "27aaf081-3b26-4697-86c5-4e05af6fb42c"
+      },
+      {
+        "text": "Call Casa Verde about parking",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "source_unit_ids": [
+          "fixture-037",
+          "fixture-075"
+        ],
+        "quote": "called again. confirmed: free lot behind the building, about 12 spots.",
+        "status": "completed",
+        "id": "c867dcc6-59b7-46af-83b4-0bc077c9770e"
+      },
+      {
+        "text": "Trim guest list to 20",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "source_unit_ids": [
+          "fixture-047",
+          "fixture-084"
+        ],
+        "quote": "Leila trims the list to 20 by Sunday",
+        "status": "committed",
+        "due": "by Sunday",
+        "id": "44376d4a-c7bf-4f55-aba7-0bac05ccc893"
+      },
+      {
+        "text": "Call Alma to confirm elevator access",
+        "owner_label": "Tariq",
+        "owner_kind": "named",
+        "source_unit_ids": [
+          "fixture-056",
+          "fixture-071"
+        ],
+        "quote": "called Alma. there's an elevator but the private room only holds 14",
+        "status": "completed",
+        "id": "d4599c81-8815-48fa-a159-70cb56d9282c"
+      },
+      {
+        "text": "Bring own cake to the dinner",
+        "owner_label": "Omar",
+        "owner_kind": "named",
+        "source_unit_ids": [
+          "fixture-057"
+        ],
+        "quote": "I'm doing the cake",
+        "status": "committed",
+        "id": "24ebd84b-c164-4060-9a2a-ee5fbfd88408"
+      },
+      {
+        "text": "Ask Casa Verde if outside cake is allowed",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "source_unit_ids": [
+          "fixture-058",
+          "fixture-081"
+        ],
+        "quote": "outside cake is fine, I asked",
+        "status": "completed",
+        "id": "6da6d0c2-ade0-4d9c-b519-d92a77061bff"
+      },
+      {
+        "text": "Book Casa Verde",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "status": "requested",
+        "source_unit_ids": [
+          "fixture-061"
+        ],
+        "quote": "Leila book it, I'll send the deposit Monday",
+        "id": "7670bf84-379d-407b-b167-aff2d8ade1d2"
+      },
+      {
+        "text": "Book flight to attend on Dec 12",
+        "owner_label": "Tariq",
+        "owner_kind": "named",
+        "status": "completed",
+        "source_unit_ids": [
+          "fixture-070"
+        ],
+        "quote": "booked my flight, landing 4pm on the 11th. so the 12th works",
+        "id": "2034e7a3-257d-4136-9963-a900d43e3b2a"
+      },
+      {
+        "text": "Cover Hana's remaining $100 contribution",
+        "owner_label": "Omar",
+        "owner_kind": "named",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-079"
+        ],
+        "quote": "I got you, I'll cover the 100. pay me back whenever",
+        "private": true,
+        "sensitive": true,
+        "id": "d06742c4-3629-4808-bfcc-8b14d0dba045"
+      },
+      {
+        "text": "Send the $500 deposit",
+        "owner_label": "Nadia",
+        "owner_kind": "named",
+        "due": "Monday",
+        "status": "committed",
+        "source_unit_ids": [
+          "fixture-084",
+          "fixture-037"
+        ],
+        "quote": "I'll send the $500 deposit Monday and we settle up after.",
+        "external_due": "Oct 16",
+        "id": "d64d009c-b9b2-4f17-82bf-bdb14a536bf8"
+      }
+    ],
+    "agreements": [
+      {
+        "subject": "$400 per sibling cap",
+        "participant_label": "Omar",
+        "stance": "affirm",
+        "quote": "I'm not paying more than $400 each. thats 2,400 for six of us",
+        "source_unit_ids": [
+          "fixture-027"
+        ],
+        "id": "0c11689c-e6b8-4286-a117-79b93c586bdf"
+      },
+      {
+        "subject": "$400 per sibling cap",
+        "participant_label": "Nadia",
+        "stance": "affirm",
+        "quote": "yes",
+        "source_unit_ids": [
+          "fixture-028",
+          "fixture-083",
+          "fixture-084"
+        ],
+        "id": "6db11c54-2cf7-4f2d-9b16-427d3564fe27"
+      },
+      {
+        "subject": "$400 per sibling cap",
+        "participant_label": "Leila",
+        "stance": "affirm",
+        "quote": "ok. final from me: Dec 12, Casa Verde private room, 20 max, ground floor, $400 each",
+        "source_unit_ids": [
+          "fixture-029",
+          "fixture-083"
+        ],
+        "id": "59bdee62-9781-4a68-8459-281cf3f85cd5"
+      },
+      {
+        "subject": "$400 per sibling cap",
+        "participant_label": "Yusuf",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-030"
+        ],
+        "quote": "ok",
+        "id": "a07bfdd7-0e8f-4582-be86-90ecbb8eca1d"
+      },
+      {
+        "subject": "step-free access required",
+        "participant_label": "Nadia",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "fixture-051"
+        ],
+        "quote": "ok that changes things. my house has 5 steps at the front so catering at mine is out",
+        "sensitive": true,
+        "private": false,
+        "id": "f0af7c03-4843-40ad-b8ed-da4a8e8af119"
+      },
+      {
+        "subject": "$400 per sibling cap",
+        "participant_label": "Hana",
+        "stance": "affirm",
+        "quote": "thank you. 400 is the number then",
+        "source_unit_ids": [
+          "fixture-080"
+        ],
+        "id": "51b22c93-ef5d-44ca-a798-c5c5f993557c"
+      },
+      {
+        "subject": "guest cap of 20",
+        "participant_label": "Leila",
+        "stance": "affirm",
+        "quote": "ok. final from me: Dec 12, Casa Verde private room, 20 max, ground floor, $400 each",
+        "source_unit_ids": [
+          "fixture-083",
+          "fixture-085"
+        ],
+        "id": "4a286df0-947e-4284-a372-c43f3c068782"
+      },
+      {
+        "subject": "guest cap of 20",
+        "participant_label": "Nadia",
+        "stance": "affirm",
+        "quote": "yes",
+        "source_unit_ids": [
+          "fixture-084",
+          "fixture-083"
+        ],
+        "id": "cc927294-08d4-4b04-ae23-fc11d139aed8"
+      }
+    ],
+    "superseded_positions": [
+      {
+        "participant_label": "Yusuf",
+        "option_title": "Dec 5",
+        "stance": "support",
+        "decision": "date",
+        "source_unit_ids": [
+          "fixture-013"
+        ],
+        "quote": "5th, I have a thing on the 12th",
+        "proposer": false
+      }
+    ],
+    "dropped_items": [
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "disagreement over whether anniversary is Dec 8 or Dec 9"
+      },
+      {
+        "section": "candidate_questions",
+        "reason": "no_valid_source",
+        "text": "Should the group hire a photographer?"
+      },
+      {
+        "section": "options",
+        "reason": "no_valid_source",
+        "text": "Alma"
+      },
+      {
+        "section": "options",
+        "reason": "no_valid_source",
+        "text": "Casa Verde"
+      },
+      {
+        "section": "criteria",
+        "reason": "no_valid_source",
+        "text": "Venue must have parking since dad won't walk far"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "Alma's private room only holds 14 people"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "Casa Verde has a free parking lot behind the building with about 12 spots"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "Omar said cake, not drinks"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "Omar's paying for cake and drinks"
+      },
+      {
+        "section": "claims",
+        "reason": "no_valid_source",
+        "text": "A friend's portrait photography service costs around $200"
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "positions",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "objections",
+        "reason": "no_valid_source",
+        "text": "Tariq never agreed to Casa Verde; his pick was Alma and the 12th only might work"
+      },
+      {
+        "section": "objections",
+        "reason": "no_valid_source",
+        "text": "Omar objects to being assigned drinks cost, he only offered cake"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Tariq's attendance on Dec 12 depends on getting a flight"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Alma elevator access unconfirmed"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Whether Casa Verde allows outside cake is unconfirmed"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Whether Casa Verde has parking for dad who won't walk far"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Drinks cost and payment responsibility still unresolved"
+      },
+      {
+        "section": "blockers",
+        "reason": "no_valid_source",
+        "text": "Guest list exceeds room capacity of 20"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Ask Casa Verde if outside cake is allowed"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Call Alma to confirm elevator access"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Book flight to attend on Dec 12"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Book Casa Verde"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Send the $500 deposit"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Trim guest list to 20"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Cover Hana's remaining $100 contribution"
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "agreements",
+        "reason": "no_valid_source",
+        "text": ""
+      },
+      {
+        "section": "separate_issues",
+        "reason": "no_valid_source",
+        "text": "Mom noticing phone buzzing / secrecy of group chat"
+      },
+      {
+        "section": "separate_issues",
+        "reason": "no_valid_source",
+        "text": "Hiring a photographer"
+      }
+    ],
+    "question": {
+      "text": "Plan the parents' 40th anniversary dinner"
+    },
+    "executive_summary": "Plan the parents' 40th anniversary dinner\nAffirmers are listed individually; no group consensus or booking completion is inferred.\n\nAGREED \u2014 EXPLICIT AFFIRMERS\n\u00b7 Dec 12: Tariq, Yusuf, Hana, Omar, Nadia and Leila [Tariq, 10/5/26 11:32 PM; Tariq, 10/6/26 8:15 AM; Yusuf, 10/5/26 6:33 PM; Yusuf, 10/6/26 12:40 PM; Hana, 10/4/26 7:52 PM; Hana, 10/6/26 1:15 PM; Omar, 10/4/26 7:53 PM; Omar, 10/6/26 1:26 PM; Nadia, 10/6/26 1:31 PM; Leila, 10/6/26 1:30 PM; Leila, 10/4/26 7:52 PM; Leila, 10/6/26 1:32 PM]\n\u00b7 Casa Verde: Tariq, Hana, Omar, Nadia and Leila [Tariq, 10/5/26 11:32 PM; Tariq, 10/6/26 8:21 AM; Tariq, 10/6/26 12:07 PM; Hana, 10/6/26 1:15 PM; Omar, 10/5/26 2:40 PM; Omar, 10/6/26 1:26 PM; Nadia, 10/4/26 8:01 PM; Nadia, 10/5/26 9:49 AM; Nadia, 10/6/26 1:31 PM; Leila, 10/6/26 1:30 PM; Leila, 10/6/26 1:32 PM]\n\u00b7 $400 per sibling cap: Omar, Nadia, Leila, Yusuf and Hana [Omar, 10/4/26 8:11 PM; Nadia, 10/4/26 8:11 PM; Leila, 10/6/26 1:30 PM; Nadia, 10/6/26 1:31 PM; Leila, 10/4/26 8:12 PM; Yusuf, 10/4/26 8:12 PM; Hana, 10/6/26 1:18 PM]\n\u00b7 step-free access required: Nadia [Nadia, 10/5/26 2:19 PM]\n\u00b7 guest cap of 20: Leila and Nadia [Leila, 10/6/26 1:30 PM; Leila, 10/6/26 1:32 PM; Nadia, 10/6/26 1:31 PM]\n\nOTHER POSITIONS\n\u00b7 Alma: Tariq \u2014 opposed [Tariq, 10/4/26 8:04 PM; Tariq, 10/6/26 8:17 AM]\n\nCONSTRAINTS\n\u00b7 Dec 5 is out for Tariq (stated; not independently verified) [Tariq, 10/4/26 7:48 PM]\n\u00b7 $400 per sibling cap, totaling 2,400 for six (stated; not independently verified) [Omar, 10/4/26 8:11 PM]\n\u00b7 Guest list capped at 20 due to room capacity (stated; not independently verified) [Nadia, 10/5/26 10:03 AM; Leila, 10/5/26 10:07 AM]\n\u00b7 Step-free access required (stated; not independently verified) [Yusuf, 10/5/26 2:17 PM]\n\u00b7 Outside cake must be allowed at venue (stated; not independently verified) [Omar, 10/5/26 2:40 PM]\n\nELIMINATED\n\u00b7 Seoul House [Omar, 10/4/26 7:59 PM; Nadia, 10/4/26 8:00 PM]\n\u00b7 Catering at Nadia's [Nadia, 10/4/26 8:01 PM; Nadia, 10/5/26 2:19 PM]\n\u00b7 Harbor Hall [Yusuf, 10/4/26 8:07 PM; Leila, 10/5/26 2:21 PM]\n\nOPEN\n\u00b7 disagreement over whether anniversary is Dec 8 or Dec 9 [Omar, 10/4/26 7:46 PM; Leila, 10/4/26 7:46 PM]\n\u00b7 Tariq's attendance on Dec 12 depends on getting a flight [Tariq, 10/4/26 7:48 PM]\n\u00b7 conflicting catering cost figures for 18 people at Nadia's [Nadia, 10/4/26 8:01 PM; Omar, 10/4/26 8:02 PM]\n\u00b7 Drinks cost per head unclear, not written down [Leila, 10/5/26 9:53 AM]\n\u00b7 Total cost with drinks may exceed $2,400 budget [Omar, 10/5/26 9:55 AM]\n\u00b7 Guest list exceeds room capacity of 20 [Leila, 10/5/26 10:02 AM; Nadia, 10/5/26 10:03 AM]\n\u00b7 Alma elevator access unconfirmed [Tariq, 10/5/26 2:23 PM; Nadia, 10/5/26 2:24 PM; Tariq, 10/5/26 2:26 PM]\n\u00b7 Whether Casa Verde allows outside cake is unconfirmed [Leila, 10/5/26 2:41 PM]\n\u00b7 Drinks cost pushes total over budget [Omar, 10/5/26 9:55 AM]\n\nACTIONS \u2014 COMMITTED\n\u00b7 Leila: Trim guest list to 20 \u2014 promised by Sunday [Leila, 10/5/26 10:07 AM; Nadia, 10/6/26 1:31 PM]\n\u00b7 Omar: Bring own cake to the dinner [Omar, 10/5/26 2:40 PM]\n\u00b7 Nadia: Send the $500 deposit \u2014 promised Monday \u2014 external deadline Oct 16 [Nadia, 10/6/26 1:31 PM; Leila, 10/5/26 9:48 AM]\n\nACTIONS \u2014 REQUESTED, NOT ACCEPTED\n\u00b7 Owner not named: Call boiler guy [Leila, 10/4/26 8:21 PM; Tariq, 10/4/26 8:22 PM]\n\u00b7 Leila: Book Casa Verde [Nadia, 10/5/26 6:30 PM]\n\nREPORTED / UNVERIFIED\n\u00b7 Nadia reports: Dad's 40th anniversary dinner needs planning before parents plan their own (unverified) [Nadia, 10/4/26 7:41 PM]\n\u00b7 Nadia reports: Their anniversary is Wednesday Dec 9 (conflicting) [Nadia, 10/4/26 7:45 PM]\n\u00b7 Omar reports: The anniversary is actually the 8th (conflicting) [Omar, 10/4/26 7:46 PM]\n\u00b7 Leila reports: Mom said the anniversary was the 9th last year (conflicting) [Leila, 10/4/26 7:46 PM]\n\u00b7 Tariq reports: Tariq is in Denver for work until the 11th (unverified) [Tariq, 10/4/26 7:48 PM]\n\u00b7 Tariq reports: Dec 5 is out for Tariq (unverified) [Tariq, 10/4/26 7:48 PM]\n\u00b7 Nadia reports: Mom smells like smoke for 3 days after korean bbq (unverified) [Nadia, 10/4/26 8:00 PM]\n\u00b7 Omar reports: Catering for 18 is closer to $2,200 once rentals are added (unverified) [Omar, 10/4/26 8:02 PM]\n\u00b7 Omar reports: Nadia's quote was for 10 people, not 18 (unverified) [Omar, 10/4/26 8:03 PM]\n\u00b7 Tariq reports: The $150 figure is the a la carte price; prix fixe is $95 (unverified) [Tariq, 10/4/26 8:06 PM]\n\u00b7 Omar reports: Harbor Hall costs $3,200 (unverified) [Omar, 10/4/26 8:08 PM]\n\u00b7 Leila reports: Harbor Hall is on the second floor (unverified) [Leila, 10/4/26 8:09 PM]\n\u00b7 Leila reports: Casa Verde private room fits 20 max, $2,100 for 18 people with food, drinks extra, $500 deposit needed by Oct 16 to hold the 12th (unverified) [Leila, 10/5/26 9:48 AM]\n\u00b7 Leila reports: Drinks cost about $20 a head at Casa Verde (unverified) [Leila, 10/5/26 9:53 AM]\n\u00b7 Omar reports: Total cost of $2,100 plus drinks is $2,460, over the $2,400 budget (unverified) [Omar, 10/5/26 9:55 AM]\n\u00b7 Leila reports: Aunt Reema's family adds 4 more people, making the guest list 22 (unverified) [Leila, 10/5/26 10:02 AM]\n\u00b7 Nadia reports: Nadia's house has 5 steps at the front, so catering at her place is out (unverified) [Nadia, 10/5/26 2:19 PM]\n\u00b7 Leila reports: Casa Verde's private room is ground floor (unverified) [Leila, 10/5/26 2:21 PM]\n\u00b7 Tariq reports: Alma has an elevator (unverified) [Tariq, 10/5/26 2:23 PM]\n\u00b7 Nadia reports: Yusuf is fine with anything and doesn't care (unverified) [Nadia, 10/5/26 4:05 PM]\n\nSEPARATE\n\u00b7 2019 cruise surprise joke [Omar, 10/4/26 7:43 PM; Yusuf, 10/4/26 7:44 PM]\n\u00b7 Game discussion [Omar, 10/4/26 8:15 PM; Yusuf, 10/4/26 8:15 PM]\n\u00b7 Boiler repair guy [Leila, 10/4/26 8:21 PM; Tariq, 10/4/26 8:22 PM; Omar, 10/4/26 8:24 PM]\n\u00b7 Thanksgiving plans [Hana, 10/5/26 11:30 AM; Tariq, 10/5/26 11:31 AM]\n\u00b7 Secrecy of group chat / mom noticing phone buzzing [Hana, 10/5/26 6:35 PM; Nadia, 10/5/26 6:35 PM]\n\u00b7 Hiring a photographer [Yusuf, 10/5/26 6:40 PM; Hana, 10/5/26 6:41 PM; Nadia, 10/5/26 6:42 PM]"
+  },
+  "report": {
+    "verified": true,
+    "verification_scope": "source references and quote presence only",
+    "external_fact_check": false,
+    "rendering": "deterministic",
+    "omitted_items": 0,
+    "issues": []
+  }
+}

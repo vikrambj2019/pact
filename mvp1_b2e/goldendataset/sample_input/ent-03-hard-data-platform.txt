@@ -1,0 +1,101 @@
+10/26/26, 8:45 AM - Sofia: Morning all. Purpose of this thread: land the end-state data platform after the merger and a cutover window. Today we run Halden's Databricks and our Snowflake. I'd like a direction by Wednesday. The exec ask is unified reporting by end of March.
+10/26/26, 8:47 AM - Colleen: Databricks, obviously. We already run 300+ pipelines on it and the ML team lives there.
+10/26/26, 8:48 AM - Raj: Snowflake. Our whole claims mart is there plus about 40 stored procedures that don't port cleanly.
+10/26/26, 8:50 AM - Colleen: Stored procedures port fine with the converter. Halden moved 300 pipelines in 8 weeks last year.
+10/26/26, 8:52 AM - Gareth: Sure, and I'm sure we'll do 400 in six weeks with the same team. Totally realistic.
+10/26/26, 8:54 AM - Imani: As the BI person I don't care which one, as long as my dashboards don't break twice. Or we just keep querying both forever lol
+10/26/26, 8:55 AM - Colleen: Querying both doubles the cost and nobody can reconcile the numbers. Hard no on that.
+10/26/26, 8:56 AM - Imani: Ha, fair. Dropping that one.
+10/26/26, 8:59 AM - Sofia: Let me capture criteria. I'd rank speed to unified reporting first, then cost, then risk. Agree?
+10/26/26, 9:01 AM - Dmitri: Cost has to be in there. I heard from Anita that the CFO wants a 15% run-cost reduction on data platforms this year.
+10/26/26, 9:03 AM - Wei: Compliance needs to be its own item. Anything with PHI needs BAA coverage and the same access controls, and we have a regulatory audit in May.
+10/26/26, 9:05 AM - Sofia: Noted. Ranking for now: speed, cost, compliance.
+10/26/26, 9:08 AM - Gareth: Is the 3pm still on?
+10/26/26, 9:09 AM - Sofia: Yes, 3pm. Raj is walking through the claims mart inventory.
+10/26/26, 9:11 AM - Imani: Random, where do visitors park at the Halden office on Thursday? Lot looks full.
+10/26/26, 9:12 AM - Gareth: Level 3 of the garage, security badges them in at the gate.
+10/26/26, 9:15 AM - Colleen: My view stands, Databricks as the end state. Raj, what would it take for you?
+10/26/26, 9:18 AM - Raj: I could live with Databricks IF the migration tooling covers our 40 stored procedures. I haven't verified that yet.
+10/26/26, 9:20 AM - Colleen: Great, so Raj is fine with Databricks. Noting that.
+10/26/26, 9:21 AM - Raj: That's not what I said. I said I could live with it IF the tooling covers the 40 procs. That's not "fine".
+10/26/26, 9:22 AM - Colleen: OK, conditional. Fair.
+10/26/26, 9:25 AM - Sofia: Quick poll for the end state. A is Databricks, B is Snowflake. Reply with your pick.
+10/26/26, 9:26 AM - Colleen: A
+10/26/26, 9:27 AM - Imani: A
+10/26/26, 9:28 AM - Wei: A, provided the PHI controls and the BAA are in place before any claims data moves.
+10/26/26, 9:30 AM - Raj: B for now. Show me the stored procs working and I'll change.
+10/26/26, 9:31 AM - Dmitri: No view. I just need the cost number either way.
+10/26/26, 9:32 AM - Gareth: A, but not by March.
+10/26/26, 9:34 AM - Sofia: ok
+10/26/26, 10:34 AM - Dmitri: Numbers as I have them: Snowflake costs about $2.4M a year, Halden's Databricks about $1.9M. Keeping both is about $4.3M. A merged workload on Databricks should land near $3M.
+10/26/26, 10:39 AM - Dmitri: Correction on what I said earlier. The CFO target is 10%, not 15%. Anita just corrected me.
+10/26/26, 10:40 AM - Imani: 👍
+10/26/26, 10:44 AM - Gareth: Raj, doesn't the Snowflake contract renew soon?
+10/26/26, 10:47 AM - Raj: Yes. It renews Feb 28 and auto-renews for 3 years unless we give notice 90 days before, so by Nov 30.
+10/26/26, 10:49 AM - Dmitri: I'll pull the contract and confirm by Wednesday.
+10/26/26, 10:51 AM - Colleen: Then we serve non-renewal notice by Nov 30 and we're done.
+10/26/26, 10:53 AM - Raj: If we serve notice we lose Snowflake on Feb 28. We won't be on Databricks by then. That's a gap.
+10/26/26, 10:54 AM - Gareth: Exactly. And March for 400 pipelines was never going to happen.
+10/26/26, 10:56 AM - Wei: I also can't see claims data moving by March with the BAA and tokenization review not even started. I'm against a March date.
+10/26/26, 10:58 AM - Colleen: OK so what's realistic? Q2?
+10/26/26, 11:00 AM - Raj: Q2 is workable for me.
+10/26/26, 11:01 AM - Gareth: Q2 I could do. Needs the stored proc answer first.
+10/26/26, 11:02 AM - Imani: +1
+10/26/26, 11:05 AM - Sofia: Dropping the March target then. I'll plan on Q2 and confirm the date once Raj's assessment is back.
+10/26/26, 11:07 AM - Dmitri: Q2 works for me. It moves most of the spend into next FY anyway.
+10/26/26, 11:12 AM - Imani: Heads up, I'm out all next week, surgery. Wei is covering my BI sign-offs.
+10/26/26, 11:14 AM - Wei: Yes, I'll cover BI sign-offs next week.
+10/26/26, 11:17 AM - Dmitri: Between us: there's a hiring freeze, so no backfill for Raj's team. Please keep that inside this thread.
+10/26/26, 11:18 AM - Raj: Understood. So it's the people we have.
+10/26/26, 11:20 AM - Gareth: Which makes interim on-call matter. Who owns on-call for the legacy Snowflake pipelines during the migration?
+10/26/26, 11:22 AM - Colleen: Anyone know where the expense tool moved? The old link is dead.
+10/26/26, 11:23 AM - Imani: Under Finance Apps now.
+10/26/26, 11:25 AM - Gareth: Back to on-call please. Who owns it?
+10/26/26, 11:26 AM - Raj: Not it, my team is already stretched.
+10/26/26, 11:27 AM - Colleen: Halden platform team can't take Snowflake pipelines, we have no Snowflake skills.
+10/26/26, 11:29 AM - Sofia: Let's park on-call and I'll come back to it.
+10/26/26, 11:30 AM - Gareth: 👍
+10/27/26, 8:40 AM - Raj: First pass on the stored procs with the converter. 31 of 40 convert cleanly, 9 need rewrites.
+10/27/26, 8:43 AM - Colleen: That's a good result. Rewrites are maybe two weeks of work.
+10/27/26, 8:45 AM - Raj: Closer to 4 to 6 weeks with the team we have.
+10/27/26, 8:47 AM - Colleen: We can lend two engineers from Halden for the rewrites.
+10/27/26, 8:50 AM - Raj: If you lend two engineers for the rewrites, A works for me and I withdraw B.
+10/27/26, 8:52 AM - Colleen: Then I'll commit two engineers for six weeks, starting Dec 1.
+10/27/26, 8:54 AM - Gareth: Dec 1 plus six weeks is mid January. That works.
+10/27/26, 8:59 AM - Wei: PHI review update. Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum. Halden says the addendum is standard but I haven't seen it.
+10/27/26, 9:01 AM - Colleen: It's standard, I've signed one before.
+10/27/26, 9:03 AM - Wei: I need to read it myself. Until then my A is conditional on the BAA and tokenization.
+10/27/26, 9:06 AM - Dmitri: Contract confirmed. Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right.
+10/27/26, 9:08 AM - Raj: So we can't serve notice and still run until Q2.
+10/27/26, 9:10 AM - Dmitri: I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal. No promise they agree. I'll ask by Nov 20.
+10/27/26, 9:12 AM - Sofia: If they refuse we renew for a year and take the hit.
+10/27/26, 9:14 AM - Dmitri: A one-year renewal is about $2.4M, which wrecks the 10% target this FY. That's the downside.
+10/27/26, 9:17 AM - Sofia: Understood. Let's see what the rep says.
+10/27/26, 9:27 AM - Gareth: Separate thought. Until cutover can we federate queries across both platforms as a bridge?
+10/27/26, 9:29 AM - Colleen: As a temporary bridge, ok. As the end state, still no.
+10/27/26, 9:31 AM - Sofia: Interim only.
+10/27/26, 9:32 AM - Imani: That works for BI.
+10/27/26, 10:02 AM - Wei: Security architecture review is now mandatory before any PHI migration. It's booked for Dec 8 and takes about 3 weeks.
+10/27/26, 10:05 AM - Sofia: That changes the ranking. New order: compliance first, then cost, then speed. March is dead, Q2 it is, exact date after the Dec 8 review and Raj's assessment.
+10/27/26, 10:07 AM - Dmitri: Sofia, are we deciding the platform today?
+10/27/26, 10:09 AM - Sofia: I'd like a direction. Can we go with A as the direction, with the open items tracked?
+10/27/26, 10:11 AM - Dmitri: Fine, whatever gets us out of this thread.
+10/27/26, 10:13 AM - Gareth: A works for me, and Q2 is what makes it work.
+10/27/26, 10:15 AM - Colleen: Great, all seven of us are on board with Databricks then.
+10/27/26, 10:16 AM - Wei: Not all seven. I'm conditional on the BAA and tokenization, not "on board".
+10/27/26, 10:17 AM - Raj: Same, conditional on the stored procs and the engineers.
+10/27/26, 10:18 AM - Dmitri: And I abstained. Count me out of that.
+10/27/26, 10:20 AM - Colleen: OK, noted. Five supporters then, some conditional.
+10/27/26, 10:40 AM - Imani: Someone said earlier the budget is fixed at $3M. Is that right?
+10/27/26, 10:43 AM - Dmitri: Nobody said that. $3M was my estimate for the merged workload on Databricks. It isn't a budget.
+10/27/26, 10:45 AM - Imani: Got it, thanks.
+10/28/26, 7:35 AM - Gareth: On-call for the legacy Snowflake pipelines is still unowned. Flagging again.
+10/28/26, 7:39 AM - Sofia: Noted. I'll recap what we have.
+10/28/26, 7:42 AM - Sofia: Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review. Federation only as an interim bridge. March is off. I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30.
+10/28/26, 7:45 AM - Raj: I'll deliver the full stored procedure assessment by Nov 6.
+10/28/26, 7:47 AM - Wei: And I'll finish the BAA addendum review by Nov 13.
+10/28/26, 7:49 AM - Imani: Reminder, I'm out from Monday. BI sign-offs go to Wei.
+10/28/26, 7:52 AM - Dmitri: The extension request to Snowflake goes out by Nov 20, as I said.
+10/28/26, 7:54 AM - Colleen: Two Halden engineers start Dec 1. I'll confirm names by Nov 13.
+10/28/26, 7:57 AM - Gareth: Still no owner for on-call though. Not letting that go.
+10/28/26, 7:59 AM - Sofia: Understood.

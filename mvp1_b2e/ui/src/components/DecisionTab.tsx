@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { api } from '../api';
 import type { BriefOption, DecisionArtifact, Workspace } from '../types';
 
@@ -12,6 +12,7 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
   const [options, setOptions] = useState<BriefOption[]>([]);
   const [revisionNumber, setRevisionNumber] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
+  const autoFilledRef = useRef(false);
 
   // Form state
   const [owner, setOwner] = useState(workspace.decision_owner_label ?? '');
@@ -21,11 +22,7 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
   const [notes, setNotes] = useState('');
   const [recording, setRecording] = useState(false);
   const [recordError, setRecordError] = useState('');
-
-  // Preview
   const [showPreview, setShowPreview] = useState(false);
-  const [preview, setPreview] = useState<Record<string, unknown> | null>(null);
-  const [previewLoading, setPreviewLoading] = useState(false);
 
   // Selected artifact detail
   const [expandedArtifact, setExpandedArtifact] = useState<string | null>(null);
@@ -39,25 +36,19 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
       .then((b) => {
         setOptions(b.brief.options ?? []);
         setRevisionNumber(b.revision_number);
+        // Auto-fill from emerging_preference on first load
+        if (!autoFilledRef.current && b.brief.emerging_preference) {
+          autoFilledRef.current = true;
+          const ep = b.brief.emerging_preference;
+          if (ep.option_id) setSelectedOptionId(ep.option_id);
+          if (ep.summary) setRationale(ep.summary);
+        }
       })
       .catch(() => {});
     Promise.all([p1, p2]).finally(() => setLoading(false));
   }, [workspace.id]);
 
   useEffect(() => { load(); }, [load]);
-
-  async function handlePreview() {
-    setPreviewLoading(true);
-    try {
-      const res = await api.decisions.preview(workspace.id);
-      setPreview(res.preview);
-      setShowPreview(true);
-    } catch (e: unknown) {
-      setRecordError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setPreviewLoading(false);
-    }
-  }
 
   async function handleRecord(e: React.FormEvent) {
     e.preventDefault();
@@ -75,11 +66,11 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
       });
       await load();
       onWorkspaceUpdate();
-      // Reset form
       setRationale('');
       setNotes('');
       setSelectedOptionId('');
       setShowPreview(false);
+      autoFilledRef.current = false;
     } catch (e: unknown) {
       setRecordError(e instanceof Error ? e.message : String(e));
     } finally {
@@ -90,6 +81,7 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
   if (loading) return <p className="text-sm text-gray-400">Loading…</p>;
 
   const canRecord = workspace.lifecycle_status !== 'draft' && workspace.current_revision_id;
+  const selectedOption = options.find((o) => o.id === selectedOptionId);
 
   return (
     <div className="space-y-8">
@@ -162,7 +154,7 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
 
             {recordError && <p className="text-sm text-red-600">{recordError}</p>}
 
-            <div className="flex gap-2">
+            <div className="flex items-center gap-3">
               <button
                 type="submit"
                 disabled={recording || !owner.trim() || !recorder.trim() || !rationale.trim()}
@@ -172,27 +164,28 @@ export default function DecisionTab({ workspace, onWorkspaceUpdate }: Props) {
               </button>
               <button
                 type="button"
-                onClick={handlePreview}
-                disabled={previewLoading}
-                className="bg-white border border-gray-300 text-sm px-4 py-2 rounded-md hover:bg-gray-50 disabled:opacity-50 transition-colors"
+                onClick={() => setShowPreview((v) => !v)}
+                className="text-sm text-indigo-600 hover:text-indigo-800 underline"
               >
-                {previewLoading ? 'Loading…' : 'Preview artifact'}
+                {showPreview ? 'Hide preview' : 'Preview artifact'}
               </button>
             </div>
           </form>
 
-          {showPreview && preview && (
-            <div className="mt-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Artifact preview</p>
-                <button onClick={() => setShowPreview(false)} className="text-xs text-gray-400 hover:text-gray-600">Close</button>
-              </div>
+          {/* Live artifact preview — renders from current form state, no API call */}
+          {showPreview && (
+            <div className="mt-4 bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+              <p className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-3">Artifact preview (live)</p>
               <div className="space-y-2">
-                <Row label="Question" value={preview.primary_question as string} />
-                <Row label="Scope" value={preview.scope as string} />
-                <Row label="Decision rule" value={preview.decision_rule as string} />
-                <Row label="Revision" value={String(preview.revision_number)} />
-                <Row label="Authority verification" value="not_verified_phase_1" />
+                <Row label="Question" value={workspace.primary_question ?? undefined} />
+                <Row label="Scope" value={workspace.scope ?? undefined} />
+                <Row label="Decision rule" value={workspace.decision_rule ?? undefined} />
+                <Row label="Revision" value={revisionNumber != null ? String(revisionNumber) : undefined} />
+                <Row label="Selected option" value={selectedOption?.title ?? '— None / Defer —'} />
+                <Row label="Decision owner" value={owner.trim() || undefined} />
+                <Row label="Recorded by" value={recorder.trim() || undefined} />
+                <Row label="Rationale" value={rationale.trim() || undefined} />
+                {notes.trim() && <Row label="Notes" value={notes.trim()} />}
               </div>
             </div>
           )}

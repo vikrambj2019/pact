@@ -27,10 +27,11 @@ async def start_extraction(workspace_id: uuid.UUID, db: AsyncSession = Depends(g
     if not result.scalar_one_or_none():
         raise HTTPException(422, "No parsed source documents found — upload and parse sources first")
 
-    ikey = f"extract_brief:{workspace_id}"
+    # Deduplicate only against already-running/pending jobs; allow re-runs after completion
     existing = await db.execute(
         select(Job).where(
-            Job.idempotency_key == ikey,
+            Job.workspace_id == workspace_id,
+            Job.type == JobType.extract_brief,
             Job.status.in_([JobStatus.pending, JobStatus.running]),
         )
     )
@@ -42,7 +43,7 @@ async def start_extraction(workspace_id: uuid.UUID, db: AsyncSession = Depends(g
         type=JobType.extract_brief,
         status=JobStatus.pending,
         input_payload={"workspace_id": str(workspace_id)},
-        idempotency_key=ikey,
+        idempotency_key=f"extract_brief:{workspace_id}:{uuid.uuid4()}",
     )
     db.add(job)
     await db.commit()
@@ -55,8 +56,6 @@ async def start_synthesis(workspace_id: uuid.UUID, db: AsyncSession = Depends(ge
     ws = await db.get(Workspace, workspace_id)
     if not ws:
         raise HTTPException(404, "Workspace not found")
-    if not ws.primary_question:
-        raise HTTPException(422, "Confirm the primary question before synthesizing — call /question-confirmation first")
 
     result = await db.execute(
         select(Job)
@@ -72,10 +71,10 @@ async def start_synthesis(workspace_id: uuid.UUID, db: AsyncSession = Depends(ge
     if not extract_job:
         raise HTTPException(422, "No completed extraction job found — run /brief/extract first")
 
-    ikey = f"synthesize_brief:{workspace_id}:{extract_job.id}"
     existing = await db.execute(
         select(Job).where(
-            Job.idempotency_key == ikey,
+            Job.workspace_id == workspace_id,
+            Job.type == JobType.synthesize_brief,
             Job.status.in_([JobStatus.pending, JobStatus.running]),
         )
     )
@@ -90,7 +89,7 @@ async def start_synthesis(workspace_id: uuid.UUID, db: AsyncSession = Depends(ge
             "workspace_id": str(workspace_id),
             "extract_job_id": str(extract_job.id),
         },
-        idempotency_key=ikey,
+        idempotency_key=f"synthesize_brief:{workspace_id}:{uuid.uuid4()}",
     )
     db.add(job)
     await db.commit()

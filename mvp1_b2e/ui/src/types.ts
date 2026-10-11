@@ -87,6 +87,7 @@ export interface BriefSnapshot {
   actions?: Array<{ id: string; text: string; owner_label?: string }>;
   separate_issues?: Array<{ id: string; title: string; rationale: string }>;
   emerging_preference?: EmergingPreference | null;
+  executive_summary?: string | null;
 }
 
 export interface BriefData {

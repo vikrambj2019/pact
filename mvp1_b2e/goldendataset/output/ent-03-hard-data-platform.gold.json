@@ -1,0 +1,1245 @@
+{
+ "id": "ent-03-hard-data-platform",
+ "level": 3,
+ "scenario_notes": "Seven people over three days. Three interleaved decisions: end-state platform, cutover timing, interim on-call ownership. Priorities change twice (speed first, then compliance first). Sarcasm, a half-serious option that is dropped then revived as interim only, a poll with an abstention, a chair's bare 'ok', a reply-linked '+1', a misattributed stance and a false 'everyone is on board' claim, hearsay that is later corrected, an estimate mistaken for a budget, two sensitive disclosures, off-topic questions, a contract deadline that interacts with the timing decision, and an on-call question that never gets an owner. The platform direction is clear and not formally confirmed.",
+ "decision_question": "What end-state data platform should we consolidate on after the merger, and when do we cut over?",
+ "outcome": "Direction, not final: Databricks as the end state, Q2 cutover with the exact date to follow Raj's assessment and the Dec 8 security review, federation only as an interim bridge. Sofia will confirm the platform formally at the Nov 16 steering. Interim on-call is unowned.",
+ "pact_state": {
+  "question": {
+   "text": "What end-state data platform should we consolidate on after the merger, and when do we cut over?",
+   "msgs": [
+    "m001"
+   ]
+  },
+  "options": [
+   {
+    "title": "Databricks (A)",
+    "decision": "platform",
+    "status": "active",
+    "proposed_by": "Colleen",
+    "msgs": [
+     "m002",
+     "m023",
+     "m081",
+     "m094"
+    ]
+   },
+   {
+    "title": "Snowflake (B)",
+    "decision": "platform",
+    "status": "dropped",
+    "proposed_by": "Raj",
+    "msgs": [
+     "m003",
+     "m026",
+     "m062",
+     "m063"
+    ],
+    "note": "Raj withdrew B on condition that Halden lend two engineers; Colleen committed them (m063)."
+   },
+   {
+    "title": "Federate across both platforms",
+    "decision": "platform",
+    "status": "fallback",
+    "proposed_by": "Imani",
+    "msgs": [
+     "m006",
+     "m008",
+     "m074",
+     "m075",
+     "m076"
+    ],
+    "note": "Dropped by Imani on Monday (half-serious). Reopened by Gareth on Tuesday as an interim bridge only. Not an end state."
+   },
+   {
+    "title": "Unified reporting by end of March",
+    "decision": "timing",
+    "status": "dropped",
+    "proposed_by": "Sofia",
+    "msgs": [
+     "m001",
+     "m044",
+     "m079"
+    ],
+    "note": "The exec ask. Dropped by Sofia after objections from Gareth and Wei."
+   },
+   {
+    "title": "Q2 cutover",
+    "decision": "timing",
+    "status": "active",
+    "proposed_by": "Colleen",
+    "msgs": [
+     "m040",
+     "m044",
+     "m079",
+     "m094"
+    ],
+    "note": "Exact date open until Raj's assessment (Nov 6) and the Dec 8 security review."
+   }
+  ],
+  "criteria": [
+   {
+    "text": "Priority order v1 (Mon): speed to unified reporting, then cost, then compliance",
+    "raised_by": [
+     "Sofia"
+    ],
+    "msgs": [
+     "m009",
+     "m012"
+    ],
+    "status": "superseded"
+   },
+   {
+    "text": "Priority order v2 (Tue): compliance first, then cost, then speed",
+    "raised_by": [
+     "Sofia"
+    ],
+    "msgs": [
+     "m079"
+    ],
+    "status": "current"
+   },
+   {
+    "text": "Cost",
+    "raised_by": [
+     "Dmitri"
+    ],
+    "msgs": [
+     "m010"
+    ]
+   },
+   {
+    "text": "Compliance (PHI, BAA, access controls)",
+    "raised_by": [
+     "Wei"
+    ],
+    "msgs": [
+     "m011"
+    ]
+   },
+   {
+    "text": "BI dashboards do not break twice",
+    "raised_by": [
+     "Imani"
+    ],
+    "msgs": [
+     "m006"
+    ]
+   },
+   {
+    "text": "Numbers must reconcile across platforms",
+    "raised_by": [
+     "Colleen"
+    ],
+    "msgs": [
+     "m007"
+    ]
+   },
+   {
+    "text": "Stored-procedure coverage in the migration tooling",
+    "raised_by": [
+     "Raj"
+    ],
+    "msgs": [
+     "m018"
+    ]
+   }
+  ],
+  "constraints": [
+   {
+    "text": "Exec ask: unified reporting by end of March",
+    "status": "superseded by Q2 plan",
+    "msgs": [
+     "m001",
+     "m044",
+     "m079"
+    ]
+   },
+   {
+    "text": "Snowflake renews Feb 28 and auto-renews for 3 years unless notice is given by Nov 30",
+    "status": "confirmed from the contract by Dmitri",
+    "msgs": [
+     "m034",
+     "m068"
+    ]
+   },
+   {
+    "text": "PHI needs BAA coverage and the same access controls; regulatory audit in May",
+    "status": "stated",
+    "msgs": [
+     "m011"
+    ]
+   },
+   {
+    "text": "Security architecture review is mandatory before any PHI migration; booked Dec 8, about 3 weeks",
+    "status": "stated",
+    "msgs": [
+     "m078"
+    ]
+   },
+   {
+    "text": "CFO run-cost reduction target of 10% (second-hand via Anita)",
+    "status": "hearsay, corrected from 15%",
+    "msgs": [
+     "m010",
+     "m031"
+    ]
+   },
+   {
+    "text": "Federation allowed as an interim bridge only",
+    "status": "stated by chair",
+    "msgs": [
+     "m075",
+     "m076"
+    ]
+   },
+   {
+    "text": "Team capacity is fixed; no extra engineers for Raj's team",
+    "status": "stated",
+    "sensitive": true,
+    "msgs": [
+     "m048",
+     "m049"
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "text": "Halden moved 300 pipelines in 8 weeks last year",
+    "by": "Colleen",
+    "kind": "factual, first-hand",
+    "status": "unverified; Gareth sarcastically doubts the scale-up",
+    "msgs": [
+     "m004",
+     "m005"
+    ],
+    "quote": "Halden moved 300 pipelines in 8 weeks last year"
+   },
+   {
+    "text": "About 400 pipelines would need to move",
+    "by": "Gareth",
+    "kind": "estimate, implied",
+    "status": "unverified",
+    "msgs": [
+     "m005",
+     "m038"
+    ],
+    "quote": "March for 400 pipelines was never going to happen"
+   },
+   {
+    "text": "CFO wants a 15% run-cost reduction",
+    "by": "Dmitri",
+    "kind": "hearsay",
+    "status": "corrected by Dmitri to 10%, still second-hand",
+    "msgs": [
+     "m010",
+     "m031"
+    ],
+    "quote": "I heard from Anita that the CFO wants a 15% run-cost reduction"
+   },
+   {
+    "text": "Snowflake about $2.4M a year, Databricks about $1.9M, both about $4.3M, merged on Databricks near $3M",
+    "by": "Dmitri",
+    "kind": "estimate",
+    "status": "unverified; the $3M was misread as a budget and corrected",
+    "msgs": [
+     "m030",
+     "m089",
+     "m090"
+    ],
+    "quote": "Snowflake costs about $2.4M a year, Halden's Databricks about $1.9M"
+   },
+   {
+    "text": "Snowflake renews Feb 28 and auto-renews for 3 years unless notice by Nov 30",
+    "by": "Raj",
+    "kind": "factual",
+    "status": "confirmed by Dmitri from the contract",
+    "msgs": [
+     "m034",
+     "m068"
+    ],
+    "quote": "It renews Feb 28 and auto-renews for 3 years"
+   },
+   {
+    "text": "31 of 40 stored procedures convert cleanly; 9 need rewrites",
+    "by": "Raj",
+    "kind": "factual, first pass",
+    "status": "unverified",
+    "msgs": [
+     "m058"
+    ],
+    "quote": "31 of 40 convert cleanly, 9 need rewrites"
+   },
+   {
+    "text": "The rewrites are about two weeks of work",
+    "by": "Colleen",
+    "kind": "estimate",
+    "status": "disputed by Raj (4 to 6 weeks); unresolved",
+    "msgs": [
+     "m059",
+     "m060"
+    ],
+    "quote": "Rewrites are maybe two weeks of work"
+   },
+   {
+    "text": "Databricks needs column-level tokenization on member IDs plus a BAA addendum",
+    "by": "Wei",
+    "kind": "preliminary finding",
+    "status": "open",
+    "msgs": [
+     "m065"
+    ],
+    "quote": "Databricks needs column-level tokenization on member IDs plus a BAA addendum"
+   },
+   {
+    "text": "The Halden BAA addendum is standard",
+    "by": "Colleen",
+    "kind": "factual, first-hand",
+    "status": "unverified; Wei has not read it",
+    "msgs": [
+     "m066",
+     "m067"
+    ],
+    "quote": "It's standard, I've signed one before"
+   },
+   {
+    "text": "Security architecture review is booked for Dec 8 and takes about 3 weeks",
+    "by": "Wei",
+    "kind": "factual",
+    "status": "unchallenged",
+    "msgs": [
+     "m078"
+    ],
+    "quote": "booked for Dec 8 and takes about 3 weeks"
+   },
+   {
+    "text": "Raj is fine with Databricks",
+    "by": "Colleen",
+    "kind": "claim about another person's stance",
+    "status": "contradicted by Raj: conditional only",
+    "msgs": [
+     "m019",
+     "m020",
+     "m021"
+    ],
+    "quote": "so Raj is fine with Databricks"
+   },
+   {
+    "text": "All seven of us are on board with Databricks",
+    "by": "Colleen",
+    "kind": "false consensus claim",
+    "status": "contradicted by Wei, Raj and Dmitri; Colleen corrected to five supporters, some conditional",
+    "msgs": [
+     "m084",
+     "m085",
+     "m086",
+     "m087",
+     "m088"
+    ],
+    "quote": "all seven of us are on board with Databricks"
+   },
+   {
+    "text": "Querying both platforms doubles the cost",
+    "by": "Colleen",
+    "kind": "opinion/estimate",
+    "status": "unverified",
+    "msgs": [
+     "m007"
+    ],
+    "quote": "Querying both doubles the cost"
+   }
+  ],
+  "positions": [
+   {
+    "participant": "Colleen",
+    "option": "Databricks (A)",
+    "stance": "support",
+    "msgs": [
+     "m002",
+     "m023"
+    ],
+    "quote": "A"
+   },
+   {
+    "participant": "Imani",
+    "option": "Databricks (A)",
+    "stance": "support",
+    "msgs": [
+     "m024"
+    ],
+    "quote": "A"
+   },
+   {
+    "participant": "Gareth",
+    "option": "Databricks (A)",
+    "stance": "support",
+    "msgs": [
+     "m028",
+     "m083"
+    ],
+    "quote": "A works for me, and Q2 is what makes it work"
+   },
+   {
+    "participant": "Raj",
+    "option": "Databricks (A)",
+    "stance": "conditional",
+    "msgs": [
+     "m062",
+     "m086"
+    ],
+    "quote": "A works for me and I withdraw B",
+    "condition": "Halden lends two engineers (met, m063) and the tooling covers the 40 stored procedures (assessment due Nov 6)"
+   },
+   {
+    "participant": "Wei",
+    "option": "Databricks (A)",
+    "stance": "conditional",
+    "msgs": [
+     "m025",
+     "m067"
+    ],
+    "quote": "my A is conditional on the BAA and tokenization",
+    "condition": "BAA reviewed and PHI tokenization in place before claims data moves"
+   },
+   {
+    "participant": "Dmitri",
+    "option": "Databricks (A)",
+    "stance": "acknowledged",
+    "msgs": [
+     "m082"
+    ],
+    "quote": "Fine, whatever gets us out of this thread",
+    "note": "Abstained in the poll (m027 'No view'). A backchannel is not support."
+   },
+   {
+    "participant": "Sofia",
+    "option": "Databricks (A)",
+    "stance": "proposed",
+    "msgs": [
+     "m081"
+    ],
+    "quote": "Can we go with A as the direction",
+    "note": "Chair. Her 'ok' in the poll (m029) is not a vote."
+   },
+   {
+    "participant": "Raj",
+    "option": "Snowflake (B)",
+    "stance": "support",
+    "msgs": [
+     "m003",
+     "m026"
+    ],
+    "quote": "B for now",
+    "note": "Superseded by m062."
+   },
+   {
+    "participant": "Raj",
+    "option": "Snowflake (B)",
+    "stance": "withdrawn",
+    "msgs": [
+     "m062"
+    ],
+    "quote": "I withdraw B"
+   },
+   {
+    "participant": "Imani",
+    "option": "Federate across both platforms",
+    "stance": "proposed",
+    "msgs": [
+     "m006"
+    ],
+    "quote": "Or we just keep querying both forever lol",
+    "note": "Half-serious."
+   },
+   {
+    "participant": "Imani",
+    "option": "Federate across both platforms",
+    "stance": "withdrawn",
+    "msgs": [
+     "m008"
+    ],
+    "quote": "Dropping that one"
+   },
+   {
+    "participant": "Colleen",
+    "option": "Federate across both platforms",
+    "stance": "oppose",
+    "msgs": [
+     "m007"
+    ],
+    "quote": "Hard no on that",
+    "note": "As an end state."
+   },
+   {
+    "participant": "Gareth",
+    "option": "Federate across both platforms",
+    "stance": "proposed",
+    "msgs": [
+     "m074"
+    ],
+    "quote": "can we federate queries across both platforms as a bridge",
+    "note": "Interim bridge only."
+   },
+   {
+    "participant": "Colleen",
+    "option": "Federate across both platforms",
+    "stance": "conditional",
+    "msgs": [
+     "m075"
+    ],
+    "quote": "As a temporary bridge, ok",
+    "condition": "interim only"
+   },
+   {
+    "participant": "Sofia",
+    "option": "Federate across both platforms",
+    "stance": "conditional",
+    "msgs": [
+     "m076"
+    ],
+    "quote": "Interim only",
+    "condition": "interim only"
+   },
+   {
+    "participant": "Imani",
+    "option": "Federate across both platforms",
+    "stance": "support",
+    "msgs": [
+     "m077"
+    ],
+    "quote": "That works for BI",
+    "note": "As an interim bridge."
+   },
+   {
+    "participant": "Sofia",
+    "option": "Unified reporting by end of March",
+    "stance": "proposed",
+    "msgs": [
+     "m001"
+    ],
+    "quote": "The exec ask is unified reporting by end of March",
+    "note": "Relays the exec ask."
+   },
+   {
+    "participant": "Gareth",
+    "option": "Unified reporting by end of March",
+    "stance": "oppose",
+    "msgs": [
+     "m038"
+    ],
+    "quote": "March for 400 pipelines was never going to happen"
+   },
+   {
+    "participant": "Wei",
+    "option": "Unified reporting by end of March",
+    "stance": "oppose",
+    "msgs": [
+     "m039"
+    ],
+    "quote": "I'm against a March date"
+   },
+   {
+    "participant": "Sofia",
+    "option": "Unified reporting by end of March",
+    "stance": "withdrawn",
+    "msgs": [
+     "m044"
+    ],
+    "quote": "Dropping the March target then"
+   },
+   {
+    "participant": "Colleen",
+    "option": "Q2 cutover",
+    "stance": "proposed",
+    "msgs": [
+     "m040"
+    ],
+    "quote": "OK so what's realistic? Q2?"
+   },
+   {
+    "participant": "Raj",
+    "option": "Q2 cutover",
+    "stance": "support",
+    "msgs": [
+     "m041"
+    ],
+    "quote": "Q2 is workable for me",
+    "note": "Reply to m040."
+   },
+   {
+    "participant": "Imani",
+    "option": "Q2 cutover",
+    "stance": "support",
+    "msgs": [
+     "m043"
+    ],
+    "quote": "+1",
+    "note": "Reply to m040; supports Q2, not the platform."
+   },
+   {
+    "participant": "Dmitri",
+    "option": "Q2 cutover",
+    "stance": "support",
+    "msgs": [
+     "m045"
+    ],
+    "quote": "Q2 works for me"
+   },
+   {
+    "participant": "Sofia",
+    "option": "Q2 cutover",
+    "stance": "support",
+    "msgs": [
+     "m044",
+     "m079"
+    ],
+    "quote": "I'll plan on Q2"
+   },
+   {
+    "participant": "Gareth",
+    "option": "Q2 cutover",
+    "stance": "conditional",
+    "msgs": [
+     "m042"
+    ],
+    "quote": "Q2 I could do. Needs the stored proc answer first",
+    "condition": "stored-procedure answer"
+   }
+  ],
+  "superseded_positions": [
+   {
+    "participant": "Raj",
+    "option": "Snowflake (B)",
+    "was": "support",
+    "now": "withdrawn",
+    "msgs": [
+     "m026",
+     "m062"
+    ]
+   },
+   {
+    "participant": "Raj",
+    "option": "Databricks (A)",
+    "was": "conditional (tooling covers 40 procs)",
+    "now": "conditional (plus two Halden engineers, now met)",
+    "msgs": [
+     "m018",
+     "m062",
+     "m063"
+    ]
+   }
+  ],
+  "objections": [
+   {
+    "participant": "Gareth",
+    "targets": [
+     "Unified reporting by end of March"
+    ],
+    "text": "March is unrealistic for the pipeline volume (sarcastic in m005, explicit in m038)",
+    "status": "resolved",
+    "moot": true,
+    "msgs": [
+     "m005",
+     "m038"
+    ],
+    "quote": "March for 400 pipelines was never going to happen"
+   },
+   {
+    "participant": "Wei",
+    "targets": [
+     "Unified reporting by end of March"
+    ],
+    "text": "Claims data cannot move by March with the BAA and tokenization review not started",
+    "status": "resolved",
+    "moot": true,
+    "msgs": [
+     "m039"
+    ],
+    "quote": "I'm against a March date"
+   },
+   {
+    "participant": "Colleen",
+    "targets": [
+     "Federate across both platforms"
+    ],
+    "text": "Running both doubles cost and numbers cannot be reconciled (as an end state)",
+    "status": "resolved",
+    "moot": true,
+    "msgs": [
+     "m007",
+     "m075"
+    ],
+    "quote": "Hard no on that"
+   }
+  ],
+  "blockers": [
+   {
+    "text": "Stored-procedure coverage: 9 of 40 need rewrites; effort estimates conflict (about 2 weeks vs 4 to 6); gates Raj's support, Gareth's Q2 condition and the cutover date",
+    "status": "open",
+    "owner": "Raj",
+    "due": "Nov 6",
+    "msgs": [
+     "m018",
+     "m058",
+     "m059",
+     "m060",
+     "m086",
+     "m095"
+    ],
+    "quote": "31 of 40 convert cleanly, 9 need rewrites"
+   },
+   {
+    "text": "BAA addendum not yet reviewed and member-ID tokenization required before claims data moves; gates Wei's support",
+    "status": "open",
+    "owner": "Wei",
+    "due": "Nov 13",
+    "msgs": [
+     "m025",
+     "m065",
+     "m067",
+     "m096"
+    ],
+    "quote": "my A is conditional on the BAA and tokenization"
+   },
+   {
+    "text": "Security architecture review (Dec 8, about 3 weeks) must finish before any PHI migration; sets the earliest cutover date",
+    "status": "open",
+    "owner": null,
+    "due": "Dec 8 start",
+    "msgs": [
+     "m078",
+     "m079",
+     "m094"
+    ],
+    "quote": "booked for Dec 8 and takes about 3 weeks"
+   },
+   {
+    "text": "Snowflake auto-renews for 3 years on Feb 28 unless notice by Nov 30, but cutover lands after Feb 28, so serving notice alone creates a gap; extension request pending; fallback is a one-year renewal (about $2.4M) that threatens the 10% cost target",
+    "status": "open",
+    "owner": "Dmitri",
+    "due": "Nov 20 (request); Nov 30 (notice deadline)",
+    "msgs": [
+     "m034",
+     "m036",
+     "m037",
+     "m068",
+     "m069",
+     "m070",
+     "m071",
+     "m072",
+     "m098"
+    ],
+    "quote": "we can't serve notice and still run until Q2"
+   },
+   {
+    "text": "Raj's condition that Halden lend two engineers for the rewrites",
+    "status": "resolved",
+    "owner": "Colleen",
+    "due": null,
+    "msgs": [
+     "m061",
+     "m062",
+     "m063",
+     "m064"
+    ],
+    "quote": "I'll commit two engineers for six weeks, starting Dec 1"
+   },
+   {
+    "text": "Snowflake contract terms unconfirmed",
+    "status": "resolved",
+    "owner": "Dmitri",
+    "due": null,
+    "msgs": [
+     "m035",
+     "m068"
+    ],
+    "quote": "notice due Nov 30"
+   }
+  ],
+  "separate_issues": [
+   {
+    "text": "Who owns on-call for the legacy Snowflake pipelines during the migration? Raj's and Colleen's teams said they cannot; Sofia parked it; Gareth flagged it again on Wednesday.",
+    "status": "open, no owner",
+    "decision": "interim on-call ownership",
+    "msgs": [
+     "m050",
+     "m053",
+     "m054",
+     "m055",
+     "m056",
+     "m092",
+     "m100",
+     "m101"
+    ]
+   },
+   {
+    "text": "Visitor parking at the Halden office on Thursday",
+    "status": "resolved (Level 3 of the garage)",
+    "msgs": [
+     "m015",
+     "m016"
+    ]
+   },
+   {
+    "text": "Is the 3pm call still on",
+    "status": "resolved",
+    "msgs": [
+     "m013",
+     "m014"
+    ]
+   },
+   {
+    "text": "Where the expense tool moved",
+    "status": "resolved (Finance Apps)",
+    "msgs": [
+     "m051",
+     "m052"
+    ]
+   },
+   {
+    "text": "BI sign-off cover while Imani is out; Wei covers",
+    "status": "resolved",
+    "msgs": [
+     "m047",
+     "m097"
+    ]
+   }
+  ],
+  "sensitive": [
+   {
+    "msgs": [
+     "m046"
+    ],
+    "kind": "health",
+    "handling": "Never state the reason for Imani's absence. The cover arrangement (Wei, BI sign-offs) may appear."
+   },
+   {
+    "msgs": [
+     "m048",
+     "m049"
+    ],
+    "kind": "confidential HR/finance",
+    "handling": "Do not state a hiring freeze or no backfill. At most: team capacity is limited."
+   }
+  ],
+  "actions": [
+   {
+    "text": "Deliver the full stored-procedure assessment",
+    "owner": "Raj",
+    "owner_kind": "named",
+    "due": "Nov 6",
+    "msgs": [
+     "m095"
+    ],
+    "quote": "I'll deliver the full stored procedure assessment by Nov 6"
+   },
+   {
+    "text": "Finish the BAA addendum review",
+    "owner": "Wei",
+    "owner_kind": "named",
+    "due": "Nov 13",
+    "msgs": [
+     "m096"
+    ],
+    "quote": "I'll finish the BAA addendum review by Nov 13"
+   },
+   {
+    "text": "Ask Snowflake for a 6-month extension to Aug 31",
+    "owner": "Dmitri",
+    "owner_kind": "named",
+    "due": "Nov 20",
+    "msgs": [
+     "m070",
+     "m098"
+    ],
+    "quote": "I'll ask the Snowflake rep for a 6-month extension to Aug 31"
+   },
+   {
+    "text": "Commit two Halden engineers for six weeks from Dec 1",
+    "owner": "Colleen",
+    "owner_kind": "named",
+    "due": "Dec 1",
+    "msgs": [
+     "m063",
+     "m099"
+    ],
+    "quote": "I'll commit two engineers for six weeks, starting Dec 1"
+   },
+   {
+    "text": "Confirm the names of the two engineers",
+    "owner": "Colleen",
+    "owner_kind": "named",
+    "due": "Nov 13",
+    "msgs": [
+     "m099"
+    ],
+    "quote": "I'll confirm names by Nov 13"
+   },
+   {
+    "text": "Confirm the platform formally at the steering meeting",
+    "owner": "Sofia",
+    "owner_kind": "named",
+    "due": "Nov 16",
+    "msgs": [
+     "m094"
+    ],
+    "quote": "I'll confirm the platform formally at the Nov 16 steering"
+   },
+   {
+    "text": "Confirm the Q2 cutover date once Raj's assessment is back",
+    "owner": "Sofia",
+    "owner_kind": "named",
+    "due": "after Nov 6",
+    "msgs": [
+     "m044"
+    ],
+    "quote": "I'll plan on Q2 and confirm the date once Raj's assessment is back"
+   },
+   {
+    "text": "Assign an owner for interim on-call of the legacy Snowflake pipelines",
+    "owner": null,
+    "owner_kind": "unassigned",
+    "due": null,
+    "msgs": [
+     "m050",
+     "m056",
+     "m092",
+     "m100"
+    ],
+    "quote": "Who owns on-call for the legacy Snowflake pipelines during the migration"
+   }
+  ],
+  "emerging_preference": {
+   "option": "Databricks (A)",
+   "summary": "Databricks (A) has explicit support from Colleen, Imani and Gareth (conditional: Raj, Wei); proposed by Sofia; acknowledged only by Dmitri. Q2 cutover has explicit support from Raj, Imani, Dmitri and Sofia (conditional: Gareth); proposed by Colleen.",
+   "supporters": {
+    "platform": [
+     "Colleen",
+     "Imani",
+     "Gareth"
+    ],
+    "timing": [
+     "Raj",
+     "Imani",
+     "Dmitri",
+     "Sofia"
+    ]
+   },
+   "conditional": {
+    "platform": [
+     "Raj",
+     "Wei"
+    ],
+    "timing": [
+     "Gareth"
+    ]
+   },
+   "refs": [
+    "m023",
+    "m024",
+    "m083",
+    "m062",
+    "m067",
+    "m082",
+    "m081",
+    "m041",
+    "m043",
+    "m045",
+    "m044",
+    "m042"
+   ]
+  }
+ },
+ "executive_summary": {
+  "title": "What end-state data platform should we consolidate on after the merger, and when do we cut over?",
+  "status_line": "5 options (2 dropped); Databricks (A): explicit support from Colleen, Imani, Gareth (3); conditional: Raj, Wei; acknowledged only: Dmitri; Federate across both platforms: explicit support from Imani (1); conditional: Colleen, Sofia; Q2 cutover: explicit support from Raj, Imani, Dmitri, Sofia (4); conditional: Gareth; 0 open objections; 4 open blockers; 1 action without a named owner.",
+  "counts": {
+   "options": 5,
+   "dropped": 2,
+   "open_objections": 0,
+   "open_blockers": 4,
+   "unowned_actions": 1
+  },
+  "needs_attention": [
+   {
+    "text": "Snowflake auto-renews for 3 years on Feb 28 unless notice is given by Nov 30. A Q2 cutover lands after Feb 28, so serving notice alone leaves a gap. Dmitri will ask for a 6-month extension to Aug 31 by Nov 20. If refused, a one-year renewal (about $2.4M, his estimate) puts the 10% cost target at risk. The 10% target itself is second-hand.",
+    "refs": [
+     "m034",
+     "m037",
+     "m068",
+     "m069",
+     "m070",
+     "m072",
+     "m031"
+    ]
+   },
+   {
+    "text": "Interim on-call for the legacy Snowflake pipelines has no owner. Raj's team and Colleen's team each said they cannot take it, Sofia parked it, and Gareth has raised it again since.",
+    "refs": [
+     "m050",
+     "m054",
+     "m055",
+     "m056",
+     "m092",
+     "m100"
+    ]
+   },
+   {
+    "text": "Raj's and Wei's support is conditional. Raj: stored-procedure assessment due Nov 6 (9 of 40 need rewrites; effort is disputed, 2 weeks vs 4 to 6). Wei: BAA addendum review due Nov 13 and member-ID tokenization. The security architecture review starts Dec 8 and takes about 3 weeks before any PHI moves.",
+    "refs": [
+     "m058",
+     "m059",
+     "m060",
+     "m067",
+     "m078",
+     "m086",
+     "m095",
+     "m096"
+    ]
+   },
+   {
+    "text": "Support is not unanimous. Colleen's 'all seven on board' was corrected by Wei, Raj and Dmitri. Dmitri abstained in the poll and later only acknowledged ('Fine, whatever').",
+    "refs": [
+     "m027",
+     "m082",
+     "m084",
+     "m085",
+     "m086",
+     "m087",
+     "m088"
+    ]
+   },
+   {
+    "text": "Priorities changed. Monday's order was speed, cost, compliance; on Tuesday Sofia reordered to compliance, cost, speed. The March target was dropped.",
+    "refs": [
+     "m012",
+     "m044",
+     "m079"
+    ]
+   }
+  ],
+  "proposed": [
+   {
+    "text": "Databricks (A) as the end state: explicit support from Colleen, Imani and Gareth; conditional: Raj (stored procedures) and Wei (BAA, tokenization); Dmitri acknowledged only. Sofia proposed it as the direction. Snowflake (B) was withdrawn by Raj once Halden committed two engineers.",
+    "refs": [
+     "m023",
+     "m024",
+     "m083",
+     "m062",
+     "m063",
+     "m067",
+     "m082",
+     "m081"
+    ]
+   },
+   {
+    "text": "Q2 cutover, with the exact date after Raj's assessment and the Dec 8 review: explicit support from Raj, Imani, Dmitri and Sofia; conditional: Gareth (stored-procedure answer). The March target is dropped.",
+    "refs": [
+     "m041",
+     "m043",
+     "m045",
+     "m044",
+     "m042",
+     "m079"
+    ]
+   },
+   {
+    "text": "Federating queries across both platforms: interim bridge only, not an end state. Imani supports it; Colleen and Sofia accept it as temporary.",
+    "refs": [
+     "m074",
+     "m075",
+     "m076",
+     "m077"
+    ]
+   }
+  ],
+  "committed": [
+   {
+    "text": "Raj: full stored-procedure assessment by Nov 6.",
+    "refs": [
+     "m095"
+    ]
+   },
+   {
+    "text": "Wei: BAA addendum review by Nov 13.",
+    "refs": [
+     "m096"
+    ]
+   },
+   {
+    "text": "Dmitri: ask Snowflake for a 6-month extension to Aug 31 by Nov 20.",
+    "refs": [
+     "m070",
+     "m098"
+    ]
+   },
+   {
+    "text": "Colleen: two Halden engineers for six weeks from Dec 1; names confirmed by Nov 13.",
+    "refs": [
+     "m063",
+     "m099"
+    ]
+   },
+   {
+    "text": "Sofia: confirm the platform formally at the Nov 16 steering, and the Q2 date once Raj's assessment is back.",
+    "refs": [
+     "m094",
+     "m044"
+    ]
+   }
+  ],
+  "preference": {
+   "text": "Databricks (A) has explicit support from Colleen, Imani and Gareth (conditional: Raj, Wei); proposed by Sofia; acknowledged only by Dmitri. Q2 cutover has explicit support from Raj, Imani, Dmitri and Sofia (conditional: Gareth); proposed by Colleen. Not formally confirmed.",
+   "refs": [
+    "m023",
+    "m024",
+    "m083",
+    "m062",
+    "m067",
+    "m082",
+    "m081",
+    "m041",
+    "m043",
+    "m045",
+    "m044",
+    "m042",
+    "m094"
+   ]
+  }
+ },
+ "traps": [
+  {
+   "msgs": [
+    "m019",
+    "m020",
+    "m021"
+   ],
+   "note": "Colleen claims Raj is 'fine' with Databricks. Raj says conditional. Record Raj as conditional, not support."
+  },
+  {
+   "msgs": [
+    "m005",
+    "m038"
+   ],
+   "note": "Gareth's sarcasm ('Totally realistic') is an objection to the March timeline. It is not support for anything."
+  },
+  {
+   "msgs": [
+    "m006",
+    "m008",
+    "m074",
+    "m075",
+    "m076"
+   ],
+   "note": "Federation: half-serious, dropped Monday, reopened Tuesday as an interim bridge only. It must not appear as a rival end-state option, and must not be left as dropped."
+  },
+  {
+   "msgs": [
+    "m027",
+    "m029",
+    "m082"
+   ],
+   "note": "Dmitri abstained ('No view') and later said 'Fine, whatever'. Sofia's 'ok' is a bare acknowledgement. None of the three are support for Databricks."
+  },
+  {
+   "msgs": [
+    "m040",
+    "m041",
+    "m043"
+   ],
+   "note": "Raj's and Imani's replies are linked to m040 (Q2). They support Q2, not the platform. Imani's '+1' has no meaning without the reply link."
+  },
+  {
+   "msgs": [
+    "m010",
+    "m031"
+   ],
+   "note": "15% cost reduction was hearsay and was corrected to 10%. The card must show 10% and still mark it second-hand."
+  },
+  {
+   "msgs": [
+    "m089",
+    "m090"
+   ],
+   "note": "$3M was an estimate for the merged workload, not a budget. A card that lists a $3M budget is wrong."
+  },
+  {
+   "msgs": [
+    "m084",
+    "m085",
+    "m086",
+    "m087",
+    "m088"
+   ],
+   "note": "False consensus claim ('all seven'). Correct count: three explicit supporters, two conditional, one abstained then acknowledged, one chair proposing."
+  },
+  {
+   "msgs": [
+    "m036",
+    "m037",
+    "m069",
+    "m070"
+   ],
+   "note": "Colleen's 'serve notice by Nov 30' is overtaken by the gap Raj raised and Dmitri's extension request. It is not a decision."
+  },
+  {
+   "msgs": [
+    "m012",
+    "m079"
+   ],
+   "note": "Priority order changed. The current order is compliance, cost, speed. The earlier order is superseded."
+  },
+  {
+   "msgs": [
+    "m046",
+    "m048"
+   ],
+   "note": "Two sensitive disclosures. The reason for Imani's absence (health) and the hiring freeze must not appear on the card."
+  },
+  {
+   "msgs": [
+    "m056",
+    "m101"
+   ],
+   "note": "'I'll come back to it' and 'Understood' do not assign on-call to Sofia. The action stays unowned."
+  },
+  {
+   "msgs": [
+    "m094"
+   ],
+   "note": "Sofia's recap restates the direction and promises a formal confirmation on Nov 16. It is not a recorded group decision."
+  },
+  {
+   "msgs": [
+    "m013",
+    "m014",
+    "m015",
+    "m016",
+    "m051",
+    "m052"
+   ],
+   "note": "Off-topic threads (3pm call, parking, expense tool). Separate issues, not blockers."
+  }
+ ],
+ "card_must_include": [
+  "Databricks as the emerging direction with named explicit supporters, named conditional supporters with their conditions, and Dmitri as acknowledged only",
+  "Q2 cutover with exact date still open, March dropped",
+  "Snowflake Nov 30 notice deadline interacting with a post-Feb 28 cutover, extension request by Nov 20",
+  "On-call ownership unowned",
+  "Raj Nov 6, Wei Nov 13, Dmitri Nov 20, Colleen Dec 1, Sofia Nov 16 as named actions",
+  "Federation as interim only",
+  "Priority order changed from speed-first to compliance-first"
+ ],
+ "card_must_not_include": [
+  "Everyone or all seven agrees",
+  "Raj or Wei as unconditional supporters",
+  "Dmitri or Sofia as having voted for Databricks",
+  "A $3M budget",
+  "A 15% cost reduction target as the current figure",
+  "Federation as an end-state option",
+  "A hiring freeze or no backfill",
+  "The reason for Imani's absence",
+  "On-call assigned to anyone",
+  "The platform as formally decided"
+ ]
+}

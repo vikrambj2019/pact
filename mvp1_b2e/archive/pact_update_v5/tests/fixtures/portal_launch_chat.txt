@@ -1,0 +1,70 @@
+Portal Launch - Core Team (Teams chat export)
+
+[10/5/26 9:02 AM] Priya Nair: Morning all. We need to lock the plan for the member portal launch. Target is still Nov 16. Where are we on the identity vendor?
+[10/5/26 9:05 AM] Marcus Webb: Code complete for the portal by Nov 6 if nothing slips. Acme IDV integration is done in staging.
+[10/5/26 9:06 AM] Priya Nair: great
+[10/5/26 9:08 AM] Elena Ruiz: Acme's SOC 2 Type II report isn't in yet. Their rep told me Oct 23. I haven't seen that in writing.
+[10/5/26 9:09 AM] Rosa Alvarez: and the DPA with Acme is not signed. last redline went back to them Friday
+[10/5/26 9:10 AM] Priya Nair: ok so are we blocked?
+[10/5/26 9:11 AM] Rosa Alvarez: not blocked, but we can't go live with member data flowing to them without it signed
+[10/5/26 9:13 AM] Jon Becker: budget reminder: the launch envelope is $180k all in. we're at about $150k committed
+[10/5/26 9:14 AM] Dev Patel: does that include the data pipeline run costs?
+[10/5/26 9:15 AM] Jon Becker: no, those are in ops budget
+[10/5/26 9:16 AM] Dev Patel: ok
+[10/5/26 9:20 AM] Priya Nair: Options as I see them. A) Nov 16 with Acme as planned. B) Nov 16 with our own email OTP verification, switch to Acme later. C) slip to January
+[10/5/26 9:22 AM] Marcus Webb: B is about 3 weeks of work for my team
+[10/5/26 9:23 AM] Dev Patel: 3 weeks? more like 5 once you build the account recovery flows
+[10/5/26 9:24 AM] Marcus Webb: we'd skip recovery for v1
+[10/5/26 9:24 AM] Elena Ruiz: absolutely not skipping recovery. that's how accounts get taken over
+[10/5/26 9:27 AM] Jon Becker: B also costs more. I'd guess $40k for the extra build
+[10/5/26 9:28 AM] Priya Nair: is that inside the 180?
+[10/5/26 9:28 AM] Jon Becker: 150 + 40 = 190, so no
+[10/5/26 9:30 AM] Hal Okonkwo: Hi all, quick one. exec team wants this live before the Dec 15 change freeze. January is a non-starter.
+[10/5/26 9:31 AM] Priya Nair: Understood, so C is out
+[10/5/26 9:31 AM] Marcus Webb: +1
+[10/5/26 9:32 AM] Elena Ruiz: fine with dropping C
+[10/5/26 9:33 AM] Rosa Alvarez: me too
+[10/5/26 9:35 AM] Jon Becker: correction on B. I was rough. closer to $65k, not $40k. recovery flows add a lot
+[10/5/26 9:36 AM] Priya Nair: so B puts us at $215k?
+[10/5/26 9:36 AM] Jon Becker: yes. over by $35k
+[10/5/26 9:38 AM] Dev Patel: did anyone see the Figma link for the new onboarding screens
+[10/5/26 9:39 AM] Priya Nair: pinned in the channel
+[10/5/26 9:40 AM] Marcus Webb: who's covering on-call Thursday? I'm out
+[10/5/26 9:41 AM] Dev Patel: me
+[10/5/26 9:44 AM] Hal Okonkwo: So to be clear, Marcus said we're done by Nov 16, right?
+[10/5/26 9:45 AM] Marcus Webb: No. I said code complete by Nov 6. launch also needs security sign-off and the DPA
+[10/5/26 9:46 AM] Hal Okonkwo: ok thanks for clarifying
+[10/6/26 8:40 AM] Elena Ruiz: Pen test results are back. One open finding on the existing auth service has to be closed before any launch, whichever vendor. Details are in the security tracker. It's finding #3.
+[10/6/26 8:42 AM] Marcus Webb: Can we close #3 by Nov 6?
+[10/6/26 8:43 AM] Elena Ruiz: I think so if Dev's team prioritizes the token fix
+[10/6/26 8:44 AM] Dev Patel: that's a week of work. I can start tomorrow
+[10/6/26 8:45 AM] Priya Nair: Dev, is that a yes?
+[10/6/26 8:46 AM] Dev Patel: ok
+[10/6/26 8:50 AM] Priya Nair: So priority has shifted: compliance first, speed second. Agree?
+[10/6/26 8:51 AM] Marcus Webb: Agree
+[10/6/26 8:52 AM] Rosa Alvarez: Agree
+[10/6/26 8:53 AM] Elena Ruiz: yes
+[10/6/26 8:55 AM] Jon Becker: I'm focused on budget but fine
+[10/6/26 9:00 AM] Hal Okonkwo: Off topic, is the all-hands still Thursday?
+[10/6/26 9:01 AM] Priya Nair: moved to Friday I think
+[10/6/26 9:02 AM] Hal Okonkwo: ok
+[10/7/26 10:12 AM] Priya Nair: Proposal: go with A. Nov 16 launch with Acme. Go/no-go checkpoint Oct 30. By then we need 1) Acme SOC 2 report in hand, 2) DPA signed, 3) finding #3 fix on track. If any is missing on Oct 30, we move to B for launch and accept the extra cost.
+[10/7/26 10:14 AM] Marcus Webb: I'm good with that
+[10/7/26 10:15 AM] Rosa Alvarez: Good with A and the checkpoint. I'll chase the DPA. I'm out on leave from Oct 20 so I need it signed before then.
+[10/7/26 10:16 AM] Elena Ruiz: A is fine for me, as long as I see the SOC 2 report in writing before I sign off. I won't sign off on a rep's word
+[10/7/26 10:18 AM] Jon Becker: I can't approve B at $215k. if we end up there someone has to take that to Hal
+[10/7/26 10:19 AM] Priya Nair: noted. so B is a fallback pending Hal's approval
+[10/7/26 10:20 AM] Dev Patel: fine
+[10/7/26 10:25 AM] Priya Nair: ok so we're aligned. A with the Oct 30 checkpoint. Marcus confirms Nov 6 code complete, Rosa on DPA, Elena on SOC 2, Dev on fix #3
+[10/7/26 10:26 AM] Marcus Webb: confirmed
+[10/7/26 10:27 AM] Rosa Alvarez: yes
+[10/7/26 10:28 AM] Elena Ruiz: yes
+[10/7/26 10:30 AM] Hal Okonkwo: I'll back whichever you pick as long as it's live before the freeze. if B needs money, send me the ask by Oct 30
+[10/7/26 10:31 AM] Priya Nair: Thanks Hal.
+[10/7/26 10:33 AM] Jon Becker: one more. I want the $180k cap noted as the budget for A
+[10/7/26 10:34 AM] Priya Nair: noted
+[10/9/26 2:10 PM] Elena Ruiz: Acme sent the SOC 2 Type II report today, earlier than expected. I've read the summary. I'll finish the review by Oct 14.
+[10/9/26 2:12 PM] Rosa Alvarez: Acme's counsel came back on the DPA. One clause still open, data retention. I'll know more Monday.
+[10/9/26 2:15 PM] Dev Patel: token fix started Wednesday, on track
+[10/9/26 2:20 PM] Priya Nair: Great. Hal, nothing needed from you yet.
+[10/9/26 2:21 PM] Hal Okonkwo: 👍

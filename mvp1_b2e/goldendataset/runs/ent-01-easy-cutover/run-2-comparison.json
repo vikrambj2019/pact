@@ -1,0 +1,355 @@
+{
+  "dataset": "ent-01-easy-cutover",
+  "run": 2,
+  "model": "claude-sonnet-4-6",
+  "level": 1,
+  "score": {
+    "passed": 25,
+    "partial": 1,
+    "failed": 1,
+    "missing": 0,
+    "total": 27,
+    "score_pct": 94.4,
+    "by_section": {
+      "options": {
+        "pass": 3,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_status::Nov 14-15",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Nov 14-15' with status 'active' for the 'date' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output contains an option titled 'Nov 14-15' with status 'active' under decision 'date'."
+          },
+          {
+            "claim_id": "option_status::Nov 21-22",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Nov 21-22' with status 'fallback' for the 'date' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output contains an option titled 'Nov 21-22' with status 'fallback' under decision 'date'."
+          },
+          {
+            "claim_id": "option_status::Dec 5-6",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Dec 5-6' with status 'dropped' for the 'date' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output contains an option titled 'Dec 5-6' with status 'dropped' under decision 'date'."
+          }
+        ]
+      },
+      "positions": {
+        "pass": 11,
+        "fail": 1,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_proposer::Nov 14-15",
+            "claim": "'Hannah' is recorded as the proposer of option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Hannah' as the proposer of the 'Nov 14-15' option."
+          },
+          {
+            "claim_id": "option_proposer::Nov 21-22",
+            "claim": "'Dev' is recorded as the proposer of option 'Nov 21-22'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Dev' as the proposer of the 'Nov 21-22' option."
+          },
+          {
+            "claim_id": "option_proposer::Dec 5-6",
+            "claim": "'Hannah' is recorded as the proposer of option 'Dec 5-6'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Hannah' as the proposer of the 'Dec 5-6' option."
+          },
+          {
+            "claim_id": "position::Marcus::Nov 14-15",
+            "claim": "'Marcus' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Marcus with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Elena::Nov 14-15",
+            "claim": "'Elena' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Elena with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Tom::Nov 14-15",
+            "claim": "'Tom' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Tom with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Hannah::Nov 14-15",
+            "claim": "'Hannah' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Hannah with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Dev::Nov 14-15",
+            "claim": "'Dev' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Dev with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Priya::Nov 14-15",
+            "claim": "'Priya' has stance 'support' on option 'Nov 14-15'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Priya with stance 'support' on option 'Nov 14-15'."
+          },
+          {
+            "claim_id": "position::Dev::Nov 21-22",
+            "claim": "'Dev' has stance 'conditional' on option 'Nov 21-22'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Dev with stance 'conditional' on option 'Nov 21-22'."
+          },
+          {
+            "claim_id": "position::Priya::Nov 21-22",
+            "claim": "'Priya' has stance 'conditional' on option 'Nov 21-22'.",
+            "verdict": "fail",
+            "reason": "The pipeline does not record any position for Priya on option 'Nov 21-22'."
+          },
+          {
+            "claim_id": "position::Elena::Dec 5-6",
+            "claim": "'Elena' has stance 'oppose' on option 'Dec 5-6'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Elena with stance 'oppose' on option 'Dec 5-6'."
+          }
+        ]
+      },
+      "actions": {
+        "pass": 5,
+        "fail": 0,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "action::Dev::Write the runbook and have it reviewed",
+            "claim": "There is an action 'Write the runbook and have it reviewed' owned by 'Dev', due Nov 9.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Write the runbook and have it reviewed by Nov 9' owned by Dev, due Nov 9."
+          },
+          {
+            "claim_id": "action::Tom::Sign off UAT",
+            "claim": "There is an action 'Sign off UAT' owned by 'Tom', due Nov 6.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Hold UAT sign-off on Friday Nov 6' owned by Tom, due Nov 6."
+          },
+          {
+            "claim_id": "action::Hannah::Send the customer notice",
+            "claim": "There is an action 'Send the customer notice' owned by 'Hannah', due Nov 9.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Send the customer notice by Nov 9' owned by Hannah, due Nov 9."
+          },
+          {
+            "claim_id": "action::Elena::Lock the weekend support rota",
+            "claim": "There is an action 'Lock the weekend support rota' owned by 'Elena', due Nov 2.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Lock the weekend support rota by Nov 2' owned by Elena, due Nov 2."
+          },
+          {
+            "claim_id": "action::Marcus::Brief the auditors and confirm back",
+            "claim": "There is an action 'Brief the auditors and confirm back' owned by 'Marcus', due Nov 10.",
+            "verdict": "pass",
+            "reason": "The pipeline records two related actions for Marcus\u2014briefing the auditors on Nov 10 and confirming back\u2014satisfying this claim."
+          },
+          {
+            "claim_id": "action::Priya::Book the war room and post the final sch",
+            "claim": "There is an action 'Book the war room and post the final schedule once the runbook is done' owned by 'Priya', due after runbook.",
+            "verdict": "partial",
+            "reason": "The pipeline splits this into two separate actions ('Book the war room' and 'Post the final schedule once the runbook is done'), both owned by Priya and correctly tied to the runbook dependency, but the single combined action as stated in the claim is not present as one entry."
+          }
+        ]
+      },
+      "objections": {
+        "pass": 1,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "objection::Holiday staffing freeze makes Dec 5-6 unworkable",
+            "claim": "There is an objection 'Holiday staffing freeze makes Dec 5-6 unworkable' with resolution status 'resolved'.",
+            "verdict": "pass",
+            "reason": "The pipeline records an objection about the holiday staffing freeze making Dec 5-6 unworkable with resolution_status 'resolved' and moot=true, matching the claim."
+          }
+        ]
+      },
+      "constraints": {
+        "pass": 5,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "constraint::Keep clear of month-end close, Nov 25-30",
+            "claim": "The constraint 'Keep clear of month-end close, Nov 25-30' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint stating 'Must avoid Nov 25-30 due to month-end close (last three business days of November)', which matches the claim."
+          },
+          {
+            "claim_id": "constraint::Holiday staffing freeze starts Nov 23; no added we",
+            "claim": "The constraint 'Holiday staffing freeze starts Nov 23; no added weekend cover after' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint stating 'Holiday staffing freeze starts Nov 23; no weekend support cover can be added after that date', which matches the claim."
+          },
+          {
+            "claim_id": "constraint::Five full days needed after UAT sign-off",
+            "claim": "The constraint 'Five full days needed after UAT sign-off' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint stating 'At least five full days required after UAT sign-off for final data sync and rehearsal before cutover', which matches the claim."
+          },
+          {
+            "claim_id": "constraint::UAT sign-off scheduled for Fri Nov 6",
+            "claim": "The constraint 'UAT sign-off scheduled for Fri Nov 6' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint 'UAT sign-off is scheduled for Friday Nov 6', which matches the claim."
+          },
+          {
+            "claim_id": "constraint::Customers were promised 5 days notice for billing ",
+            "claim": "The constraint 'Customers were promised 5 days notice for billing changes' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint 'Customers must receive at least 5 days notice for billing changes', which matches the claim."
+          }
+        ]
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "claim_id": "option_status::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline output contains an option titled 'Nov 14-15' with status 'active' under decision 'date'."
+    },
+    {
+      "claim_id": "option_proposer::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Hannah' as the proposer of the 'Nov 14-15' option."
+    },
+    {
+      "claim_id": "option_status::Nov 21-22",
+      "verdict": "pass",
+      "reason": "The pipeline output contains an option titled 'Nov 21-22' with status 'fallback' under decision 'date'."
+    },
+    {
+      "claim_id": "option_proposer::Nov 21-22",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Dev' as the proposer of the 'Nov 21-22' option."
+    },
+    {
+      "claim_id": "option_status::Dec 5-6",
+      "verdict": "pass",
+      "reason": "The pipeline output contains an option titled 'Dec 5-6' with status 'dropped' under decision 'date'."
+    },
+    {
+      "claim_id": "option_proposer::Dec 5-6",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Hannah' as the proposer of the 'Dec 5-6' option."
+    },
+    {
+      "claim_id": "position::Marcus::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Marcus with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Elena::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Elena with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Tom::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Tom with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Hannah::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Hannah with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Dev::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Dev with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Priya::Nov 14-15",
+      "verdict": "pass",
+      "reason": "The pipeline records Priya with stance 'support' on option 'Nov 14-15'."
+    },
+    {
+      "claim_id": "position::Dev::Nov 21-22",
+      "verdict": "pass",
+      "reason": "The pipeline records Dev with stance 'conditional' on option 'Nov 21-22'."
+    },
+    {
+      "claim_id": "position::Priya::Nov 21-22",
+      "verdict": "fail",
+      "reason": "The pipeline does not record any position for Priya on option 'Nov 21-22'."
+    },
+    {
+      "claim_id": "position::Elena::Dec 5-6",
+      "verdict": "pass",
+      "reason": "The pipeline records Elena with stance 'oppose' on option 'Dec 5-6'."
+    },
+    {
+      "claim_id": "action::Dev::Write the runbook and have it reviewed",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Write the runbook and have it reviewed by Nov 9' owned by Dev, due Nov 9."
+    },
+    {
+      "claim_id": "action::Tom::Sign off UAT",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Hold UAT sign-off on Friday Nov 6' owned by Tom, due Nov 6."
+    },
+    {
+      "claim_id": "action::Hannah::Send the customer notice",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Send the customer notice by Nov 9' owned by Hannah, due Nov 9."
+    },
+    {
+      "claim_id": "action::Elena::Lock the weekend support rota",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Lock the weekend support rota by Nov 2' owned by Elena, due Nov 2."
+    },
+    {
+      "claim_id": "action::Marcus::Brief the auditors and confirm back",
+      "verdict": "pass",
+      "reason": "The pipeline records two related actions for Marcus\u2014briefing the auditors on Nov 10 and confirming back\u2014satisfying this claim."
+    },
+    {
+      "claim_id": "action::Priya::Book the war room and post the final sch",
+      "verdict": "partial",
+      "reason": "The pipeline splits this into two separate actions ('Book the war room' and 'Post the final schedule once the runbook is done'), both owned by Priya and correctly tied to the runbook dependency, but the single combined action as stated in the claim is not present as one entry."
+    },
+    {
+      "claim_id": "objection::Holiday staffing freeze makes Dec 5-6 unworkable",
+      "verdict": "pass",
+      "reason": "The pipeline records an objection about the holiday staffing freeze making Dec 5-6 unworkable with resolution_status 'resolved' and moot=true, matching the claim."
+    },
+    {
+      "claim_id": "constraint::Keep clear of month-end close, Nov 25-30",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint stating 'Must avoid Nov 25-30 due to month-end close (last three business days of November)', which matches the claim."
+    },
+    {
+      "claim_id": "constraint::Holiday staffing freeze starts Nov 23; no added we",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint stating 'Holiday staffing freeze starts Nov 23; no weekend support cover can be added after that date', which matches the claim."
+    },
+    {
+      "claim_id": "constraint::Five full days needed after UAT sign-off",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint stating 'At least five full days required after UAT sign-off for final data sync and rehearsal before cutover', which matches the claim."
+    },
+    {
+      "claim_id": "constraint::UAT sign-off scheduled for Fri Nov 6",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint 'UAT sign-off is scheduled for Friday Nov 6', which matches the claim."
+    },
+    {
+      "claim_id": "constraint::Customers were promised 5 days notice for billing ",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint 'Customers must receive at least 5 days notice for billing changes', which matches the claim."
+    }
+  ]
+}

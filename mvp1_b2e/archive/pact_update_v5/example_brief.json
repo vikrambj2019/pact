@@ -1,0 +1,818 @@
+{
+  "id": "6c997f2f-c01f-4d91-948d-805f1204a9c7",
+  "created_at": "2026-10-11T00:49:55+00:00",
+  "source": "anniversary_chat.txt",
+  "format": "whatsapp",
+  "question": "Which date and venue for the parents' 40th anniversary dinner?",
+  "executive_summary": "Which date and venue for the parents' 40th anniversary dinner?\n\n9 options proposed (4 dropped: Seoul House — rejected, Catering at Nadia's house — 5 steps at the front, Alma — private room holds only 14, Harbor Hall — second floor); date — Dec 12: 6 explicit supporters: Hana, Leila, Omar, Tariq, Yusuf, Nadia; venue — Casa Verde: 5 explicit supporters: Tariq, Hana, Omar, Leila, Nadia; acknowledged only: Yusuf; budget — $400 each: 4 explicit supporters: Nadia, Leila, Yusuf, Hana; proposed by Omar; no stance on budget: Tariq; guest count — Guest cap of 20: 2 explicit supporters: Leila, Nadia; no stance on guest count: Yusuf, Omar, Tariq, Hana; 0 open objections; 1 open blocker; 1 open action without a named owner; 1 task asked but not accepted (Leila); 1 assignment declined by the person named.\n\nNEEDS ATTENTION\n· Drinks push the Casa Verde total to about $2,460, over the $2,400 cap [Omar, 10/5/26 9:55 AM]\n· Who covers the drinks: owner not named [Nadia, 10/6/26 1:33 PM]\n· Booking Casa Verde: asked of Leila, not accepted [Nadia, 10/5/26 6:30 PM]\n· Omar declined paying for drinks [Omar, 10/5/26 6:31 PM]\n\nPROPOSED\n· Dec 12: explicit support from Nadia, Yusuf, Omar, Leila, Tariq and Hana [Tariq, 10/6/26 8:15 AM]\n· Casa Verde: explicit support from Nadia, Leila, Omar, Tariq and Hana; acknowledged by Yusuf [Tariq, 10/6/26 12:07 PM]\n· $400 per person: explicit support from Omar, Nadia, Leila, Yusuf and Hana [Nadia, 10/4/26 8:11 PM]\n· Guest cap of 20: explicit support from Leila and Nadia [Leila, 10/5/26 10:07 AM]\n· Alma dropped: private room holds only 14 [Tariq, 10/6/26 8:16 AM]\n· Harbor Hall dropped: second floor [Leila, 10/5/26 2:21 PM]\n\nCOMMITTED\n· Nadia sends the $500 deposit Monday; deadline Oct 16 [Nadia, 10/6/26 1:31 PM]\n· Leila trims the guest list to 20 by Sunday [Leila, 10/5/26 10:07 AM]\n· Omar brings the cake [Omar, 10/6/26 1:26 PM]\n\nUNVERIFIED\n· Free parking behind Casa Verde (one person's report) [Leila, 10/6/26 12:05 PM]\n· Private room is on the ground floor (one person's report) [Leila, 10/5/26 2:21 PM]\n· Drinks about $20 a head (not written down) [Leila, 10/5/26 9:53 AM]\n· Everyone's on board: Tariq disputed this [Nadia, 10/5/26 6:30 PM]\n\nPREFERENCE\nDec 12 has explicit support from Hana, Leila, Omar, Tariq, Yusuf and Nadia. Casa Verde has explicit support from Tariq, Hana, Omar, Leila and Nadia; acknowledged only by Yusuf. $400 each has explicit support from Nadia, Leila, Yusuf and Hana, plus Omar (proposer). Guest cap of 20 has explicit support from Leila and Nadia.",
+  "status": "9 options proposed (4 dropped: Seoul House — rejected, Catering at Nadia's house — 5 steps at the front, Alma — private room holds only 14, Harbor Hall — second floor); date — Dec 12: 6 explicit supporters: Hana, Leila, Omar, Tariq, Yusuf, Nadia; venue — Casa Verde: 5 explicit supporters: Tariq, Hana, Omar, Leila, Nadia; acknowledged only: Yusuf; budget — $400 each: 4 explicit supporters: Nadia, Leila, Yusuf, Hana; proposed by Omar; no stance on budget: Tariq; guest count — Guest cap of 20: 2 explicit supporters: Leila, Nadia; no stance on guest count: Yusuf, Omar, Tariq, Hana; 0 open objections; 1 open blocker; 1 open action without a named owner; 1 task asked but not accepted (Leila); 1 assignment declined by the person named.",
+  "emerging_preference": {
+    "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af",
+    "summary": "Dec 12 has explicit support from Hana, Leila, Omar, Tariq, Yusuf and Nadia. Casa Verde has explicit support from Tariq, Hana, Omar, Leila and Nadia; acknowledged only by Yusuf. $400 each has explicit support from Nadia, Leila, Yusuf and Hana, plus Omar (proposer). Guest cap of 20 has explicit support from Leila and Nadia.",
+    "supporting_refs": [
+      "u10",
+      "u11",
+      "u12",
+      "u8",
+      "u70",
+      "u77",
+      "u84",
+      "u76",
+      "u78",
+      "u57",
+      "u82",
+      "u83",
+      "u17",
+      "u27",
+      "u28",
+      "u29",
+      "u30",
+      "u80",
+      "u47"
+    ],
+    "dissenting_refs": []
+  },
+  "brief": {
+    "criteria": [],
+    "constraints": [
+      {
+        "text": "Budget cap of $400 per sibling ($2,400 for six)",
+        "source_unit_ids": [
+          "u27"
+        ],
+        "quote": "thats 2,400 for six of us",
+        "kind": "mandatory",
+        "author_label": "Omar",
+        "id": "d45eca52-c16b-402a-a9e9-150a9ea155d8"
+      },
+      {
+        "text": "Casa Verde needs a $500 deposit by Oct 16 to hold the 12th",
+        "source_unit_ids": [
+          "u37"
+        ],
+        "quote": "they need a $500 deposit by Oct 16",
+        "kind": "mandatory",
+        "author_label": "Leila",
+        "id": "d0fe0e5a-a7e1-4820-94bd-824d7f4eac4c"
+      },
+      {
+        "text": "Casa Verde private room fits 20 max",
+        "source_unit_ids": [
+          "u37"
+        ],
+        "quote": "private room fits 20 max",
+        "kind": "mandatory",
+        "author_label": "Leila",
+        "id": "9ab9e67f-d6fb-4426-8d10-fae33259f112"
+      },
+      {
+        "text": "Venue must be step-free",
+        "source_unit_ids": [
+          "u50"
+        ],
+        "quote": "has to be step-free",
+        "kind": "mandatory",
+        "author_label": "Yusuf",
+        "sensitive": true,
+        "id": "6b04bb88-b0c9-46e7-b375-ec7d3d302f31"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "Dec 5",
+        "title": "Dec 5",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "u9"
+        ],
+        "quote": "Dec 5 or Dec 12",
+        "description": "",
+        "id": "391a36ff-de5a-4e0b-8d82-346247b46a0f"
+      },
+      {
+        "temp_id": "Dec 12",
+        "title": "Dec 12",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "u9"
+        ],
+        "quote": "Dec 5 or Dec 12",
+        "description": "",
+        "id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "temp_id": "Seoul House",
+        "title": "Seoul House",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "u15",
+          "u16"
+        ],
+        "quote": "lol no",
+        "description": "",
+        "status_reason": "rejected",
+        "id": "8ce609be-c124-4909-b0f2-df94e3631af4"
+      },
+      {
+        "temp_id": "Casa Verde",
+        "title": "Casa Verde",
+        "decision": "venue",
+        "status": "active",
+        "source_unit_ids": [
+          "u17"
+        ],
+        "quote": "Casa Verde",
+        "description": "",
+        "id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "temp_id": "Catering at Nadia's house",
+        "title": "Catering at Nadia's house",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "u17",
+          "u51"
+        ],
+        "quote": "catering at mine is out",
+        "description": "",
+        "status_reason": "5 steps at the front",
+        "id": "6a44a07c-7ea0-481e-869c-06e271c3b33c"
+      },
+      {
+        "temp_id": "Alma",
+        "title": "Alma",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "u21",
+          "u71"
+        ],
+        "quote": "the private room only holds 14",
+        "description": "",
+        "status_reason": "private room holds only 14",
+        "id": "7a5a9b94-9510-4142-b4be-218aebdf3de2"
+      },
+      {
+        "temp_id": "Harbor Hall",
+        "title": "Harbor Hall",
+        "decision": "venue",
+        "status": "dropped",
+        "source_unit_ids": [
+          "u24",
+          "u53"
+        ],
+        "quote": "Harbor Hall is out then",
+        "description": "",
+        "status_reason": "second floor",
+        "id": "34b79e2e-b407-47ed-b247-b3a84b6e6c67"
+      },
+      {
+        "temp_id": "$400 each",
+        "title": "$400 each",
+        "decision": "budget",
+        "status": "active",
+        "source_unit_ids": [
+          "u27"
+        ],
+        "quote": "I'm not paying more than $400 each",
+        "description": "",
+        "id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "temp_id": "Guest cap of 20",
+        "title": "Guest cap of 20",
+        "decision": "guest count",
+        "status": "active",
+        "source_unit_ids": [
+          "u47"
+        ],
+        "quote": "20 or nothing",
+        "description": "",
+        "id": "4313da0e-c518-4a6d-ab41-ea56864f0b36"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Catering for 18 costs around $1,400",
+        "source_unit_ids": [
+          "u17"
+        ],
+        "quote": "around $1,400 for 18",
+        "kind": "factual",
+        "author_label": "Nadia",
+        "id": "7f386be4-4c16-43b1-b247-dc0b83097ff1"
+      },
+      {
+        "text": "Catering for 18 is closer to $2,200 with rentals",
+        "source_unit_ids": [
+          "u18"
+        ],
+        "quote": "closer to 2,200 once you add rentals",
+        "kind": "factual",
+        "author_label": "Omar",
+        "id": "e9e34cec-0332-4190-84fc-a20819aef019"
+      },
+      {
+        "text": "Alma is $150 a head",
+        "source_unit_ids": [
+          "u22"
+        ],
+        "quote": "Alma is $150 a head",
+        "kind": "factual",
+        "author_label": "Nadia",
+        "id": "27ca5634-757e-4c81-96c1-161af68704d0"
+      },
+      {
+        "text": "Alma prix fixe is $95 a head",
+        "source_unit_ids": [
+          "u23"
+        ],
+        "quote": "prix fixe is $95",
+        "kind": "factual",
+        "author_label": "Tariq",
+        "id": "90abb57d-4f6f-4bb2-b0ba-fb3cec18b1a2"
+      },
+      {
+        "text": "Casa Verde private room: $2,100 for 18 with food, drinks extra",
+        "source_unit_ids": [
+          "u37"
+        ],
+        "quote": "$2,100 for 18 people with food",
+        "kind": "factual",
+        "author_label": "Leila",
+        "id": "79d92bb8-bc66-4f62-ba34-929d28cc12ab"
+      },
+      {
+        "text": "Drinks at Casa Verde are about $20 a head",
+        "source_unit_ids": [
+          "u40"
+        ],
+        "quote": "about $20 a head",
+        "kind": "factual",
+        "author_label": "Leila",
+        "id": "d99a4fb6-3a6c-4904-aab2-46487c560703"
+      },
+      {
+        "text": "Casa Verde's private room is on the ground floor",
+        "source_unit_ids": [
+          "u53"
+        ],
+        "quote": "Casa Verde's private room is ground floor",
+        "kind": "factual",
+        "author_label": "Leila",
+        "id": "bbf517c6-ea8a-45d5-ac33-7f48a7ec6ef0"
+      },
+      {
+        "text": "Yusuf is fine with anything",
+        "source_unit_ids": [
+          "u59"
+        ],
+        "quote": "Yusuf is fine with anything",
+        "kind": "other",
+        "author_label": "Nadia",
+        "id": "6323c1a8-8afe-45ef-b3c3-05ad63593eb9"
+      },
+      {
+        "text": "Everyone is on board with Casa Verde, Dec 12, $400 each",
+        "source_unit_ids": [
+          "u61"
+        ],
+        "quote": "everyone's on board",
+        "kind": "other",
+        "author_label": "Nadia",
+        "id": "fe40d5de-8287-4afc-a0bf-6ba630718867"
+      },
+      {
+        "text": "Casa Verde has a free lot behind the building, about 12 spots",
+        "source_unit_ids": [
+          "u75"
+        ],
+        "quote": "free lot behind the building, about 12 spots",
+        "kind": "factual",
+        "author_label": "Leila",
+        "id": "48a13f8a-f995-4d41-99ff-81f853407e50"
+      },
+      {
+        "text": "Private arrangement between two participants",
+        "source_unit_ids": [
+          "u78",
+          "u79"
+        ],
+        "quote": "I can do 300 right now",
+        "kind": "other",
+        "author_label": "Hana",
+        "sensitive": true,
+        "id": "2bda8427-9bb9-4d2e-a19f-09f4d3e0207e"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Hana",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u10"
+        ],
+        "id": "c2271c95-a255-4883-b992-34f650c3efb6",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Leila",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u11"
+        ],
+        "id": "a1d291f8-7989-465d-b307-80fd4ae902a5",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Omar",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u12"
+        ],
+        "id": "b4bced4a-7443-40fa-a593-a521f1d73c6e",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "oppose",
+        "proposer": false,
+        "source_unit_ids": [
+          "u16"
+        ],
+        "id": "7b8633ea-eb53-4b12-bd4f-70f1f1d9f49a",
+        "option_id": "8ce609be-c124-4909-b0f2-df94e3631af4"
+      },
+      {
+        "participant_label": "Yusuf",
+        "stance": "proposed",
+        "proposer": true,
+        "source_unit_ids": [
+          "u24"
+        ],
+        "id": "24ebbcda-3242-4115-bc65-b9f5648856ff",
+        "option_id": "34b79e2e-b407-47ed-b247-b3a84b6e6c67"
+      },
+      {
+        "participant_label": "Omar",
+        "stance": "proposed",
+        "proposer": true,
+        "source_unit_ids": [
+          "u27"
+        ],
+        "id": "2d95924f-7faa-4658-bb0f-c7c5d3c6484c",
+        "option_id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u28"
+        ],
+        "id": "0040b6eb-436e-4b54-873d-193b3675bad6",
+        "option_id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "participant_label": "Leila",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u29"
+        ],
+        "id": "8f61b632-e374-4021-b555-308c59a34d51",
+        "option_id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "participant_label": "Yusuf",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u30"
+        ],
+        "id": "5b52fde3-016f-4eed-96c7-aa1edf86b07a",
+        "option_id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "participant_label": "Yusuf",
+        "stance": "acknowledged",
+        "proposer": false,
+        "source_unit_ids": [
+          "u63"
+        ],
+        "id": "09726d26-1b9c-4708-935a-545c4c767ceb",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Tariq",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u8",
+          "u70"
+        ],
+        "id": "6203073a-2f86-415a-b31e-9646dffe0540",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Tariq",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u76"
+        ],
+        "id": "be6f5af0-55f1-48b4-bed8-b9ea54902725",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Yusuf",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u77"
+        ],
+        "id": "13ba2c2f-18dd-4e4e-adbe-8f714bc8b98f",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Hana",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u78"
+        ],
+        "id": "5bc60a4f-ea2f-4b2a-8d4b-7ca3e09f1488",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Hana",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u80"
+        ],
+        "id": "421aaaaf-18d7-41c6-8598-c12fe6dae7c5",
+        "option_id": "698d59bf-9849-441c-8e3a-3423d9c5f8ca"
+      },
+      {
+        "participant_label": "Omar",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u57",
+          "u82"
+        ],
+        "id": "5b01d3e2-87dd-4851-ba71-42b112218d8b",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Leila",
+        "stance": "support",
+        "proposer": true,
+        "source_unit_ids": [
+          "u47",
+          "u83"
+        ],
+        "id": "f71d8671-c5f3-4f15-857b-e5f0d7e0a37f",
+        "option_id": "4313da0e-c518-4a6d-ab41-ea56864f0b36"
+      },
+      {
+        "participant_label": "Leila",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u83"
+        ],
+        "id": "aee212e7-82e4-4792-8ab5-bd5d3aaae6f3",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "support",
+        "proposer": true,
+        "source_unit_ids": [
+          "u17",
+          "u84"
+        ],
+        "id": "93be5fd1-7aea-46ad-b772-4a4644bf0279",
+        "option_id": "f03ab271-9be9-4229-9e85-2e5a6af5e5da"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u84"
+        ],
+        "id": "fc84265b-9338-40b9-88ed-d040a774f5b9",
+        "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af"
+      },
+      {
+        "participant_label": "Nadia",
+        "stance": "support",
+        "proposer": false,
+        "source_unit_ids": [
+          "u84"
+        ],
+        "id": "a16184e9-3c9a-4f91-bbc4-c47cd65a84d9",
+        "option_id": "4313da0e-c518-4a6d-ab41-ea56864f0b36"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Harbor Hall costs $3,200",
+        "source_unit_ids": [
+          "u25"
+        ],
+        "quote": "$3,200 though",
+        "author_label": "Omar",
+        "resolution_status": "open",
+        "moot": true,
+        "id": "4780ea43-af1b-401e-a47e-7d2fe02e021e",
+        "option_ids": [
+          "34b79e2e-b407-47ed-b247-b3a84b6e6c67"
+        ]
+      },
+      {
+        "text": "Harbor Hall is on the second floor",
+        "source_unit_ids": [
+          "u26"
+        ],
+        "quote": "its on the second floor",
+        "author_label": "Leila",
+        "resolution_status": "open",
+        "moot": true,
+        "id": "808de2e0-04b2-4900-99f6-09bb1b597637",
+        "option_ids": [
+          "34b79e2e-b407-47ed-b247-b3a84b6e6c67"
+        ]
+      }
+    ],
+    "blockers": [
+      {
+        "text": "With drinks the Casa Verde total is $2,460, over the $2,400 budget",
+        "source_unit_ids": [
+          "u41"
+        ],
+        "quote": "2,100 + 360 is 2,460",
+        "kind": "open_question",
+        "resolution_status": "open",
+        "moot": false,
+        "id": "f231f21d-0741-4d5d-a095-6650c61eaeb2"
+      },
+      {
+        "text": "Guest list is 22 but the room holds 20",
+        "source_unit_ids": [
+          "u43",
+          "u47"
+        ],
+        "quote": "I'll trim the list. 20 or nothing",
+        "kind": "unresolved_dependency",
+        "resolution_status": "resolved",
+        "moot": false,
+        "id": "b35239b0-c989-4fa2-ad66-ce9206df9760"
+      },
+      {
+        "text": "Does Alma have an elevator",
+        "source_unit_ids": [
+          "u54",
+          "u71"
+        ],
+        "quote": "there's an elevator but the private room only holds 14",
+        "kind": "missing_info",
+        "resolution_status": "resolved",
+        "moot": false,
+        "id": "e7b98d2b-bac8-4524-a8f5-c9221f6fbbc4"
+      },
+      {
+        "text": "Does Casa Verde have parking close by",
+        "source_unit_ids": [
+          "u72",
+          "u75"
+        ],
+        "quote": "free lot behind the building, about 12 spots",
+        "kind": "missing_info",
+        "resolution_status": "resolved",
+        "moot": false,
+        "id": "fd33d119-a20d-4373-ae8b-84e4e7bede04"
+      }
+    ],
+    "separate_issues": [
+      {
+        "title": "Keeping the plan secret from the parents",
+        "rationale": "about the group, not the decision",
+        "source_unit_ids": [
+          "u1"
+        ],
+        "id": "005b8ce8-5dd2-489e-93ea-159119e0f749"
+      },
+      {
+        "title": "Whether the anniversary is the 8th or the 9th",
+        "rationale": "does not change which date works",
+        "source_unit_ids": [
+          "u6",
+          "u7"
+        ],
+        "id": "158a55e4-d4c4-4026-9f3e-3ba216dabbc7"
+      },
+      {
+        "title": "Photographer",
+        "rationale": "deferred: 'later. 1 thing at a time'",
+        "source_unit_ids": [
+          "u66",
+          "u67",
+          "u68"
+        ],
+        "id": "a2d47c7a-0e1b-49c3-95a2-e551a1bc02b1"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Leila trims the guest list to 20",
+        "source_unit_ids": [
+          "u47",
+          "u84"
+        ],
+        "quote": "Leila trims the list to 20 by Sunday",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "acceptance": "committed",
+        "status": "open",
+        "due": "Sunday",
+        "id": "120bb34d-ed39-43d1-be4f-2f2863363812"
+      },
+      {
+        "text": "Tariq calls Alma",
+        "source_unit_ids": [
+          "u56",
+          "u71"
+        ],
+        "quote": "called Alma",
+        "owner_label": "Tariq",
+        "owner_kind": "named",
+        "acceptance": "committed",
+        "status": "done",
+        "id": "443c471d-dc36-4765-80df-f995fcdfbdb9"
+      },
+      {
+        "text": "Omar brings the cake",
+        "source_unit_ids": [
+          "u57"
+        ],
+        "quote": "I'm doing the cake",
+        "owner_label": "Omar",
+        "owner_kind": "named",
+        "acceptance": "committed",
+        "status": "open",
+        "id": "a09b75d4-bad2-4365-b444-1fbec5c2d15b"
+      },
+      {
+        "text": "Leila asks Casa Verde if outside cake is ok",
+        "source_unit_ids": [
+          "u58",
+          "u81"
+        ],
+        "quote": "outside cake is fine, I asked",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "acceptance": "committed",
+        "status": "done",
+        "deadline": "Oct 16",
+        "deadline_source_unit_ids": [
+          "u37"
+        ],
+        "id": "e413a649-f48c-4e39-a82b-8e02d04c815e"
+      },
+      {
+        "text": "Leila books Casa Verde",
+        "source_unit_ids": [
+          "u61"
+        ],
+        "quote": "Leila book it",
+        "owner_label": "Leila",
+        "owner_kind": "named",
+        "acceptance": "requested",
+        "status": "open",
+        "deadline": "Oct 16",
+        "deadline_source_unit_ids": [
+          "u37"
+        ],
+        "id": "9b12e0a9-dfd4-432f-9435-a3295e15c25f"
+      },
+      {
+        "text": "Nadia sends the $500 deposit",
+        "source_unit_ids": [
+          "u61",
+          "u84"
+        ],
+        "quote": "I'll send the $500 deposit Monday",
+        "owner_label": "Nadia",
+        "owner_kind": "named",
+        "due": "Monday",
+        "acceptance": "committed",
+        "status": "open",
+        "deadline": "Oct 16",
+        "deadline_source_unit_ids": [
+          "u37"
+        ],
+        "id": "1e183ede-34b7-4b78-80e3-0f21ea247d6e"
+      },
+      {
+        "text": "Omar pays for drinks",
+        "source_unit_ids": [
+          "u61",
+          "u62"
+        ],
+        "quote": "I said cake. not drinks",
+        "owner_label": "Omar",
+        "owner_kind": "named",
+        "acceptance": "requested",
+        "status": "declined",
+        "id": "4d0c99ad-bbfe-4bf5-be7a-819cd77874cf"
+      },
+      {
+        "text": "Sort out who covers the drinks",
+        "source_unit_ids": [
+          "u86"
+        ],
+        "quote": "we'll sort the drinks at the end",
+        "owner_kind": "team",
+        "status": "open",
+        "acceptance": "committed",
+        "id": "e18928e4-60e8-482f-b6e5-be75da82e169"
+      }
+    ],
+    "question": {
+      "text": "Which date and venue for the parents' 40th anniversary dinner?",
+      "scope": null,
+      "sub_decisions": [
+        "budget",
+        "date",
+        "guest count",
+        "venue"
+      ]
+    },
+    "participants": [
+      "Nadia",
+      "Yusuf",
+      "Omar",
+      "Leila",
+      "Tariq",
+      "Hana"
+    ],
+    "emerging_preference": {
+      "option_id": "89ab16b4-424a-4c3c-8515-f9c783f016af",
+      "summary": "Dec 12 has explicit support from Hana, Leila, Omar, Tariq, Yusuf and Nadia. Casa Verde has explicit support from Tariq, Hana, Omar, Leila and Nadia; acknowledged only by Yusuf. $400 each has explicit support from Nadia, Leila, Yusuf and Hana, plus Omar (proposer). Guest cap of 20 has explicit support from Leila and Nadia.",
+      "supporting_refs": [
+        "u10",
+        "u11",
+        "u12",
+        "u8",
+        "u70",
+        "u77",
+        "u84",
+        "u76",
+        "u78",
+        "u57",
+        "u82",
+        "u83",
+        "u17",
+        "u27",
+        "u28",
+        "u29",
+        "u30",
+        "u80",
+        "u47"
+      ],
+      "dissenting_refs": []
+    }
+  },
+  "report": {
+    "unit_count": 87,
+    "chunk_count": 3,
+    "summary": {
+      "verified": true,
+      "omitted_items": 0,
+      "attempts": 1,
+      "issues": []
+    },
+    "restored_or_corrected": [
+      "option 'Alma': status 'active' -> 'dropped'",
+      "positions taken from merge (21); synthesis returned 20",
+      "removed unsupported blocker 'Anniversary date disputed (8th vs 9th)'",
+      "action 'Leila books Casa Verde': acceptance 'committed' -> 'requested'",
+      "action 'Omar pays for drinks': status 'open' -> 'declined'",
+      "action 'Sort out who covers the drinks': owner 'Omar' -> None",
+      "removed unsupported action 'Omar covers $100 of Hana's share'"
+    ],
+    "ref_warnings": [],
+    "dropped_at_extraction": []
+  }
+}

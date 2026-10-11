@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import uuid
 
 from sqlalchemy import select
@@ -10,6 +11,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from ..api.models import (
     BriefRevision, Event, Job, JobStatus, JobType, SourceUnit, Workspace,
 )
+from .extraction_reviewer import review_extraction, review_summary
+from .llm import LLMClient
+from .extractor import quote_in_text
+from .merger import _norm_text, _same_option, _similar
 
 
 # ---------------------------------------------------------------------------
@@ -20,7 +25,7 @@ async def run_extract_brief(payload: dict, session: AsyncSession) -> dict:
     from .chunker import chunk_units
     from .extractor import extract_chunk
     from .llm import LLMClient
-    from .merger import merge_extractions
+    from .merger import merge_extractions, reconcile_explicit_replies
 
     workspace_id = uuid.UUID(payload["workspace_id"])
 
@@ -30,37 +35,93 @@ async def run_extract_brief(payload: dict, session: AsyncSession) -> dict:
             SourceUnit.workspace_id == workspace_id,
             SourceUnit.duplicate_of.is_(None),
         )
-        .order_by(SourceUnit.sequence)
+        .order_by(SourceUnit.document_id, SourceUnit.sequence, SourceUnit.id)
     )
     units = result.scalars().all()
     if not units:
         return {"candidate_questions": [], "merged_draft": {}, "unit_count": 0, "chunk_count": 0}
 
+    # Sequence is document-local. Keep documents intact and order dated documents
+    # by their earliest real timestamp. Transcript offsets (1970) are not dates.
+    doc_dates = {}
+    for u in units:
+        if u.timestamp is not None and u.timestamp.year > 1970:
+            stamp = u.timestamp.isoformat()
+            key = str(u.document_id)
+            doc_dates[key] = min(doc_dates.get(key, stamp), stamp)
+    units.sort(key=lambda u: (doc_dates.get(str(u.document_id), "9999"),
+                              str(u.document_id), u.sequence, str(u.id)))
+
     units_data = [
         {
             "id": str(u.id),
-            "sequence": u.sequence,
+            "document_id": str(u.document_id),
+            "sequence": ordinal,
             "author_label": u.author_label,
             "normalized_text": u.normalized_text,
             "locator": u.locator or {},
         }
-        for u in units
+        for ordinal, u in enumerate(units)
     ]
+    unit_sequence = {u["id"]: u["sequence"] for u in units_data}
 
     llm = LLMClient()
     chunks = chunk_units(units_data)
-    chunk_results = []
-    for chunk in chunks:
-        extracted = await extract_chunk(chunk, llm)
-        chunk_results.append(extracted)
 
-    merged = merge_extractions(chunk_results)
+    # Chunks run in order so each one is told which options and decision labels
+    # earlier chunks already found; the model reuses them instead of inventing
+    # near-duplicates that the merger would then have to reconcile.
+    chunk_results = []
+    known_options: list[dict] = []
+    known_decisions: list[str] = []
+    open_items: dict[str, dict] = {}          # normalised text -> {"kind", "text"}
+    known_actions: list[dict] = []
+    known_agreements: list[str] = []
+    known_state: dict = {}
+    for i, chunk in enumerate(chunks):
+        extracted = await extract_chunk(
+            chunk, llm, chunk_index=i,
+            known_options=list(known_options) or None,
+            known_decisions=list(known_decisions) or None,
+            known_open_items=list(open_items.values()) or None,
+            known_actions=known_actions or None,
+            known_agreements=known_agreements or None,
+            known_state=known_state or None,
+        )
+        chunk_results.append(extracted)
+        interim = merge_extractions(chunk_results, unit_sequence=unit_sequence)
+        known_state = {section: [{k: v for k, v in item.items() if k not in ("quote", "source_unit_ids", "id")}
+                                 for item in interim.get(section, [])]
+                       for section in ("options", "positions", "claims", "actions", "agreements")}
+        known_actions = [{k: a[k] for k in ("text", "owner_label", "owner_kind", "status", "due", "external_due") if k in a}
+                         for a in interim.get("actions", [])]
+        known_agreements = list(dict.fromkeys(a["subject"] for a in interim.get("agreements", [])))
+        for opt in extracted.get("options", []):
+            if not any(k["title"].lower() == opt["title"].lower() for k in known_options):
+                known_options.append({"title": opt["title"], "decision": opt.get("decision", "")})
+            label = opt.get("decision")
+            if label and label not in known_decisions:
+                known_decisions.append(label)
+        for section, kind in (("blockers", "blocker"), ("objections", "objection")):
+            for item in extracted.get(section, []):
+                key = _norm_text(item["text"])
+                if item.get("resolution_status", "open") == "open":
+                    open_items[key] = {"kind": kind, "text": item["text"]}
+                else:
+                    open_items.pop(key, None)
+
+    merged = merge_extractions(chunk_results, unit_sequence=unit_sequence)
+    merged = reconcile_explicit_replies(merged, units_data)
+    review = await review_extraction(merged, units_data, llm, stage="merged_extraction")
 
     return {
         "candidate_questions": merged["candidate_questions"],
         "merged_draft": merged,
+        "extraction_review_report": review,
+        "chunk_review_reports": [r["_review"] for r in chunk_results],
         "unit_count": len(units_data),
         "chunk_count": len(chunks),
+        "dropped_item_count": len(merged.get("dropped_items", [])),
     }
 
 
@@ -72,14 +133,19 @@ _SYNTH_SYSTEM = """\
 You are a decision brief synthesizer. Given a set of extraction candidates from a discussion and a confirmed decision question, produce a clean, structured decision brief.
 
 Rules:
-- Only include items directly relevant to the confirmed decision question.
-- Items not relevant to the confirmed question should go in separate_issues.
+- The question may be settled through several sub-decisions (for example date, venue, budget). Keep every item that bears on the question or on any of its sub-decisions. Venue, capacity, cost, access and logistics are constraints or criteria, never separate issues.
+- Use separate_issues only for topics genuinely unrelated to the decision.
+- Do not drop candidates: every option, position, objection, blocker and action in the candidates must appear in your output, merging only true duplicates. Do not invent items, owners, dates or sources.
+- Keep each option's `decision` and `status`, each position's `stance`, each action's `owner_kind`, `owner_label` and `due`, and each objection's and blocker's `resolution_status` exactly as given. Never turn "acknowledged" into support. Never assign an owner the candidates do not name.
+- Keep `sensitive` flags. For sensitive items state only the requirement, never the private reason.
+- For claims: evidence_status is "supported_within_scope" only when another participant gives evidence or a reason; a bare assertion is "unverified"; use "conflicting" when participants give different values for the same thing.
 - Do NOT include an "id" field on any item — IDs are assigned by the server.
 - All source_unit_ids you cite must come from the candidates provided — never invent IDs.
-- For positions: only include if a participant explicitly stated their stance.
-- emerging_preference: include only if the discussion shows a clear directional lean. Never label it consensus. Set to null if unclear.
+- Do not output emerging_preference; the system computes it from positions.
 - Keep all text concise and grounded in the source material.
 """
+
+_SENSITIVE = {"type": "boolean"}
 
 _SYNTH_TOOL = {
     "name": "produce_brief",
@@ -102,13 +168,16 @@ _SYNTH_TOOL = {
                     "text": {"type": "string"},
                     "kind": {"type": "string", "enum": ["mandatory", "negotiable", "unknown"]},
                     "basis": {"type": "string"},
+                    "sensitive": _SENSITIVE,
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
                 }
             }},
             "options": {"type": "array", "items": {
-                "type": "object", "required": ["title", "source_unit_ids"],
+                "type": "object", "required": ["title", "decision", "status", "source_unit_ids"],
                 "properties": {
                     "title": {"type": "string"}, "description": {"type": "string"},
+                    "decision": {"type": "string"},
+                    "status": {"type": "string", "enum": ["active", "dropped", "fallback"]},
                     "arguments_for": {"type": "array", "items": {"type": "string"}},
                     "arguments_against": {"type": "array", "items": {"type": "string"}},
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
@@ -122,6 +191,7 @@ _SYNTH_TOOL = {
                     "kind": {"type": "string",
                              "enum": ["factual", "predictive", "causal", "priority", "constraint", "other"]},
                     "author_label": {"type": "string"},
+                    "sensitive": _SENSITIVE,
                     "evidence_status": {"type": "string",
                                         "enum": ["unverified", "supported_within_scope",
                                                  "contradicted_within_scope", "conflicting", "unresolved"]},
@@ -135,7 +205,9 @@ _SYNTH_TOOL = {
                     "participant_label": {"type": "string"},
                     "option_title": {"type": "string"},
                     "stance": {"type": "string",
-                               "enum": ["support", "oppose", "conditional", "undecided", "unknown"]},
+                               "enum": ["proposed", "support", "conditional", "oppose",
+                                        "undecided", "acknowledged", "unknown"]},
+                    "proposer": {"type": "boolean"},
                     "conditions": {"type": "string"},
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
                 }
@@ -147,6 +219,8 @@ _SYNTH_TOOL = {
                     "text": {"type": "string"},
                     "option_titles": {"type": "array", "items": {"type": "string"}},
                     "author_label": {"type": "string"},
+                    "sensitive": _SENSITIVE,
+                    "moot": {"type": "boolean"},
                     "resolution_status": {"type": "string",
                                           "enum": ["open", "addressed", "resolved"]},
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
@@ -159,6 +233,7 @@ _SYNTH_TOOL = {
                     "text": {"type": "string"},
                     "kind": {"type": "string",
                              "enum": ["open_question", "unresolved_dependency", "missing_info"]},
+                    "sensitive": _SENSITIVE,
                     "resolution_status": {"type": "string", "enum": ["open", "resolved"]},
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
                 }
@@ -171,31 +246,119 @@ _SYNTH_TOOL = {
                 }
             }},
             "actions": {"type": "array", "items": {
-                "type": "object", "required": ["text", "source_unit_ids"],
+                "type": "object", "required": ["text", "owner_kind", "source_unit_ids"],
                 "properties": {
                     "text": {"type": "string"}, "owner_label": {"type": "string"},
+                    "owner_kind": {"type": "string", "enum": ["named", "team", "unassigned"]},
+                    "due": {"type": "string"},
+                    "sensitive": _SENSITIVE,
                     "source_unit_ids": {"type": "array", "items": {"type": "string"}}
                 }
             }},
-            "emerging_preference": {
-                "type": ["object", "null"],
-                "properties": {
-                    "option_title": {"type": "string"},
-                    "summary": {"type": "string"},
-                    "supporting_refs": {"type": "array", "items": {"type": "string"}},
-                    "dissenting_refs": {"type": "array", "items": {"type": "string"}}
-                }
-            }
         }
     }
 }
 
 _BRIEF_SECTIONS = ("criteria", "constraints", "options", "claims",
-                   "positions", "objections", "blockers", "separate_issues", "actions")
+                   "positions", "objections", "blockers", "separate_issues", "actions", "agreements")
 
 
 # ---------------------------------------------------------------------------
-# Exec summary — verifier pass
+# Safety net: never let the synthesis step lose or rewrite identity-bearing facts
+# ---------------------------------------------------------------------------
+
+def _restore_dropped(brief_body: dict, merged: dict) -> list[str]:
+    """Re-add merged-draft items the LLM dropped and restore fields it must not change.
+
+    Options, positions, objections, blockers and actions feed the status counts, so
+    their stance / owner / due / resolution / status come from the merged draft, not
+    from the synthesis model. Run BEFORE ``_assign_server_ids`` (titles still present).
+    Returns human-readable notes about what was restored or corrected.
+    """
+    notes: list[str] = []
+
+    # options
+    opts = brief_body.setdefault("options", [])
+    for cand in merged.get("options", []):
+        match = next((o for o in opts if _same_option(o.get("title", ""), cand["title"])), None)
+        if match is None:
+            opts.append({**{k: cand[k] for k in ("title", "description", "decision", "status", "source_unit_ids") if k in cand},
+                         "restored": True})
+            notes.append(f"restored option '{cand['title']}'")
+            continue
+        for f in ("decision", "status"):
+            if cand.get(f) and match.get(f) != cand[f]:
+                notes.append(f"option '{match.get('title')}': {f} {match.get(f)!r} -> {cand[f]!r}")
+                match[f] = cand[f]
+
+    # positions
+    positions = brief_body.setdefault("positions", [])
+    for cand in merged.get("positions", []):
+        who = cand["participant_label"].strip().lower()
+        match = next((p for p in positions
+                      if p.get("participant_label", "").strip().lower() == who
+                      and _same_option(p.get("option_title", ""), cand["option_title"])), None)
+        if match is None:
+            positions.append({**{k: cand[k] for k in ("participant_label", "option_title", "stance", "conditions",
+                                                       "proposer", "source_unit_ids") if k in cand},
+                              "restored": True})
+            notes.append(f"restored position {cand['participant_label']} / {cand['option_title']}")
+        elif match.get("stance") != cand["stance"]:
+            notes.append(f"position {cand['participant_label']} / {cand['option_title']}: stance "
+                         f"{match.get('stance')!r} -> {cand['stance']!r}")
+            match["stance"] = cand["stance"]
+
+    # objections and blockers: status comes from chronology, not from the LLM
+    for section in ("objections", "blockers"):
+        items = brief_body.setdefault(section, [])
+        for cand in merged.get(section, []):
+            match = next((i for i in items if _similar(i.get("text", ""), cand["text"])), None)
+            if match is None:
+                keep = ("text", "kind", "option_titles", "author_label", "moot", "sensitive",
+                        "resolution_status", "source_unit_ids")
+                items.append({**{k: cand[k] for k in keep if k in cand}, "restored": True})
+                notes.append(f"restored {section[:-1]} '{cand['text'][:60]}'")
+                continue
+            if cand.get("resolution_status") and match.get("resolution_status") != cand["resolution_status"]:
+                notes.append(f"{section[:-1]} '{match['text'][:50]}': status "
+                             f"{match.get('resolution_status')!r} -> {cand['resolution_status']!r}")
+                match["resolution_status"] = cand["resolution_status"]
+            if cand.get("moot"):
+                match["moot"] = True
+
+    # actions: the owner is whatever the chat named, never an LLM guess
+    actions = brief_body.setdefault("actions", [])
+    for cand in merged.get("actions", []):
+        match = next((a for a in actions if _similar(a.get("text", ""), cand["text"])), None)
+        if match is None:
+            keep = ("text", "owner_label", "owner_kind", "due", "sensitive", "source_unit_ids")
+            actions.append({**{k: cand[k] for k in keep if k in cand}, "restored": True})
+            notes.append(f"restored action '{cand['text'][:60]}'")
+            continue
+        kind = cand.get("owner_kind") or ("named" if cand.get("owner_label") else "unassigned")
+        label = cand.get("owner_label") if kind == "named" else None
+        if match.get("owner_kind") != kind or match.get("owner_label") != label:
+            notes.append(f"action '{match['text'][:50]}': owner {match.get('owner_label')!r} -> {label!r}")
+        match["owner_kind"] = kind
+        if label:
+            match["owner_label"] = label
+        else:
+            match.pop("owner_label", None)
+        if cand.get("due"):
+            match["due"] = cand["due"]
+
+    # sensitivity flags are sticky in every section
+    for section in ("constraints", "claims", "objections", "blockers", "actions"):
+        for cand in merged.get(section, []):
+            if cand.get("sensitive"):
+                for item in brief_body.get(section, []):
+                    if _similar(item.get("text", ""), cand["text"]):
+                        item["sensitive"] = True
+    return notes
+
+
+# ---------------------------------------------------------------------------
+# Exec summary — deterministic parts
 # ---------------------------------------------------------------------------
 
 _BANNED_WORDS = [
@@ -205,38 +368,160 @@ _BANNED_WORDS = [
 
 _BANNED_PLACEHOLDERS = ["(source)", "(cite)", "(id)", "[source]"]
 
+_BANNED_RE = re.compile(r"\b(" + "|".join(re.escape(w) for w in _BANNED_WORDS) + r")\b", re.IGNORECASE)
+
 
 def _check_banned_words(text: str) -> list[str]:
+    """Whole-word match, so 'disagreed', 'undecided' and 'cleans' are not flagged."""
+    found = sorted({m.group(1).lower() for m in _BANNED_RE.finditer(text)})
     lower = text.lower()
-    found = [w for w in _BANNED_WORDS if w in lower]
     found += [p for p in _BANNED_PLACEHOLDERS if p.lower() in lower]
     return found
 
 
-def _sanitize_emerging_preference(brief_body: dict) -> None:
-    """Clear emerging_preference if its summary contains banned inference words."""
-    ep = brief_body.get("emerging_preference")
-    if not ep or not isinstance(ep, dict):
-        return
-    if _check_banned_words(ep.get("summary", "")):
-        brief_body["emerging_preference"] = None
+def _strip_banned_lines(text: str) -> tuple[str, int]:
+    kept, removed = [], 0
+    for line in text.split("\n"):
+        if _check_banned_words(line):
+            removed += 1
+        else:
+            kept.append(line)
+    return "\n".join(kept), removed
 
+
+def _unique(seq):
+    seen, out = set(), []
+    for x in seq:
+        if x not in seen:
+            seen.add(x)
+            out.append(x)
+    return out
+
+
+def _join_names(names: list[str]) -> str:
+    if len(names) <= 1:
+        return "".join(names)
+    return ", ".join(names[:-1]) + " and " + names[-1]
+
+
+def _named_owner(action: dict) -> bool:
+    return bool(action.get("owner_label")) and action.get("owner_kind", "named") == "named"
+
+
+def _compute_status_line(brief_body: dict) -> str:
+    """Compute the status counts in Python so the LLM cannot get them wrong."""
+    options = brief_body.get("options", [])
+    positions = brief_body.get("positions", [])
+    blockers = brief_body.get("blockers", [])
+    objections = brief_body.get("objections", [])
+    actions = brief_body.get("actions", [])
+
+    opt_by_id = {o["id"]: o for o in options if "id" in o}
+    active = [o for o in options if o.get("status") != "dropped"]
+    dropped = len(options) - len(active)
+
+    stances: dict[str, dict[str, list[str]]] = {}
+    for p in positions:
+        o = opt_by_id.get(p.get("option_id", ""))
+        if o is None or o.get("status") == "dropped":
+            continue
+        stances.setdefault(o["id"], {}).setdefault(p["stance"], []).append(p["participant_label"])
+
+    parts: list[str] = [f"{len(active)} option{'s' if len(active) != 1 else ''}"
+                        + (f" ({dropped} dropped)" if dropped else "")]
+    for o in active:
+        st = stances.get(o.get("id", ""), {})
+        bits = []
+        if st.get("support"):
+            bits.append(f"explicit support from {', '.join(_unique(st['support']))} ({len(_unique(st['support']))})")
+        if st.get("conditional"):
+            bits.append(f"conditional: {', '.join(_unique(st['conditional']))}")
+        if st.get("acknowledged"):
+            bits.append(f"acknowledged only: {', '.join(_unique(st['acknowledged']))}")
+        if st.get("oppose"):
+            bits.append(f"opposed by {', '.join(_unique(st['oppose']))}")
+        if bits:
+            parts.append(f"{o['title']}: " + "; ".join(bits))
+
+    open_objections = sum(1 for o in objections
+                          if o.get("resolution_status", "open") == "open" and not o.get("moot"))
+    open_blockers = sum(1 for b in blockers if b.get("resolution_status", "open") == "open")
+    unowned = sum(1 for a in actions if not _named_owner(a))
+
+    parts.append(f"{open_objections} open objection{'s' if open_objections != 1 else ''}")
+    parts.append(f"{open_blockers} open blocker{'s' if open_blockers != 1 else ''}")
+    if unowned:
+        parts.append(f"{unowned} action{'s' if unowned != 1 else ''} without a named owner")
+
+    return "; ".join(parts) + "."
+
+
+def _compute_preference(brief_body: dict) -> dict | None:
+    """Directional lean, computed from positions only.
+
+    An option qualifies only when at least two different participants gave an explicit
+    "support" and no open (non-moot) objection targets it. The text only counts who
+    said what; it never uses words like consensus or agreed.
+    """
+    objections = brief_body.get("objections", [])
+    positions = brief_body.get("positions", [])
+    lines: list[str] = []
+    support_refs: list[str] = []
+    dissent_refs: list[str] = []
+    first_id = ""
+
+    for o in brief_body.get("options", []):
+        if o.get("status") == "dropped" or "id" not in o:
+            continue
+        ps = [p for p in positions if p.get("option_id") == o["id"]]
+        supporters = [p for p in ps if p["stance"] == "support"]
+        names = _unique(p["participant_label"] for p in supporters)
+        if len(names) < 2:
+            continue
+        if any(o["id"] in ob.get("option_ids", []) and ob.get("resolution_status", "open") == "open"
+               and not ob.get("moot") for ob in objections):
+            continue
+        line = f"{o['title']} has explicit support from {_join_names(names)}"
+        cond = _unique(p["participant_label"] for p in ps if p["stance"] == "conditional")
+        if cond:
+            line += f" (conditional: {_join_names(cond)})"
+        proposers = [n for n in _unique(p["participant_label"] for p in ps
+                                        if p["stance"] == "proposed" or p.get("proposer")) if n not in names]
+        if proposers:
+            line += f"; proposed by {_join_names(proposers)}"
+        ack = [n for n in _unique(p["participant_label"] for p in ps if p["stance"] == "acknowledged")
+               if n not in names]
+        if ack:
+            line += f"; acknowledged only by {_join_names(ack)}"
+        opp = _unique(p["participant_label"] for p in ps if p["stance"] == "oppose")
+        if opp:
+            line += f"; opposed by {_join_names(opp)}"
+        lines.append(line + ".")
+        support_refs += [r for p in supporters for r in p.get("source_unit_ids", [])]
+        dissent_refs += [r for p in ps if p["stance"] == "oppose" for r in p.get("source_unit_ids", [])]
+        first_id = first_id or o["id"]
+
+    if not lines:
+        return None
+    return {"option_id": first_id, "summary": " ".join(lines),
+            "supporting_refs": _unique(support_refs), "dissenting_refs": _unique(dissent_refs)}
+
+
+# ---------------------------------------------------------------------------
+# Exec summary — LLM phrasing + verification
+# ---------------------------------------------------------------------------
 
 _VERIFIER_SYSTEM = """\
 You are the summary step of Pact, a facilitator for group decisions.
-Produce a structured executive summary from the Decision State.
+Produce a structured executive summary from the Decision State. You summarize; you do not decide, judge, or add information.
 
 FIELD RULES
-- title: the decision question. Append "(inferred)" if the question basis is inferred.
-- status: counts only — options, explicit support, open objections, blockers, unowned actions.
-  Compute from the state; do not estimate.
-- needs_attention: at most 5 items. Rank: open objections, blockers, unowned actions, disputed claims.
-- proposed: each option with proposer and exact support level. Write "explicit support from A",
-  "acknowledged by B", "opposed by C". Never merge acknowledged into supported.
-- committed: actions with a named owner. Include due date if stated.
-- unverified_claims: claims with evidence_status unverified, disputed, or subjective.
-- preference: print emerging_preference summary verbatim if not null, else
-  "No directional preference recorded."
+- title and status are filled in by the system. Put "-" in them.
+- needs_attention: at most 5 items. Rank: open objections (skip moot ones), open blockers, actions whose owner_kind is not "named" (say "owner not named"), conflicting or unverified claims the proposals rely on. Use only items present in the state.
+- proposed: each option with the exact support level taken from positions: "explicit support from A", "acknowledged by B", "conditional: C (condition)", "opposed by D". Never merge acknowledged into support. Mention the proposer only if a position says so. Dropped options get one short line saying they were dropped.
+- committed: actions whose owner_kind is "named", with the due date if stated. Do not list a task as committed unless the quote shows the named owner committing to it or being asked to do it.
+- unverified_claims: claims with evidence_status unverified, conflicting or unresolved.
+- Items marked sensitive, and source messages tagged [SENSITIVE], may contain private health or financial details. State only the requirement, never the private reason.
 
 REQUIRED FOR EVERY ITEM in needs_attention, proposed, committed, unverified_claims:
   verbatim_quote  — exact consecutive words copied from the source message, MAX 15 WORDS.
@@ -273,7 +558,7 @@ _VERIFIER_TOOL = {
     "input_schema": {
         "type": "object",
         "required": ["title", "status", "needs_attention", "proposed",
-                     "committed", "unverified_claims", "preference"],
+                     "committed", "unverified_claims"],
         "properties": {
             "title": {"type": "string"},
             "status": {"type": "string"},
@@ -281,12 +566,12 @@ _VERIFIER_TOOL = {
             "proposed": {"type": "array", "items": _cited_item_schema()},
             "committed": {"type": "array", "items": _cited_item_schema()},
             "unverified_claims": {"type": "array", "items": _cited_item_schema()},
-            "preference": {"type": "string"},
         },
     },
 }
 
 _VERIFIABLE_SECTIONS = ("needs_attention", "proposed", "committed", "unverified_claims")
+_MAX_QUOTE_WORDS = 15
 
 
 def _verify_items(
@@ -294,22 +579,86 @@ def _verify_items(
 ) -> tuple[list[dict], list[dict]]:
     """Return (verified, rejected).
 
-    An item passes if its verbatim_quote is a case-insensitive substring
-    of the cited source unit's normalized_text.
+    An item passes if its verbatim_quote (at most 15 words) appears in the cited source
+    unit's text after normalising case, whitespace and curly quotes.
     """
     verified, rejected = [], []
     for item in items:
-        quote = item.get("verbatim_quote", "").strip()
-        uid = item.get("source_unit_id", "")
-        source_text = unit_text_map.get(uid, "")
-        if quote and source_text and quote.lower() in source_text.lower():
+        quote = (item.get("verbatim_quote") or "").strip()
+        source_text = unit_text_map.get(item.get("source_unit_id", ""), "")
+        if (quote and source_text and len(quote.split()) <= _MAX_QUOTE_WORDS
+                and quote_in_text(quote, source_text)):
             verified.append(item)
         else:
             rejected.append(item)
     return verified, rejected
 
 
-def _render_verified_summary(summary: dict) -> str:
+_ENTAIL_SYSTEM = """\
+You check whether a quoted chat message supports a summary line. For each item you get the summary TEXT, the QUOTE, the SPEAKER of the quote, and the SECTION it appears in.
+
+Mark supported=true only if the quote directly states or clearly entails the text. Otherwise mark supported=false.
+- committed: the quote must show the named owner committing to the task, or being asked to do it. A deadline from a third party, a statement of availability, or a report that the task is already done does NOT support a commitment.
+- proposed: the support level in the text must match the quote. "ok", "fine", "sure whatever", "sounds good" support only "acknowledged", never "explicit support".
+- needs_attention: the quote must show the problem the text describes (for example a task stated with no named owner, an open question, a dependency).
+- unverified_claims: the quote must contain the claim, attributed to its speaker.
+Be strict. When in doubt, supported=false.
+"""
+
+_ENTAIL_TOOL = {
+    "name": "check_support",
+    "description": "Return one verdict per item.",
+    "input_schema": {
+        "type": "object",
+        "required": ["verdicts"],
+        "properties": {
+            "verdicts": {"type": "array", "items": {
+                "type": "object", "required": ["id", "supported"],
+                "properties": {
+                    "id": {"type": "string"},
+                    "supported": {"type": "boolean"},
+                    "reason": {"type": "string"},
+                },
+            }},
+        },
+    },
+}
+
+
+async def _apply_entailment(summary: dict, unit_meta: dict[str, dict], llm) -> tuple[dict, list[dict]]:
+    """Drop items whose quote does not actually support their text. Missing verdicts count as unsupported."""
+    payload = []
+    for section in _VERIFIABLE_SECTIONS:
+        for i, item in enumerate(summary.get(section, [])):
+            meta = unit_meta.get(item.get("source_unit_id", ""), {})
+            payload.append({"id": f"{section}:{i}", "section": section, "text": item["text"],
+                            "quote": item["verbatim_quote"], "speaker": meta.get("author", "")})
+    if not payload:
+        return summary, []
+
+    result = await llm.extract(_ENTAIL_SYSTEM, json.dumps(payload, indent=2), _ENTAIL_TOOL, timeout=60)
+    ok = {v["id"]: bool(v.get("supported")) for v in result.get("verdicts", [])}
+
+    rejected: list[dict] = []
+    for section in _VERIFIABLE_SECTIONS:
+        kept = []
+        for i, item in enumerate(summary.get(section, [])):
+            if ok.get(f"{section}:{i}", False):
+                kept.append(item)
+            else:
+                rejected.append(item)
+        summary[section] = kept
+    return summary, rejected
+
+
+def _ref_label(uid: str, unit_meta: dict[str, dict] | None) -> str:
+    meta = (unit_meta or {}).get(uid)
+    if meta and (meta.get("author") or meta.get("ts")):
+        return ", ".join(x for x in (meta.get("author"), meta.get("ts")) if x)
+    return f"m{uid[:6]}"
+
+
+def _render_verified_summary(summary: dict, unit_meta: dict[str, dict] | None = None) -> str:
     """Render a verified summary dict to the plain-text format used by BriefTab."""
     lines: list[str] = []
     lines.append(summary.get("title", ""))
@@ -330,7 +679,7 @@ def _render_verified_summary(summary: dict) -> str:
         lines.append(heading)
         for item in items:
             uid = item.get("source_unit_id", "")
-            ref = f" [m{uid[:6]}]" if uid else ""
+            ref = f" [{_ref_label(uid, unit_meta)}]" if uid else ""
             lines.append(f"· {item['text']}{ref}")
 
     pref = (summary.get("preference") or "").strip()
@@ -343,75 +692,148 @@ def _render_verified_summary(summary: dict) -> str:
 
 
 async def _generate_exec_summary(
-    brief_body: dict, llm, unit_text_map: dict[str, str]
+    brief_body: dict,
+    llm,
+    unit_text_map: dict[str, str],
+    unit_meta: dict[str, dict] | None = None,
+    report: dict | None = None,
 ) -> str:
+    """Generate, verify and render the executive summary.
+
+    Title, status and preference are computed in Python. Every LLM-written item must
+    (1) quote its source verbatim and (2) pass an entailment check. Anything that fails
+    is removed, never shipped. ``report`` (optional) receives ``verified``,
+    ``omitted_items`` and ``issues`` so callers can store them.
+    """
+    unit_meta = unit_meta or {}
+    issues: list[str] = []
+    entailment_ran = True
+
+    computed_status = _compute_status_line(brief_body)
+    pref = brief_body.get("emerging_preference")
+    pref_text = (pref or {}).get("summary") or "No directional preference recorded."
+    question = (brief_body.get("question") or {}).get("text") or ""
+
+    opt_title = {o["id"]: o["title"] for o in brief_body.get("options", []) if "id" in o}
     state = {k: brief_body.get(k) for k in (
         "question", "options", "criteria", "constraints", "claims",
-        "positions", "objections", "blockers", "separate_issues",
-        "actions", "emerging_preference",
+        "positions", "objections", "blockers", "separate_issues", "actions",
     )}
+    # Resolve option ids to titles so the model never has to join on a UUID.
+    state["positions"] = [{**p, "option_title": opt_title.get(p.get("option_id", ""), "")}
+                          for p in brief_body.get("positions", [])]
+    state["objections"] = [{**o, "option_titles": [opt_title.get(i, "") for i in o.get("option_ids", [])]}
+                           for o in brief_body.get("objections", [])]
 
-    # Collect only the source unit ids referenced anywhere in the brief so we
-    # don't bloat the prompt with irrelevant units.
     referenced_ids: set[str] = set()
+    sensitive_ids: set[str] = set()
     for section in _BRIEF_SECTIONS:
         for item in brief_body.get(section, []):
             referenced_ids.update(item.get("source_unit_ids", []))
+            if item.get("sensitive"):
+                sensitive_ids.update(item.get("source_unit_ids", []))
 
     source_lines = "\n".join(
         f"{uid}: {unit_text_map[uid]}"
+        + (" [SENSITIVE: state only the requirement, never the private reason]" if uid in sensitive_ids else "")
         for uid in sorted(referenced_ids)
         if uid in unit_text_map
     )
     source_block = f"\nSource Messages (id: text):\n{source_lines}\n" if source_lines else ""
 
-    user_base = f"Decision State:\n{json.dumps(state, indent=2)}{source_block}"
+    user_base = (
+        f"Decision State:\n{json.dumps(state, indent=2)}{source_block}\n"
+        f"Computed status (the system uses this exactly; put '-' in the status field):\n{computed_status}"
+    )
     user = user_base
 
     rendered = ""
+    omitted = 0
+    attempts = 0
     for _attempt in range(2):
+        attempts += 1
         summary = await llm.extract(_VERIFIER_SYSTEM, user, _VERIFIER_TOOL, timeout=60)
 
-        # Verifier pass: strip any item whose quote isn't in its cited source
-        all_rejected: list[dict] = []
+        # Deterministic fields: the LLM cannot override these.
+        summary["status"] = computed_status
+        summary["title"] = question or summary.get("title", "")
+        summary["preference"] = pref_text
+
+        rejected_quotes: list[dict] = []
         for section in _VERIFIABLE_SECTIONS:
             verified, rejected = _verify_items(summary.get(section, []), unit_text_map)
             summary[section] = verified
-            all_rejected.extend(rejected)
+            rejected_quotes.extend(rejected)
 
-        rendered = _render_verified_summary(summary)
+        rejected_support: list[dict] = []
+        try:
+            summary, rejected_support = await _apply_entailment(summary, unit_meta, llm)
+        except Exception as exc:  # noqa: BLE001 - never ship unchecked items silently
+            entailment_ran = False
+            issues.append(f"entailment check unavailable: {exc}")
+            for section in _VERIFIABLE_SECTIONS:
+                rejected_support.extend(summary.get(section, []))
+                summary[section] = []
+
+        rendered = _render_verified_summary(summary, unit_meta)
         violations = _check_banned_words(rendered)
+        omitted = len(rejected_quotes) + len(rejected_support)
 
-        if not all_rejected and not violations:
-            return rendered
+        if not rejected_quotes and not rejected_support and not violations:
+            break
 
-        # Build retry feedback
         feedback: list[str] = []
-        if all_rejected:
-            bad = [
-                f"'{r.get('verbatim_quote', '')}' (cited unit {r.get('source_unit_id', '')})"
-                for r in all_rejected
-            ]
+        if rejected_quotes:
+            bad = [f"'{r.get('verbatim_quote', '')}' (cited unit {r.get('source_unit_id', '')})"
+                   for r in rejected_quotes]
             feedback.append(
-                f"These quotes could not be found verbatim in their cited source units "
-                f"and were removed: {bad}. Only include items whose exact words appear in the source."
+                f"These quotes could not be found verbatim (max {_MAX_QUOTE_WORDS} words) in their cited "
+                f"source units and were removed: {bad}. Only include items whose exact words appear in the source."
+            )
+        if rejected_support:
+            feedback.append(
+                "These items were removed because their quote does not support the stated text, owner "
+                f"or support level: {[r.get('text', '') for r in rejected_support]}."
             )
         if violations:
-            feedback.append(
-                f"Banned words or placeholders found: {violations}. Rewrite without them."
-            )
+            feedback.append(f"Banned words or placeholders found: {violations}. Rewrite without them.")
         user = user_base + "\n\n" + " ".join(feedback)
 
+    # Fail closed: whatever still violates the rules is removed, not shipped.
+    leftover = _check_banned_words(rendered)
+    if leftover:
+        rendered, removed = _strip_banned_lines(rendered)
+        omitted += removed
+        issues.append(f"removed {removed} line(s) containing banned words {leftover}")
+    if omitted:
+        issues.append(f"{omitted} item(s) omitted because they failed verification")
+
+    if report is not None:
+        report["verified"] = entailment_ran
+        report["omitted_items"] = omitted
+        report["attempts"] = attempts
+        report["issues"] = issues
     return rendered
+
+
+# ---------------------------------------------------------------------------
+# Server-side id assignment and reference validation
+# ---------------------------------------------------------------------------
+
+def _resolve_option_id(title: str, options: list[dict], by_title: dict[str, str]) -> str:
+    t = (title or "").lower()
+    if t in by_title:
+        return by_title[t]
+    match = next((o for o in options if _same_option(title or "", o.get("title", ""))), None)
+    return match["id"] if match else ""
 
 
 def _assign_server_ids(brief_body: dict) -> dict:
     """Replace any LLM-generated IDs with server-assigned UUIDs.
 
-    Also resolves positions.option_id from option_title so cross-references
-    remain consistent after ID assignment.
+    Also resolves positions.option_id from option_title (exact, then fuzzy) so
+    cross-references remain consistent after ID assignment.
     """
-    # Build option title -> new server ID map (options processed first)
     option_title_to_id: dict[str, str] = {}
     for item in brief_body.get("options", []):
         item.pop("id", None)
@@ -419,7 +841,6 @@ def _assign_server_ids(brief_body: dict) -> dict:
         item["id"] = new_id
         option_title_to_id[item["title"].lower()] = new_id
 
-    # Assign IDs to all other sections
     for section in _BRIEF_SECTIONS:
         if section == "options":
             continue
@@ -427,21 +848,17 @@ def _assign_server_ids(brief_body: dict) -> dict:
             item.pop("id", None)
             item["id"] = str(uuid.uuid4())
 
-    # Resolve positions: option_title -> option_id
-    for pos in brief_body.get("positions", []):
-        title = pos.pop("option_title", "").lower()
-        pos["option_id"] = option_title_to_id.get(title, "")
+    options = brief_body.get("options", [])
+    for pos in brief_body.get("positions", []) + brief_body.get("superseded_positions", []):
+        title = pos.pop("option_title", "")
+        scoped = [o for o in options if not pos.get("decision") or o.get("decision") == pos["decision"]]
+        matches = [o for o in scoped if _same_option(title, o["title"])]
+        pos["option_id"] = matches[0]["id"] if len(matches) == 1 else ""
 
-    # Resolve objections: option_titles -> option_ids
     for obj in brief_body.get("objections", []):
         titles = obj.pop("option_titles", [])
-        obj["option_ids"] = [option_title_to_id[t.lower()] for t in titles if t.lower() in option_title_to_id]
-
-    # Resolve emerging_preference: option_title -> option_id
-    ep = brief_body.get("emerging_preference")
-    if ep and isinstance(ep, dict):
-        title = ep.pop("option_title", "").lower()
-        ep["option_id"] = option_title_to_id.get(title, "")
+        ids = [_resolve_option_id(t, options, option_title_to_id) for t in titles]
+        obj["option_ids"] = [i for i in ids if i]
 
     return brief_body
 
@@ -467,9 +884,180 @@ async def _validate_source_refs(brief_body: dict, workspace_id: uuid.UUID, sessi
     return warnings
 
 
-async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
-    from .llm import LLMClient
+def _build_brief(merged: dict) -> dict:
+    """Preserve the extraction contract; do not ask an LLM to rewrite state.
 
+    Quotes stay in the internal snapshot for audit. They are never printed on
+    the public card, where a quote might disclose a private health/money reason.
+    """
+    import copy
+    body = {section: copy.deepcopy(merged.get(section, [])) for section in _BRIEF_SECTIONS}
+    for item in body.get("criteria", []):
+        item.setdefault("name", item.get("text", ""))
+    for item in body.get("claims", []):
+        item.setdefault("evidence_status", "unverified")
+    for item in body.get("actions", []):
+        # Legacy jobs lacking acceptance metadata must not become commitments.
+        item.setdefault("status", "requested")
+    body["superseded_positions"] = copy.deepcopy(merged.get("superseded_positions", []))
+    body["dropped_items"] = copy.deepcopy(merged.get("dropped_items", []))
+    return body
+
+
+def _render_decision_card(body: dict, unit_text_map: dict[str, str],
+                          unit_meta: dict[str, dict] | None = None,
+                          report: dict | None = None) -> str:
+    """Render sourced state deterministically, without fabricating group agreement.
+
+    Verification here is citation/quote matching, NOT external fact checking or
+    semantic entailment. The report explicitly names that scope.
+    """
+    omitted = []
+    privacy_omitted = []
+    def grounded(item):
+        ids = item.get("source_unit_ids", [])
+        valid = [uid for uid in ids if uid in unit_text_map]
+        if not valid or (item.get("quote") and not any(
+                quote_in_text(item["quote"], unit_text_map[uid]) for uid in valid)):
+            omitted.append(item.get("id", ""))
+            return False
+        return True
+
+    def public(section):
+        clean = []
+        for original in body.get(section, []):
+            if section == "actions":
+                side_refs = {uid for issue in body.get("separate_issues", []) for uid in issue.get("source_unit_ids", [])}
+                if original.get("source_unit_ids") and set(original["source_unit_ids"]) <= side_refs:
+                    continue
+            if original.get("private"):
+                continue
+            item = dict(original)
+            field = "text" if "text" in item else "subject" if "subject" in item else "title"
+            text = item.get(field, "")
+            if item.get("sensitive"):
+                # Keep a plainly separated requirement, not its personal reason.
+                text = re.split(r"\bso\b", text, flags=re.I)[-1].strip(" ,.")
+                text = re.split(r"\b(?:because|due to|since)\b", text, flags=re.I)[0].strip(" ,.")
+            personal_reason = re.search(r"\b(?:knee|surgery|between jobs|pay me back|shortfall|diagnos\w*)\b|\b(?:dad|mom|father|mother)\b.*\b(?:walk|stairs|health|medical)\b", text, re.I)
+            personal_arrangement = re.search(r"\b(?:cover|repay|loan)\b.*\b(?:share|shortfall|personal|repayment)\b", text, re.I)
+            if personal_reason or personal_arrangement:
+                privacy_omitted.append(item.get("id", ""))
+                continue
+            item[field] = text
+            if grounded(item):
+                clean.append(item)
+        return clean
+
+    def refs(items):
+        ids = _unique(uid for item in items for uid in item.get("source_unit_ids", [])
+                      if uid in unit_text_map)
+        return " [" + "; ".join(_ref_label(uid, unit_meta) for uid in ids) + "]" if ids else ""
+
+    groups = {"PROPOSED": [], "AGREED — EXPLICIT AFFIRMERS": [], "OTHER POSITIONS": [],
+              "CONSTRAINTS": [], "ELIMINATED": [], "OPEN": [],
+              "ACTIONS — COMMITTED": [], "ACTIONS — REQUESTED, NOT ACCEPTED": [],
+              "REPORTED / UNVERIFIED": [], "SEPARATE": []}
+    positions = public("positions")
+    options = public("options")
+    agreements = public("agreements")
+    for option in options:
+        title = option["title"]
+        if option.get("status") == "dropped":
+            groups["ELIMINATED"].append(title + (": " + option["description"] if option.get("description") else "") + refs([option]))
+            continue
+        groups["PROPOSED"].append(title + (" — fallback only" if option.get("status") == "fallback" else " — active proposal") + refs([option]))
+        ps = [p for p in positions if p.get("option_id") == option.get("id")]
+        supporters = [p for p in ps if p.get("stance") == "support"]
+        names = _unique(p["participant_label"] for p in supporters)
+        if names:
+            groups["AGREED — EXPLICIT AFFIRMERS"].append(title + ": " + _join_names(names) + refs(supporters))
+        for stance, label in (("conditional", "conditional support"), ("acknowledged", "acknowledgment only"),
+                             ("oppose", "opposed"), ("undecided", "undecided"), ("proposed", "proposed")):
+            for p in ps:
+                if p.get("stance") == stance:
+                    line = f"{title}: {p['participant_label']} — {label}"
+                    if p.get("conditions"):
+                        line += f" ({p['conditions']})"
+                    groups["OTHER POSITIONS"].append(line + refs([p]))
+    subjects = _unique(a["subject"] for a in agreements)
+    for subject in subjects:
+        affirm = [a for a in agreements if a["subject"] == subject and a.get("stance") == "affirm"]
+        reject = [a for a in agreements if a["subject"] == subject and a.get("stance") == "reject"]
+        if affirm:
+            groups["AGREED — EXPLICIT AFFIRMERS"].append(subject + ": " + _join_names(_unique(a["participant_label"] for a in affirm)) + refs(affirm))
+        if reject:
+            groups["OTHER POSITIONS"].append(subject + ": rejected by " + _join_names(_unique(a["participant_label"] for a in reject)) + refs(reject))
+    for c in public("constraints"):
+        groups["CONSTRAINTS"].append(c["text"] + " (stated; not independently verified)" + refs([c]))
+    for section in ("blockers", "objections"):
+        for item in public(section):
+            if item.get("resolution_status", "open") == "open" and not item.get("moot"):
+                groups["OPEN"].append(item["text"] + refs([item]))
+    for a in public("actions"):
+        status = a.get("status", "requested")
+        if status in ("cancelled", "completed"):
+            continue
+        line = (a.get("owner_label") or "Owner not named") + ": " + a["text"]
+        if a.get("due"):
+            line += (" — promised " if status == "committed" else " — requested target ") + a["due"]
+        if a.get("external_due"):
+            line += " — external deadline " + a["external_due"]
+        heading = "ACTIONS — COMMITTED" if status == "committed" else "ACTIONS — REQUESTED, NOT ACCEPTED"
+        groups[heading].append(line + refs([a]))
+    # Keep side-thread assertions and historical claims in the snapshot, rather
+    # than repeat them as current decision-card facts.
+    core_refs = {uid for section in ("constraints", "positions", "blockers", "objections", "actions")
+                 for i in body.get(section, []) if not i.get("private") for uid in i.get("source_unit_ids", [])}
+    active_tokens = [_tokens_for_card(o["title"]) for o in options if o.get("status") != "dropped"]
+    separate_refs = {uid for i in body.get("separate_issues", []) for uid in i.get("source_unit_ids", [])}
+    for claim in public("claims"):
+        if claim.get("evidence_status") == "superseded":
+            continue
+        ids = set(claim.get("source_unit_ids", []))
+        title_match = any(tokens and tokens <= _tokens_for_card(claim["text"]) for tokens in active_tokens)
+        if ids <= separate_refs and not ids & core_refs:
+            continue
+        # The extractor already filters decision relevance. Requiring a claim
+        # to repeat every word of an option title suppresses cost/effort estimates.
+        author = (claim.get("author_label") + " reports: ") if claim.get("author_label") else "Reported: "
+        groups["REPORTED / UNVERIFIED"].append(author + claim["text"] + " (" + claim.get("evidence_status", "unverified") + ")" + refs([claim]))
+    for issue in public("separate_issues"):
+        groups["SEPARATE"].append(issue["title"] + refs([issue]))
+    active = [o for o in options if o.get("status") != "dropped"]
+    ranked = sorted(active, key=lambda o: len({p["participant_label"] for p in positions
+                    if p.get("option_id") == o.get("id") and p.get("stance") in ("support", "conditional")}), reverse=True)
+    leader = ranked[0] if ranked else None
+    leader_ps = [p for p in positions if leader and p.get("option_id") == leader.get("id")
+                 and p.get("stance") in ("support", "conditional")]
+    open_objections = [i for i in public("objections") if i.get("resolution_status", "open") == "open" and not i.get("moot")]
+    open_blockers = [i for i in public("blockers") if i.get("resolution_status", "open") == "open" and not i.get("moot")]
+    unowned = [a for a in public("actions") if a.get("status", "requested") in ("requested", "committed") and a.get("owner_kind") != "named"]
+    status = f"Status: {len(options)} options ({sum(o.get('status') == 'dropped' for o in options)} dropped), {len(open_objections)} open objections, {len(open_blockers)} blockers, {len(unowned)} actions without an owner."
+    lines = [(body.get("question") or {}).get("text") or "Decision brief", status,
+             "Affirmers are listed individually; group consensus is not inferred."]
+    for heading, entries in groups.items():
+        if entries:
+            lines.extend(["", heading])
+            lines.extend("· " + line for line in _unique(entries))
+    if leader_ps:
+        names = _unique(p["participant_label"] for p in leader_ps)
+        conditional = _unique(p["participant_label"] for p in leader_ps if p.get("stance") == "conditional")
+        lines.extend(["", "PREFERENCE: " + leader["title"] + " — supporters: " + _join_names(names)
+                      + ("; conditional: " + _join_names(conditional) if conditional else "") + ". No unanimous agreement inferred." + refs(leader_ps)])
+    if report is not None:
+        report.update({"verified": not omitted, "verification_scope": "source references and quote presence only",
+                       "external_fact_check": False, "rendering": "deterministic",
+                       "omitted_items": len(omitted), "privacy_omitted_items": len(privacy_omitted),
+                       "issues": ["ungrounded item omitted: " + i for i in omitted]})
+    return "\n".join(lines)
+
+
+def _tokens_for_card(text: str) -> set[str]:
+    return set(re.findall(r"[a-z0-9]+", text.lower()))
+
+
+async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
     workspace_id = uuid.UUID(payload["workspace_id"])
     extract_job_id = uuid.UUID(payload["extract_job_id"])
 
@@ -478,7 +1066,8 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
         raise ValueError(f"Workspace {workspace_id} not found")
 
     extract_job = await session.get(Job, extract_job_id)
-    if extract_job is None or extract_job.status != JobStatus.done:
+    if (extract_job is None or extract_job.status != JobStatus.done
+            or extract_job.workspace_id != workspace_id):
         raise ValueError(f"extract_brief job {extract_job_id} is not done")
 
     merged = extract_job.output_payload.get("merged_draft", {})
@@ -489,23 +1078,8 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
         candidates = merged.get("candidate_questions", [])
         primary_question = candidates[0]["text"] if candidates else None
 
-    # Build user prompt from merged candidates
-    candidates_json = json.dumps({
-        k: merged.get(k, [])
-        for k in ("options", "criteria", "constraints", "claims",
-                  "positions", "objections", "blockers", "separate_issues", "actions")
-    }, indent=2)
-
-    question_line = f"Decision question: {primary_question}" if primary_question else "Decision question: not specified"
-    user = (
-        f"{question_line}\n"
-        f"Scope: {workspace.scope or 'Not specified'}\n\n"
-        f"Extracted candidates from the full discussion:\n{candidates_json}\n\n"
-        "Synthesize a structured decision brief."
-    )
-
-    llm = LLMClient()
-    brief_body = await llm.extract(_SYNTH_SYSTEM, user, _SYNTH_TOOL, timeout=120)
+    brief_body = _build_brief(merged)
+    restore_notes = []
 
     # Server assigns all IDs (LLM must not generate them)
     brief_body = _assign_server_ids(brief_body)
@@ -517,23 +1091,39 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
     brief_body["question"] = {
         "text": primary_question,
         "scope": workspace.scope,
+        "sub_decisions": sorted({o["decision"] for o in brief_body.get("options", []) if o.get("decision")}),
     }
 
-    # Sanitize emerging_preference before summary (banned words in that field
-    # would be copied verbatim into the exec summary per the prompt rules)
-    _sanitize_emerging_preference(brief_body)
+    # The directional lean is computed from positions, never written by the model.
+    brief_body["emerging_preference"] = _compute_preference(brief_body)
 
-    # Build unit_text_map for the verifier pass (unit_id -> normalized_text)
+    # Unit text and metadata for the verifier pass and readable references
     units_result = await session.execute(
-        select(SourceUnit.id, SourceUnit.normalized_text)
+        select(SourceUnit.id, SourceUnit.normalized_text, SourceUnit.author_label, SourceUnit.locator,
+               SourceUnit.document_id, SourceUnit.sequence)
         .where(SourceUnit.workspace_id == workspace_id)
+        .order_by(SourceUnit.document_id, SourceUnit.sequence, SourceUnit.id)
     )
-    unit_text_map = {str(row.id): (row.normalized_text or "") for row in units_result}
+    unit_text_map: dict[str, str] = {}
+    unit_meta: dict[str, dict] = {}
+    for row in units_result:
+        uid = str(row.id)
+        unit_text_map[uid] = row.normalized_text or ""
+        unit_meta[uid] = {"author": row.author_label or "", "ts": (row.locator or {}).get("timestamp_str", ""),
+                          "document_id": str(row.document_id), "sequence": row.sequence}
 
-    # Generate exec summary — verifier pass strips items with unverifiable quotes
-    brief_body["executive_summary"] = await _generate_exec_summary(
-        brief_body, llm, unit_text_map
-    )
+    # Render the public card from sourced state; no model rewriting.
+    report: dict = {}
+    brief_body["executive_summary"] = _render_decision_card(brief_body, unit_text_map, unit_meta, report)
+    review_units = [{"id": uid, "normalized_text": txt, **unit_meta[uid]}
+                    for uid, txt in unit_text_map.items()]
+    reviewer_llm = LLMClient()
+    # Recheck the final JSON after ID/reference normalization, including legacy jobs.
+    brief_body["extraction_review_report"] = await review_extraction(
+        brief_body, review_units, reviewer_llm, stage="final_structured_output")
+    report["semantic_review"] = await review_summary(
+        brief_body["executive_summary"], brief_body, review_units, reviewer_llm)
+    brief_body["executive_summary_report"] = report
 
     # Re-acquire workspace lock after the LLM call so current_revision_id is fresh.
     # Without this, a concurrent accept/review that committed between the initial
@@ -561,6 +1151,9 @@ async def run_synthesize_brief(payload: dict, session: AsyncSession) -> dict:
         payload={
             "unit_count": extract_job.output_payload.get("unit_count", 0),
             "ref_warnings": ref_warnings,
+            "restored_or_corrected": restore_notes,
+            "dropped_at_extraction": extract_job.output_payload.get("dropped_item_count", 0),
+            "executive_summary_report": report,
         },
         prior_revision=current_rev_num,
         resulting_revision=current_rev_num + 1,

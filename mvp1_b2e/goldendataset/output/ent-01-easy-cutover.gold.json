@@ -1,0 +1,477 @@
+{
+ "id": "ent-01-easy-cutover",
+ "level": 1,
+ "scenario_notes": "Six people, clean and linear. Three options, one withdrawn by its proposer, one demoted to backup, explicit affirmation from everyone, named owners with dates. Baseline: a good pipeline scores near-perfect.",
+ "decision_question": "Which weekend should we do the billing cutover?",
+ "outcome": "Sat Nov 14 to Sun Nov 15. Backup Nov 21-22 if UAT sign-off slips past Nov 6. Explicitly supported by Marcus, Elena, Tom, Hannah and Dev, and stated as decided by Priya; no objections.",
+ "pact_state": {
+  "question": {
+   "text": "Which weekend should we do the billing cutover?",
+   "msgs": [
+    "m001"
+   ]
+  },
+  "options": [
+   {
+    "title": "Nov 14-15",
+    "decision": "date",
+    "status": "active",
+    "proposed_by": "Hannah",
+    "msgs": [
+     "m002",
+     "m031"
+    ]
+   },
+   {
+    "title": "Nov 21-22",
+    "decision": "date",
+    "status": "fallback",
+    "proposed_by": "Dev",
+    "msgs": [
+     "m003",
+     "m024",
+     "m031"
+    ],
+    "note": "Backup only, if UAT sign-off slips past Nov 6."
+   },
+   {
+    "title": "Dec 5-6",
+    "decision": "date",
+    "status": "dropped",
+    "proposed_by": "Hannah",
+    "msgs": [
+     "m004",
+     "m010"
+    ],
+    "note": "Withdrawn by its proposer after Elena's staffing constraint."
+   }
+  ],
+  "criteria": [
+   {
+    "text": "Risk",
+    "raised_by": [
+     "Priya"
+    ],
+    "msgs": [
+     "m017"
+    ]
+   },
+   {
+    "text": "Support coverage",
+    "raised_by": [
+     "Priya"
+    ],
+    "msgs": [
+     "m017"
+    ]
+   },
+   {
+    "text": "Finance close",
+    "raised_by": [
+     "Priya"
+    ],
+    "msgs": [
+     "m017"
+    ]
+   },
+   {
+    "text": "Customer notice period",
+    "raised_by": [
+     "Hannah"
+    ],
+    "msgs": [
+     "m018"
+    ]
+   }
+  ],
+  "constraints": [
+   {
+    "text": "Keep clear of month-end close, Nov 25-30",
+    "status": "stated",
+    "msgs": [
+     "m006",
+     "m007"
+    ]
+   },
+   {
+    "text": "Holiday staffing freeze starts Nov 23; no added weekend cover after",
+    "status": "stated",
+    "msgs": [
+     "m008"
+    ]
+   },
+   {
+    "text": "Five full days needed after UAT sign-off",
+    "status": "stated",
+    "msgs": [
+     "m011",
+     "m013"
+    ]
+   },
+   {
+    "text": "UAT sign-off scheduled for Fri Nov 6",
+    "status": "stated",
+    "msgs": [
+     "m012"
+    ]
+   },
+   {
+    "text": "Customers were promised 5 days notice for billing changes",
+    "status": "stated",
+    "msgs": [
+     "m018",
+     "m019"
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "text": "The last cutover took about 9 hours; plan for 12 this time",
+    "by": "Dev",
+    "kind": "factual, first-hand",
+    "status": "unchallenged",
+    "msgs": [
+     "m016"
+    ],
+    "quote": "about 9 hours on a Saturday night"
+   }
+  ],
+  "positions": [
+   {
+    "participant": "Marcus",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m020"
+    ],
+    "quote": "Nov 14-15 is cleaner"
+   },
+   {
+    "participant": "Elena",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m021"
+    ],
+    "quote": "Nov 14-15 works for support"
+   },
+   {
+    "participant": "Tom",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m022"
+    ],
+    "quote": "Nov 14-15 is good for QA"
+   },
+   {
+    "participant": "Hannah",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m023"
+    ],
+    "quote": "Nov 14-15 from me as well"
+   },
+   {
+    "participant": "Dev",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m024"
+    ],
+    "quote": "Nov 14-15, yes"
+   },
+   {
+    "participant": "Priya",
+    "option": "Nov 14-15",
+    "stance": "support",
+    "msgs": [
+     "m031"
+    ],
+    "quote": "cutover Sat Nov 14 to Sun Nov 15"
+   },
+   {
+    "participant": "Dev",
+    "option": "Nov 21-22",
+    "stance": "conditional",
+    "msgs": [
+     "m024"
+    ],
+    "quote": "I'd make Nov 21-22 the backup if UAT slips",
+    "condition": "UAT slips"
+   },
+   {
+    "participant": "Priya",
+    "option": "Nov 21-22",
+    "stance": "conditional",
+    "msgs": [
+     "m031"
+    ],
+    "quote": "Backup is Nov 21-22 if UAT sign-off slips past Nov 6",
+    "condition": "UAT sign-off slips past Nov 6"
+   },
+   {
+    "participant": "Elena",
+    "option": "Dec 5-6",
+    "stance": "oppose",
+    "msgs": [
+     "m009"
+    ],
+    "quote": "Dec 5-6 doesn't work for me"
+   }
+  ],
+  "objections": [
+   {
+    "participant": "Elena",
+    "targets": [
+     "Dec 5-6"
+    ],
+    "text": "Holiday staffing freeze makes Dec 5-6 unworkable",
+    "status": "resolved",
+    "moot": true,
+    "msgs": [
+     "m009",
+     "m010"
+    ],
+    "quote": "Dec 5-6 doesn't work for me"
+   }
+  ],
+  "blockers": [],
+  "separate_issues": [],
+  "actions": [
+   {
+    "text": "Write the runbook and have it reviewed",
+    "owner": "Dev",
+    "owner_kind": "named",
+    "due": "Nov 9",
+    "msgs": [
+     "m032",
+     "m033"
+    ],
+    "quote": "runbook by Nov 9"
+   },
+   {
+    "text": "Sign off UAT",
+    "owner": "Tom",
+    "owner_kind": "named",
+    "due": "Nov 6",
+    "msgs": [
+     "m034"
+    ],
+    "quote": "I'll sign off UAT on Nov 6"
+   },
+   {
+    "text": "Send the customer notice",
+    "owner": "Hannah",
+    "owner_kind": "named",
+    "due": "Nov 9",
+    "msgs": [
+     "m035"
+    ],
+    "quote": "I'll send the customer notice by Nov 9"
+   },
+   {
+    "text": "Lock the weekend support rota",
+    "owner": "Elena",
+    "owner_kind": "named",
+    "due": "Nov 2",
+    "msgs": [
+     "m036"
+    ],
+    "quote": "I'll lock the weekend support rota by Nov 2"
+   },
+   {
+    "text": "Brief the auditors and confirm back",
+    "owner": "Marcus",
+    "owner_kind": "named",
+    "due": "Nov 10",
+    "msgs": [
+     "m037"
+    ],
+    "quote": "I'll brief the auditors on Nov 10"
+   },
+   {
+    "text": "Book the war room and post the final schedule once the runbook is done",
+    "owner": "Priya",
+    "owner_kind": "named",
+    "due": "after runbook",
+    "msgs": [
+     "m038"
+    ],
+    "quote": "I'll book the war room and post the final schedule"
+   }
+  ],
+  "emerging_preference": {
+   "option": "Nov 14-15",
+   "summary": "Nov 14-15 has explicit support from Marcus, Elena, Tom, Hannah, Dev and Priya; proposed by Hannah.",
+   "supporters": [
+    "Marcus",
+    "Elena",
+    "Tom",
+    "Hannah",
+    "Dev",
+    "Priya"
+   ],
+   "conditional": [],
+   "refs": [
+    "m020",
+    "m021",
+    "m022",
+    "m023",
+    "m024",
+    "m031"
+   ]
+  }
+ },
+ "executive_summary": {
+  "title": "Which weekend should we do the billing cutover?",
+  "status_line": "3 options (1 dropped); Nov 14-15: explicit support from Marcus, Elena, Tom, Hannah, Dev, Priya (6); Nov 21-22: conditional: Dev, Priya; 0 open objections; 0 open blockers.",
+  "counts": {
+   "options": 3,
+   "dropped": 1,
+   "open_objections": 0,
+   "open_blockers": 0,
+   "unowned_actions": 0
+  },
+  "needs_attention": [
+   {
+    "text": "UAT sign-off on Nov 6 gates the plan. If it slips, the cutover moves to the backup weekend, Nov 21-22, and the holiday staffing freeze starts Nov 23.",
+    "refs": [
+     "m008",
+     "m012",
+     "m024",
+     "m031"
+    ]
+   }
+  ],
+  "proposed": [
+   {
+    "text": "Nov 14-15: explicit support from Marcus, Elena, Tom, Hannah, Dev and Priya. Proposed by Hannah.",
+    "refs": [
+     "m002",
+     "m020",
+     "m021",
+     "m022",
+     "m023",
+     "m024",
+     "m031"
+    ]
+   },
+   {
+    "text": "Nov 21-22: backup only, if UAT sign-off slips past Nov 6 (Dev, Priya).",
+    "refs": [
+     "m003",
+     "m024",
+     "m031"
+    ]
+   },
+   {
+    "text": "Dec 5-6: dropped. Withdrawn by Hannah after Elena's staffing constraint.",
+    "refs": [
+     "m004",
+     "m009",
+     "m010"
+    ]
+   }
+  ],
+  "committed": [
+   {
+    "text": "Group stated decision: cutover Sat Nov 14 to Sun Nov 15. Nobody objected when Priya asked.",
+    "refs": [
+     "m025",
+     "m026",
+     "m027",
+     "m028",
+     "m029",
+     "m030",
+     "m031"
+    ]
+   },
+   {
+    "text": "Dev: runbook, reviewed by Nov 9.",
+    "refs": [
+     "m033"
+    ]
+   },
+   {
+    "text": "Tom: UAT sign-off on Nov 6.",
+    "refs": [
+     "m034"
+    ]
+   },
+   {
+    "text": "Hannah: customer notice by Nov 9.",
+    "refs": [
+     "m035"
+    ]
+   },
+   {
+    "text": "Elena: weekend support rota locked by Nov 2.",
+    "refs": [
+     "m036"
+    ]
+   },
+   {
+    "text": "Marcus: brief the auditors on Nov 10 and confirm back.",
+    "refs": [
+     "m037"
+    ]
+   },
+   {
+    "text": "Priya: book the war room and post the final schedule once the runbook is done.",
+    "refs": [
+     "m038"
+    ]
+   }
+  ],
+  "preference": {
+   "text": "Nov 14-15 has explicit support from Marcus, Elena, Tom, Hannah, Dev and Priya; proposed by Hannah.",
+   "refs": [
+    "m020",
+    "m021",
+    "m022",
+    "m023",
+    "m024",
+    "m031"
+   ]
+  }
+ },
+ "traps": [
+  {
+   "msgs": [
+    "m026",
+    "m027",
+    "m028",
+    "m029",
+    "m030"
+   ],
+   "note": "'No objection' and 'None' answer Priya's question. Each person had already stated support earlier (m020-m024). They are not extra votes."
+  },
+  {
+   "msgs": [
+    "m024",
+    "m031"
+   ],
+   "note": "Nov 21-22 is a backup if UAT slips, not a co-equal option and not dropped."
+  },
+  {
+   "msgs": [
+    "m009",
+    "m010"
+   ],
+   "note": "Dec 5-6 was withdrawn by its proposer. Elena's objection is moot, not an open objection."
+  }
+ ],
+ "card_must_include": [
+  "Cutover Sat Nov 14 to Sun Nov 15 with explicit support from all named people",
+  "Backup Nov 21-22 only if UAT sign-off slips past Nov 6",
+  "Dec 5-6 withdrawn",
+  "Six actions with named owners and dates"
+ ],
+ "card_must_not_include": [
+  "Any open objection or open blocker",
+  "Dec 5-6 as a live option",
+  "Any owner other than the named one for each action"
+ ]
+}

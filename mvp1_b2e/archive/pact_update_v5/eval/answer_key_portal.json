@@ -1,0 +1,165 @@
+{
+  "name": "portal_launch_chat",
+  "source": "tests/fixtures/portal_launch_chat.txt",
+  "question": "Launch plan for the member portal: which option, and what gates the Nov 16 date",
+  "note": "Follows the expected card the user supplied for this chat.",
+  "participants": [
+    "Priya Nair",
+    "Marcus Webb",
+    "Elena Ruiz",
+    "Rosa Alvarez",
+    "Jon Becker",
+    "Dev Patel",
+    "Hal Okonkwo"
+  ],
+  "agreements": [
+    {
+      "label": "Option A: Nov 16 with Acme, Oct 30 checkpoint",
+      "pattern": "acme",
+      "exclude": "otp|later",
+      "affirmers": [
+        "Priya Nair",
+        "Marcus Webb",
+        "Rosa Alvarez"
+      ],
+      "conditional": [
+        "Elena Ruiz"
+      ],
+      "acknowledged": [
+        "Dev Patel",
+        "Jon Becker"
+      ],
+      "not_affirmers": [
+        "Elena Ruiz",
+        "Jon Becker",
+        "Dev Patel",
+        "Hal Okonkwo"
+      ]
+    }
+  ],
+  "fallback": [
+    {
+      "label": "Option B (own email OTP) is a fallback pending Hal's approval",
+      "pattern": "otp|email"
+    }
+  ],
+  "dropped": [
+    {
+      "label": "Option C (slip to January)",
+      "pattern": "january"
+    }
+  ],
+  "constraints": [
+    {
+      "label": "live before the Dec 15 change freeze",
+      "pattern": "dec(ember)? 15|change freeze"
+    },
+    {
+      "label": "finding #3 closed before any launch",
+      "pattern": "#3|finding"
+    },
+    {
+      "label": "DPA signed before member data flows",
+      "pattern": "dpa"
+    },
+    {
+      "label": "$180k launch budget",
+      "pattern": "180"
+    }
+  ],
+  "open_blockers": {
+    "max_count": 3,
+    "must_mention_all": [
+      "soc ?2",
+      "dpa",
+      "#3|finding|token"
+    ],
+    "must_not_mention": [
+      "figma",
+      "on-call",
+      "all-hands"
+    ]
+  },
+  "open_objections": {
+    "count": 2,
+    "all_on": "otp|email"
+  },
+  "actions": [
+    {
+      "label": "Marcus: code complete by Nov 6",
+      "pattern": "code complete",
+      "owner": "Marcus Webb",
+      "status": "open",
+      "acceptance": "committed",
+      "due_contains": "nov 6"
+    },
+    {
+      "label": "Rosa: get the DPA signed before Oct 20",
+      "pattern": "dpa",
+      "owner": "Rosa Alvarez",
+      "status": "open",
+      "acceptance": "committed",
+      "due_contains": "oct 20"
+    },
+    {
+      "label": "Elena: finish the SOC 2 review by Oct 14",
+      "pattern": "soc ?2",
+      "owner": "Elena Ruiz",
+      "status": "open",
+      "acceptance": "committed",
+      "due_contains": "oct 14"
+    },
+    {
+      "label": "Dev: token fix for finding #3",
+      "pattern": "token|#3",
+      "owner": "Dev Patel",
+      "status": "open",
+      "acceptance": "committed"
+    },
+    {
+      "label": "Taking B's funding ask to Hal has no owner (deadline Oct 30, per Hal)",
+      "pattern": "hal|funding|ask",
+      "unowned": true,
+      "deadline_contains": "oct 30"
+    },
+    {
+      "label": "Running the Oct 30 go/no-go checkpoint has no owner",
+      "pattern": "checkpoint|go/no-go",
+      "unowned": true
+    }
+  ],
+  "separate_issues": [],
+  "card": {
+    "privacy_terms": [],
+    "must_not_contain": [
+      "figma",
+      "on-call",
+      "all-hands"
+    ],
+    "committed_must_not_match": [
+      "hal.*(approv|fund)",
+      "(approv|fund).*hal"
+    ],
+    "requested_must_be_qualified": [],
+    "attention_must_not_match": [],
+    "attention_should_mention": [
+      "no owner|owner not named",
+      "checkpoint",
+      "dpa",
+      "oct 20"
+    ],
+    "outside_unverified_must_not_match": [
+      "\\$40k",
+      "done by nov 16",
+      "\\baligned\\b"
+    ],
+    "unverified_should_mention": [
+      "weeks",
+      "\\$65k"
+    ],
+    "dropped_must_be_marked": [
+      "january"
+    ],
+    "every_line_cited": true
+  }
+}

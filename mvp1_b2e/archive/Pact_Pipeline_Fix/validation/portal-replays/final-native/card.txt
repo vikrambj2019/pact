@@ -1,0 +1,83 @@
+Member portal launch: Nov 16 with vendor, security and legal dependencies
+Status: 3 options (1 dropped), 2 open objections, 3 blockers, 2 actions without an owner.
+Affirmers are listed individually; group consensus is not inferred.
+
+PROPOSED
+· Nov 16 with Acme as planned — active proposal [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:12 AM]
+· Nov 16 with our own email OTP verification, switch to Acme later — fallback only [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:19 AM]
+
+AGREED — EXPLICIT AFFIRMERS
+· Nov 16 with Acme as planned: Marcus Webb and Rosa Alvarez [Marcus Webb, 10/7/26 10:14 AM; Marcus Webb, 10/7/26 10:26 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/7/26 10:27 AM]
+· January launch is a non-starter / C dropped: Marcus Webb, Elena Ruiz, Rosa Alvarez and Priya Nair [Marcus Webb, 10/5/26 9:31 AM; Elena Ruiz, 10/5/26 9:32 AM; Rosa Alvarez, 10/5/26 9:33 AM; Priya Nair, 10/7/26 10:12 AM]
+· compliance first, speed second priority shift: Marcus Webb, Rosa Alvarez and Elena Ruiz [Marcus Webb, 10/6/26 8:51 AM; Rosa Alvarez, 10/6/26 8:52 AM; Elena Ruiz, 10/6/26 8:53 AM]
+· $180k cap is the budget for option A: Jon Becker [Jon Becker, 10/7/26 10:33 AM]
+
+OTHER POSITIONS
+· Nov 16 with Acme as planned: Elena Ruiz — conditional support (as long as I see the SOC 2 report in writing before I sign off) [Elena Ruiz, 10/7/26 10:16 AM; Elena Ruiz, 10/7/26 10:28 AM]
+· Nov 16 with Acme as planned: Dev Patel — acknowledgment only [Dev Patel, 10/7/26 10:20 AM]
+· Nov 16 with Acme as planned: Priya Nair — proposed [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/7/26 10:12 AM]
+· Nov 16 with our own email OTP verification, switch to Acme later: Jon Becker — opposed [Jon Becker, 10/7/26 10:18 AM]
+· Nov 16 with our own email OTP verification, switch to Acme later: Priya Nair — proposed [Priya Nair, 10/5/26 9:20 AM]
+
+CONSTRAINTS
+· Cannot go live with member data flowing to Acme without signed DPA (stated; not independently verified) [Rosa Alvarez, 10/5/26 9:11 AM]
+· Launch envelope is $180k all in (stated; not independently verified) [Jon Becker, 10/5/26 9:13 AM]
+· Account recovery flows must not be skipped (stated; not independently verified) [Elena Ruiz, 10/5/26 9:24 AM]
+· Launch must occur before Dec 15 change freeze (stated; not independently verified) [Hal Okonkwo, 10/5/26 9:30 AM]
+· Launch requires security sign-off and signed DPA in addition to code complete (stated; not independently verified) [Marcus Webb, 10/5/26 9:45 AM]
+· Security finding #3 must be closed before any launch, whichever vendor (stated; not independently verified) [Elena Ruiz, 10/6/26 8:40 AM]
+· Elena will not sign off without SOC 2 report in writing (stated; not independently verified) [Elena Ruiz, 10/7/26 10:16 AM]
+· Jon cannot approve option B at $215k without escalation to Hal (stated; not independently verified) [Jon Becker, 10/7/26 10:18 AM]
+· If B needs money, the ask must be sent to Hal by Oct 30 (stated; not independently verified) [Hal Okonkwo, 10/7/26 10:30 AM]
+· $180k cap is the budget for option A (stated; not independently verified) [Jon Becker, 10/7/26 10:33 AM]
+· Option B at $215k requires Hal's approval before it can proceed (stated; not independently verified) [Jon Becker, 10/7/26 10:18 AM; Priya Nair, 10/7/26 10:19 AM]
+· Won't sign off on SOC 2 compliance based on a rep's word, needs it in writing (stated; not independently verified) [Elena Ruiz, 10/7/26 10:16 AM]
+
+ELIMINATED
+· Slip to January [Priya Nair, 10/5/26 9:20 AM; Priya Nair, 10/5/26 9:31 AM]
+
+OPEN
+· DPA with Acme not signed [Rosa Alvarez, 10/5/26 9:09 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/9/26 2:12 PM]
+· Security finding #3 on existing auth service must be closed before launch [Elena Ruiz, 10/6/26 8:40 AM; Marcus Webb, 10/6/26 8:42 AM; Elena Ruiz, 10/6/26 8:43 AM]
+· Review remains pending: Obtain and review Acme SOC 2 Type II report in writing before sign-off [Elena Ruiz, 10/7/26 10:16 AM; Priya Nair, 10/7/26 10:25 AM; Elena Ruiz, 10/7/26 10:28 AM; Elena Ruiz, 10/9/26 2:10 PM]
+· Skipping account recovery flows for v1 is unacceptable [Elena Ruiz, 10/5/26 9:24 AM]
+· Cannot approve option B's budget without Hal's sign-off [Jon Becker, 10/7/26 10:18 AM]
+
+ACTIONS — COMMITTED
+· Marcus Webb: Code complete for the portal — promised Nov 6 [Marcus Webb, 10/5/26 9:05 AM; Marcus Webb, 10/5/26 9:45 AM; Priya Nair, 10/7/26 10:25 AM; Marcus Webb, 10/7/26 10:26 AM]
+· Dev Patel: Close security finding #3 (token fix) [Dev Patel, 10/6/26 8:44 AM; Dev Patel, 10/6/26 8:46 AM]
+· Rosa Alvarez: Chase the DPA — promised before Oct 20 [Rosa Alvarez, 10/7/26 10:15 AM; Priya Nair, 10/7/26 10:25 AM; Rosa Alvarez, 10/7/26 10:27 AM]
+· Elena Ruiz: Obtain and review Acme SOC 2 Type II report in writing before sign-off — promised by Oct 14 [Elena Ruiz, 10/7/26 10:16 AM; Priya Nair, 10/7/26 10:25 AM; Elena Ruiz, 10/7/26 10:28 AM; Elena Ruiz, 10/9/26 2:10 PM]
+· Rosa Alvarez: Provide a status update [Rosa Alvarez, 10/9/26 2:12 PM]
+
+ACTIONS — REQUESTED, NOT ACCEPTED
+· Owner not named: Send budget ask to Hal if option B needs money — requested target by Oct 30 [Hal Okonkwo, 10/7/26 10:30 AM]
+· Owner not named: Run the go/no-go checkpoint — requested target Oct 30 [Priya Nair, 10/7/26 10:12 AM]
+
+REPORTED / UNVERIFIED
+· Marcus Webb reports: Acme IDV integration is done in staging (unverified) [Marcus Webb, 10/5/26 9:05 AM]
+· Rosa Alvarez reports: Cannot go live with member data flowing to Acme without signed DPA (unverified) [Rosa Alvarez, 10/5/26 9:11 AM]
+· Jon Becker reports: Launch envelope is $180k all in, currently ~$150k committed (unverified) [Jon Becker, 10/5/26 9:13 AM]
+· Jon Becker reports: Data pipeline run costs are not part of launch budget, they're in ops budget (unverified) [Jon Becker, 10/5/26 9:15 AM]
+· Marcus Webb reports: Option B is about 3 weeks of work for Marcus's team (conflicting) [Marcus Webb, 10/5/26 9:22 AM]
+· Dev Patel reports: Option B is more like 5 weeks once account recovery flows are built (conflicting) [Dev Patel, 10/5/26 9:23 AM]
+· Marcus Webb reports: Option B would skip recovery flows for v1 (unverified) [Marcus Webb, 10/5/26 9:24 AM]
+· Elena Ruiz reports: Skipping recovery flows risks account takeover (unverified) [Elena Ruiz, 10/5/26 9:24 AM]
+· Hal Okonkwo reports: Exec team wants launch live before Dec 15 change freeze (unverified) [Hal Okonkwo, 10/5/26 9:30 AM; Hal Okonkwo, 10/7/26 10:30 AM]
+· Jon Becker reports: Option B cost corrected to ~$65k, not $40k, due to recovery flows (unverified) [Jon Becker, 10/5/26 9:35 AM]
+· Jon Becker reports: Option B would put total at $215k, over budget by $35k (unverified) [Jon Becker, 10/5/26 9:36 AM]
+· Marcus Webb reports: Launch needs security sign-off and the DPA in addition to code complete by Nov 6 (unverified) [Marcus Webb, 10/5/26 9:45 AM]
+· Elena Ruiz reports: Pen test found one open finding (#3) on the existing auth service that must be closed before any launch, regardless of vendor (unverified) [Elena Ruiz, 10/6/26 8:40 AM]
+· Elena Ruiz reports: Closing finding #3 by Nov 6 is possible if Dev's team prioritizes the token fix (unverified) [Elena Ruiz, 10/6/26 8:43 AM]
+· Dev Patel reports: Fixing the token issue is a week of work (unverified) [Dev Patel, 10/6/26 8:44 AM]
+· Jon Becker reports: Cannot approve option B at $215k; would need to go to Hal for approval (unverified) [Jon Becker, 10/7/26 10:18 AM]
+· Elena Ruiz reports: Acme sent the SOC 2 Type II report earlier than expected (unverified) [Elena Ruiz, 10/9/26 2:10 PM]
+· Rosa Alvarez reports: One clause on the DPA, data retention, is still open with Acme's counsel (unverified) [Rosa Alvarez, 10/9/26 2:12 PM]
+· Dev Patel reports: Token fix started Wednesday and is on track (unverified) [Dev Patel, 10/9/26 2:15 PM]
+
+SEPARATE
+· Figma link for onboarding screens [Dev Patel, 10/5/26 9:38 AM; Priya Nair, 10/5/26 9:39 AM]
+· On-call coverage for Thursday [Marcus Webb, 10/5/26 9:40 AM; Dev Patel, 10/5/26 9:41 AM]
+· All-hands meeting day change [Hal Okonkwo, 10/6/26 9:00 AM; Priya Nair, 10/6/26 9:01 AM; Hal Okonkwo, 10/6/26 9:02 AM]
+
+PREFERENCE: Nov 16 with Acme as planned — supporters: Marcus Webb, Rosa Alvarez and Elena Ruiz; conditional: Elena Ruiz. No unanimous agreement inferred. [Marcus Webb, 10/7/26 10:14 AM; Marcus Webb, 10/7/26 10:26 AM; Rosa Alvarez, 10/7/26 10:15 AM; Rosa Alvarez, 10/7/26 10:27 AM; Elena Ruiz, 10/7/26 10:16 AM; Elena Ruiz, 10/7/26 10:28 AM]

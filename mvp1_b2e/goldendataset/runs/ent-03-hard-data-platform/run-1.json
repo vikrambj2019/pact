@@ -1,0 +1,2285 @@
+{
+  "meta": {
+    "dataset": "ent-03-hard-data-platform",
+    "model": "claude-sonnet-4-6",
+    "run": 1,
+    "units": 101,
+    "timestamp": "2026-10-11T18:32:49.581006+00:00"
+  },
+  "brief": {
+    "criteria": [
+      {
+        "text": "BI dashboards must not break more than once during transition",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-005"
+        ],
+        "quote": "as long as my dashboards don't break twice",
+        "name": "BI dashboards must not break more than once during transition",
+        "id": "3f190f1f-afe3-4994-8219-5888b75cb0d4"
+      },
+      {
+        "text": "Speed to unified reporting",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-008",
+          "ent-03-hard-data-platform-011"
+        ],
+        "quote": "I'd rank speed to unified reporting first, then cost, then risk.",
+        "name": "Speed to unified reporting",
+        "id": "07637656-6583-4586-adfb-2e087e0ebac1"
+      },
+      {
+        "text": "Cost",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-008",
+          "ent-03-hard-data-platform-011"
+        ],
+        "quote": "Ranking for now: speed, cost, compliance.",
+        "name": "Cost",
+        "id": "4507b635-6b76-4212-9a06-5e39f8414b82"
+      },
+      {
+        "text": "Compliance",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-011"
+        ],
+        "quote": "Ranking for now: speed, cost, compliance.",
+        "name": "Compliance",
+        "id": "efbf77dc-e71e-45b1-a3c5-dbf0bad2b5a5"
+      },
+      {
+        "text": "Whether the migration timeline is realistic given available team capacity",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-037",
+          "ent-03-hard-data-platform-059"
+        ],
+        "quote": "March for 400 pipelines was never going to happen.",
+        "name": "Whether the migration timeline is realistic given available team capacity",
+        "id": "8e40debd-2c7f-46b1-b1fe-5cf2aedfb63d"
+      },
+      {
+        "text": "Whether compliance gates (BAA and tokenization review) can be completed in time",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-038"
+        ],
+        "quote": "I also can't see claims data moving by March with the BAA and tokenization review not even started.",
+        "name": "Whether compliance gates (BAA and tokenization review) can be completed in time",
+        "id": "f85d1815-aa9a-4527-a4d9-5c7c0761f6ec"
+      },
+      {
+        "text": "Speed third (below compliance and cost)",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-078"
+        ],
+        "quote": "New order: compliance first, then cost, then speed.",
+        "name": "Speed third (below compliance and cost)",
+        "id": "f7f8dce6-e000-444b-a491-49db9ef9a266"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Unified reporting must be achieved by end of March",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-000"
+        ],
+        "quote": "The exec ask is unified reporting by end of March.",
+        "sensitive": false,
+        "id": "2cf83c06-056d-4d4c-92e2-a534262fc663"
+      },
+      {
+        "text": "A direction must be reached by Wednesday",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-000"
+        ],
+        "quote": "I'd like a direction by Wednesday.",
+        "sensitive": false,
+        "id": "67f79595-889c-4184-a54e-a07755882ac9"
+      },
+      {
+        "text": "CFO requires a 15% run-cost reduction on data platforms this year",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-009"
+        ],
+        "quote": "the CFO wants a 15% run-cost reduction on data platforms this year.",
+        "sensitive": false,
+        "id": "3b482ce3-e47f-4857-9fbd-a6cc0f5072c5"
+      },
+      {
+        "text": "PHI data requires BAA coverage and equivalent access controls on whichever platform is chosen",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-010"
+        ],
+        "quote": "Anything with PHI needs BAA coverage and the same access controls",
+        "sensitive": true,
+        "id": "0d12d1c9-ce1c-4d3e-81c8-3660682384ee"
+      },
+      {
+        "text": "Regulatory audit is in May \u2014 compliance must be satisfied before then",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-010"
+        ],
+        "quote": "we have a regulatory audit in May.",
+        "sensitive": false,
+        "id": "bfcf6fb4-64a8-4c83-80fe-fa31e9860f9b"
+      },
+      {
+        "text": "PHI BAA and tokenization review must be completed before claims data moves to the new platform",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-024",
+          "ent-03-hard-data-platform-038"
+        ],
+        "quote": "I also can't see claims data moving by March with the BAA and tokenization review not even started.",
+        "sensitive": true,
+        "id": "99970157-f028-4733-94e6-75df9ce4ef76"
+      },
+      {
+        "text": "Snowflake non-renewal notice must be served by Nov 30 to avoid 3-year auto-renewal",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-033",
+          "ent-03-hard-data-platform-067"
+        ],
+        "quote": "Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right.",
+        "sensitive": false,
+        "id": "c9547143-3d54-40c6-ab58-ea388c980970"
+      },
+      {
+        "text": "Serving Snowflake non-renewal notice loses Snowflake access on Feb 28, before Databricks migration is complete",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-036"
+        ],
+        "quote": "If we serve notice we lose Snowflake on Feb 28. We won't be on Databricks by then. That's a gap.",
+        "sensitive": false,
+        "id": "ccc41088-a6f9-46f9-877d-5e2072336ee1"
+      },
+      {
+        "text": "No backfill for Raj's team due to hiring freeze; migration must be executed with existing staff only",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-047",
+          "ent-03-hard-data-platform-048"
+        ],
+        "quote": "there's a hiring freeze, so no backfill for Raj's team.",
+        "sensitive": false,
+        "private": true,
+        "id": "4bb0aaed-52b3-4750-9c8b-881e149a332c"
+      },
+      {
+        "text": "Two Halden engineers committed for six weeks starting Dec 1 to cover stored procedure rewrites",
+        "kind": "negotiable",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-062"
+        ],
+        "quote": "I'll commit two engineers for six weeks, starting Dec 1.",
+        "sensitive": false,
+        "id": "9fd8af6f-5f5c-4305-be63-cbf1a7c2c02c"
+      },
+      {
+        "text": "Databricks requires column-level tokenization on member IDs plus a BAA addendum before PHI data can migrate",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-064"
+        ],
+        "quote": "Databricks needs column-level tokenization on member IDs plus a BAA addendum.",
+        "sensitive": true,
+        "id": "d61d4bb9-f128-4d5b-9c2e-927a8778b06d"
+      },
+      {
+        "text": "Security architecture review is mandatory before any PHI migration; booked for Dec 8 and takes approximately 3 weeks",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-077"
+        ],
+        "quote": "Security architecture review is now mandatory before any PHI migration. It's booked for Dec 8 and takes about 3 weeks.",
+        "sensitive": false,
+        "id": "59622ca8-d33f-42c8-8e71-ba5cf35a733e"
+      },
+      {
+        "text": "Exact Q2 cutover date set only after Raj's stored procedure assessment and the Dec 8 security review complete",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-078",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+        "sensitive": false,
+        "id": "2988579a-e471-42e9-8fc0-ce55903cbf32"
+      },
+      {
+        "text": "Platform must be formally confirmed at the Nov 16 steering to ensure the notice decision is made before the Nov 30 deadline",
+        "kind": "mandatory",
+        "quote": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-093"
+        ],
+        "sensitive": false,
+        "id": "22d2f7eb-22ae-48ff-a02f-234c7563683f"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "opt-databricks",
+        "title": "Databricks",
+        "decision": "platform",
+        "status": "active",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-001",
+          "ent-03-hard-data-platform-080",
+          "ent-03-hard-data-platform-082",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+        "description": "",
+        "id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "temp_id": "opt-snowflake",
+        "title": "Snowflake",
+        "decision": "platform",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-002",
+          "ent-03-hard-data-platform-061"
+        ],
+        "quote": "If you lend two engineers for the rewrites, A works for me and I withdraw B.",
+        "description": "",
+        "id": "f4fe790e-1c5e-4c9d-9ef4-2b06766b5212"
+      },
+      {
+        "temp_id": "opt-query-both",
+        "title": "Query both platforms indefinitely",
+        "decision": "platform",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-007",
+          "ent-03-hard-data-platform-074"
+        ],
+        "quote": "As a temporary bridge, ok. As the end state, still no.",
+        "description": "",
+        "id": "52aa3be1-2748-45c9-b327-2422703a1566"
+      },
+      {
+        "temp_id": "opt-q2",
+        "title": "Q2",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-039",
+          "ent-03-hard-data-platform-078"
+        ],
+        "quote": "Q2 it is, exact date after the Dec 8 review and Raj's assessment.",
+        "description": "",
+        "id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "temp_id": "opt-march",
+        "title": "March",
+        "decision": "date",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-043"
+        ],
+        "quote": "Dropping the March target then.",
+        "description": "",
+        "id": "165c7d36-9562-41c1-819a-b668696e06f5"
+      },
+      {
+        "temp_id": "opt-snowflake-ext-6mo",
+        "title": "6-month Snowflake extension to Aug 31",
+        "decision": "contract",
+        "status": "active",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-069"
+        ],
+        "quote": "I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal.",
+        "description": "",
+        "id": "3c6619fc-30ef-4307-b158-9eb0b2cf23b5"
+      },
+      {
+        "temp_id": "opt-snowflake-renew-1yr",
+        "title": "1-year Snowflake renewal",
+        "decision": "contract",
+        "status": "fallback",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-070"
+        ],
+        "quote": "If they refuse we renew for a year and take the hit.",
+        "description": "",
+        "id": "30238f3f-ed7f-4471-afc4-faa9cb35121c"
+      },
+      {
+        "temp_id": "opt-federate-bridge",
+        "title": "Federated cross-platform queries (bridge until cutover)",
+        "decision": "platform",
+        "status": "fallback",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-073",
+          "ent-03-hard-data-platform-074",
+          "ent-03-hard-data-platform-075"
+        ],
+        "quote": "Until cutover can we federate queries across both platforms as a bridge?",
+        "description": "",
+        "id": "8de4e213-9e8b-44a7-a355-c3a12fe80848"
+      }
+    ],
+    "claims": [
+      {
+        "text": "The current organisation runs 300+ pipelines on Databricks and the ML team operates there",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-001"
+        ],
+        "quote": "We already run 300+ pipelines on it and the ML team lives there.",
+        "sensitive": false,
+        "id": "6537a6fb-ff87-48b4-9b33-36f2a2769a89"
+      },
+      {
+        "text": "Halden's whole claims mart plus about 40 stored procedures that don't port cleanly are on Snowflake",
+        "kind": "factual",
+        "author_label": "Raj",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-002"
+        ],
+        "quote": "Our whole claims mart is there plus about 40 stored procedures that don't port cleanly.",
+        "sensitive": false,
+        "id": "3a1873a9-cc52-4ecf-a71b-d35f02314046"
+      },
+      {
+        "text": "Stored procedures port fine with the converter",
+        "kind": "causal",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-003"
+        ],
+        "quote": "Stored procedures port fine with the converter.",
+        "sensitive": false,
+        "id": "40cea999-089b-40d6-962e-b94c37bce818"
+      },
+      {
+        "text": "Halden moved 300 pipelines in 8 weeks last year",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-003"
+        ],
+        "quote": "Halden moved 300 pipelines in 8 weeks last year.",
+        "sensitive": false,
+        "id": "9b446560-6153-444f-9cd2-f6afb7a5c00b"
+      },
+      {
+        "text": "Moving 400 pipelines in six weeks with the same team is not realistic",
+        "kind": "predictive",
+        "author_label": "Gareth",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-004"
+        ],
+        "quote": "Sure, and I'm sure we'll do 400 in six weeks with the same team. Totally realistic.",
+        "sensitive": false,
+        "id": "e7398ac4-ccd8-41bc-b12a-e6175c7ee65b"
+      },
+      {
+        "text": "Querying both platforms doubles the cost and makes number reconciliation impossible",
+        "kind": "causal",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-006"
+        ],
+        "quote": "Querying both doubles the cost and nobody can reconcile the numbers.",
+        "sensitive": false,
+        "id": "56633683-8d98-4dbd-aff6-ab522a592c35"
+      },
+      {
+        "text": "The CFO target run-cost reduction is 15%",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "superseded",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-009",
+          "ent-03-hard-data-platform-030"
+        ],
+        "quote": "The CFO target is 10%, not 15%. Anita just corrected me.",
+        "sensitive": false,
+        "id": "19916d7e-3e19-4496-86e2-57d75d3726a0"
+      },
+      {
+        "text": "A one-year Snowflake renewal costs approximately $2.4M, which would wreck the 10% cost-reduction target in this FY",
+        "kind": "causal",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-029",
+          "ent-03-hard-data-platform-071"
+        ],
+        "quote": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY. That's the downside.",
+        "sensitive": false,
+        "id": "fa8c4702-e80a-4863-8ade-7e7f8f3bb8d9"
+      },
+      {
+        "text": "Halden's Databricks costs approximately $1.9M per year",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-029"
+        ],
+        "quote": "Halden's Databricks about $1.9M",
+        "sensitive": false,
+        "id": "e31f5df9-e3ee-4550-9f14-48f7f7a3939c"
+      },
+      {
+        "text": "Keeping both platforms costs approximately $4.3M per year",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-029"
+        ],
+        "quote": "Keeping both is about $4.3M.",
+        "sensitive": false,
+        "id": "4aa5a655-2dc9-4084-a4c9-19634f9c3bba"
+      },
+      {
+        "text": "A merged workload on Databricks should land near $3M per year",
+        "kind": "predictive",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-029"
+        ],
+        "quote": "A merged workload on Databricks should land near $3M.",
+        "sensitive": false,
+        "id": "ff5143e0-9b94-4b72-bfa2-fb17a6735206"
+      },
+      {
+        "text": "The CFO run-cost reduction target is 10%, not 15% (correcting an earlier claim)",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-030"
+        ],
+        "quote": "The CFO target is 10%, not 15%. Anita just corrected me.",
+        "sensitive": false,
+        "id": "c1329c42-eec1-429a-b7ae-463b14a6fe73"
+      },
+      {
+        "text": "The CFO target run-cost reduction is 10%",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-030"
+        ],
+        "quote": "The CFO target is 10%, not 15%. Anita just corrected me.",
+        "sensitive": false,
+        "id": "0595ea4f-2a63-4629-8b15-df9fdca8fb8d"
+      },
+      {
+        "text": "Snowflake contract renews Feb 28 with a 3-year auto-renewal; non-renewal notice is due Nov 30 \u2014 confirmed by Dmitri",
+        "kind": "factual",
+        "author_label": "Raj",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-033",
+          "ent-03-hard-data-platform-067"
+        ],
+        "quote": "Contract confirmed. Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right.",
+        "sensitive": false,
+        "id": "d84af41d-7eba-4916-a556-eee6521f1821"
+      },
+      {
+        "text": "Serving Snowflake non-renewal notice means losing Snowflake on Feb 28, before Databricks migration is complete, creating a gap",
+        "kind": "causal",
+        "author_label": "Raj",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-036"
+        ],
+        "quote": "If we serve notice we lose Snowflake on Feb 28. We won't be on Databricks by then. That's a gap.",
+        "sensitive": false,
+        "id": "296c728a-a927-42d0-991d-d7d5c427e110"
+      },
+      {
+        "text": "March migration of 400 pipelines was never going to happen",
+        "kind": "predictive",
+        "author_label": "Gareth",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-037"
+        ],
+        "quote": "March for 400 pipelines was never going to happen.",
+        "sensitive": false,
+        "id": "5425dc47-00f8-4d58-ac40-22d435551693"
+      },
+      {
+        "text": "Claims data cannot move by March because the BAA and tokenization review have not even started",
+        "kind": "causal",
+        "author_label": "Wei",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-038"
+        ],
+        "quote": "I also can't see claims data moving by March with the BAA and tokenization review not even started.",
+        "sensitive": false,
+        "id": "d0e5bd0c-f93b-4137-8071-ae3ac9c03b32"
+      },
+      {
+        "text": "Moving migration to Q2 shifts most of the spend into next FY",
+        "kind": "causal",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-044"
+        ],
+        "quote": "It moves most of the spend into next FY anyway.",
+        "sensitive": false,
+        "id": "30dc8cde-b005-44b0-8179-d445d6362186"
+      },
+      {
+        "text": "There is no backfill for Raj's team due to a hiring freeze",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-047"
+        ],
+        "quote": "there's a hiring freeze, so no backfill for Raj's team.",
+        "sensitive": false,
+        "private": true,
+        "id": "e411f4dd-7b91-4b7c-9ad8-a27ec20ca590"
+      },
+      {
+        "text": "Halden platform team has no Snowflake skills",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-054"
+        ],
+        "quote": "Halden platform team can't take Snowflake pipelines, we have no Snowflake skills.",
+        "sensitive": false,
+        "id": "7f1bce19-89f1-4a66-b3e4-d0ff23389091"
+      },
+      {
+        "text": "31 of 40 stored procedures convert cleanly with the converter; 9 need rewrites",
+        "kind": "factual",
+        "author_label": "Raj",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-057"
+        ],
+        "quote": "31 of 40 convert cleanly, 9 need rewrites.",
+        "sensitive": false,
+        "id": "59081118-6e14-4ec9-867a-def4bdf1b843"
+      },
+      {
+        "text": "Rewriting the 9 stored procedures is approximately two weeks of work",
+        "kind": "predictive",
+        "author_label": "Colleen",
+        "evidence_status": "conflicting",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-058"
+        ],
+        "quote": "Rewrites are maybe two weeks of work.",
+        "sensitive": false,
+        "id": "79213a4e-da2d-4c88-bc9a-b133df992955"
+      },
+      {
+        "text": "Rewriting the 9 stored procedures will take 4 to 6 weeks with the current team",
+        "kind": "predictive",
+        "author_label": "Raj",
+        "evidence_status": "conflicting",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-059"
+        ],
+        "quote": "Closer to 4 to 6 weeks with the team we have.",
+        "sensitive": false,
+        "id": "3e1aacea-88a4-465a-bb5d-2e83eeae31d4"
+      },
+      {
+        "text": "Colleen can lend two engineers from Halden for the stored procedure rewrites",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-060"
+        ],
+        "quote": "We can lend two engineers from Halden for the rewrites.",
+        "sensitive": false,
+        "id": "92b516c5-4194-42db-90bf-d0ea6ecf55c5"
+      },
+      {
+        "text": "Two Halden engineers committed for six weeks starting Dec 1",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-062"
+        ],
+        "quote": "I'll commit two engineers for six weeks, starting Dec 1.",
+        "sensitive": false,
+        "id": "6c32a1c5-b6f1-41d3-82dd-f883c1173d41"
+      },
+      {
+        "text": "Dec 1 plus six weeks is mid-January",
+        "kind": "factual",
+        "author_label": "Gareth",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-063"
+        ],
+        "quote": "Dec 1 plus six weeks is mid January. That works.",
+        "sensitive": false,
+        "id": "6ccaef67-d061-48b7-a10b-32e9e18603ef"
+      },
+      {
+        "text": "Databricks requires column-level tokenization on member IDs plus a BAA addendum for PHI compliance (preliminary finding)",
+        "kind": "factual",
+        "author_label": "Wei",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-064"
+        ],
+        "quote": "Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum.",
+        "sensitive": true,
+        "id": "2be9b75e-a471-4858-b4e8-c23f4522f79a"
+      },
+      {
+        "text": "Halden says the BAA addendum is standard",
+        "kind": "factual",
+        "author_label": "Wei",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-064"
+        ],
+        "quote": "Halden says the addendum is standard but I haven't seen it.",
+        "sensitive": false,
+        "id": "ec99c799-1307-4e61-9d81-e15859a70758"
+      },
+      {
+        "text": "Colleen has signed a standard BAA addendum before",
+        "kind": "factual",
+        "author_label": "Colleen",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-065"
+        ],
+        "quote": "It's standard, I've signed one before.",
+        "sensitive": false,
+        "id": "00a3eb43-17dd-40f0-b96b-d6a76dca1830"
+      },
+      {
+        "text": "Serving Snowflake non-renewal notice means losing Snowflake access before migration completes, so notice cannot be served and the system still run until Q2",
+        "kind": "causal",
+        "author_label": "Raj",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-068"
+        ],
+        "quote": "So we can't serve notice and still run until Q2.",
+        "sensitive": false,
+        "id": "260ad2dd-787a-4fdc-97bd-2a437234773d"
+      },
+      {
+        "text": "Security architecture review is mandatory before any PHI migration, booked for Dec 8, and takes about 3 weeks",
+        "kind": "factual",
+        "author_label": "Wei",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-077"
+        ],
+        "quote": "Security architecture review is now mandatory before any PHI migration. It's booked for Dec 8 and takes about 3 weeks.",
+        "sensitive": true,
+        "id": "888693eb-d4f6-4d45-bbad-17493ec12082"
+      },
+      {
+        "text": "The $3M figure was an estimate for the merged workload on Databricks, not a fixed budget",
+        "kind": "factual",
+        "author_label": "Dmitri",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-089"
+        ],
+        "quote": "Nobody said that. $3M was my estimate for the merged workload on Databricks. It isn't a budget.",
+        "sensitive": false,
+        "id": "71e28351-ce56-4187-8dcb-84d71a1827e0"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Imani",
+        "decision": "platform",
+        "stance": "withdrawn",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-005",
+          "ent-03-hard-data-platform-007"
+        ],
+        "quote": "Ha, fair. Dropping that one.",
+        "proposer": true,
+        "first_unit_sequence": 7,
+        "id": "ba7720e2-5481-4418-94cd-43da22b6f1b2",
+        "option_id": "52aa3be1-2748-45c9-b327-2422703a1566"
+      },
+      {
+        "participant_label": "Colleen",
+        "decision": "platform",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-001",
+          "ent-03-hard-data-platform-022"
+        ],
+        "quote": "A",
+        "proposer": true,
+        "first_unit_sequence": 22,
+        "id": "18d36491-d23f-4a35-890f-b2736588d011",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Imani",
+        "decision": "platform",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-023"
+        ],
+        "quote": "A",
+        "proposer": false,
+        "first_unit_sequence": 23,
+        "id": "4b714188-d6e8-414c-aec7-ead532722e74",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Colleen",
+        "decision": "date",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-035"
+        ],
+        "quote": "Then we serve non-renewal notice by Nov 30 and we're done.",
+        "proposer": true,
+        "first_unit_sequence": 35,
+        "id": "098aa07e-1616-4fce-b55d-e26b6d2999ca",
+        "option_id": "165c7d36-9562-41c1-819a-b668696e06f5"
+      },
+      {
+        "participant_label": "Gareth",
+        "decision": "date",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-037"
+        ],
+        "quote": "March for 400 pipelines was never going to happen.",
+        "proposer": false,
+        "first_unit_sequence": 37,
+        "id": "d183d6a0-8eb1-4d39-9c3a-fec46226bf3a",
+        "option_id": "165c7d36-9562-41c1-819a-b668696e06f5"
+      },
+      {
+        "participant_label": "Wei",
+        "decision": "date",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-038"
+        ],
+        "quote": "I'm against a March date.",
+        "proposer": false,
+        "first_unit_sequence": 38,
+        "id": "4ae30447-db79-49cc-87a4-ba82eec2b611",
+        "option_id": "165c7d36-9562-41c1-819a-b668696e06f5"
+      },
+      {
+        "participant_label": "Colleen",
+        "decision": "date",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-039"
+        ],
+        "quote": "OK so what's realistic? Q2?",
+        "proposer": true,
+        "first_unit_sequence": 39,
+        "id": "d2794af8-5aa1-4e0f-b14b-061145e00a1a",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Raj",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-040"
+        ],
+        "quote": "Q2 is workable for me.",
+        "proposer": false,
+        "first_unit_sequence": 40,
+        "id": "764a6662-50e9-40ec-ae35-b42d73528caa",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Imani",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-042"
+        ],
+        "quote": "+1",
+        "proposer": false,
+        "first_unit_sequence": 42,
+        "id": "e464e22e-9ff3-43e7-8d7d-b14a7af84a6c",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Dmitri",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-044"
+        ],
+        "quote": "Q2 works for me.",
+        "proposer": false,
+        "first_unit_sequence": 44,
+        "id": "8df750b4-695d-43b0-ac43-e6d02d331695",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Raj",
+        "decision": "platform",
+        "stance": "withdrawn",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-002",
+          "ent-03-hard-data-platform-025",
+          "ent-03-hard-data-platform-061"
+        ],
+        "quote": "If you lend two engineers for the rewrites, A works for me and I withdraw B.",
+        "proposer": true,
+        "first_unit_sequence": 61,
+        "id": "6739ce35-82e2-4998-912e-6530aaec3435",
+        "option_id": "f4fe790e-1c5e-4c9d-9ef4-2b06766b5212"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "contract",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-070"
+        ],
+        "quote": "If they refuse we renew for a year and take the hit.",
+        "proposer": true,
+        "first_unit_sequence": 70,
+        "id": "229e4bf1-ccba-417f-807e-800184dcbd7c",
+        "option_id": "30238f3f-ed7f-4471-afc4-faa9cb35121c"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "contract",
+        "stance": "acknowledged",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-072"
+        ],
+        "quote": "Understood. Let's see what the rep says.",
+        "proposer": false,
+        "first_unit_sequence": 72,
+        "id": "b820abd8-dd7b-42d9-a427-284ef9633546",
+        "option_id": "3c6619fc-30ef-4307-b158-9eb0b2cf23b5"
+      },
+      {
+        "participant_label": "Gareth",
+        "decision": "platform",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-073"
+        ],
+        "quote": "Until cutover can we federate queries across both platforms as a bridge?",
+        "proposer": true,
+        "first_unit_sequence": 73,
+        "id": "c7f6252e-280c-4fd2-997e-d0f80ae3feff",
+        "option_id": "8de4e213-9e8b-44a7-a355-c3a12fe80848"
+      },
+      {
+        "participant_label": "Colleen",
+        "decision": "platform",
+        "stance": "conditional",
+        "conditions": "Accepted as temporary bridge only, not as end state",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-074"
+        ],
+        "quote": "As a temporary bridge, ok. As the end state, still no.",
+        "proposer": false,
+        "first_unit_sequence": 74,
+        "id": "d0d84086-92c0-4e33-b143-eb23a8604287",
+        "option_id": "8de4e213-9e8b-44a7-a355-c3a12fe80848"
+      },
+      {
+        "participant_label": "Imani",
+        "decision": "platform",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-076"
+        ],
+        "quote": "That works for BI.",
+        "proposer": false,
+        "first_unit_sequence": 76,
+        "id": "032c8869-8aad-4fce-b78b-15f412d320d5",
+        "option_id": "8de4e213-9e8b-44a7-a355-c3a12fe80848"
+      },
+      {
+        "participant_label": "Gareth",
+        "decision": "platform",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-027",
+          "ent-03-hard-data-platform-082"
+        ],
+        "quote": "A works for me, and Q2 is what makes it work.",
+        "proposer": false,
+        "first_unit_sequence": 82,
+        "id": "dff7c317-2e44-4bf0-85ad-9e28fd0f44af",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Gareth",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-041",
+          "ent-03-hard-data-platform-082"
+        ],
+        "quote": "A works for me, and Q2 is what makes it work.",
+        "proposer": false,
+        "first_unit_sequence": 82,
+        "id": "f25cb0dc-58de-448c-87a3-e1eb200ae44e",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Wei",
+        "decision": "platform",
+        "stance": "conditional",
+        "conditions": "BAA addendum reviewed and tokenization confirmed before any PHI data moves",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-024",
+          "ent-03-hard-data-platform-066",
+          "ent-03-hard-data-platform-084"
+        ],
+        "quote": "Not all seven. I'm conditional on the BAA and tokenization, not \"on board\".",
+        "proposer": false,
+        "first_unit_sequence": 84,
+        "id": "7c502385-e13d-4c0e-9f01-a9324306c7d7",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Raj",
+        "decision": "platform",
+        "stance": "conditional",
+        "conditions": "Stored procedure rewrites covered by two lent engineers",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-017",
+          "ent-03-hard-data-platform-061",
+          "ent-03-hard-data-platform-085"
+        ],
+        "quote": "Same, conditional on the stored procs and the engineers.",
+        "proposer": false,
+        "first_unit_sequence": 85,
+        "id": "a1bc17bd-1f93-4df9-8181-9eda9ba0d7f5",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Dmitri",
+        "decision": "platform",
+        "stance": "undecided",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-026",
+          "ent-03-hard-data-platform-081",
+          "ent-03-hard-data-platform-086"
+        ],
+        "quote": "And I abstained. Count me out of that.",
+        "proposer": false,
+        "first_unit_sequence": 86,
+        "id": "e17ec8c3-6805-4b88-9332-76d41f9d34ae",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "date",
+        "stance": "conditional",
+        "conditions": "Exact date set only after Raj's stored procedure assessment and the Dec 8 security review",
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-043",
+          "ent-03-hard-data-platform-078",
+          "ent-03-hard-data-platform-093"
+        ],
+        "proposer": false,
+        "first_unit_sequence": 93,
+        "id": "c7684b4c-9067-41d8-8a40-4f4fc9ea64f1",
+        "option_id": "a97ae2a7-0bf3-48c8-b602-6aafdcff9ee6"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "platform",
+        "stance": "conditional",
+        "conditions": "Interim only",
+        "quote": "Federation only as an interim bridge.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-075",
+          "ent-03-hard-data-platform-093"
+        ],
+        "proposer": false,
+        "first_unit_sequence": 93,
+        "id": "351380ee-f4e7-4dfb-91b0-1bb0f578b005",
+        "option_id": "8de4e213-9e8b-44a7-a355-c3a12fe80848"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "platform",
+        "stance": "support",
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-080",
+          "ent-03-hard-data-platform-093"
+        ],
+        "proposer": false,
+        "first_unit_sequence": 93,
+        "id": "f19461b2-e8ad-403e-854d-7010c9d0aec5",
+        "option_id": "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+      },
+      {
+        "participant_label": "Sofia",
+        "decision": "date",
+        "stance": "oppose",
+        "quote": "March is off.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-093"
+        ],
+        "proposer": false,
+        "first_unit_sequence": 93,
+        "id": "bd304f8c-8271-40ae-b300-55ab28806406",
+        "option_id": "165c7d36-9562-41c1-819a-b668696e06f5"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Migrating 400 pipelines in six weeks with the same team is not realistic",
+        "author_label": "Gareth",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-004",
+          "ent-03-hard-data-platform-037"
+        ],
+        "quote": "March for 400 pipelines was never going to happen.",
+        "sensitive": false,
+        "id": "129e355c-ed7f-46a3-a607-8bf330ae98cd",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      },
+      {
+        "text": "Querying both platforms doubles cost and makes number reconciliation impossible",
+        "author_label": "Colleen",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-006",
+          "ent-03-hard-data-platform-007"
+        ],
+        "quote": "Querying both doubles the cost and nobody can reconcile the numbers. Hard no on that.",
+        "sensitive": false,
+        "moot": true,
+        "id": "f91eb4a0-b806-4b42-ac5c-9e4526499aba",
+        "option_ids": [
+          "52aa3be1-2748-45c9-b327-2422703a1566"
+        ]
+      },
+      {
+        "text": "Migration tooling coverage of 40 stored procedures has not been verified",
+        "author_label": "Raj",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-017",
+          "ent-03-hard-data-platform-057"
+        ],
+        "quote": "31 of 40 convert cleanly, 9 need rewrites.",
+        "sensitive": false,
+        "id": "e2a5f169-812d-464a-b9c0-37ee4f2f61b3",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      },
+      {
+        "text": "Colleen mischaracterised Raj's conditional stance as full agreement with Databricks",
+        "author_label": "Raj",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-019",
+          "ent-03-hard-data-platform-020"
+        ],
+        "quote": "That's not what I said. I said I could live with it IF the tooling covers the 40 procs. That's not \"fine\".",
+        "sensitive": false,
+        "id": "9030a22d-3df4-4889-8e89-45ab10a4bf6a",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      },
+      {
+        "text": "The March unified reporting deadline is not achievable for Databricks migration",
+        "author_label": "Gareth",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-027",
+          "ent-03-hard-data-platform-043"
+        ],
+        "quote": "Dropping the March target then. I'll plan on Q2 and confirm the date once Raj's assessment is back.",
+        "sensitive": false,
+        "id": "383c1a43-debb-4430-97ae-d8e8708c5bd9",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      },
+      {
+        "text": "Claims data cannot move by March because BAA and tokenization review have not started",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-038"
+        ],
+        "quote": "I also can't see claims data moving by March with the BAA and tokenization review not even started. I'm against a March date.",
+        "sensitive": false,
+        "id": "317dcd7a-e98b-4cc3-95ec-13b1de16c79e",
+        "option_ids": [
+          "165c7d36-9562-41c1-819a-b668696e06f5"
+        ]
+      },
+      {
+        "text": "A one-year Snowflake renewal at ~$2.4M would wreck the 10% cost-reduction target this FY",
+        "author_label": "Dmitri",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-071"
+        ],
+        "quote": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY. That's the downside.",
+        "sensitive": false,
+        "id": "30f5cce7-c65e-4c05-a927-fc53c0d7a602",
+        "option_ids": [
+          "30238f3f-ed7f-4471-afc4-faa9cb35121c"
+        ]
+      },
+      {
+        "text": "Colleen's claim that all seven are on board is inaccurate \u2014 Dmitri abstained",
+        "author_label": "Wei",
+        "resolution_status": "addressed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-084",
+          "ent-03-hard-data-platform-086"
+        ],
+        "quote": "And I abstained. Count me out of that.",
+        "sensitive": false,
+        "id": "7f7d47f9-606d-4187-9b77-92fb830714f4",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      },
+      {
+        "text": "Colleen's claim that all seven are on board is inaccurate \u2014 Raj is still conditional on stored procs and engineers",
+        "author_label": "Raj",
+        "resolution_status": "addressed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-085"
+        ],
+        "quote": "Same, conditional on the stored procs and the engineers.",
+        "sensitive": false,
+        "id": "4692c711-50ae-4384-9f6d-acffef2d210a",
+        "option_ids": [
+          "f9cad7a2-3813-4d0c-ba83-7bfcbc88fd65"
+        ]
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Migration tooling coverage of the 40 Snowflake stored procedures has not been verified",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-017",
+          "ent-03-hard-data-platform-057"
+        ],
+        "quote": "31 of 40 convert cleanly, 9 need rewrites.",
+        "sensitive": false,
+        "id": "7d48a4f2-8374-4ec3-bbc6-6287d90bfea2"
+      },
+      {
+        "text": "PHI BAA coverage and access controls on the chosen platform must be confirmed before claims data migrates",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-024",
+          "ent-03-hard-data-platform-038",
+          "ent-03-hard-data-platform-064",
+          "ent-03-hard-data-platform-066"
+        ],
+        "quote": "Until then my A is conditional on the BAA and tokenization.",
+        "sensitive": true,
+        "id": "5b5ec89a-1c38-4ea5-b57f-10f7ef9f2198"
+      },
+      {
+        "text": "Cost figures needed to assess which platform option satisfies the CFO run-cost reduction target",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-026",
+          "ent-03-hard-data-platform-029",
+          "ent-03-hard-data-platform-030"
+        ],
+        "quote": "The CFO target is 10%, not 15%. Anita just corrected me.",
+        "sensitive": false,
+        "id": "850dfd72-48a7-4b57-9447-8e44be669bca"
+      },
+      {
+        "text": "Whether the March unified reporting deadline is achievable on Databricks is unresolved",
+        "kind": "open_question",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-027",
+          "ent-03-hard-data-platform-043"
+        ],
+        "quote": "Dropping the March target then. I'll plan on Q2 and confirm the date once Raj's assessment is back.",
+        "sensitive": false,
+        "id": "903e49f9-03c2-438b-a9d2-f65c56cc612c"
+      },
+      {
+        "text": "Snowflake contract non-renewal notice deadline of Nov 30 and resulting Feb 28 access gap if notice is served must be resolved before a migration date is confirmed",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-033",
+          "ent-03-hard-data-platform-036",
+          "ent-03-hard-data-platform-067",
+          "ent-03-hard-data-platform-068",
+          "ent-03-hard-data-platform-069",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30.",
+        "sensitive": false,
+        "id": "013f31ce-c6e7-417d-9ee3-3194d7f79c37"
+      },
+      {
+        "text": "On-call ownership for legacy Snowflake pipelines during migration is unassigned",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-049",
+          "ent-03-hard-data-platform-055",
+          "ent-03-hard-data-platform-091",
+          "ent-03-hard-data-platform-099"
+        ],
+        "quote": "Still no owner for on-call though. Not letting that go.",
+        "sensitive": false,
+        "id": "ac0ad70e-daae-4b01-8353-1bef31022a31"
+      },
+      {
+        "text": "9 of 40 stored procedures require manual rewrites; rewrite effort is disputed (2 weeks vs. 4\u20136 weeks)",
+        "kind": "unresolved_dependency",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-057",
+          "ent-03-hard-data-platform-058",
+          "ent-03-hard-data-platform-059",
+          "ent-03-hard-data-platform-061",
+          "ent-03-hard-data-platform-062"
+        ],
+        "quote": "If you lend two engineers for the rewrites, A works for me and I withdraw B.",
+        "sensitive": false,
+        "id": "a6f85594-417d-4157-85a9-eca4401de478"
+      },
+      {
+        "text": "BAA addendum has not been reviewed by Wei; Wei cannot confirm PHI compliance readiness until they have read it",
+        "kind": "missing_info",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-064",
+          "ent-03-hard-data-platform-066",
+          "ent-03-hard-data-platform-095"
+        ],
+        "quote": "And I'll finish the BAA addendum review by Nov 13.",
+        "sensitive": true,
+        "id": "e78daca8-11d1-4c69-be9b-ee8cb2fdd97a"
+      },
+      {
+        "text": "Snowflake rep's response to the 6-month extension request is unknown; outcome determines whether 1-year renewal penalty applies",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-069",
+          "ent-03-hard-data-platform-070",
+          "ent-03-hard-data-platform-097"
+        ],
+        "quote": "The extension request to Snowflake goes out by Nov 20, as I said.",
+        "sensitive": false,
+        "id": "88613fe9-4e26-45a4-980f-6186be91a584"
+      },
+      {
+        "text": "Security architecture review mandatory before PHI migration; booked Dec 8, takes ~3 weeks \u2014 exact Q2 migration date cannot be set until review completes",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-077",
+          "ent-03-hard-data-platform-078",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+        "sensitive": true,
+        "id": "43767983-ece4-4347-8189-b4ec3e5950ff"
+      }
+    ],
+    "separate_issues": [
+      {
+        "title": "3pm meeting logistics",
+        "rationale": "Confirmation of the afternoon meeting and Raj's claims mart inventory walk-through is a logistics side-note, not part of the platform decision.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-012",
+          "ent-03-hard-data-platform-013"
+        ],
+        "id": "04d2d731-4ae3-4fcf-93ba-da89f8243ab0"
+      },
+      {
+        "title": "Visitor parking at Halden office",
+        "rationale": "Question and answer about where visitors park on Thursday is entirely unrelated to the platform decision.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-014",
+          "ent-03-hard-data-platform-015"
+        ],
+        "id": "28fa64b4-984c-4496-a086-c409aeaec4d5"
+      },
+      {
+        "title": "Imani's surgery absence and BI sign-off coverage",
+        "rationale": "Imani's personal absence and the interim coverage arrangement for BI sign-offs are operational logistics unrelated to the platform selection decision.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-045",
+          "ent-03-hard-data-platform-046"
+        ],
+        "id": "4fa1d495-2c5e-4fbb-a11c-a909cd3efe50"
+      },
+      {
+        "title": "On-call ownership for legacy Snowflake pipelines during migration",
+        "rationale": "Gareth flags the unassigned on-call ownership again in units 091 and 099; Sofia acknowledges in unit 100 but no owner is assigned in this segment. This is an operational ownership question that remains unresolved and tangential to the core platform/date/contract decisions.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-049",
+          "ent-03-hard-data-platform-052",
+          "ent-03-hard-data-platform-053",
+          "ent-03-hard-data-platform-054",
+          "ent-03-hard-data-platform-055",
+          "ent-03-hard-data-platform-078",
+          "ent-03-hard-data-platform-091",
+          "ent-03-hard-data-platform-099",
+          "ent-03-hard-data-platform-100"
+        ],
+        "id": "992aec9b-ffac-44fb-8cd1-c78b7313af9f"
+      },
+      {
+        "title": "Expense tool link change",
+        "rationale": "Discussion about where the expense tool moved is unrelated to the platform migration decision.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-050",
+          "ent-03-hard-data-platform-051"
+        ],
+        "id": "c4852437-3314-43ca-abe6-3c43a5a0aaae"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Walk the team through the claims mart inventory at the 3pm meeting",
+        "owner_kind": "named",
+        "owner_label": "Raj",
+        "status": "requested",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-013",
+          "ent-03-hard-data-platform-057",
+          "ent-03-hard-data-platform-085"
+        ],
+        "quote": "Same, conditional on the stored procs and the engineers.",
+        "sensitive": false,
+        "id": "f28bb1d8-0c87-4e61-9918-513d46469a1e"
+      },
+      {
+        "text": "Verify that migration tooling covers the 40 Snowflake stored procedures",
+        "owner_kind": "named",
+        "owner_label": "Raj",
+        "status": "completed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-017",
+          "ent-03-hard-data-platform-057"
+        ],
+        "quote": "First pass on the stored procs with the converter. 31 of 40 convert cleanly, 9 need rewrites.",
+        "sensitive": false,
+        "id": "dbc4313d-20da-43bc-90cf-9c7c4121b52c"
+      },
+      {
+        "text": "Pull the Snowflake contract and confirm details by Wednesday",
+        "owner_kind": "named",
+        "owner_label": "Dmitri",
+        "status": "completed",
+        "due": "Wednesday",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-034",
+          "ent-03-hard-data-platform-067"
+        ],
+        "quote": "Contract confirmed. Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right.",
+        "sensitive": false,
+        "id": "b67c7b05-65f6-4b9f-8902-f6f2b1ce8bc2"
+      },
+      {
+        "text": "Confirm Q2 migration date once Raj's stored procedure assessment is back",
+        "owner_kind": "named",
+        "owner_label": "Sofia",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-043",
+          "ent-03-hard-data-platform-078"
+        ],
+        "quote": "Q2 it is, exact date after the Dec 8 review and Raj's assessment.",
+        "sensitive": false,
+        "id": "85a99467-1f94-4e32-860e-db846ba915df"
+      },
+      {
+        "text": "Cover Imani's BI sign-offs next week",
+        "owner_kind": "named",
+        "owner_label": "Wei",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-046",
+          "ent-03-hard-data-platform-076",
+          "ent-03-hard-data-platform-096"
+        ],
+        "quote": "BI sign-offs go to Wei.",
+        "sensitive": false,
+        "id": "2abfb248-f57b-45af-9e76-24724babd6d0"
+      },
+      {
+        "text": "Cover Imani's BI sign-offs next week",
+        "owner_kind": "named",
+        "owner_label": "Wei",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-046"
+        ],
+        "quote": "Yes, I'll cover BI sign-offs next week.",
+        "sensitive": false,
+        "private": true,
+        "id": "87e3dcfa-edfa-422d-b386-13e97f1786ba"
+      },
+      {
+        "text": "Return to on-call ownership for legacy Snowflake pipelines during migration",
+        "owner_kind": "named",
+        "owner_label": "Sofia",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-055",
+          "ent-03-hard-data-platform-078"
+        ],
+        "quote": "Q2 it is, exact date after the Dec 8 review and Raj's assessment.",
+        "sensitive": false,
+        "id": "59c77b4e-dbaa-48c1-a204-1d51b8c20b27"
+      },
+      {
+        "text": "Commit two Halden engineers for six weeks starting Dec 1 to cover stored procedure rewrites",
+        "owner_kind": "named",
+        "owner_label": "Colleen",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-062",
+          "ent-03-hard-data-platform-098"
+        ],
+        "quote": "Two Halden engineers start Dec 1.",
+        "sensitive": false,
+        "requested_due": "Dec 1 start, six weeks",
+        "id": "d8cd96c6-ce17-4b48-8cbe-4c8ced05eb84"
+      },
+      {
+        "text": "Ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal",
+        "owner_kind": "named",
+        "owner_label": "Dmitri",
+        "status": "committed",
+        "due": "Nov 20",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-069",
+          "ent-03-hard-data-platform-097"
+        ],
+        "quote": "The extension request to Snowflake goes out by Nov 20, as I said.",
+        "sensitive": false,
+        "id": "1b9bf8c6-110d-43d9-803a-f4bdaed65d4f"
+      },
+      {
+        "text": "Confirm the platform formally at the Nov 16 steering",
+        "owner_kind": "named",
+        "owner_label": "Sofia",
+        "status": "committed",
+        "due": "Nov 16",
+        "quote": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-093"
+        ],
+        "sensitive": false,
+        "id": "cf7b72b1-a319-478d-a17c-659aff231585"
+      },
+      {
+        "text": "Deliver the full stored procedure assessment by Nov 6",
+        "owner_kind": "named",
+        "owner_label": "Raj",
+        "status": "committed",
+        "due": "Nov 6",
+        "quote": "I'll deliver the full stored procedure assessment by Nov 6.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-094"
+        ],
+        "sensitive": false,
+        "id": "a28b5717-b1b5-4b27-a0ad-137036f51242"
+      },
+      {
+        "text": "Finish the BAA addendum review by Nov 13",
+        "owner_kind": "named",
+        "owner_label": "Wei",
+        "status": "committed",
+        "due": "Nov 13",
+        "quote": "And I'll finish the BAA addendum review by Nov 13.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-095"
+        ],
+        "sensitive": true,
+        "id": "79a5975f-0c0a-407a-b9a3-6a18576bbc67"
+      },
+      {
+        "text": "Confirm names of the two Halden engineers by Nov 13",
+        "owner_kind": "named",
+        "owner_label": "Colleen",
+        "status": "committed",
+        "quote": "I'll confirm names by Nov 13.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-098"
+        ],
+        "sensitive": false,
+        "start_due": "Nov 13",
+        "id": "8dc1681d-3117-4330-8769-d4bdccc4e3ed"
+      }
+    ],
+    "agreements": [
+      {
+        "subject": "Query both platforms indefinitely is off the table",
+        "participant_label": "Imani",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-007",
+          "ent-03-hard-data-platform-031"
+        ],
+        "quote": "\ud83d\udc4d",
+        "sensitive": false,
+        "id": "74dc5fa0-cc7a-4c52-a2ca-f8b8d561dd16"
+      },
+      {
+        "subject": "Compliance as a standalone criterion",
+        "participant_label": "Wei",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-010"
+        ],
+        "quote": "Compliance needs to be its own item.",
+        "sensitive": false,
+        "id": "2d27ac2e-36b4-44ad-82f2-fb97c7836b2b"
+      },
+      {
+        "subject": "Ranking of decision criteria: speed, cost, compliance",
+        "participant_label": "Sofia",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-011",
+          "ent-03-hard-data-platform-078"
+        ],
+        "quote": "New order: compliance first, then cost, then speed.",
+        "sensitive": false,
+        "id": "4481329e-8b53-4215-8237-e40730b73586"
+      },
+      {
+        "subject": "Raj's stance on Databricks is conditional, not unconditional agreement",
+        "participant_label": "Colleen",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-020"
+        ],
+        "quote": "OK, conditional. Fair.",
+        "sensitive": false,
+        "id": "3999e894-f9e0-467b-a82c-a7db53515d2b"
+      },
+      {
+        "subject": "CFO run-cost reduction target is 10%, not 15%",
+        "participant_label": "Dmitri",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-030"
+        ],
+        "quote": "The CFO target is 10%, not 15%. Anita just corrected me.",
+        "sensitive": false,
+        "id": "0b68b1eb-f1ca-4f04-8d43-19b5c1cc79e7"
+      },
+      {
+        "subject": "March migration target is dropped",
+        "participant_label": "Sofia",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-043",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "March is off.",
+        "sensitive": false,
+        "id": "eca1576f-b575-4097-bc03-a349209de294"
+      },
+      {
+        "subject": "Raj's stored procedure rewrite estimate is 4 to 6 weeks, not 2 weeks",
+        "participant_label": "Raj",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-059",
+          "ent-03-hard-data-platform-085"
+        ],
+        "quote": "Same, conditional on the stored procs and the engineers.",
+        "sensitive": false,
+        "id": "47219640-af4e-4102-8af8-bb5ca15cde09"
+      },
+      {
+        "subject": "Federated cross-platform queries acceptable as interim bridge only, not end state",
+        "participant_label": "Colleen",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-074"
+        ],
+        "quote": "As a temporary bridge, ok. As the end state, still no.",
+        "sensitive": false,
+        "id": "566f9be9-d95c-4482-98d7-acb870e93083"
+      },
+      {
+        "subject": "Federated cross-platform queries acceptable as interim bridge only, not end state",
+        "participant_label": "Sofia",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-075",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "Federation only as an interim bridge.",
+        "sensitive": false,
+        "id": "f39ee6f2-8683-4a70-b879-4053c1d00506"
+      },
+      {
+        "subject": "Databricks as direction with open items tracked",
+        "participant_label": "Sofia",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-080",
+          "ent-03-hard-data-platform-093"
+        ],
+        "quote": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review. Federation only as an interim bridge. March is off.",
+        "sensitive": false,
+        "id": "c847b1c1-a62c-48cc-b008-b8a449d0a652"
+      },
+      {
+        "subject": "Databricks as direction with open items tracked",
+        "participant_label": "Gareth",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-082"
+        ],
+        "quote": "A works for me, and Q2 is what makes it work.",
+        "sensitive": false,
+        "id": "052214ee-fd62-4b9c-b79f-7a24da05583c"
+      },
+      {
+        "subject": "$3M is an estimate for merged Databricks workload, not a budget",
+        "participant_label": "Dmitri",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-089"
+        ],
+        "quote": "Nobody said that. $3M was my estimate for the merged workload on Databricks. It isn't a budget.",
+        "sensitive": false,
+        "id": "e865a80d-5322-479b-a4ce-9eaf105a0c59"
+      },
+      {
+        "subject": "$3M is an estimate for merged Databricks workload, not a budget",
+        "participant_label": "Imani",
+        "stance": "affirm",
+        "quote": "Got it, thanks.",
+        "source_unit_ids": [
+          "ent-03-hard-data-platform-090"
+        ],
+        "sensitive": false,
+        "id": "115c299f-0d6d-47d3-a7cc-d2cde3c464f0"
+      }
+    ],
+    "superseded_positions": [],
+    "dropped_items": [
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Walk the team through the claims mart inventory at the 3pm meeting"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Confirm Q2 migration date once Raj's stored procedure assessment is back"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Cover Imani's BI sign-offs next week"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Return to on-call ownership for legacy Snowflake pipelines during migration"
+      },
+      {
+        "section": "separate_issues",
+        "reason": "no_valid_source",
+        "text": "On-call ownership for legacy Snowflake pipelines during migration"
+      },
+      {
+        "section": "actions",
+        "reason": "no_valid_source",
+        "text": "Walk the team through the claims mart inventory at the 3pm meeting"
+      },
+      {
+        "section": "actions",
+        "reason": "quote_not_in_source",
+        "text": "Walk the team through the claims mart inventory at the 3pm meeting"
+      },
+      {
+        "section": "actions",
+        "reason": "quote_not_in_source",
+        "text": "Return to on-call ownership for legacy Snowflake pipelines during migration"
+      }
+    ],
+    "question": {
+      "text": "What end-state data platform should we consolidate on after the merger, and when do we cut over?"
+    },
+    "executive_summary": "What end-state data platform should we consolidate on after the merger, and when do we cut over?\nStatus: 8 options (3 dropped), 4 open objections, 8 blockers, 0 actions without an owner.\nAffirmers are listed individually; group consensus is not inferred.\n\nPROPOSED\n\u00b7 Databricks \u2014 active proposal [Colleen, 10/26/26 8:47 AM; Sofia, 10/27/26 10:09 AM; Gareth, 10/27/26 10:13 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Q2 \u2014 active proposal [Colleen, 10/26/26 10:58 AM; Sofia, 10/27/26 10:05 AM]\n\u00b7 6-month Snowflake extension to Aug 31 \u2014 active proposal [Dmitri, 10/27/26 9:10 AM]\n\u00b7 1-year Snowflake renewal \u2014 fallback only [Sofia, 10/27/26 9:12 AM]\n\u00b7 Federated cross-platform queries (bridge until cutover) \u2014 fallback only [Gareth, 10/27/26 9:27 AM; Colleen, 10/27/26 9:29 AM; Sofia, 10/27/26 9:31 AM]\n\nAGREED \u2014 EXPLICIT AFFIRMERS\n\u00b7 Databricks: Colleen, Imani, Gareth and Sofia [Colleen, 10/26/26 8:47 AM; Colleen, 10/26/26 9:26 AM; Imani, 10/26/26 9:27 AM; Gareth, 10/26/26 9:32 AM; Gareth, 10/27/26 10:13 AM; Sofia, 10/27/26 10:09 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Q2: Raj, Imani, Dmitri and Gareth [Raj, 10/26/26 11:00 AM; Imani, 10/26/26 11:02 AM; Dmitri, 10/26/26 11:07 AM; Gareth, 10/26/26 11:01 AM; Gareth, 10/27/26 10:13 AM]\n\u00b7 Federated cross-platform queries (bridge until cutover): Imani [Imani, 10/27/26 9:32 AM]\n\u00b7 Query both platforms indefinitely is off the table: Imani [Imani, 10/26/26 8:56 AM; Imani, 10/26/26 10:40 AM]\n\u00b7 Compliance as a standalone criterion: Wei [Wei, 10/26/26 9:03 AM]\n\u00b7 Ranking of decision criteria: speed, cost, compliance: Sofia [Sofia, 10/26/26 9:05 AM; Sofia, 10/27/26 10:05 AM]\n\u00b7 Raj's stance on Databricks is conditional, not unconditional agreement: Colleen [Colleen, 10/26/26 9:22 AM]\n\u00b7 CFO run-cost reduction target is 10%, not 15%: Dmitri [Dmitri, 10/26/26 10:39 AM]\n\u00b7 March migration target is dropped: Sofia [Sofia, 10/26/26 11:05 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Raj's stored procedure rewrite estimate is 4 to 6 weeks, not 2 weeks: Raj [Raj, 10/27/26 8:45 AM; Raj, 10/27/26 10:17 AM]\n\u00b7 Federated cross-platform queries acceptable as interim bridge only, not end state: Colleen and Sofia [Colleen, 10/27/26 9:29 AM; Sofia, 10/27/26 9:31 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Databricks as direction with open items tracked: Sofia and Gareth [Sofia, 10/27/26 10:09 AM; Sofia, 10/28/26 7:42 AM; Gareth, 10/27/26 10:13 AM]\n\u00b7 $3M is an estimate for merged Databricks workload, not a budget: Dmitri and Imani [Dmitri, 10/27/26 10:43 AM; Imani, 10/27/26 10:45 AM]\n\nOTHER POSITIONS\n\u00b7 Databricks: Wei \u2014 conditional support (BAA addendum reviewed and tokenization confirmed before any PHI data moves) [Wei, 10/26/26 9:28 AM; Wei, 10/27/26 9:03 AM; Wei, 10/27/26 10:16 AM]\n\u00b7 Databricks: Raj \u2014 conditional support (Stored procedure rewrites covered by two lent engineers) [Raj, 10/26/26 9:18 AM; Raj, 10/27/26 8:50 AM; Raj, 10/27/26 10:17 AM]\n\u00b7 Databricks: Dmitri \u2014 undecided [Dmitri, 10/26/26 9:31 AM; Dmitri, 10/27/26 10:11 AM; Dmitri, 10/27/26 10:18 AM]\n\u00b7 Q2: Sofia \u2014 conditional support (Exact date set only after Raj's stored procedure assessment and the Dec 8 security review) [Sofia, 10/26/26 11:05 AM; Sofia, 10/27/26 10:05 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Q2: Colleen \u2014 proposed [Colleen, 10/26/26 10:58 AM]\n\u00b7 6-month Snowflake extension to Aug 31: Sofia \u2014 acknowledgment only [Sofia, 10/27/26 9:17 AM]\n\u00b7 1-year Snowflake renewal: Sofia \u2014 proposed [Sofia, 10/27/26 9:12 AM]\n\u00b7 Federated cross-platform queries (bridge until cutover): Colleen \u2014 conditional support (Accepted as temporary bridge only, not as end state) [Colleen, 10/27/26 9:29 AM]\n\u00b7 Federated cross-platform queries (bridge until cutover): Sofia \u2014 conditional support (Interim only) [Sofia, 10/27/26 9:31 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Federated cross-platform queries (bridge until cutover): Gareth \u2014 proposed [Gareth, 10/27/26 9:27 AM]\n\nCONSTRAINTS\n\u00b7 Unified reporting must be achieved by end of March (stated; not independently verified) [Sofia, 10/26/26 8:45 AM]\n\u00b7 A direction must be reached by Wednesday (stated; not independently verified) [Sofia, 10/26/26 8:45 AM]\n\u00b7 CFO requires a 15% run-cost reduction on data platforms this year (stated; not independently verified) [Dmitri, 10/26/26 9:01 AM]\n\u00b7 PHI data requires BAA coverage and equivalent access controls on whichever platform is chosen (stated; not independently verified) [Wei, 10/26/26 9:03 AM]\n\u00b7 Regulatory audit is in May \u2014 compliance must be satisfied before then (stated; not independently verified) [Wei, 10/26/26 9:03 AM]\n\u00b7 PHI BAA and tokenization review must be completed before claims data moves to the new platform (stated; not independently verified) [Wei, 10/26/26 9:28 AM; Wei, 10/26/26 10:56 AM]\n\u00b7 Snowflake non-renewal notice must be served by Nov 30 to avoid 3-year auto-renewal (stated; not independently verified) [Raj, 10/26/26 10:47 AM; Dmitri, 10/27/26 9:06 AM]\n\u00b7 Serving Snowflake non-renewal notice loses Snowflake access on Feb 28, before Databricks migration is complete (stated; not independently verified) [Raj, 10/26/26 10:53 AM]\n\u00b7 Two Halden engineers committed for six weeks starting Dec 1 to cover stored procedure rewrites (stated; not independently verified) [Colleen, 10/27/26 8:52 AM]\n\u00b7 Databricks requires column-level tokenization on member IDs plus a BAA addendum before PHI data can migrate (stated; not independently verified) [Wei, 10/27/26 8:59 AM]\n\u00b7 Security architecture review is mandatory before any PHI migration; booked for Dec 8 and takes approximately 3 weeks (stated; not independently verified) [Wei, 10/27/26 10:02 AM]\n\u00b7 Exact Q2 cutover date set only after Raj's stored procedure assessment and the Dec 8 security review complete (stated; not independently verified) [Sofia, 10/27/26 10:05 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Platform must be formally confirmed at the Nov 16 steering to ensure the notice decision is made before the Nov 30 deadline (stated; not independently verified) [Sofia, 10/28/26 7:42 AM]\n\nELIMINATED\n\u00b7 Snowflake [Raj, 10/26/26 8:48 AM; Raj, 10/27/26 8:50 AM]\n\u00b7 Query both platforms indefinitely [Imani, 10/26/26 8:56 AM; Colleen, 10/27/26 9:29 AM]\n\u00b7 March [Sofia, 10/26/26 11:05 AM]\n\nOPEN\n\u00b7 Migration tooling coverage of the 40 Snowflake stored procedures has not been verified [Raj, 10/26/26 9:18 AM; Raj, 10/27/26 8:40 AM]\n\u00b7 PHI BAA coverage and access controls on the chosen platform must be confirmed before claims data migrates [Wei, 10/26/26 9:28 AM; Wei, 10/26/26 10:56 AM; Wei, 10/27/26 8:59 AM; Wei, 10/27/26 9:03 AM]\n\u00b7 Cost figures needed to assess which platform option satisfies the CFO run-cost reduction target [Dmitri, 10/26/26 9:31 AM; Dmitri, 10/26/26 10:34 AM; Dmitri, 10/26/26 10:39 AM]\n\u00b7 Snowflake contract non-renewal notice deadline of Nov 30 and resulting Feb 28 access gap if notice is served must be resolved before a migration date is confirmed [Raj, 10/26/26 10:47 AM; Raj, 10/26/26 10:53 AM; Dmitri, 10/27/26 9:06 AM; Raj, 10/27/26 9:08 AM; Dmitri, 10/27/26 9:10 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 On-call ownership for legacy Snowflake pipelines during migration is unassigned [Gareth, 10/26/26 11:20 AM; Sofia, 10/26/26 11:29 AM; Gareth, 10/28/26 7:35 AM; Gareth, 10/28/26 7:57 AM]\n\u00b7 BAA addendum has not been reviewed by Wei; Wei cannot confirm PHI compliance readiness until they have read it [Wei, 10/27/26 8:59 AM; Wei, 10/27/26 9:03 AM; Wei, 10/28/26 7:47 AM]\n\u00b7 Snowflake rep's response to the 6-month extension request is unknown; outcome determines whether 1-year renewal penalty applies [Dmitri, 10/27/26 9:10 AM; Sofia, 10/27/26 9:12 AM; Dmitri, 10/28/26 7:52 AM]\n\u00b7 Security architecture review mandatory before PHI migration; booked Dec 8, takes ~3 weeks \u2014 exact Q2 migration date cannot be set until review completes [Wei, 10/27/26 10:02 AM; Sofia, 10/27/26 10:05 AM; Sofia, 10/28/26 7:42 AM]\n\u00b7 Migrating 400 pipelines in six weeks with the same team is not realistic [Gareth, 10/26/26 8:52 AM; Gareth, 10/26/26 10:54 AM]\n\u00b7 Migration tooling coverage of 40 stored procedures has not been verified [Raj, 10/26/26 9:18 AM; Raj, 10/27/26 8:40 AM]\n\u00b7 Claims data cannot move by March because BAA and tokenization review have not started [Wei, 10/26/26 10:56 AM]\n\u00b7 A one-year Snowflake renewal at ~$2.4M would wreck the 10% cost-reduction target this FY [Dmitri, 10/27/26 9:14 AM]\n\nACTIONS \u2014 COMMITTED\n\u00b7 Sofia: Confirm Q2 migration date once Raj's stored procedure assessment is back [Sofia, 10/26/26 11:05 AM; Sofia, 10/27/26 10:05 AM]\n\u00b7 Wei: Cover Imani's BI sign-offs next week [Wei, 10/26/26 11:14 AM; Imani, 10/27/26 9:32 AM; Imani, 10/28/26 7:49 AM]\n\u00b7 Colleen: Commit two Halden engineers for six weeks starting Dec 1 to cover stored procedure rewrites [Colleen, 10/27/26 8:52 AM; Colleen, 10/28/26 7:54 AM]\n\u00b7 Dmitri: Ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal \u2014 promised Nov 20 [Dmitri, 10/27/26 9:10 AM; Dmitri, 10/28/26 7:52 AM]\n\u00b7 Sofia: Confirm the platform formally at the Nov 16 steering \u2014 promised Nov 16 [Sofia, 10/28/26 7:42 AM]\n\u00b7 Raj: Deliver the full stored procedure assessment by Nov 6 \u2014 promised Nov 6 [Raj, 10/28/26 7:45 AM]\n\u00b7 Wei: Finish the BAA addendum review by Nov 13 \u2014 promised Nov 13 [Wei, 10/28/26 7:47 AM]\n\u00b7 Colleen: Confirm names of the two Halden engineers by Nov 13 [Colleen, 10/28/26 7:54 AM]\n\nACTIONS \u2014 REQUESTED, NOT ACCEPTED\n\u00b7 Raj: Walk the team through the claims mart inventory at the 3pm meeting [Sofia, 10/26/26 9:09 AM; Raj, 10/27/26 8:40 AM; Raj, 10/27/26 10:17 AM]\n\nREPORTED / UNVERIFIED\n\u00b7 Colleen reports: The current organisation runs 300+ pipelines on Databricks and the ML team operates there (unverified) [Colleen, 10/26/26 8:47 AM]\n\u00b7 Raj reports: Halden's whole claims mart plus about 40 stored procedures that don't port cleanly are on Snowflake (unverified) [Raj, 10/26/26 8:48 AM]\n\u00b7 Colleen reports: Stored procedures port fine with the converter (unverified) [Colleen, 10/26/26 8:50 AM]\n\u00b7 Colleen reports: Halden moved 300 pipelines in 8 weeks last year (unverified) [Colleen, 10/26/26 8:50 AM]\n\u00b7 Gareth reports: Moving 400 pipelines in six weeks with the same team is not realistic (unverified) [Gareth, 10/26/26 8:52 AM]\n\u00b7 Colleen reports: Querying both platforms doubles the cost and makes number reconciliation impossible (unverified) [Colleen, 10/26/26 8:55 AM]\n\u00b7 Dmitri reports: A one-year Snowflake renewal costs approximately $2.4M, which would wreck the 10% cost-reduction target in this FY (unverified) [Dmitri, 10/26/26 10:34 AM; Dmitri, 10/27/26 9:14 AM]\n\u00b7 Dmitri reports: Halden's Databricks costs approximately $1.9M per year (unverified) [Dmitri, 10/26/26 10:34 AM]\n\u00b7 Dmitri reports: Keeping both platforms costs approximately $4.3M per year (unverified) [Dmitri, 10/26/26 10:34 AM]\n\u00b7 Dmitri reports: A merged workload on Databricks should land near $3M per year (unverified) [Dmitri, 10/26/26 10:34 AM]\n\u00b7 Dmitri reports: The CFO run-cost reduction target is 10%, not 15% (correcting an earlier claim) (unverified) [Dmitri, 10/26/26 10:39 AM]\n\u00b7 Dmitri reports: The CFO target run-cost reduction is 10% (unverified) [Dmitri, 10/26/26 10:39 AM]\n\u00b7 Raj reports: Snowflake contract renews Feb 28 with a 3-year auto-renewal; non-renewal notice is due Nov 30 \u2014 confirmed by Dmitri (unverified) [Raj, 10/26/26 10:47 AM; Dmitri, 10/27/26 9:06 AM]\n\u00b7 Raj reports: Serving Snowflake non-renewal notice means losing Snowflake on Feb 28, before Databricks migration is complete, creating a gap (unverified) [Raj, 10/26/26 10:53 AM]\n\u00b7 Gareth reports: March migration of 400 pipelines was never going to happen (unverified) [Gareth, 10/26/26 10:54 AM]\n\u00b7 Wei reports: Claims data cannot move by March because the BAA and tokenization review have not even started (unverified) [Wei, 10/26/26 10:56 AM]\n\u00b7 Dmitri reports: Moving migration to Q2 shifts most of the spend into next FY (unverified) [Dmitri, 10/26/26 11:07 AM]\n\u00b7 Raj reports: 31 of 40 stored procedures convert cleanly with the converter; 9 need rewrites (unverified) [Raj, 10/27/26 8:40 AM]\n\u00b7 Colleen reports: Rewriting the 9 stored procedures is approximately two weeks of work (conflicting) [Colleen, 10/27/26 8:43 AM]\n\u00b7 Raj reports: Rewriting the 9 stored procedures will take 4 to 6 weeks with the current team (conflicting) [Raj, 10/27/26 8:45 AM]\n\u00b7 Colleen reports: Colleen can lend two engineers from Halden for the stored procedure rewrites (unverified) [Colleen, 10/27/26 8:47 AM]\n\u00b7 Colleen reports: Two Halden engineers committed for six weeks starting Dec 1 (unverified) [Colleen, 10/27/26 8:52 AM]\n\u00b7 Gareth reports: Dec 1 plus six weeks is mid-January (unverified) [Gareth, 10/27/26 8:54 AM]\n\u00b7 Wei reports: Databricks requires column-level tokenization on member IDs plus a BAA addendum for PHI compliance (preliminary finding) (unverified) [Wei, 10/27/26 8:59 AM]\n\u00b7 Wei reports: Halden says the BAA addendum is standard (unverified) [Wei, 10/27/26 8:59 AM]\n\u00b7 Colleen reports: Colleen has signed a standard BAA addendum before (unverified) [Colleen, 10/27/26 9:01 AM]\n\u00b7 Raj reports: Serving Snowflake non-renewal notice means losing Snowflake access before migration completes, so notice cannot be served and the system still run until Q2 (unverified) [Raj, 10/27/26 9:08 AM]\n\u00b7 Wei reports: Security architecture review is mandatory before any PHI migration, booked for Dec 8, and takes about 3 weeks (unverified) [Wei, 10/27/26 10:02 AM]\n\u00b7 Dmitri reports: The $3M figure was an estimate for the merged workload on Databricks, not a fixed budget (unverified) [Dmitri, 10/27/26 10:43 AM]\n\nSEPARATE\n\u00b7 3pm meeting logistics [Gareth, 10/26/26 9:08 AM; Sofia, 10/26/26 9:09 AM]\n\u00b7 Visitor parking at Halden office [Imani, 10/26/26 9:11 AM; Gareth, 10/26/26 9:12 AM]\n\u00b7 On-call ownership for legacy Snowflake pipelines during migration [Gareth, 10/26/26 11:20 AM; Gareth, 10/26/26 11:25 AM; Raj, 10/26/26 11:26 AM; Colleen, 10/26/26 11:27 AM; Sofia, 10/26/26 11:29 AM; Sofia, 10/27/26 10:05 AM; Gareth, 10/28/26 7:35 AM; Gareth, 10/28/26 7:57 AM; Sofia, 10/28/26 7:59 AM]\n\u00b7 Expense tool link change [Colleen, 10/26/26 11:22 AM; Imani, 10/26/26 11:23 AM]\n\nPREFERENCE: Databricks \u2014 supporters: Colleen, Imani, Gareth, Wei, Raj and Sofia; conditional: Wei and Raj. No unanimous agreement inferred. [Colleen, 10/26/26 8:47 AM; Colleen, 10/26/26 9:26 AM; Imani, 10/26/26 9:27 AM; Gareth, 10/26/26 9:32 AM; Gareth, 10/27/26 10:13 AM; Wei, 10/26/26 9:28 AM; Wei, 10/27/26 9:03 AM; Wei, 10/27/26 10:16 AM; Raj, 10/26/26 9:18 AM; Raj, 10/27/26 8:50 AM; Raj, 10/27/26 10:17 AM; Sofia, 10/27/26 10:09 AM; Sofia, 10/28/26 7:42 AM]"
+  },
+  "report": {
+    "verified": true,
+    "verification_scope": "source references and quote presence only",
+    "external_fact_check": false,
+    "rendering": "deterministic",
+    "omitted_items": 0,
+    "privacy_omitted_items": 1,
+    "issues": []
+  },
+  "units": [
+    {
+      "id": "ent-03-hard-data-platform-000",
+      "author_label": "Sofia",
+      "normalized_text": "Morning all. Purpose of this thread: land the end-state data platform after the merger and a cutover window. Today we run Halden's Databricks and our Snowflake. I'd like a direction by Wednesday. The exec ask is unified reporting by end of March."
+    },
+    {
+      "id": "ent-03-hard-data-platform-001",
+      "author_label": "Colleen",
+      "normalized_text": "Databricks, obviously. We already run 300+ pipelines on it and the ML team lives there."
+    },
+    {
+      "id": "ent-03-hard-data-platform-002",
+      "author_label": "Raj",
+      "normalized_text": "Snowflake. Our whole claims mart is there plus about 40 stored procedures that don't port cleanly."
+    },
+    {
+      "id": "ent-03-hard-data-platform-003",
+      "author_label": "Colleen",
+      "normalized_text": "Stored procedures port fine with the converter. Halden moved 300 pipelines in 8 weeks last year."
+    },
+    {
+      "id": "ent-03-hard-data-platform-004",
+      "author_label": "Gareth",
+      "normalized_text": "Sure, and I'm sure we'll do 400 in six weeks with the same team. Totally realistic."
+    },
+    {
+      "id": "ent-03-hard-data-platform-005",
+      "author_label": "Imani",
+      "normalized_text": "As the BI person I don't care which one, as long as my dashboards don't break twice. Or we just keep querying both forever lol"
+    },
+    {
+      "id": "ent-03-hard-data-platform-006",
+      "author_label": "Colleen",
+      "normalized_text": "Querying both doubles the cost and nobody can reconcile the numbers. Hard no on that."
+    },
+    {
+      "id": "ent-03-hard-data-platform-007",
+      "author_label": "Imani",
+      "normalized_text": "Ha, fair. Dropping that one."
+    },
+    {
+      "id": "ent-03-hard-data-platform-008",
+      "author_label": "Sofia",
+      "normalized_text": "Let me capture criteria. I'd rank speed to unified reporting first, then cost, then risk. Agree?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-009",
+      "author_label": "Dmitri",
+      "normalized_text": "Cost has to be in there. I heard from Anita that the CFO wants a 15% run-cost reduction on data platforms this year."
+    },
+    {
+      "id": "ent-03-hard-data-platform-010",
+      "author_label": "Wei",
+      "normalized_text": "Compliance needs to be its own item. Anything with PHI needs BAA coverage and the same access controls, and we have a regulatory audit in May."
+    },
+    {
+      "id": "ent-03-hard-data-platform-011",
+      "author_label": "Sofia",
+      "normalized_text": "Noted. Ranking for now: speed, cost, compliance."
+    },
+    {
+      "id": "ent-03-hard-data-platform-012",
+      "author_label": "Gareth",
+      "normalized_text": "Is the 3pm still on?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-013",
+      "author_label": "Sofia",
+      "normalized_text": "Yes, 3pm. Raj is walking through the claims mart inventory."
+    },
+    {
+      "id": "ent-03-hard-data-platform-014",
+      "author_label": "Imani",
+      "normalized_text": "Random, where do visitors park at the Halden office on Thursday? Lot looks full."
+    },
+    {
+      "id": "ent-03-hard-data-platform-015",
+      "author_label": "Gareth",
+      "normalized_text": "Level 3 of the garage, security badges them in at the gate."
+    },
+    {
+      "id": "ent-03-hard-data-platform-016",
+      "author_label": "Colleen",
+      "normalized_text": "My view stands, Databricks as the end state. Raj, what would it take for you?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-017",
+      "author_label": "Raj",
+      "normalized_text": "I could live with Databricks IF the migration tooling covers our 40 stored procedures. I haven't verified that yet."
+    },
+    {
+      "id": "ent-03-hard-data-platform-018",
+      "author_label": "Colleen",
+      "normalized_text": "Great, so Raj is fine with Databricks. Noting that."
+    },
+    {
+      "id": "ent-03-hard-data-platform-019",
+      "author_label": "Raj",
+      "normalized_text": "That's not what I said. I said I could live with it IF the tooling covers the 40 procs. That's not \"fine\"."
+    },
+    {
+      "id": "ent-03-hard-data-platform-020",
+      "author_label": "Colleen",
+      "normalized_text": "OK, conditional. Fair."
+    },
+    {
+      "id": "ent-03-hard-data-platform-021",
+      "author_label": "Sofia",
+      "normalized_text": "Quick poll for the end state. A is Databricks, B is Snowflake. Reply with your pick."
+    },
+    {
+      "id": "ent-03-hard-data-platform-022",
+      "author_label": "Colleen",
+      "normalized_text": "A"
+    },
+    {
+      "id": "ent-03-hard-data-platform-023",
+      "author_label": "Imani",
+      "normalized_text": "A"
+    },
+    {
+      "id": "ent-03-hard-data-platform-024",
+      "author_label": "Wei",
+      "normalized_text": "A, provided the PHI controls and the BAA are in place before any claims data moves."
+    },
+    {
+      "id": "ent-03-hard-data-platform-025",
+      "author_label": "Raj",
+      "normalized_text": "B for now. Show me the stored procs working and I'll change."
+    },
+    {
+      "id": "ent-03-hard-data-platform-026",
+      "author_label": "Dmitri",
+      "normalized_text": "No view. I just need the cost number either way."
+    },
+    {
+      "id": "ent-03-hard-data-platform-027",
+      "author_label": "Gareth",
+      "normalized_text": "A, but not by March."
+    },
+    {
+      "id": "ent-03-hard-data-platform-028",
+      "author_label": "Sofia",
+      "normalized_text": "ok"
+    },
+    {
+      "id": "ent-03-hard-data-platform-029",
+      "author_label": "Dmitri",
+      "normalized_text": "Numbers as I have them: Snowflake costs about $2.4M a year, Halden's Databricks about $1.9M. Keeping both is about $4.3M. A merged workload on Databricks should land near $3M."
+    },
+    {
+      "id": "ent-03-hard-data-platform-030",
+      "author_label": "Dmitri",
+      "normalized_text": "Correction on what I said earlier. The CFO target is 10%, not 15%. Anita just corrected me."
+    },
+    {
+      "id": "ent-03-hard-data-platform-031",
+      "author_label": "Imani",
+      "normalized_text": "\ud83d\udc4d"
+    },
+    {
+      "id": "ent-03-hard-data-platform-032",
+      "author_label": "Gareth",
+      "normalized_text": "Raj, doesn't the Snowflake contract renew soon?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-033",
+      "author_label": "Raj",
+      "normalized_text": "Yes. It renews Feb 28 and auto-renews for 3 years unless we give notice 90 days before, so by Nov 30."
+    },
+    {
+      "id": "ent-03-hard-data-platform-034",
+      "author_label": "Dmitri",
+      "normalized_text": "I'll pull the contract and confirm by Wednesday."
+    },
+    {
+      "id": "ent-03-hard-data-platform-035",
+      "author_label": "Colleen",
+      "normalized_text": "Then we serve non-renewal notice by Nov 30 and we're done."
+    },
+    {
+      "id": "ent-03-hard-data-platform-036",
+      "author_label": "Raj",
+      "normalized_text": "If we serve notice we lose Snowflake on Feb 28. We won't be on Databricks by then. That's a gap."
+    },
+    {
+      "id": "ent-03-hard-data-platform-037",
+      "author_label": "Gareth",
+      "normalized_text": "Exactly. And March for 400 pipelines was never going to happen."
+    },
+    {
+      "id": "ent-03-hard-data-platform-038",
+      "author_label": "Wei",
+      "normalized_text": "I also can't see claims data moving by March with the BAA and tokenization review not even started. I'm against a March date."
+    },
+    {
+      "id": "ent-03-hard-data-platform-039",
+      "author_label": "Colleen",
+      "normalized_text": "OK so what's realistic? Q2?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-040",
+      "author_label": "Raj",
+      "normalized_text": "Q2 is workable for me."
+    },
+    {
+      "id": "ent-03-hard-data-platform-041",
+      "author_label": "Gareth",
+      "normalized_text": "Q2 I could do. Needs the stored proc answer first."
+    },
+    {
+      "id": "ent-03-hard-data-platform-042",
+      "author_label": "Imani",
+      "normalized_text": "+1"
+    },
+    {
+      "id": "ent-03-hard-data-platform-043",
+      "author_label": "Sofia",
+      "normalized_text": "Dropping the March target then. I'll plan on Q2 and confirm the date once Raj's assessment is back."
+    },
+    {
+      "id": "ent-03-hard-data-platform-044",
+      "author_label": "Dmitri",
+      "normalized_text": "Q2 works for me. It moves most of the spend into next FY anyway."
+    },
+    {
+      "id": "ent-03-hard-data-platform-045",
+      "author_label": "Imani",
+      "normalized_text": "Heads up, I'm out all next week, surgery. Wei is covering my BI sign-offs."
+    },
+    {
+      "id": "ent-03-hard-data-platform-046",
+      "author_label": "Wei",
+      "normalized_text": "Yes, I'll cover BI sign-offs next week."
+    },
+    {
+      "id": "ent-03-hard-data-platform-047",
+      "author_label": "Dmitri",
+      "normalized_text": "Between us: there's a hiring freeze, so no backfill for Raj's team. Please keep that inside this thread."
+    },
+    {
+      "id": "ent-03-hard-data-platform-048",
+      "author_label": "Raj",
+      "normalized_text": "Understood. So it's the people we have."
+    },
+    {
+      "id": "ent-03-hard-data-platform-049",
+      "author_label": "Gareth",
+      "normalized_text": "Which makes interim on-call matter. Who owns on-call for the legacy Snowflake pipelines during the migration?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-050",
+      "author_label": "Colleen",
+      "normalized_text": "Anyone know where the expense tool moved? The old link is dead."
+    },
+    {
+      "id": "ent-03-hard-data-platform-051",
+      "author_label": "Imani",
+      "normalized_text": "Under Finance Apps now."
+    },
+    {
+      "id": "ent-03-hard-data-platform-052",
+      "author_label": "Gareth",
+      "normalized_text": "Back to on-call please. Who owns it?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-053",
+      "author_label": "Raj",
+      "normalized_text": "Not it, my team is already stretched."
+    },
+    {
+      "id": "ent-03-hard-data-platform-054",
+      "author_label": "Colleen",
+      "normalized_text": "Halden platform team can't take Snowflake pipelines, we have no Snowflake skills."
+    },
+    {
+      "id": "ent-03-hard-data-platform-055",
+      "author_label": "Sofia",
+      "normalized_text": "Let's park on-call and I'll come back to it."
+    },
+    {
+      "id": "ent-03-hard-data-platform-056",
+      "author_label": "Gareth",
+      "normalized_text": "\ud83d\udc4d"
+    },
+    {
+      "id": "ent-03-hard-data-platform-057",
+      "author_label": "Raj",
+      "normalized_text": "First pass on the stored procs with the converter. 31 of 40 convert cleanly, 9 need rewrites."
+    },
+    {
+      "id": "ent-03-hard-data-platform-058",
+      "author_label": "Colleen",
+      "normalized_text": "That's a good result. Rewrites are maybe two weeks of work."
+    },
+    {
+      "id": "ent-03-hard-data-platform-059",
+      "author_label": "Raj",
+      "normalized_text": "Closer to 4 to 6 weeks with the team we have."
+    },
+    {
+      "id": "ent-03-hard-data-platform-060",
+      "author_label": "Colleen",
+      "normalized_text": "We can lend two engineers from Halden for the rewrites."
+    },
+    {
+      "id": "ent-03-hard-data-platform-061",
+      "author_label": "Raj",
+      "normalized_text": "If you lend two engineers for the rewrites, A works for me and I withdraw B."
+    },
+    {
+      "id": "ent-03-hard-data-platform-062",
+      "author_label": "Colleen",
+      "normalized_text": "Then I'll commit two engineers for six weeks, starting Dec 1."
+    },
+    {
+      "id": "ent-03-hard-data-platform-063",
+      "author_label": "Gareth",
+      "normalized_text": "Dec 1 plus six weeks is mid January. That works."
+    },
+    {
+      "id": "ent-03-hard-data-platform-064",
+      "author_label": "Wei",
+      "normalized_text": "PHI review update. Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum. Halden says the addendum is standard but I haven't seen it."
+    },
+    {
+      "id": "ent-03-hard-data-platform-065",
+      "author_label": "Colleen",
+      "normalized_text": "It's standard, I've signed one before."
+    },
+    {
+      "id": "ent-03-hard-data-platform-066",
+      "author_label": "Wei",
+      "normalized_text": "I need to read it myself. Until then my A is conditional on the BAA and tokenization."
+    },
+    {
+      "id": "ent-03-hard-data-platform-067",
+      "author_label": "Dmitri",
+      "normalized_text": "Contract confirmed. Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right."
+    },
+    {
+      "id": "ent-03-hard-data-platform-068",
+      "author_label": "Raj",
+      "normalized_text": "So we can't serve notice and still run until Q2."
+    },
+    {
+      "id": "ent-03-hard-data-platform-069",
+      "author_label": "Dmitri",
+      "normalized_text": "I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal. No promise they agree. I'll ask by Nov 20."
+    },
+    {
+      "id": "ent-03-hard-data-platform-070",
+      "author_label": "Sofia",
+      "normalized_text": "If they refuse we renew for a year and take the hit."
+    },
+    {
+      "id": "ent-03-hard-data-platform-071",
+      "author_label": "Dmitri",
+      "normalized_text": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY. That's the downside."
+    },
+    {
+      "id": "ent-03-hard-data-platform-072",
+      "author_label": "Sofia",
+      "normalized_text": "Understood. Let's see what the rep says."
+    },
+    {
+      "id": "ent-03-hard-data-platform-073",
+      "author_label": "Gareth",
+      "normalized_text": "Separate thought. Until cutover can we federate queries across both platforms as a bridge?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-074",
+      "author_label": "Colleen",
+      "normalized_text": "As a temporary bridge, ok. As the end state, still no."
+    },
+    {
+      "id": "ent-03-hard-data-platform-075",
+      "author_label": "Sofia",
+      "normalized_text": "Interim only."
+    },
+    {
+      "id": "ent-03-hard-data-platform-076",
+      "author_label": "Imani",
+      "normalized_text": "That works for BI."
+    },
+    {
+      "id": "ent-03-hard-data-platform-077",
+      "author_label": "Wei",
+      "normalized_text": "Security architecture review is now mandatory before any PHI migration. It's booked for Dec 8 and takes about 3 weeks."
+    },
+    {
+      "id": "ent-03-hard-data-platform-078",
+      "author_label": "Sofia",
+      "normalized_text": "That changes the ranking. New order: compliance first, then cost, then speed. March is dead, Q2 it is, exact date after the Dec 8 review and Raj's assessment."
+    },
+    {
+      "id": "ent-03-hard-data-platform-079",
+      "author_label": "Dmitri",
+      "normalized_text": "Sofia, are we deciding the platform today?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-080",
+      "author_label": "Sofia",
+      "normalized_text": "I'd like a direction. Can we go with A as the direction, with the open items tracked?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-081",
+      "author_label": "Dmitri",
+      "normalized_text": "Fine, whatever gets us out of this thread."
+    },
+    {
+      "id": "ent-03-hard-data-platform-082",
+      "author_label": "Gareth",
+      "normalized_text": "A works for me, and Q2 is what makes it work."
+    },
+    {
+      "id": "ent-03-hard-data-platform-083",
+      "author_label": "Colleen",
+      "normalized_text": "Great, all seven of us are on board with Databricks then."
+    },
+    {
+      "id": "ent-03-hard-data-platform-084",
+      "author_label": "Wei",
+      "normalized_text": "Not all seven. I'm conditional on the BAA and tokenization, not \"on board\"."
+    },
+    {
+      "id": "ent-03-hard-data-platform-085",
+      "author_label": "Raj",
+      "normalized_text": "Same, conditional on the stored procs and the engineers."
+    },
+    {
+      "id": "ent-03-hard-data-platform-086",
+      "author_label": "Dmitri",
+      "normalized_text": "And I abstained. Count me out of that."
+    },
+    {
+      "id": "ent-03-hard-data-platform-087",
+      "author_label": "Colleen",
+      "normalized_text": "OK, noted. Five supporters then, some conditional."
+    },
+    {
+      "id": "ent-03-hard-data-platform-088",
+      "author_label": "Imani",
+      "normalized_text": "Someone said earlier the budget is fixed at $3M. Is that right?"
+    },
+    {
+      "id": "ent-03-hard-data-platform-089",
+      "author_label": "Dmitri",
+      "normalized_text": "Nobody said that. $3M was my estimate for the merged workload on Databricks. It isn't a budget."
+    },
+    {
+      "id": "ent-03-hard-data-platform-090",
+      "author_label": "Imani",
+      "normalized_text": "Got it, thanks."
+    },
+    {
+      "id": "ent-03-hard-data-platform-091",
+      "author_label": "Gareth",
+      "normalized_text": "On-call for the legacy Snowflake pipelines is still unowned. Flagging again."
+    },
+    {
+      "id": "ent-03-hard-data-platform-092",
+      "author_label": "Sofia",
+      "normalized_text": "Noted. I'll recap what we have."
+    },
+    {
+      "id": "ent-03-hard-data-platform-093",
+      "author_label": "Sofia",
+      "normalized_text": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review. Federation only as an interim bridge. March is off. I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30."
+    },
+    {
+      "id": "ent-03-hard-data-platform-094",
+      "author_label": "Raj",
+      "normalized_text": "I'll deliver the full stored procedure assessment by Nov 6."
+    },
+    {
+      "id": "ent-03-hard-data-platform-095",
+      "author_label": "Wei",
+      "normalized_text": "And I'll finish the BAA addendum review by Nov 13."
+    },
+    {
+      "id": "ent-03-hard-data-platform-096",
+      "author_label": "Imani",
+      "normalized_text": "Reminder, I'm out from Monday. BI sign-offs go to Wei."
+    },
+    {
+      "id": "ent-03-hard-data-platform-097",
+      "author_label": "Dmitri",
+      "normalized_text": "The extension request to Snowflake goes out by Nov 20, as I said."
+    },
+    {
+      "id": "ent-03-hard-data-platform-098",
+      "author_label": "Colleen",
+      "normalized_text": "Two Halden engineers start Dec 1. I'll confirm names by Nov 13."
+    },
+    {
+      "id": "ent-03-hard-data-platform-099",
+      "author_label": "Gareth",
+      "normalized_text": "Still no owner for on-call though. Not letting that go."
+    },
+    {
+      "id": "ent-03-hard-data-platform-100",
+      "author_label": "Sofia",
+      "normalized_text": "Understood."
+    }
+  ]
+}

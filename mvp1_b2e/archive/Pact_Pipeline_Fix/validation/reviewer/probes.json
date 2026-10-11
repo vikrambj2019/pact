@@ -1,0 +1,37 @@
+{
+  "mode": "fresh live semantic reviewer probes, not full extraction",
+  "model": "claude-sonnet-5",
+  "passed": true,
+  "cases": {
+    "grounded_action": {
+      "accepted": true,
+      "report": {
+        "status": "passed",
+        "stage": "extraction",
+        "reviewed_element_count": 1,
+        "coverage_complete": true,
+        "verdicts": [
+          {
+            "key": "actions:0",
+            "verdict": "pass",
+            "reason": "fixture-065 'token fix started Wednesday, on track' directly supports the action text. Owner attribution to Dev Patel is supported by fixture-036/037 where Elena says 'if Dev's team prioritizes the token fix' and Dev says 'I can start tomorrow' then confirms with 'ok' to Priya's direct question, and fixture-055 explicitly assigns 'Dev on fix #3' which Dev does not contest. Status 'committed' is reasonable given Dev's agreement and the update that work has started and is on track. The quote is attributed correctly to Dev Patel at fixture-065."
+          }
+        ],
+        "verification_scope": "LLM semantic audit against supplied sources and JSON",
+        "external_fact_check": false
+      }
+    },
+    "invented_completion_deadline": {
+      "accepted": false,
+      "reason": "Semantic review rejected output: actions:0: The due date 'Nov 6' is misattributed. Fixture-065 only states the fix 'started Wednesday, on track' with no deadline mentioned. The Nov 6 date comes from fixture-035 ('Can we close #3 by Nov 6?') which was a question, not a confirmed deadline, and fixture-037 where Dev said 'that's a week of work. I can start tomorrow' (Oct 7), implying completion around Oct 14, not Nov 6. The cited source (fixture-065) does not support the due date field, and conflating the Nov 6 code-complete milestone (for the portal, from fixture-001/fixture-032) with the finding #3 fix deadline is a misattribution of a different gate. This is a material omission/misattribution of the due date.; The due date 'Nov 6' for the token fix (finding #3) is not supported by the cited source fixture-065 or any clear prior statement; it conflates the portal code-complete deadline with the security finding fix timeline, which was never explicitly set to Nov 6."
+    },
+    "invented_funding_approval": {
+      "accepted": false,
+      "reason": "Semantic review rejected output: claims:0: Hal's fixture-059 statement is conditional/future-looking ('if B needs money, send me the ask by Oct 30') \u2014 it sets up a process for requesting approval, it does not constitute actual approval of a $215k fallback budget. Jon explicitly said he can't approve B at $215k and someone would need to take it to Hal (fixture-052), and Priya called B 'a fallback pending Hal's approval' (fixture-053). No subsequent source unit shows Hal actually receiving or approving the $215k ask. The claim mischaracterizes an offer to review a future ask as a completed approval.; The single claim misrepresents Hal's statement as an approval decision already made, when the source shows only a conditional commitment to consider an ask if submitted by Oct 30. This omits the critical unresolved condition (the ask must still be sent and approved) and asserts a status ('approved') not supported by the evidence."
+    },
+    "invented_summary_deadline": {
+      "accepted": false,
+      "reason": "Semantic review rejected output: executive_summary:0: Labeling the overall status as 'COMMITTED' is a material mischaracterization/omission. The actual decision (fixture-048/055) is a conditional plan: Option A (Nov 16 launch with Acme) subject to an Oct 30 go/no-go checkpoint requiring SOC2 report, signed DPA, and finding #3 fix on track, with Option B as a fallback pending Hal's budget approval. As of the latest messages (fixture-063/064/065), SOC2 report just received (review pending to Oct 14), DPA still has an open clause (retention) pending resolution Monday, and the token fix just started. None of these gates are firmly closed/committed yet; the overall launch plan is conditional/in-progress, not simply 'COMMITTED'. A bare 'COMMITTED' status omits the conditional gates and unresolved items, materially misleading a reader of the executive summary.; executive_summary:1: This line asserts finding #3 will be 'closed by Nov 6' as if that were an agreed/committed deadline, but the source only shows Dev saying the token fix is 'on track' (fixture-065) and earlier Marcus asking 'Can we close #3 by Nov 6?' with Elena saying 'I think so' (unverified) and Dev saying 'that's a week of work, I can start tomorrow' - these are estimates/hopes, not a firm commitment or deadline. Also the owner action in structured data is 'status: committed' based on quote 'token fix started Wednesday, on track' which only supports that work is in progress and on track, not that it is committed to be closed by Nov 6. This is a material overstatement from an unverified estimate to a committed deadline.; The two-line executive summary omits the core launch decision: Option A (Nov 16 with Acme) with an Oct 30 go/no-go checkpoint, Option B as a budget-dependent fallback, and the gating conditions (SOC2 report review completion, DPA retention clause resolution, finding #3 closure) that are still open as of the latest timeline (Oct 9). Presenting a single 'COMMITTED' status with only Dev's finding #3 timeline is a material omission of the conditional, multi-owner decision structure and unresolved gates (DPA retention clause still open, SOC2 review not yet finished, Hal's approval needed if B is triggered), and overstates an estimate as a firm commitment."
+    }
+  }
+}

@@ -24,7 +24,6 @@ export default function Home() {
   // Create form
   const [showCreate, setShowCreate] = useState(false);
   const [title, setTitle] = useState('');
-  const [question, setQuestion] = useState('');
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState('');
 
@@ -41,7 +40,7 @@ export default function Home() {
     setCreating(true);
     setCreateError('');
     try {
-      const ws = await api.workspaces.create({ title: title.trim(), decision_question: question.trim() || undefined });
+      const ws = await api.workspaces.create({ title: title.trim() });
       navigate(`/w/${ws.id}`);
     } catch (e: unknown) {
       setCreateError(e instanceof Error ? e.message : String(e));
@@ -76,17 +75,6 @@ export default function Home() {
                   required
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Decision question <span className="text-gray-400 font-normal">(optional)</span>
-                </label>
-                <input
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  placeholder="e.g. Which CRM should we adopt?"
-                  value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
-                />
-              </div>
               {createError && <p className="text-sm text-red-600">{createError}</p>}
               <div className="flex gap-2">
                 <button
@@ -98,7 +86,7 @@ export default function Home() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setShowCreate(false); setTitle(''); setQuestion(''); setCreateError(''); }}
+                  onClick={() => { setShowCreate(false); setTitle(''); setCreateError(''); }}
                   className="text-sm text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 transition-colors"
                 >
                   Cancel

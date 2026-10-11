@@ -1,0 +1,1248 @@
+{
+  "meta": {
+    "dataset": "ent-02-medium-support-ai",
+    "model": "claude-sonnet-4-6",
+    "run": 1,
+    "units": 53,
+    "timestamp": "2026-10-11T18:25:04.930833+00:00"
+  },
+  "brief": {
+    "criteria": [
+      {
+        "text": "Must integrate with existing ticketing tool out of the box",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-001"
+        ],
+        "quote": "It plugs into our ticketing tool out of the box.",
+        "name": "Must integrate with existing ticketing tool out of the box",
+        "id": "3e0af714-c577-403d-8a43-930b0beb90d6"
+      },
+      {
+        "text": "Roadmap ownership (ability to own the product roadmap)",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-003"
+        ],
+        "quote": "We'd own the roadmap.",
+        "name": "Roadmap ownership (ability to own the product roadmap)",
+        "id": "2b5d99a0-d16b-4ee2-9679-0186b1e3da78"
+      },
+      {
+        "text": "Year one all-in cost within budget cap",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-005"
+        ],
+        "quote": "Finance gave us a cap of $200k for year one, all in.",
+        "name": "Year one all-in cost within budget cap",
+        "id": "36e46b54-dc12-4f12-9d60-8a7d2d875872"
+      },
+      {
+        "text": "Go-live before January peak, ideally by Jan 15",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-011"
+        ],
+        "quote": "We want this live before the January peak, ideally by Jan 15.",
+        "name": "Go-live before January peak, ideally by Jan 15",
+        "id": "9a4ffbcb-3c10-418f-be25-605cb4bc73a9"
+      },
+      {
+        "text": "SOC 2 Type II certification evidence required",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-020"
+        ],
+        "quote": "the conditions are SOC 2 Type II evidence and an EU data region",
+        "name": "SOC 2 Type II certification evidence required",
+        "id": "3cef1f6c-efc8-4c32-aa7f-3bfe82929de8"
+      },
+      {
+        "text": "EU data region required for EU customer data compliance",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-020"
+        ],
+        "quote": "the conditions are SOC 2 Type II evidence and an EU data region",
+        "name": "EU data region required for EU customer data compliance",
+        "id": "cd3116c7-6420-474c-b690-fd9c1e626459"
+      },
+      {
+        "text": "Signed DPA required before ticket data is sent to vendor",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-021"
+        ],
+        "quote": "we need a signed DPA before any ticket data goes to them.",
+        "name": "Signed DPA required before ticket data is sent to vendor",
+        "id": "b838bddf-af3f-4dd0-895b-4a674ea0882c"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Recommendation must be ready for Nov 12 steering meeting",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-000"
+        ],
+        "quote": "I'd like a recommendation ready for the Nov 12 steering meeting.",
+        "sensitive": false,
+        "private": false,
+        "id": "db1791f7-7b1a-4aed-8f93-5509ccff49da"
+      },
+      {
+        "text": "$200k year-one all-in budget cap, including implementation",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-005",
+          "ent-02-medium-support-ai-006"
+        ],
+        "quote": "Finance gave us a cap of $200k for year one, all in.",
+        "sensitive": false,
+        "private": false,
+        "id": "80b8e04d-d0c8-486c-be2c-4b40798242db"
+      },
+      {
+        "text": "DPA with Relay must be signed before go-live",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-011",
+          "ent-02-medium-support-ai-045"
+        ],
+        "quote": "Legal is OK with Relay as long as the DPA is signed before go-live.",
+        "sensitive": false,
+        "private": false,
+        "id": "1d16a071-481e-4bc2-93e2-a683ed0fe2c2"
+      },
+      {
+        "text": "EU customer contracts require ticket data to stay in the EU",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-017",
+          "ent-02-medium-support-ai-019"
+        ],
+        "quote": "our EU customer contracts require ticket data to stay in the EU",
+        "sensitive": false,
+        "private": false,
+        "id": "456cf797-1b90-4330-8040-670d2858a72a"
+      },
+      {
+        "text": "A signed DPA must be in place before any ticket data is sent to the vendor",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-021"
+        ],
+        "quote": "we need a signed DPA before any ticket data goes to them.",
+        "sensitive": false,
+        "private": false,
+        "id": "1dbbaf7e-018d-4cae-b390-cb9012dbdb78"
+      },
+      {
+        "text": "No customer ticket data may go to the vendor before SOC 2 Type II audit report is received (expected Dec 1)",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-026"
+        ],
+        "quote": "I can't approve data going to Relay before Dec 1.",
+        "sensitive": false,
+        "private": false,
+        "id": "405aabb0-989f-444a-b47a-f9036c4b80cb"
+      },
+      {
+        "text": "Go-live must be gated on receipt and review of the SOC 2 Type II audit report with no major findings",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-026",
+          "ent-02-medium-support-ai-028"
+        ],
+        "quote": "I could support picking Relay on Nov 12 if go-live is gated on that report.",
+        "sensitive": false,
+        "private": false,
+        "id": "b832350a-a849-4266-88f5-0cc29b4a31db"
+      },
+      {
+        "text": "Relay's year-one total of $215k ($180k license + $35k implementation) exceeds the $200k all-in cap; budget feasibility is unresolved",
+        "kind": "mandatory",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-029",
+          "ent-02-medium-support-ai-030",
+          "ent-02-medium-support-ai-032",
+          "ent-02-medium-support-ai-046"
+        ],
+        "quote": "That's over the cap, $215k against $200k, unless we negotiate.",
+        "sensitive": false,
+        "private": false,
+        "id": "e35f05eb-148f-4352-a15d-b57e89966118"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "opt-relay",
+        "title": "Relay",
+        "decision": "provider",
+        "status": "active",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-001",
+          "ent-02-medium-support-ai-039"
+        ],
+        "quote": "My view: Relay. I support it.",
+        "description": "",
+        "id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "temp_id": "opt-hollis",
+        "title": "Hollis",
+        "decision": "provider",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-009",
+          "ent-02-medium-support-ai-034"
+        ],
+        "quote": "$240k plus $50k implementation, so $290k. Way out.",
+        "description": "",
+        "id": "d6e71d6e-78c3-4552-84e0-23ef727abbaf"
+      },
+      {
+        "temp_id": "opt-build",
+        "title": "Build in-house",
+        "decision": "provider",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-012"
+        ],
+        "quote": "Fine, I'm dropping build. It can't make Jan 15.",
+        "description": "",
+        "id": "668adf69-9ef4-473b-b930-0200684ab768"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Relay integrates with the existing ticketing tool out of the box",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-001"
+        ],
+        "quote": "It plugs into our ticketing tool out of the box.",
+        "sensitive": false,
+        "private": false,
+        "id": "2334c47b-7848-42a9-a59f-890a607844e4"
+      },
+      {
+        "text": "A prototype could be built quickly on the LLM API the company already pays for",
+        "kind": "factual",
+        "author_label": "Jonas",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-002"
+        ],
+        "quote": "Third option is to build it ourselves on the LLM API we already pay for. I could prototype quickly.",
+        "sensitive": false,
+        "private": false,
+        "id": "51b57687-a0c9-4727-8b2e-23c55273a11b"
+      },
+      {
+        "text": "Building in-house would give the team ownership of the roadmap",
+        "kind": "causal",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-003"
+        ],
+        "quote": "We'd own the roadmap.",
+        "sensitive": false,
+        "private": false,
+        "id": "c720aa40-f6be-4f22-8074-9d8ace3a602f"
+      },
+      {
+        "text": "Finance set a cap of $200k for year one, all in",
+        "kind": "factual",
+        "author_label": "Rhea",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-005"
+        ],
+        "quote": "Finance gave us a cap of $200k for year one, all in.",
+        "sensitive": false,
+        "private": false,
+        "id": "0bffe66d-be46-46b0-a20f-41086566873c"
+      },
+      {
+        "text": "Relay costs $180k per year (platform license only)",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "superseded",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-007"
+        ],
+        "quote": "Pricing as I have it: Relay $180k a year",
+        "sensitive": false,
+        "private": false,
+        "id": "d4eb7db4-e439-4544-979a-eaf3ef36ad09"
+      },
+      {
+        "text": "Hollis costs $240k platform license plus $50k implementation, totalling $290k in year one",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-007",
+          "ent-02-medium-support-ai-034"
+        ],
+        "quote": "$240k plus $50k implementation, so $290k. Way out.",
+        "sensitive": false,
+        "private": false,
+        "id": "efec7383-ac5e-4548-90d1-7f12e8ae7479"
+      },
+      {
+        "text": "Hollis is over the $200k cap before any implementation fee",
+        "kind": "causal",
+        "author_label": "Luis",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-008"
+        ],
+        "quote": "Then Hollis is over the cap before any implementation fee.",
+        "sensitive": false,
+        "private": false,
+        "id": "ae1675b1-6705-4dd0-bed5-1f1b13af6794"
+      },
+      {
+        "text": "Building in-house requires two engineers for two quarters, and Jonas does not have two free until Q3",
+        "kind": "factual",
+        "author_label": "Jonas",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-010"
+        ],
+        "quote": "I'd need two engineers for two quarters, and I don't have two free until Q3.",
+        "sensitive": false,
+        "private": false,
+        "id": "29b77cdf-ced5-44fc-b78a-2ff4fdd5d3eb"
+      },
+      {
+        "text": "Building in-house cannot meet the Jan 15 go-live target",
+        "kind": "causal",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-012"
+        ],
+        "quote": "I'm dropping build. It can't make Jan 15.",
+        "sensitive": false,
+        "private": false,
+        "id": "4c41b7d9-6208-4dad-8a5f-d32484df3797"
+      },
+      {
+        "text": "Relay's trust page states SOC 2 Type I is done and Type II is in progress, not completed",
+        "kind": "factual",
+        "author_label": "Jonas",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-014",
+          "ent-02-medium-support-ai-015"
+        ],
+        "quote": "It says Type I, with Type II in progress. Those are not the same thing.",
+        "sensitive": false,
+        "private": false,
+        "id": "7bec7182-ba33-4cce-bde4-c9fc717fc5f5"
+      },
+      {
+        "text": "Keiko thinks Relay may have an EU region but is not certain",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-018"
+        ],
+        "quote": "I think so but I'm not sure.",
+        "sensitive": false,
+        "private": false,
+        "id": "2623950d-0a8e-42b4-82ab-8faaa9cd4eab"
+      },
+      {
+        "text": "EU customer contracts require ticket data to stay in the EU (clause 9 of enterprise agreements)",
+        "kind": "factual",
+        "author_label": "Ben",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-019"
+        ],
+        "quote": "On the EU point, yes, it's in the enterprise agreements, clause 9.",
+        "sensitive": false,
+        "private": false,
+        "id": "6a01935d-3a40-4481-a98e-3a357ab5aae5"
+      },
+      {
+        "text": "Relay's SOC 2 Type II audit report will be available Dec 1; Type I is already done",
+        "kind": "factual",
+        "author_label": "Jonas",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-025"
+        ],
+        "quote": "the SOC 2 Type II audit report will be available Dec 1. Type I is done.",
+        "sensitive": false,
+        "private": false,
+        "id": "63210d6b-60d7-4b25-9e60-972b60ed00fb"
+      },
+      {
+        "text": "A Dec 1 SOC 2 Type II report receipt (with no major findings) still allows go-live by Jan 15",
+        "kind": "predictive",
+        "author_label": "Amira",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-028"
+        ],
+        "quote": "Yes, if the report lands Dec 1 with no major findings.",
+        "sensitive": false,
+        "private": false,
+        "id": "01d30b62-1b67-4085-b2af-934e58445503"
+      },
+      {
+        "text": "Relay's quote covers platform license only; implementation is a separate one-time fee of $35k, making year-one total $215k",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-029"
+        ],
+        "quote": "implementation is a separate one-time $35k. So $215k in year one.",
+        "sensitive": false,
+        "private": false,
+        "id": "bdc98361-ac53-4f22-b24b-e182764298b4"
+      },
+      {
+        "text": "Relay's quote covers platform license only; implementation is a separate one-time fee of $35k",
+        "kind": "factual",
+        "author_label": "Keiko",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-029"
+        ],
+        "quote": "implementation is a separate one-time $35k. So $215k in year one.",
+        "sensitive": false,
+        "private": false,
+        "id": "07fccf5e-954b-4f7f-b21c-0b044e2247c0"
+      },
+      {
+        "text": "Relay's year-one total of $215k exceeds the $200k cap unless negotiated",
+        "kind": "causal",
+        "author_label": "Luis",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-030"
+        ],
+        "quote": "That's over the cap, $215k against $200k, unless we negotiate.",
+        "sensitive": false,
+        "private": false,
+        "id": "6ade82cd-8018-462c-b0c7-bbbd8e5cc583"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Keiko",
+        "decision": "provider",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-001"
+        ],
+        "quote": "I've looked at two vendors, Relay and Hollis.",
+        "proposer": true,
+        "first_unit_sequence": 1,
+        "id": "edb1d256-ed8a-4f5a-bb3d-ae4abd7ee3be",
+        "option_id": "d6e71d6e-78c3-4552-84e0-23ef727abbaf"
+      },
+      {
+        "participant_label": "Jonas",
+        "decision": "provider",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-002"
+        ],
+        "quote": "Third option is to build it ourselves on the LLM API we already pay for. I could prototype quickly.",
+        "proposer": true,
+        "first_unit_sequence": 2,
+        "id": "86cba083-76dc-45f6-ad7e-89aed318ea16",
+        "option_id": "668adf69-9ef4-473b-b930-0200684ab768"
+      },
+      {
+        "participant_label": "Luis",
+        "decision": "provider",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-008"
+        ],
+        "quote": "I can't support Hollis.",
+        "proposer": false,
+        "first_unit_sequence": 8,
+        "id": "9d2aaf2e-e904-421a-bf10-686ec25ccfdb",
+        "option_id": "d6e71d6e-78c3-4552-84e0-23ef727abbaf"
+      },
+      {
+        "participant_label": "Keiko",
+        "decision": "provider",
+        "stance": "withdrawn",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-003",
+          "ent-02-medium-support-ai-012"
+        ],
+        "quote": "Fine, I'm dropping build. It can't make Jan 15.",
+        "proposer": false,
+        "first_unit_sequence": 12,
+        "id": "db3e4a02-766c-43a0-a564-a65faf1243ed",
+        "option_id": "668adf69-9ef4-473b-b930-0200684ab768"
+      },
+      {
+        "participant_label": "Rhea",
+        "decision": "provider",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-013",
+          "ent-02-medium-support-ai-039"
+        ],
+        "quote": "My view: Relay. I support it.",
+        "proposer": false,
+        "first_unit_sequence": 39,
+        "id": "5c17d473-9cad-44d0-82df-ac59b96b9178",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "participant_label": "Keiko",
+        "decision": "provider",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-001",
+          "ent-02-medium-support-ai-040",
+          "ent-02-medium-support-ai-039"
+        ],
+        "quote": "yes",
+        "proposer": true,
+        "first_unit_sequence": 40,
+        "id": "f20c31f5-4d78-4ff6-a226-31d24152665b",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "participant_label": "Jonas",
+        "decision": "provider",
+        "stance": "conditional",
+        "conditions": "SOC 2 Type II report must land",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-041"
+        ],
+        "quote": "I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too.",
+        "proposer": false,
+        "first_unit_sequence": 41,
+        "id": "35f33786-c960-45ca-9df4-46118a5e07b6",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "participant_label": "Amira",
+        "decision": "provider",
+        "stance": "conditional",
+        "conditions": "Conditional on the SOC 2 Type II report and the EU region",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-026",
+          "ent-02-medium-support-ai-028",
+          "ent-02-medium-support-ai-042"
+        ],
+        "quote": "Same as I said. Conditional on the report and the EU region.",
+        "proposer": false,
+        "first_unit_sequence": 42,
+        "id": "1ca79d70-47f4-4da8-b577-6f570c0de274",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "participant_label": "Luis",
+        "decision": "provider",
+        "stance": "conditional",
+        "conditions": "Total cost must land at or under $200k",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-043"
+        ],
+        "quote": "Yes to Relay at or under $200k.",
+        "proposer": false,
+        "first_unit_sequence": 43,
+        "id": "6ab1cd45-38fe-428a-a326-30b88f94413a",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      },
+      {
+        "participant_label": "Ben",
+        "decision": "provider",
+        "stance": "conditional",
+        "conditions": "DPA must be signed before go-live",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-045"
+        ],
+        "quote": "Legal is OK with Relay as long as the DPA is signed before go-live.",
+        "proposer": false,
+        "first_unit_sequence": 45,
+        "id": "a174ebfe-2591-4bb7-9308-274848d01887",
+        "option_id": "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Hollis at $240k per year exceeds the $200k all-in cap before implementation costs",
+        "author_label": "Luis",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-008",
+          "ent-02-medium-support-ai-009"
+        ],
+        "quote": "Hollis is over the cap before any implementation fee. I can't support Hollis.",
+        "sensitive": false,
+        "private": false,
+        "moot": true,
+        "id": "4602af60-19af-41ef-ba45-a0bf7ea54bb4",
+        "option_ids": [
+          "d6e71d6e-78c3-4552-84e0-23ef727abbaf"
+        ]
+      },
+      {
+        "text": "Build in-house cannot meet the Jan 15 go-live deadline given engineer availability not until Q3",
+        "author_label": "Keiko",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-011",
+          "ent-02-medium-support-ai-012"
+        ],
+        "quote": "That's a problem. We want this live before the January peak, ideally by Jan 15.",
+        "sensitive": false,
+        "private": false,
+        "moot": true,
+        "id": "13d01f5f-6985-4ef1-9c4a-c17f4cbe4ada",
+        "option_ids": [
+          "668adf69-9ef4-473b-b930-0200684ab768"
+        ]
+      },
+      {
+        "text": "Relay's trust page shows only SOC 2 Type I complete; Type II is in progress, not done \u2014 these are not the same",
+        "author_label": "Amira",
+        "resolution_status": "addressed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-015",
+          "ent-02-medium-support-ai-025"
+        ],
+        "quote": "It says Type I, with Type II in progress. Those are not the same thing.",
+        "sensitive": false,
+        "private": false,
+        "id": "aad2858c-1b59-48f5-b58c-6e4556cf78b4",
+        "option_ids": [
+          "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+        ]
+      },
+      {
+        "text": "EU customer contracts require ticket data to stay in the EU; it is unclear whether Relay has an EU data region",
+        "author_label": "Amira",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-017",
+          "ent-02-medium-support-ai-046"
+        ],
+        "quote": "Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA. Right?",
+        "sensitive": false,
+        "private": false,
+        "id": "128c7d75-a64f-4bf1-bc91-900002919eea",
+        "option_ids": [
+          "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+        ]
+      },
+      {
+        "text": "Relay's year-one cost of $215k ($180k license + $35k implementation) exceeds the $200k all-in budget cap",
+        "author_label": "Keiko",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-029",
+          "ent-02-medium-support-ai-030",
+          "ent-02-medium-support-ai-032"
+        ],
+        "quote": "That's over the cap, $215k against $200k, unless we negotiate.",
+        "sensitive": false,
+        "private": false,
+        "id": "b1db2a24-797f-429c-95fc-a7baf5ec5514",
+        "option_ids": [
+          "a9d3b826-3e98-42f4-8985-13ab07c2a613"
+        ]
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Relay's SOC 2 certification level: Jonas reported Type II but Amira found only Type I complete with Type II in progress",
+        "kind": "missing_info",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-014",
+          "ent-02-medium-support-ai-015",
+          "ent-02-medium-support-ai-025"
+        ],
+        "quote": "Update from Relay's rep: the SOC 2 Type II audit report will be available Dec 1. Type I is done.",
+        "sensitive": false,
+        "private": false,
+        "id": "ca0be845-2063-433a-adca-a1de9fcfebc0"
+      },
+      {
+        "text": "Whether Relay has an EU data region that satisfies EU customer contract requirements",
+        "kind": "open_question",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-017",
+          "ent-02-medium-support-ai-018",
+          "ent-02-medium-support-ai-046"
+        ],
+        "quote": "Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA. Right?",
+        "sensitive": false,
+        "private": false,
+        "id": "a8764ac7-809e-42ff-a916-52c8879079a1"
+      },
+      {
+        "text": "DPA with Relay must be signed before any ticket data is transferred",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-021",
+          "ent-02-medium-support-ai-045",
+          "ent-02-medium-support-ai-046"
+        ],
+        "quote": "Legal is OK with Relay as long as the DPA is signed before go-live.",
+        "sensitive": false,
+        "private": false,
+        "id": "e59ecd42-9df3-4a7f-9685-e84473e9339a"
+      },
+      {
+        "text": "Whether Relay's $180k quote includes implementation costs is unknown",
+        "kind": "open_question",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-023",
+          "ent-02-medium-support-ai-029"
+        ],
+        "quote": "Does the $180k include implementation?",
+        "sensitive": false,
+        "private": false,
+        "id": "cf365981-a51a-4e86-b897-33ccbd6994d5"
+      },
+      {
+        "text": "SOC 2 Type II audit report not available until Dec 1; data cannot go to Relay before that date",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-025",
+          "ent-02-medium-support-ai-026",
+          "ent-02-medium-support-ai-046"
+        ],
+        "quote": "Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA. Right?",
+        "sensitive": false,
+        "private": false,
+        "id": "cf70eaeb-61e6-4324-98c7-8ddfbbe73374"
+      },
+      {
+        "text": "SOC 2 Type II report must be reviewed for major findings before go-live can proceed",
+        "kind": "unresolved_dependency",
+        "resolution_status": "open",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-026",
+          "ent-02-medium-support-ai-028",
+          "ent-02-medium-support-ai-041"
+        ],
+        "quote": "I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too.",
+        "sensitive": false,
+        "private": false,
+        "id": "058cdcdd-2d33-4f92-b3be-987a192598e1"
+      }
+    ],
+    "separate_issues": [
+      {
+        "title": "Nov all-hands presenter",
+        "rationale": "Keiko explicitly flagged this as unrelated to the provider decision; the side discussion about who presents at the November all-hands was redirected offline.",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-035",
+          "ent-02-medium-support-ai-036",
+          "ent-02-medium-support-ai-037",
+          "ent-02-medium-support-ai-038"
+        ],
+        "id": "dad1b494-1892-4dfc-a3c5-64e8ac2e1300"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Ask Relay's rep to clarify SOC 2 Type II certification status",
+        "owner_kind": "named",
+        "owner_label": "Jonas",
+        "status": "completed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-016",
+          "ent-02-medium-support-ai-025",
+          "ent-02-medium-support-ai-049"
+        ],
+        "quote": "And I'll chase the audit report and ask for a draft earlier.",
+        "sensitive": false,
+        "private": false,
+        "id": "f709c69f-a956-4e72-b4ff-4c45abd3c9b3"
+      },
+      {
+        "text": "Ask Relay whether they have an EU data region",
+        "owner_kind": "named",
+        "owner_label": "Keiko",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-018",
+          "ent-02-medium-support-ai-048"
+        ],
+        "quote": "I'll confirm the EU region with their rep by Friday.",
+        "sensitive": false,
+        "private": false,
+        "due": "Friday",
+        "id": "fb7c2056-4de3-4e6d-a548-d18eb313bfa1"
+      },
+      {
+        "text": "Confirm EU data residency requirement in enterprise agreements clause 9",
+        "owner_kind": "named",
+        "owner_label": "Ben",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-019"
+        ],
+        "quote": "I can confirm that.",
+        "sensitive": false,
+        "private": false,
+        "id": "ed8aba0f-c369-44bd-b8d2-83dd4e2b3dd1"
+      },
+      {
+        "text": "Ask Relay whether the $180k platform license quote includes implementation costs",
+        "owner_kind": "named",
+        "owner_label": "Keiko",
+        "status": "completed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-024",
+          "ent-02-medium-support-ai-029"
+        ],
+        "quote": "I'll ask.",
+        "sensitive": false,
+        "private": false,
+        "id": "4c816246-1154-4b7d-8563-29b43ad72165"
+      },
+      {
+        "text": "Push procurement to waive or split the $35k implementation fee",
+        "owner_kind": "named",
+        "owner_label": "Luis",
+        "status": "committed",
+        "due": "Nov 5",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-032",
+          "ent-02-medium-support-ai-050"
+        ],
+        "quote": "I'll push procurement to waive or split the $35k. I can support Relay if we land at or under $200k.",
+        "sensitive": false,
+        "private": false,
+        "id": "ddaca262-c561-4070-9899-a3b8ef4aeb4b"
+      },
+      {
+        "text": "Send DPA redlines to Relay's counsel",
+        "owner_kind": "named",
+        "owner_label": "Ben",
+        "status": "committed",
+        "due": "Nov 6",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-045"
+        ],
+        "quote": "I'll send redlines to their counsel by Nov 6.",
+        "sensitive": false,
+        "private": false,
+        "id": "54a358e7-e078-438e-8e8c-6e8edc49faa9"
+      },
+      {
+        "text": "Chase the SOC 2 audit report and ask Relay for a draft earlier than Dec 1",
+        "owner_kind": "named",
+        "owner_label": "Jonas",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-049"
+        ],
+        "quote": "And I'll chase the audit report and ask for a draft earlier.",
+        "sensitive": false,
+        "private": false,
+        "id": "d42145e5-4a37-4aac-b680-24ece76025c6"
+      },
+      {
+        "text": "Take conditional Relay recommendation to Nov 12 checkpoint",
+        "owner_kind": "named",
+        "owner_label": "Rhea",
+        "status": "committed",
+        "due": "Nov 12",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-051"
+        ],
+        "quote": "I'll take this to Nov 12 as a conditional recommendation.",
+        "sensitive": false,
+        "private": false,
+        "id": "0ba38c72-bb2e-4b4b-9e15-2cfdf59c0655"
+      }
+    ],
+    "agreements": [
+      {
+        "subject": "$200k year-one all-in cap including implementation",
+        "participant_label": "Luis",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-006",
+          "ent-02-medium-support-ai-043"
+        ],
+        "quote": "Yes to Relay at or under $200k.",
+        "sensitive": false,
+        "private": false,
+        "id": "951257fb-0e31-487e-8bee-03ffc08748b2"
+      },
+      {
+        "subject": "SOC 2 Type II evidence required as a condition for go-live",
+        "participant_label": "Rhea",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-020"
+        ],
+        "quote": "So the conditions are SOC 2 Type II evidence and an EU data region.",
+        "sensitive": false,
+        "private": false,
+        "id": "8992a130-4b57-44f3-aa84-55feedd35ea6"
+      },
+      {
+        "subject": "EU data region required as a condition for go-live",
+        "participant_label": "Rhea",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-020"
+        ],
+        "quote": "So the conditions are SOC 2 Type II evidence and an EU data region.",
+        "sensitive": false,
+        "private": false,
+        "id": "fd18bbae-a4e4-4615-b716-8ea6b1ae767d"
+      },
+      {
+        "subject": "SOC 2 Type II evidence required as a condition for go-live",
+        "participant_label": "Jonas",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-041"
+        ],
+        "quote": "I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too.",
+        "sensitive": false,
+        "private": false,
+        "id": "3dec628c-520c-425c-bac6-f3a10e77e2ef"
+      },
+      {
+        "subject": "SOC 2 Type II evidence required as a condition for go-live",
+        "participant_label": "Amira",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-042"
+        ],
+        "quote": "Conditional on the report and the EU region.",
+        "sensitive": false,
+        "private": false,
+        "id": "febdd1dd-524a-46cb-80a5-522d1f717048"
+      },
+      {
+        "subject": "EU data region required as a condition for go-live",
+        "participant_label": "Amira",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-042"
+        ],
+        "quote": "Conditional on the report and the EU region.",
+        "sensitive": false,
+        "private": false,
+        "id": "e4d34b43-0833-49b1-81d1-3cc9bb5b9212"
+      },
+      {
+        "subject": "DPA with Relay must be signed before go-live",
+        "participant_label": "Ben",
+        "stance": "affirm",
+        "source_unit_ids": [
+          "ent-02-medium-support-ai-045"
+        ],
+        "quote": "Legal is OK with Relay as long as the DPA is signed before go-live.",
+        "sensitive": false,
+        "private": false,
+        "id": "527d218d-d1b8-4da4-b79a-3a9bd937d611"
+      }
+    ],
+    "superseded_positions": [],
+    "dropped_items": [],
+    "question": {
+      "text": "Should we build or buy the AI assistant for support tickets?"
+    },
+    "executive_summary": "Should we build or buy the AI assistant for support tickets?\nStatus: 3 options (2 dropped), 2 open objections, 4 blockers, 0 actions without an owner.\nAffirmers are listed individually; group consensus is not inferred.\n\nPROPOSED\n\u00b7 Relay \u2014 active proposal [Keiko, 10/20/26 2:12 PM; Rhea, 10/21/26 9:58 AM]\n\nAGREED \u2014 EXPLICIT AFFIRMERS\n\u00b7 Relay: Rhea and Keiko [Rhea, 10/20/26 2:41 PM; Rhea, 10/21/26 9:58 AM; Keiko, 10/20/26 2:12 PM; Keiko, 10/21/26 10:00 AM]\n\u00b7 $200k year-one all-in cap including implementation: Luis [Luis, 10/20/26 2:22 PM; Luis, 10/21/26 10:08 AM]\n\u00b7 SOC 2 Type II evidence required as a condition for go-live: Rhea, Jonas and Amira [Rhea, 10/20/26 3:00 PM; Jonas, 10/21/26 10:03 AM; Amira, 10/21/26 10:05 AM]\n\u00b7 EU data region required as a condition for go-live: Rhea and Amira [Rhea, 10/20/26 3:00 PM; Amira, 10/21/26 10:05 AM]\n\u00b7 DPA with Relay must be signed before go-live: Ben [Ben, 10/21/26 10:13 AM]\n\nOTHER POSITIONS\n\u00b7 Relay: Jonas \u2014 conditional support (SOC 2 Type II report must land) [Jonas, 10/21/26 10:03 AM]\n\u00b7 Relay: Amira \u2014 conditional support (Conditional on the SOC 2 Type II report and the EU region) [Amira, 10/21/26 9:01 AM; Amira, 10/21/26 9:06 AM; Amira, 10/21/26 10:05 AM]\n\u00b7 Relay: Luis \u2014 conditional support (Total cost must land at or under $200k) [Luis, 10/21/26 10:08 AM]\n\u00b7 Relay: Ben \u2014 conditional support (DPA must be signed before go-live) [Ben, 10/21/26 10:13 AM]\n\nCONSTRAINTS\n\u00b7 Recommendation must be ready for Nov 12 steering meeting (stated; not independently verified) [Rhea, 10/20/26 2:10 PM]\n\u00b7 $200k year-one all-in budget cap, including implementation (stated; not independently verified) [Rhea, 10/20/26 2:21 PM; Luis, 10/20/26 2:22 PM]\n\u00b7 DPA with Relay must be signed before go-live (stated; not independently verified) [Keiko, 10/20/26 2:36 PM; Ben, 10/21/26 10:13 AM]\n\u00b7 EU customer contracts require ticket data to stay in the EU (stated; not independently verified) [Amira, 10/20/26 2:52 PM; Ben, 10/20/26 2:57 PM]\n\u00b7 A signed DPA must be in place before any ticket data is sent to the vendor (stated; not independently verified) [Ben, 10/20/26 3:03 PM]\n\u00b7 No customer ticket data may go to the vendor before SOC 2 Type II audit report is received (expected Dec 1) (stated; not independently verified) [Amira, 10/21/26 9:01 AM]\n\u00b7 Go-live must be gated on receipt and review of the SOC 2 Type II audit report with no major findings (stated; not independently verified) [Amira, 10/21/26 9:01 AM; Amira, 10/21/26 9:06 AM]\n\u00b7 Relay's year-one total of $215k ($180k license + $35k implementation) exceeds the $200k all-in cap; budget feasibility is unresolved (stated; not independently verified) [Keiko, 10/21/26 9:10 AM; Luis, 10/21/26 9:12 AM; Luis, 10/21/26 9:17 AM; Rhea, 10/21/26 10:16 AM]\n\nELIMINATED\n\u00b7 Hollis [Rhea, 10/20/26 2:31 PM; Keiko, 10/21/26 9:24 AM]\n\u00b7 Build in-house [Keiko, 10/20/26 2:38 PM]\n\nOPEN\n\u00b7 Whether Relay has an EU data region that satisfies EU customer contract requirements [Amira, 10/20/26 2:52 PM; Keiko, 10/20/26 2:55 PM; Rhea, 10/21/26 10:16 AM]\n\u00b7 DPA with Relay must be signed before any ticket data is transferred [Ben, 10/20/26 3:03 PM; Ben, 10/21/26 10:13 AM; Rhea, 10/21/26 10:16 AM]\n\u00b7 SOC 2 Type II audit report not available until Dec 1; data cannot go to Relay before that date [Jonas, 10/21/26 8:58 AM; Amira, 10/21/26 9:01 AM; Rhea, 10/21/26 10:16 AM]\n\u00b7 SOC 2 Type II report must be reviewed for major findings before go-live can proceed [Amira, 10/21/26 9:01 AM; Amira, 10/21/26 9:06 AM; Jonas, 10/21/26 10:03 AM]\n\u00b7 EU customer contracts require ticket data to stay in the EU; it is unclear whether Relay has an EU data region [Amira, 10/20/26 2:52 PM; Rhea, 10/21/26 10:16 AM]\n\u00b7 Relay's year-one cost of $215k ($180k license + $35k implementation) exceeds the $200k all-in budget cap [Keiko, 10/21/26 9:10 AM; Luis, 10/21/26 9:12 AM; Luis, 10/21/26 9:17 AM]\n\nACTIONS \u2014 COMMITTED\n\u00b7 Keiko: Ask Relay whether they have an EU data region \u2014 promised Friday [Keiko, 10/20/26 2:55 PM; Keiko, 10/21/26 10:20 AM]\n\u00b7 Ben: Confirm EU data residency requirement in enterprise agreements clause 9 [Ben, 10/20/26 2:57 PM]\n\u00b7 Luis: Push procurement to waive or split the $35k implementation fee \u2014 promised Nov 5 [Luis, 10/21/26 9:17 AM; Luis, 10/21/26 10:24 AM]\n\u00b7 Ben: Send DPA redlines to Relay's counsel \u2014 promised Nov 6 [Ben, 10/21/26 10:13 AM]\n\u00b7 Jonas: Chase the SOC 2 audit report and ask Relay for a draft earlier than Dec 1 [Jonas, 10/21/26 10:22 AM]\n\u00b7 Rhea: Take conditional Relay recommendation to Nov 12 checkpoint \u2014 promised Nov 12 [Rhea, 10/21/26 10:27 AM]\n\nREPORTED / UNVERIFIED\n\u00b7 Keiko reports: Relay integrates with the existing ticketing tool out of the box (unverified) [Keiko, 10/20/26 2:12 PM]\n\u00b7 Jonas reports: A prototype could be built quickly on the LLM API the company already pays for (unverified) [Jonas, 10/20/26 2:14 PM]\n\u00b7 Keiko reports: Building in-house would give the team ownership of the roadmap (unverified) [Keiko, 10/20/26 2:17 PM]\n\u00b7 Rhea reports: Finance set a cap of $200k for year one, all in (unverified) [Rhea, 10/20/26 2:21 PM]\n\u00b7 Keiko reports: Hollis costs $240k platform license plus $50k implementation, totalling $290k in year one (unverified) [Keiko, 10/20/26 2:26 PM; Keiko, 10/21/26 9:24 AM]\n\u00b7 Luis reports: Hollis is over the $200k cap before any implementation fee (unverified) [Luis, 10/20/26 2:29 PM]\n\u00b7 Jonas reports: Building in-house requires two engineers for two quarters, and Jonas does not have two free until Q3 (unverified) [Jonas, 10/20/26 2:34 PM]\n\u00b7 Keiko reports: Building in-house cannot meet the Jan 15 go-live target (unverified) [Keiko, 10/20/26 2:38 PM]\n\u00b7 Jonas reports: Relay's trust page states SOC 2 Type I is done and Type II is in progress, not completed (unverified) [Jonas, 10/20/26 2:43 PM; Amira, 10/20/26 2:47 PM]\n\u00b7 Keiko reports: Keiko thinks Relay may have an EU region but is not certain (unverified) [Keiko, 10/20/26 2:55 PM]\n\u00b7 Ben reports: EU customer contracts require ticket data to stay in the EU (clause 9 of enterprise agreements) (unverified) [Ben, 10/20/26 2:57 PM]\n\u00b7 Jonas reports: Relay's SOC 2 Type II audit report will be available Dec 1; Type I is already done (unverified) [Jonas, 10/21/26 8:58 AM]\n\u00b7 Amira reports: A Dec 1 SOC 2 Type II report receipt (with no major findings) still allows go-live by Jan 15 (unverified) [Amira, 10/21/26 9:06 AM]\n\u00b7 Keiko reports: Relay's quote covers platform license only; implementation is a separate one-time fee of $35k, making year-one total $215k (unverified) [Keiko, 10/21/26 9:10 AM]\n\u00b7 Keiko reports: Relay's quote covers platform license only; implementation is a separate one-time fee of $35k (unverified) [Keiko, 10/21/26 9:10 AM]\n\u00b7 Luis reports: Relay's year-one total of $215k exceeds the $200k cap unless negotiated (unverified) [Luis, 10/21/26 9:12 AM]\n\nSEPARATE\n\u00b7 Nov all-hands presenter [Keiko, 10/21/26 9:39 AM; Rhea, 10/21/26 9:43 AM; Jonas, 10/21/26 9:45 AM; Rhea, 10/21/26 9:48 AM]\n\nPREFERENCE: Relay \u2014 supporters: Rhea, Keiko, Jonas, Amira, Luis and Ben; conditional: Jonas, Amira, Luis and Ben. No unanimous agreement inferred. [Rhea, 10/20/26 2:41 PM; Rhea, 10/21/26 9:58 AM; Keiko, 10/20/26 2:12 PM; Keiko, 10/21/26 10:00 AM; Jonas, 10/21/26 10:03 AM; Amira, 10/21/26 9:01 AM; Amira, 10/21/26 9:06 AM; Amira, 10/21/26 10:05 AM; Luis, 10/21/26 10:08 AM; Ben, 10/21/26 10:13 AM]"
+  },
+  "report": {
+    "verified": true,
+    "verification_scope": "source references and quote presence only",
+    "external_fact_check": false,
+    "rendering": "deterministic",
+    "omitted_items": 0,
+    "privacy_omitted_items": 0,
+    "issues": []
+  },
+  "units": [
+    {
+      "id": "ent-02-medium-support-ai-000",
+      "author_label": "Rhea",
+      "normalized_text": "Team, we need a direction on the AI assistant for support tickets. Build in-house or buy? I'd like a recommendation ready for the Nov 12 steering meeting."
+    },
+    {
+      "id": "ent-02-medium-support-ai-001",
+      "author_label": "Keiko",
+      "normalized_text": "I've looked at two vendors, Relay and Hollis. Relay is my pick. It plugs into our ticketing tool out of the box."
+    },
+    {
+      "id": "ent-02-medium-support-ai-002",
+      "author_label": "Jonas",
+      "normalized_text": "Third option is to build it ourselves on the LLM API we already pay for. I could prototype quickly."
+    },
+    {
+      "id": "ent-02-medium-support-ai-003",
+      "author_label": "Keiko",
+      "normalized_text": "Honestly I'd lean to build. We'd own the roadmap."
+    },
+    {
+      "id": "ent-02-medium-support-ai-004",
+      "author_label": "Luis",
+      "normalized_text": "Before we go further, what's the budget? I need year one numbers."
+    },
+    {
+      "id": "ent-02-medium-support-ai-005",
+      "author_label": "Rhea",
+      "normalized_text": "Finance gave us a cap of $200k for year one, all in."
+    },
+    {
+      "id": "ent-02-medium-support-ai-006",
+      "author_label": "Luis",
+      "normalized_text": "Confirming: $200k cap, all in, including implementation."
+    },
+    {
+      "id": "ent-02-medium-support-ai-007",
+      "author_label": "Keiko",
+      "normalized_text": "Pricing as I have it: Relay $180k a year, Hollis $240k a year."
+    },
+    {
+      "id": "ent-02-medium-support-ai-008",
+      "author_label": "Luis",
+      "normalized_text": "Then Hollis is over the cap before any implementation fee. I can't support Hollis."
+    },
+    {
+      "id": "ent-02-medium-support-ai-009",
+      "author_label": "Rhea",
+      "normalized_text": "OK, that takes Hollis off the table unless the price changes."
+    },
+    {
+      "id": "ent-02-medium-support-ai-010",
+      "author_label": "Jonas",
+      "normalized_text": "On build: I'd need two engineers for two quarters, and I don't have two free until Q3."
+    },
+    {
+      "id": "ent-02-medium-support-ai-011",
+      "author_label": "Keiko",
+      "normalized_text": "That's a problem. We want this live before the January peak, ideally by Jan 15."
+    },
+    {
+      "id": "ent-02-medium-support-ai-012",
+      "author_label": "Keiko",
+      "normalized_text": "Fine, I'm dropping build. It can't make Jan 15."
+    },
+    {
+      "id": "ent-02-medium-support-ai-013",
+      "author_label": "Rhea",
+      "normalized_text": "So it's Relay, assuming it checks out. Jonas, what do we know about their security?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-014",
+      "author_label": "Jonas",
+      "normalized_text": "They have SOC 2 Type II. It's on their website."
+    },
+    {
+      "id": "ent-02-medium-support-ai-015",
+      "author_label": "Amira",
+      "normalized_text": "I looked at their trust page this morning. It says Type I, with Type II in progress. Those are not the same thing."
+    },
+    {
+      "id": "ent-02-medium-support-ai-016",
+      "author_label": "Jonas",
+      "normalized_text": "Hm, maybe I misread it. I'll ask their rep."
+    },
+    {
+      "id": "ent-02-medium-support-ai-017",
+      "author_label": "Amira",
+      "normalized_text": "Bigger issue: our EU customer contracts require ticket data to stay in the EU. Does Relay have an EU region?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-018",
+      "author_label": "Keiko",
+      "normalized_text": "I think so but I'm not sure. I'll ask."
+    },
+    {
+      "id": "ent-02-medium-support-ai-019",
+      "author_label": "Ben",
+      "normalized_text": "On the EU point, yes, it's in the enterprise agreements, clause 9. I can confirm that."
+    },
+    {
+      "id": "ent-02-medium-support-ai-020",
+      "author_label": "Rhea",
+      "normalized_text": "So the conditions are SOC 2 Type II evidence and an EU data region. Anything else?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-021",
+      "author_label": "Ben",
+      "normalized_text": "From legal, we need a signed DPA before any ticket data goes to them."
+    },
+    {
+      "id": "ent-02-medium-support-ai-022",
+      "author_label": "Rhea",
+      "normalized_text": "Noted."
+    },
+    {
+      "id": "ent-02-medium-support-ai-023",
+      "author_label": "Luis",
+      "normalized_text": "Quick check on Relay's number. Does the $180k include implementation?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-024",
+      "author_label": "Keiko",
+      "normalized_text": "Don't know. Their quote says \"platform license\". I'll ask."
+    },
+    {
+      "id": "ent-02-medium-support-ai-025",
+      "author_label": "Jonas",
+      "normalized_text": "Update from Relay's rep: the SOC 2 Type II audit report will be available Dec 1. Type I is done."
+    },
+    {
+      "id": "ent-02-medium-support-ai-026",
+      "author_label": "Amira",
+      "normalized_text": "Then I can't approve data going to Relay before Dec 1. I could support picking Relay on Nov 12 if go-live is gated on that report."
+    },
+    {
+      "id": "ent-02-medium-support-ai-027",
+      "author_label": "Rhea",
+      "normalized_text": "Does that still work for Jan 15?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-028",
+      "author_label": "Amira",
+      "normalized_text": "Yes, if the report lands Dec 1 with no major findings."
+    },
+    {
+      "id": "ent-02-medium-support-ai-029",
+      "author_label": "Keiko",
+      "normalized_text": "Pricing update: implementation is a separate one-time $35k. So $215k in year one."
+    },
+    {
+      "id": "ent-02-medium-support-ai-030",
+      "author_label": "Luis",
+      "normalized_text": "That's over the cap, $215k against $200k, unless we negotiate."
+    },
+    {
+      "id": "ent-02-medium-support-ai-031",
+      "author_label": "Rhea",
+      "normalized_text": "Can we get the implementation fee down?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-032",
+      "author_label": "Luis",
+      "normalized_text": "I'll push procurement to waive or split the $35k. I can support Relay if we land at or under $200k. Otherwise it needs an exception."
+    },
+    {
+      "id": "ent-02-medium-support-ai-033",
+      "author_label": "Rhea",
+      "normalized_text": "Keiko, what would Hollis cost with implementation? Just for comparison."
+    },
+    {
+      "id": "ent-02-medium-support-ai-034",
+      "author_label": "Keiko",
+      "normalized_text": "$240k plus $50k implementation, so $290k. Way out."
+    },
+    {
+      "id": "ent-02-medium-support-ai-035",
+      "author_label": "Keiko",
+      "normalized_text": "Unrelated, who's presenting at the Nov all-hands? Nothing on the schedule yet."
+    },
+    {
+      "id": "ent-02-medium-support-ai-036",
+      "author_label": "Rhea",
+      "normalized_text": "No idea, not me."
+    },
+    {
+      "id": "ent-02-medium-support-ai-037",
+      "author_label": "Jonas",
+      "normalized_text": "Don't look at me."
+    },
+    {
+      "id": "ent-02-medium-support-ai-038",
+      "author_label": "Rhea",
+      "normalized_text": "Let's take that offline. Back to Relay."
+    },
+    {
+      "id": "ent-02-medium-support-ai-039",
+      "author_label": "Rhea",
+      "normalized_text": "My view: Relay. I support it. Keiko?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-040",
+      "author_label": "Keiko",
+      "normalized_text": "Yes, Relay. I support it."
+    },
+    {
+      "id": "ent-02-medium-support-ai-041",
+      "author_label": "Jonas",
+      "normalized_text": "I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too."
+    },
+    {
+      "id": "ent-02-medium-support-ai-042",
+      "author_label": "Amira",
+      "normalized_text": "Same as I said. Conditional on the report and the EU region."
+    },
+    {
+      "id": "ent-02-medium-support-ai-043",
+      "author_label": "Luis",
+      "normalized_text": "Yes to Relay at or under $200k."
+    },
+    {
+      "id": "ent-02-medium-support-ai-044",
+      "author_label": "Rhea",
+      "normalized_text": "Ben?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-045",
+      "author_label": "Ben",
+      "normalized_text": "Legal is OK with Relay as long as the DPA is signed before go-live. I'll send redlines to their counsel by Nov 6."
+    },
+    {
+      "id": "ent-02-medium-support-ai-046",
+      "author_label": "Rhea",
+      "normalized_text": "Thanks. Where we are: the preference is Relay. Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA. Right?"
+    },
+    {
+      "id": "ent-02-medium-support-ai-047",
+      "author_label": "Amira",
+      "normalized_text": "Right."
+    },
+    {
+      "id": "ent-02-medium-support-ai-048",
+      "author_label": "Keiko",
+      "normalized_text": "Yes. I'll confirm the EU region with their rep by Friday."
+    },
+    {
+      "id": "ent-02-medium-support-ai-049",
+      "author_label": "Jonas",
+      "normalized_text": "And I'll chase the audit report and ask for a draft earlier."
+    },
+    {
+      "id": "ent-02-medium-support-ai-050",
+      "author_label": "Luis",
+      "normalized_text": "I'll talk to procurement about the fee by Nov 5."
+    },
+    {
+      "id": "ent-02-medium-support-ai-051",
+      "author_label": "Rhea",
+      "normalized_text": "OK. I'll take this to Nov 12 as a conditional recommendation. Thanks all."
+    },
+    {
+      "id": "ent-02-medium-support-ai-052",
+      "author_label": "Ben",
+      "normalized_text": "ok"
+    }
+  ]
+}

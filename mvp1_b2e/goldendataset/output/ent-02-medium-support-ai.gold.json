@@ -1,0 +1,652 @@
+{
+ "id": "ent-02-medium-support-ai",
+ "level": 2,
+ "scenario_notes": "Six people. Three options, two eliminated for different reasons (budget; capacity). A disputed factual claim corrected by evidence, a constraint raised mid-chat, a price that changes, conditional support from four people, a quiet member (4 messages) whose support is conditional, an off-topic question with no owner. No final decision: a conditional recommendation to a Nov 12 meeting.",
+ "decision_question": "Should we build or buy the AI assistant for support tickets?",
+ "outcome": "No decision yet. Preference is Relay, with explicit support from Rhea and Keiko and conditional support from Jonas, Amira, Luis and Ben. Rhea takes a conditional recommendation to the Nov 12 steering meeting.",
+ "pact_state": {
+  "question": {
+   "text": "Should we build or buy the AI assistant for support tickets?",
+   "msgs": [
+    "m001"
+   ]
+  },
+  "options": [
+   {
+    "title": "Relay (buy)",
+    "decision": "approach",
+    "status": "active",
+    "proposed_by": "Keiko",
+    "msgs": [
+     "m002",
+     "m040",
+     "m041"
+    ]
+   },
+   {
+    "title": "Hollis (buy)",
+    "decision": "approach",
+    "status": "dropped",
+    "proposed_by": "Keiko",
+    "msgs": [
+     "m002",
+     "m009",
+     "m010",
+     "m035"
+    ],
+    "note": "Dropped on cost: $240k plus $50k implementation."
+   },
+   {
+    "title": "Build in-house",
+    "decision": "approach",
+    "status": "dropped",
+    "proposed_by": "Jonas",
+    "msgs": [
+     "m003",
+     "m011",
+     "m013"
+    ],
+    "note": "Dropped by Keiko after Jonas said engineering capacity is not free until Q3."
+   }
+  ],
+  "criteria": [
+   {
+    "text": "Cost within the year-one cap",
+    "raised_by": [
+     "Luis",
+     "Rhea"
+    ],
+    "msgs": [
+     "m005",
+     "m006"
+    ]
+   },
+   {
+    "text": "Security evidence (SOC 2)",
+    "raised_by": [
+     "Rhea",
+     "Amira"
+    ],
+    "msgs": [
+     "m014",
+     "m016"
+    ]
+   },
+   {
+    "text": "EU data residency",
+    "raised_by": [
+     "Amira"
+    ],
+    "msgs": [
+     "m018"
+    ]
+   },
+   {
+    "text": "Time to live before the January peak",
+    "raised_by": [
+     "Keiko"
+    ],
+    "msgs": [
+     "m012"
+    ]
+   },
+   {
+    "text": "Out-of-the-box integration with the ticketing tool",
+    "raised_by": [
+     "Keiko"
+    ],
+    "msgs": [
+     "m002"
+    ]
+   },
+   {
+    "text": "Owning the roadmap",
+    "raised_by": [
+     "Keiko"
+    ],
+    "msgs": [
+     "m004"
+    ]
+   }
+  ],
+  "constraints": [
+   {
+    "text": "Year-one cap $200k, all in, including implementation",
+    "status": "stated",
+    "msgs": [
+     "m006",
+     "m007"
+    ]
+   },
+   {
+    "text": "Live by Jan 15 if possible",
+    "status": "stated",
+    "msgs": [
+     "m012"
+    ]
+   },
+   {
+    "text": "EU customer ticket data must stay in the EU (enterprise agreements, clause 9)",
+    "status": "confirmed by Ben",
+    "msgs": [
+     "m018",
+     "m020"
+    ]
+   },
+   {
+    "text": "Signed DPA before any ticket data goes to the vendor",
+    "status": "stated",
+    "msgs": [
+     "m022",
+     "m046"
+    ]
+   },
+   {
+    "text": "No customer data to Relay before the SOC 2 Type II report; go-live gated on it",
+    "status": "stated",
+    "msgs": [
+     "m027"
+    ]
+   },
+   {
+    "text": "Recommendation due at the Nov 12 steering meeting",
+    "status": "stated",
+    "msgs": [
+     "m001",
+     "m052"
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "text": "Relay has SOC 2 Type II",
+    "by": "Jonas",
+    "kind": "factual",
+    "status": "corrected: Type I done, Type II report available Dec 1",
+    "msgs": [
+     "m015",
+     "m016",
+     "m017",
+     "m026"
+    ],
+    "quote": "They have SOC 2 Type II"
+   },
+   {
+    "text": "Relay $180k a year, Hollis $240k a year",
+    "by": "Keiko",
+    "kind": "factual",
+    "status": "updated: Relay plus $35k implementation is $215k; Hollis plus $50k is $290k",
+    "msgs": [
+     "m008",
+     "m030",
+     "m035"
+    ],
+    "quote": "Relay $180k a year, Hollis $240k a year"
+   },
+   {
+    "text": "Relay has an EU region",
+    "by": "Keiko",
+    "kind": "hedged, unverified",
+    "status": "open",
+    "msgs": [
+     "m019"
+    ],
+    "quote": "I think so but I'm not sure"
+   },
+   {
+    "text": "Relay plugs into the ticketing tool out of the box",
+    "by": "Keiko",
+    "kind": "factual, unverified",
+    "status": "unchallenged",
+    "msgs": [
+     "m002"
+    ],
+    "quote": "It plugs into our ticketing tool out of the box"
+   },
+   {
+    "text": "Build needs two engineers for two quarters; none free until Q3",
+    "by": "Jonas",
+    "kind": "factual, first-hand",
+    "status": "unchallenged",
+    "msgs": [
+     "m011"
+    ],
+    "quote": "two engineers for two quarters"
+   }
+  ],
+  "positions": [
+   {
+    "participant": "Rhea",
+    "option": "Relay (buy)",
+    "stance": "support",
+    "msgs": [
+     "m040"
+    ],
+    "quote": "Relay. I support it"
+   },
+   {
+    "participant": "Keiko",
+    "option": "Relay (buy)",
+    "stance": "support",
+    "msgs": [
+     "m041"
+    ],
+    "quote": "Yes, Relay. I support it"
+   },
+   {
+    "participant": "Jonas",
+    "option": "Relay (buy)",
+    "stance": "conditional",
+    "msgs": [
+     "m042"
+    ],
+    "quote": "I'm fine with Relay as long as the SOC 2 Type II report lands",
+    "condition": "SOC 2 Type II report"
+   },
+   {
+    "participant": "Amira",
+    "option": "Relay (buy)",
+    "stance": "conditional",
+    "msgs": [
+     "m043"
+    ],
+    "quote": "Conditional on the report and the EU region",
+    "condition": "Type II report and EU region"
+   },
+   {
+    "participant": "Luis",
+    "option": "Relay (buy)",
+    "stance": "conditional",
+    "msgs": [
+     "m044"
+    ],
+    "quote": "Yes to Relay at or under $200k",
+    "condition": "total at or under $200k"
+   },
+   {
+    "participant": "Ben",
+    "option": "Relay (buy)",
+    "stance": "conditional",
+    "msgs": [
+     "m046"
+    ],
+    "quote": "Legal is OK with Relay as long as the DPA is signed before go-live",
+    "condition": "DPA signed before go-live"
+   },
+   {
+    "participant": "Luis",
+    "option": "Hollis (buy)",
+    "stance": "oppose",
+    "msgs": [
+     "m009"
+    ],
+    "quote": "I can't support Hollis"
+   },
+   {
+    "participant": "Keiko",
+    "option": "Build in-house",
+    "stance": "support",
+    "msgs": [
+     "m004"
+    ],
+    "quote": "I'd lean to build"
+   },
+   {
+    "participant": "Keiko",
+    "option": "Build in-house",
+    "stance": "withdrawn",
+    "msgs": [
+     "m013"
+    ],
+    "quote": "I'm dropping build"
+   }
+  ],
+  "objections": [
+   {
+    "participant": "Luis",
+    "targets": [
+     "Hollis (buy)"
+    ],
+    "text": "Over the cap before implementation",
+    "status": "resolved",
+    "moot": true,
+    "msgs": [
+     "m009",
+     "m010"
+    ],
+    "quote": "Hollis is over the cap before any implementation fee"
+   }
+  ],
+  "blockers": [
+   {
+    "text": "SOC 2 Type II report not available until Dec 1 (Type I only today); Amira and Jonas condition support and go-live on it",
+    "status": "open",
+    "owner": "Jonas",
+    "due": "Dec 1 availability",
+    "msgs": [
+     "m026",
+     "m027",
+     "m042",
+     "m050"
+    ],
+    "quote": "the SOC 2 Type II audit report will be available Dec 1"
+   },
+   {
+    "text": "EU data region not yet confirmed by Relay",
+    "status": "open",
+    "owner": "Keiko",
+    "due": "Friday",
+    "msgs": [
+     "m018",
+     "m019",
+     "m043",
+     "m049"
+    ],
+    "quote": "I'll confirm the EU region with their rep by Friday"
+   },
+   {
+    "text": "Year-one cost $215k ($180k plus $35k implementation) exceeds the $200k cap; Luis supports Relay only at or under the cap",
+    "status": "open",
+    "owner": "Luis",
+    "due": "Nov 5",
+    "msgs": [
+     "m030",
+     "m031",
+     "m033",
+     "m044",
+     "m051"
+    ],
+    "quote": "I'll talk to procurement about the fee by Nov 5"
+   },
+   {
+    "text": "DPA not yet signed; required before go-live",
+    "status": "open",
+    "owner": "Ben",
+    "due": "Nov 6",
+    "msgs": [
+     "m022",
+     "m046"
+    ],
+    "quote": "I'll send redlines to their counsel by Nov 6"
+   }
+  ],
+  "separate_issues": [
+   {
+    "text": "Who is presenting at the Nov all-hands? Nobody knows; taken offline.",
+    "status": "open, no owner",
+    "msgs": [
+     "m036",
+     "m037",
+     "m038",
+     "m039"
+    ]
+   }
+  ],
+  "actions": [
+   {
+    "text": "Confirm the EU region with Relay's rep",
+    "owner": "Keiko",
+    "owner_kind": "named",
+    "due": "Friday",
+    "msgs": [
+     "m049"
+    ],
+    "quote": "I'll confirm the EU region with their rep by Friday"
+   },
+   {
+    "text": "Chase the audit report and ask for a draft earlier",
+    "owner": "Jonas",
+    "owner_kind": "named",
+    "due": null,
+    "msgs": [
+     "m050"
+    ],
+    "quote": "I'll chase the audit report"
+   },
+   {
+    "text": "Talk to procurement about the implementation fee",
+    "owner": "Luis",
+    "owner_kind": "named",
+    "due": "Nov 5",
+    "msgs": [
+     "m033",
+     "m051"
+    ],
+    "quote": "I'll talk to procurement about the fee by Nov 5"
+   },
+   {
+    "text": "Send DPA redlines to Relay's counsel",
+    "owner": "Ben",
+    "owner_kind": "named",
+    "due": "Nov 6",
+    "msgs": [
+     "m046"
+    ],
+    "quote": "I'll send redlines to their counsel by Nov 6"
+   },
+   {
+    "text": "Take a conditional recommendation to the Nov 12 steering meeting",
+    "owner": "Rhea",
+    "owner_kind": "named",
+    "due": "Nov 12",
+    "msgs": [
+     "m052"
+    ],
+    "quote": "I'll take this to Nov 12 as a conditional recommendation"
+   }
+  ],
+  "emerging_preference": {
+   "option": "Relay (buy)",
+   "summary": "Relay has explicit support from Rhea and Keiko (conditional: Jonas, Amira, Luis, Ben).",
+   "supporters": [
+    "Rhea",
+    "Keiko"
+   ],
+   "conditional": [
+    "Jonas",
+    "Amira",
+    "Luis",
+    "Ben"
+   ],
+   "refs": [
+    "m040",
+    "m041",
+    "m042",
+    "m043",
+    "m044",
+    "m046"
+   ]
+  }
+ },
+ "executive_summary": {
+  "title": "Should we build or buy the AI assistant for support tickets?",
+  "status_line": "3 options (2 dropped); Relay (buy): explicit support from Rhea, Keiko (2); conditional: Jonas, Amira, Luis, Ben; 0 open objections; 4 open blockers.",
+  "counts": {
+   "options": 3,
+   "dropped": 2,
+   "open_objections": 0,
+   "open_blockers": 4,
+   "unowned_actions": 0
+  },
+  "needs_attention": [
+   {
+    "text": "Relay's SOC 2 Type II report is not available until Dec 1; today they have Type I only. Amira's support and go-live depend on it. Jonas's earlier statement that Relay had Type II was corrected.",
+    "refs": [
+     "m015",
+     "m016",
+     "m026",
+     "m027"
+    ]
+   },
+   {
+    "text": "Year-one cost is $215k ($180k license plus $35k implementation) against the $200k cap. Luis supports Relay only at or under the cap; he will ask procurement about the fee by Nov 5.",
+    "refs": [
+     "m030",
+     "m031",
+     "m033",
+     "m044",
+     "m051"
+    ]
+   },
+   {
+    "text": "Relay has not yet confirmed an EU data region, which the EU customer contracts require. Keiko will confirm by Friday.",
+    "refs": [
+     "m018",
+     "m019",
+     "m020",
+     "m049"
+    ]
+   },
+   {
+    "text": "A signed DPA is required before go-live. Ben will send redlines to Relay's counsel by Nov 6.",
+    "refs": [
+     "m022",
+     "m046"
+    ]
+   }
+  ],
+  "proposed": [
+   {
+    "text": "Relay: explicit support from Rhea and Keiko; conditional: Jonas (Type II report), Amira (report and EU region), Luis (at or under $200k), Ben (DPA before go-live).",
+    "refs": [
+     "m040",
+     "m041",
+     "m042",
+     "m043",
+     "m044",
+     "m046"
+    ]
+   },
+   {
+    "text": "Hollis: dropped. $240k plus $50k implementation is over the cap (Luis opposed).",
+    "refs": [
+     "m009",
+     "m010",
+     "m035"
+    ]
+   },
+   {
+    "text": "Build in-house: dropped by Keiko. Needs two engineers for two quarters, none free until Q3, so it misses Jan 15.",
+    "refs": [
+     "m011",
+     "m012",
+     "m013"
+    ]
+   }
+  ],
+  "committed": [
+   {
+    "text": "Keiko: confirm the EU region with Relay's rep by Friday.",
+    "refs": [
+     "m049"
+    ]
+   },
+   {
+    "text": "Jonas: chase the audit report and ask for an earlier draft (no date given).",
+    "refs": [
+     "m050"
+    ]
+   },
+   {
+    "text": "Luis: talk to procurement about the implementation fee by Nov 5.",
+    "refs": [
+     "m051"
+    ]
+   },
+   {
+    "text": "Ben: send DPA redlines to Relay's counsel by Nov 6.",
+    "refs": [
+     "m046"
+    ]
+   },
+   {
+    "text": "Rhea: take a conditional recommendation to the Nov 12 steering meeting.",
+    "refs": [
+     "m052"
+    ]
+   }
+  ],
+  "preference": {
+   "text": "Relay has explicit support from Rhea and Keiko (conditional: Jonas, Amira, Luis, Ben). Not decided; Rhea will take a conditional recommendation to Nov 12.",
+   "refs": [
+    "m040",
+    "m041",
+    "m042",
+    "m043",
+    "m044",
+    "m046",
+    "m052"
+   ]
+  }
+ },
+ "traps": [
+  {
+   "msgs": [
+    "m015",
+    "m016",
+    "m017",
+    "m026"
+   ],
+   "note": "Jonas's 'SOC 2 Type II' claim is contradicted by Amira's check and the rep's update. The corrected fact is Type I done, Type II report Dec 1. The card must not say Relay is Type II certified."
+  },
+  {
+   "msgs": [
+    "m031",
+    "m033",
+    "m044"
+   ],
+   "note": "Luis's cost concern is a condition on his support, not an objection. Listing it as an open objection is wrong."
+  },
+  {
+   "msgs": [
+    "m027"
+   ],
+   "note": "Amira does not oppose Relay. She supports picking it on Nov 12 with go-live gated on the report. Conditional."
+  },
+  {
+   "msgs": [
+    "m020",
+    "m022",
+    "m046",
+    "m053"
+   ],
+   "note": "Ben has four messages. His support is conditional on the DPA. The final 'ok' (m053) is a backchannel, not additional support."
+  },
+  {
+   "msgs": [
+    "m030",
+    "m035"
+   ],
+   "note": "Prices changed. Relay is $215k with implementation, Hollis $290k. The earlier $180k and $240k are superseded."
+  },
+  {
+   "msgs": [
+    "m036",
+    "m037",
+    "m038",
+    "m039"
+   ],
+   "note": "All-hands presenter is off-topic and unowned. It belongs under separate issues, not blockers or actions."
+  },
+  {
+   "msgs": [
+    "m004",
+    "m013"
+   ],
+   "note": "Keiko leaned to build, then dropped it. A later card must not show her supporting build."
+  }
+ ],
+ "card_must_include": [
+  "Relay preferred: explicit support from Rhea and Keiko; four conditional supporters named with their conditions",
+  "Four open blockers with owners and dates: Type II report Dec 1, EU region, $215k vs $200k, DPA",
+  "Hollis and build dropped with reasons",
+  "Conditional recommendation to the Nov 12 steering meeting"
+ ],
+ "card_must_not_include": [
+  "Relay has SOC 2 Type II",
+  "Relay is agreed or approved",
+  "Luis's cost concern as an open objection",
+  "Ben or Amira as unconditional supporters",
+  "Keiko supporting build"
+ ]
+}

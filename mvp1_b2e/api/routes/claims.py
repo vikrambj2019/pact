@@ -35,11 +35,12 @@ async def request_claim_review(
         raise HTTPException(404, f"Claim '{claim_id}' not found in current brief")
 
     # Idempotency: reuse a running/pending job for the same claim+revision
-    ikey = f"claim_review:{workspace_id}:{claim_id}:{revision.id}"
     existing = await db.execute(
         select(Job).where(
-            Job.idempotency_key == ikey,
+            Job.workspace_id == workspace_id,
+            Job.type == JobType.claim_review,
             Job.status.in_([JobStatus.pending, JobStatus.running]),
+            Job.input_payload["claim_id"].astext == claim_id,
         )
     )
     if ex := existing.scalar_one_or_none():
@@ -59,7 +60,7 @@ async def request_claim_review(
             "claim_id": claim_id,
             "base_revision_id": str(revision.id),
         },
-        idempotency_key=ikey,
+        idempotency_key=f"claim_review:{workspace_id}:{claim_id}:{uuid.uuid4()}",
     )
     db.add(job)
     await db.commit()

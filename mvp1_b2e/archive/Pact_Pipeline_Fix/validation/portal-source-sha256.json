@@ -1,0 +1,9 @@
+{
+  "fixed/chunker.py": "4a0d9c45cdbcf0bed28b584e6ab2657c4f0f01cff933fa2222c6f32f3013c055",
+  "fixed/dedup.py": "2895effd8a5c53aea742d1fbed0d9c9ddf79c59023ffe2c9e2ddabc387a8c060",
+  "fixed/extractor.py": "010c98a12b73486e7cadf9b935b4a9431f5a7428cc812f6248d97ea33940a70e",
+  "fixed/llm.py": "ed475e54178caf5d886da93dbb4ac560015e6bfd651cbca576000dcdc679316a",
+  "fixed/merger.py": "c7a71b5029aa36ba0591be59d0f70d76873579e43ae6f5f81b22caa0263ca464",
+  "fixed/parser.py": "d18357b91abd8b2a14ad3a3e5b106df0082e6d2afd5b18f850176b1f499a65df",
+  "fixed/synthesizer.py": "a851e6ee72870031d607f0e5ed7d529970c5634b7557eb5566bc21fce703fb1c"
+}

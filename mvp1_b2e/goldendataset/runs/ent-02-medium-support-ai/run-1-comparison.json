@@ -1,0 +1,415 @@
+{
+  "dataset": "ent-02-medium-support-ai",
+  "run": 1,
+  "model": "claude-sonnet-4-6",
+  "level": 2,
+  "score": {
+    "passed": 27,
+    "partial": 2,
+    "failed": 2,
+    "missing": 0,
+    "total": 31,
+    "score_pct": 90.3,
+    "by_section": {
+      "options": {
+        "pass": 3,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_status::Relay (buy)",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Relay' with status 'active' for the 'approach' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output includes an option titled 'Relay' with status 'active' under the 'provider' decision, which is semantically equivalent."
+          },
+          {
+            "claim_id": "option_status::Hollis (buy)",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Hollis' with status 'dropped' for the 'approach' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output includes an option titled 'Hollis' with status 'dropped' under the 'provider' decision."
+          },
+          {
+            "claim_id": "option_status::Build in-house",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Build in-house' with status 'dropped' for the 'approach' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline output includes an option titled 'Build in-house' with status 'dropped' under the 'provider' decision."
+          }
+        ]
+      },
+      "positions": {
+        "pass": 11,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_proposer::Relay (buy)",
+            "claim": "'Keiko' is recorded as the proposer of option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Keiko is recorded as the proposer of the 'Relay' option with proposer=true in the positions array."
+          },
+          {
+            "claim_id": "option_proposer::Hollis (buy)",
+            "claim": "'Keiko' is recorded as the proposer of option 'Hollis (buy)'.",
+            "verdict": "pass",
+            "reason": "Keiko is recorded as the proposer of the 'Hollis' option in the options array."
+          },
+          {
+            "claim_id": "option_proposer::Build in-house",
+            "claim": "'Jonas' is recorded as the proposer of option 'Build in-house'.",
+            "verdict": "pass",
+            "reason": "Jonas is recorded as the proposer of the 'Build in-house' option in the options array."
+          },
+          {
+            "claim_id": "position::Rhea::Relay (buy)",
+            "claim": "'Rhea' has stance 'support' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Rhea has stance 'support' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Keiko::Relay (buy)",
+            "claim": "'Keiko' has stance 'support' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Keiko has stance 'support' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Jonas::Relay (buy)",
+            "claim": "'Jonas' has stance 'conditional' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Jonas has stance 'conditional' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Amira::Relay (buy)",
+            "claim": "'Amira' has stance 'conditional' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Amira has stance 'conditional' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Luis::Relay (buy)",
+            "claim": "'Luis' has stance 'conditional' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Luis has stance 'conditional' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Ben::Relay (buy)",
+            "claim": "'Ben' has stance 'conditional' on option 'Relay (buy)'.",
+            "verdict": "pass",
+            "reason": "Ben has stance 'conditional' on option 'Relay' in the positions array."
+          },
+          {
+            "claim_id": "position::Luis::Hollis (buy)",
+            "claim": "'Luis' has stance 'oppose' on option 'Hollis (buy)'.",
+            "verdict": "pass",
+            "reason": "Luis has stance 'oppose' on option 'Hollis' in the positions array."
+          },
+          {
+            "claim_id": "position::Keiko::Build in-house",
+            "claim": "'Keiko' has stance 'withdrawn' on option 'Build in-house'.",
+            "verdict": "pass",
+            "reason": "Keiko has stance 'withdrawn' on option 'Build in-house' in the positions array."
+          }
+        ]
+      },
+      "actions": {
+        "pass": 5,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "action::Keiko::Confirm the EU region with Relay's rep",
+            "claim": "There is an action 'Confirm the EU region with Relay's rep' owned by 'Keiko', due Friday.",
+            "verdict": "pass",
+            "reason": "There is an action 'Ask Relay whether they have an EU data region' owned by Keiko, due Friday, which is semantically equivalent."
+          },
+          {
+            "claim_id": "action::Jonas::Chase the audit report and ask for a dra",
+            "claim": "There is an action 'Chase the audit report and ask for a draft earlier' owned by 'Jonas'.",
+            "verdict": "pass",
+            "reason": "There is an action 'Chase the SOC 2 audit report and ask Relay for a draft earlier than Dec 1' owned by Jonas, matching the claim."
+          },
+          {
+            "claim_id": "action::Luis::Talk to procurement about the implementa",
+            "claim": "There is an action 'Talk to procurement about the implementation fee' owned by 'Luis', due Nov 5.",
+            "verdict": "pass",
+            "reason": "There is an action 'Push procurement to waive or split the $35k implementation fee' owned by Luis, due Nov 5, which is semantically equivalent."
+          },
+          {
+            "claim_id": "action::Ben::Send DPA redlines to Relay's counsel",
+            "claim": "There is an action 'Send DPA redlines to Relay's counsel' owned by 'Ben', due Nov 6.",
+            "verdict": "pass",
+            "reason": "There is an action 'Send DPA redlines to Relay's counsel' owned by Ben, due Nov 6, exactly matching the claim."
+          },
+          {
+            "claim_id": "action::Rhea::Take a conditional recommendation to the",
+            "claim": "There is an action 'Take a conditional recommendation to the Nov 12 steering meeting' owned by 'Rhea', due Nov 12.",
+            "verdict": "pass",
+            "reason": "There is an action 'Take conditional Relay recommendation to Nov 12 checkpoint' owned by Rhea, due Nov 12, which is semantically equivalent."
+          }
+        ]
+      },
+      "blockers": {
+        "pass": 2,
+        "fail": 1,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "blocker::SOC 2 Type II report not available until Dec 1 (Ty",
+            "claim": "There is a blocker 'SOC 2 Type II report not available until Dec 1 (Type I only today); Amira and Jonas condition support and go-live on it' with resolution status 'open'.",
+            "verdict": "partial",
+            "reason": "The pipeline captures the SOC 2 Type II report unavailability as two separate open blockers, covering the substance, but splits them rather than combining them into a single blocker that explicitly names Amira and Jonas as conditioning support and go-live on it."
+          },
+          {
+            "claim_id": "blocker::EU data region not yet confirmed by Relay",
+            "claim": "There is a blocker 'EU data region not yet confirmed by Relay' with resolution status 'open'.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a blocker 'Whether Relay has an EU data region that satisfies EU customer contract requirements' with resolution_status 'open'."
+          },
+          {
+            "claim_id": "blocker::Year-one cost $215k ($180k plus $35k implementatio",
+            "claim": "There is a blocker 'Year-one cost $215k ($180k plus $35k implementation) exceeds the $200k cap; Luis supports Relay only at or under the cap' with resolution status 'open'.",
+            "verdict": "fail",
+            "reason": "The pipeline captures the year-one cost issue as an open objection and an open constraint, but not as a distinct blocker entry with that substance and resolution status 'open'."
+          },
+          {
+            "claim_id": "blocker::DPA not yet signed; required before go-live",
+            "claim": "There is a blocker 'DPA not yet signed; required before go-live' with resolution status 'open'.",
+            "verdict": "pass",
+            "reason": "The pipeline has a blocker 'DPA with Relay must be signed before any ticket data is transferred' with resolution_status 'open', which matches the claim."
+          }
+        ]
+      },
+      "objections": {
+        "pass": 1,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "objection::Over the cap before implementation",
+            "claim": "There is an objection 'Over the cap before implementation' with resolution status 'resolved'.",
+            "verdict": "pass",
+            "reason": "The pipeline includes an objection about Hollis exceeding the $200k cap before implementation costs, with resolution_status 'resolved'."
+          }
+        ]
+      },
+      "separate_issues": {
+        "pass": 1,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "separate::{'text': 'Who is presenting at the Nov all-hands? ",
+            "claim": "'{'text': 'Who is presenting at the Nov all-hands? Nobody knows; taken offline.', 'status': 'open, no owner', 'msgs': ['m036', 'm037', 'm038', 'm039']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline lists 'Nov all-hands presenter' as a separate issue, noting it was redirected offline, which matches the claim."
+          }
+        ]
+      },
+      "constraints": {
+        "pass": 4,
+        "fail": 1,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "constraint::Year-one cap $200k, all in, including implementati",
+            "claim": "The constraint 'Year-one cap $200k, all in, including implementation' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline has a constraint '$200k year-one all-in budget cap, including implementation' marked as mandatory."
+          },
+          {
+            "claim_id": "constraint::Live by Jan 15 if possible",
+            "claim": "The constraint 'Live by Jan 15 if possible' is present in the pipeline output.",
+            "verdict": "fail",
+            "reason": "The pipeline does not include a constraint about going live by Jan 15; the Jan 15 deadline is only mentioned in the context of the dropped 'build in-house' option."
+          },
+          {
+            "claim_id": "constraint::EU customer ticket data must stay in the EU (enter",
+            "claim": "The constraint 'EU customer ticket data must stay in the EU (enterprise agreements, clause 9)' is present in the pipeline output.",
+            "verdict": "partial",
+            "reason": "The pipeline captures the EU data residency constraint but does not specifically mention 'enterprise agreements, clause 9' as the source."
+          },
+          {
+            "claim_id": "constraint::Signed DPA before any ticket data goes to the vend",
+            "claim": "The constraint 'Signed DPA before any ticket data goes to the vendor' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint 'A signed DPA must be in place before any ticket data is sent to the vendor'."
+          },
+          {
+            "claim_id": "constraint::No customer data to Relay before the SOC 2 Type II",
+            "claim": "The constraint 'No customer data to Relay before the SOC 2 Type II report; go-live gated on it' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline has two constraints covering this: no customer ticket data before Dec 1 SOC 2 Type II report, and go-live gated on receipt and review of the SOC 2 Type II audit report."
+          },
+          {
+            "claim_id": "constraint::Recommendation due at the Nov 12 steering meeting",
+            "claim": "The constraint 'Recommendation due at the Nov 12 steering meeting' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes a mandatory constraint 'Recommendation must be ready for Nov 12 steering meeting'."
+          }
+        ]
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "claim_id": "option_status::Relay (buy)",
+      "verdict": "pass",
+      "reason": "The pipeline output includes an option titled 'Relay' with status 'active' under the 'provider' decision, which is semantically equivalent."
+    },
+    {
+      "claim_id": "option_proposer::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Keiko is recorded as the proposer of the 'Relay' option with proposer=true in the positions array."
+    },
+    {
+      "claim_id": "option_status::Hollis (buy)",
+      "verdict": "pass",
+      "reason": "The pipeline output includes an option titled 'Hollis' with status 'dropped' under the 'provider' decision."
+    },
+    {
+      "claim_id": "option_proposer::Hollis (buy)",
+      "verdict": "pass",
+      "reason": "Keiko is recorded as the proposer of the 'Hollis' option in the options array."
+    },
+    {
+      "claim_id": "option_status::Build in-house",
+      "verdict": "pass",
+      "reason": "The pipeline output includes an option titled 'Build in-house' with status 'dropped' under the 'provider' decision."
+    },
+    {
+      "claim_id": "option_proposer::Build in-house",
+      "verdict": "pass",
+      "reason": "Jonas is recorded as the proposer of the 'Build in-house' option in the options array."
+    },
+    {
+      "claim_id": "position::Rhea::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Rhea has stance 'support' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Keiko::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Keiko has stance 'support' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Jonas::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Jonas has stance 'conditional' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Amira::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Amira has stance 'conditional' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Luis::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Luis has stance 'conditional' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Ben::Relay (buy)",
+      "verdict": "pass",
+      "reason": "Ben has stance 'conditional' on option 'Relay' in the positions array."
+    },
+    {
+      "claim_id": "position::Luis::Hollis (buy)",
+      "verdict": "pass",
+      "reason": "Luis has stance 'oppose' on option 'Hollis' in the positions array."
+    },
+    {
+      "claim_id": "position::Keiko::Build in-house",
+      "verdict": "pass",
+      "reason": "Keiko has stance 'withdrawn' on option 'Build in-house' in the positions array."
+    },
+    {
+      "claim_id": "action::Keiko::Confirm the EU region with Relay's rep",
+      "verdict": "pass",
+      "reason": "There is an action 'Ask Relay whether they have an EU data region' owned by Keiko, due Friday, which is semantically equivalent."
+    },
+    {
+      "claim_id": "action::Jonas::Chase the audit report and ask for a dra",
+      "verdict": "pass",
+      "reason": "There is an action 'Chase the SOC 2 audit report and ask Relay for a draft earlier than Dec 1' owned by Jonas, matching the claim."
+    },
+    {
+      "claim_id": "action::Luis::Talk to procurement about the implementa",
+      "verdict": "pass",
+      "reason": "There is an action 'Push procurement to waive or split the $35k implementation fee' owned by Luis, due Nov 5, which is semantically equivalent."
+    },
+    {
+      "claim_id": "action::Ben::Send DPA redlines to Relay's counsel",
+      "verdict": "pass",
+      "reason": "There is an action 'Send DPA redlines to Relay's counsel' owned by Ben, due Nov 6, exactly matching the claim."
+    },
+    {
+      "claim_id": "action::Rhea::Take a conditional recommendation to the",
+      "verdict": "pass",
+      "reason": "There is an action 'Take conditional Relay recommendation to Nov 12 checkpoint' owned by Rhea, due Nov 12, which is semantically equivalent."
+    },
+    {
+      "claim_id": "blocker::SOC 2 Type II report not available until Dec 1 (Ty",
+      "verdict": "partial",
+      "reason": "The pipeline captures the SOC 2 Type II report unavailability as two separate open blockers, covering the substance, but splits them rather than combining them into a single blocker that explicitly names Amira and Jonas as conditioning support and go-live on it."
+    },
+    {
+      "claim_id": "blocker::EU data region not yet confirmed by Relay",
+      "verdict": "pass",
+      "reason": "The pipeline includes a blocker 'Whether Relay has an EU data region that satisfies EU customer contract requirements' with resolution_status 'open'."
+    },
+    {
+      "claim_id": "blocker::Year-one cost $215k ($180k plus $35k implementatio",
+      "verdict": "fail",
+      "reason": "The pipeline captures the year-one cost issue as an open objection and an open constraint, but not as a distinct blocker entry with that substance and resolution status 'open'."
+    },
+    {
+      "claim_id": "blocker::DPA not yet signed; required before go-live",
+      "verdict": "pass",
+      "reason": "The pipeline has a blocker 'DPA with Relay must be signed before any ticket data is transferred' with resolution_status 'open', which matches the claim."
+    },
+    {
+      "claim_id": "objection::Over the cap before implementation",
+      "verdict": "pass",
+      "reason": "The pipeline includes an objection about Hollis exceeding the $200k cap before implementation costs, with resolution_status 'resolved'."
+    },
+    {
+      "claim_id": "separate::{'text': 'Who is presenting at the Nov all-hands? ",
+      "verdict": "pass",
+      "reason": "The pipeline lists 'Nov all-hands presenter' as a separate issue, noting it was redirected offline, which matches the claim."
+    },
+    {
+      "claim_id": "constraint::Year-one cap $200k, all in, including implementati",
+      "verdict": "pass",
+      "reason": "The pipeline has a constraint '$200k year-one all-in budget cap, including implementation' marked as mandatory."
+    },
+    {
+      "claim_id": "constraint::Live by Jan 15 if possible",
+      "verdict": "fail",
+      "reason": "The pipeline does not include a constraint about going live by Jan 15; the Jan 15 deadline is only mentioned in the context of the dropped 'build in-house' option."
+    },
+    {
+      "claim_id": "constraint::EU customer ticket data must stay in the EU (enter",
+      "verdict": "partial",
+      "reason": "The pipeline captures the EU data residency constraint but does not specifically mention 'enterprise agreements, clause 9' as the source."
+    },
+    {
+      "claim_id": "constraint::Signed DPA before any ticket data goes to the vend",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint 'A signed DPA must be in place before any ticket data is sent to the vendor'."
+    },
+    {
+      "claim_id": "constraint::No customer data to Relay before the SOC 2 Type II",
+      "verdict": "pass",
+      "reason": "The pipeline has two constraints covering this: no customer ticket data before Dec 1 SOC 2 Type II report, and go-live gated on receipt and review of the SOC 2 Type II audit report."
+    },
+    {
+      "claim_id": "constraint::Recommendation due at the Nov 12 steering meeting",
+      "verdict": "pass",
+      "reason": "The pipeline includes a mandatory constraint 'Recommendation must be ready for Nov 12 steering meeting'."
+    }
+  ]
+}

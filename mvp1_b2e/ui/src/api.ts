@@ -29,8 +29,9 @@ export const api = {
   workspaces: {
     list: () => req<Workspace[]>('/workspaces'),
     get: (id: string) => req<Workspace>(`/workspaces/${id}`),
-    create: (body: { title: string; decision_question?: string; decision_rule?: string }) =>
+    create: (body: { title: string; decision_question?: string; scope?: string; decision_owner_label?: string; decision_rule?: string }) =>
       post<Workspace>('/workspaces', body),
+    reset: (id: string) => post<Workspace>(`/workspaces/${id}/reset`),
     confirmQuestion: (
       id: string,
       body: {

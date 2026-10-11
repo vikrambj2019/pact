@@ -79,7 +79,7 @@ async def upload_source(
 
     word_count_estimate = len(data.decode(errors="replace").split())
 
-    ikey = idempotency_key or f"{workspace_id}:{content_hash}"
+    ikey = idempotency_key or f"{workspace_id}:{content_hash}:{uuid.uuid4().hex}"
     doc = SourceDocument(
         workspace_id=workspace_id,
         type=doc_type,

@@ -22,15 +22,25 @@ from ..api.storage import LocalStorage
 # Format detection
 # ---------------------------------------------------------------------------
 
+_WHATSAPP_RE = re.compile(
+    r"^\d{1,2}/\d{1,2}/\d{2,4},\s+\d{1,2}:\d{2}\s+[AP]M\s+-\s+.+:",
+    re.MULTILINE,
+)
+
+
 def _detect_format(text: str, declared_type: str) -> str:
+    if _TEAMS_MSG_RE.search(text):
+        return "teams"
     if declared_type == "email_chain":
         return "email_chain"
     if declared_type == "transcript":
         return "transcript"
     if re.search(r"^From:\s+.+\n", text, re.MULTILINE) and re.search(r"^Message-ID:", text, re.MULTILINE):
         return "email_chain"
-    if re.search(r"^\[\d{1,2}:\d{2}\]", text, re.MULTILINE):
+    if re.search(r"^\[\d{1,2}:\d{2}(?::\d{2})?\]", text, re.MULTILINE):
         return "transcript"
+    if _WHATSAPP_RE.search(text):
+        return "whatsapp"
     return "plain_text"
 
 
@@ -125,6 +135,9 @@ def _parse_transcript(text: str) -> list[dict]:
     for line in text.splitlines():
         m = _TURN_RE.match(line.strip())
         if not m:
+            if units and line.strip():
+                units[-1]["original_text"] += "\n" + line.strip()
+                units[-1]["normalized_text"] += "\n" + line.strip()
             continue
         ts_str, speaker, content = m.group(1), m.group(2).strip(), m.group(3).strip()
         units.append({
@@ -133,6 +146,60 @@ def _parse_transcript(text: str) -> list[dict]:
             "timestamp": _ts_offset(ts_str),
             "original_text": content,
             "normalized_text": content,
+            "locator": {"sequence": seq, "timestamp_str": ts_str},
+        })
+        seq += 1
+    return units
+
+
+# ---------------------------------------------------------------------------
+# WhatsApp export parser
+# ---------------------------------------------------------------------------
+
+_WA_MSG_RE = re.compile(
+    r"^(\d{1,2}/\d{1,2}/\d{2,4}),\s+(\d{1,2}:\d{2}\s+[AP]M)\s+-\s+([^:]+):\s+(.+)$"
+)
+_WA_SKIP_RE = re.compile(
+    r"^(<Media omitted>|This message was deleted|Messages and calls are end-to-end encrypted.*)$",
+    re.IGNORECASE,
+)
+
+
+def _parse_whatsapp(text: str) -> list[dict]:
+    units = []
+    seq = 0
+    for line in text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = _WA_MSG_RE.match(line)
+        if not m:
+            if units and line and not re.match(r"^\d{1,2}/\d{1,2}/\d{2,4},", line):
+                units[-1]["original_text"] += "\n" + line
+                units[-1]["normalized_text"] += "\n" + line
+            continue
+        date_str, time_str, author, content = m.group(1), m.group(2), m.group(3).strip(), m.group(4).strip()
+        if _WA_SKIP_RE.match(content):
+            continue
+        # Preserve links as source evidence; their presence is not verification.
+        content_clean = content
+        if not content_clean:
+            continue
+        timestamp: Optional[datetime] = None
+        try:
+            timestamp = datetime.strptime(f"{date_str} {time_str}", "%m/%d/%y %I:%M %p").replace(tzinfo=timezone.utc)
+        except ValueError:
+            try:
+                timestamp = datetime.strptime(f"{date_str} {time_str}", "%m/%d/%Y %I:%M %p").replace(tzinfo=timezone.utc)
+            except ValueError:
+                pass
+        ts_str = f"{date_str} {time_str}"
+        units.append({
+            "sequence": seq,
+            "author_label": author,
+            "timestamp": timestamp,
+            "original_text": content_clean,
+            "normalized_text": content_clean,
             "locator": {"sequence": seq, "timestamp_str": ts_str},
         })
         seq += 1
@@ -181,17 +248,21 @@ async def parse_source(payload: dict, session: AsyncSession) -> dict:
     fmt = _detect_format(text, doc.type)
     warnings: list[str] = []
 
-    if fmt == "email_chain":
+    if fmt == "teams":
+        raw_units = _parse_teams(text)
+    elif fmt == "email_chain":
         raw_units = _parse_email_chain(text)
     elif fmt == "transcript":
         raw_units = _parse_transcript(text)
+    elif fmt == "whatsapp":
+        raw_units = _parse_whatsapp(text)
     else:
         raw_units = _parse_plain_text(text)
 
     if not raw_units:
         warnings.append("No content units found in document")
 
-    raw_units = mark_duplicates(raw_units)
+    raw_units = mark_duplicates(raw_units, enabled=fmt == "email_chain")
 
     unique_labels = list(dict.fromkeys(u["author_label"] for u in raw_units if u.get("author_label")))
     participant_map = await upsert_participants(doc.workspace_id, unique_labels, session)
@@ -228,3 +299,34 @@ async def parse_source(payload: dict, session: AsyncSession) -> dict:
         "participant_count": len(participant_map),
         "warnings": warnings,
     }
+# Teams text export (wall-clock times have no timezone in the source).
+_TEAMS_MSG_RE = re.compile(
+    r"^\[(\d{1,2}/\d{1,2}/\d{2,4})\s+(\d{1,2}:\d{2}\s+[AP]M)\]\s+([^:\n]+):\s*(.*)$",
+    re.MULTILINE,
+)
+
+
+def _parse_teams(text: str) -> list[dict]:
+    units = []
+    for line in text.splitlines():
+        match = _TEAMS_MSG_RE.fullmatch(line.strip())
+        if not match:
+            if units and line.strip():
+                units[-1]["original_text"] += "\n" + line.strip()
+                units[-1]["normalized_text"] += "\n" + line.strip()
+            continue
+        date, time, author, content = match.groups()
+        ts = None
+        for fmt in ("%m/%d/%y %I:%M %p", "%m/%d/%Y %I:%M %p"):
+            try:
+                ts = datetime.strptime(date + " " + time, fmt)
+                break
+            except ValueError:
+                pass
+        seq = len(units)
+        units.append({"sequence": seq, "author_label": author.strip(), "timestamp": ts,
+                      "original_text": content, "normalized_text": content,
+                      "locator": {"sequence": seq, "timestamp_str": date + " " + time,
+                                  "timezone_unspecified": True}})
+    return units
+

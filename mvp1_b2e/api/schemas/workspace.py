@@ -7,6 +7,8 @@ from pydantic import BaseModel, Field
 class WorkspaceCreate(BaseModel):
     title: str = Field(min_length=1, max_length=500)
     decision_question: Optional[str] = None
+    scope: Optional[str] = None
+    decision_owner_label: Optional[str] = None
     decision_rule: Optional[str] = None
 
 

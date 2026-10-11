@@ -1,0 +1,203 @@
+{
+  "name": "anniversary_chat",
+  "source": "tests/fixtures/anniversary_chat.txt",
+  "question": "Date, venue and budget for the parents' 40th anniversary dinner",
+  "participants": [
+    "Nadia",
+    "Yusuf",
+    "Omar",
+    "Leila",
+    "Tariq",
+    "Hana"
+  ],
+  "agreements": [
+    {
+      "label": "Dec 12",
+      "pattern": "\\b12(th)?\\b",
+      "exclude": "\\b(5|20|2,?100)\\b",
+      "affirmers": [
+        "Nadia",
+        "Yusuf",
+        "Omar",
+        "Leila",
+        "Tariq",
+        "Hana"
+      ],
+      "not_affirmers": []
+    },
+    {
+      "label": "Casa Verde",
+      "pattern": "casa verde",
+      "affirmers": [
+        "Nadia",
+        "Leila",
+        "Omar",
+        "Tariq",
+        "Hana"
+      ],
+      "not_affirmers": [
+        "Yusuf"
+      ],
+      "acknowledged": [
+        "Yusuf"
+      ]
+    },
+    {
+      "label": "$400 per person cap",
+      "pattern": "400",
+      "affirmers": [
+        "Omar",
+        "Nadia",
+        "Leila",
+        "Yusuf",
+        "Hana"
+      ],
+      "not_affirmers": [
+        "Tariq"
+      ]
+    },
+    {
+      "label": "Guest cap of 20",
+      "pattern": "\\b20\\b|guest",
+      "affirmers": [
+        "Leila",
+        "Nadia"
+      ],
+      "not_affirmers": []
+    }
+  ],
+  "dropped": [
+    {
+      "label": "Harbor Hall",
+      "pattern": "harbor"
+    },
+    {
+      "label": "Alma",
+      "pattern": "\\balma\\b"
+    },
+    {
+      "label": "Catering at Nadia's",
+      "pattern": "cater|nadia'?s (house|place)"
+    },
+    {
+      "label": "Seoul House",
+      "pattern": "seoul"
+    }
+  ],
+  "constraints": [
+    {
+      "label": "step-free access required",
+      "pattern": "step.?free|stairs|no steps",
+      "sensitive": true
+    }
+  ],
+  "open_blockers": {
+    "max_count": 2,
+    "must_mention_any": [
+      "drink"
+    ],
+    "must_not_mention": [
+      "8th",
+      "9th",
+      "anniversary",
+      "parking",
+      "elevator",
+      "22"
+    ]
+  },
+  "actions": [
+    {
+      "label": "Nadia sends the $500 deposit Monday (deadline Oct 16, per Leila)",
+      "pattern": "deposit",
+      "owner": "Nadia",
+      "status": "open",
+      "acceptance": "committed",
+      "due_contains": "monday",
+      "deadline_contains": "oct 16"
+    },
+    {
+      "label": "Leila trims the guest list to 20 by Sunday",
+      "pattern": "trim|guest list",
+      "owner": "Leila",
+      "status": "open",
+      "acceptance": "committed",
+      "due_contains": "sunday"
+    },
+    {
+      "label": "Omar brings the cake",
+      "pattern": "cake",
+      "exclude": "\\bask",
+      "owner": "Omar",
+      "status": "open",
+      "acceptance": "committed"
+    },
+    {
+      "label": "Leila was asked to book, never accepted",
+      "pattern": "\\bbook",
+      "owner": "Leila",
+      "acceptance": "requested"
+    },
+    {
+      "label": "Omar did not take on drinks",
+      "pattern": "drink",
+      "owner_not": "Omar",
+      "or_status": "declined"
+    }
+  ],
+  "separate_issues": [
+    {
+      "label": "photographer",
+      "pattern": "photograph"
+    },
+    {
+      "label": "8th vs 9th anniversary dispute",
+      "pattern": "8th|9th|anniversary"
+    },
+    {
+      "label": "keeping it secret from the parents",
+      "pattern": "secret|parents|forward"
+    }
+  ],
+  "card": {
+    "privacy_terms": [
+      "knee",
+      "surgery",
+      "between jobs",
+      "do 300",
+      "cover the 100",
+      "covering hana"
+    ],
+    "must_not_contain": [
+      "$150"
+    ],
+    "committed_must_not_match": [
+      "omar.*drink",
+      "drink.*omar"
+    ],
+    "requested_must_be_qualified": [
+      {
+        "pattern": "leila.*book|book.*leila",
+        "qualifier": "asked|not accepted|requested|hasn't|has not|never",
+        "label": "Leila's booking is shown as asked, not agreed"
+      }
+    ],
+    "attention_must_not_match": [
+      "8th",
+      "9th"
+    ],
+    "outside_unverified_must_not_match": [
+      "everyone'?s on board",
+      "fine with anything"
+    ],
+    "unverified_should_mention": [
+      "parking",
+      "ground floor",
+      "\\$?20 a head|drinks"
+    ],
+    "dropped_must_be_marked": [
+      "alma",
+      "harbor"
+    ],
+    "every_line_cited": true
+  }
+}

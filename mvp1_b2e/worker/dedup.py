@@ -1,38 +1,20 @@
-"""Duplicate detection for source units.
-
-Email chains often re-quote earlier messages verbatim. After normalized_text
-strips explicit quote lines (> prefix), residual duplicates are caught here
-by token-overlap similarity on the normalized text.
-"""
+"""Conservative duplicate detection: repeated views are not duplicate evidence."""
 from __future__ import annotations
-
 import re
 
+def mark_duplicates(units: list[dict], enabled: bool = True) -> list[dict]:
+    """Only deduplicate exact copies with the same author and known timestamp.
 
-def _tokens(text: str) -> frozenset[str]:
-    return frozenset(re.findall(r"[a-z0-9]+", text.lower()))
-
-
-def mark_duplicates(units: list[dict]) -> list[dict]:
+    Token similarity loses corrections, negations and later affirmations. Unknown
+    timestamps cannot prove two identical messages represent the same event.
+    Chat/transcript callers disable this: separate turns remain separate evidence.
     """
-    Set `_dup_sequence` on each unit dict to the sequence number of the
-    earlier unit it duplicates, or None if it is not a duplicate.
-
-    Threshold: overlap / min(len_a, len_b) >= 0.75 and min tokens >= 8.
-    Mutates units in-place and returns the same list.
-    """
-    seen: list[tuple[int, frozenset[str]]] = []
+    seen = {}
     for unit in units:
-        toks = _tokens(unit["normalized_text"])
-        dup_seq = None
-        if len(toks) >= 8:
-            for prev_seq, prev_toks in seen:
-                if len(prev_toks) < 8:
-                    continue
-                overlap = len(toks & prev_toks)
-                if overlap / min(len(toks), len(prev_toks)) >= 0.75:
-                    dup_seq = prev_seq
-                    break
-        unit["_dup_sequence"] = dup_seq
-        seen.append((unit["sequence"], toks))
+        text = re.sub(r"\s+", " ", unit["normalized_text"]).strip()
+        timestamp = unit.get("timestamp")
+        key = (unit.get("author_label"), timestamp, text)
+        unit["_dup_sequence"] = seen.get(key) if enabled and timestamp is not None else None
+        if enabled and timestamp is not None:
+            seen.setdefault(key, unit["sequence"])
     return units

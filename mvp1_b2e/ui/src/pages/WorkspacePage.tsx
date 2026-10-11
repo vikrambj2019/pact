@@ -27,6 +27,7 @@ export default function WorkspacePage() {
   const [ws, setWs] = useState<Workspace | null>(null);
   const [error, setError] = useState('');
   const [tab, setTab] = useState<Tab>('sources');
+  const [resetting, setResetting] = useState(false);
 
   const reload = () => {
     if (!workspaceId) return;
@@ -34,6 +35,21 @@ export default function WorkspacePage() {
       .then(setWs)
       .catch((e) => setError(e.message));
   };
+
+  async function handleReset() {
+    if (!workspaceId) return;
+    if (!confirm('Start a new decision cycle? The workspace, sources, and history are kept — the current brief will be cleared.')) return;
+    setResetting(true);
+    try {
+      const updated = await api.workspaces.reset(workspaceId);
+      setWs(updated);
+      setTab('sources');
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setResetting(false);
+    }
+  }
 
   useEffect(reload, [workspaceId]);
 
@@ -77,9 +93,20 @@ export default function WorkspacePage() {
               <p className="text-xs text-gray-500 truncate">{ws.primary_question}</p>
             )}
           </div>
-          <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium ${LIFECYCLE_COLOR[ws.lifecycle_status] ?? 'bg-gray-100 text-gray-600'}`}>
-            {LIFECYCLE_LABEL[ws.lifecycle_status] ?? ws.lifecycle_status}
-          </span>
+          <div className="flex items-center gap-2 shrink-0">
+            <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${LIFECYCLE_COLOR[ws.lifecycle_status] ?? 'bg-gray-100 text-gray-600'}`}>
+              {LIFECYCLE_LABEL[ws.lifecycle_status] ?? ws.lifecycle_status}
+            </span>
+            {ws.lifecycle_status !== 'draft' && (
+              <button
+                onClick={handleReset}
+                disabled={resetting}
+                className="text-xs px-2 py-0.5 rounded border border-gray-300 text-gray-500 hover:text-gray-700 hover:border-gray-400 disabled:opacity-50 transition-colors"
+              >
+                {resetting ? 'Resetting…' : 'New decision'}
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Tabs */}
@@ -105,7 +132,7 @@ export default function WorkspacePage() {
           <SourcesTab workspace={ws} onWorkspaceUpdate={setWs} onConfirmed={reload} />
         )}
         {tab === 'brief' && (
-          <BriefTab workspace={ws} onWorkspaceUpdate={reload} />
+          <BriefTab workspace={ws} />
         )}
         {tab === 'chat' && (
           <ChatTab workspace={ws} onWorkspaceUpdate={reload} />

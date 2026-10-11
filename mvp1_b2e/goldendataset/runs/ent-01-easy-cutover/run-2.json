@@ -1,0 +1,753 @@
+{
+  "meta": {
+    "dataset": "ent-01-easy-cutover",
+    "model": "claude-sonnet-4-6",
+    "run": 2,
+    "units": 39,
+    "timestamp": "2026-10-11T14:42:01.990671+00:00"
+  },
+  "brief": {
+    "criteria": [
+      {
+        "text": "Risk of the cutover operation",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-016"
+        ],
+        "quote": "Criteria then: risk, support coverage and finance close.",
+        "name": "Risk of the cutover operation",
+        "id": "2540c261-27c5-4a1a-847a-47068e95ff7e"
+      },
+      {
+        "text": "Support coverage availability",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-016"
+        ],
+        "quote": "Criteria then: risk, support coverage and finance close.",
+        "name": "Support coverage availability",
+        "id": "7fe7fcef-bcce-4461-a77f-d38f8c9231ef"
+      },
+      {
+        "text": "Finance month-end close timing",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-016"
+        ],
+        "quote": "Criteria then: risk, support coverage and finance close.",
+        "name": "Finance month-end close timing",
+        "id": "ba92e8bb-5363-4c10-8f0d-04b32deaf09b"
+      },
+      {
+        "text": "Customer notice of at least 5 days for billing changes",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-017"
+        ],
+        "quote": "Customer notice. We promised customers 5 days notice for billing changes.",
+        "name": "Customer notice of at least 5 days for billing changes",
+        "id": "5bd0cc36-9f2d-4c29-a1d1-b7529b0947c1"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Must avoid Nov 25-30 due to month-end close (last three business days of November)",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-005"
+        ],
+        "quote": "Month-end close takes the last three business days of the month. For this window that means keep clear of Nov 25-30.",
+        "id": "4ba325a2-1b31-4410-92a4-fe6f595b7a5a"
+      },
+      {
+        "text": "Holiday staffing freeze starts Nov 23; no weekend support cover can be added after that date",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-007"
+        ],
+        "quote": "our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.",
+        "id": "70b7ad54-2f90-4ac3-a53f-912a3c2c723d"
+      },
+      {
+        "text": "At least five full days required after UAT sign-off for final data sync and rehearsal before cutover",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-010"
+        ],
+        "quote": "I need five full days after UAT sign-off for the final data sync and rehearsal.",
+        "id": "d35518a2-f440-42c4-9c81-cdb287c8f5e1"
+      },
+      {
+        "text": "UAT sign-off is scheduled for Friday Nov 6",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-011"
+        ],
+        "quote": "UAT sign-off is scheduled for Friday Nov 6. I can hold that date.",
+        "id": "d7842a8d-208f-4623-a984-e5d4de7ada4b"
+      },
+      {
+        "text": "Customers must receive at least 5 days notice for billing changes",
+        "kind": "mandatory",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-017"
+        ],
+        "quote": "We promised customers 5 days notice for billing changes.",
+        "id": "06c4941a-7e4d-4eeb-bedc-96a14133b6f3"
+      }
+    ],
+    "options": [
+      {
+        "temp_id": "opt-nov-14-15",
+        "title": "Nov 14-15",
+        "decision": "date",
+        "status": "active",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-001",
+          "ent-01-easy-cutover-030"
+        ],
+        "quote": "cutover Sat Nov 14 to Sun Nov 15",
+        "description": "",
+        "id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "temp_id": "opt-dec-5-6",
+        "title": "Dec 5-6",
+        "decision": "date",
+        "status": "dropped",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-009"
+        ],
+        "quote": "Understood, withdrawing Dec 5-6.",
+        "description": "",
+        "id": "fd865f7d-0ed5-45dd-92ff-8d45f68c81e8"
+      },
+      {
+        "temp_id": "opt-nov-21-22",
+        "title": "Nov 21-22",
+        "decision": "date",
+        "status": "fallback",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-023"
+        ],
+        "quote": "I'd make Nov 21-22 the backup if UAT slips, not the main plan.",
+        "description": "",
+        "id": "d7dd0fc2-0f2d-4134-80e0-ca23070f9043"
+      }
+    ],
+    "claims": [
+      {
+        "text": "UAT should be done by Nov 14-15",
+        "kind": "predictive",
+        "author_label": "Hannah",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-001"
+        ],
+        "quote": "UAT should be done by then and it's well before the holidays.",
+        "id": "c6420b22-a989-4651-895f-83c2982717e2"
+      },
+      {
+        "text": "Nov 21-22 provides one more week of buffer compared to Nov 14-15",
+        "kind": "factual",
+        "author_label": "Dev",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-002"
+        ],
+        "quote": "Another option is Nov 21-22. One more week of buffer.",
+        "id": "98b2a448-54a5-4f24-823b-cc816852154c"
+      },
+      {
+        "text": "Month-end close takes the last three business days of the month; for this window that means keep clear of Nov 25-30",
+        "kind": "constraint",
+        "author_label": "Marcus",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-005"
+        ],
+        "quote": "Month-end close takes the last three business days of the month. For this window that means keep clear of Nov 25-30.",
+        "id": "980695b3-016d-4339-ac4d-384021a93904"
+      },
+      {
+        "text": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid the month-end close blackout of Nov 25-30",
+        "kind": "factual",
+        "author_label": "Marcus",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-006"
+        ],
+        "quote": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that.",
+        "id": "7b744350-bb8f-44c6-9d19-8b26bcd7fed9"
+      },
+      {
+        "text": "Holiday staffing freeze starts Nov 23; after that Elena cannot add weekend cover",
+        "kind": "constraint",
+        "author_label": "Elena",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-007"
+        ],
+        "quote": "our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.",
+        "id": "3e0de446-c4ed-43c3-842c-e07215419923"
+      },
+      {
+        "text": "Five full days are required after UAT sign-off for the final data sync and rehearsal",
+        "kind": "constraint",
+        "author_label": "Dev",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-010"
+        ],
+        "quote": "I need five full days after UAT sign-off for the final data sync and rehearsal.",
+        "id": "a7507a48-2b8e-48b4-a2ee-64537e034c5a"
+      },
+      {
+        "text": "The date decision is settled: cutover Nov 14-15 with Nov 21-22 as backup if UAT sign-off slips past Nov 6",
+        "kind": "factual",
+        "author_label": "Tom",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-011",
+          "ent-01-easy-cutover-030"
+        ],
+        "quote": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15. Backup is Nov 21-22 if UAT sign-off slips past Nov 6.",
+        "sensitive": false,
+        "private": false,
+        "id": "c29260b5-53e3-4b86-8778-f36a88059c2a"
+      },
+      {
+        "text": "Nov 6 plus five days is Nov 11, so Nov 14-15 satisfies the five-day post-UAT requirement",
+        "kind": "factual",
+        "author_label": "Dev",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-012"
+        ],
+        "quote": "Nov 6 plus five days is Nov 11, so Nov 14-15 works for me.",
+        "id": "2090c5c1-582e-4150-af66-cc162ad48ed1"
+      },
+      {
+        "text": "The last cutover took about 9 hours on a Saturday night",
+        "kind": "factual",
+        "author_label": "Dev",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-015"
+        ],
+        "quote": "The last one was about 9 hours on a Saturday night.",
+        "id": "60028ec5-0912-4928-90f3-d042230ff2b5"
+      },
+      {
+        "text": "This cutover is bigger than the last; Dev plans for 12 hours",
+        "kind": "predictive",
+        "author_label": "Dev",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-015"
+        ],
+        "quote": "This one is bigger so I'd plan for 12.",
+        "id": "6b29fc3a-b738-4df4-80ab-743b62b6f031"
+      },
+      {
+        "text": "5 days notice for billing changes is easy to achieve for either Nov 14-15 or Nov 21-22",
+        "kind": "factual",
+        "author_label": "Priya",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-018"
+        ],
+        "quote": "That's easy for either date.",
+        "id": "9ed1a4eb-84a4-47bb-9c75-48a678cf46e0"
+      },
+      {
+        "text": "Nov 14-15 is cleaner for Finance because month-end close is well behind and Marcus can brief auditors the week before",
+        "kind": "factual",
+        "author_label": "Marcus",
+        "evidence_status": "unverified",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-019"
+        ],
+        "quote": "For me Nov 14-15 is cleaner. Close is well behind us and I can brief the auditors the week before.",
+        "id": "4f4c6a69-ab35-41a9-bf4c-22051989152e"
+      }
+    ],
+    "positions": [
+      {
+        "participant_label": "Hannah",
+        "decision": "date",
+        "stance": "proposed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-003"
+        ],
+        "quote": "And Dec 5-6 is possible if we slip. Probably not, but listing it.",
+        "proposer": true,
+        "first_unit_sequence": 3,
+        "id": "e7bebe23-2d0a-45f7-a01b-f90b354935e5",
+        "option_id": "fd865f7d-0ed5-45dd-92ff-8d45f68c81e8"
+      },
+      {
+        "participant_label": "Elena",
+        "decision": "date",
+        "stance": "oppose",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-008"
+        ],
+        "quote": "So Dec 5-6 doesn't work for me. I'd rather not do it then.",
+        "proposer": false,
+        "first_unit_sequence": 8,
+        "id": "e43fce6f-67af-4b28-888a-480831bdd8ba",
+        "option_id": "fd865f7d-0ed5-45dd-92ff-8d45f68c81e8"
+      },
+      {
+        "participant_label": "Marcus",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-019"
+        ],
+        "quote": "For me Nov 14-15 is cleaner. Close is well behind us and I can brief the auditors the week before.",
+        "proposer": false,
+        "first_unit_sequence": 19,
+        "id": "49cb932b-90e1-49f5-bdcb-1e5ced53e817",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "participant_label": "Elena",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-020"
+        ],
+        "quote": "Nov 14-15 works for support. I'll have full weekend cover.",
+        "proposer": false,
+        "first_unit_sequence": 20,
+        "id": "5a71c535-03a1-4d85-ad56-c4b23f85aad9",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "participant_label": "Tom",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-021"
+        ],
+        "quote": "Nov 14-15 is good for QA.",
+        "proposer": false,
+        "first_unit_sequence": 21,
+        "id": "9c463655-65ed-4c7d-975d-8323699d4a63",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "participant_label": "Hannah",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-001",
+          "ent-01-easy-cutover-022"
+        ],
+        "quote": "Nov 14-15 from me as well, it was my first pick.",
+        "proposer": true,
+        "first_unit_sequence": 22,
+        "id": "b0fd8d67-951e-4690-8ad5-a375a3dfbe0c",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "participant_label": "Dev",
+        "decision": "date",
+        "stance": "conditional",
+        "conditions": "Only if UAT slips; to be used as backup, not the main plan",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-002",
+          "ent-01-easy-cutover-023"
+        ],
+        "quote": "I'd make Nov 21-22 the backup if UAT slips, not the main plan.",
+        "proposer": true,
+        "first_unit_sequence": 23,
+        "id": "9447fe17-1c0c-4637-971a-b4d9a3b17c94",
+        "option_id": "d7dd0fc2-0f2d-4134-80e0-ca23070f9043"
+      },
+      {
+        "participant_label": "Dev",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-023"
+        ],
+        "quote": "Nov 14-15, yes. I'd make Nov 21-22 the backup if UAT slips, not the main plan.",
+        "proposer": false,
+        "first_unit_sequence": 23,
+        "id": "c0d442e1-3c4a-41b4-8f4b-2e4fad3a4dc1",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      },
+      {
+        "participant_label": "Priya",
+        "decision": "date",
+        "stance": "support",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-030"
+        ],
+        "quote": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15.",
+        "proposer": false,
+        "first_unit_sequence": 30,
+        "id": "439a4e0b-200e-4b23-b303-f42724b7b26e",
+        "option_id": "09fe0c67-572b-401e-923c-abd8d376da9a"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Dec 5-6 is after the holiday staffing freeze (Nov 23); Elena cannot add weekend support cover for that date",
+        "author_label": "Elena",
+        "resolution_status": "resolved",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-007",
+          "ent-01-easy-cutover-008",
+          "ent-01-easy-cutover-009"
+        ],
+        "quote": "So Dec 5-6 doesn't work for me. I'd rather not do it then.",
+        "moot": true,
+        "id": "d270babb-fa31-4fa0-a148-8f02ad4ac2b9",
+        "option_ids": [
+          "fd865f7d-0ed5-45dd-92ff-8d45f68c81e8"
+        ]
+      }
+    ],
+    "blockers": [],
+    "separate_issues": [],
+    "actions": [
+      {
+        "text": "Hold UAT sign-off on Friday Nov 6",
+        "owner_kind": "named",
+        "owner_label": "Tom",
+        "status": "committed",
+        "due": "Nov 6",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-011",
+          "ent-01-easy-cutover-033"
+        ],
+        "quote": "I'll sign off UAT on Nov 6.",
+        "sensitive": false,
+        "private": false,
+        "requested_due": "Friday Nov 6",
+        "id": "de66e1d5-17a1-4226-ac05-716ea17e178e"
+      },
+      {
+        "text": "Brief the auditors the week before Nov 14-15",
+        "owner_kind": "named",
+        "owner_label": "Marcus",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-019",
+          "ent-01-easy-cutover-036"
+        ],
+        "quote": "I'll brief the auditors on Nov 10 and confirm back here.",
+        "sensitive": false,
+        "private": false,
+        "due": "Nov 10",
+        "id": "efbad22c-fbc5-426d-b8ff-3d3528eb54d9"
+      },
+      {
+        "text": "Provide full weekend support cover for Nov 14-15 cutover",
+        "owner_kind": "named",
+        "owner_label": "Elena",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-020"
+        ],
+        "quote": "Nov 14-15 works for support. I'll have full weekend cover.",
+        "id": "c7c9116b-da44-42a5-80a3-2fc8661fec3c"
+      },
+      {
+        "text": "Write the runbook and have it reviewed by Nov 9",
+        "owner_kind": "named",
+        "owner_label": "Dev",
+        "status": "committed",
+        "due": "Nov 9",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-031",
+          "ent-01-easy-cutover-032"
+        ],
+        "quote": "Yes, runbook by Nov 9.",
+        "sensitive": false,
+        "private": false,
+        "id": "57f6d59d-5f3d-4e4d-8747-e62662f578ae"
+      },
+      {
+        "text": "Send the customer notice by Nov 9",
+        "owner_kind": "named",
+        "owner_label": "Hannah",
+        "status": "committed",
+        "due": "Nov 9",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-034"
+        ],
+        "quote": "I'll send the customer notice by Nov 9.",
+        "sensitive": false,
+        "private": false,
+        "id": "479bd496-c214-4e58-887e-feae7c22528f"
+      },
+      {
+        "text": "Lock the weekend support rota by Nov 2",
+        "owner_kind": "named",
+        "owner_label": "Elena",
+        "status": "committed",
+        "due": "Nov 2",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-035"
+        ],
+        "quote": "I'll lock the weekend support rota by Nov 2.",
+        "sensitive": false,
+        "private": false,
+        "id": "c0219b69-65b9-40d2-b15e-8f748800ac3f"
+      },
+      {
+        "text": "Confirm auditor briefing outcome back in this channel",
+        "owner_kind": "named",
+        "owner_label": "Marcus",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-036"
+        ],
+        "quote": "I'll brief the auditors on Nov 10 and confirm back here.",
+        "sensitive": false,
+        "private": false,
+        "id": "d13f6ecf-d1f0-4cc9-91bc-c298482d78e8"
+      },
+      {
+        "text": "Book the war room",
+        "owner_kind": "named",
+        "owner_label": "Priya",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-037"
+        ],
+        "quote": "I'll book the war room and post the final schedule once the runbook is done.",
+        "sensitive": false,
+        "private": false,
+        "id": "21e754ac-e991-4a96-a02b-2c3fe22555ec"
+      },
+      {
+        "text": "Post the final schedule once the runbook is done",
+        "owner_kind": "named",
+        "owner_label": "Priya",
+        "status": "committed",
+        "source_unit_ids": [
+          "ent-01-easy-cutover-037"
+        ],
+        "quote": "I'll book the war room and post the final schedule once the runbook is done.",
+        "sensitive": false,
+        "private": false,
+        "id": "6e5e1c1d-9b26-4164-ae41-d8a57c3c263c"
+      }
+    ],
+    "agreements": [],
+    "superseded_positions": [],
+    "dropped_items": [],
+    "question": {
+      "text": "Which weekend should we do the billing cutover?"
+    },
+    "executive_summary": "Which weekend should we do the billing cutover?\nStatus: 3 options (1 dropped), 0 open objections, 0 blockers, 0 actions without an owner.\nAffirmers are listed individually; group consensus is not inferred.\n\nPROPOSED\n\u00b7 Nov 14-15 \u2014 active proposal [Hannah, 10/19/26 9:06 AM; Priya, 10/19/26 10:06 AM]\n\u00b7 Nov 21-22 \u2014 fallback only [Dev, 10/19/26 9:54 AM]\n\nAGREED \u2014 EXPLICIT AFFIRMERS\n\u00b7 Nov 14-15: Marcus, Elena, Tom, Hannah, Dev and Priya [Marcus, 10/19/26 9:47 AM; Elena, 10/19/26 9:49 AM; Tom, 10/19/26 9:51 AM; Hannah, 10/19/26 9:06 AM; Hannah, 10/19/26 9:52 AM; Dev, 10/19/26 9:54 AM; Priya, 10/19/26 10:06 AM]\n\nOTHER POSITIONS\n\u00b7 Nov 21-22: Dev \u2014 conditional support (Only if UAT slips; to be used as backup, not the main plan) [Dev, 10/19/26 9:08 AM; Dev, 10/19/26 9:54 AM]\n\nCONSTRAINTS\n\u00b7 Must avoid Nov 25-30 due to month-end close (last three business days of November) (stated; not independently verified) [Marcus, 10/19/26 9:16 AM]\n\u00b7 Holiday staffing freeze starts Nov 23; no weekend support cover can be added after that date (stated; not independently verified) [Elena, 10/19/26 9:21 AM]\n\u00b7 At least five full days required after UAT sign-off for final data sync and rehearsal before cutover (stated; not independently verified) [Dev, 10/19/26 9:27 AM]\n\u00b7 UAT sign-off is scheduled for Friday Nov 6 (stated; not independently verified) [Tom, 10/19/26 9:29 AM]\n\u00b7 Customers must receive at least 5 days notice for billing changes (stated; not independently verified) [Hannah, 10/19/26 9:42 AM]\n\nELIMINATED\n\u00b7 Dec 5-6 [Hannah, 10/19/26 9:24 AM]\n\nACTIONS \u2014 COMMITTED\n\u00b7 Tom: Hold UAT sign-off on Friday Nov 6 \u2014 promised Nov 6 [Tom, 10/19/26 9:29 AM; Tom, 10/19/26 10:13 AM]\n\u00b7 Marcus: Brief the auditors the week before Nov 14-15 \u2014 promised Nov 10 [Marcus, 10/19/26 9:47 AM; Marcus, 10/19/26 10:20 AM]\n\u00b7 Elena: Provide full weekend support cover for Nov 14-15 cutover [Elena, 10/19/26 9:49 AM]\n\u00b7 Dev: Write the runbook and have it reviewed by Nov 9 \u2014 promised Nov 9 [Priya, 10/19/26 10:09 AM; Dev, 10/19/26 10:11 AM]\n\u00b7 Hannah: Send the customer notice by Nov 9 \u2014 promised Nov 9 [Hannah, 10/19/26 10:15 AM]\n\u00b7 Elena: Lock the weekend support rota by Nov 2 \u2014 promised Nov 2 [Elena, 10/19/26 10:17 AM]\n\u00b7 Marcus: Confirm auditor briefing outcome back in this channel [Marcus, 10/19/26 10:20 AM]\n\u00b7 Priya: Book the war room [Priya, 10/19/26 10:22 AM]\n\u00b7 Priya: Post the final schedule once the runbook is done [Priya, 10/19/26 10:22 AM]\n\nREPORTED / UNVERIFIED\n\u00b7 Hannah reports: UAT should be done by Nov 14-15 (unverified) [Hannah, 10/19/26 9:06 AM]\n\u00b7 Dev reports: Nov 21-22 provides one more week of buffer compared to Nov 14-15 (unverified) [Dev, 10/19/26 9:08 AM]\n\u00b7 Marcus reports: Month-end close takes the last three business days of the month; for this window that means keep clear of Nov 25-30 (unverified) [Marcus, 10/19/26 9:16 AM]\n\u00b7 Marcus reports: Nov 14-15, Nov 21-22 and Dec 5-6 all avoid the month-end close blackout of Nov 25-30 (unverified) [Marcus, 10/19/26 9:18 AM]\n\u00b7 Elena reports: Holiday staffing freeze starts Nov 23; after that Elena cannot add weekend cover (unverified) [Elena, 10/19/26 9:21 AM]\n\u00b7 Dev reports: Five full days are required after UAT sign-off for the final data sync and rehearsal (unverified) [Dev, 10/19/26 9:27 AM]\n\u00b7 Tom reports: The date decision is settled: cutover Nov 14-15 with Nov 21-22 as backup if UAT sign-off slips past Nov 6 (unverified) [Tom, 10/19/26 9:29 AM; Priya, 10/19/26 10:06 AM]\n\u00b7 Dev reports: Nov 6 plus five days is Nov 11, so Nov 14-15 satisfies the five-day post-UAT requirement (unverified) [Dev, 10/19/26 9:31 AM]\n\u00b7 Dev reports: The last cutover took about 9 hours on a Saturday night (unverified) [Dev, 10/19/26 9:37 AM]\n\u00b7 Dev reports: This cutover is bigger than the last; Dev plans for 12 hours (unverified) [Dev, 10/19/26 9:37 AM]\n\u00b7 Priya reports: 5 days notice for billing changes is easy to achieve for either Nov 14-15 or Nov 21-22 (unverified) [Priya, 10/19/26 9:44 AM]\n\u00b7 Marcus reports: Nov 14-15 is cleaner for Finance because month-end close is well behind and Marcus can brief auditors the week before (unverified) [Marcus, 10/19/26 9:47 AM]\n\nPREFERENCE: Nov 14-15 \u2014 supporters: Marcus, Elena, Tom, Hannah, Dev and Priya. No unanimous agreement inferred. [Marcus, 10/19/26 9:47 AM; Elena, 10/19/26 9:49 AM; Tom, 10/19/26 9:51 AM; Hannah, 10/19/26 9:06 AM; Hannah, 10/19/26 9:52 AM; Dev, 10/19/26 9:54 AM; Priya, 10/19/26 10:06 AM]"
+  },
+  "report": {
+    "verified": true,
+    "verification_scope": "source references and quote presence only",
+    "external_fact_check": false,
+    "rendering": "deterministic",
+    "omitted_items": 0,
+    "privacy_omitted_items": 0,
+    "issues": []
+  },
+  "units": [
+    {
+      "id": "ent-01-easy-cutover-000",
+      "author_label": "Priya",
+      "normalized_text": "Morning all. We need to pick the weekend for the billing cutover to the new platform. Let's settle it in this thread."
+    },
+    {
+      "id": "ent-01-easy-cutover-001",
+      "author_label": "Hannah",
+      "normalized_text": "I'd propose Nov 14-15. UAT should be done by then and it's well before the holidays."
+    },
+    {
+      "id": "ent-01-easy-cutover-002",
+      "author_label": "Dev",
+      "normalized_text": "Another option is Nov 21-22. One more week of buffer."
+    },
+    {
+      "id": "ent-01-easy-cutover-003",
+      "author_label": "Hannah",
+      "normalized_text": "And Dec 5-6 is possible if we slip. Probably not, but listing it."
+    },
+    {
+      "id": "ent-01-easy-cutover-004",
+      "author_label": "Priya",
+      "normalized_text": "Good. Let's go through constraints first. Marcus, anything from Finance?"
+    },
+    {
+      "id": "ent-01-easy-cutover-005",
+      "author_label": "Marcus",
+      "normalized_text": "Month-end close takes the last three business days of the month. For this window that means keep clear of Nov 25-30."
+    },
+    {
+      "id": "ent-01-easy-cutover-006",
+      "author_label": "Marcus",
+      "normalized_text": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that."
+    },
+    {
+      "id": "ent-01-easy-cutover-007",
+      "author_label": "Elena",
+      "normalized_text": "Support constraint: our holiday staffing freeze starts Nov 23. After that I can't add weekend cover."
+    },
+    {
+      "id": "ent-01-easy-cutover-008",
+      "author_label": "Elena",
+      "normalized_text": "So Dec 5-6 doesn't work for me. I'd rather not do it then."
+    },
+    {
+      "id": "ent-01-easy-cutover-009",
+      "author_label": "Hannah",
+      "normalized_text": "Understood, withdrawing Dec 5-6."
+    },
+    {
+      "id": "ent-01-easy-cutover-010",
+      "author_label": "Dev",
+      "normalized_text": "From my side I need five full days after UAT sign-off for the final data sync and rehearsal."
+    },
+    {
+      "id": "ent-01-easy-cutover-011",
+      "author_label": "Tom",
+      "normalized_text": "UAT sign-off is scheduled for Friday Nov 6. I can hold that date."
+    },
+    {
+      "id": "ent-01-easy-cutover-012",
+      "author_label": "Dev",
+      "normalized_text": "Nov 6 plus five days is Nov 11, so Nov 14-15 works for me."
+    },
+    {
+      "id": "ent-01-easy-cutover-013",
+      "author_label": "Dev",
+      "normalized_text": "Nov 21-22 works too but I'd rather not stretch it."
+    },
+    {
+      "id": "ent-01-easy-cutover-014",
+      "author_label": "Priya",
+      "normalized_text": "Dev, how long did the last cutover take?"
+    },
+    {
+      "id": "ent-01-easy-cutover-015",
+      "author_label": "Dev",
+      "normalized_text": "The last one was about 9 hours on a Saturday night. This one is bigger so I'd plan for 12."
+    },
+    {
+      "id": "ent-01-easy-cutover-016",
+      "author_label": "Priya",
+      "normalized_text": "OK. Criteria then: risk, support coverage and finance close. Anything else?"
+    },
+    {
+      "id": "ent-01-easy-cutover-017",
+      "author_label": "Hannah",
+      "normalized_text": "Customer notice. We promised customers 5 days notice for billing changes."
+    },
+    {
+      "id": "ent-01-easy-cutover-018",
+      "author_label": "Priya",
+      "normalized_text": "That's easy for either date."
+    },
+    {
+      "id": "ent-01-easy-cutover-019",
+      "author_label": "Marcus",
+      "normalized_text": "For me Nov 14-15 is cleaner. Close is well behind us and I can brief the auditors the week before."
+    },
+    {
+      "id": "ent-01-easy-cutover-020",
+      "author_label": "Elena",
+      "normalized_text": "Nov 14-15 works for support. I'll have full weekend cover."
+    },
+    {
+      "id": "ent-01-easy-cutover-021",
+      "author_label": "Tom",
+      "normalized_text": "Nov 14-15 is good for QA."
+    },
+    {
+      "id": "ent-01-easy-cutover-022",
+      "author_label": "Hannah",
+      "normalized_text": "Nov 14-15 from me as well, it was my first pick."
+    },
+    {
+      "id": "ent-01-easy-cutover-023",
+      "author_label": "Dev",
+      "normalized_text": "Nov 14-15, yes. I'd make Nov 21-22 the backup if UAT slips, not the main plan."
+    },
+    {
+      "id": "ent-01-easy-cutover-024",
+      "author_label": "Priya",
+      "normalized_text": "Agreed on that. Anyone against Nov 14-15?"
+    },
+    {
+      "id": "ent-01-easy-cutover-025",
+      "author_label": "Marcus",
+      "normalized_text": "No objection."
+    },
+    {
+      "id": "ent-01-easy-cutover-026",
+      "author_label": "Elena",
+      "normalized_text": "None here."
+    },
+    {
+      "id": "ent-01-easy-cutover-027",
+      "author_label": "Tom",
+      "normalized_text": "None."
+    },
+    {
+      "id": "ent-01-easy-cutover-028",
+      "author_label": "Hannah",
+      "normalized_text": "None."
+    },
+    {
+      "id": "ent-01-easy-cutover-029",
+      "author_label": "Dev",
+      "normalized_text": "None, go."
+    },
+    {
+      "id": "ent-01-easy-cutover-030",
+      "author_label": "Priya",
+      "normalized_text": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15. Backup is Nov 21-22 if UAT sign-off slips past Nov 6."
+    },
+    {
+      "id": "ent-01-easy-cutover-031",
+      "author_label": "Priya",
+      "normalized_text": "Next steps. Dev, can you write the runbook and have it reviewed by Nov 9?"
+    },
+    {
+      "id": "ent-01-easy-cutover-032",
+      "author_label": "Dev",
+      "normalized_text": "Yes, runbook by Nov 9."
+    },
+    {
+      "id": "ent-01-easy-cutover-033",
+      "author_label": "Tom",
+      "normalized_text": "I'll sign off UAT on Nov 6."
+    },
+    {
+      "id": "ent-01-easy-cutover-034",
+      "author_label": "Hannah",
+      "normalized_text": "I'll send the customer notice by Nov 9."
+    },
+    {
+      "id": "ent-01-easy-cutover-035",
+      "author_label": "Elena",
+      "normalized_text": "I'll lock the weekend support rota by Nov 2."
+    },
+    {
+      "id": "ent-01-easy-cutover-036",
+      "author_label": "Marcus",
+      "normalized_text": "I'll brief the auditors on Nov 10 and confirm back here."
+    },
+    {
+      "id": "ent-01-easy-cutover-037",
+      "author_label": "Priya",
+      "normalized_text": "Great. I'll book the war room and post the final schedule once the runbook is done."
+    },
+    {
+      "id": "ent-01-easy-cutover-038",
+      "author_label": "Priya",
+      "normalized_text": "Thanks everyone."
+    }
+  ]
+}

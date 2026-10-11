@@ -1,0 +1,39 @@
+10/19/26, 9:05 AM - Priya: Morning all. We need to pick the weekend for the billing cutover to the new platform. Let's settle it in this thread.
+10/19/26, 9:06 AM - Hannah: I'd propose Nov 14-15. UAT should be done by then and it's well before the holidays.
+10/19/26, 9:08 AM - Dev: Another option is Nov 21-22. One more week of buffer.
+10/19/26, 9:09 AM - Hannah: And Dec 5-6 is possible if we slip. Probably not, but listing it.
+10/19/26, 9:12 AM - Priya: Good. Let's go through constraints first. Marcus, anything from Finance?
+10/19/26, 9:16 AM - Marcus: Month-end close takes the last three business days of the month. For this window that means keep clear of Nov 25-30.
+10/19/26, 9:18 AM - Marcus: Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that.
+10/19/26, 9:21 AM - Elena: Support constraint: our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.
+10/19/26, 9:22 AM - Elena: So Dec 5-6 doesn't work for me. I'd rather not do it then.
+10/19/26, 9:24 AM - Hannah: Understood, withdrawing Dec 5-6.
+10/19/26, 9:27 AM - Dev: From my side I need five full days after UAT sign-off for the final data sync and rehearsal.
+10/19/26, 9:29 AM - Tom: UAT sign-off is scheduled for Friday Nov 6. I can hold that date.
+10/19/26, 9:31 AM - Dev: Nov 6 plus five days is Nov 11, so Nov 14-15 works for me.
+10/19/26, 9:32 AM - Dev: Nov 21-22 works too but I'd rather not stretch it.
+10/19/26, 9:35 AM - Priya: Dev, how long did the last cutover take?
+10/19/26, 9:37 AM - Dev: The last one was about 9 hours on a Saturday night. This one is bigger so I'd plan for 12.
+10/19/26, 9:39 AM - Priya: OK. Criteria then: risk, support coverage and finance close. Anything else?
+10/19/26, 9:42 AM - Hannah: Customer notice. We promised customers 5 days notice for billing changes.
+10/19/26, 9:44 AM - Priya: That's easy for either date.
+10/19/26, 9:47 AM - Marcus: For me Nov 14-15 is cleaner. Close is well behind us and I can brief the auditors the week before.
+10/19/26, 9:49 AM - Elena: Nov 14-15 works for support. I'll have full weekend cover.
+10/19/26, 9:51 AM - Tom: Nov 14-15 is good for QA.
+10/19/26, 9:52 AM - Hannah: Nov 14-15 from me as well, it was my first pick.
+10/19/26, 9:54 AM - Dev: Nov 14-15, yes. I'd make Nov 21-22 the backup if UAT slips, not the main plan.
+10/19/26, 9:56 AM - Priya: Agreed on that. Anyone against Nov 14-15?
+10/19/26, 9:59 AM - Marcus: No objection.
+10/19/26, 10:00 AM - Elena: None here.
+10/19/26, 10:01 AM - Tom: None.
+10/19/26, 10:02 AM - Hannah: None.
+10/19/26, 10:04 AM - Dev: None, go.
+10/19/26, 10:06 AM - Priya: Then it's decided: cutover Sat Nov 14 to Sun Nov 15. Backup is Nov 21-22 if UAT sign-off slips past Nov 6.
+10/19/26, 10:09 AM - Priya: Next steps. Dev, can you write the runbook and have it reviewed by Nov 9?
+10/19/26, 10:11 AM - Dev: Yes, runbook by Nov 9.
+10/19/26, 10:13 AM - Tom: I'll sign off UAT on Nov 6.
+10/19/26, 10:15 AM - Hannah: I'll send the customer notice by Nov 9.
+10/19/26, 10:17 AM - Elena: I'll lock the weekend support rota by Nov 2.
+10/19/26, 10:20 AM - Marcus: I'll brief the auditors on Nov 10 and confirm back here.
+10/19/26, 10:22 AM - Priya: Great. I'll book the war room and post the final schedule once the runbook is done.
+10/19/26, 10:24 AM - Priya: Thanks everyone.

@@ -1,0 +1,764 @@
+{
+  "dataset": "ent-03-hard-data-platform",
+  "run": 1,
+  "model": "claude-sonnet-4-6",
+  "level": 3,
+  "score": {
+    "passed": 47,
+    "partial": 11,
+    "failed": 4,
+    "missing": 0,
+    "total": 62,
+    "score_pct": 84.7,
+    "by_section": {
+      "options": {
+        "pass": 4,
+        "fail": 0,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_status::Databricks (A)",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Databricks (A)' with status 'active' for the 'platform' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline contains 'Databricks' with status 'active' under decision 'platform', which is semantically equivalent to 'Databricks (A)' as an active platform option."
+          },
+          {
+            "claim_id": "option_status::Snowflake (B)",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Snowflake (B)' with status 'dropped' for the 'platform' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline contains 'Snowflake' with status 'dropped' under decision 'platform', matching 'Snowflake (B)' dropped."
+          },
+          {
+            "claim_id": "option_status::Federate across both platforms",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Federate across both platforms' with status 'fallback' for the 'platform' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline contains 'Federated cross-platform queries (bridge until cutover)' with status 'fallback' under decision 'platform', which is semantically equivalent to 'Federate across both platforms' as a fallback."
+          },
+          {
+            "claim_id": "option_status::Unified reporting by end of March",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Unified reporting by end of March' with status 'dropped' for the 'timing' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "partial",
+            "reason": "The pipeline contains a 'March' option with status 'dropped' under decision 'date' (not 'timing'), which is semantically equivalent but the gold specifies a 'timing' decision label and the option title 'March' is less descriptive than 'Unified reporting by end of March'."
+          },
+          {
+            "claim_id": "option_status::Q2 cutover",
+            "claim": "The pipeline output contains an option semantically equivalent to 'Q2 cutover' with status 'active' for the 'timing' decision (decision label may vary: 'approach', 'provider', 'vendor' etc. are all acceptable).",
+            "verdict": "pass",
+            "reason": "The pipeline contains 'Q2' with status 'active' under decision 'date', which is semantically equivalent to 'Q2 cutover' as an active timing option."
+          }
+        ]
+      },
+      "positions": {
+        "pass": 20,
+        "fail": 3,
+        "partial": 3,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "option_proposer::Databricks (A)",
+            "claim": "'Colleen' is recorded as the proposer of option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Colleen' as the proposed_by for the Databricks option."
+          },
+          {
+            "claim_id": "option_proposer::Snowflake (B)",
+            "claim": "'Raj' is recorded as the proposer of option 'Snowflake (B)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Raj' as the proposed_by for the Snowflake option."
+          },
+          {
+            "claim_id": "option_proposer::Federate across both platforms",
+            "claim": "'Imani' is recorded as the proposer of option 'Federate across both platforms'.",
+            "verdict": "fail",
+            "reason": "The pipeline records 'Gareth' as the proposer of the federated queries option, not 'Imani'."
+          },
+          {
+            "claim_id": "option_proposer::Unified reporting by end of March",
+            "claim": "'Sofia' is recorded as the proposer of option 'Unified reporting by end of March'.",
+            "verdict": "fail",
+            "reason": "The pipeline records 'Colleen' as the proposer of the March option, not 'Sofia'."
+          },
+          {
+            "claim_id": "option_proposer::Q2 cutover",
+            "claim": "'Colleen' is recorded as the proposer of option 'Q2 cutover'.",
+            "verdict": "pass",
+            "reason": "The pipeline records 'Colleen' as the proposer of the Q2 option."
+          },
+          {
+            "claim_id": "position::Colleen::Databricks (A)",
+            "claim": "'Colleen' has stance 'support' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Colleen with stance 'support' on the Databricks option."
+          },
+          {
+            "claim_id": "position::Imani::Databricks (A)",
+            "claim": "'Imani' has stance 'support' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Imani with stance 'support' on the Databricks option."
+          },
+          {
+            "claim_id": "position::Gareth::Databricks (A)",
+            "claim": "'Gareth' has stance 'support' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Gareth with stance 'support' on the Databricks option."
+          },
+          {
+            "claim_id": "position::Raj::Databricks (A)",
+            "claim": "'Raj' has stance 'conditional' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Raj with stance 'conditional' on the Databricks option, conditioned on stored procedure rewrites and lent engineers."
+          },
+          {
+            "claim_id": "position::Wei::Databricks (A)",
+            "claim": "'Wei' has stance 'conditional' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Wei with stance 'conditional' on the Databricks option, conditioned on BAA and tokenization."
+          },
+          {
+            "claim_id": "position::Dmitri::Databricks (A)",
+            "claim": "'Dmitri' has stance 'acknowledged' on option 'Databricks (A)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Dmitri with stance 'undecided' on Databricks; per leniency rules, 'undecided' and 'acknowledged' are semantically equivalent."
+          },
+          {
+            "claim_id": "position::Sofia::Databricks (A)",
+            "claim": "'Sofia' has stance 'proposed' on option 'Databricks (A)'.",
+            "verdict": "fail",
+            "reason": "The pipeline records Sofia with stance 'support' on Databricks, not 'proposed'; Sofia is not marked as the proposer of the Databricks option (Colleen is), so this cannot be treated as a withdrawn/proposer equivalence."
+          },
+          {
+            "claim_id": "position::Raj::Snowflake (B)",
+            "claim": "'Raj' has stance 'withdrawn' on option 'Snowflake (B)'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Raj with stance 'withdrawn' on the Snowflake option, and Raj is marked as proposer=true, matching the claim."
+          },
+          {
+            "claim_id": "position::Imani::Federate across both platforms",
+            "claim": "'Imani' has stance 'support' on option 'Federate across both platforms'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Imani with stance 'support' on 'Federated cross-platform queries (bridge until cutover)'."
+          },
+          {
+            "claim_id": "position::Colleen::Federate across both platforms",
+            "claim": "'Colleen' has stance 'conditional' on option 'Federate across both platforms'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Colleen with stance 'conditional' on 'Federated cross-platform queries (bridge until cutover)', accepted as temporary bridge only."
+          },
+          {
+            "claim_id": "position::Gareth::Federate across both platforms",
+            "claim": "'Gareth' has stance 'proposed' on option 'Federate across both platforms'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Gareth with stance 'proposed' on 'Federated cross-platform queries (bridge until cutover)', which is semantically equivalent to 'Federate across both platforms'."
+          },
+          {
+            "claim_id": "position::Sofia::Federate across both platforms",
+            "claim": "'Sofia' has stance 'conditional' on option 'Federate across both platforms'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Sofia with stance 'conditional' on 'Federated cross-platform queries (bridge until cutover)', matching the claim."
+          },
+          {
+            "claim_id": "position::Sofia::Unified reporting by end of March",
+            "claim": "'Sofia' has stance 'withdrawn' on option 'Unified reporting by end of March'.",
+            "verdict": "partial",
+            "reason": "Sofia has stance 'oppose' on the 'March' date option in the pipeline, not 'withdrawn'; the substance is similar but the stance label differs."
+          },
+          {
+            "claim_id": "position::Gareth::Unified reporting by end of March",
+            "claim": "'Gareth' has stance 'oppose' on option 'Unified reporting by end of March'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Gareth with stance 'oppose' on the 'March' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Wei::Unified reporting by end of March",
+            "claim": "'Wei' has stance 'oppose' on option 'Unified reporting by end of March'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Wei with stance 'oppose' on the 'March' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Colleen::Q2 cutover",
+            "claim": "'Colleen' has stance 'proposed' on option 'Q2 cutover'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Colleen with stance 'proposed' on the 'Q2' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Raj::Q2 cutover",
+            "claim": "'Raj' has stance 'support' on option 'Q2 cutover'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Raj with stance 'support' on the 'Q2' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Imani::Q2 cutover",
+            "claim": "'Imani' has stance 'support' on option 'Q2 cutover'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Imani with stance 'support' on the 'Q2' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Dmitri::Q2 cutover",
+            "claim": "'Dmitri' has stance 'support' on option 'Q2 cutover'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Dmitri with stance 'support' on the 'Q2' date option, matching the claim."
+          },
+          {
+            "claim_id": "position::Sofia::Q2 cutover",
+            "claim": "'Sofia' has stance 'support' on option 'Q2 cutover'.",
+            "verdict": "partial",
+            "reason": "The pipeline records Sofia with stance 'conditional' on the 'Q2' date option, not 'support' as the claim requires."
+          },
+          {
+            "claim_id": "position::Gareth::Q2 cutover",
+            "claim": "'Gareth' has stance 'conditional' on option 'Q2 cutover'.",
+            "verdict": "partial",
+            "reason": "The pipeline records Gareth with stance 'support' on the 'Q2' date option, not 'conditional' as the claim requires."
+          }
+        ]
+      },
+      "superseded_positions": {
+        "pass": 1,
+        "fail": 0,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "superseded::Raj::Snowflake (B)",
+            "claim": "'Raj' previously held stance 'support' on 'Snowflake (B)' and now has 'withdrawn'. The earlier stance should be superseded/updated.",
+            "verdict": "pass",
+            "reason": "The pipeline records Raj as proposer of the 'Snowflake' option with stance 'withdrawn', which per leniency rules covers the transition from support to withdrawn."
+          },
+          {
+            "claim_id": "superseded::Raj::Databricks (A)",
+            "claim": "'Raj' previously held stance 'conditional (tooling covers 40 procs)' on 'Databricks (A)' and now has 'conditional (plus two Halden engineers, now met)'. The earlier stance should be superseded/updated.",
+            "verdict": "partial",
+            "reason": "The pipeline records Raj's current stance on Databricks as 'conditional' (on stored procs and engineers), but does not explicitly capture the superseded earlier stance of conditional on tooling alone; only the current combined condition is shown."
+          }
+        ]
+      },
+      "actions": {
+        "pass": 7,
+        "fail": 0,
+        "partial": 1,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "action::Raj::Deliver the full stored-procedure assess",
+            "claim": "There is an action 'Deliver the full stored-procedure assessment' owned by 'Raj', due Nov 6.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Deliver the full stored procedure assessment by Nov 6' owned by Raj, due Nov 6, matching the claim."
+          },
+          {
+            "claim_id": "action::Wei::Finish the BAA addendum review",
+            "claim": "There is an action 'Finish the BAA addendum review' owned by 'Wei', due Nov 13.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Finish the BAA addendum review by Nov 13' owned by Wei, due Nov 13, matching the claim."
+          },
+          {
+            "claim_id": "action::Dmitri::Ask Snowflake for a 6-month extension to",
+            "claim": "There is an action 'Ask Snowflake for a 6-month extension to Aug 31' owned by 'Dmitri', due Nov 20.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal' owned by Dmitri, due Nov 20, matching the claim."
+          },
+          {
+            "claim_id": "action::Colleen::Commit two Halden engineers for six week",
+            "claim": "There is an action 'Commit two Halden engineers for six weeks from Dec 1' owned by 'Colleen', due Dec 1.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Commit two Halden engineers for six weeks starting Dec 1 to cover stored procedure rewrites' owned by Colleen with a Dec 1 start date, matching the claim."
+          },
+          {
+            "claim_id": "action::Colleen::Confirm the names of the two engineers",
+            "claim": "There is an action 'Confirm the names of the two engineers' owned by 'Colleen', due Nov 13.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Confirm names of the two Halden engineers by Nov 13' owned by Colleen, due Nov 13, matching the claim."
+          },
+          {
+            "claim_id": "action::Sofia::Confirm the platform formally at the ste",
+            "claim": "There is an action 'Confirm the platform formally at the steering meeting' owned by 'Sofia', due Nov 16.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Confirm the platform formally at the Nov 16 steering' owned by Sofia, due Nov 16, matching the claim."
+          },
+          {
+            "claim_id": "action::Sofia::Confirm the Q2 cutover date once Raj's a",
+            "claim": "There is an action 'Confirm the Q2 cutover date once Raj's assessment is back' owned by 'Sofia', due after Nov 6.",
+            "verdict": "pass",
+            "reason": "The pipeline records an action 'Confirm Q2 migration date once Raj's stored procedure assessment is back' owned by Sofia, consistent with 'after Nov 6' timing."
+          },
+          {
+            "claim_id": "action::None::Assign an owner for interim on-call of t",
+            "claim": "There is an action 'Assign an owner for interim on-call of the legacy Snowflake pipelines' owned by 'None'.",
+            "verdict": "partial",
+            "reason": "The pipeline records an action to 'Return to on-call ownership for legacy Snowflake pipelines during migration' owned by Sofia (not 'None'), so the substance is captured but the owner and framing differ from the gold standard."
+          }
+        ]
+      },
+      "blockers": {
+        "pass": 4,
+        "fail": 0,
+        "partial": 2,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "blocker::Stored-procedure coverage: 9 of 40 need rewrites; ",
+            "claim": "There is a blocker 'Stored-procedure coverage: 9 of 40 need rewrites; effort estimates conflict (about 2 weeks vs 4 to 6); gates Raj's support, Gareth's Q2 condition and the cutover date' with resolution status 'open'.",
+            "verdict": "partial",
+            "reason": "The pipeline has a blocker about stored procedure coverage and a separate one about rewrite effort being disputed (2 weeks vs 4\u20136 weeks), both marked resolved, but the gold standard expects a single open blocker combining both aspects."
+          },
+          {
+            "claim_id": "blocker::BAA addendum not yet reviewed and member-ID tokeni",
+            "claim": "There is a blocker 'BAA addendum not yet reviewed and member-ID tokenization required before claims data moves; gates Wei's support' with resolution status 'open'.",
+            "verdict": "pass",
+            "reason": "The pipeline records two open blockers covering the BAA addendum review and PHI BAA/tokenization requirement, together capturing the substance of this blocker."
+          },
+          {
+            "claim_id": "blocker::Security architecture review (Dec 8, about 3 weeks",
+            "claim": "There is a blocker 'Security architecture review (Dec 8, about 3 weeks) must finish before any PHI migration; sets the earliest cutover date' with resolution status 'open'.",
+            "verdict": "pass",
+            "reason": "The pipeline includes an open blocker: 'Security architecture review mandatory before PHI migration; booked Dec 8, takes ~3 weeks \u2014 exact Q2 migration date cannot be set until review completes.'"
+          },
+          {
+            "claim_id": "blocker::Snowflake auto-renews for 3 years on Feb 28 unless",
+            "claim": "There is a blocker 'Snowflake auto-renews for 3 years on Feb 28 unless notice by Nov 30, but cutover lands after Feb 28, so serving notice alone creates a gap; extension request pending; fallback is a one-year renewal (about $2.4M) that threatens the 10% cost target' with resolution status 'open'.",
+            "verdict": "pass",
+            "reason": "The pipeline captures this as an open blocker about the Snowflake contract deadline/gap, plus a separate open blocker about the extension request outcome and 1-year renewal fallback risk."
+          },
+          {
+            "claim_id": "blocker::Raj's condition that Halden lend two engineers for",
+            "claim": "There is a blocker 'Raj's condition that Halden lend two engineers for the rewrites' with resolution status 'resolved'.",
+            "verdict": "pass",
+            "reason": "The pipeline records the stored procedure rewrite blocker (9 of 40) as resolved (engineers committed), matching the 'resolved' status for Raj's engineer-lending condition."
+          },
+          {
+            "claim_id": "blocker::Snowflake contract terms unconfirmed",
+            "claim": "There is a blocker 'Snowflake contract terms unconfirmed' with resolution status 'resolved'.",
+            "verdict": "partial",
+            "reason": "The pipeline doesn't have an explicit blocker labeled 'Snowflake contract terms unconfirmed,' but the action 'Pull the Snowflake contract and confirm details by Wednesday' is marked 'completed,' partially capturing the resolved nature of this blocker."
+          }
+        ]
+      },
+      "objections": {
+        "pass": 2,
+        "fail": 1,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "objection::March is unrealistic for the pipeline volume (sarc",
+            "claim": "There is an objection 'March is unrealistic for the pipeline volume (sarcastic in m005, explicit in m038)' with resolution status 'resolved'.",
+            "verdict": "pass",
+            "reason": "The pipeline includes Gareth's objection about migrating 400 pipelines in six weeks not being realistic, marked as resolved via the Q2 decision."
+          },
+          {
+            "claim_id": "objection::Claims data cannot move by March with the BAA and ",
+            "claim": "There is an objection 'Claims data cannot move by March with the BAA and tokenization review not started' with resolution status 'resolved'.",
+            "verdict": "fail",
+            "reason": "The pipeline records Wei's claims-data/March/BAA objection but marks its resolution_status as 'open', whereas the gold standard expects it to be 'resolved'."
+          },
+          {
+            "claim_id": "objection::Running both doubles cost and numbers cannot be re",
+            "claim": "There is an objection 'Running both doubles cost and numbers cannot be reconciled (as an end state)' with resolution status 'resolved'.",
+            "verdict": "pass",
+            "reason": "The pipeline records Colleen's objection about doubled costs and irreconcilable numbers as resolved and moot, matching the gold standard."
+          }
+        ]
+      },
+      "separate_issues": {
+        "pass": 5,
+        "fail": 0,
+        "partial": 0,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "separate::{'text': \"Who owns on-call for the legacy Snowflak",
+            "claim": "'{'text': \"Who owns on-call for the legacy Snowflake pipelines during the migration? Raj's and Colleen's teams said they cannot; Sofia parked it; Gareth flagged it again on Wednesday.\", 'status': 'open, no owner', 'decision': 'interim on-call ownership', 'msgs': ['m050', 'm053', 'm054', 'm055', 'm056', 'm092', 'm100', 'm101']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline classifies 'On-call ownership for legacy Snowflake pipelines during migration' as a separate issue, matching the gold standard."
+          },
+          {
+            "claim_id": "separate::{'text': 'Visitor parking at the Halden office on ",
+            "claim": "'{'text': 'Visitor parking at the Halden office on Thursday', 'status': 'resolved (Level 3 of the garage)', 'msgs': ['m015', 'm016']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline classifies 'Visitor parking at Halden office' as a separate issue, matching the gold standard."
+          },
+          {
+            "claim_id": "separate::{'text': 'Is the 3pm call still on', 'status': 're",
+            "claim": "'{'text': 'Is the 3pm call still on', 'status': 'resolved', 'msgs': ['m013', 'm014']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline classifies the '3pm meeting logistics' as a separate issue, matching the gold standard."
+          },
+          {
+            "claim_id": "separate::{'text': 'Where the expense tool moved', 'status':",
+            "claim": "'{'text': 'Where the expense tool moved', 'status': 'resolved (Finance Apps)', 'msgs': ['m051', 'm052']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline classifies 'Expense tool link change' as a separate issue, matching the gold standard."
+          },
+          {
+            "claim_id": "separate::{'text': 'BI sign-off cover while Imani is out; We",
+            "claim": "'{'text': 'BI sign-off cover while Imani is out; Wei covers', 'status': 'resolved', 'msgs': ['m047', 'm097']}' is classified as a separate issue (not part of the main decision).",
+            "verdict": "pass",
+            "reason": "The pipeline classifies 'Imani's surgery absence and BI sign-off coverage' as a separate issue, matching the gold standard."
+          }
+        ]
+      },
+      "constraints": {
+        "pass": 4,
+        "fail": 0,
+        "partial": 3,
+        "missing": 0,
+        "details": [
+          {
+            "claim_id": "constraint::Exec ask: unified reporting by end of March",
+            "claim": "The constraint 'Exec ask: unified reporting by end of March' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes the constraint 'Unified reporting must be achieved by end of March' as mandatory."
+          },
+          {
+            "claim_id": "constraint::Snowflake renews Feb 28 and auto-renews for 3 year",
+            "claim": "The constraint 'Snowflake renews Feb 28 and auto-renews for 3 years unless notice is given by Nov 30' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes the constraint 'Snowflake non-renewal notice must be served by Nov 30 to avoid 3-year auto-renewal' and a separate constraint about access loss on Feb 28."
+          },
+          {
+            "claim_id": "constraint::PHI needs BAA coverage and the same access control",
+            "claim": "The constraint 'PHI needs BAA coverage and the same access controls; regulatory audit in May' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline includes constraints about PHI BAA coverage/access controls and the regulatory audit in May, together satisfying this claim."
+          },
+          {
+            "claim_id": "constraint::Security architecture review is mandatory before a",
+            "claim": "The constraint 'Security architecture review is mandatory before any PHI migration; booked Dec 8, about 3 weeks' is present in the pipeline output.",
+            "verdict": "pass",
+            "reason": "The pipeline explicitly includes 'Security architecture review is mandatory before any PHI migration; booked for Dec 8 and takes approximately 3 weeks' as a mandatory constraint."
+          },
+          {
+            "claim_id": "constraint::CFO run-cost reduction target of 10% (second-hand ",
+            "claim": "The constraint 'CFO run-cost reduction target of 10% (second-hand via Anita)' is present in the pipeline output.",
+            "verdict": "partial",
+            "reason": "The pipeline records the CFO target as 15% in constraints (the original, incorrect figure) while an agreement notes the correction to 10% via Anita; the constraint itself is not updated to reflect the corrected 10% figure."
+          },
+          {
+            "claim_id": "constraint::Federation allowed as an interim bridge only",
+            "claim": "The constraint 'Federation allowed as an interim bridge only' is present in the pipeline output.",
+            "verdict": "partial",
+            "reason": "The pipeline captures this as an agreement ('Federated cross-platform queries acceptable as interim bridge only, not end state') and as a conditional position for Colleen/Sofia, but it is not recorded as a formal constraint in the constraints list."
+          },
+          {
+            "claim_id": "constraint::Team capacity is fixed; no extra engineers for Raj",
+            "claim": "The constraint 'Team capacity is fixed; no extra engineers for Raj's team' is present in the pipeline output.",
+            "verdict": "partial",
+            "reason": "The pipeline records the hiring freeze / no backfill for Raj's team as a constraint ('No backfill for Raj's team due to hiring freeze; migration must be executed with existing staff only'), but it is marked as 'private' and does not explicitly frame it as 'no extra engineers for Raj' in the same terms; the substance is present but the framing differs slightly."
+          }
+        ]
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "claim_id": "option_status::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline contains 'Databricks' with status 'active' under decision 'platform', which is semantically equivalent to 'Databricks (A)' as an active platform option."
+    },
+    {
+      "claim_id": "option_proposer::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Colleen' as the proposed_by for the Databricks option."
+    },
+    {
+      "claim_id": "option_status::Snowflake (B)",
+      "verdict": "pass",
+      "reason": "The pipeline contains 'Snowflake' with status 'dropped' under decision 'platform', matching 'Snowflake (B)' dropped."
+    },
+    {
+      "claim_id": "option_proposer::Snowflake (B)",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Raj' as the proposed_by for the Snowflake option."
+    },
+    {
+      "claim_id": "option_status::Federate across both platforms",
+      "verdict": "pass",
+      "reason": "The pipeline contains 'Federated cross-platform queries (bridge until cutover)' with status 'fallback' under decision 'platform', which is semantically equivalent to 'Federate across both platforms' as a fallback."
+    },
+    {
+      "claim_id": "option_proposer::Federate across both platforms",
+      "verdict": "fail",
+      "reason": "The pipeline records 'Gareth' as the proposer of the federated queries option, not 'Imani'."
+    },
+    {
+      "claim_id": "option_status::Unified reporting by end of March",
+      "verdict": "partial",
+      "reason": "The pipeline contains a 'March' option with status 'dropped' under decision 'date' (not 'timing'), which is semantically equivalent but the gold specifies a 'timing' decision label and the option title 'March' is less descriptive than 'Unified reporting by end of March'."
+    },
+    {
+      "claim_id": "option_proposer::Unified reporting by end of March",
+      "verdict": "fail",
+      "reason": "The pipeline records 'Colleen' as the proposer of the March option, not 'Sofia'."
+    },
+    {
+      "claim_id": "option_status::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline contains 'Q2' with status 'active' under decision 'date', which is semantically equivalent to 'Q2 cutover' as an active timing option."
+    },
+    {
+      "claim_id": "option_proposer::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline records 'Colleen' as the proposer of the Q2 option."
+    },
+    {
+      "claim_id": "position::Colleen::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Colleen with stance 'support' on the Databricks option."
+    },
+    {
+      "claim_id": "position::Imani::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Imani with stance 'support' on the Databricks option."
+    },
+    {
+      "claim_id": "position::Gareth::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Gareth with stance 'support' on the Databricks option."
+    },
+    {
+      "claim_id": "position::Raj::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Raj with stance 'conditional' on the Databricks option, conditioned on stored procedure rewrites and lent engineers."
+    },
+    {
+      "claim_id": "position::Wei::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Wei with stance 'conditional' on the Databricks option, conditioned on BAA and tokenization."
+    },
+    {
+      "claim_id": "position::Dmitri::Databricks (A)",
+      "verdict": "pass",
+      "reason": "The pipeline records Dmitri with stance 'undecided' on Databricks; per leniency rules, 'undecided' and 'acknowledged' are semantically equivalent."
+    },
+    {
+      "claim_id": "position::Sofia::Databricks (A)",
+      "verdict": "fail",
+      "reason": "The pipeline records Sofia with stance 'support' on Databricks, not 'proposed'; Sofia is not marked as the proposer of the Databricks option (Colleen is), so this cannot be treated as a withdrawn/proposer equivalence."
+    },
+    {
+      "claim_id": "position::Raj::Snowflake (B)",
+      "verdict": "pass",
+      "reason": "The pipeline records Raj with stance 'withdrawn' on the Snowflake option, and Raj is marked as proposer=true, matching the claim."
+    },
+    {
+      "claim_id": "position::Imani::Federate across both platforms",
+      "verdict": "pass",
+      "reason": "The pipeline records Imani with stance 'support' on 'Federated cross-platform queries (bridge until cutover)'."
+    },
+    {
+      "claim_id": "position::Colleen::Federate across both platforms",
+      "verdict": "pass",
+      "reason": "The pipeline records Colleen with stance 'conditional' on 'Federated cross-platform queries (bridge until cutover)', accepted as temporary bridge only."
+    },
+    {
+      "claim_id": "position::Gareth::Federate across both platforms",
+      "verdict": "pass",
+      "reason": "The pipeline records Gareth with stance 'proposed' on 'Federated cross-platform queries (bridge until cutover)', which is semantically equivalent to 'Federate across both platforms'."
+    },
+    {
+      "claim_id": "position::Sofia::Federate across both platforms",
+      "verdict": "pass",
+      "reason": "The pipeline records Sofia with stance 'conditional' on 'Federated cross-platform queries (bridge until cutover)', matching the claim."
+    },
+    {
+      "claim_id": "position::Sofia::Unified reporting by end of March",
+      "verdict": "partial",
+      "reason": "Sofia has stance 'oppose' on the 'March' date option in the pipeline, not 'withdrawn'; the substance is similar but the stance label differs."
+    },
+    {
+      "claim_id": "position::Gareth::Unified reporting by end of March",
+      "verdict": "pass",
+      "reason": "The pipeline records Gareth with stance 'oppose' on the 'March' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Wei::Unified reporting by end of March",
+      "verdict": "pass",
+      "reason": "The pipeline records Wei with stance 'oppose' on the 'March' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Colleen::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline records Colleen with stance 'proposed' on the 'Q2' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Raj::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline records Raj with stance 'support' on the 'Q2' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Imani::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline records Imani with stance 'support' on the 'Q2' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Dmitri::Q2 cutover",
+      "verdict": "pass",
+      "reason": "The pipeline records Dmitri with stance 'support' on the 'Q2' date option, matching the claim."
+    },
+    {
+      "claim_id": "position::Sofia::Q2 cutover",
+      "verdict": "partial",
+      "reason": "The pipeline records Sofia with stance 'conditional' on the 'Q2' date option, not 'support' as the claim requires."
+    },
+    {
+      "claim_id": "position::Gareth::Q2 cutover",
+      "verdict": "partial",
+      "reason": "The pipeline records Gareth with stance 'support' on the 'Q2' date option, not 'conditional' as the claim requires."
+    },
+    {
+      "claim_id": "superseded::Raj::Snowflake (B)",
+      "verdict": "pass",
+      "reason": "The pipeline records Raj as proposer of the 'Snowflake' option with stance 'withdrawn', which per leniency rules covers the transition from support to withdrawn."
+    },
+    {
+      "claim_id": "superseded::Raj::Databricks (A)",
+      "verdict": "partial",
+      "reason": "The pipeline records Raj's current stance on Databricks as 'conditional' (on stored procs and engineers), but does not explicitly capture the superseded earlier stance of conditional on tooling alone; only the current combined condition is shown."
+    },
+    {
+      "claim_id": "action::Raj::Deliver the full stored-procedure assess",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Deliver the full stored procedure assessment by Nov 6' owned by Raj, due Nov 6, matching the claim."
+    },
+    {
+      "claim_id": "action::Wei::Finish the BAA addendum review",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Finish the BAA addendum review by Nov 13' owned by Wei, due Nov 13, matching the claim."
+    },
+    {
+      "claim_id": "action::Dmitri::Ask Snowflake for a 6-month extension to",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal' owned by Dmitri, due Nov 20, matching the claim."
+    },
+    {
+      "claim_id": "action::Colleen::Commit two Halden engineers for six week",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Commit two Halden engineers for six weeks starting Dec 1 to cover stored procedure rewrites' owned by Colleen with a Dec 1 start date, matching the claim."
+    },
+    {
+      "claim_id": "action::Colleen::Confirm the names of the two engineers",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Confirm names of the two Halden engineers by Nov 13' owned by Colleen, due Nov 13, matching the claim."
+    },
+    {
+      "claim_id": "action::Sofia::Confirm the platform formally at the ste",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Confirm the platform formally at the Nov 16 steering' owned by Sofia, due Nov 16, matching the claim."
+    },
+    {
+      "claim_id": "action::Sofia::Confirm the Q2 cutover date once Raj's a",
+      "verdict": "pass",
+      "reason": "The pipeline records an action 'Confirm Q2 migration date once Raj's stored procedure assessment is back' owned by Sofia, consistent with 'after Nov 6' timing."
+    },
+    {
+      "claim_id": "action::None::Assign an owner for interim on-call of t",
+      "verdict": "partial",
+      "reason": "The pipeline records an action to 'Return to on-call ownership for legacy Snowflake pipelines during migration' owned by Sofia (not 'None'), so the substance is captured but the owner and framing differ from the gold standard."
+    },
+    {
+      "claim_id": "blocker::Stored-procedure coverage: 9 of 40 need rewrites; ",
+      "verdict": "partial",
+      "reason": "The pipeline has a blocker about stored procedure coverage and a separate one about rewrite effort being disputed (2 weeks vs 4\u20136 weeks), both marked resolved, but the gold standard expects a single open blocker combining both aspects."
+    },
+    {
+      "claim_id": "blocker::BAA addendum not yet reviewed and member-ID tokeni",
+      "verdict": "pass",
+      "reason": "The pipeline records two open blockers covering the BAA addendum review and PHI BAA/tokenization requirement, together capturing the substance of this blocker."
+    },
+    {
+      "claim_id": "blocker::Security architecture review (Dec 8, about 3 weeks",
+      "verdict": "pass",
+      "reason": "The pipeline includes an open blocker: 'Security architecture review mandatory before PHI migration; booked Dec 8, takes ~3 weeks \u2014 exact Q2 migration date cannot be set until review completes.'"
+    },
+    {
+      "claim_id": "blocker::Snowflake auto-renews for 3 years on Feb 28 unless",
+      "verdict": "pass",
+      "reason": "The pipeline captures this as an open blocker about the Snowflake contract deadline/gap, plus a separate open blocker about the extension request outcome and 1-year renewal fallback risk."
+    },
+    {
+      "claim_id": "blocker::Raj's condition that Halden lend two engineers for",
+      "verdict": "pass",
+      "reason": "The pipeline records the stored procedure rewrite blocker (9 of 40) as resolved (engineers committed), matching the 'resolved' status for Raj's engineer-lending condition."
+    },
+    {
+      "claim_id": "blocker::Snowflake contract terms unconfirmed",
+      "verdict": "partial",
+      "reason": "The pipeline doesn't have an explicit blocker labeled 'Snowflake contract terms unconfirmed,' but the action 'Pull the Snowflake contract and confirm details by Wednesday' is marked 'completed,' partially capturing the resolved nature of this blocker."
+    },
+    {
+      "claim_id": "objection::March is unrealistic for the pipeline volume (sarc",
+      "verdict": "pass",
+      "reason": "The pipeline includes Gareth's objection about migrating 400 pipelines in six weeks not being realistic, marked as resolved via the Q2 decision."
+    },
+    {
+      "claim_id": "objection::Claims data cannot move by March with the BAA and ",
+      "verdict": "fail",
+      "reason": "The pipeline records Wei's claims-data/March/BAA objection but marks its resolution_status as 'open', whereas the gold standard expects it to be 'resolved'."
+    },
+    {
+      "claim_id": "objection::Running both doubles cost and numbers cannot be re",
+      "verdict": "pass",
+      "reason": "The pipeline records Colleen's objection about doubled costs and irreconcilable numbers as resolved and moot, matching the gold standard."
+    },
+    {
+      "claim_id": "separate::{'text': \"Who owns on-call for the legacy Snowflak",
+      "verdict": "pass",
+      "reason": "The pipeline classifies 'On-call ownership for legacy Snowflake pipelines during migration' as a separate issue, matching the gold standard."
+    },
+    {
+      "claim_id": "separate::{'text': 'Visitor parking at the Halden office on ",
+      "verdict": "pass",
+      "reason": "The pipeline classifies 'Visitor parking at Halden office' as a separate issue, matching the gold standard."
+    },
+    {
+      "claim_id": "separate::{'text': 'Is the 3pm call still on', 'status': 're",
+      "verdict": "pass",
+      "reason": "The pipeline classifies the '3pm meeting logistics' as a separate issue, matching the gold standard."
+    },
+    {
+      "claim_id": "separate::{'text': 'Where the expense tool moved', 'status':",
+      "verdict": "pass",
+      "reason": "The pipeline classifies 'Expense tool link change' as a separate issue, matching the gold standard."
+    },
+    {
+      "claim_id": "separate::{'text': 'BI sign-off cover while Imani is out; We",
+      "verdict": "pass",
+      "reason": "The pipeline classifies 'Imani's surgery absence and BI sign-off coverage' as a separate issue, matching the gold standard."
+    },
+    {
+      "claim_id": "constraint::Exec ask: unified reporting by end of March",
+      "verdict": "pass",
+      "reason": "The pipeline includes the constraint 'Unified reporting must be achieved by end of March' as mandatory."
+    },
+    {
+      "claim_id": "constraint::Snowflake renews Feb 28 and auto-renews for 3 year",
+      "verdict": "pass",
+      "reason": "The pipeline includes the constraint 'Snowflake non-renewal notice must be served by Nov 30 to avoid 3-year auto-renewal' and a separate constraint about access loss on Feb 28."
+    },
+    {
+      "claim_id": "constraint::PHI needs BAA coverage and the same access control",
+      "verdict": "pass",
+      "reason": "The pipeline includes constraints about PHI BAA coverage/access controls and the regulatory audit in May, together satisfying this claim."
+    },
+    {
+      "claim_id": "constraint::Security architecture review is mandatory before a",
+      "verdict": "pass",
+      "reason": "The pipeline explicitly includes 'Security architecture review is mandatory before any PHI migration; booked for Dec 8 and takes approximately 3 weeks' as a mandatory constraint."
+    },
+    {
+      "claim_id": "constraint::CFO run-cost reduction target of 10% (second-hand ",
+      "verdict": "partial",
+      "reason": "The pipeline records the CFO target as 15% in constraints (the original, incorrect figure) while an agreement notes the correction to 10% via Anita; the constraint itself is not updated to reflect the corrected 10% figure."
+    },
+    {
+      "claim_id": "constraint::Federation allowed as an interim bridge only",
+      "verdict": "partial",
+      "reason": "The pipeline captures this as an agreement ('Federated cross-platform queries acceptable as interim bridge only, not end state') and as a conditional position for Colleen/Sofia, but it is not recorded as a formal constraint in the constraints list."
+    },
+    {
+      "claim_id": "constraint::Team capacity is fixed; no extra engineers for Raj",
+      "verdict": "partial",
+      "reason": "The pipeline records the hiring freeze / no backfill for Raj's team as a constraint ('No backfill for Raj's team due to hiring freeze; migration must be executed with existing staff only'), but it is marked as 'private' and does not explicitly frame it as 'no extra engineers for Raj' in the same terms; the substance is present but the framing differs slightly."
+    }
+  ]
+}

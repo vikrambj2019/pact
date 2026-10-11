@@ -5,7 +5,6 @@ import JobPoller from './JobPoller';
 
 interface Props {
   workspace: Workspace;
-  onWorkspaceUpdate: () => void;
 }
 
 const EVIDENCE_COLOR: Record<string, string> = {
@@ -98,12 +97,57 @@ function ClaimCard({ claim, workspaceId, onReviewed }: {
   );
 }
 
-export default function BriefTab({ workspace, onWorkspaceUpdate }: Props) {
+function renderInline(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((p, i) =>
+    p.startsWith('**') && p.endsWith('**')
+      ? <strong key={i} className="font-semibold text-gray-900">{p.slice(2, -2)}</strong>
+      : <span key={i}>{p}</span>
+  );
+}
+
+function ExecSummary({ text }: { text: string }) {
+  const blocks = text.split(/^---$/m);
+  return (
+    <div className="space-y-3 text-sm text-gray-700">
+      {blocks.map((block, bi) => {
+        const lines = block.trim().split('\n').filter(Boolean);
+        return (
+          <div key={bi} className={bi > 0 ? 'border-t border-gray-100 pt-3' : ''}>
+            {lines.map((line, li) => {
+              const bullet = line.match(/^[-•]\s+(.*)/);
+              const numbered = line.match(/^(\d+)\.\s+(.*)/);
+              const heading = line.match(/^\*\*([^*]+)\*\*$/);
+
+              if (heading) return (
+                <p key={li} className="text-xs font-bold text-gray-500 uppercase tracking-wide mt-2 mb-1">
+                  {heading[1]}
+                </p>
+              );
+              if (bullet) return (
+                <div key={li} className="flex gap-2 ml-2">
+                  <span className="text-gray-400 shrink-0">·</span>
+                  <span>{renderInline(bullet[1])}</span>
+                </div>
+              );
+              if (numbered) return (
+                <div key={li} className="flex gap-2 ml-2">
+                  <span className="text-gray-400 shrink-0 w-4">{numbered[1]}.</span>
+                  <span>{renderInline(numbered[2])}</span>
+                </div>
+              );
+              return <p key={li} className="leading-relaxed">{renderInline(line)}</p>;
+            })}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function BriefTab({ workspace }: Props) {
   const [brief, setBrief] = useState<BriefData | null>(null);
   const [briefError, setBriefError] = useState('');
-  const [extractJobId, setExtractJobId] = useState<string | null>(null);
-  const [synthJobId, setSynthJobId] = useState<string | null>(null);
-  const [actionError, setActionError] = useState('');
 
   const loadBrief = useCallback(() => {
     api.brief.get(workspace.id)
@@ -113,78 +157,15 @@ export default function BriefTab({ workspace, onWorkspaceUpdate }: Props) {
 
   useEffect(() => { loadBrief(); }, [loadBrief]);
 
-  async function handleExtract() {
-    setActionError('');
-    try {
-      const res = await api.brief.extract(workspace.id);
-      setExtractJobId(res.job_id);
-    } catch (e: unknown) {
-      setActionError(e instanceof Error ? e.message : String(e));
-    }
-  }
-
-  async function handleSynthesize() {
-    setActionError('');
-    try {
-      const res = await api.brief.synthesize(workspace.id);
-      setSynthJobId(res.job_id);
-    } catch (e: unknown) {
-      setActionError(e instanceof Error ? e.message : String(e));
-    }
-  }
-
-  function onJobDone(job: Job) {
-    setExtractJobId(null);
-    setSynthJobId(null);
-    if (job.status === 'failed') {
-      setActionError(job.error_detail ?? `${job.type} job failed`);
-    } else {
-      onWorkspaceUpdate();
-      loadBrief();
-    }
-  }
-
   const b = brief?.brief;
   const optionById = Object.fromEntries((b?.options ?? []).map((o: BriefOption) => [o.id, o]));
-  const isDraft = workspace.lifecycle_status === 'draft';
 
   return (
     <div className="space-y-6">
-      {/* Actions */}
-      <div className="flex flex-wrap items-center gap-3">
-        {isDraft ? (
-          <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
-            Confirm the decision question in the Sources tab before extracting.
-          </p>
-        ) : (
-          <>
-            {extractJobId ? (
-              <JobPoller jobId={extractJobId} onDone={onJobDone} onFailed={onJobDone} />
-            ) : (
-              <button
-                onClick={handleExtract}
-                className="bg-white border border-gray-300 text-sm px-4 py-2 rounded-md hover:bg-gray-50 transition-colors"
-              >
-                Extract
-              </button>
-            )}
-            {synthJobId ? (
-              <JobPoller jobId={synthJobId} onDone={onJobDone} onFailed={onJobDone} />
-            ) : (
-              <button
-                onClick={handleSynthesize}
-                className="bg-indigo-600 text-white text-sm px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
-              >
-                Synthesize brief
-              </button>
-            )}
-          </>
-        )}
-        {actionError && <p className="text-sm text-red-600">{actionError}</p>}
-      </div>
-
-      {briefError && !brief && (
-        <p className="text-sm text-gray-400">{briefError === 'Not Found' || briefError.includes('404') ? 'No brief yet — run extract then synthesize.' : briefError}</p>
+      {!brief && (
+        <p className="text-sm text-gray-400">
+          {briefError && !briefError.includes('404') ? briefError : 'No brief yet — use "Build brief" in the Sources tab.'}
+        </p>
       )}
 
       {b && (
@@ -192,6 +173,13 @@ export default function BriefTab({ workspace, onWorkspaceUpdate }: Props) {
           <div className="text-xs text-gray-400">
             Revision {brief!.revision_number} · {new Date(brief!.created_at).toLocaleString()}
           </div>
+
+          {b.executive_summary && (
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <p className="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-3">Executive Summary</p>
+              <ExecSummary text={b.executive_summary} />
+            </div>
+          )}
 
           {b.question && (
             <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4">

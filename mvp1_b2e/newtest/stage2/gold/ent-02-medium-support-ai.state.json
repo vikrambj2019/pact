@@ -1,0 +1,29 @@
+{
+ "transcript": "ent-02-medium-support-ai.txt",
+ "notes": "Ends in a CONDITIONAL recommendation for Relay, not a final decision. Keiko supports Relay, leans build, drops build, then supports Relay again. Jonas's SOC 2 Type II claim is wrong (Amira) and later corrected by the rep. Budget question and implementation-fee question both get answered.",
+ "participants": ["Rhea", "Keiko", "Jonas", "Luis", "Amira", "Ben"],
+ "questions": [
+  {"key": "buildbuy", "match": ["build", "buy", "vendor", "assistant", "direction", "support"], "status": ["open", "conditional", "decided"]}
+ ],
+ "options": [
+  {"key": "relay", "match": ["relay"], "status": ["chosen", "active"],
+   "stances": {"Rhea": ["support"], "Keiko": ["support"], "Jonas": ["conditional"],
+               "Amira": ["conditional"], "Luis": ["conditional"], "Ben": ["conditional"]}},
+  {"key": "hollis", "match": ["hollis"], "status": ["dropped"],
+   "stances": {"Luis": ["oppose"], "Rhea": ["blank", "oppose"], "Keiko": ["blank", "oppose"]}},
+  {"key": "build", "match": ["build", "in-house", "in house", "ourselves"], "exclude": ["relay", "hollis"], "status": ["dropped"],
+   "stances": {"Keiko": ["withdrawn", "oppose"], "Jonas": ["support", "blank"]}}
+ ],
+ "elements": [
+  {"key": "jonas_soc2", "msg": "m15", "kinds": ["claim"], "status": ["superseded", "conflicting"]},
+  {"key": "budget_q", "msg": "m5", "kinds": ["blocker"], "status": ["resolved"]},
+  {"key": "impl_fee_q", "msg": "m24", "kinds": ["blocker"], "status": ["resolved"]},
+  {"key": "cap", "msg": "m6", "kinds": ["constraint"], "status": ["active"]},
+  {"key": "dpa", "msg": "m22", "kinds": ["constraint"], "status": ["active"]}
+ ],
+ "histories": [
+  {"option": "build", "participant": "Keiko", "sequence": [["support", "conditional"], ["withdrawn", "oppose"]]},
+  {"option": "relay", "participant": "Amira", "sequence": [["conditional"]]}
+ ],
+ "flags": []
+}

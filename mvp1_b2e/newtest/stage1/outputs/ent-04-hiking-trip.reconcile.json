@@ -1,0 +1,3448 @@
+{
+ "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/stage1/outputs/ent-04-hiking-trip.output.json",
+ "model": "claude-sonnet-4-6",
+ "participants": [
+  "Maya",
+  "Leo",
+  "Sam",
+  "Priya",
+  "Arjun",
+  "Nora"
+ ],
+ "span_msgs": {
+  "b1.s1": "m1",
+  "b1.s2": "m1",
+  "b2.s1": "m2",
+  "b2.s2": "m2",
+  "b3.s1": "m3",
+  "b4.s1": "m4",
+  "b4.s2": "m4",
+  "b5.s1": "m5",
+  "b5.s2": "m6",
+  "b5.s3": "m7",
+  "b5.s4": "m8",
+  "b6.s1": "m9",
+  "b6.s2": "m9",
+  "b7.s1": "m10",
+  "b7.s2": "m10",
+  "b8.s1": "m11",
+  "b9.s1": "m12",
+  "b9.s2": "m12",
+  "b10.s1": "m13",
+  "b11.s1": "m14",
+  "b12.s1": "m15",
+  "b13.s1": "m16",
+  "b14.s1": "m17",
+  "b14.s2": "m17",
+  "b15.s1": "m18",
+  "b16.s1": "m19",
+  "b17.s1": "m20",
+  "b17.s2": "m20",
+  "b18.s1": "m21",
+  "b18.s2": "m22",
+  "b18.s3": "m23",
+  "b19.s1": "m24",
+  "b19.s2": "m24",
+  "b20.s1": "m25",
+  "b20.s2": "m25",
+  "b21.s1": "m26",
+  "b21.s2": "m26",
+  "b22.s1": "m27",
+  "b22.s2": "m27",
+  "b23.s1": "m28",
+  "b24.s1": "m29",
+  "b25.s1": "m30",
+  "b25.s2": "m30",
+  "b25.s3": "m30",
+  "b25.s4": "m31",
+  "b25.s5": "m31",
+  "b26.s1": "m32",
+  "b26.s2": "m32",
+  "b27.s1": "m33",
+  "b27.s2": "m33",
+  "b28.s1": "m34",
+  "b28.s2": "m34",
+  "b29.s1": "m35",
+  "b29.s2": "m35",
+  "b30.s1": "m36",
+  "b31.s1": "m37",
+  "b31.s2": "m37",
+  "b32.s1": "m38",
+  "b32.s2": "m39",
+  "b32.s3": "m40",
+  "b32.s4": "m40",
+  "b33.s1": "m41",
+  "b34.s1": "m42",
+  "b34.s2": "m42",
+  "b35.s1": "m43",
+  "b35.s2": "m43",
+  "b36.s1": "m44",
+  "b37.s1": "m45",
+  "b37.s2": "m45",
+  "b38.s1": "m46",
+  "b38.s2": "m46",
+  "b39.s1": "m47",
+  "b39.s2": "m47",
+  "b40.s1": "m48",
+  "b40.s2": "m48",
+  "b41.s1": "m49",
+  "b42.s1": "m50",
+  "b43.s1": "m51",
+  "b44.s1": "m52",
+  "b45.s1": "m53",
+  "b46.s1": "m54",
+  "b47.s1": "m55",
+  "b48.s1": "m56",
+  "b48.s2": "m56",
+  "b49.s1": "m57",
+  "b49.s2": "m57",
+  "b49.s3": "m58",
+  "b49.s4": "m58",
+  "b50.s1": "m59",
+  "b51.s1": "m60",
+  "b51.s2": "m60",
+  "b51.s3": "m61",
+  "b51.s4": "m61",
+  "b52.s1": "m62",
+  "b52.s2": "m62",
+  "b53.s1": "m63",
+  "b53.s2": "m63",
+  "b53.s3": "m63",
+  "b53.s4": "m63",
+  "b54.s1": "m64",
+  "b55.s1": "m65",
+  "b55.s2": "m65",
+  "b56.s1": "m66",
+  "b56.s2": "m66",
+  "b57.s1": "m67",
+  "b57.s2": "m67",
+  "b58.s1": "m68",
+  "b59.s1": "m69",
+  "b59.s2": "m69",
+  "b60.s1": "m70",
+  "b60.s2": "m70",
+  "b61.s1": "m71",
+  "b61.s2": "m71",
+  "b61.s3": "m71",
+  "b61.s4": "m71",
+  "b62.s1": "m72",
+  "b62.s2": "m72",
+  "b62.s3": "m72",
+  "b63.s1": "m73",
+  "b64.s1": "m74",
+  "b65.s1": "m75"
+ },
+ "elements": [
+  {
+   "id": "q1",
+   "kind": "question",
+   "title": "Which trail to hike",
+   "author": "Maya",
+   "created_span": "b1.s1",
+   "status": "decided",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s1",
+    "b38.s1",
+    "b51.s1",
+    "b61.s1"
+   ]
+  },
+  {
+   "id": "q2",
+   "kind": "question",
+   "title": "Which day to hike",
+   "author": "Maya",
+   "created_span": "b1.s2",
+   "status": "decided",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s2",
+    "b38.s2"
+   ]
+  },
+  {
+   "id": "opt1",
+   "kind": "option",
+   "title": "Sat Nov 14",
+   "author": "Leo",
+   "created_span": "b2.s1",
+   "status": "dropped",
+   "question_id": "q2",
+   "aliases": [
+    "Saturday",
+    "Nov 14"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b4.s2",
+    "b5.s3",
+    "b6.s1",
+    "b18.s3"
+   ]
+  },
+  {
+   "id": "opt2",
+   "kind": "option",
+   "title": "Sun Nov 15",
+   "author": "Leo",
+   "created_span": "b2.s1",
+   "status": "chosen",
+   "question_id": "q2",
+   "aliases": [
+    "Sunday",
+    "Nov 15"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b5.s4",
+    "b6.s2",
+    "b18.s2",
+    "b37.s2",
+    "b38.s2",
+    "b39.s2",
+    "b49.s3",
+    "b61.s2"
+   ]
+  },
+  {
+   "id": "clm1",
+   "kind": "claim",
+   "title": "Sat Nov 14 and Sun Nov 15 are the intended weekend dates",
+   "author": "Leo",
+   "created_span": "b2.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1",
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s2"
+   ]
+  },
+  {
+   "id": "opt3",
+   "kind": "option",
+   "title": "Mission Peak",
+   "author": "Sam",
+   "created_span": "b3.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s1",
+    "b17.s1",
+    "b26.s1"
+   ]
+  },
+  {
+   "id": "con1",
+   "kind": "constraint",
+   "title": "Bean (dog) must be allowed on the trail",
+   "author": "Priya",
+   "created_span": "b4.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s1",
+    "b34.s2"
+   ]
+  },
+  {
+   "id": "con2",
+   "kind": "constraint",
+   "title": "Priya cannot join without Bean (dog)",
+   "author": "Priya",
+   "created_span": "b4.s2",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s2"
+   ]
+  },
+  {
+   "id": "con3",
+   "kind": "constraint",
+   "title": "Arjun unavailable Sat Nov 14 (kid's recital)",
+   "author": "Arjun",
+   "created_span": "b5.s3",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b5.s3"
+   ]
+  },
+  {
+   "id": "con4",
+   "kind": "constraint",
+   "title": "Nora unavailable Sat Nov 14",
+   "author": "Nora",
+   "created_span": "b6.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s1"
+   ]
+  },
+  {
+   "id": "opt4",
+   "kind": "option",
+   "title": "Mt. Diablo Summit Trail",
+   "author": "Maya",
+   "created_span": "b7.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [
+    "Mt. Diablo",
+    "Diablo summit",
+    "Mt. Diablo 5-mile summit-lot route"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b7.s1",
+    "b7.s2",
+    "b8.s1",
+    "b20.s1",
+    "b20.s2",
+    "b21.s1",
+    "b22.s1",
+    "b21.s2",
+    "b23.s1",
+    "b24.s1",
+    "b28.s1",
+    "b28.s2",
+    "b29.s2",
+    "b31.s2",
+    "b32.s1",
+    "b32.s3",
+    "b34.s1",
+    "b34.s2",
+    "b36.s1",
+    "b37.s1",
+    "b38.s1",
+    "b39.s1",
+    "b51.s1",
+    "b51.s3",
+    "b51.s2",
+    "b52.s1",
+    "b53.s1",
+    "b53.s2",
+    "b57.s1"
+   ]
+  },
+  {
+   "id": "clm2",
+   "kind": "claim",
+   "title": "Mt. Diablo is 12 miles uphill in the heat (sarcastic objection)",
+   "author": "Leo",
+   "created_span": "b8.s1",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b8.s1"
+   ]
+  },
+  {
+   "id": "blk1",
+   "kind": "blocker",
+   "title": "Does Mission Peak allow dogs?",
+   "author": "Priya",
+   "created_span": "b9.s1",
+   "status": "resolved",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b9.s1",
+    "b9.s2",
+    "b25.s1"
+   ]
+  },
+  {
+   "id": "clm3",
+   "kind": "claim",
+   "title": "Mission Peak Stanford Ave trailhead parking is free",
+   "author": "Sam",
+   "created_span": "b10.s1",
+   "status": "superseded",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": "clm11",
+   "spans": [
+    "b10.s1",
+    "b27.s1"
+   ]
+  },
+  {
+   "id": "clm4",
+   "kind": "claim",
+   "title": "Hike views are worth an early start",
+   "author": "Arjun",
+   "created_span": "b12.s1",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "priority",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b12.s1"
+   ]
+  },
+  {
+   "id": "clm5",
+   "kind": "claim",
+   "title": "Sam already knows Mission Peak route",
+   "author": "Sam",
+   "created_span": "b17.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s2"
+   ]
+  },
+  {
+   "id": "con5",
+   "kind": "constraint",
+   "title": "Maya unavailable Sat Nov 14 (working)",
+   "author": "Maya",
+   "created_span": "b18.s3",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b18.s3"
+   ]
+  },
+  {
+   "id": "con6",
+   "kind": "constraint",
+   "title": "Leo cannot hike more than 6 miles",
+   "author": "Leo",
+   "created_span": "b19.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s1",
+    "b21.s2",
+    "b55.s2"
+   ]
+  },
+  {
+   "id": "clm6",
+   "kind": "claim",
+   "title": "Mt. Diablo has a 5-mile version starting at summit lot",
+   "author": "Maya",
+   "created_span": "b20.s1",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b20.s1",
+    "b20.s2"
+   ]
+  },
+  {
+   "id": "clm7",
+   "kind": "claim",
+   "title": "Mt. Diablo (12-mile) is too long \u2014 a death march",
+   "author": "Sam",
+   "created_span": "b22.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b22.s2"
+   ]
+  },
+  {
+   "id": "clm8",
+   "kind": "claim",
+   "title": "Mission Peak allows dogs on leash",
+   "author": "Priya",
+   "created_span": "b25.s1",
+   "status": "confirmed",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s1",
+    "b25.s2",
+    "b25.s3"
+   ]
+  },
+  {
+   "id": "clm9",
+   "kind": "claim",
+   "title": "Priya verified Mission Peak dog policy via park page",
+   "author": "Priya",
+   "created_span": "b25.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s2"
+   ]
+  },
+  {
+   "id": "blk2",
+   "kind": "blocker",
+   "title": "Dog rule for Diablo summit-lot 5-mile route unknown",
+   "author": "Priya",
+   "created_span": "b25.s4",
+   "status": "resolved",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "missing_info",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s4",
+    "b25.s5",
+    "b35.s1"
+   ]
+  },
+  {
+   "id": "clm10",
+   "kind": "claim",
+   "title": "Mission Peak parking queue can take an hour",
+   "author": "Sam",
+   "created_span": "b26.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b26.s2"
+   ]
+  },
+  {
+   "id": "clm11",
+   "kind": "claim",
+   "title": "Mission Peak Stanford Ave parking now costs $10 (not free)",
+   "author": "Maya",
+   "created_span": "b27.s1",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b27.s1",
+    "b27.s2"
+   ]
+  },
+  {
+   "id": "opt5",
+   "kind": "option",
+   "title": "Sunol Little Yosemite Loop",
+   "author": "Sam",
+   "created_span": "b29.s1",
+   "status": "chosen",
+   "question_id": "q1",
+   "aliases": [
+    "Sunol",
+    "Sunol loop"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b29.s1",
+    "b29.s2",
+    "b30.s1",
+    "b31.s2",
+    "b38.s1",
+    "b53.s3",
+    "b53.s4",
+    "b54.s1",
+    "b55.s1",
+    "b55.s2",
+    "b56.s1",
+    "b57.s2",
+    "b60.s1",
+    "b61.s1"
+   ]
+  },
+  {
+   "id": "con7",
+   "kind": "constraint",
+   "title": "Sam unavailable this weekend (Nov 14\u201315)",
+   "author": "Sam",
+   "created_span": "b31.s1",
+   "status": "superseded",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": "clm13",
+   "spans": [
+    "b31.s1",
+    "b32.s2"
+   ]
+  },
+  {
+   "id": "clm12",
+   "kind": "claim",
+   "title": "Jen swapped shifts \u2014 Sam free this weekend",
+   "author": "Sam",
+   "created_span": "b32.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s2"
+   ]
+  },
+  {
+   "id": "clm13",
+   "kind": "claim",
+   "title": "Sam available this weekend after shift swap",
+   "author": "Sam",
+   "created_span": "b32.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s2"
+   ]
+  },
+  {
+   "id": "clm14",
+   "kind": "claim",
+   "title": "Diablo summit-lot route is only 5 miles",
+   "author": "Sam",
+   "created_span": "b32.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s4"
+   ]
+  },
+  {
+   "id": "clm15",
+   "kind": "claim",
+   "title": "Everyone is on board with Diablo summit-lot route",
+   "author": "Maya",
+   "created_span": "b33.s1",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b33.s1",
+    "b34.s1"
+   ]
+  },
+  {
+   "id": "clm16",
+   "kind": "claim",
+   "title": "Dogs on leash allowed on Diablo summit-lot route",
+   "author": "Priya",
+   "created_span": "b35.s1",
+   "status": "confirmed",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b35.s1",
+    "b35.s2"
+   ]
+  },
+  {
+   "id": "con8",
+   "kind": "constraint",
+   "title": "Gas split $10 per person",
+   "author": "Maya",
+   "created_span": "b40.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "negotiable"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b40.s1"
+   ]
+  },
+  {
+   "id": "q3",
+   "kind": "question",
+   "title": "How to get to the trailhead",
+   "author": "Nora",
+   "created_span": "b47.s1",
+   "status": "conditional",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b47.s1",
+    "b61.s4"
+   ]
+  },
+  {
+   "id": "opt6",
+   "kind": "option",
+   "title": "Carpool to trailhead",
+   "author": "Maya",
+   "created_span": "b48.s1",
+   "status": "chosen",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b48.s1",
+    "b61.s3",
+    "b61.s4"
+   ]
+  },
+  {
+   "id": "blk3",
+   "kind": "blocker",
+   "title": "Driver needed for carpool",
+   "author": "Maya",
+   "created_span": "b48.s2",
+   "status": "resolved",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt6"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b48.s2",
+    "b56.s2",
+    "b59.s2"
+   ]
+  },
+  {
+   "id": "opt7",
+   "kind": "option",
+   "title": "Meet at trailhead independently",
+   "author": "Sam",
+   "created_span": "b49.s1",
+   "status": "dropped",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b49.s1",
+    "b49.s2",
+    "b57.s2",
+    "b61.s4"
+   ]
+  },
+  {
+   "id": "clm17",
+   "kind": "claim",
+   "title": "40 mph wind gusts forecast on Diablo for Sunday",
+   "author": "Maya",
+   "created_span": "b50.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b50.s1"
+   ]
+  },
+  {
+   "id": "clm18",
+   "kind": "claim",
+   "title": "40 mph wind forecast changes trail choice",
+   "author": "Leo",
+   "created_span": "b51.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b51.s2"
+   ]
+  },
+  {
+   "id": "clm19",
+   "kind": "claim",
+   "title": "Diablo exposed ridge unsafe in high winds",
+   "author": "Leo",
+   "created_span": "b51.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b51.s4"
+   ]
+  },
+  {
+   "id": "clm20",
+   "kind": "claim",
+   "title": "Bean gets spooked by strong wind",
+   "author": "Priya",
+   "created_span": "b52.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b52.s2"
+   ]
+  },
+  {
+   "id": "clm21",
+   "kind": "claim",
+   "title": "Bean/wind concern: objection to Diablo in forecast gusts",
+   "author": "Priya",
+   "created_span": "b52.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt4"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b52.s2"
+   ]
+  },
+  {
+   "id": "clm22",
+   "kind": "claim",
+   "title": "Sunol loop allows dogs per park page",
+   "author": "Priya",
+   "created_span": "b56.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt5"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b56.s2"
+   ]
+  },
+  {
+   "id": "clm23",
+   "kind": "claim",
+   "title": "Sam no longer meeting independently; will carpool if driver available",
+   "author": "Sam",
+   "created_span": "b57.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt6",
+     "opt7"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b57.s2"
+   ]
+  },
+  {
+   "id": "clm24",
+   "kind": "claim",
+   "title": "Nora mapped the Sunol Little Yosemite loop",
+   "author": "Nora",
+   "created_span": "b59.s1",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b59.s1"
+   ]
+  },
+  {
+   "id": "clm25",
+   "kind": "claim",
+   "title": "Sunol Little Yosemite loop is 5.4 miles including walk from parking",
+   "author": "Nora",
+   "created_span": "b59.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b59.s2"
+   ]
+  },
+  {
+   "id": "blk4",
+   "kind": "blocker",
+   "title": "Carpool driver not yet identified",
+   "author": "Nora",
+   "created_span": "b62.s1",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt6"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b62.s1",
+    "b62.s2"
+   ]
+  },
+  {
+   "id": "con9",
+   "kind": "constraint",
+   "title": "Nora cannot drive",
+   "author": "Nora",
+   "created_span": "b62.s3",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b62.s3"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "seq": 1,
+   "ts": "2026-11-02T19:41:00",
+   "span_id": "b1.s1",
+   "kind": "create",
+   "element_id": "q1",
+   "participant": "Maya",
+   "payload": {
+    "title": "Which trail to hike",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 2,
+   "ts": "2026-11-02T19:41:00",
+   "span_id": "b1.s2",
+   "kind": "create",
+   "element_id": "q2",
+   "participant": "Maya",
+   "payload": {
+    "title": "Which day to hike",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 3,
+   "ts": "2026-11-02T19:42:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt1",
+   "participant": "Leo",
+   "payload": {
+    "title": "Sat Nov 14",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 4,
+   "ts": "2026-11-02T19:42:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt2",
+   "participant": "Leo",
+   "payload": {
+    "title": "Sun Nov 15",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 5,
+   "ts": "2026-11-02T19:42:00",
+   "span_id": "b2.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Leo",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 6,
+   "ts": "2026-11-02T19:42:00",
+   "span_id": "b2.s1",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Leo",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 7,
+   "ts": "2026-11-02T19:42:00",
+   "span_id": "b2.s2",
+   "kind": "create",
+   "element_id": "clm1",
+   "participant": "Leo",
+   "payload": {
+    "title": "Sat Nov 14 and Sun Nov 15 are the intended weekend dates",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 8,
+   "ts": "2026-11-02T19:43:00",
+   "span_id": "b3.s1",
+   "kind": "create",
+   "element_id": "opt3",
+   "participant": "Sam",
+   "payload": {
+    "title": "Mission Peak",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 9,
+   "ts": "2026-11-02T19:43:00",
+   "span_id": "b3.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Sam",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 10,
+   "ts": "2026-11-02T19:44:00",
+   "span_id": "b4.s1",
+   "kind": "create",
+   "element_id": "con1",
+   "participant": "Priya",
+   "payload": {
+    "title": "Bean (dog) must be allowed on the trail",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 11,
+   "ts": "2026-11-02T19:44:00",
+   "span_id": "b4.s2",
+   "kind": "create",
+   "element_id": "con2",
+   "participant": "Priya",
+   "payload": {
+    "title": "Priya cannot join without Bean (dog)",
+    "kind": "constraint"
+   },
+   "because": [
+    "con1"
+   ]
+  },
+  {
+   "seq": 12,
+   "ts": "2026-11-02T19:44:00",
+   "span_id": "b4.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Priya",
+   "payload": {
+    "stance": "oppose",
+    "prev": null,
+    "conditions": "trail must allow Bean (dog)",
+    "inferred": true,
+    "inferred_reason": "span never names 'Sat Nov 14'"
+   },
+   "because": [
+    "con1",
+    "con2"
+   ]
+  },
+  {
+   "seq": 13,
+   "ts": "2026-11-02T19:45:00",
+   "span_id": "b5.s3",
+   "kind": "create",
+   "element_id": "con3",
+   "participant": "Arjun",
+   "payload": {
+    "title": "Arjun unavailable Sat Nov 14 (kid's recital)",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 14,
+   "ts": "2026-11-02T19:45:00",
+   "span_id": "b5.s3",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 15,
+   "ts": "2026-11-02T19:45:00",
+   "span_id": "b5.s4",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 16,
+   "ts": "2026-11-02T19:47:00",
+   "span_id": "b6.s1",
+   "kind": "create",
+   "element_id": "con4",
+   "participant": "Nora",
+   "payload": {
+    "title": "Nora unavailable Sat Nov 14",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 17,
+   "ts": "2026-11-02T19:47:00",
+   "span_id": "b6.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Nora",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": [
+    "con4"
+   ]
+  },
+  {
+   "seq": 18,
+   "ts": "2026-11-02T19:47:00",
+   "span_id": "b6.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Nora",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "con4"
+   ]
+  },
+  {
+   "seq": 19,
+   "ts": "2026-11-02T19:49:00",
+   "span_id": "b7.s1",
+   "kind": "create",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "title": "Mt. Diablo Summit Trail",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 20,
+   "ts": "2026-11-02T19:49:00",
+   "span_id": "b7.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 21,
+   "ts": "2026-11-02T19:49:00",
+   "span_id": "b7.s2",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 22,
+   "ts": "2026-11-02T19:49:00",
+   "span_id": "b7.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": [
+    "opt4"
+   ]
+  },
+  {
+   "seq": 23,
+   "ts": "2026-11-02T19:50:00",
+   "span_id": "b8.s1",
+   "kind": "create",
+   "element_id": "clm2",
+   "participant": "Leo",
+   "payload": {
+    "title": "Mt. Diablo is 12 miles uphill in the heat (sarcastic objection)",
+    "kind": "claim"
+   },
+   "because": [
+    "opt4"
+   ]
+  },
+  {
+   "seq": 24,
+   "ts": "2026-11-02T19:50:00",
+   "span_id": "b8.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "oppose",
+    "prev": null,
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "clm2"
+   ]
+  },
+  {
+   "seq": 25,
+   "ts": "2026-11-02T19:52:00",
+   "span_id": "b9.s1",
+   "kind": "create",
+   "element_id": "blk1",
+   "participant": "Priya",
+   "payload": {
+    "title": "Does Mission Peak allow dogs?",
+    "kind": "blocker"
+   },
+   "because": [
+    "con1",
+    "opt3"
+   ]
+  },
+  {
+   "seq": 26,
+   "ts": "2026-11-02T19:52:00",
+   "span_id": "b9.s2",
+   "kind": "attach",
+   "element_id": "blk1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 27,
+   "ts": "2026-11-02T19:53:00",
+   "span_id": "b10.s1",
+   "kind": "create",
+   "element_id": "clm3",
+   "participant": "Sam",
+   "payload": {
+    "title": "Mission Peak Stanford Ave trailhead parking is free",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 28,
+   "ts": "2026-11-02T19:55:00",
+   "span_id": "b12.s1",
+   "kind": "create",
+   "element_id": "clm4",
+   "participant": "Arjun",
+   "payload": {
+    "title": "Hike views are worth an early start",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 29,
+   "ts": "2026-11-02T20:03:00",
+   "span_id": "b17.s1",
+   "kind": "attach",
+   "element_id": "opt3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 30,
+   "ts": "2026-11-02T20:03:00",
+   "span_id": "b17.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": []
+  },
+  {
+   "seq": 31,
+   "ts": "2026-11-02T20:03:00",
+   "span_id": "b17.s2",
+   "kind": "create",
+   "element_id": "clm5",
+   "participant": "Sam",
+   "payload": {
+    "title": "Sam already knows Mission Peak route",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 32,
+   "ts": "2026-11-02T20:05:00",
+   "span_id": "b18.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Maya",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 33,
+   "ts": "2026-11-02T20:05:00",
+   "span_id": "b18.s3",
+   "kind": "create",
+   "element_id": "con5",
+   "participant": "Maya",
+   "payload": {
+    "title": "Maya unavailable Sat Nov 14 (working)",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 34,
+   "ts": "2026-11-02T20:05:00",
+   "span_id": "b18.s3",
+   "kind": "status",
+   "element_id": "opt1",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "con5",
+    "con3",
+    "con4"
+   ]
+  },
+  {
+   "seq": 35,
+   "ts": "2026-11-02T20:07:00",
+   "span_id": "b19.s1",
+   "kind": "create",
+   "element_id": "con6",
+   "participant": "Leo",
+   "payload": {
+    "title": "Leo cannot hike more than 6 miles",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 36,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s1",
+   "kind": "create",
+   "element_id": "clm6",
+   "participant": "Maya",
+   "payload": {
+    "title": "Mt. Diablo has a 5-mile version starting at summit lot",
+    "kind": "claim"
+   },
+   "because": [
+    "opt4"
+   ]
+  },
+  {
+   "seq": 37,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s1",
+   "kind": "alias",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "alias": "Mt. Diablo 5-mile summit-lot route",
+    "variant": true
+   },
+   "because": []
+  },
+  {
+   "seq": 38,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "proposed",
+    "prev": "support"
+   },
+   "because": [
+    "clm6"
+   ]
+  },
+  {
+   "seq": 39,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s2",
+   "kind": "attach",
+   "element_id": "clm6",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 40,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "proposed"
+   },
+   "because": [
+    "clm2",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 41,
+   "ts": "2026-11-02T20:09:00",
+   "span_id": "b20.s2",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "clm2",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 42,
+   "ts": "2026-11-02T20:10:00",
+   "span_id": "b21.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "if it is genuinely under 6 miles"
+   },
+   "because": [
+    "clm6",
+    "con6"
+   ]
+  },
+  {
+   "seq": 43,
+   "ts": "2026-11-02T20:10:00",
+   "span_id": "b21.s2",
+   "kind": "attach",
+   "element_id": "con6",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 44,
+   "ts": "2026-11-02T20:11:00",
+   "span_id": "b22.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 45,
+   "ts": "2026-11-02T20:11:00",
+   "span_id": "b22.s2",
+   "kind": "create",
+   "element_id": "clm7",
+   "participant": "Sam",
+   "payload": {
+    "title": "Mt. Diablo (12-mile) is too long \u2014 a death march",
+    "kind": "claim"
+   },
+   "because": [
+    "opt4",
+    "clm2"
+   ]
+  },
+  {
+   "seq": 46,
+   "ts": "2026-11-02T20:10:00",
+   "span_id": "b21.s2",
+   "kind": "attach",
+   "element_id": "con6",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 47,
+   "ts": "2026-11-02T20:10:00",
+   "span_id": "b21.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "if the 5-mile version is genuinely under 6 miles"
+   },
+   "because": [
+    "con6",
+    "clm6"
+   ]
+  },
+  {
+   "seq": 48,
+   "ts": "2026-11-02T20:12:00",
+   "span_id": "b23.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "support",
+    "prev": "withdrawn"
+   },
+   "because": [
+    "clm6",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 49,
+   "ts": "2026-11-02T20:12:00",
+   "span_id": "b23.s1",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "from": "dropped",
+    "to": "reopened"
+   },
+   "because": [
+    "clm6"
+   ]
+  },
+  {
+   "seq": 50,
+   "ts": "2026-11-02T20:13:00",
+   "span_id": "b24.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "dogs are allowed on the 5-mile summit-lot route"
+   },
+   "because": [
+    "con1",
+    "con2",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 51,
+   "ts": "2026-11-02T20:15:00",
+   "span_id": "b25.s1",
+   "kind": "create",
+   "element_id": "clm8",
+   "participant": "Priya",
+   "payload": {
+    "title": "Mission Peak allows dogs on leash",
+    "kind": "claim"
+   },
+   "because": [
+    "blk1",
+    "con1"
+   ]
+  },
+  {
+   "seq": 52,
+   "ts": "2026-11-02T20:15:00",
+   "span_id": "b25.s1",
+   "kind": "status",
+   "element_id": "blk1",
+   "participant": "Priya",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 53,
+   "ts": "2026-11-02T20:15:00",
+   "span_id": "b25.s2",
+   "kind": "create",
+   "element_id": "clm9",
+   "participant": "Priya",
+   "payload": {
+    "title": "Priya verified Mission Peak dog policy via park page",
+    "kind": "claim"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 54,
+   "ts": "2026-11-02T20:15:00",
+   "span_id": "b25.s2",
+   "kind": "status",
+   "element_id": "clm8",
+   "participant": "Priya",
+   "payload": {
+    "from": "unverified",
+    "to": "confirmed"
+   },
+   "because": [
+    "clm9"
+   ]
+  },
+  {
+   "seq": 55,
+   "ts": "2026-11-02T20:15:00",
+   "span_id": "b25.s3",
+   "kind": "attach",
+   "element_id": "clm8",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 56,
+   "ts": "2026-11-02T20:16:00",
+   "span_id": "b25.s4",
+   "kind": "create",
+   "element_id": "blk2",
+   "participant": "Priya",
+   "payload": {
+    "title": "Dog rule for Diablo summit-lot 5-mile route unknown",
+    "kind": "blocker"
+   },
+   "because": [
+    "con1",
+    "con2",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 57,
+   "ts": "2026-11-02T20:16:00",
+   "span_id": "b25.s5",
+   "kind": "attach",
+   "element_id": "blk2",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 58,
+   "ts": "2026-11-02T20:18:00",
+   "span_id": "b26.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Sam",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 59,
+   "ts": "2026-11-02T20:18:00",
+   "span_id": "b26.s1",
+   "kind": "status",
+   "element_id": "opt3",
+   "participant": "Sam",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": []
+  },
+  {
+   "seq": 60,
+   "ts": "2026-11-02T20:18:00",
+   "span_id": "b26.s2",
+   "kind": "create",
+   "element_id": "clm10",
+   "participant": "Sam",
+   "payload": {
+    "title": "Mission Peak parking queue can take an hour",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 61,
+   "ts": "2026-11-02T20:20:00",
+   "span_id": "b27.s1",
+   "kind": "create",
+   "element_id": "clm11",
+   "participant": "Maya",
+   "payload": {
+    "title": "Mission Peak Stanford Ave parking now costs $10 (not free)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm3"
+   ]
+  },
+  {
+   "seq": 62,
+   "ts": "2026-11-02T20:20:00",
+   "span_id": "b27.s1",
+   "kind": "supersede",
+   "element_id": "clm3",
+   "participant": "Maya",
+   "payload": {
+    "from": "unverified",
+    "to": "superseded",
+    "by": "clm11"
+   },
+   "because": [
+    "clm11"
+   ]
+  },
+  {
+   "seq": 63,
+   "ts": "2026-11-02T20:20:00",
+   "span_id": "b27.s2",
+   "kind": "attach",
+   "element_id": "clm11",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 64,
+   "ts": "2026-11-02T20:22:00",
+   "span_id": "b28.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": [
+    "clm6",
+    "clm6"
+   ]
+  },
+  {
+   "seq": 65,
+   "ts": "2026-11-02T20:22:00",
+   "span_id": "b28.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "clm6",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 66,
+   "ts": "2026-11-02T20:24:00",
+   "span_id": "b29.s1",
+   "kind": "create",
+   "element_id": "opt5",
+   "participant": "Sam",
+   "payload": {
+    "title": "Sunol Little Yosemite Loop",
+    "kind": "option"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 67,
+   "ts": "2026-11-02T20:24:00",
+   "span_id": "b29.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Sam",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 68,
+   "ts": "2026-11-02T20:24:00",
+   "span_id": "b29.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 69,
+   "ts": "2026-11-02T20:24:00",
+   "span_id": "b29.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "oppose",
+    "prev": "oppose",
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 70,
+   "ts": "2026-11-02T20:26:00",
+   "span_id": "b30.s1",
+   "kind": "status",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "fallback"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 71,
+   "ts": "2026-11-02T20:26:00",
+   "span_id": "b30.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "fallback if Diablo doesn't work out"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 72,
+   "ts": "2026-11-02T20:28:00",
+   "span_id": "b31.s1",
+   "kind": "create",
+   "element_id": "con7",
+   "participant": "Sam",
+   "payload": {
+    "title": "Sam unavailable this weekend (Nov 14\u201315)",
+    "kind": "constraint"
+   },
+   "because": [
+    "opt1",
+    "opt2"
+   ]
+  },
+  {
+   "seq": 73,
+   "ts": "2026-11-02T20:28:00",
+   "span_id": "b31.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "oppose"
+   },
+   "because": [
+    "con7"
+   ]
+  },
+  {
+   "seq": 74,
+   "ts": "2026-11-02T20:28:00",
+   "span_id": "b31.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Sam",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "support"
+   },
+   "because": [
+    "con7"
+   ]
+  },
+  {
+   "seq": 75,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "proposed",
+    "prev": "withdrawn",
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "con7"
+   ]
+  },
+  {
+   "seq": 76,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s2",
+   "kind": "status",
+   "element_id": "con7",
+   "participant": "Sam",
+   "payload": {
+    "from": "active",
+    "to": "superseded"
+   },
+   "because": []
+  },
+  {
+   "seq": 77,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s2",
+   "kind": "create",
+   "element_id": "clm12",
+   "participant": "Sam",
+   "payload": {
+    "title": "Jen swapped shifts \u2014 Sam free this weekend",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 78,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s2",
+   "kind": "create",
+   "element_id": "clm13",
+   "participant": "Sam",
+   "payload": {
+    "title": "Sam available this weekend after shift swap",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 79,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s2",
+   "kind": "supersede",
+   "element_id": "con7",
+   "participant": "Sam",
+   "payload": {
+    "from": "superseded",
+    "to": "superseded",
+    "by": "clm13"
+   },
+   "because": [
+    "clm13"
+   ]
+  },
+  {
+   "seq": 80,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s3",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": "withdrawn"
+   },
+   "because": [
+    "clm13"
+   ]
+  },
+  {
+   "seq": 81,
+   "ts": "2026-11-02T20:34:00",
+   "span_id": "b32.s4",
+   "kind": "create",
+   "element_id": "clm14",
+   "participant": "Sam",
+   "payload": {
+    "title": "Diablo summit-lot route is only 5 miles",
+    "kind": "claim"
+   },
+   "because": [
+    "con6"
+   ]
+  },
+  {
+   "seq": 82,
+   "ts": "2026-11-02T20:36:00",
+   "span_id": "b33.s1",
+   "kind": "create",
+   "element_id": "clm15",
+   "participant": "Maya",
+   "payload": {
+    "title": "Everyone is on board with Diablo summit-lot route",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 83,
+   "ts": "2026-11-02T20:36:00",
+   "span_id": "b33.s1",
+   "kind": "flag",
+   "element_id": "clm15",
+   "participant": "Maya",
+   "payload": {
+    "type": "consensus_conflict",
+    "mismatches": [
+     {
+      "participant": "Priya",
+      "option": "opt4",
+      "asserted": "support",
+      "actual": "blank"
+     },
+     {
+      "participant": "Arjun",
+      "option": "opt4",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Nora",
+      "option": "opt4",
+      "asserted": "support",
+      "actual": "blank"
+     }
+    ]
+   },
+   "because": []
+  },
+  {
+   "seq": 84,
+   "ts": "2026-11-02T20:37:00",
+   "span_id": "b34.s1",
+   "kind": "attach",
+   "element_id": "clm15",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 85,
+   "ts": "2026-11-02T20:37:00",
+   "span_id": "b34.s1",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 86,
+   "ts": "2026-11-02T20:37:00",
+   "span_id": "b34.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "dogs are allowed on the 5-mile summit-lot route",
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "blk2",
+    "con1",
+    "con2"
+   ]
+  },
+  {
+   "seq": 87,
+   "ts": "2026-11-02T20:37:00",
+   "span_id": "b34.s2",
+   "kind": "attach",
+   "element_id": "con1",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "con1",
+    "con2"
+   ]
+  },
+  {
+   "seq": 88,
+   "ts": "2026-11-02T20:37:00",
+   "span_id": "b34.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "dogs (Bean) must be allowed on the Diablo summit-lot route",
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "con1",
+    "con2",
+    "blk2"
+   ]
+  },
+  {
+   "seq": 89,
+   "ts": "2026-11-02T20:39:00",
+   "span_id": "b35.s1",
+   "kind": "create",
+   "element_id": "clm16",
+   "participant": "Priya",
+   "payload": {
+    "title": "Dogs on leash allowed on Diablo summit-lot route",
+    "kind": "claim"
+   },
+   "because": [
+    "blk2"
+   ]
+  },
+  {
+   "seq": 90,
+   "ts": "2026-11-02T20:39:00",
+   "span_id": "b35.s1",
+   "kind": "status",
+   "element_id": "blk2",
+   "participant": "Priya",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 91,
+   "ts": "2026-11-02T20:39:00",
+   "span_id": "b35.s2",
+   "kind": "status",
+   "element_id": "clm16",
+   "participant": "Priya",
+   "payload": {
+    "from": "unverified",
+    "to": "confirmed"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 92,
+   "ts": "2026-11-02T20:40:00",
+   "span_id": "b36.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": [
+    "clm16",
+    "blk2"
+   ]
+  },
+  {
+   "seq": 93,
+   "ts": "2026-11-02T20:41:00",
+   "span_id": "b37.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Priya",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 94,
+   "ts": "2026-11-02T20:41:00",
+   "span_id": "b37.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Priya",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 95,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s1",
+   "kind": "decide",
+   "element_id": "q1",
+   "participant": "Maya",
+   "payload": {
+    "chosen": [
+     "opt4"
+    ],
+    "ruled_out": [
+     "opt3",
+     "opt5"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": []
+  },
+  {
+   "seq": 96,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s1",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "from": "reopened",
+    "to": "chosen"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 97,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s1",
+   "kind": "status",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "from": "fallback",
+    "to": "dropped"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 98,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s2",
+   "kind": "decide",
+   "element_id": "q2",
+   "participant": "Maya",
+   "payload": {
+    "chosen": [
+     "opt2"
+    ],
+    "ruled_out": [
+     "opt1"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": []
+  },
+  {
+   "seq": 99,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s2",
+   "kind": "status",
+   "element_id": "opt2",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q2"
+   ]
+  },
+  {
+   "seq": 100,
+   "ts": "2026-11-02T20:43:00",
+   "span_id": "b38.s1",
+   "kind": "status",
+   "element_id": "q1",
+   "participant": "Maya",
+   "payload": {
+    "from": "decided",
+    "to": "open"
+   },
+   "because": []
+  },
+  {
+   "seq": 101,
+   "ts": "2026-11-02T20:44:00",
+   "span_id": "b39.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "clm16",
+    "blk2"
+   ]
+  },
+  {
+   "seq": 102,
+   "ts": "2026-11-02T20:44:00",
+   "span_id": "b39.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": []
+  },
+  {
+   "seq": 103,
+   "ts": "2026-11-02T20:46:00",
+   "span_id": "b40.s1",
+   "kind": "create",
+   "element_id": "con8",
+   "participant": "Maya",
+   "payload": {
+    "title": "Gas split $10 per person",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 104,
+   "ts": "2026-11-02T20:54:00",
+   "span_id": "b47.s1",
+   "kind": "create",
+   "element_id": "q3",
+   "participant": "Nora",
+   "payload": {
+    "title": "How to get to the trailhead",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 105,
+   "ts": "2026-11-02T20:55:00",
+   "span_id": "b48.s1",
+   "kind": "create",
+   "element_id": "opt6",
+   "participant": "Maya",
+   "payload": {
+    "title": "Carpool to trailhead",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 106,
+   "ts": "2026-11-02T20:55:00",
+   "span_id": "b48.s1",
+   "kind": "stance",
+   "element_id": "opt6",
+   "participant": "Maya",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 107,
+   "ts": "2026-11-02T20:55:00",
+   "span_id": "b48.s2",
+   "kind": "create",
+   "element_id": "blk3",
+   "participant": "Maya",
+   "payload": {
+    "title": "Driver needed for carpool",
+    "kind": "blocker"
+   },
+   "because": [
+    "opt6"
+   ]
+  },
+  {
+   "seq": 108,
+   "ts": "2026-11-02T20:56:00",
+   "span_id": "b49.s1",
+   "kind": "create",
+   "element_id": "opt7",
+   "participant": "Sam",
+   "payload": {
+    "title": "Meet at trailhead independently",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 109,
+   "ts": "2026-11-02T20:56:00",
+   "span_id": "b49.s1",
+   "kind": "stance",
+   "element_id": "opt7",
+   "participant": "Sam",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 110,
+   "ts": "2026-11-02T20:56:00",
+   "span_id": "b49.s2",
+   "kind": "stance",
+   "element_id": "opt7",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": []
+  },
+  {
+   "seq": 111,
+   "ts": "2026-11-02T20:58:00",
+   "span_id": "b49.s3",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 112,
+   "ts": "2026-11-03T18:02:00",
+   "span_id": "b50.s1",
+   "kind": "create",
+   "element_id": "clm17",
+   "participant": "Maya",
+   "payload": {
+    "title": "40 mph wind gusts forecast on Diablo for Sunday",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 113,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s1",
+   "kind": "status",
+   "element_id": "q1",
+   "participant": "Leo",
+   "payload": {
+    "from": "open",
+    "to": "reopened"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 114,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s1",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "from": "chosen",
+    "to": "reopened"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 115,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s2",
+   "kind": "create",
+   "element_id": "clm18",
+   "participant": "Leo",
+   "payload": {
+    "title": "40 mph wind forecast changes trail choice",
+    "kind": "claim"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 116,
+   "ts": "2026-11-03T18:04:00",
+   "span_id": "b51.s3",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "oppose",
+    "prev": "support"
+   },
+   "because": [
+    "clm17",
+    "clm18"
+   ]
+  },
+  {
+   "seq": 117,
+   "ts": "2026-11-03T18:04:00",
+   "span_id": "b51.s4",
+   "kind": "create",
+   "element_id": "clm19",
+   "participant": "Leo",
+   "payload": {
+    "title": "Diablo exposed ridge unsafe in high winds",
+    "kind": "claim"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 118,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s1",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 119,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s1",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm17",
+    "clm18",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 120,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "oppose",
+    "prev": "oppose",
+    "conditions": "40 mph wind gusts forecast on Diablo for Sunday"
+   },
+   "because": [
+    "clm17",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 121,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s2",
+   "kind": "attach",
+   "element_id": "clm18",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 122,
+   "ts": "2026-11-03T18:03:00",
+   "span_id": "b51.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Leo",
+   "payload": {
+    "stance": "oppose",
+    "prev": "oppose",
+    "conditions": "40 mph wind gusts forecast on Diablo for Sunday",
+    "inferred": true,
+    "inferred_reason": "span never names 'Mt. Diablo Summit Trail'"
+   },
+   "because": [
+    "clm17",
+    "clm18",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 123,
+   "ts": "2026-11-03T18:06:00",
+   "span_id": "b52.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Priya",
+   "payload": {
+    "stance": "oppose",
+    "prev": "support",
+    "conditions": "40 mph wind gusts forecast on Diablo for Sunday"
+   },
+   "because": [
+    "clm17",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 124,
+   "ts": "2026-11-03T18:06:00",
+   "span_id": "b52.s2",
+   "kind": "create",
+   "element_id": "clm20",
+   "participant": "Priya",
+   "payload": {
+    "title": "Bean gets spooked by strong wind",
+    "kind": "claim"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 125,
+   "ts": "2026-11-03T18:06:00",
+   "span_id": "b52.s2",
+   "kind": "create",
+   "element_id": "clm21",
+   "participant": "Priya",
+   "payload": {
+    "title": "Bean/wind concern: objection to Diablo in forecast gusts",
+    "kind": "claim"
+   },
+   "because": [
+    "clm20",
+    "clm17"
+   ]
+  },
+  {
+   "seq": 126,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "support"
+   },
+   "because": [
+    "clm17",
+    "clm18",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 127,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s2",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Maya",
+   "payload": {
+    "from": "reopened",
+    "to": "dropped"
+   },
+   "because": [
+    "clm17",
+    "clm18",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 128,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s3",
+   "kind": "status",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "from": "dropped",
+    "to": "active"
+   },
+   "because": []
+  },
+  {
+   "seq": 129,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s4",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": []
+  },
+  {
+   "seq": 130,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s3",
+   "kind": "attach",
+   "element_id": "opt5",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 131,
+   "ts": "2026-11-03T18:08:00",
+   "span_id": "b53.s3",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 132,
+   "ts": "2026-11-03T18:10:00",
+   "span_id": "b54.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Arjun",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 133,
+   "ts": "2026-11-03T18:12:00",
+   "span_id": "b55.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 134,
+   "ts": "2026-11-03T18:12:00",
+   "span_id": "b55.s2",
+   "kind": "attach",
+   "element_id": "con6",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 135,
+   "ts": "2026-11-03T18:12:00",
+   "span_id": "b55.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Leo",
+   "payload": {
+    "stance": "conditional",
+    "prev": "support",
+    "conditions": "loop is under 6 miles",
+    "inferred": true,
+    "inferred_reason": "span is ['constraint'], not a stance"
+   },
+   "because": [
+    "con6"
+   ]
+  },
+  {
+   "seq": 136,
+   "ts": "2026-11-03T18:13:00",
+   "span_id": "b56.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Priya",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 137,
+   "ts": "2026-11-03T18:13:00",
+   "span_id": "b56.s2",
+   "kind": "create",
+   "element_id": "clm22",
+   "participant": "Priya",
+   "payload": {
+    "title": "Sunol loop allows dogs per park page",
+    "kind": "claim"
+   },
+   "because": [
+    "con1",
+    "con2"
+   ]
+  },
+  {
+   "seq": 138,
+   "ts": "2026-11-03T18:13:00",
+   "span_id": "b56.s2",
+   "kind": "attach",
+   "element_id": "blk3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 139,
+   "ts": "2026-11-03T18:15:00",
+   "span_id": "b57.s1",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Sam",
+   "payload": {
+    "stance": "oppose",
+    "prev": "support"
+   },
+   "because": [
+    "clm17",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 140,
+   "ts": "2026-11-03T18:15:00",
+   "span_id": "b57.s1",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm17",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 141,
+   "ts": "2026-11-03T18:15:00",
+   "span_id": "b57.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Sam",
+   "payload": {
+    "stance": "support",
+    "prev": "withdrawn"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 142,
+   "ts": "2026-11-03T18:15:00",
+   "span_id": "b57.s2",
+   "kind": "stance",
+   "element_id": "opt7",
+   "participant": "Sam",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "support"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 143,
+   "ts": "2026-11-03T18:15:00",
+   "span_id": "b57.s2",
+   "kind": "create",
+   "element_id": "clm23",
+   "participant": "Sam",
+   "payload": {
+    "title": "Sam no longer meeting independently; will carpool if driver available",
+    "kind": "claim"
+   },
+   "because": [
+    "opt6",
+    "opt7"
+   ]
+  },
+  {
+   "seq": 144,
+   "ts": "2026-11-03T18:20:00",
+   "span_id": "b59.s1",
+   "kind": "create",
+   "element_id": "clm24",
+   "participant": "Nora",
+   "payload": {
+    "title": "Nora mapped the Sunol Little Yosemite loop",
+    "kind": "claim"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 145,
+   "ts": "2026-11-03T18:20:00",
+   "span_id": "b59.s2",
+   "kind": "create",
+   "element_id": "clm25",
+   "participant": "Nora",
+   "payload": {
+    "title": "Sunol Little Yosemite loop is 5.4 miles including walk from parking",
+    "kind": "claim"
+   },
+   "because": [
+    "clm24",
+    "opt5"
+   ]
+  },
+  {
+   "seq": 146,
+   "ts": "2026-11-03T18:20:00",
+   "span_id": "b59.s2",
+   "kind": "status",
+   "element_id": "blk3",
+   "participant": "Nora",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm25"
+   ]
+  },
+  {
+   "seq": 147,
+   "ts": "2026-11-03T18:21:00",
+   "span_id": "b60.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Leo",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "clm25"
+   ]
+  },
+  {
+   "seq": 148,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s1",
+   "kind": "decide",
+   "element_id": "q1",
+   "participant": "Maya",
+   "payload": {
+    "chosen": [
+     "opt5"
+    ],
+    "ruled_out": [
+     "opt3",
+     "opt4"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "reopened",
+    "to": "decided"
+   },
+   "because": []
+  },
+  {
+   "seq": 149,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s1",
+   "kind": "status",
+   "element_id": "opt5",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 150,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s2",
+   "kind": "attach",
+   "element_id": "opt2",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 151,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s3",
+   "kind": "stance",
+   "element_id": "opt6",
+   "participant": "Maya",
+   "payload": {
+    "stance": "conditional",
+    "prev": "proposed",
+    "conditions": "conditional on a driver being found"
+   },
+   "because": []
+  },
+  {
+   "seq": 152,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s4",
+   "kind": "status",
+   "element_id": "opt7",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "clm23"
+   ]
+  },
+  {
+   "seq": 153,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s4",
+   "kind": "decide",
+   "element_id": "q3",
+   "participant": "Maya",
+   "payload": {
+    "chosen": [
+     "opt6"
+    ],
+    "ruled_out": [
+     "opt7"
+    ],
+    "conditional": true,
+    "conditions": "A driver must be identified",
+    "from": "open",
+    "to": "conditional"
+   },
+   "because": [
+    "clm23"
+   ]
+  },
+  {
+   "seq": 154,
+   "ts": "2026-11-03T18:23:00",
+   "span_id": "b61.s4",
+   "kind": "status",
+   "element_id": "opt6",
+   "participant": "Maya",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 155,
+   "ts": "2026-11-03T18:25:00",
+   "span_id": "b62.s1",
+   "kind": "create",
+   "element_id": "blk4",
+   "participant": "Nora",
+   "payload": {
+    "title": "Carpool driver not yet identified",
+    "kind": "blocker"
+   },
+   "because": [
+    "opt6"
+   ]
+  },
+  {
+   "seq": 156,
+   "ts": "2026-11-03T18:25:00",
+   "span_id": "b62.s2",
+   "kind": "attach",
+   "element_id": "blk4",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 157,
+   "ts": "2026-11-03T18:25:00",
+   "span_id": "b62.s3",
+   "kind": "create",
+   "element_id": "con9",
+   "participant": "Nora",
+   "payload": {
+    "title": "Nora cannot drive",
+    "kind": "constraint"
+   },
+   "because": [
+    "blk4"
+   ]
+  }
+ ],
+ "warnings": [
+  "inferred stance (span never names 'Sat Nov 14'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"conditions\": \"trail must allow Bean (dog)\", \"span\": \"b4.s2\", \"because\": [\"con1\", \"con2\"]}",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"oppose\", \"span\": \"b8.s1\", \"because\": [\"n1\"]}",
+  "variant duplicate option redirected to opt4: {\"op\": \"create\", \"ref\": \"opt5\", \"kind\": \"option\", \"title\": \"Mt. Diablo 5-mile summit-lot route\", \"question\": \"q1\", \"aliases\": [\"Diablo 5-mile\", \"summit lot version\"], \"span\": \"b20.s1\", \"because\": [\"op",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"oppose\", \"span\": \"b29.s2\", \"because\": [\"n1\"]}",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"proposed\", \"span\": \"b32.s1\", \"because\": [\"con7\"]}",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"conditional\", \"conditions\": \"dogs are allowed on the 5-mile summit-lot route\", \"span\": \"b34.s1\", \"because\": [\"blk2\", \"con1\", \"con2\"]}",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"conditional\", \"conditions\": \"dogs (Bean) must be allowed on the Diablo summit-lot route\", \"span\": \"b34.s2\", \"because\": [\"con1\", \"con2\", \"blk2\"]}",
+  "inferred stance (span never names 'Mt. Diablo Summit Trail'): {\"op\": \"stance\", \"option\": \"opt4\", \"stance\": \"oppose\", \"conditions\": \"40 mph wind gusts forecast on Diablo for Sunday\", \"span\": \"b51.s2\", \"because\": [\"clm17\", \"clm18\", \"clm19\"]}",
+  "inferred stance (span is ['constraint'], not a stance): {\"op\": \"stance\", \"option\": \"opt5\", \"stance\": \"conditional\", \"conditions\": \"loop is under 6 miles\", \"span\": \"b55.s2\", \"because\": [\"con6\"]}"
+ ],
+ "followups": 4
+}

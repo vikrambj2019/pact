@@ -1,0 +1,53 @@
+10/20/26, 2:10 PM - Rhea: Team, we need a direction on the AI assistant for support tickets. Build in-house or buy? I'd like a recommendation ready for the Nov 12 steering meeting.
+10/20/26, 2:12 PM - Keiko: I've looked at two vendors, Relay and Hollis. Relay is my pick. It plugs into our ticketing tool out of the box.
+10/20/26, 2:14 PM - Jonas: Third option is to build it ourselves on the LLM API we already pay for. I could prototype quickly.
+10/20/26, 2:17 PM - Keiko: Honestly I'd lean to build. We'd own the roadmap.
+10/20/26, 2:19 PM - Luis: Before we go further, what's the budget? I need year one numbers.
+10/20/26, 2:21 PM - Rhea: Finance gave us a cap of $200k for year one, all in.
+10/20/26, 2:22 PM - Luis: Confirming: $200k cap, all in, including implementation.
+10/20/26, 2:26 PM - Keiko: Pricing as I have it: Relay $180k a year, Hollis $240k a year.
+10/20/26, 2:29 PM - Luis: Then Hollis is over the cap before any implementation fee. I can't support Hollis.
+10/20/26, 2:31 PM - Rhea: OK, that takes Hollis off the table unless the price changes.
+10/20/26, 2:34 PM - Jonas: On build: I'd need two engineers for two quarters, and I don't have two free until Q3.
+10/20/26, 2:36 PM - Keiko: That's a problem. We want this live before the January peak, ideally by Jan 15.
+10/20/26, 2:38 PM - Keiko: Fine, I'm dropping build. It can't make Jan 15.
+10/20/26, 2:41 PM - Rhea: So it's Relay, assuming it checks out. Jonas, what do we know about their security?
+10/20/26, 2:43 PM - Jonas: They have SOC 2 Type II. It's on their website.
+10/20/26, 2:47 PM - Amira: I looked at their trust page this morning. It says Type I, with Type II in progress. Those are not the same thing.
+10/20/26, 2:49 PM - Jonas: Hm, maybe I misread it. I'll ask their rep.
+10/20/26, 2:52 PM - Amira: Bigger issue: our EU customer contracts require ticket data to stay in the EU. Does Relay have an EU region?
+10/20/26, 2:55 PM - Keiko: I think so but I'm not sure. I'll ask.
+10/20/26, 2:57 PM - Ben: On the EU point, yes, it's in the enterprise agreements, clause 9. I can confirm that.
+10/20/26, 3:00 PM - Rhea: So the conditions are SOC 2 Type II evidence and an EU data region. Anything else?
+10/20/26, 3:03 PM - Ben: From legal, we need a signed DPA before any ticket data goes to them.
+10/20/26, 3:05 PM - Rhea: Noted.
+10/20/26, 3:25 PM - Luis: Quick check on Relay's number. Does the $180k include implementation?
+10/20/26, 3:28 PM - Keiko: Don't know. Their quote says "platform license". I'll ask.
+10/21/26, 8:58 AM - Jonas: Update from Relay's rep: the SOC 2 Type II audit report will be available Dec 1. Type I is done.
+10/21/26, 9:01 AM - Amira: Then I can't approve data going to Relay before Dec 1. I could support picking Relay on Nov 12 if go-live is gated on that report.
+10/21/26, 9:04 AM - Rhea: Does that still work for Jan 15?
+10/21/26, 9:06 AM - Amira: Yes, if the report lands Dec 1 with no major findings.
+10/21/26, 9:10 AM - Keiko: Pricing update: implementation is a separate one-time $35k. So $215k in year one.
+10/21/26, 9:12 AM - Luis: That's over the cap, $215k against $200k, unless we negotiate.
+10/21/26, 9:15 AM - Rhea: Can we get the implementation fee down?
+10/21/26, 9:17 AM - Luis: I'll push procurement to waive or split the $35k. I can support Relay if we land at or under $200k. Otherwise it needs an exception.
+10/21/26, 9:21 AM - Rhea: Keiko, what would Hollis cost with implementation? Just for comparison.
+10/21/26, 9:24 AM - Keiko: $240k plus $50k implementation, so $290k. Way out.
+10/21/26, 9:39 AM - Keiko: Unrelated, who's presenting at the Nov all-hands? Nothing on the schedule yet.
+10/21/26, 9:43 AM - Rhea: No idea, not me.
+10/21/26, 9:45 AM - Jonas: Don't look at me.
+10/21/26, 9:48 AM - Rhea: Let's take that offline. Back to Relay.
+10/21/26, 9:58 AM - Rhea: My view: Relay. I support it. Keiko?
+10/21/26, 10:00 AM - Keiko: Yes, Relay. I support it.
+10/21/26, 10:03 AM - Jonas: I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too.
+10/21/26, 10:05 AM - Amira: Same as I said. Conditional on the report and the EU region.
+10/21/26, 10:08 AM - Luis: Yes to Relay at or under $200k.
+10/21/26, 10:12 AM - Rhea: Ben?
+10/21/26, 10:13 AM - Ben: Legal is OK with Relay as long as the DPA is signed before go-live. I'll send redlines to their counsel by Nov 6.
+10/21/26, 10:16 AM - Rhea: Thanks. Where we are: the preference is Relay. Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA. Right?
+10/21/26, 10:18 AM - Amira: Right.
+10/21/26, 10:20 AM - Keiko: Yes. I'll confirm the EU region with their rep by Friday.
+10/21/26, 10:22 AM - Jonas: And I'll chase the audit report and ask for a draft earlier.
+10/21/26, 10:24 AM - Luis: I'll talk to procurement about the fee by Nov 5.
+10/21/26, 10:27 AM - Rhea: OK. I'll take this to Nov 12 as a conditional recommendation. Thanks all.
+10/21/26, 10:29 AM - Ben: ok

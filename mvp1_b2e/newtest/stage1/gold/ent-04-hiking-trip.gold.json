@@ -1,0 +1,930 @@
+{
+ "transcript": "ent-04-hiking-trip.txt",
+ "spans": [
+  {
+   "msg": "m1",
+   "text": "which trail are we doing",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "which day?",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "sat nov 14 or sun nov 15?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "those are the weekend dates i meant",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m3",
+   "text": "what about mission peak?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "bean has to come \ud83d\udc15 no dog = i can't join",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m5",
+   "text": "sat works",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m6",
+   "text": "wait no",
+   "labels": [],
+   "allowed": [
+    "position",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m7",
+   "text": "sat is my kid's recital",
+   "labels": [
+    "constraint",
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m8",
+   "text": "sun works",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "can't do sat",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "sun is good",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m10",
+   "text": "Mt. Diablo summit trail?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m10",
+   "text": "the diablo one, same trail",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m11",
+   "text": "sure, 12 miles uphill in the heat, sounds relaxing",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "position",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m12",
+   "text": "does mission peak allow dogs? need that answer before picking it",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m13",
+   "text": "parking at mission peak's stanford ave trailhead is free",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m14",
+   "text": "i'll check the parking page tonight",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m15",
+   "text": "views are worth getting up early for",
+   "labels": [],
+   "any_of": [
+    "criterion",
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m16",
+   "text": "is leo's birthday dinner still friday?",
+   "labels": [
+    "separate_issue"
+   ]
+  },
+  {
+   "msg": "m17",
+   "text": "yep friday, noodles at 7",
+   "labels": [
+    "separate_issue"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m18",
+   "text": "birthday boy owes us dumplings",
+   "labels": [],
+   "any_of": [
+    "separate_issue",
+    "irrelevant"
+   ]
+  },
+  {
+   "msg": "m19",
+   "text": "i'll bring candles for that dinner",
+   "labels": [
+    "separate_issue",
+    "action"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "mission is still my pick",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "i know that route already",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "i can do sat too",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m22",
+   "text": "sun*",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m22",
+   "text": "sorry, typo",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m23",
+   "text": "sat i'm working",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m24",
+   "text": "my knee can't do more than 6 miles, that's a hard stop",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "the diablo one has a 5-mile version starting at the summit lot, not the 12-mile climb",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m26",
+   "text": "diablo yes if it's genuinely under 6 miles",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "i'm against diablo",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "12 miles sounds like a death march",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m28",
+   "text": "i'd pick diablo",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m29",
+   "text": "diablo works if dogs are allowed on that exact route",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m30",
+   "text": "mission peak allows dogs on leash, checked the park page",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m30",
+   "text": "that question's answered",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m31",
+   "text": "haven't found the dog rule for the diablo summit-lot route yet, still need that before we choose it",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m32",
+   "text": "dropping mission peak",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m32",
+   "text": "that parking queue can eat an hour, not worth it",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim",
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m33",
+   "text": "mission parking is $10 now, not free, just checked the fee page",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m34",
+   "text": "ok that 5-mile version works, i'm in for diablo",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m35",
+   "text": "what about sunol little yosemite loop? i'd pick that instead",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m36",
+   "text": "sunol is my backup",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m37",
+   "text": "i'm out this weekend",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m37",
+   "text": "withdraw my diablo and sunol votes for now",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m38",
+   "text": "actually i'm back in",
+   "labels": [],
+   "any_of": [
+    "position",
+    "constraint"
+   ],
+   "allowed": [
+    "position",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m39",
+   "text": "jen swapped her shift so i'm free again",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m40",
+   "text": "changed my mind on diablo; i'm for it",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m40",
+   "text": "that summit-lot route is only 5 miles",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m41",
+   "text": "ok so everyone's good with diablo",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m42",
+   "text": "not an unconditional yes from me, still only if bean can come",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m43",
+   "text": "dogs on leash are allowed on the diablo summit-lot route",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m43",
+   "text": "dog-rule gap closed",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m44",
+   "text": "then diablo yes",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m45",
+   "text": "diablo yes from me too",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m45",
+   "text": "sunday yes",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m46",
+   "text": "diablo it is then",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m46",
+   "text": "sunday nov 15 is settled too",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m47",
+   "text": "yep diablo",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m47",
+   "text": "sunday",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m48",
+   "text": "gas split is $10 each",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m48",
+   "text": "everyone ok with that requirement?",
+   "labels": [
+    "process"
+   ]
+  },
+  {
+   "msg": "m49",
+   "text": "yes to the $10 gas split",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m50",
+   "text": "$10 each is fine",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m51",
+   "text": "agree to $10 for gas",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m52",
+   "text": "same, $10 gas is fine",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m53",
+   "text": "yep i accept the $10 gas split",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m54",
+   "text": "me too, $10 gas agreed",
+   "labels": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m55",
+   "text": "how are we getting there?",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m56",
+   "text": "let's carpool",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m56",
+   "text": "we still need someone to drive",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m57",
+   "text": "or meet at the trailhead? i'd do that",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m58",
+   "text": "sunday is good for me",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m59",
+   "text": "the forecast now says 40 mph gusts on diablo for sunday",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m60",
+   "text": "reopening diablo",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "process"
+   ]
+  },
+  {
+   "msg": "m60",
+   "text": "that new forecast changes the choice",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "process"
+   ]
+  },
+  {
+   "msg": "m61",
+   "text": "i'm not doing diablo in that",
+   "labels": [
+    "position",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m61",
+   "text": "the exposed ridge would be unsafe",
+   "labels": [
+    "claim",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m62",
+   "text": "diablo is a no from me now",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m62",
+   "text": "bean gets spooked by strong wind",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "withdrawing my diablo pick",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "diablo's dropped",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "decision"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "bringing sunol back off backup",
+   "labels": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "sunol is my pick now",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m64",
+   "text": "sunol works for me",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m65",
+   "text": "sunol yes if that loop is under 6 miles",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m66",
+   "text": "sunol yes",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m66",
+   "text": "bean can come there too according to the park page",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "diablo's a no from me now",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "sunol yes",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "not meeting separately anymore",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "carpool if someone drives",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m68",
+   "text": "i'll check the sunol loop distance now",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m69",
+   "text": "mapped the little yosemite loop we mean: 5.4 miles total, including the walk from parking",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m70",
+   "text": "then sunol yes, no distance condition left",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "settled: sunol little yosemite loop",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "sunday nov 15",
+   "labels": [
+    "decision"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "plan is carpool, conditional on a driver",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "meeting separately is dropped",
+   "labels": [],
+   "any_of": [
+    "option",
+    "decision"
+   ]
+  },
+  {
+   "msg": "m72",
+   "text": "who's actually driving? can't lock transport till we know",
+   "labels": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m72",
+   "text": "i can't drive",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m73",
+   "text": "i'll bring the first aid kit",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m74",
+   "text": "i'll bring bean's water and a spare leash",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m75",
+   "text": "i'll buy the sunol parking pass tomorrow",
+   "labels": [
+    "action"
+   ]
+  }
+ ],
+ "notes": "Generated externally; normalised to the segmentation/label spec (see gold.orig.json for the original)."
+}

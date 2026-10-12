@@ -1,0 +1,1250 @@
+{
+ "transcript": "ent-03-hard-data-platform.txt",
+ "notes": "labels = all required; any_of = at least one required; allowed = acceptable extras; optional = span may be absent; sensitive/private are annotations for later stages (not scored). Traps: sarcasm (m5); Colleen misattributes Raj's conditional stance (m19) and claims false consensus (m84) - both are CLAIMS, never positions or decisions; 15% target superseded by 10% (m10->m31); '$3M budget' is a false recollection (m89/m90); 'Separate thought' is NOT a separate issue (m74); Dmitri's 'Fine, whatever' then abstains (m82/m87); A/B poll replies need the m22 mapping; two decision questions run in parallel (platform, cutover date) plus a sub-decision on Snowflake notice; on-call stays an unowned blocker (do not invent an owner).",
+ "spans": [
+  {
+   "msg": "m1",
+   "text": "Purpose of this thread: land the end-state data platform after the merger and a cutover window.",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "Today we run Halden's Databricks and our Snowflake.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "I'd like a direction by Wednesday.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "process"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "The exec ask is unified reporting by end of March.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "Databricks, obviously.",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "We already run 300+ pipelines on it and the ML team lives there.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "Snowflake.",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "Our whole claims mart is there plus about 40 stored procedures that don't port cleanly.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "Stored procedures port fine with the converter.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "Halden moved 300 pipelines in 8 weeks last year.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m5",
+   "text": "Sure, and I'm sure we'll do 400 in six weeks with the same team. Totally realistic.",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m6",
+   "text": "As the BI person I don't care which one, as long as my dashboards don't break twice.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "criterion",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m6",
+   "text": "Or we just keep querying both forever lol",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m7",
+   "text": "Querying both doubles the cost and nobody can reconcile the numbers.",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m7",
+   "text": "Hard no on that.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m8",
+   "text": "Dropping that one.",
+   "labels": [
+    "position",
+    "option"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "Let me capture criteria.",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m9",
+   "text": "I'd rank speed to unified reporting first, then cost, then risk.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "Agree?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m10",
+   "text": "Cost has to be in there.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m10",
+   "text": "I heard from Anita that the CFO wants a 15% run-cost reduction on data platforms this year.",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m11",
+   "text": "Compliance needs to be its own item.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m11",
+   "text": "Anything with PHI needs BAA coverage and the same access controls, and we have a regulatory audit in May.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m12",
+   "text": "Ranking for now: speed, cost, compliance.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m13",
+   "text": "Is the 3pm still on?",
+   "labels": [],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m14",
+   "text": "Yes, 3pm. Raj is walking through the claims mart inventory.",
+   "labels": [],
+   "allowed": [
+    "separate_issue",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m15",
+   "text": "Random, where do visitors park at the Halden office on Thursday? Lot looks full.",
+   "labels": [
+    "separate_issue"
+   ]
+  },
+  {
+   "msg": "m16",
+   "text": "Level 3 of the garage, security badges them in at the gate.",
+   "labels": [],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m17",
+   "text": "My view stands, Databricks as the end state.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m17",
+   "text": "Raj, what would it take for you?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m18",
+   "text": "I could live with Databricks IF the migration tooling covers our 40 stored procedures.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m18",
+   "text": "I haven't verified that yet.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m19",
+   "text": "Great, so Raj is fine with Databricks. Noting that.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "That's not what I said. I said I could live with it IF the tooling covers the 40 procs. That's not \"fine\".",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "OK, conditional. Fair.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m22",
+   "text": "Quick poll for the end state. A is Databricks, B is Snowflake. Reply with your pick.",
+   "labels": [
+    "process"
+   ],
+   "allowed": [
+    "candidate_question",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m23",
+   "text": "A",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m24",
+   "text": "A",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "A, provided the PHI controls and the BAA are in place before any claims data moves.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m26",
+   "text": "B for now. Show me the stored procs working and I'll change.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "No view.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "I just need the cost number either way.",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m28",
+   "text": "A, but not by March.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m30",
+   "text": "Numbers as I have them: Snowflake costs about $2.4M a year, Halden's Databricks about $1.9M. Keeping both is about $4.3M. A merged workload on Databricks should land near $3M.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m31",
+   "text": "Correction on what I said earlier. The CFO target is 10%, not 15%.",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m31",
+   "text": "Anita just corrected me.",
+   "labels": [],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m33",
+   "text": "Raj, doesn't the Snowflake contract renew soon?",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "process",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m34",
+   "text": "Yes. It renews Feb 28 and auto-renews for 3 years unless we give notice 90 days before, so by Nov 30.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m35",
+   "text": "I'll pull the contract and confirm by Wednesday.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m36",
+   "text": "Then we serve non-renewal notice by Nov 30 and we're done.",
+   "labels": [],
+   "any_of": [
+    "option",
+    "position"
+   ],
+   "allowed": [
+    "action",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m37",
+   "text": "If we serve notice we lose Snowflake on Feb 28. We won't be on Databricks by then. That's a gap.",
+   "labels": [
+    "claim",
+    "objection"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m38",
+   "text": "And March for 400 pipelines was never going to happen.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m39",
+   "text": "I also can't see claims data moving by March with the BAA and tokenization review not even started.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m39",
+   "text": "I'm against a March date.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m40",
+   "text": "OK so what's realistic? Q2?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "candidate_question",
+    "position"
+   ]
+  },
+  {
+   "msg": "m41",
+   "text": "Q2 is workable for me.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m42",
+   "text": "Q2 I could do.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m42",
+   "text": "Needs the stored proc answer first.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "constraint",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m43",
+   "text": "+1",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m44",
+   "text": "Dropping the March target then.",
+   "labels": [],
+   "allowed": [
+    "position"
+   ],
+   "any_of": [
+    "option",
+    "decision"
+   ]
+  },
+  {
+   "msg": "m44",
+   "text": "I'll plan on Q2 and confirm the date once Raj's assessment is back.",
+   "labels": [],
+   "any_of": [
+    "decision",
+    "action",
+    "position"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m45",
+   "text": "Q2 works for me.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m45",
+   "text": "It moves most of the spend into next FY anyway.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m46",
+   "text": "Heads up, I'm out all next week, surgery.",
+   "labels": [],
+   "allowed": [
+    "claim"
+   ],
+   "sensitive": true,
+   "private": true,
+   "any_of": [
+    "separate_issue",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m46",
+   "text": "Wei is covering my BI sign-offs.",
+   "labels": [],
+   "any_of": [
+    "action",
+    "separate_issue"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m47",
+   "text": "Yes, I'll cover BI sign-offs next week.",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "separate_issue"
+   ]
+  },
+  {
+   "msg": "m48",
+   "text": "Between us: there's a hiring freeze, so no backfill for Raj's team.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "private": true
+  },
+  {
+   "msg": "m48",
+   "text": "Please keep that inside this thread.",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m49",
+   "text": "So it's the people we have.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "constraint"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m50",
+   "text": "Which makes interim on-call matter.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "criterion"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m50",
+   "text": "Who owns on-call for the legacy Snowflake pipelines during the migration?",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m51",
+   "text": "Anyone know where the expense tool moved? The old link is dead.",
+   "labels": [
+    "separate_issue"
+   ]
+  },
+  {
+   "msg": "m52",
+   "text": "Under Finance Apps now.",
+   "labels": [],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m53",
+   "text": "Back to on-call please. Who owns it?",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m54",
+   "text": "Not it, my team is already stretched.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "position"
+   ],
+   "allowed": [
+    "objection",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m55",
+   "text": "Halden platform team can't take Snowflake pipelines, we have no Snowflake skills.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "constraint",
+    "position",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m56",
+   "text": "Let's park on-call and I'll come back to it.",
+   "labels": [],
+   "allowed": [
+    "action",
+    "blocker",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m58",
+   "text": "31 of 40 convert cleanly, 9 need rewrites.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m59",
+   "text": "Rewrites are maybe two weeks of work.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m60",
+   "text": "Closer to 4 to 6 weeks with the team we have.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m61",
+   "text": "We can lend two engineers from Halden for the rewrites.",
+   "labels": [],
+   "any_of": [
+    "action",
+    "claim"
+   ],
+   "allowed": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m62",
+   "text": "If you lend two engineers for the rewrites, A works for me and I withdraw B.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "Then I'll commit two engineers for six weeks, starting Dec 1.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m64",
+   "text": "Dec 1 plus six weeks is mid January. That works.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m65",
+   "text": "Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m65",
+   "text": "Halden says the addendum is standard but I haven't seen it.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m66",
+   "text": "It's standard, I've signed one before.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "I need to read it myself.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "constraint",
+    "claim",
+    "action"
+   ]
+  },
+  {
+   "msg": "m67",
+   "text": "Until then my A is conditional on the BAA and tokenization.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m68",
+   "text": "Contract confirmed. Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30. Raj was right.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m69",
+   "text": "So we can't serve notice and still run until Q2.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "constraint",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m70",
+   "text": "I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal.",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m70",
+   "text": "No promise they agree.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m70",
+   "text": "I'll ask by Nov 20.",
+   "labels": [
+    "action"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m71",
+   "text": "If they refuse we renew for a year and take the hit.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position",
+    "claim",
+    "decision"
+   ]
+  },
+  {
+   "msg": "m72",
+   "text": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m72",
+   "text": "That's the downside.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "objection"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m73",
+   "text": "Understood. Let's see what the rep says.",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m74",
+   "text": "Until cutover can we federate queries across both platforms as a bridge?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position",
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m75",
+   "text": "As a temporary bridge, ok. As the end state, still no.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m76",
+   "text": "Interim only.",
+   "labels": [],
+   "any_of": [
+    "position",
+    "decision",
+    "option"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m77",
+   "text": "That works for BI.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m78",
+   "text": "Security architecture review is now mandatory before any PHI migration.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m78",
+   "text": "It's booked for Dec 8 and takes about 3 weeks.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m79",
+   "text": "New order: compliance first, then cost, then speed.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m79",
+   "text": "March is dead, Q2 it is, exact date after the Dec 8 review and Raj's assessment.",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option",
+    "blocker",
+    "constraint",
+    "position"
+   ]
+  },
+  {
+   "msg": "m80",
+   "text": "Sofia, are we deciding the platform today?",
+   "labels": [],
+   "allowed": [
+    "process",
+    "blocker",
+    "candidate_question"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m81",
+   "text": "Can we go with A as the direction, with the open items tracked?",
+   "labels": [],
+   "any_of": [
+    "position",
+    "decision"
+   ],
+   "allowed": [
+    "process"
+   ]
+  },
+  {
+   "msg": "m82",
+   "text": "Fine, whatever gets us out of this thread.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m83",
+   "text": "A works for me, and Q2 is what makes it work.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m84",
+   "text": "Great, all seven of us are on board with Databricks then.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m85",
+   "text": "Not all seven. I'm conditional on the BAA and tokenization, not \"on board\".",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m86",
+   "text": "Same, conditional on the stored procs and the engineers.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m87",
+   "text": "And I abstained. Count me out of that.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m88",
+   "text": "OK, noted. Five supporters then, some conditional.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m89",
+   "text": "Someone said earlier the budget is fixed at $3M. Is that right?",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m90",
+   "text": "Nobody said that. $3M was my estimate for the merged workload on Databricks. It isn't a budget.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m92",
+   "text": "On-call for the legacy Snowflake pipelines is still unowned.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m93",
+   "text": "I'll recap what we have.",
+   "labels": [],
+   "allowed": [
+    "process",
+    "action"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m94",
+   "text": "Direction: Databricks as the end state, Q2 cutover, exact date after Raj's assessment and the Dec 8 security review.",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option",
+    "blocker",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m94",
+   "text": "Federation only as an interim bridge.",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option",
+    "position",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m94",
+   "text": "March is off.",
+   "labels": [
+    "decision"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m94",
+   "text": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30.",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m95",
+   "text": "I'll deliver the full stored procedure assessment by Nov 6.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m96",
+   "text": "And I'll finish the BAA addendum review by Nov 13.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m97",
+   "text": "Reminder, I'm out from Monday.",
+   "labels": [],
+   "allowed": [
+    "claim"
+   ],
+   "private": true,
+   "any_of": [
+    "separate_issue",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m97",
+   "text": "BI sign-offs go to Wei.",
+   "labels": [],
+   "any_of": [
+    "action",
+    "separate_issue"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m98",
+   "text": "The extension request to Snowflake goes out by Nov 20, as I said.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m99",
+   "text": "Two Halden engineers start Dec 1.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m99",
+   "text": "I'll confirm names by Nov 13.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m100",
+   "text": "Still no owner for on-call though.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m100",
+   "text": "Not letting that go.",
+   "labels": [],
+   "allowed": [
+    "objection",
+    "blocker"
+   ],
+   "optional": true
+  }
+ ]
+}

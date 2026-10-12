@@ -1,0 +1,23 @@
+{
+ "transcript": "ent-01-easy-cutover.txt",
+ "participants": ["Priya", "Hannah", "Dev", "Marcus", "Elena", "Tom"],
+ "questions": [
+  {"key": "weekend", "match": ["weekend", "cutover", "date"], "status": ["decided"]}
+ ],
+ "options": [
+  {"key": "nov14", "match": ["nov\\.?\\s*14"], "status": ["chosen"],
+   "stances": {"Priya": ["support", "blank"], "Hannah": ["support"], "Dev": ["support"],
+               "Marcus": ["support"], "Elena": ["support"], "Tom": ["support"]}},
+  {"key": "nov21", "match": ["nov\\.?\\s*21"], "status": ["fallback"],
+   "stances": {"Dev": ["support", "conditional"], "Priya": ["support", "blank"]}},
+  {"key": "dec5", "match": ["dec\\.?\\s*5"], "status": ["dropped"],
+   "stances": {"Hannah": ["withdrawn"], "Elena": ["oppose"]}}
+ ],
+ "elements": [
+  {"key": "uat_signoff", "msg": "m12", "kinds": ["constraint", "claim"], "match": ["uat"], "status": ["active", "satisfied", "unverified", "confirmed"]}
+ ],
+ "histories": [
+  {"option": "dec5", "participant": "Hannah", "sequence": [["support", "conditional"], ["withdrawn"]]}
+ ],
+ "flags": []
+}

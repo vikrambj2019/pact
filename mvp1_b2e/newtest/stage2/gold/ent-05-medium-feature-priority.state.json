@@ -1,0 +1,122 @@
+{
+  "transcript": "ent-05-medium-feature-priority.txt",
+  "notes": "Product team Q1 feature selection. Beth's 2-week estimate (m7) is superseded by Eli's 4-6 week estimate (m23). Dana's UX research blocker (m10) resolves at m36-m37. Beth's consensus claim at m32 is false: Cam is on search, Dana is still conditional. Cam arc on notifications: conditional (m14) -> shifts to search (m27) -> returns to notifications (m38). Eli's 'confirmed' at m20 is factual, not a stance on API integrations.",
+  "participants": ["Alex", "Beth", "Cam", "Dana", "Eli"],
+  "questions": [
+    {
+      "key": "feature",
+      "match": ["feature", "build", "Q1", "quarter"],
+      "status": ["decided"]
+    },
+    {
+      "key": "launch_date",
+      "match": ["launch", "target", "end of"],
+      "status": ["decided"]
+    }
+  ],
+  "options": [
+    {
+      "key": "notifications",
+      "match": ["notification"],
+      "status": ["chosen"],
+      "stances": {
+        "Beth": ["support"],
+        "Cam": ["support"],
+        "Dana": ["support"],
+        "Eli": ["support"]
+      }
+    },
+    {
+      "key": "search",
+      "match": ["search"],
+      "exclude": ["research"],
+      "status": ["dropped"],
+      "stances": {
+        "Cam": ["support"]
+      }
+    },
+    {
+      "key": "api_integrations",
+      "match": ["api", "oauth", "integration"],
+      "exclude": ["notification", "search"],
+      "status": ["dropped"],
+      "stances": {
+        "Dana": ["withdrawn"]
+      }
+    },
+    {
+      "key": "end_of_jan",
+      "match": ["january", "end of jan"],
+      "exclude": ["february"],
+      "status": ["dropped"],
+      "optional": true
+    },
+    {
+      "key": "end_of_feb",
+      "match": ["february", "end of feb"],
+      "exclude": ["january"],
+      "status": ["chosen"],
+      "stances": {
+        "Cam": ["support"],
+        "Dana": ["support"],
+        "Beth": ["support"],
+        "Eli": ["support"]
+      }
+    }
+  ],
+  "elements": [
+    {
+      "key": "engineer_capacity",
+      "msg": "m6",
+      "kinds": ["constraint"],
+      "match": ["engineer", "backend"],
+      "status": ["active"]
+    },
+    {
+      "key": "diego_infra",
+      "msg": "m6",
+      "kinds": ["constraint"],
+      "match": ["diego"],
+      "status": ["active"]
+    },
+    {
+      "key": "notifications_2w",
+      "msg": "m7",
+      "kinds": ["claim"],
+      "match": ["two week|2.week"],
+      "status": ["superseded", "conflicting"]
+    },
+    {
+      "key": "ux_research_blocker",
+      "msg": "m10",
+      "kinds": ["blocker"],
+      "match": ["ux|study|research"],
+      "status": ["resolved"]
+    },
+    {
+      "key": "notifications_4_6w",
+      "msg": "m23",
+      "kinds": ["claim"],
+      "match": ["retry|reliable|4.6"],
+      "status": ["unverified", "confirmed"]
+    }
+  ],
+  "histories": [
+    {
+      "option": "notifications",
+      "participant": "Cam",
+      "sequence": [["conditional"], ["support"]]
+    },
+    {
+      "option": "notifications",
+      "participant": "Dana",
+      "sequence": [["conditional"], ["support"]]
+    }
+  ],
+  "flags": [
+    {
+      "type": "consensus_conflict",
+      "msg": "m32"
+    }
+  ]
+}

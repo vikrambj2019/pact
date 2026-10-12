@@ -1,0 +1,489 @@
+{
+ "transcript": "ent-04-hiking-trip.txt",
+ "participants": [
+  "Maya",
+  "Leo",
+  "Sam",
+  "Priya",
+  "Arjun",
+  "Nora"
+ ],
+ "questions": [
+  {
+   "key": "trail",
+   "match": [
+    "trail",
+    "hike",
+    "where"
+   ],
+   "status": [
+    "decided"
+   ]
+  },
+  {
+   "key": "day",
+   "match": [
+    "day",
+    "sat|sun|when"
+   ],
+   "status": [
+    "decided"
+   ]
+  },
+  {
+   "key": "transport",
+   "match": [
+    "transport",
+    "getting there",
+    "carpool",
+    "trailhead"
+   ],
+   "status": [
+    "conditional",
+    "open"
+   ]
+  }
+ ],
+ "options": [
+  {
+   "key": "diablo",
+   "match": [
+    "diablo"
+   ],
+   "exclude": [
+    "mission",
+    "sunol"
+   ],
+   "status": [
+    "dropped"
+   ],
+   "stances": {
+    "Maya": [
+     "withdrawn"
+    ],
+    "Leo": [
+     "oppose"
+    ],
+    "Sam": [
+     "oppose"
+    ],
+    "Priya": [
+     "oppose"
+    ],
+    "Arjun": [
+     "support"
+    ]
+   }
+  },
+  {
+   "key": "mission",
+   "match": [
+    "mission"
+   ],
+   "exclude": [
+    "diablo",
+    "sunol"
+   ],
+   "status": [
+    "dropped"
+   ],
+   "stances": {
+    "Sam": [
+     "withdrawn"
+    ]
+   }
+  },
+  {
+   "key": "sunol",
+   "match": [
+    "sunol",
+    "little yosemite"
+   ],
+   "exclude": [
+    "diablo",
+    "mission"
+   ],
+   "status": [
+    "chosen"
+   ],
+   "stances": {
+    "Maya": [
+     "support"
+    ],
+    "Leo": [
+     "support"
+    ],
+    "Sam": [
+     "support"
+    ],
+    "Priya": [
+     "support"
+    ],
+    "Arjun": [
+     "support"
+    ]
+   }
+  },
+  {
+   "key": "saturday",
+   "match": [
+    "\\bsat(?:urday)?\\b",
+    "nov(?:ember)?\\s*14"
+   ],
+   "exclude": [
+    "sun(?:day)?",
+    "nov(?:ember)?\\s*15"
+   ],
+   "status": [
+    "dropped"
+   ],
+   "optional": false,
+   "stances": {
+    "Maya": [
+     "oppose",
+     "withdrawn",
+     "blank"
+    ],
+    "Arjun": [
+     "oppose",
+     "withdrawn",
+     "blank"
+    ],
+    "Nora": [
+     "oppose",
+     "blank"
+    ]
+   }
+  },
+  {
+   "key": "sunday",
+   "match": [
+    "\\bsun(?:day)?\\b",
+    "nov(?:ember)?\\s*15"
+   ],
+   "exclude": [
+    "sat(?:urday)?",
+    "nov(?:ember)?\\s*14"
+   ],
+   "status": [
+    "chosen"
+   ],
+   "optional": false,
+   "stances": {
+    "Maya": [
+     "support"
+    ],
+    "Leo": [
+     "support"
+    ],
+    "Sam": [
+     "support"
+    ],
+    "Priya": [
+     "support"
+    ],
+    "Arjun": [
+     "support"
+    ],
+    "Nora": [
+     "support"
+    ]
+   }
+  },
+  {
+   "key": "carpool",
+   "match": [
+    "carpool"
+   ],
+   "exclude": [
+    "meet(?:ing)? (?:at|separately)"
+   ],
+   "status": [
+    "active",
+    "chosen"
+   ],
+   "stances": {
+    "Maya": [
+     "support"
+    ],
+    "Sam": [
+     "conditional"
+    ]
+   }
+  },
+  {
+   "key": "meet_trailhead",
+   "match": [
+    "meet(?:ing)? at (?:the )?trailhead",
+    "meet(?:ing)? separately"
+   ],
+   "exclude": [
+    "carpool"
+   ],
+   "status": [
+    "dropped"
+   ],
+   "stances": {
+    "Sam": [
+     "withdrawn"
+    ]
+   }
+  }
+ ],
+ "elements": [
+  {
+   "key": "parking_free",
+   "msg": "m13",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "park|free"
+   ],
+   "status": [
+    "superseded",
+    "conflicting"
+   ]
+  },
+  {
+   "key": "parking_ten",
+   "msg": "m33",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "park|\\$10"
+   ],
+   "status": [
+    "unverified",
+    "confirmed"
+   ]
+  },
+  {
+   "key": "mission_dogs",
+   "msg": "m12",
+   "kinds": [
+    "blocker"
+   ],
+   "match": [
+    "dog"
+   ],
+   "status": [
+    "resolved"
+   ]
+  },
+  {
+   "key": "diablo_dogs",
+   "msg": "m31",
+   "kinds": [
+    "blocker"
+   ],
+   "match": [
+    "dog"
+   ],
+   "status": [
+    "resolved"
+   ]
+  },
+  {
+   "key": "driver",
+   "msg": "m56",
+   "kinds": [
+    "blocker"
+   ],
+   "match": [
+    "driv"
+   ],
+   "status": [
+    "open"
+   ]
+  },
+  {
+   "key": "knee_limit",
+   "msg": "m24",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "knee|6 mile"
+   ],
+   "status": [
+    "active",
+    "satisfied"
+   ]
+  },
+  {
+   "key": "dog_required",
+   "msg": "m4",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "bean|dog"
+   ],
+   "status": [
+    "active",
+    "satisfied"
+   ]
+  },
+  {
+   "key": "gas_ten",
+   "msg": "m48",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "gas|\\$10"
+   ],
+   "status": [
+    "active"
+   ]
+  },
+  {
+   "key": "saturday_recital",
+   "msg": "m7",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "sat|recital"
+   ],
+   "status": [
+    "active"
+   ]
+  },
+  {
+   "key": "nora_cannot_drive",
+   "msg": "m72",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "driv"
+   ],
+   "status": [
+    "active"
+   ]
+  },
+  {
+   "key": "sunol_distance",
+   "msg": "m69",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "5\\.4|mile"
+   ],
+   "status": [
+    "unverified",
+    "confirmed"
+   ]
+  },
+  {
+   "key": "diablo_weather",
+   "msg": "m59",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "40|gust|forecast"
+   ],
+   "status": [
+    "unverified"
+   ]
+  }
+ ],
+ "histories": [
+  {
+   "option": "diablo",
+   "participant": "Leo",
+   "sequence": [
+    [
+     "conditional"
+    ],
+    [
+     "support"
+    ],
+    [
+     "oppose"
+    ]
+   ]
+  },
+  {
+   "option": "diablo",
+   "participant": "Arjun",
+   "sequence": [
+    [
+     "conditional"
+    ],
+    [
+     "support"
+    ]
+   ]
+  },
+  {
+   "option": "diablo",
+   "participant": "Sam",
+   "sequence": [
+    [
+     "oppose"
+    ],
+    [
+     "withdrawn"
+    ],
+    [
+     "support"
+    ],
+    [
+     "oppose"
+    ]
+   ]
+  },
+  {
+   "option": "sunol",
+   "participant": "Sam",
+   "sequence": [
+    [
+     "support"
+    ],
+    [
+     "withdrawn"
+    ],
+    [
+     "support"
+    ]
+   ]
+  },
+  {
+   "option": "sunol",
+   "participant": "Leo",
+   "sequence": [
+    [
+     "conditional"
+    ],
+    [
+     "support"
+    ]
+   ]
+  },
+  {
+   "option": "meet_trailhead",
+   "participant": "Sam",
+   "sequence": [
+    [
+     "support"
+    ],
+    [
+     "withdrawn"
+    ]
+   ]
+  }
+ ],
+ "flags": [
+  {
+   "type": "consensus_conflict",
+   "msg": "m41"
+  }
+ ],
+ "notes": "Generated externally; quick self-correction bursts (m5-m8, m21-m23) are slips by design, not stance histories. Original in state.orig.json."
+}

@@ -1,0 +1,676 @@
+{
+ "transcript": "ent-02-medium-support-ai.txt",
+ "notes": "labels = all required; any_of = at least one required; allowed = acceptable extras; optional = span may be absent. Hard cases: Keiko flips Relay->build->drops build (m2,m4,m13); Jonas's SOC2 claim contradicted by Amira (m15/m16) then superseded (m17,m26); Luis's 'Confirming $200k cap' is the canonical AGREEMENT (m7); all-hands side thread (m36-m39); final state is a conditional recommendation, not a decision.",
+ "spans": [
+  {
+   "msg": "m1",
+   "text": "we need a direction on the AI assistant for support tickets. Build in-house or buy?",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "I'd like a recommendation ready for the Nov 12 steering meeting.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "I've looked at two vendors, Relay and Hollis.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "Relay is my pick.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "It plugs into our ticketing tool out of the box.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "Third option is to build it ourselves on the LLM API we already pay for.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "I could prototype quickly.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "action",
+    "position"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "Honestly I'd lean to build.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "We'd own the roadmap.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m5",
+   "text": "Before we go further, what's the budget? I need year one numbers.",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m6",
+   "text": "Finance gave us a cap of $200k for year one, all in.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m7",
+   "text": "Confirming: $200k cap, all in, including implementation.",
+   "labels": [
+    "agreement"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m8",
+   "text": "Pricing as I have it: Relay $180k a year, Hollis $240k a year.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "Then Hollis is over the cap before any implementation fee.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "I can't support Hollis.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m10",
+   "text": "OK, that takes Hollis off the table unless the price changes.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position",
+    "decision"
+   ]
+  },
+  {
+   "msg": "m11",
+   "text": "On build: I'd need two engineers for two quarters, and I don't have two free until Q3.",
+   "labels": [],
+   "any_of": [
+    "constraint",
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m12",
+   "text": "That's a problem.",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m12",
+   "text": "We want this live before the January peak, ideally by Jan 15.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m13",
+   "text": "Fine, I'm dropping build.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "option"
+   ]
+  },
+  {
+   "msg": "m13",
+   "text": "It can't make Jan 15.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m14",
+   "text": "So it's Relay, assuming it checks out.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "decision"
+   ]
+  },
+  {
+   "msg": "m14",
+   "text": "Jonas, what do we know about their security?",
+   "labels": [],
+   "allowed": [
+    "process",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m15",
+   "text": "They have SOC 2 Type II. It's on their website.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m16",
+   "text": "I looked at their trust page this morning. It says Type I, with Type II in progress. Those are not the same thing.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m17",
+   "text": "Hm, maybe I misread it.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m17",
+   "text": "I'll ask their rep.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m18",
+   "text": "our EU customer contracts require ticket data to stay in the EU.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m18",
+   "text": "Does Relay have an EU region?",
+   "labels": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m19",
+   "text": "I think so but I'm not sure.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m19",
+   "text": "I'll ask.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "On the EU point, yes, it's in the enterprise agreements, clause 9. I can confirm that.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "So the conditions are SOC 2 Type II evidence and an EU data region.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "Anything else?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m22",
+   "text": "From legal, we need a signed DPA before any ticket data goes to them.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m23",
+   "text": "Noted.",
+   "labels": [
+    "irrelevant"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m24",
+   "text": "Does the $180k include implementation?",
+   "labels": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "Don't know. Their quote says \"platform license\".",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "I'll ask.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m26",
+   "text": "Update from Relay's rep: the SOC 2 Type II audit report will be available Dec 1.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m26",
+   "text": "Type I is done.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "Then I can't approve data going to Relay before Dec 1.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "position",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "I could support picking Relay on Nov 12 if go-live is gated on that report.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m28",
+   "text": "Does that still work for Jan 15?",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m29",
+   "text": "Yes, if the report lands Dec 1 with no major findings.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m30",
+   "text": "Pricing update: implementation is a separate one-time $35k. So $215k in year one.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m31",
+   "text": "That's over the cap, $215k against $200k, unless we negotiate.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker",
+    "objection"
+   ]
+  },
+  {
+   "msg": "m32",
+   "text": "Can we get the implementation fee down?",
+   "labels": [],
+   "allowed": [
+    "blocker",
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m33",
+   "text": "I'll push procurement to waive or split the $35k.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m33",
+   "text": "I can support Relay if we land at or under $200k.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m33",
+   "text": "Otherwise it needs an exception.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "constraint",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m34",
+   "text": "Keiko, what would Hollis cost with implementation? Just for comparison.",
+   "labels": [
+    "process"
+   ],
+   "allowed": [
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m35",
+   "text": "$240k plus $50k implementation, so $290k. Way out.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m36",
+   "text": "who's presenting at the Nov all-hands? Nothing on the schedule yet.",
+   "labels": [
+    "separate_issue"
+   ]
+  },
+  {
+   "msg": "m37",
+   "text": "No idea, not me.",
+   "labels": [],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m38",
+   "text": "Don't look at me.",
+   "labels": [],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m39",
+   "text": "Let's take that offline. Back to Relay.",
+   "labels": [
+    "process"
+   ],
+   "allowed": [
+    "separate_issue"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m40",
+   "text": "My view: Relay. I support it.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m40",
+   "text": "Keiko?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m41",
+   "text": "Yes, Relay. I support it.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m42",
+   "text": "I'm fine with Relay as long as the SOC 2 Type II report lands. That's my condition too.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m43",
+   "text": "Same as I said. Conditional on the report and the EU region.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m44",
+   "text": "Yes to Relay at or under $200k.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement"
+   ]
+  },
+  {
+   "msg": "m45",
+   "text": "Ben?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m46",
+   "text": "Legal is OK with Relay as long as the DPA is signed before go-live.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m46",
+   "text": "I'll send redlines to their counsel by Nov 6.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m47",
+   "text": "Where we are: the preference is Relay.",
+   "labels": [],
+   "any_of": [
+    "position",
+    "decision",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m47",
+   "text": "Open items are the Type II report on Dec 1, EU region confirmation, the implementation fee, and the DPA.",
+   "labels": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m48",
+   "text": "Right.",
+   "labels": [],
+   "allowed": [
+    "position",
+    "agreement",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m49",
+   "text": "I'll confirm the EU region with their rep by Friday.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m50",
+   "text": "And I'll chase the audit report and ask for a draft earlier.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m51",
+   "text": "I'll talk to procurement about the fee by Nov 5.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m52",
+   "text": "I'll take this to Nov 12 as a conditional recommendation.",
+   "labels": [],
+   "any_of": [
+    "decision",
+    "action"
+   ]
+  },
+  {
+   "msg": "m52",
+   "text": "Thanks all.",
+   "labels": [
+    "irrelevant"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m53",
+   "text": "ok",
+   "labels": [
+    "irrelevant"
+   ],
+   "optional": true
+  }
+ ]
+}

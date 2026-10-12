@@ -1,0 +1,50 @@
+01/08/26, 10:00 AM - Alex: alright, Q1 planning. what feature are we building this quarter?
+01/08/26, 10:01 AM - Beth: notifications. we've deferred it twice already and users keep asking
+01/08/26, 10:02 AM - Cam: search is my vote. it's been the top item on the public tracker for six months
+01/08/26, 10:04 AM - Dana: API integrations. three enterprise deals have stalled because we don't have OAuth
+01/08/26, 10:06 AM - Eli: all three are valid. do we have the capacity to pick one and actually ship it?
+01/08/26, 10:08 AM - Alex: we have two backend engineers for Q1. Diego is on infrastructure until end of January, so it's effectively one engineer for the first month
+01/08/26, 10:10 AM - Beth: notifications doesn't need Diego. I can have the core push layer done in two weeks
+01/08/26, 10:12 AM - Cam: is two weeks realistic? we've never built a notification system before
+01/08/26, 10:13 AM - Beth: I shipped one at each of my last two companies. two weeks for the push layer, one more to hook up email
+01/08/26, 10:15 AM - Dana: I'm conditional on notifications. we ran a UX study in December and I want to see the results before committing. they're not in yet
+01/08/26, 10:16 AM - Alex: when do we get those results?
+01/08/26, 10:17 AM - Dana: Priya said around January 15
+01/08/26, 10:18 AM - Eli: I'll ping Priya today to get a firm date
+01/08/26, 10:20 AM - Cam: same as Dana. conditional on notifications — if Beth's estimate holds I'm in, otherwise I'd lean search
+01/08/26, 10:21 AM - Alex: let's look at search. Cam, what's the scope?
+01/08/26, 10:22 AM - Cam: Elasticsearch, rebuild the index, write a relevance model. four to five weeks
+01/08/26, 10:23 AM - Beth: that's longer than notifications
+01/08/26, 10:24 AM - Alex: and API integrations?
+01/08/26, 10:25 AM - Dana: OAuth plus three connectors: Salesforce, HubSpot, Zapier. full quarter minimum. also needs Diego — the OAuth layer touches our auth service
+01/08/26, 10:27 AM - Eli: confirmed — if it needs Diego, API integrations is out for Q1
+01/08/26, 10:28 AM - Alex: agreed. API integrations moves to Q2
+01/08/26, 10:29 AM - Dana: right call. I'll drop it as a Q1 option
+01/08/26, 10:31 AM - Eli: quick update on notifications: I checked with Jordan on infra. reliable delivery with retry logic is four to six weeks, not two
+01/08/26, 10:33 AM - Beth: that's the production version. a basic v1 with push-only is still two weeks
+01/08/26, 10:34 AM - Cam: I wouldn't ship a notification system that drops messages. that's worse than nothing
+01/08/26, 10:35 AM - Dana: same. if we do notifications it has to be the full version
+01/08/26, 10:37 AM - Cam: given that, I'd shift to search. four to five weeks, no open questions
+01/08/26, 10:39 AM - Beth: I still say notifications. even at four to six weeks it fits Q1 if we kick off January sixth
+01/08/26, 10:40 AM - Dana: staying conditional until the UX results land
+01/08/26, 10:42 AM - Alex: Eli, anything from Priya?
+01/08/26, 10:43 AM - Eli: just heard back. results will be ready January thirteenth, two days early
+01/08/26, 10:45 AM - Beth: at this point the team is lined up on notifications. Cam and Dana are both in, and we all agree API integrations goes to Q2
+01/08/26, 10:47 AM - Alex: that's not right. Cam shifted to search and Dana is still conditional. that's not alignment
+01/08/26, 10:48 AM - Beth: I read Cam's comment as a lean, not a firm position
+01/08/26, 10:49 AM - Cam: I said I'd shift to search. that's my current position, not a lean
+01/08/26, 10:52 AM - Dana: update — UX results just came in. Priya sent the deck early
+01/08/26, 10:53 AM - Dana: top finding: notifications is the single most requested feature. 71% of respondents cited it. I'm moving to support
+01/08/26, 10:55 AM - Cam: the data changes things. I'd go back to notifications, but only if we commit to the full version with retry logic
+01/08/26, 10:56 AM - Beth: that was always the plan. full version, no shortcuts
+01/08/26, 10:57 AM - Eli: works for me. I'm in on notifications
+01/08/26, 10:58 AM - Alex: target launch date: end of January or end of February?
+01/08/26, 10:59 AM - Cam: end of February. January is too tight given the revised estimate
+01/08/26, 11:00 AM - Dana: end of February works for me
+01/08/26, 11:01 AM - Beth: January is technically possible if we start right away, but February gives us a buffer. I'd go with February
+01/08/26, 11:02 AM - Eli: February is better. gives us time to test properly
+01/08/26, 11:04 AM - Alex: settled. notifications for Q1, targeting end of February for launch
+01/08/26, 11:05 AM - Beth: great, let's do it
+01/08/26, 11:06 AM - Cam: locked in
+01/08/26, 11:07 AM - Dana: confirmed
+01/08/26, 11:08 AM - Eli: updating the roadmap now

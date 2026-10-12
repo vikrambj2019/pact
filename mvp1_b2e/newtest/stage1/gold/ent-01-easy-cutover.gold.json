@@ -1,0 +1,445 @@
+{
+ "transcript": "ent-01-easy-cutover.txt",
+ "notes": "Gold spans keyed by message id. labels = all required; any_of = at least one required; allowed = acceptable extras (not FP); optional = span may be absent.",
+ "spans": [
+  {
+   "msg": "m1",
+   "text": "We need to pick the weekend for the billing cutover to the new platform.",
+   "labels": [
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m1",
+   "text": "Let's settle it in this thread.",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m2",
+   "text": "I'd propose Nov 14-15",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "UAT should be done by then",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m2",
+   "text": "it's well before the holidays",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "Another option is Nov 21-22.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m3",
+   "text": "One more week of buffer.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "And Dec 5-6 is possible if we slip.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m4",
+   "text": "Probably not, but listing it.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m5",
+   "text": "Let's go through constraints first.",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m5",
+   "text": "Marcus, anything from Finance?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m6",
+   "text": "Month-end close takes the last three business days of the month. For this window that means keep clear of Nov 25-30.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m7",
+   "text": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m8",
+   "text": "our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m9",
+   "text": "So Dec 5-6 doesn't work for me. I'd rather not do it then.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m10",
+   "text": "withdrawing Dec 5-6",
+   "labels": [
+    "position",
+    "option"
+   ]
+  },
+  {
+   "msg": "m11",
+   "text": "From my side I need five full days after UAT sign-off for the final data sync and rehearsal.",
+   "labels": [
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m12",
+   "text": "UAT sign-off is scheduled for Friday Nov 6.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m12",
+   "text": "I can hold that date.",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m13",
+   "text": "Nov 6 plus five days is Nov 11, so Nov 14-15 works for me.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m14",
+   "text": "Nov 21-22 works too but I'd rather not stretch it.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m15",
+   "text": "Dev, how long did the last cutover take?",
+   "labels": [],
+   "allowed": [
+    "process",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m16",
+   "text": "The last one was about 9 hours on a Saturday night.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m16",
+   "text": "This one is bigger so I'd plan for 12.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m17",
+   "text": "Criteria then: risk, support coverage and finance close.",
+   "labels": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m17",
+   "text": "Anything else?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m18",
+   "text": "Customer notice. We promised customers 5 days notice for billing changes.",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m19",
+   "text": "That's easy for either date.",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "For me Nov 14-15 is cleaner.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m20",
+   "text": "Close is well behind us and I can brief the auditors the week before.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "Nov 14-15 works for support.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m21",
+   "text": "I'll have full weekend cover.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "action"
+   ]
+  },
+  {
+   "msg": "m22",
+   "text": "Nov 14-15 is good for QA.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m23",
+   "text": "Nov 14-15 from me as well, it was my first pick.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m24",
+   "text": "Nov 14-15, yes.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m24",
+   "text": "I'd make Nov 21-22 the backup if UAT slips, not the main plan.",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "Agreed on that.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m25",
+   "text": "Anyone against Nov 14-15?",
+   "labels": [
+    "process"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m26",
+   "text": "No objection.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m27",
+   "text": "None here.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m28",
+   "text": "None.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m29",
+   "text": "None.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m30",
+   "text": "None, go.",
+   "labels": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m31",
+   "text": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15.",
+   "labels": [
+    "decision"
+   ]
+  },
+  {
+   "msg": "m31",
+   "text": "Backup is Nov 21-22 if UAT sign-off slips past Nov 6.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "decision",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m32",
+   "text": "Dev, can you write the runbook and have it reviewed by Nov 9?",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m33",
+   "text": "Yes, runbook by Nov 9.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m34",
+   "text": "I'll sign off UAT on Nov 6.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m35",
+   "text": "I'll send the customer notice by Nov 9.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m36",
+   "text": "I'll lock the weekend support rota by Nov 2.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m37",
+   "text": "I'll brief the auditors on Nov 10 and confirm back here.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m38",
+   "text": "I'll book the war room",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m38",
+   "text": "post the final schedule once the runbook is done.",
+   "labels": [
+    "action"
+   ]
+  },
+  {
+   "msg": "m39",
+   "text": "Thanks everyone.",
+   "labels": [
+    "irrelevant"
+   ],
+   "optional": true
+  }
+ ]
+}

@@ -1,0 +1,2570 @@
+{
+ "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/stage1/outputs/ent-02-medium-support-ai.output.json",
+ "model": "claude-sonnet-4-6",
+ "participants": [
+  "Rhea",
+  "Keiko",
+  "Jonas",
+  "Luis",
+  "Amira",
+  "Ben"
+ ],
+ "span_msgs": {
+  "b1.s1": "m1",
+  "b1.s2": "m1",
+  "b1.s3": "m1",
+  "b2.s1": "m2",
+  "b2.s2": "m2",
+  "b2.s3": "m2",
+  "b3.s1": "m3",
+  "b3.s2": "m3",
+  "b4.s1": "m4",
+  "b4.s2": "m4",
+  "b5.s1": "m5",
+  "b5.s2": "m5",
+  "b6.s1": "m6",
+  "b7.s1": "m7",
+  "b8.s1": "m8",
+  "b9.s1": "m9",
+  "b9.s2": "m9",
+  "b10.s1": "m10",
+  "b11.s1": "m11",
+  "b11.s2": "m11",
+  "b12.s1": "m12",
+  "b12.s2": "m12",
+  "b12.s3": "m13",
+  "b12.s4": "m13",
+  "b13.s1": "m14",
+  "b13.s2": "m14",
+  "b14.s1": "m15",
+  "b14.s2": "m15",
+  "b15.s1": "m16",
+  "b15.s2": "m16",
+  "b15.s3": "m16",
+  "b16.s1": "m17",
+  "b16.s2": "m17",
+  "b17.s1": "m18",
+  "b17.s2": "m18",
+  "b18.s1": "m19",
+  "b18.s2": "m19",
+  "b19.s1": "m20",
+  "b19.s2": "m20",
+  "b20.s1": "m21",
+  "b20.s2": "m21",
+  "b21.s1": "m22",
+  "b22.s1": "m23",
+  "b23.s1": "m24",
+  "b23.s2": "m24",
+  "b24.s1": "m25",
+  "b24.s2": "m25",
+  "b24.s3": "m25",
+  "b25.s1": "m26",
+  "b25.s2": "m26",
+  "b26.s1": "m27",
+  "b26.s2": "m27",
+  "b27.s1": "m28",
+  "b28.s1": "m29",
+  "b29.s1": "m30",
+  "b29.s2": "m30",
+  "b30.s1": "m31",
+  "b31.s1": "m32",
+  "b32.s1": "m33",
+  "b32.s2": "m33",
+  "b32.s3": "m33",
+  "b33.s1": "m34",
+  "b33.s2": "m34",
+  "b34.s1": "m35",
+  "b34.s2": "m35",
+  "b35.s1": "m36",
+  "b35.s2": "m36",
+  "b36.s1": "m37",
+  "b37.s1": "m38",
+  "b38.s1": "m39",
+  "b39.s1": "m40",
+  "b39.s2": "m40",
+  "b39.s3": "m40",
+  "b40.s1": "m41",
+  "b40.s2": "m41",
+  "b41.s1": "m42",
+  "b41.s2": "m42",
+  "b42.s1": "m43",
+  "b43.s1": "m44",
+  "b44.s1": "m45",
+  "b45.s1": "m46",
+  "b45.s2": "m46",
+  "b46.s1": "m47",
+  "b46.s2": "m47",
+  "b46.s3": "m47",
+  "b47.s1": "m48",
+  "b48.s1": "m49",
+  "b48.s2": "m49",
+  "b49.s1": "m50",
+  "b49.s2": "m50",
+  "b50.s1": "m51",
+  "b51.s1": "m52",
+  "b52.s1": "m53"
+ },
+ "elements": [
+  {
+   "id": "q1",
+   "kind": "question",
+   "title": "Build AI support-ticket assistant in-house or buy from vendor",
+   "author": "Rhea",
+   "created_span": "b1.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [
+    "AI assistant for support tickets",
+    "build or buy"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s2",
+    "b51.s1"
+   ]
+  },
+  {
+   "id": "con1",
+   "kind": "constraint",
+   "title": "Recommendation ready by Nov 12 steering meeting",
+   "author": "Rhea",
+   "created_span": "b1.s3",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory",
+    "about": [
+     "q1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s3",
+    "b47.s1",
+    "b48.s1"
+   ]
+  },
+  {
+   "id": "opt1",
+   "kind": "option",
+   "title": "Relay",
+   "author": "Keiko",
+   "created_span": "b2.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b2.s2",
+    "b13.s1",
+    "b20.s1",
+    "b26.s2",
+    "b32.s2",
+    "b39.s1",
+    "b40.s1",
+    "b40.s2",
+    "b41.s1",
+    "b41.s2",
+    "b42.s1",
+    "b43.s1",
+    "b45.s1",
+    "b47.s1",
+    "b48.s1"
+   ]
+  },
+  {
+   "id": "opt2",
+   "kind": "option",
+   "title": "Hollis",
+   "author": "Keiko",
+   "created_span": "b2.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b9.s2",
+    "b10.s1"
+   ]
+  },
+  {
+   "id": "clm1",
+   "kind": "claim",
+   "title": "Relay integrates with ticketing tool out of the box",
+   "author": "Keiko",
+   "created_span": "b2.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s3"
+   ]
+  },
+  {
+   "id": "crit1",
+   "kind": "criterion",
+   "title": "Ease of integration with existing ticketing tool",
+   "author": "Keiko",
+   "created_span": "b2.s3",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s3"
+   ]
+  },
+  {
+   "id": "opt3",
+   "kind": "option",
+   "title": "Build in-house on existing LLM API",
+   "author": "Jonas",
+   "created_span": "b3.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [
+    "Build in-house",
+    "build ourselves"
+   ],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s1",
+    "b4.s1",
+    "b12.s3"
+   ]
+  },
+  {
+   "id": "clm2",
+   "kind": "claim",
+   "title": "Jonas can prototype build-in-house option quickly",
+   "author": "Jonas",
+   "created_span": "b3.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s2"
+   ]
+  },
+  {
+   "id": "clm3",
+   "kind": "claim",
+   "title": "Building in-house gives roadmap ownership",
+   "author": "Keiko",
+   "created_span": "b4.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s2"
+   ]
+  },
+  {
+   "id": "crit2",
+   "kind": "criterion",
+   "title": "Control over product roadmap",
+   "author": "Keiko",
+   "created_span": "b4.s2",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s2"
+   ]
+  },
+  {
+   "id": "blk1",
+   "kind": "blocker",
+   "title": "Year-one budget unknown",
+   "author": "Luis",
+   "created_span": "b5.s1",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "missing_info",
+    "about": [
+     "q1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b5.s1",
+    "b5.s2",
+    "b6.s1"
+   ]
+  },
+  {
+   "id": "con2",
+   "kind": "constraint",
+   "title": "Year-one budget cap of $200k all-in",
+   "author": "Rhea",
+   "created_span": "b6.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [
+    "$200k cap",
+    "Finance cap"
+   ],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s1"
+   ]
+  },
+  {
+   "id": "clm4",
+   "kind": "claim",
+   "title": "Relay quoted at $180k/year, Hollis at $240k/year",
+   "author": "Keiko",
+   "created_span": "b8.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1",
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b8.s1"
+   ]
+  },
+  {
+   "id": "clm5",
+   "kind": "claim",
+   "title": "Hollis at $240k/yr exceeds $200k cap before implementation fees",
+   "author": "Luis",
+   "created_span": "b9.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b9.s1"
+   ]
+  },
+  {
+   "id": "clm6",
+   "kind": "claim",
+   "title": "Hollis dropped unless price changes",
+   "author": "Rhea",
+   "created_span": "b10.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b10.s1"
+   ]
+  },
+  {
+   "id": "clm7",
+   "kind": "claim",
+   "title": "Build in-house requires two engineers for two quarters",
+   "author": "Jonas",
+   "created_span": "b11.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b11.s1"
+   ]
+  },
+  {
+   "id": "con3",
+   "kind": "constraint",
+   "title": "Build engineers not free until Q3",
+   "author": "Jonas",
+   "created_span": "b11.s2",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "negotiable"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b11.s2"
+   ]
+  },
+  {
+   "id": "clm8",
+   "kind": "claim",
+   "title": "Q3 engineer availability is a problem for build option",
+   "author": "Keiko",
+   "created_span": "b12.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b12.s1"
+   ]
+  },
+  {
+   "id": "con4",
+   "kind": "constraint",
+   "title": "AI assistant live by Jan 15 before January peak",
+   "author": "Keiko",
+   "created_span": "b12.s2",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "negotiable"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b12.s2"
+   ]
+  },
+  {
+   "id": "clm9",
+   "kind": "claim",
+   "title": "Build in-house cannot meet Jan 15 go-live given Q3 engineer availability",
+   "author": "Keiko",
+   "created_span": "b12.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b12.s4"
+   ]
+  },
+  {
+   "id": "clm10",
+   "kind": "claim",
+   "title": "Relay has SOC 2 Type II certification",
+   "author": "Jonas",
+   "created_span": "b14.s1",
+   "status": "superseded",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": "clm20",
+   "spans": [
+    "b14.s1",
+    "b14.s2",
+    "b15.s2",
+    "b15.s3",
+    "b16.s1",
+    "b25.s2"
+   ]
+  },
+  {
+   "id": "clm11",
+   "kind": "claim",
+   "title": "Amira reviewed Relay trust page this morning",
+   "author": "Amira",
+   "created_span": "b15.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b15.s1"
+   ]
+  },
+  {
+   "id": "clm12",
+   "kind": "claim",
+   "title": "Relay trust page shows SOC 2 Type I, Type II in progress \u2014 not Type II",
+   "author": "Amira",
+   "created_span": "b15.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b15.s2"
+   ]
+  },
+  {
+   "id": "clm13",
+   "kind": "claim",
+   "title": "SOC 2 Type I and Type II are not equivalent \u2014 Relay's security status is weaker than stated",
+   "author": "Amira",
+   "created_span": "b15.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b15.s3"
+   ]
+  },
+  {
+   "id": "clm14",
+   "kind": "claim",
+   "title": "Jonas may have misread Relay SOC 2 certification level",
+   "author": "Jonas",
+   "created_span": "b16.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b16.s1"
+   ]
+  },
+  {
+   "id": "con5",
+   "kind": "constraint",
+   "title": "EU customer ticket data must remain in EU",
+   "author": "Amira",
+   "created_span": "b17.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s1"
+   ]
+  },
+  {
+   "id": "blk2",
+   "kind": "blocker",
+   "title": "Does Relay offer an EU data region?",
+   "author": "Amira",
+   "created_span": "b17.s2",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s2",
+    "b19.s1"
+   ]
+  },
+  {
+   "id": "clm15",
+   "kind": "claim",
+   "title": "Keiko thinks Relay has an EU region but is unsure",
+   "author": "Keiko",
+   "created_span": "b18.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b18.s1"
+   ]
+  },
+  {
+   "id": "clm16",
+   "kind": "claim",
+   "title": "Relay enterprise agreements include EU data residency clause (clause 9)",
+   "author": "Ben",
+   "created_span": "b19.s1",
+   "status": "confirmed",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s1",
+    "b19.s2"
+   ]
+  },
+  {
+   "id": "clm17",
+   "kind": "claim",
+   "title": "Ben confirms Relay EU data residency in enterprise agreements clause 9",
+   "author": "Ben",
+   "created_span": "b19.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s2"
+   ]
+  },
+  {
+   "id": "con6",
+   "kind": "constraint",
+   "title": "Relay must provide SOC 2 Type II evidence",
+   "author": "Rhea",
+   "created_span": "b20.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b20.s1"
+   ]
+  },
+  {
+   "id": "con7",
+   "kind": "constraint",
+   "title": "Relay must provide EU data region for ticket data",
+   "author": "Rhea",
+   "created_span": "b20.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b20.s1"
+   ]
+  },
+  {
+   "id": "con8",
+   "kind": "constraint",
+   "title": "Signed DPA required before any ticket data sent to Relay",
+   "author": "Ben",
+   "created_span": "b21.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b21.s1"
+   ]
+  },
+  {
+   "id": "blk3",
+   "kind": "blocker",
+   "title": "Does Relay's $180k quote include implementation costs?",
+   "author": "Luis",
+   "created_span": "b23.s2",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b23.s2",
+    "b24.s1",
+    "b29.s1"
+   ]
+  },
+  {
+   "id": "clm18",
+   "kind": "claim",
+   "title": "Relay quote labelled 'platform license' \u2014 may exclude implementation",
+   "author": "Keiko",
+   "created_span": "b24.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b24.s2"
+   ]
+  },
+  {
+   "id": "clm19",
+   "kind": "claim",
+   "title": "Relay SOC 2 Type II audit report available Dec 1",
+   "author": "Jonas",
+   "created_span": "b25.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s1"
+   ]
+  },
+  {
+   "id": "clm20",
+   "kind": "claim",
+   "title": "Relay SOC 2 Type I is done (Type II not yet complete)",
+   "author": "Jonas",
+   "created_span": "b25.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s2"
+   ]
+  },
+  {
+   "id": "con9",
+   "kind": "constraint",
+   "title": "No ticket data to Relay before SOC 2 Type II report (Dec 1)",
+   "author": "Amira",
+   "created_span": "b26.s1",
+   "status": "active",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b26.s1"
+   ]
+  },
+  {
+   "id": "blk4",
+   "kind": "blocker",
+   "title": "Does Dec 1 SOC 2 gate still allow Jan 15 go-live?",
+   "author": "Rhea",
+   "created_span": "b27.s1",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b27.s1",
+    "b28.s1"
+   ]
+  },
+  {
+   "id": "clm21",
+   "kind": "claim",
+   "title": "Jan 15 go-live feasible if Dec 1 SOC 2 Type II report has no major findings",
+   "author": "Amira",
+   "created_span": "b28.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b28.s1"
+   ]
+  },
+  {
+   "id": "clm22",
+   "kind": "claim",
+   "title": "Relay implementation is a separate one-time $35k fee on top of $180k license",
+   "author": "Keiko",
+   "created_span": "b29.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b29.s1"
+   ]
+  },
+  {
+   "id": "clm23",
+   "kind": "claim",
+   "title": "Relay year-one total is $215k ($180k license + $35k implementation), exceeding $200k cap",
+   "author": "Keiko",
+   "created_span": "b29.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b29.s2"
+   ]
+  },
+  {
+   "id": "clm24",
+   "kind": "claim",
+   "title": "Relay $215k year-one cost exceeds $200k cap unless negotiated",
+   "author": "Luis",
+   "created_span": "b30.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b30.s1"
+   ]
+  },
+  {
+   "id": "blk5",
+   "kind": "blocker",
+   "title": "Can Relay implementation fee be negotiated down to keep year-one cost at or under $200k?",
+   "author": "Rhea",
+   "created_span": "b31.s1",
+   "status": "open",
+   "question_id": null,
+   "aliases": [
+    "Relay implementation fee negotiation outcome pending"
+   ],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b31.s1",
+    "b46.s2"
+   ]
+  },
+  {
+   "id": "clm25",
+   "kind": "claim",
+   "title": "Relay at $215k would need budget exception if not negotiated to \u2264$200k",
+   "author": "Luis",
+   "created_span": "b32.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s3"
+   ]
+  },
+  {
+   "id": "clm26",
+   "kind": "claim",
+   "title": "Hollis year-one total is $290k ($240k license + $50k implementation)",
+   "author": "Keiko",
+   "created_span": "b34.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b34.s1"
+   ]
+  },
+  {
+   "id": "clm27",
+   "kind": "claim",
+   "title": "Legal (Ben) OK with Relay subject to DPA before go-live",
+   "author": "Ben",
+   "created_span": "b45.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b45.s1"
+   ]
+  },
+  {
+   "id": "clm28",
+   "kind": "claim",
+   "title": "Group's stated preference is Relay",
+   "author": "Rhea",
+   "created_span": "b46.s1",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b46.s1"
+   ]
+  },
+  {
+   "id": "blk6",
+   "kind": "blocker",
+   "title": "SOC 2 Type II report must land Dec 1 before decision is final",
+   "author": "Rhea",
+   "created_span": "b46.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b46.s2"
+   ]
+  },
+  {
+   "id": "blk7",
+   "kind": "blocker",
+   "title": "EU data region for Relay must be confirmed",
+   "author": "Rhea",
+   "created_span": "b46.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b46.s2"
+   ]
+  },
+  {
+   "id": "blk8",
+   "kind": "blocker",
+   "title": "Relay implementation fee negotiation outcome pending",
+   "author": "Rhea",
+   "created_span": "b46.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": "blk5",
+   "superseded_by": null,
+   "spans": [
+    "b46.s2"
+   ]
+  },
+  {
+   "id": "blk9",
+   "kind": "blocker",
+   "title": "DPA must be signed before any ticket data sent to Relay",
+   "author": "Rhea",
+   "created_span": "b46.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b46.s2"
+   ]
+  },
+  {
+   "id": "clm29",
+   "kind": "claim",
+   "title": "Rhea to take conditional Relay recommendation to Nov 12 steering meeting",
+   "author": "Rhea",
+   "created_span": "b51.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b51.s1"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "seq": 1,
+   "ts": "2026-10-20T14:10:00",
+   "span_id": "b1.s2",
+   "kind": "create",
+   "element_id": "q1",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Build AI support-ticket assistant in-house or buy from vendor",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 2,
+   "ts": "2026-10-20T14:10:00",
+   "span_id": "b1.s3",
+   "kind": "create",
+   "element_id": "con1",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Recommendation ready by Nov 12 steering meeting",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 3,
+   "ts": "2026-10-20T14:12:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt1",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 4,
+   "ts": "2026-10-20T14:12:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt2",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Hollis",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 5,
+   "ts": "2026-10-20T14:12:00",
+   "span_id": "b2.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Keiko",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 6,
+   "ts": "2026-10-20T14:12:00",
+   "span_id": "b2.s3",
+   "kind": "create",
+   "element_id": "clm1",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay integrates with ticketing tool out of the box",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 7,
+   "ts": "2026-10-20T14:12:00",
+   "span_id": "b2.s3",
+   "kind": "create",
+   "element_id": "crit1",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Ease of integration with existing ticketing tool",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 8,
+   "ts": "2026-10-20T14:14:00",
+   "span_id": "b3.s1",
+   "kind": "create",
+   "element_id": "opt3",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Build in-house on existing LLM API",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 9,
+   "ts": "2026-10-20T14:14:00",
+   "span_id": "b3.s2",
+   "kind": "create",
+   "element_id": "clm2",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Jonas can prototype build-in-house option quickly",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 10,
+   "ts": "2026-10-20T14:17:00",
+   "span_id": "b4.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Keiko",
+   "payload": {
+    "stance": "support",
+    "prev": null,
+    "conditions": "tentative"
+   },
+   "because": []
+  },
+  {
+   "seq": 11,
+   "ts": "2026-10-20T14:17:00",
+   "span_id": "b4.s2",
+   "kind": "create",
+   "element_id": "clm3",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Building in-house gives roadmap ownership",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 12,
+   "ts": "2026-10-20T14:17:00",
+   "span_id": "b4.s2",
+   "kind": "create",
+   "element_id": "crit2",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Control over product roadmap",
+    "kind": "criterion"
+   },
+   "because": [
+    "clm3"
+   ]
+  },
+  {
+   "seq": 13,
+   "ts": "2026-10-20T14:19:00",
+   "span_id": "b5.s1",
+   "kind": "create",
+   "element_id": "blk1",
+   "participant": "Luis",
+   "payload": {
+    "title": "Year-one budget unknown",
+    "kind": "blocker"
+   },
+   "because": []
+  },
+  {
+   "seq": 14,
+   "ts": "2026-10-20T14:19:00",
+   "span_id": "b5.s2",
+   "kind": "attach",
+   "element_id": "blk1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 15,
+   "ts": "2026-10-20T14:21:00",
+   "span_id": "b6.s1",
+   "kind": "create",
+   "element_id": "con2",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Year-one budget cap of $200k all-in",
+    "kind": "constraint"
+   },
+   "because": [
+    "blk1"
+   ]
+  },
+  {
+   "seq": 16,
+   "ts": "2026-10-20T14:21:00",
+   "span_id": "b6.s1",
+   "kind": "status",
+   "element_id": "blk1",
+   "participant": "Rhea",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "con2"
+   ]
+  },
+  {
+   "seq": 17,
+   "ts": "2026-10-20T14:26:00",
+   "span_id": "b8.s1",
+   "kind": "create",
+   "element_id": "clm4",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay quoted at $180k/year, Hollis at $240k/year",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 18,
+   "ts": "2026-10-20T14:29:00",
+   "span_id": "b9.s1",
+   "kind": "create",
+   "element_id": "clm5",
+   "participant": "Luis",
+   "payload": {
+    "title": "Hollis at $240k/yr exceeds $200k cap before implementation fees",
+    "kind": "claim"
+   },
+   "because": [
+    "clm4",
+    "con2"
+   ]
+  },
+  {
+   "seq": 19,
+   "ts": "2026-10-20T14:29:00",
+   "span_id": "b9.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Luis",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": [
+    "clm5",
+    "con2"
+   ]
+  },
+  {
+   "seq": 20,
+   "ts": "2026-10-20T14:31:00",
+   "span_id": "b10.s1",
+   "kind": "status",
+   "element_id": "opt2",
+   "participant": "Rhea",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "clm5",
+    "con2"
+   ]
+  },
+  {
+   "seq": 21,
+   "ts": "2026-10-20T14:31:00",
+   "span_id": "b10.s1",
+   "kind": "create",
+   "element_id": "clm6",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Hollis dropped unless price changes",
+    "kind": "claim"
+   },
+   "because": [
+    "clm5",
+    "con2"
+   ]
+  },
+  {
+   "seq": 22,
+   "ts": "2026-10-20T14:34:00",
+   "span_id": "b11.s1",
+   "kind": "create",
+   "element_id": "clm7",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Build in-house requires two engineers for two quarters",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 23,
+   "ts": "2026-10-20T14:34:00",
+   "span_id": "b11.s2",
+   "kind": "create",
+   "element_id": "con3",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Build engineers not free until Q3",
+    "kind": "constraint"
+   },
+   "because": [
+    "clm7"
+   ]
+  },
+  {
+   "seq": 24,
+   "ts": "2026-10-20T14:36:00",
+   "span_id": "b12.s1",
+   "kind": "create",
+   "element_id": "clm8",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Q3 engineer availability is a problem for build option",
+    "kind": "claim"
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 25,
+   "ts": "2026-10-20T14:36:00",
+   "span_id": "b12.s2",
+   "kind": "create",
+   "element_id": "con4",
+   "participant": "Keiko",
+   "payload": {
+    "title": "AI assistant live by Jan 15 before January peak",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 26,
+   "ts": "2026-10-20T14:38:00",
+   "span_id": "b12.s3",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Keiko",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "support"
+   },
+   "because": [
+    "con3",
+    "con4"
+   ]
+  },
+  {
+   "seq": 27,
+   "ts": "2026-10-20T14:38:00",
+   "span_id": "b12.s3",
+   "kind": "status",
+   "element_id": "opt3",
+   "participant": "Keiko",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "con3",
+    "con4"
+   ]
+  },
+  {
+   "seq": 28,
+   "ts": "2026-10-20T14:38:00",
+   "span_id": "b12.s4",
+   "kind": "create",
+   "element_id": "clm9",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Build in-house cannot meet Jan 15 go-live given Q3 engineer availability",
+    "kind": "claim"
+   },
+   "because": [
+    "con3",
+    "con4"
+   ]
+  },
+  {
+   "seq": 29,
+   "ts": "2026-10-20T14:41:00",
+   "span_id": "b13.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Rhea",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Relay checks out on due diligence"
+   },
+   "because": [
+    "clm5",
+    "clm9"
+   ]
+  },
+  {
+   "seq": 30,
+   "ts": "2026-10-20T14:43:00",
+   "span_id": "b14.s1",
+   "kind": "create",
+   "element_id": "clm10",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Relay has SOC 2 Type II certification",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 31,
+   "ts": "2026-10-20T14:43:00",
+   "span_id": "b14.s2",
+   "kind": "attach",
+   "element_id": "clm10",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 32,
+   "ts": "2026-10-20T14:47:00",
+   "span_id": "b15.s1",
+   "kind": "create",
+   "element_id": "clm11",
+   "participant": "Amira",
+   "payload": {
+    "title": "Amira reviewed Relay trust page this morning",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 33,
+   "ts": "2026-10-20T14:47:00",
+   "span_id": "b15.s2",
+   "kind": "create",
+   "element_id": "clm12",
+   "participant": "Amira",
+   "payload": {
+    "title": "Relay trust page shows SOC 2 Type I, Type II in progress \u2014 not Type II",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 34,
+   "ts": "2026-10-20T14:47:00",
+   "span_id": "b15.s2",
+   "kind": "supersede",
+   "element_id": "clm10",
+   "participant": "Amira",
+   "payload": {
+    "from": "unverified",
+    "to": "superseded",
+    "by": "clm12"
+   },
+   "because": [
+    "clm12"
+   ]
+  },
+  {
+   "seq": 35,
+   "ts": "2026-10-20T14:47:00",
+   "span_id": "b15.s3",
+   "kind": "create",
+   "element_id": "clm13",
+   "participant": "Amira",
+   "payload": {
+    "title": "SOC 2 Type I and Type II are not equivalent \u2014 Relay's security status is weaker than stated",
+    "kind": "claim"
+   },
+   "because": [
+    "clm10",
+    "clm12"
+   ]
+  },
+  {
+   "seq": 36,
+   "ts": "2026-10-20T14:47:00",
+   "span_id": "b15.s3",
+   "kind": "status",
+   "element_id": "clm10",
+   "participant": "Amira",
+   "payload": {
+    "from": "superseded",
+    "to": "conflicting"
+   },
+   "because": [
+    "clm12"
+   ]
+  },
+  {
+   "seq": 37,
+   "ts": "2026-10-20T14:49:00",
+   "span_id": "b16.s1",
+   "kind": "create",
+   "element_id": "clm14",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Jonas may have misread Relay SOC 2 certification level",
+    "kind": "claim"
+   },
+   "because": [
+    "clm10",
+    "clm12"
+   ]
+  },
+  {
+   "seq": 38,
+   "ts": "2026-10-20T14:49:00",
+   "span_id": "b16.s1",
+   "kind": "attach",
+   "element_id": "clm10",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm14",
+    "clm12"
+   ]
+  },
+  {
+   "seq": 39,
+   "ts": "2026-10-20T14:52:00",
+   "span_id": "b17.s1",
+   "kind": "create",
+   "element_id": "con5",
+   "participant": "Amira",
+   "payload": {
+    "title": "EU customer ticket data must remain in EU",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 40,
+   "ts": "2026-10-20T14:52:00",
+   "span_id": "b17.s2",
+   "kind": "create",
+   "element_id": "blk2",
+   "participant": "Amira",
+   "payload": {
+    "title": "Does Relay offer an EU data region?",
+    "kind": "blocker"
+   },
+   "because": [
+    "con5"
+   ]
+  },
+  {
+   "seq": 41,
+   "ts": "2026-10-20T14:55:00",
+   "span_id": "b18.s1",
+   "kind": "create",
+   "element_id": "clm15",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Keiko thinks Relay has an EU region but is unsure",
+    "kind": "claim"
+   },
+   "because": [
+    "blk2"
+   ]
+  },
+  {
+   "seq": 42,
+   "ts": "2026-10-20T14:57:00",
+   "span_id": "b19.s1",
+   "kind": "create",
+   "element_id": "clm16",
+   "participant": "Ben",
+   "payload": {
+    "title": "Relay enterprise agreements include EU data residency clause (clause 9)",
+    "kind": "claim"
+   },
+   "because": [
+    "blk2"
+   ]
+  },
+  {
+   "seq": 43,
+   "ts": "2026-10-20T14:57:00",
+   "span_id": "b19.s2",
+   "kind": "create",
+   "element_id": "clm17",
+   "participant": "Ben",
+   "payload": {
+    "title": "Ben confirms Relay EU data residency in enterprise agreements clause 9",
+    "kind": "claim"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 44,
+   "ts": "2026-10-20T14:57:00",
+   "span_id": "b19.s2",
+   "kind": "status",
+   "element_id": "clm16",
+   "participant": "Ben",
+   "payload": {
+    "from": "unverified",
+    "to": "confirmed"
+   },
+   "because": [
+    "clm17"
+   ]
+  },
+  {
+   "seq": 45,
+   "ts": "2026-10-20T14:57:00",
+   "span_id": "b19.s1",
+   "kind": "status",
+   "element_id": "blk2",
+   "participant": "Ben",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 46,
+   "ts": "2026-10-20T15:00:00",
+   "span_id": "b20.s1",
+   "kind": "create",
+   "element_id": "con6",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Relay must provide SOC 2 Type II evidence",
+    "kind": "constraint"
+   },
+   "because": [
+    "clm12",
+    "clm13",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 47,
+   "ts": "2026-10-20T15:00:00",
+   "span_id": "b20.s1",
+   "kind": "create",
+   "element_id": "con7",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Relay must provide EU data region for ticket data",
+    "kind": "constraint"
+   },
+   "because": [
+    "con5",
+    "clm16",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 48,
+   "ts": "2026-10-20T15:00:00",
+   "span_id": "b20.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Rhea",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "Relay shows SOC 2 Type II evidence and provides an EU data region"
+   },
+   "because": [
+    "con6",
+    "con7"
+   ]
+  },
+  {
+   "seq": 49,
+   "ts": "2026-10-20T15:03:00",
+   "span_id": "b21.s1",
+   "kind": "create",
+   "element_id": "con8",
+   "participant": "Ben",
+   "payload": {
+    "title": "Signed DPA required before any ticket data sent to Relay",
+    "kind": "constraint"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 50,
+   "ts": "2026-10-20T15:25:00",
+   "span_id": "b23.s2",
+   "kind": "create",
+   "element_id": "blk3",
+   "participant": "Luis",
+   "payload": {
+    "title": "Does Relay's $180k quote include implementation costs?",
+    "kind": "blocker"
+   },
+   "because": [
+    "clm4",
+    "con2"
+   ]
+  },
+  {
+   "seq": 51,
+   "ts": "2026-10-20T15:28:00",
+   "span_id": "b24.s1",
+   "kind": "attach",
+   "element_id": "blk3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 52,
+   "ts": "2026-10-20T15:28:00",
+   "span_id": "b24.s2",
+   "kind": "create",
+   "element_id": "clm18",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay quote labelled 'platform license' \u2014 may exclude implementation",
+    "kind": "claim"
+   },
+   "because": [
+    "blk3",
+    "clm4"
+   ]
+  },
+  {
+   "seq": 53,
+   "ts": "2026-10-21T08:58:00",
+   "span_id": "b25.s1",
+   "kind": "create",
+   "element_id": "clm19",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Relay SOC 2 Type II audit report available Dec 1",
+    "kind": "claim"
+   },
+   "because": [
+    "clm10",
+    "clm12",
+    "con6"
+   ]
+  },
+  {
+   "seq": 54,
+   "ts": "2026-10-21T08:58:00",
+   "span_id": "b25.s2",
+   "kind": "create",
+   "element_id": "clm20",
+   "participant": "Jonas",
+   "payload": {
+    "title": "Relay SOC 2 Type I is done (Type II not yet complete)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm10",
+    "clm12"
+   ]
+  },
+  {
+   "seq": 55,
+   "ts": "2026-10-21T08:58:00",
+   "span_id": "b25.s2",
+   "kind": "supersede",
+   "element_id": "clm10",
+   "participant": "Jonas",
+   "payload": {
+    "from": "conflicting",
+    "to": "superseded",
+    "by": "clm20"
+   },
+   "because": [
+    "clm20"
+   ]
+  },
+  {
+   "seq": 56,
+   "ts": "2026-10-21T09:01:00",
+   "span_id": "b26.s1",
+   "kind": "create",
+   "element_id": "con9",
+   "participant": "Amira",
+   "payload": {
+    "title": "No ticket data to Relay before SOC 2 Type II report (Dec 1)",
+    "kind": "constraint"
+   },
+   "because": [
+    "clm19",
+    "con6",
+    "con8"
+   ]
+  },
+  {
+   "seq": 57,
+   "ts": "2026-10-21T09:01:00",
+   "span_id": "b26.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Amira",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Relay chosen on Nov 12 but go-live gated on Dec 1 SOC 2 Type II report"
+   },
+   "because": [
+    "clm19",
+    "con9",
+    "con1"
+   ]
+  },
+  {
+   "seq": 58,
+   "ts": "2026-10-21T09:04:00",
+   "span_id": "b27.s1",
+   "kind": "create",
+   "element_id": "blk4",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Does Dec 1 SOC 2 gate still allow Jan 15 go-live?",
+    "kind": "blocker"
+   },
+   "because": [
+    "clm19",
+    "con9",
+    "con4",
+    "con1"
+   ]
+  },
+  {
+   "seq": 59,
+   "ts": "2026-10-21T09:06:00",
+   "span_id": "b28.s1",
+   "kind": "create",
+   "element_id": "clm21",
+   "participant": "Amira",
+   "payload": {
+    "title": "Jan 15 go-live feasible if Dec 1 SOC 2 Type II report has no major findings",
+    "kind": "claim"
+   },
+   "because": [
+    "blk4",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 60,
+   "ts": "2026-10-21T09:06:00",
+   "span_id": "b28.s1",
+   "kind": "status",
+   "element_id": "blk4",
+   "participant": "Amira",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm21"
+   ]
+  },
+  {
+   "seq": 61,
+   "ts": "2026-10-21T09:10:00",
+   "span_id": "b29.s1",
+   "kind": "create",
+   "element_id": "clm22",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay implementation is a separate one-time $35k fee on top of $180k license",
+    "kind": "claim"
+   },
+   "because": [
+    "clm18",
+    "blk3"
+   ]
+  },
+  {
+   "seq": 62,
+   "ts": "2026-10-21T09:10:00",
+   "span_id": "b29.s1",
+   "kind": "status",
+   "element_id": "blk3",
+   "participant": "Keiko",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm22"
+   ]
+  },
+  {
+   "seq": 63,
+   "ts": "2026-10-21T09:10:00",
+   "span_id": "b29.s2",
+   "kind": "create",
+   "element_id": "clm23",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Relay year-one total is $215k ($180k license + $35k implementation), exceeding $200k cap",
+    "kind": "claim"
+   },
+   "because": [
+    "clm22",
+    "clm4",
+    "con2"
+   ]
+  },
+  {
+   "seq": 64,
+   "ts": "2026-10-21T09:12:00",
+   "span_id": "b30.s1",
+   "kind": "create",
+   "element_id": "clm24",
+   "participant": "Luis",
+   "payload": {
+    "title": "Relay $215k year-one cost exceeds $200k cap unless negotiated",
+    "kind": "claim"
+   },
+   "because": [
+    "clm23",
+    "con2"
+   ]
+  },
+  {
+   "seq": 65,
+   "ts": "2026-10-21T09:12:00",
+   "span_id": "b30.s1",
+   "kind": "attach",
+   "element_id": "clm24",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 66,
+   "ts": "2026-10-21T09:15:00",
+   "span_id": "b31.s1",
+   "kind": "create",
+   "element_id": "blk5",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Can Relay implementation fee be negotiated down to keep year-one cost at or under $200k?",
+    "kind": "blocker"
+   },
+   "because": [
+    "clm24",
+    "con2"
+   ]
+  },
+  {
+   "seq": 67,
+   "ts": "2026-10-21T09:17:00",
+   "span_id": "b32.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Luis",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Year-one total lands at or under $200k"
+   },
+   "because": [
+    "clm24",
+    "con2",
+    "blk5"
+   ]
+  },
+  {
+   "seq": 68,
+   "ts": "2026-10-21T09:17:00",
+   "span_id": "b32.s3",
+   "kind": "create",
+   "element_id": "clm25",
+   "participant": "Luis",
+   "payload": {
+    "title": "Relay at $215k would need budget exception if not negotiated to \u2264$200k",
+    "kind": "claim"
+   },
+   "because": [
+    "clm23",
+    "con2"
+   ]
+  },
+  {
+   "seq": 69,
+   "ts": "2026-10-21T09:24:00",
+   "span_id": "b34.s1",
+   "kind": "create",
+   "element_id": "clm26",
+   "participant": "Keiko",
+   "payload": {
+    "title": "Hollis year-one total is $290k ($240k license + $50k implementation)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm4"
+   ]
+  },
+  {
+   "seq": 70,
+   "ts": "2026-10-21T09:58:00",
+   "span_id": "b39.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Rhea",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": []
+  },
+  {
+   "seq": 71,
+   "ts": "2026-10-21T10:00:00",
+   "span_id": "b40.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Keiko",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 72,
+   "ts": "2026-10-21T10:00:00",
+   "span_id": "b40.s2",
+   "kind": "attach",
+   "element_id": "opt1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 73,
+   "ts": "2026-10-21T10:03:00",
+   "span_id": "b41.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Jonas",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "SOC 2 Type II report lands (Dec 1)"
+   },
+   "because": [
+    "con6",
+    "clm19",
+    "con9"
+   ]
+  },
+  {
+   "seq": 74,
+   "ts": "2026-10-21T10:03:00",
+   "span_id": "b41.s2",
+   "kind": "attach",
+   "element_id": "opt1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 75,
+   "ts": "2026-10-21T10:05:00",
+   "span_id": "b42.s1",
+   "kind": "attach",
+   "element_id": "opt1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 76,
+   "ts": "2026-10-21T10:08:00",
+   "span_id": "b43.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Luis",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "Year-one total lands at or under $200k"
+   },
+   "because": [
+    "con2",
+    "clm23",
+    "clm24"
+   ]
+  },
+  {
+   "seq": 77,
+   "ts": "2026-10-21T10:13:00",
+   "span_id": "b45.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Ben",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Signed DPA must be in place before go-live"
+   },
+   "because": [
+    "con8"
+   ]
+  },
+  {
+   "seq": 78,
+   "ts": "2026-10-21T10:13:00",
+   "span_id": "b45.s1",
+   "kind": "create",
+   "element_id": "clm27",
+   "participant": "Ben",
+   "payload": {
+    "title": "Legal (Ben) OK with Relay subject to DPA before go-live",
+    "kind": "claim"
+   },
+   "because": [
+    "con8"
+   ]
+  },
+  {
+   "seq": 79,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s1",
+   "kind": "create",
+   "element_id": "clm28",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Group's stated preference is Relay",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 80,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s1",
+   "kind": "flag",
+   "element_id": "clm28",
+   "participant": "Rhea",
+   "payload": {
+    "type": "consensus_conflict",
+    "mismatches": [
+     {
+      "participant": "Jonas",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Luis",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Amira",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Ben",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     }
+    ]
+   },
+   "because": []
+  },
+  {
+   "seq": 81,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s2",
+   "kind": "create",
+   "element_id": "blk6",
+   "participant": "Rhea",
+   "payload": {
+    "title": "SOC 2 Type II report must land Dec 1 before decision is final",
+    "kind": "blocker"
+   },
+   "because": [
+    "con6",
+    "con9",
+    "clm19"
+   ]
+  },
+  {
+   "seq": 82,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s2",
+   "kind": "create",
+   "element_id": "blk7",
+   "participant": "Rhea",
+   "payload": {
+    "title": "EU data region for Relay must be confirmed",
+    "kind": "blocker"
+   },
+   "because": [
+    "con5",
+    "con7",
+    "clm15"
+   ]
+  },
+  {
+   "seq": 83,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s2",
+   "kind": "create",
+   "element_id": "blk8",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Relay implementation fee negotiation outcome pending",
+    "kind": "blocker"
+   },
+   "because": [
+    "blk5",
+    "clm23",
+    "clm24"
+   ]
+  },
+  {
+   "seq": 84,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s2",
+   "kind": "create",
+   "element_id": "blk9",
+   "participant": "Rhea",
+   "payload": {
+    "title": "DPA must be signed before any ticket data sent to Relay",
+    "kind": "blocker"
+   },
+   "because": [
+    "con8",
+    "clm27"
+   ]
+  },
+  {
+   "seq": 85,
+   "ts": "2026-10-21T10:16:00",
+   "span_id": "b46.s2",
+   "kind": "merge",
+   "element_id": "blk5",
+   "participant": null,
+   "payload": {
+    "dropped": "blk8"
+   },
+   "because": []
+  },
+  {
+   "seq": 86,
+   "ts": "2026-10-21T10:18:00",
+   "span_id": "b47.s1",
+   "kind": "attach",
+   "element_id": "con1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 87,
+   "ts": "2026-10-21T10:18:00",
+   "span_id": "b47.s1",
+   "kind": "attach",
+   "element_id": "opt1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 88,
+   "ts": "2026-10-21T10:20:00",
+   "span_id": "b48.s1",
+   "kind": "attach",
+   "element_id": "con1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 89,
+   "ts": "2026-10-21T10:20:00",
+   "span_id": "b48.s1",
+   "kind": "attach",
+   "element_id": "opt1",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 90,
+   "ts": "2026-10-21T10:27:00",
+   "span_id": "b51.s1",
+   "kind": "create",
+   "element_id": "clm29",
+   "participant": "Rhea",
+   "payload": {
+    "title": "Rhea to take conditional Relay recommendation to Nov 12 steering meeting",
+    "kind": "claim"
+   },
+   "because": [
+    "blk5",
+    "blk6",
+    "blk7",
+    "blk9"
+   ]
+  },
+  {
+   "seq": 91,
+   "ts": "2026-10-21T10:27:00",
+   "span_id": "b51.s1",
+   "kind": "attach",
+   "element_id": "q1",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "blk5",
+    "blk6",
+    "blk7",
+    "blk9"
+   ]
+  }
+ ],
+ "warnings": []
+}

@@ -1,0 +1,47 @@
+{
+ "transcript": "ent-03-hard-data-platform.txt",
+ "notes": "Two questions: end-state platform (Databricks, decided as direction) and cutover timing (Q2, March dropped). Poll letters A=Databricks, B=Snowflake. Raj B -> withdrawn, conditional on A. Dmitri abstains. Colleen's 'Raj is fine' (m19) and 'all seven on board' (m84) must be flagged, never stances. CFO 15% superseded by 10%. '$3M budget' (m89) is refuted. On-call remains an open blocker. Federation is an interim bridge only.",
+ "participants": ["Sofia", "Colleen", "Raj", "Gareth", "Imani", "Dmitri", "Wei"],
+ "questions": [
+  {"key": "platform", "match": ["platform", "end[- ]?state"], "status": ["decided", "conditional"]},
+  {"key": "timing", "match": ["cutover", "timing", "date", "window", "when"], "status": ["decided", "conditional"]}
+ ],
+ "options": [
+  {"key": "databricks", "match": ["databricks", "^a$", "option a"], "exclude": ["both", "federat", "bridge", "snowflake"], "status": ["chosen"],
+   "stances": {"Sofia": ["support", "blank"], "Colleen": ["support"], "Raj": ["conditional"],
+               "Gareth": ["support", "conditional"], "Imani": ["support"], "Dmitri": ["undecided"],
+               "Wei": ["conditional"]}},
+  {"key": "snowflake", "match": ["snowflake", "^b$", "option b"], "exclude": ["both", "federat", "bridge", "renew", "extension", "notice", "contract", "databricks", "on-?call"], "status": ["dropped"],
+   "stances": {"Raj": ["withdrawn"], "Colleen": ["blank", "oppose"], "Dmitri": ["undecided", "blank"]}},
+  {"key": "both_forever", "match": ["both"], "exclude": ["federat", "bridge"], "status": ["dropped"],
+   "stances": {"Imani": ["withdrawn"], "Colleen": ["oppose"]}},
+  {"key": "federation", "match": ["federat", "bridge"], "status": ["chosen", "active", "fallback"],
+   "stances": {"Gareth": ["support", "blank"], "Colleen": ["conditional", "support"],
+               "Sofia": ["support", "conditional", "blank"], "Imani": ["support"]}},
+  {"key": "march", "match": ["march"], "exclude": ["q2"], "status": ["dropped"], "optional": true,
+   "stances": {"Wei": ["oppose"], "Gareth": ["oppose"]}},
+  {"key": "q2", "match": ["q2"], "exclude": ["march"], "status": ["chosen"],
+   "stances": {"Raj": ["support", "conditional"], "Gareth": ["conditional", "support"], "Imani": ["support"],
+               "Dmitri": ["support", "blank"], "Colleen": ["support", "blank"], "Sofia": ["support", "blank"]}}
+ ],
+ "elements": [
+  {"key": "cfo_15", "msg": "m10", "kinds": ["claim", "constraint"], "match": ["15"], "status": ["superseded"]},
+  {"key": "procs_port_fine", "msg": "m4", "kinds": ["claim"], "match": ["port|proc|convert"], "status": ["conflicting", "superseded"]},
+  {"key": "two_weeks", "msg": "m59", "kinds": ["claim"], "status": ["conflicting", "superseded"]},
+  {"key": "budget_3m", "msg": "m89", "kinds": ["claim", "constraint"], "status": ["superseded", "conflicting"]},
+  {"key": "oncall", "msg": "m50", "kinds": ["blocker"], "status": ["open"]},
+  {"key": "baa_read", "msg": "m67", "kinds": ["blocker", "constraint"], "match": ["baa|addendum|tokeni"], "status": ["open", "active"]},
+  {"key": "renewal_deadline", "msg": "m34", "kinds": ["constraint", "claim"], "status": ["active", "confirmed"]},
+  {"key": "security_review", "msg": "m78", "kinds": ["constraint"], "status": ["active"]}
+ ],
+ "histories": [
+  {"option": "snowflake", "participant": "Raj", "sequence": [["support"], ["withdrawn"]]},
+  {"option": "databricks", "participant": "Raj", "sequence": [["conditional"]]},
+  {"option": "both_forever", "participant": "Imani", "sequence": [["support"], ["withdrawn"]]},
+  {"option": "databricks", "participant": "Wei", "sequence": [["conditional"]]}
+ ],
+ "flags": [
+  {"type": "consensus_conflict", "msg": "m19"},
+  {"type": "consensus_conflict", "msg": "m84"}
+ ]
+}

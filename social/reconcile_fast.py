@@ -69,13 +69,16 @@ Element kinds
 - option     an alternative someone PUTS FORWARD, recommends or asks the group to choose ("Databricks", "Nov 14-15"). Set
              question_title to the decision it answers. Do NOT make an option out of: a position someone describes only to
              argue against it, a restatement of another person's proposal, the status quo, text quoted from a document, or
-             the opposite of an option ("do not X").
+             the opposite of an option ("do not X"), or logistics (when or whether to meet, who attends,
+             who writes things down).
 - criterion  a factor for judging options
 - constraint a hard or soft limit that filters options. constraint_kind: mandatory|negotiable|unknown
 - claim      an assertion (fact, estimate, objection, prediction). claim_kind: factual|predictive|causal|priority|objection|
              consensus|other. For an objection, list the option titles it targets in about_options[].
-- blocker    an open question, missing information or dependency stopping progress. blocker_kind: open_question|missing_info|
-             unresolved_dependency
+- blocker    something that stops THIS DECISION from being made: a missing fact, an unanswered question the decision needs, an
+             unresolved dependency. blocker_kind: open_question|missing_info|unresolved_dependency. NOT a blocker: a task
+             someone agreed to do, a risk that something might happen, a request to keep something confidential, a question
+             that is answered in the same or a later span, or a meeting that was set up to discuss it.
 
 One entry per distinct element, citing the span_id that introduces it. temp_id is a short label ("q1", "o2").
 Do NOT output stances, status changes or decisions. Skip filler, greetings, and spans that only react to something."""
@@ -345,13 +348,18 @@ STANCE_OPS_SCHEMA: dict[str, Any] = {
 }
 
 
+_RAW_OPS: dict[int, int] = {}      # first span index of a batch -> ops the model returned before cleaning (for diagnosing runaways)
+
+
 def _stance_batch(rows: list[dict], idx: list[int], reg_snapshot: str, participants: list[str], llm: LLM) -> list[dict]:
     user = (f"PARTICIPANTS: {', '.join(participants)}\n\nREGISTRY:\n{reg_snapshot}\n\n"
             "CONTEXT (no ops for these):\n" + _context_block(rows, idx)
             + "\n\nNEW SPANS:\n" + "\n".join(render_span(rows[i]) for i in idx))
     out = llm.structured(system=STANCE_SYSTEM, user=user, tool_name="stance_ops",
                          schema=STANCE_OPS_SCHEMA, max_tokens=2048)
-    return _limit_ops(out.get("ops", []), {rows[i]["span_id"] for i in idx}, len(idx))
+    raw = out.get("ops", [])
+    _RAW_OPS[idx[0]] = len(raw) if isinstance(raw, list) else -1
+    return _limit_ops(raw, {rows[i]["span_id"] for i in idx}, len(idx))
 
 
 MAX_OPS_PER_SPAN = 4
@@ -384,6 +392,7 @@ def reconcile_fast(
     batch: int = BATCH,
     workers: int = 12,
     consolidate: bool = True,
+    consolidate_llm: LLM | None = None,
     log=print,
 ) -> Registry:
     work = [i for i, r in enumerate(rows)
@@ -430,7 +439,7 @@ def reconcile_fast(
         f"{sum(c['kind'] == 'option' for c in cands)} options); span ids rejected: {bad_spans}")
 
     # ── step 2 ──
-    plan = _consolidate(cands, rows_by_span, llm) if consolidate else None
+    plan = _consolidate(cands, rows_by_span, consolidate_llm or llm) if consolidate else None
     if plan is None:
         log("  consolidate: code-only fallback" if consolidate else "  consolidate: off, code-only")
         plan = _fallback_plan(cands)
@@ -453,7 +462,8 @@ def reconcile_fast(
             b = futs[fut]
             try:
                 ops_by[b] = fut.result()
-                log(f"  step4 batch {b + 1}/{nb} ({len(ops_by[b])} ops)")
+                raw = _RAW_OPS.get(batches[b][0], len(ops_by[b]))
+                log(f"  step4 batch {b + 1}/{nb} ({len(ops_by[b])} ops" + (f", model returned {raw}" if raw != len(ops_by[b]) else "") + ")")
             except Exception as e:
                 ops_by[b] = []
                 log(f"  step4 batch {b + 1} ERROR: {e}")

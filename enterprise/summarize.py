@@ -69,6 +69,7 @@ WRITE, in this order, using exactly these headings. Skip a heading whose section
 9. Ground rules people set -- up to five lines, with the speaker. Skip anything that is only a date for a follow-up.
 10. Things people asserted that others may want to check -- at most four, "<Name> said ...".
 11. Flags -- what the speaker said and what the record shows, one sentence each.
+Never write "(recipient unspecified)" or any note about a missing addressee. If the words do not name who was asked, write the line as "<Name> asked for ..." with no addressee. In an email chain, do not add a "Presented" section.
 12. Marked private -- only if PRIVATE is present. One short bullet per item, each starting "Marked private by <Name>:".
     Nothing private appears in any other section.
 

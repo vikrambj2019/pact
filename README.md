@@ -1,94 +1,129 @@
-# pact eval harness — v2
+# pact
 
-Two-stage pipeline: **normalize + classify** (stage1) → **reconcile** (stage2).
+Decision intelligence pipeline. Two parallel tracks: **enterprise** (email chains, meeting transcripts) and **social** (chat transcripts).
 
 ## Structure
 
 ```
-newtest/
-  stage1/   normalize.py  classify.py  eval_all.py  run.py  score.py
-            transcripts/  gold/  outputs/
-  stage2/   reconcile.py  score_reconcile.py  eval_reconcile.py
-            test_reconcile.py  llm.py  gold/
-```
+enterprise/
+  run_fast.py          # main entry point — full pipeline, parallel reconcile
+  run.py               # sequential reconcile (slower, reference)
+  ingest.py            # parse email chain / meeting transcript → source + spans
+  summarize.py         # 2-pass Sonnet summary (conversation → structured brief)
+  llm.py               # AnthropicLLM wrapper
+  eval.py              # batch eval runner
+  evals/
+    sources/           # ent-08 … ent-10, real-01 … real-03, long-01
+    outputs/           # *.fast_result.json (one per source)
 
-Run order:
-```
-cd stage1 && python eval_all.py          # normalize + classify all transcripts → outputs/
-cd stage2 && python eval_reconcile.py --diff   # reconcile all + score vs gold
+social/
+  normalize.py         # segment messages → atomic spans
+  classify.py          # multi-label span classification
+  reconcile.py         # sequential reconcile (Registry + typed ops)
+  reconcile_fast.py    # 4-step parallel reconcile (main impl)
+  run.py               # social pipeline entry point
+  llm.py
+  eval_spans.py        # stage-1 eval (normalize + classify)
+  eval_reconcile.py    # stage-2 eval (reconcile vs gold)
+  score_spans.py
+  score_reconcile.py
+  tests/
 ```
 
 ---
 
-## Stage 1 — Normalize + Classify
+## Quick start
 
-Segments messages into atomic spans (normalize) then applies multi-label classification
-(classify). Scored against hand-written gold span files.
+```bash
+# Enterprise — run full pipeline on a source file
+cd /path/to/pact
+python enterprise/run_fast.py enterprise/evals/sources/real-02-email-benefit-expense-chain.txt
 
-| transcript | seg R | over | under | spur | P | R | F1 | exact |
-|---|---|---|---|---|---|---|---|---|
-| ent-01-easy-cutover | 100% | 6 | 1 | 0 | 0.96 | 0.98 | 0.97 | 94% |
-| ent-02-medium-support-ai | 100% | 21 | 1 | 1 | 0.88 | 1.00 | 0.94 | 91% |
-| ent-03-hard-data-platform | 100% | 33 | 2 | 4 | 0.90 | 0.95 | 0.92 | 90% |
-| ent-04-hiking-trip | 100% | 15 | 1 | 0 | 0.85 | 0.94 | 0.89 | 81% |
-
-**ent-05 stage1 gold not yet written** — pipeline ran (100 spans from 50 messages) but no label score available.
-
-Columns: **seg R** = segment recall, **over/under** = over/under-splits (diagnostic),
-**spur** = spurious spans, **P/R/F1** = label micro-scores, **exact** = all labels match.
+# Output written to enterprise/evals/outputs/<name>.fast_result.json
+```
 
 ---
 
-## Stage 2 — Reconcile
+## Enterprise pipeline (`run_fast.py`)
 
-Walks classified spans in batches; LLM emits typed ops (create, stance, status, supersede,
-decide, alias, merge, attach, skip). Code validates every op. Hard rules enforced in code:
+```
+ingest → normalize (Haiku) → classify (Haiku) → reconcile_fast (parallel Haiku) → summarize (Sonnet)
+```
 
-- **Author-only stances**: participant is always the span's author; model cannot set it
-- **Inferred-stance check**: stance op rejected (flagged, not counted) unless span is
-  stance-labelled AND names the option by title, alias, poll letter, or context note.
-  Short replies (≤4 words: "+1", "A", "None") are exempt — they answer polls/objection checks.
-- **Variant dedup**: new option whose distinctive name tokens are contained in an existing
-  option becomes an alias instead of a second row
-- **Consensus-conflict flag**: claim asserting others' stances is checked against the ledger;
-  mismatch raises a flag and marks the claim conflicting
-- **Duplicate option redirect**: create on an existing option (by title/alias) becomes attach
+1. **Ingest** — parse email chain or meeting transcript; extract speakers, subject, message metadata
+2. **Normalize** — segment each message into atomic spans (Haiku)
+3. **Classify** — apply multi-label classification to each span (Haiku)
+4. **Reconcile fast** — 4-step parallel pass (see below)
+5. **Summarize** — 2-pass Sonnet: conversation → main point → structured brief
 
-| transcript | options | opt_status | cells | nonblank | questions | elements | histories | flags | dups |
-|---|---|---|---|---|---|---|---|---|---|
-| ent-01-easy-cutover | 3/3 | 3/3 | 18/18 | 10/10 | 1/1 | 1/1 | 1/1 | — | 0 |
-| ent-02-medium-support-ai | 3/3 | 3/3 | 18/18 | 11/11 | 1/1 | 5/5 | 2/2 | — | 0 |
-| ent-03-hard-data-platform | 5/5 | 5/5 | 35/35 | 22/22 | 2/2 | 8/8 | 4/4 | 2/2 | 0 |
-| ent-04-hiking-trip | 7/7 | 7/7 | 39/42 | 21/23 | 3/3 | 11/12 | 5/6 | 1/1 | 0 |
-| **ent-05-medium-feature-priority** | **5/5** | **5/5** | **21/25** | **10/10** | **2/2** | **4/5** | **2/2** | **1/1** | **0** |
-
-ent-05 is the generalization transcript (not seen during prompt development).
-
-**ent-05 inferred stances excluded (9)**: shows the check working on a new transcript.
-Options, option status, non-blank cells, questions, histories, and the consensus-conflict
-flag all pass on first run.
-
-### Known gaps (ent-04 baseline, not fixed)
-
-| check | failure |
-|---|---|
-| cells | saturday/Leo: blank expected, got support |
-| cells | carpool/Maya: support expected, got conditional |
-| cells | carpool/Sam: conditional expected, got blank |
-| elements | driver blocker (m56): open expected, got resolved |
-| histories | sunol/Leo: conditional→support expected, got support only |
-
-These were intentionally left to establish an honest generalization baseline before
-changing any prompts or rules.
+Output is a JSON document with `elements`, `events`, `warnings`, `summary`, and `_enterprise` metadata.
 
 ---
 
-## Transcripts
+## 4-step parallel reconcile (`reconcile_fast.py`)
 
-| id | topic | msgs | difficulty |
-|---|---|---|---|
-| ent-01 | software cutover date | 39 | easy |
-| ent-02 | support AI vendor selection | 53 | medium |
-| ent-03 | data platform end-state | 101 | hard |
-| ent-04 | hiking trip planning | 75 | medium (multi-question, casual) |
-| ent-05 | Q1 feature prioritization | 50 | medium (new domain) |
+Replaces the sequential O(batches × latency) loop with parallel passes:
+
+| Step | What | Model | Parallelism |
+|------|------|-------|-------------|
+| 1. Extract | Each batch sees 8 prior spans as context; emits candidate questions/options/claims | Haiku | ThreadPoolExecutor |
+| 2. Consolidate | One call merges paraphrase questions, links options to questions, drops non-alternatives | Haiku | Single call |
+| 3. Build | Deterministic code pass — creates Registry in transcript order; writes create/attach/alias events | — | Code only |
+| 4. Stances | Frozen registry; emits stance/status/decide/supersede/attach/skip per span | Haiku | ThreadPoolExecutor |
+
+**Speedup**: 635-span source: ~29s vs ~20 min sequential.
+
+---
+
+## Eval sources
+
+| id | type | topic |
+|----|------|-------|
+| ent-08 | email | vendor selection with private note |
+| ent-09 | email | offsite reversal / forward |
+| ent-10 | meeting | go-live decision |
+| real-01 | email | Alpha Evolve |
+| real-02 | email | benefit expense chain |
+| real-03 | meeting | T-gov status |
+| long-01 | meeting | leadership clinical intelligence (635 spans) |
+
+All 7 sources have been run through `run_fast.py`; outputs are in `enterprise/evals/outputs/`.
+
+---
+
+## Social pipeline
+
+```
+normalize + classify (stage 1) → reconcile (stage 2)
+```
+
+Scored against hand-written gold files in `social/evals/gold/`.
+
+### Stage 1 results (normalize + classify)
+
+| transcript | seg R | P | R | F1 | exact |
+|---|---|---|---|---|---|
+| ent-01-easy-cutover | 100% | 0.96 | 0.98 | 0.97 | 94% |
+| ent-02-medium-support-ai | 100% | 0.88 | 1.00 | 0.94 | 91% |
+| ent-03-hard-data-platform | 100% | 0.90 | 0.95 | 0.92 | 90% |
+| ent-04-hiking-trip | 100% | 0.85 | 0.94 | 0.89 | 81% |
+
+### Stage 2 results (reconcile)
+
+| transcript | options | opt_status | cells | questions | elements | histories | flags |
+|---|---|---|---|---|---|---|---|
+| ent-01 | 3/3 | 3/3 | 18/18 | 1/1 | 1/1 | 1/1 | — |
+| ent-02 | 3/3 | 3/3 | 18/18 | 1/1 | 5/5 | 2/2 | — |
+| ent-03 | 5/5 | 5/5 | 35/35 | 2/2 | 8/8 | 4/4 | 2/2 |
+| ent-04 | 7/7 | 7/7 | 39/42 | 3/3 | 11/12 | 5/6 | 1/1 |
+| ent-05 | 5/5 | 5/5 | 21/25 | 2/2 | 4/5 | 2/2 | 1/1 |
+
+---
+
+## Hard rules (reconcile)
+
+- **Author-only stances**: participant is always the span's author; model cannot override
+- **Inferred-stance check**: stance op rejected unless span is stance-labelled AND names the option; short replies (≤4 words) are exempt
+- **Variant dedup**: new option whose name tokens are contained in an existing option becomes an alias
+- **Consensus-conflict flag**: claim asserting others' stances is checked against ledger; mismatch raises a flag
+- **Duplicate option redirect**: create on existing option (by title/alias) becomes attach

@@ -136,6 +136,39 @@ def _norm(s: str) -> str:
     return " ".join(re.findall(r"[a-z0-9]+", s.lower()))
 
 
+_ID_FIELDS = ("span", "element", "option", "question", "old", "new", "keep", "drop", "ref")
+_STR_FIELDS = ("kind", "stance", "status", "title", "conditions", "alias", "claim_kind", "constraint_kind",
+               "blocker_kind", "reason")
+_LIST_FIELDS = ("because", "chosen", "ruled_out", "about", "aliases")
+
+
+def _as_str(v):
+    """A model sometimes returns {"id": "b3.s1"} (or a list) where a plain id string belongs. Salvage it or give None."""
+    if isinstance(v, str):
+        return v
+    if isinstance(v, dict):
+        for k in ("id", "span_id", "span", "element", "title"):
+            if isinstance(v.get(k), str):
+                return v[k]
+    return None
+
+
+def clean_op(op):
+    """Coerce one model-emitted op to plain strings and lists of strings, or return None if it is not an op.
+    Without this, one malformed op (span as a dict) raises TypeError: unhashable and loses the whole run."""
+    if not isinstance(op, dict):
+        return None
+    out = dict(op)
+    for f in _ID_FIELDS + _STR_FIELDS:
+        if f in out:
+            out[f] = _as_str(out[f])
+    for f in _LIST_FIELDS:
+        if f in out:
+            v = out[f] if isinstance(out[f], list) else [out[f]]
+            out[f] = [x for x in (_as_str(i) for i in v) if x]
+    return out
+
+
 class Registry:
     def __init__(self, spans: dict[str, dict]):
         self.spans = spans                     # span_id -> {author, ts, msg, text}
@@ -236,11 +269,12 @@ class Registry:
             self.warnings.append(f"{msg}: {json.dumps(op)[:200]}")
 
         for op in ops:
-            if not isinstance(op, dict):
+            op = clean_op(op)
+            if op is None:
                 continue
             kind = op.get("op")
             span = op.get("span")
-            if kind != "merge" and span not in allowed_spans:
+            if kind != "merge" and (not isinstance(span, str) or span not in allowed_spans):
                 warn("span not in batch", op)
                 continue
             author = self.spans.get(span, {}).get("author")

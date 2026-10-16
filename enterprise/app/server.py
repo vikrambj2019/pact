@@ -10,10 +10,18 @@ Or run directly:
 from __future__ import annotations
 
 import json
+import os
 import sys
 import tempfile
 import threading
 import time
+import ssl
+import urllib.error
+import urllib.request
+
+_SSL_CTX = ssl.create_default_context()
+_SSL_CTX.check_hostname = False
+_SSL_CTX.verify_mode = ssl.CERT_NONE
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,6 +40,8 @@ for _p in (_ENTERPRISE, _SOCIAL):
 
 from run_fast import run as _run_pipeline  # noqa: E402
 
+_OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY", "")
+
 app = FastAPI(title="Pact")
 
 # In-memory job store: job_id -> {status, result?, error?, duration_seconds?}
@@ -47,6 +57,12 @@ _SESSIONS.mkdir(exist_ok=True)
 class AnalyzeRequest(BaseModel):
     text: str
     source_type: str = "auto"  # "auto" | "email" | "transcript"
+
+
+class CompareRequest(BaseModel):
+    text: str
+    prompt: str
+    model: str = "openai/gpt-4o"
 
 
 # ── background worker ─────────────────────────────────────────────────────────
@@ -110,6 +126,44 @@ async def get_job(job_id: str):
     if job is None:
         return JSONResponse({"status": "not_found"}, status_code=404)
     return job
+
+
+@app.get("/config")
+async def config():
+    return {"has_openrouter": bool(_OPENROUTER_KEY)}
+
+
+@app.post("/compare")
+async def compare(body: CompareRequest):
+    if not _OPENROUTER_KEY:
+        return JSONResponse({"error": "OPENROUTER_API_KEY not set"}, status_code=503)
+
+    payload = json.dumps({
+        "model": body.model,
+        "messages": [{"role": "user", "content": body.prompt + "\n\n---\n\n" + body.text}],
+        "max_tokens": 2048,
+    }).encode()
+
+    req = urllib.request.Request(
+        "https://openrouter.ai/api/v1/chat/completions",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {_OPENROUTER_KEY}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "http://localhost:8507",
+            "X-Title": "Pact",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=90, context=_SSL_CTX) as resp:
+            data = json.loads(resp.read())
+        return {"summary": data["choices"][0]["message"]["content"]}
+    except urllib.error.HTTPError as e:
+        body_text = e.read().decode()
+        return JSONResponse({"error": f"OpenRouter {e.code}: {body_text}"}, status_code=502)
+    except Exception as exc:
+        return JSONResponse({"error": str(exc)}, status_code=502)
 
 
 @app.get("/")

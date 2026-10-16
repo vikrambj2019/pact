@@ -9,352 +9,381 @@
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    background: #f5f5f5;
-    color: #1a1a1a;
+    background: #f4f4f5;
+    color: #18181b;
     min-height: 100vh;
   }
 
+  /* ── header ── */
   header {
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    background: #18181b;
     padding: 0 32px;
-    height: 56px;
+    height: 52px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
-  header h1 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
-  header span { font-size: 13px; color: #888; }
+  header h1 { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: -0.2px; }
+  header .tagline { font-size: 12px; color: #71717a; }
+  header .spacer { flex: 1; }
+  .header-session { font-size: 11px; color: #52525b; font-family: monospace; }
 
-  .main { max-width: 860px; margin: 0 auto; padding: 32px 24px 64px; }
+  /* ── main ── */
+  .main { max-width: 1360px; margin: 0 auto; padding: 28px 24px 64px; }
 
   /* ── input card ── */
-  .card {
+  .input-card {
     background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    padding: 24px;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 20px 24px;
     margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
   }
+  .input-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .input-label { font-size: 13px; font-weight: 600; color: #3f3f46; margin-right: 4px; }
 
-  .type-toggle {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
+  .type-toggle { display: flex; gap: 6px; }
   .type-toggle button {
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 6px;
-    border: 1px solid #d5d5d5;
+    border: 1px solid #d4d4d8;
     background: #fff;
-    font-size: 13px;
+    font-size: 12px;
     cursor: pointer;
-    color: #555;
-    transition: all .15s;
+    color: #52525b;
+    font-weight: 500;
+    transition: all .12s;
   }
-  .type-toggle button.active {
-    background: #1a1a1a;
-    border-color: #1a1a1a;
-    color: #fff;
-  }
+  .type-toggle button.active { background: #18181b; border-color: #18181b; color: #fff; }
 
   textarea {
     width: 100%;
-    height: 200px;
-    border: 1px solid #d5d5d5;
+    height: 180px;
+    border: 1px solid #d4d4d8;
     border-radius: 8px;
     padding: 12px;
     font-size: 13px;
     font-family: inherit;
     resize: vertical;
     outline: none;
-    transition: border-color .15s;
-    color: #1a1a1a;
+    transition: border-color .12s;
+    color: #18181b;
+    background: #fafafa;
+    line-height: 1.6;
   }
-  textarea:focus { border-color: #1a1a1a; }
-  textarea::placeholder { color: #aaa; }
+  textarea:focus { border-color: #18181b; background: #fff; }
+  textarea::placeholder { color: #a1a1aa; }
 
-  .input-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 12px;
-  }
-  .char-count { font-size: 12px; color: #aaa; }
+  .input-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+  .char-count { font-size: 11px; color: #a1a1aa; }
+  .btn-row { display: flex; gap: 8px; }
 
-  .btn-analyze {
-    background: #1a1a1a;
-    color: #fff;
+  .btn {
+    border-radius: 8px;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
     border: none;
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background .15s;
+    transition: all .12s;
   }
-  .btn-analyze:hover { background: #333; }
-  .btn-analyze:disabled { background: #aaa; cursor: default; }
+  .btn-primary { background: #18181b; color: #fff; }
+  .btn-primary:hover { background: #3f3f46; }
+  .btn-primary:disabled { background: #a1a1aa; cursor: default; }
+  .btn-ghost { background: #fff; color: #52525b; border: 1px solid #d4d4d8; }
+  .btn-ghost:hover { border-color: #a1a1aa; color: #18181b; }
 
-  .btn-reset {
-    background: #fff;
-    color: #555;
-    border: 1px solid #d5d5d5;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .15s;
-  }
-  .btn-reset:hover { border-color: #999; color: #1a1a1a; }
-
-  /* ── status ── */
+  /* ── status bar ── */
   .status-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 20px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 18px;
     background: #fff;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e4e4e7;
     border-radius: 10px;
-    margin-bottom: 24px;
-    font-size: 14px;
-    color: #555;
+    margin-bottom: 20px;
+    font-size: 13px; color: #52525b;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
   }
+  .status-bar.error { border-color: #fca5a5; background: #fff5f5; color: #b91c1c; }
   .spinner {
-    width: 16px; height: 16px;
-    border: 2px solid #ddd;
-    border-top-color: #1a1a1a;
+    width: 15px; height: 15px;
+    border: 2px solid #e4e4e7;
+    border-top-color: #18181b;
     border-radius: 50%;
-    animation: spin .7s linear infinite;
+    animation: spin .65s linear infinite;
     flex-shrink: 0;
   }
+  .status-bar.error .spinner { display: none; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .status-bar.error { border-color: #fca5a5; background: #fff5f5; color: #b91c1c; }
-  .status-bar.error .spinner { display: none; }
-
-  /* ── results ── */
-  .section { margin-bottom: 24px; }
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #888;
-  }
-  .badge {
-    font-size: 11px;
-    font-weight: 600;
-    background: #f0f0f0;
-    color: #666;
-    border-radius: 10px;
-    padding: 2px 8px;
-  }
-
-  /* summary */
-  .summary-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    padding: 20px 24px;
-  }
-  .summary-headline {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    line-height: 1.4;
-  }
-  .summary-body {
-    font-size: 13px;
-    line-height: 1.7;
-    color: #444;
-  }
-  .summary-body p { margin-bottom: 10px; }
-  .summary-body p:last-child { margin-bottom: 0; }
-  .summary-body p.sum-header {
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-top: 16px;
-    margin-bottom: 4px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-  }
-  .summary-body ul {
-    padding-left: 18px;
-    margin-bottom: 10px;
-  }
-  .summary-body li { margin-bottom: 4px; }
-  .summary-meta {
-    margin-top: 12px;
-    font-size: 12px;
-    color: #aaa;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 10px;
-  }
-
-  /* stance matrix */
-  .stance-table-wrap { overflow-x: auto; }
-  .stance-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .stance-table th {
-    text-align: left;
-    padding: 10px 14px;
-    background: #fafafa;
-    font-weight: 600;
-    font-size: 12px;
-    color: #666;
-    border-bottom: 1px solid #e5e5e5;
-    white-space: nowrap;
-  }
-  .stance-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid #f0f0f0;
-    vertical-align: top;
-  }
-  .stance-table tr:last-child td { border-bottom: none; }
-  .option-title { font-weight: 500; max-width: 320px; }
-  .option-q { font-size: 11px; color: #aaa; margin-top: 2px; }
-  .option-status {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .opt-active    { background: #f0fdf4; color: #166534; }
-  .opt-decided   { background: #eff6ff; color: #1d4ed8; }
-  .opt-rejected  { background: #fef2f2; color: #991b1b; }
-  .opt-withdrawn { background: #f9fafb; color: #9ca3af; }
-
-  .stance-pill {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-  .s-support     { background: #f0fdf4; color: #166534; }
-  .s-oppose      { background: #fef2f2; color: #991b1b; }
-  .s-conditional { background: #fffbeb; color: #92400e; }
-  .s-abstain     { background: #f9fafb; color: #9ca3af; }
-  .s-withdrawn   { background: #f9fafb; color: #9ca3af; text-decoration: line-through; }
-
-  /* list cards */
-  .list-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .list-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 16px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 13px;
-  }
-  .list-item:last-child { border-bottom: none; }
-  .list-item-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: #d5d5d5;
-    margin-top: 6px;
-    flex-shrink: 0;
-  }
-  .list-item-dot.open   { background: #f59e0b; }
-  .list-item-dot.closed { background: #10b981; }
-  .list-item-dot.block  { background: #ef4444; }
-
-  .item-title { font-weight: 500; line-height: 1.4; }
-  .item-meta  { font-size: 11px; color: #aaa; margin-top: 2px; }
-
-  /* session footer */
-  .session-footer {
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #e5e5e5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .session-meta { font-size: 12px; color: #aaa; }
-  .session-meta strong { color: #888; }
-
-  /* flags */
-  .flag-card {
-    background: #fff8f0;
-    border: 1px solid #fcd9a0;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .flag-item {
-    display: flex;
-    gap: 10px;
-    padding: 10px 16px;
-    border-bottom: 1px solid #fde8c3;
-    font-size: 12px;
-    color: #78350f;
-    line-height: 1.5;
-  }
-  .flag-item:last-child { border-bottom: none; }
-  .flag-icon { flex-shrink: 0; margin-top: 1px; }
-
-  .hidden { display: none !important; }
-
-  /* participants strip */
-  .participants { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  /* ── participants ── */
+  .participants { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
   .participant-chip {
     font-size: 12px;
     background: #fff;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e4e4e7;
     border-radius: 20px;
     padding: 3px 10px;
-    color: #555;
+    color: #52525b;
+    font-weight: 500;
   }
+
+  /* ── split layout ── */
+  .results-grid {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (max-width: 1024px) {
+    .results-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── column headers ── */
+  .col-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
+  }
+  .col-title {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.6px;
+    color: #a1a1aa;
+  }
+  .col-badge {
+    font-size: 10px; font-weight: 700;
+    background: #f4f4f5; color: #71717a;
+    border-radius: 10px; padding: 2px 7px;
+    border: 1px solid #e4e4e7;
+  }
+  .col-badge.pact { background: #18181b; color: #fff; border-color: #18181b; }
+
+  /* ── cards ── */
+  .card {
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 12px 18px 0;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .card-title {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: #a1a1aa;
+  }
+  .card-badge {
+    font-size: 10px; font-weight: 600;
+    background: #f4f4f5; color: #71717a;
+    border-radius: 8px; padding: 2px 6px;
+  }
+
+  /* summary */
+  .summary-body {
+    padding: 16px 18px;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #27272a;
+  }
+  .summary-headline {
+    font-size: 15px; font-weight: 700;
+    line-height: 1.4; color: #18181b;
+    margin-bottom: 16px;
+  }
+  .summary-md h2 {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: #71717a; margin: 20px 0 8px;
+  }
+  .summary-md h2:first-child { margin-top: 0; }
+  .summary-md p { margin-bottom: 10px; color: #3f3f46; }
+  .summary-md p:last-child { margin-bottom: 0; }
+  .summary-md ul { padding-left: 18px; margin-bottom: 10px; }
+  .summary-md li { margin-bottom: 5px; color: #3f3f46; }
+  .summary-md strong { font-weight: 600; color: #18181b; }
+  .summary-md hr { border: none; border-top: 1px solid #f4f4f5; margin: 16px 0; }
+  .summary-meta {
+    padding: 10px 18px;
+    font-size: 11px; color: #a1a1aa;
+    border-top: 1px solid #f4f4f5;
+    background: #fafafa;
+  }
+
+  /* stance table */
+  .table-wrap { overflow-x: auto; }
+  table.stance {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  table.stance th {
+    text-align: left;
+    padding: 9px 14px;
+    background: #fafafa;
+    font-weight: 600; font-size: 11px;
+    color: #71717a;
+    border-bottom: 1px solid #e4e4e7;
+    white-space: nowrap;
+  }
+  table.stance td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f4f4f5;
+    vertical-align: top;
+  }
+  table.stance tr:last-child td { border-bottom: none; }
+  .opt-title { font-weight: 500; max-width: 280px; color: #18181b; line-height: 1.4; }
+  .opt-sub { font-size: 11px; color: #a1a1aa; margin-top: 2px; }
+  .pill {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border-radius: 4px; white-space: nowrap;
+  }
+  .pill-active    { background: #f0fdf4; color: #15803d; }
+  .pill-decided   { background: #eff6ff; color: #1d4ed8; }
+  .pill-rejected  { background: #fef2f2; color: #dc2626; }
+  .pill-withdrawn { background: #f4f4f5; color: #71717a; }
+  .pill-support     { background: #f0fdf4; color: #15803d; }
+  .pill-oppose      { background: #fef2f2; color: #dc2626; }
+  .pill-conditional { background: #fffbeb; color: #b45309; }
+  .pill-abstain     { background: #f4f4f5; color: #71717a; }
+  .pill-withdrawn-s { background: #f4f4f5; color: #a1a1aa; text-decoration: line-through; }
+
+  /* list items */
+  .list-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 11px 18px;
+    border-bottom: 1px solid #f4f4f5;
+    font-size: 13px;
+  }
+  .list-row:last-child { border-bottom: none; }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #d4d4d8; margin-top: 6px; flex-shrink: 0;
+  }
+  .dot.open  { background: #f59e0b; }
+  .dot.block { background: #ef4444; }
+  .dot.done  { background: #10b981; }
+  .row-title { font-weight: 500; line-height: 1.45; color: #18181b; }
+  .row-meta  { font-size: 11px; color: #a1a1aa; margin-top: 2px; }
+
+  /* flags */
+  .flag-row {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 18px;
+    border-bottom: 1px solid #fde8c3;
+    font-size: 12px; color: #92400e; line-height: 1.5;
+    background: #fffbeb;
+  }
+  .flag-row:last-child { border-bottom: none; }
+  .flag-icon { flex-shrink: 0; margin-top: 1px; opacity: 0.7; }
+
+  /* ── AI panel ── */
+  .ai-controls {
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  }
+  .ai-controls-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .ai-label { font-size: 11px; font-weight: 700; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; }
+  select.model-pick {
+    flex: 1; min-width: 180px;
+    border: 1px solid #d4d4d8; border-radius: 6px;
+    padding: 6px 10px; font-size: 12px;
+    background: #fafafa; color: #18181b;
+    outline: none; cursor: pointer;
+  }
+  select.model-pick:focus { border-color: #18181b; }
+  select.model-pick optgroup { font-weight: 700; color: #71717a; font-size: 11px; }
+  select.model-pick option { font-weight: 400; color: #18181b; }
+
+  .prompt-toggle {
+    font-size: 11px; color: #a1a1aa;
+    cursor: pointer; text-decoration: underline;
+    text-underline-offset: 2px; white-space: nowrap;
+    background: none; border: none; padding: 0;
+  }
+  .prompt-toggle:hover { color: #52525b; }
+  .prompt-area {
+    margin-top: 12px;
+    border-top: 1px solid #f4f4f5;
+    padding-top: 12px;
+  }
+  .prompt-area textarea {
+    height: 120px; font-size: 12px; background: #fafafa;
+  }
+  .prompt-hint { font-size: 11px; color: #a1a1aa; margin-top: 6px; }
+
+  .ai-card {
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  }
+  .ai-card-header {
+    padding: 12px 18px;
+    border-bottom: 1px solid #f4f4f5;
+    display: flex; align-items: center; gap: 10px;
+    background: #fafafa;
+  }
+  .ai-model-name { font-size: 11px; color: #71717a; font-weight: 600; }
+  .ai-body {
+    padding: 16px 18px;
+    font-size: 13.5px; line-height: 1.75; color: #27272a;
+    min-height: 120px;
+  }
+  .ai-placeholder { color: #a1a1aa; font-size: 13px; }
+  .ai-body .summary-md h2 { color: #71717a; }
+
+  /* ── session footer ── */
+  .session-footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid #e4e4e7;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .session-meta { font-size: 11px; color: #a1a1aa; }
+  .session-meta b { color: #71717a; }
+
+  .hidden { display: none !important; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Pact</h1>
-  <span>Decision Intelligence</span>
+  <span class="tagline">Decision Intelligence</span>
+  <div class="spacer"></div>
+  <span class="header-session" id="headerSession"></span>
 </header>
 
 <div class="main">
 
   <!-- Input -->
-  <div class="card" id="inputCard">
-    <div class="type-toggle">
-      <button class="active" data-type="auto">Auto-detect</button>
-      <button data-type="email">Email chain</button>
-      <button data-type="transcript">Meeting transcript</button>
+  <div class="input-card">
+    <div class="input-top">
+      <span class="input-label">Source</span>
+      <div class="type-toggle">
+        <button class="active" data-type="auto">Auto-detect</button>
+        <button data-type="email">Email chain</button>
+        <button data-type="transcript">Transcript</button>
+      </div>
     </div>
-    <textarea id="inputText" placeholder="Paste an email chain or meeting transcript here…"></textarea>
+    <textarea id="inputText" placeholder="Paste an email chain or meeting transcript…"></textarea>
     <div class="input-footer">
       <span class="char-count" id="charCount">0 characters</span>
-      <div style="display:flex;gap:8px;">
-        <button class="btn-reset" id="resetBtn">Reset</button>
-        <button class="btn-analyze" id="analyzeBtn">Analyze</button>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="resetBtn">Reset</button>
+        <button class="btn btn-primary" id="analyzeBtn">Analyze</button>
       </div>
     </div>
   </div>
@@ -362,7 +391,7 @@
   <!-- Status -->
   <div class="status-bar hidden" id="statusBar">
     <div class="spinner" id="spinner"></div>
-    <span id="statusText">Starting…</span>
+    <span id="statusText"></span>
   </div>
 
   <!-- Results -->
@@ -371,75 +400,164 @@
     <!-- Participants -->
     <div class="participants" id="participantsStrip"></div>
 
-    <!-- Summary -->
-    <div class="section">
-      <div class="section-header">
-        <span class="section-title">Summary</span>
-      </div>
-      <div class="summary-card">
-        <div class="summary-headline" id="summaryHeadline"></div>
-        <div class="summary-body" id="summaryBody"></div>
-        <div class="summary-meta" id="summaryMeta"></div>
-      </div>
-    </div>
+    <div class="results-grid">
 
-    <!-- Options & Stances -->
-    <div class="section" id="optionsSection">
-      <div class="section-header">
-        <span class="section-title">Options &amp; Stances</span>
-        <span class="badge" id="optionsBadge"></span>
-      </div>
-      <div class="stance-table-wrap">
-        <table class="stance-table" id="stanceTable">
-          <thead id="stanceHead"></thead>
-          <tbody id="stanceBody"></tbody>
-        </table>
-      </div>
-    </div>
+      <!-- LEFT: Pact -->
+      <div id="colPact">
+        <div class="col-header">
+          <span class="col-title">Pact Analysis</span>
+          <span class="col-badge pact">Structured</span>
+        </div>
 
-    <!-- Open Questions -->
-    <div class="section" id="questionsSection">
-      <div class="section-header">
-        <span class="section-title">Open Questions</span>
-        <span class="badge" id="questionsBadge"></span>
-      </div>
-      <div class="list-card" id="questionsList"></div>
-    </div>
+        <!-- Summary -->
+        <div class="card" id="summaryCard">
+          <div class="summary-body">
+            <div class="summary-headline" id="summaryHeadline"></div>
+            <div class="summary-md" id="summaryBody"></div>
+          </div>
+          <div class="summary-meta hidden" id="summaryMeta"></div>
+        </div>
 
-    <!-- Blockers & Actions -->
-    <div class="section" id="blockersSection">
-      <div class="section-header">
-        <span class="section-title">Blockers &amp; Actions</span>
-        <span class="badge" id="blockersBadge"></span>
-      </div>
-      <div class="list-card" id="blockersList"></div>
-    </div>
+        <!-- Options & Stances -->
+        <div class="card hidden" id="optionsCard">
+          <div class="card-header">
+            <span class="card-title">Options &amp; Stances</span>
+            <span class="card-badge" id="optionsBadge"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="stance">
+              <thead id="stanceHead"></thead>
+              <tbody id="stanceBody"></tbody>
+            </table>
+          </div>
+        </div>
 
-    <!-- Flags -->
-    <div class="section" id="flagsSection">
-      <div class="section-header">
-        <span class="section-title">Flags</span>
-        <span class="badge" id="flagsBadge"></span>
-      </div>
-      <div class="flag-card" id="flagsList"></div>
-    </div>
+        <!-- Questions -->
+        <div class="card hidden" id="questionsCard">
+          <div class="card-header">
+            <span class="card-title">Open Questions</span>
+            <span class="card-badge" id="questionsBadge"></span>
+          </div>
+          <div id="questionsList"></div>
+        </div>
 
-    <!-- Session footer -->
+        <!-- Blockers -->
+        <div class="card hidden" id="blockersCard">
+          <div class="card-header">
+            <span class="card-title">Blockers &amp; Actions</span>
+            <span class="card-badge" id="blockersBadge"></span>
+          </div>
+          <div id="blockersList"></div>
+        </div>
+
+        <!-- Flags -->
+        <div class="card hidden" id="flagsCard" style="background:#fffbeb;border-color:#fde68a;">
+          <div class="card-header" style="background:#fffbeb;">
+            <span class="card-title" style="color:#b45309;">Flags</span>
+            <span class="card-badge" id="flagsBadge" style="background:#fef3c7;color:#b45309;border-color:#fde68a;"></span>
+          </div>
+          <div id="flagsList"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: AI Comparison -->
+      <div id="colAi" class="hidden">
+        <div class="col-header">
+          <span class="col-title">AI Comparison</span>
+          <span class="col-badge">Generic LLM</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="ai-controls">
+          <div class="ai-controls-row">
+            <span class="ai-label">Model</span>
+            <select class="model-pick" id="modelPick">
+              <optgroup label="OpenAI">
+                <option value="openai/gpt-4o">GPT-4o</option>
+                <option value="openai/gpt-4o-mini">GPT-4o mini</option>
+                <option value="openai/gpt-4.1">GPT-4.1</option>
+                <option value="openai/gpt-4.1-mini">GPT-4.1 mini</option>
+              </optgroup>
+              <optgroup label="Google">
+                <option value="google/gemini-2.5-flash">Gemini 2.5 Flash</option>
+                <option value="google/gemini-2.5-pro">Gemini 2.5 Pro</option>
+              </optgroup>
+              <optgroup label="Meta">
+                <option value="meta-llama/llama-4-maverick">Llama 4 Maverick</option>
+                <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option>
+              </optgroup>
+              <optgroup label="Anthropic">
+                <option value="anthropic/claude-sonnet-4.6">Claude Sonnet 4.6</option>
+                <option value="anthropic/claude-haiku-4.5">Claude Haiku 4.5</option>
+              </optgroup>
+              <optgroup label="Mistral">
+                <option value="mistralai/mistral-medium-3">Mistral Medium 3</option>
+                <option value="mistralai/mistral-large-2512">Mistral Large</option>
+              </optgroup>
+            </select>
+            <button class="btn btn-ghost" id="rerunBtn" style="font-size:12px;padding:6px 12px;" disabled>Re-run</button>
+            <button class="prompt-toggle" id="promptToggle">Edit prompt</button>
+          </div>
+          <div class="prompt-area hidden" id="promptArea">
+            <textarea id="promptText"></textarea>
+            <div class="prompt-hint">This prompt is sent with your text to the selected model.</div>
+          </div>
+        </div>
+
+        <!-- AI result card -->
+        <div class="ai-card">
+          <div class="ai-card-header">
+            <div class="spinner hidden" id="aiSpinner"></div>
+            <span class="ai-model-name" id="aiModelLabel">—</span>
+          </div>
+          <div class="ai-body" id="aiBody">
+            <span class="ai-placeholder">Result will appear here after analysis.</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /results-grid -->
+
+    <!-- Footer -->
     <div class="session-footer">
       <div class="session-meta" id="sessionMeta"></div>
-      <button class="btn-reset" id="resetBtnBottom">Reset &amp; start over</button>
+      <button class="btn btn-ghost" id="resetBtnBottom">Reset &amp; start over</button>
     </div>
 
   </div><!-- /results -->
 </div>
 
 <script>
-// ── state ────────────────────────────────────────────────────────────────────
+// ── constants ─────────────────────────────────────────────────────────────────
+const DEFAULT_PROMPT =
+`Summarize the following email chain or meeting transcript.
+
+Include:
+- The main topic and decision reached (if any), stated clearly up front
+- Open questions that were not resolved
+- Action items and who owns them
+- Where each named participant stands (their position and reasoning)
+- Key disagreements or concerns raised
+- Anything explicitly marked as private or sensitive
+
+Be specific. Use names. Do not pad with generic phrases. Do not invent information not in the text.`;
+
+// ── state ─────────────────────────────────────────────────────────────────────
 let sourceType = 'auto';
 let pollTimer = null;
 let currentJobId = null;
+let hasOpenRouter = false;
+let lastAnalyzedText = '';
 
-// ── type toggle ──────────────────────────────────────────────────────────────
+// ── init ──────────────────────────────────────────────────────────────────────
+document.getElementById('promptText').value = DEFAULT_PROMPT;
+
+fetch('/config').then(r => r.json()).then(d => {
+  hasOpenRouter = d.has_openrouter;
+  if (hasOpenRouter) show('colAi');
+});
+
+// ── type toggle ───────────────────────────────────────────────────────────────
 document.querySelectorAll('.type-toggle button').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.type-toggle button').forEach(b => b.classList.remove('active'));
@@ -448,12 +566,24 @@ document.querySelectorAll('.type-toggle button').forEach(btn => {
   });
 });
 
-// ── char count ───────────────────────────────────────────────────────────────
+// ── char count ────────────────────────────────────────────────────────────────
 const inputText = document.getElementById('inputText');
-const charCount = document.getElementById('charCount');
 inputText.addEventListener('input', () => {
   const n = inputText.value.length;
-  charCount.textContent = n.toLocaleString() + ' character' + (n !== 1 ? 's' : '');
+  document.getElementById('charCount').textContent = n.toLocaleString() + ' char' + (n !== 1 ? 's' : '');
+});
+
+// ── prompt toggle ─────────────────────────────────────────────────────────────
+document.getElementById('promptToggle').addEventListener('click', () => {
+  const area = document.getElementById('promptArea');
+  const tog = document.getElementById('promptToggle');
+  if (area.classList.contains('hidden')) {
+    area.classList.remove('hidden');
+    tog.textContent = 'Hide prompt';
+  } else {
+    area.classList.add('hidden');
+    tog.textContent = 'Edit prompt';
+  }
 });
 
 // ── reset ─────────────────────────────────────────────────────────────────────
@@ -461,26 +591,29 @@ function resetAll() {
   if (pollTimer) { clearTimeout(pollTimer); pollTimer = null; }
   currentJobId = null;
   inputText.value = '';
-  charCount.textContent = '0 characters';
+  document.getElementById('charCount').textContent = '0 chars';
   document.getElementById('analyzeBtn').disabled = false;
+  document.getElementById('headerSession').textContent = '';
   hide('statusBar');
   hide('results');
+  document.getElementById('aiBody').innerHTML = '<span class="ai-placeholder">Result will appear here after analysis.</span>';
+  hide('aiSpinner');
 }
-
 document.getElementById('resetBtn').addEventListener('click', resetAll);
 document.getElementById('resetBtnBottom').addEventListener('click', resetAll);
+document.getElementById('rerunBtn').addEventListener('click', () => {
+  if (lastAnalyzedText) startAiCompare(lastAnalyzedText);
+});
 
 // ── analyze ───────────────────────────────────────────────────────────────────
 document.getElementById('analyzeBtn').addEventListener('click', async () => {
   const text = inputText.value.trim();
   if (!text) return;
-  startAnalysis(text);
-});
 
-async function startAnalysis(text) {
-  setStatus('running', 'Analyzing — this takes about 30–60 seconds…');
-  hide('results');
+  resetResults();
+  setStatus('running', 'Analyzing — typically 30–90 seconds…');
 
+  // Start Pact job
   let jobId;
   try {
     const res = await fetch('/analyze', {
@@ -497,11 +630,25 @@ async function startAnalysis(text) {
     return;
   }
 
-  poll(jobId);
+  // Store for re-run
+  lastAnalyzedText = text;
+
+  // Start AI comparison simultaneously
+  if (hasOpenRouter) {
+    show('colAi');
+    startAiCompare(text);
+  }
+
+  poll(jobId, text);
+});
+
+function resetResults() {
+  document.getElementById('analyzeBtn').disabled = true;
+  ['optionsCard','questionsCard','blockersCard','flagsCard'].forEach(hide);
 }
 
-function poll(jobId) {
-  if (pollTimer) clearTimeout(pollTimer);
+// ── Pact polling ──────────────────────────────────────────────────────────────
+function poll(jobId, text) {
   pollTimer = setTimeout(async () => {
     try {
       const res = await fetch('/jobs/' + jobId);
@@ -510,17 +657,53 @@ function poll(jobId) {
         hide('statusBar');
         renderResults(data.result, jobId, data.duration_seconds);
       } else if (data.status === 'failed') {
-        setStatus('error', 'Analysis failed: ' + (data.error || 'unknown error'));
+        setStatus('error', 'Analysis failed: ' + (data.error || 'unknown'));
+        document.getElementById('analyzeBtn').disabled = false;
       } else {
-        poll(jobId);
+        poll(jobId, text);
       }
     } catch (err) {
       setStatus('error', 'Poll error: ' + err.message);
+      document.getElementById('analyzeBtn').disabled = false;
     }
-  }, 2000);
+  }, 2500);
 }
 
-// ── render ────────────────────────────────────────────────────────────────────
+// ── AI compare ────────────────────────────────────────────────────────────────
+async function startAiCompare(text) {
+  const model = document.getElementById('modelPick').value;
+  const prompt = document.getElementById('promptText').value;
+  const aiBody = document.getElementById('aiBody');
+  const aiSpinner = document.getElementById('aiSpinner');
+  const aiLabel = document.getElementById('aiModelLabel');
+
+  aiBody.innerHTML = '';
+  show('aiSpinner');
+  aiLabel.textContent = model;
+  document.getElementById('rerunBtn').disabled = true;
+
+  try {
+    const res = await fetch('/compare', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, prompt, model }),
+    });
+    const data = await res.json();
+    hide('aiSpinner');
+    if (data.error) {
+      aiBody.innerHTML = `<span style="color:#dc2626;font-size:13px;">Error: ${escHtml(data.error)}</span>`;
+    } else {
+      aiBody.innerHTML = `<div class="summary-md">${renderMarkdown(data.summary)}</div>`;
+    }
+  } catch (err) {
+    hide('aiSpinner');
+    aiBody.innerHTML = `<span style="color:#dc2626;font-size:13px;">Error: ${escHtml(err.message)}</span>`;
+  } finally {
+    document.getElementById('rerunBtn').disabled = false;
+  }
+}
+
+// ── render Pact results ───────────────────────────────────────────────────────
 function renderResults(r, jobId, duration) {
   // Participants
   const strip = document.getElementById('participantsStrip');
@@ -540,26 +723,25 @@ function renderResults(r, jobId, duration) {
 
   // Questions
   const questions = (r.elements || []).filter(e => e.kind === 'question');
-  renderList('questionsSection', 'questionsBadge', 'questionsList', questions,
-    e => ({ title: e.title, meta: e.status === 'open' ? 'open' : e.status, dot: 'open' }));
+  renderList('questionsCard', 'questionsBadge', 'questionsList', questions,
+    e => ({ title: e.title, meta: e.status || 'open', dot: 'open' }));
 
   // Blockers + actions
   const blockers = (r.elements || []).filter(e => e.kind === 'blocker' || e.kind === 'action');
-  renderList('blockersSection', 'blockersBadge', 'blockersList', blockers,
-    e => ({ title: e.title, meta: e.kind + ' · ' + (e.status || 'open'), dot: e.kind === 'blocker' ? 'block' : 'open' }));
+  renderList('blockersCard', 'blockersBadge', 'blockersList', blockers,
+    e => ({ title: e.title, meta: e.kind + (e.status ? ' · ' + e.status : ''), dot: e.kind === 'blocker' ? 'block' : 'open' }));
 
-  // Flags / warnings
-  const warnings = (r.warnings || []).filter(w => !w.startsWith('extract:') && !w.startsWith('bad '));
+  // Flags
+  const warnings = (r.warnings || []).filter(w => !w.startsWith('extract:') && !w.startsWith('bad ') && !w.startsWith('unknown op'));
   renderFlags(warnings);
 
   // Session footer
   const chars = inputText.value.length;
-  const metaEl = document.getElementById('sessionMeta');
-  metaEl.innerHTML =
-    `<strong>Session</strong> ${jobId.slice(0, 8)}… &nbsp;·&nbsp; ` +
-    `<strong>Duration</strong> ${duration}s &nbsp;·&nbsp; ` +
-    `<strong>Input</strong> ${chars.toLocaleString()} chars`;
+  document.getElementById('sessionMeta').innerHTML =
+    `<b>Session</b> ${jobId.slice(0,8)}… &nbsp;·&nbsp; <b>Duration</b> ${duration}s &nbsp;·&nbsp; <b>Input</b> ${chars.toLocaleString()} chars`;
+  document.getElementById('headerSession').textContent = jobId.slice(0,8) + '…';
 
+  document.getElementById('analyzeBtn').disabled = false;
   show('results');
 }
 
@@ -571,61 +753,28 @@ function renderSummary(raw) {
   let headlineSet = false;
 
   for (const line of lines) {
-    const trimmed = line.trim();
-    if (trimmed.toLowerCase().startsWith('marked ')) { meta.push(trimmed); continue; }
-    if (!headlineSet && trimmed) { headline = trimmed; headlineSet = true; continue; }
+    const t = line.trim();
+    if (t.toLowerCase().startsWith('marked ')) { meta.push(t); continue; }
+    if (!headlineSet && t) { headline = t; headlineSet = true; continue; }
     if (headlineSet) bodyLines.push(line);
   }
 
-  // Trim leading blank lines from body
   while (bodyLines.length && !bodyLines[0].trim()) bodyLines.shift();
 
   document.getElementById('summaryHeadline').textContent = headline;
   document.getElementById('summaryBody').innerHTML = renderMarkdown(bodyLines.join('\n').trim());
+
   const metaEl = document.getElementById('summaryMeta');
-  metaEl.textContent = meta.join(' · ');
-  metaEl.style.display = meta.length ? '' : 'none';
-}
-
-function renderMarkdown(text) {
-  return text
-    // **bold** → <strong>
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    // blank line between paragraphs
-    .split(/\n{2,}/)
-    .map(para => {
-      const t = para.trim();
-      if (!t) return '';
-      // section header (starts with <strong> after stripping)
-      if (t.startsWith('<strong>') && t.indexOf('</strong>') > -1) {
-        const rest = t.slice(t.indexOf('</strong>') + 9).trim();
-        const hdr = t.slice(8, t.indexOf('</strong>'));
-        return `<p class="sum-header">${escHtml(hdr)}</p>` +
-               (rest ? `<p>${mdLine(rest)}</p>` : '');
-      }
-      // bullet list (lines starting with -)
-      if (t.includes('\n- ') || t.startsWith('- ')) {
-        const items = t.split('\n').filter(l => l.trim());
-        return '<ul>' + items.map(l => {
-          const content = l.replace(/^-\s*/, '');
-          return `<li>${mdLine(content)}</li>`;
-        }).join('') + '</ul>';
-      }
-      return `<p>${mdLine(t)}</p>`;
-    })
-    .filter(Boolean)
-    .join('');
-}
-
-function mdLine(s) {
-  return s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  if (meta.length) {
+    metaEl.textContent = meta.join(' · ');
+    metaEl.classList.remove('hidden');
+  }
 }
 
 function renderOptions(r) {
   const options = (r.elements || []).filter(e => e.kind === 'option');
-  if (!options.length) { hide('optionsSection'); return; }
+  if (!options.length) return;
 
-  // Build stance map: optId -> participantName -> latest stance
   const stanceMap = {};
   for (const ev of (r.events || [])) {
     if (ev.kind !== 'stance') continue;
@@ -633,80 +782,129 @@ function renderOptions(r) {
     stanceMap[ev.element_id][ev.participant] = ev.payload.stance;
   }
 
-  // Build question title map
   const qMap = {};
   for (const e of (r.elements || [])) {
     if (e.kind === 'question') qMap[e.id] = e.title;
   }
 
-  // Participants who have at least one stance
-  const activeParticipants = [...new Set(
+  const activeP = [...new Set(
     Object.values(stanceMap).flatMap(m => Object.keys(m))
   )].filter(p => p !== 'Unknown');
 
   document.getElementById('optionsBadge').textContent = options.length;
 
-  // Header
-  const head = document.getElementById('stanceHead');
-  head.innerHTML = '<tr>' +
-    '<th>Option</th>' +
-    '<th>Status</th>' +
-    activeParticipants.map(p => `<th>${escHtml(shortName(p))}</th>`).join('') +
+  document.getElementById('stanceHead').innerHTML = '<tr>' +
+    '<th>Option</th><th>Status</th>' +
+    activeP.map(p => `<th>${escHtml(shortName(p))}</th>`).join('') +
     '</tr>';
 
-  // Rows
   const body = document.getElementById('stanceBody');
   body.innerHTML = '';
   for (const opt of options) {
-    const tr = document.createElement('tr');
     const stances = stanceMap[opt.id] || {};
     const qTitle = opt.question_id ? qMap[opt.question_id] : null;
-
+    const tr = document.createElement('tr');
     tr.innerHTML =
-      `<td><div class="option-title">${escHtml(opt.title)}</div>` +
-      (qTitle ? `<div class="option-q">re: ${escHtml(truncate(qTitle, 60))}</div>` : '') +
+      `<td><div class="opt-title">${escHtml(opt.title)}</div>` +
+      (qTitle ? `<div class="opt-sub">re: ${escHtml(truncate(qTitle, 55))}</div>` : '') +
       `</td>` +
-      `<td><span class="option-status ${statusClass(opt.status)}">${escHtml(opt.status || 'active')}</span></td>` +
-      activeParticipants.map(p => {
+      `<td><span class="pill ${statusCls(opt.status)}">${escHtml(opt.status || 'active')}</span></td>` +
+      activeP.map(p => {
         const s = stances[p];
-        return `<td>${s ? `<span class="stance-pill ${stanceClass(s)}">${escHtml(s)}</span>` : ''}</td>`;
+        return `<td>${s ? `<span class="pill ${stanceCls(s)}">${escHtml(s)}</span>` : ''}</td>`;
       }).join('');
     body.appendChild(tr);
   }
 
-  show('optionsSection');
+  show('optionsCard');
 }
 
-function renderList(sectionId, badgeId, listId, items, mapper) {
-  if (!items.length) { hide(sectionId); return; }
+function renderList(cardId, badgeId, listId, items, mapper) {
+  if (!items.length) return;
   document.getElementById(badgeId).textContent = items.length;
   const list = document.getElementById(listId);
   list.innerHTML = '';
   for (const item of items) {
     const m = mapper(item);
     const div = document.createElement('div');
-    div.className = 'list-item';
+    div.className = 'list-row';
     div.innerHTML =
-      `<div class="list-item-dot ${m.dot || ''}"></div>` +
-      `<div><div class="item-title">${escHtml(m.title)}</div>` +
-      `<div class="item-meta">${escHtml(m.meta)}</div></div>`;
+      `<div class="dot ${m.dot || ''}"></div>` +
+      `<div><div class="row-title">${escHtml(m.title)}</div>` +
+      `<div class="row-meta">${escHtml(m.meta)}</div></div>`;
     list.appendChild(div);
   }
-  show(sectionId);
+  show(cardId);
 }
 
 function renderFlags(warnings) {
-  if (!warnings.length) { hide('flagsSection'); return; }
+  if (!warnings.length) return;
   document.getElementById('flagsBadge').textContent = warnings.length;
   const list = document.getElementById('flagsList');
   list.innerHTML = '';
   for (const w of warnings) {
     const div = document.createElement('div');
-    div.className = 'flag-item';
-    div.innerHTML = `<span class="flag-icon">⚑</span><span>${escHtml(truncate(w, 180))}</span>`;
+    div.className = 'flag-row';
+    div.innerHTML = `<span class="flag-icon">⚑</span><span>${escHtml(truncate(w, 200))}</span>`;
     list.appendChild(div);
   }
-  show('flagsSection');
+  show('flagsCard');
+}
+
+// ── markdown renderer ─────────────────────────────────────────────────────────
+function renderMarkdown(text) {
+  if (!text) return '';
+  const blocks = text.split(/\n{2,}/);
+  return blocks.map(block => {
+    const t = block.trim();
+    if (!t) return '';
+
+    // Horizontal rule
+    if (/^---+$/.test(t)) return '<hr>';
+
+    // ## Heading
+    if (t.startsWith('## ')) {
+      return `<h2>${escHtml(t.slice(3).trim())}</h2>`;
+    }
+    if (t.startsWith('# ')) {
+      return `<h2>${escHtml(t.slice(2).trim())}</h2>`;
+    }
+
+    // Bullet list (lines starting with - or *)
+    const lines = t.split('\n');
+    if (lines.every(l => /^[-*] /.test(l.trim()) || l.trim() === '')) {
+      const items = lines.filter(l => /^[-*] /.test(l.trim()));
+      return '<ul>' + items.map(l =>
+        `<li>${inlineMarkdown(l.trim().replace(/^[-*] /, ''))}</li>`
+      ).join('') + '</ul>';
+    }
+
+    // Mixed block: might have heading then bullets
+    if (lines.some(l => /^[-*] /.test(l.trim())) && lines.some(l => !/^[-*]/.test(l.trim()) && l.trim())) {
+      let html = '';
+      let inList = false;
+      for (const line of lines) {
+        const lt = line.trim();
+        if (!lt) continue;
+        if (/^[-*] /.test(lt)) {
+          if (!inList) { html += '<ul>'; inList = true; }
+          html += `<li>${inlineMarkdown(lt.replace(/^[-*] /, ''))}</li>`;
+        } else {
+          if (inList) { html += '</ul>'; inList = false; }
+          html += `<p>${inlineMarkdown(lt)}</p>`;
+        }
+      }
+      if (inList) html += '</ul>';
+      return html;
+    }
+
+    // Plain paragraph
+    return `<p>${inlineMarkdown(t.replace(/\n/g, ' '))}</p>`;
+  }).join('');
+}
+
+function inlineMarkdown(s) {
+  return escHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 }
 
 // ── helpers ───────────────────────────────────────────────────────────────────
@@ -714,38 +912,25 @@ function setStatus(type, msg) {
   const bar = document.getElementById('statusBar');
   bar.className = 'status-bar' + (type === 'error' ? ' error' : '');
   document.getElementById('statusText').textContent = msg;
-  document.getElementById('analyzeBtn').disabled = type === 'running';
   show('statusBar');
 }
-
 function show(id) { document.getElementById(id).classList.remove('hidden'); }
 function hide(id) { document.getElementById(id).classList.add('hidden'); }
-
 function escHtml(s) {
   return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
-
-function truncate(s, n) {
-  return s.length > n ? s.slice(0, n) + '…' : s;
-}
-
+function truncate(s, n) { return s.length > n ? s.slice(0, n) + '…' : s; }
 function shortName(full) {
-  // "Klein, Josh" → "Josh K." or keep as-is if short
   const parts = full.split(',').map(s => s.trim());
   if (parts.length === 2) return parts[1].split(' ')[0] + ' ' + parts[0][0] + '.';
   return full.length > 14 ? full.split(' ')[0] : full;
 }
-
-function statusClass(s) {
-  return { active: 'opt-active', decided: 'opt-decided', rejected: 'opt-rejected', withdrawn: 'opt-withdrawn' }[s] || 'opt-active';
+function statusCls(s) {
+  return {'active':'pill-active','decided':'pill-decided','rejected':'pill-rejected','withdrawn':'pill-withdrawn'}[s]||'pill-active';
 }
-
-function stanceClass(s) {
-  return { support: 's-support', oppose: 's-oppose', conditional: 's-conditional', abstain: 's-abstain', withdrawn: 's-withdrawn' }[s] || '';
+function stanceCls(s) {
+  return {'support':'pill-support','oppose':'pill-oppose','conditional':'pill-conditional','abstain':'pill-abstain','withdrawn':'pill-withdrawn-s'}[s]||'';
 }
 </script>
 </body>

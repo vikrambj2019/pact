@@ -1,0 +1,1816 @@
+{
+  "source": "enterprise/evals/sources/ent-08-email-vendor-private-note.txt",
+  "model": "claude-haiku-5-5",
+  "participants": [
+    "Nair, Priya",
+    "Whitfield, Tom",
+    "Raman, Dev",
+    "Mendes, Carla",
+    "Okafor, Jun",
+    "Duarte, Ines"
+  ],
+  "span_msgs": {
+    "b1.s1": "m1",
+    "b1.s2": "m1",
+    "b1.s3": "m1",
+    "b1.s4": "m1",
+    "b1.s5": "m1",
+    "b2.s1": "m2",
+    "b2.s2": "m2",
+    "b2.s3": "m2",
+    "b2.s4": "m2",
+    "b3.s1": "m3",
+    "b3.s2": "m3",
+    "b3.s3": "m3",
+    "b3.s4": "m3",
+    "b4.s1": "m4",
+    "b4.s2": "m4",
+    "b5.s1": "m5",
+    "b5.s2": "m5",
+    "b5.s3": "m5",
+    "b5.s4": "m5",
+    "b5.s5": "m5",
+    "b6.s1": "m6",
+    "b6.s2": "m6",
+    "b6.s3": "m6",
+    "b6.s4": "m6",
+    "b7.s1": "m7",
+    "b7.s2": "m7",
+    "b8.s1": "m8"
+  },
+  "elements": [
+    {
+      "id": "q1",
+      "kind": "question",
+      "title": "Which contract review pilot to pursue in Q4: Clauseline or internal build",
+      "author": "Nair, Priya",
+      "created_span": "b1.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s2"
+      ]
+    },
+    {
+      "id": "opt1",
+      "kind": "option",
+      "title": "Buy Clauseline, a hosted contract review tool",
+      "author": "Nair, Priya",
+      "created_span": "b1.s2",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s2",
+        "b2.s1",
+        "b3.s3",
+        "b7.s2",
+        "b8.s1"
+      ]
+    },
+    {
+      "id": "opt2",
+      "kind": "option",
+      "title": "Build contract review pilot on internal platform",
+      "author": "Nair, Priya",
+      "created_span": "b1.s3",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s3",
+        "b2.s4",
+        "b3.s1"
+      ]
+    },
+    {
+      "id": "con1",
+      "kind": "constraint",
+      "title": "Budget covers only one contract review pilot in Q4",
+      "author": "Nair, Priya",
+      "created_span": "b1.s1",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s1"
+      ]
+    },
+    {
+      "id": "clm1",
+      "kind": "claim",
+      "title": "Tom Whitfield supports option A (buy Clauseline)",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s1"
+      ]
+    },
+    {
+      "id": "clm2",
+      "kind": "claim",
+      "title": "Legal reviews about 40 vendor contracts a month and redline turnaround is the biggest delay",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s2"
+      ]
+    },
+    {
+      "id": "crit1",
+      "kind": "criterion",
+      "title": "Redline turnaround speed",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s2"
+      ]
+    },
+    {
+      "id": "clm3",
+      "kind": "claim",
+      "title": "Clauseline claims a 2-day contract redline turnaround",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s3"
+      ]
+    },
+    {
+      "id": "con2",
+      "kind": "constraint",
+      "title": "Tom has no engineering capacity to help build option B",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s4",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "negotiable"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s4"
+      ]
+    },
+    {
+      "id": "clm4",
+      "kind": "claim",
+      "title": "Tom objects to building option B due to lack of engineering capacity",
+      "author": "Whitfield, Tom",
+      "created_span": "b2.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s4"
+      ]
+    },
+    {
+      "id": "clm5",
+      "kind": "claim",
+      "title": "Building option B needs two engineers for 8 weeks; data stays in house",
+      "author": "Raman, Dev",
+      "created_span": "b3.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s2"
+      ]
+    },
+    {
+      "id": "con3",
+      "kind": "constraint",
+      "title": "Annual cost of the tool should stay under $60k",
+      "author": "Mendes, Carla",
+      "created_span": "b4.s1",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "soft"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b4.s1"
+      ]
+    },
+    {
+      "id": "clm6",
+      "kind": "claim",
+      "title": "A (buy Clauseline) works for procurement if annual cost stays under $60k",
+      "author": "Mendes, Carla",
+      "created_span": "b4.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b4.s1"
+      ]
+    },
+    {
+      "id": "clm7",
+      "kind": "claim",
+      "title": "Clauseline's docs say contracts are processed in an EU region (vendor-stated, unverified)",
+      "author": "Okafor, Jun",
+      "created_span": "b5.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b5.s2"
+      ]
+    },
+    {
+      "id": "con4",
+      "kind": "constraint",
+      "title": "Vendor contract text must stay in the US (data residency rule)",
+      "author": "Okafor, Jun",
+      "created_span": "b5.s3",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b5.s3"
+      ]
+    },
+    {
+      "id": "clm8",
+      "kind": "claim",
+      "title": "Opposes Clauseline (A) because its docs say contracts are processed in an EU region",
+      "author": "Okafor, Jun",
+      "created_span": "b5.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b5.s3"
+      ]
+    },
+    {
+      "id": "con5",
+      "kind": "constraint",
+      "title": "Final decision on A vs B gated on Oct 21 SOC 2 report from Jun",
+      "author": "Nair, Priya",
+      "created_span": "b6.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s2"
+      ]
+    },
+    {
+      "id": "clm9",
+      "kind": "claim",
+      "title": "Final call on Clauseline (A) vs build (B) deferred until Oct 21",
+      "author": "Nair, Priya",
+      "created_span": "b6.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s2"
+      ]
+    },
+    {
+      "id": "blk1",
+      "kind": "blocker",
+      "title": "Clauseline's data location (EU region vs US-only rule) must be reviewed by security before deciding on A",
+      "author": "Nair, Priya",
+      "created_span": "b6.s3",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "unresolved_dependency"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s3"
+      ]
+    },
+    {
+      "id": "clm10",
+      "kind": "claim",
+      "title": "Clauseline quote received: $54k per year on a three-year term",
+      "author": "Mendes, Carla",
+      "created_span": "b7.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s1"
+      ]
+    },
+    {
+      "id": "clm11",
+      "kind": "claim",
+      "title": "Clauseline quote of $54k/year is within Carla's $60k annual cap",
+      "author": "Mendes, Carla",
+      "created_span": "b7.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s2"
+      ]
+    },
+    {
+      "id": "con6",
+      "kind": "constraint",
+      "title": "Carla's annual budget cap is $60k",
+      "author": "Mendes, Carla",
+      "created_span": "b7.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s2"
+      ]
+    },
+    {
+      "id": "con7",
+      "kind": "constraint",
+      "title": "Q4-only budget; contract must be signed by Nov 15 or the budget is lost",
+      "author": "Duarte, Ines",
+      "created_span": "b8.s1",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s1"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-10-05T09:00:00",
+      "span_id": "b1.s2",
+      "kind": "create",
+      "element_id": "q1",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Which contract review pilot to pursue in Q4: Clauseline or internal build",
+        "kind": "question"
+      },
+      "because": []
+    },
+    {
+      "seq": 2,
+      "ts": "2026-10-05T09:00:00",
+      "span_id": "b1.s2",
+      "kind": "create",
+      "element_id": "opt1",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Buy Clauseline, a hosted contract review tool",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 3,
+      "ts": "2026-10-05T09:00:00",
+      "span_id": "b1.s3",
+      "kind": "create",
+      "element_id": "opt2",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Build contract review pilot on internal platform",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 4,
+      "ts": "2026-10-05T09:00:00",
+      "span_id": "b1.s1",
+      "kind": "create",
+      "element_id": "con1",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Budget covers only one contract review pilot in Q4",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 5,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s1",
+      "kind": "create",
+      "element_id": "clm1",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Tom Whitfield supports option A (buy Clauseline)",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 6,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s2",
+      "kind": "create",
+      "element_id": "clm2",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Legal reviews about 40 vendor contracts a month and redline turnaround is the biggest delay",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 7,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s2",
+      "kind": "create",
+      "element_id": "crit1",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Redline turnaround speed",
+        "kind": "criterion"
+      },
+      "because": []
+    },
+    {
+      "seq": 8,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s3",
+      "kind": "create",
+      "element_id": "clm3",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Clauseline claims a 2-day contract redline turnaround",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 9,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s4",
+      "kind": "create",
+      "element_id": "con2",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Tom has no engineering capacity to help build option B",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 10,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s4",
+      "kind": "create",
+      "element_id": "clm4",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "title": "Tom objects to building option B due to lack of engineering capacity",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 11,
+      "ts": "2026-10-05T13:30:00",
+      "span_id": "b3.s2",
+      "kind": "create",
+      "element_id": "clm5",
+      "participant": "Raman, Dev",
+      "payload": {
+        "title": "Building option B needs two engineers for 8 weeks; data stays in house",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 12,
+      "ts": "2026-10-06T08:45:00",
+      "span_id": "b4.s1",
+      "kind": "create",
+      "element_id": "con3",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "title": "Annual cost of the tool should stay under $60k",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 13,
+      "ts": "2026-10-06T08:45:00",
+      "span_id": "b4.s1",
+      "kind": "create",
+      "element_id": "clm6",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "title": "A (buy Clauseline) works for procurement if annual cost stays under $60k",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 14,
+      "ts": "2026-10-06T11:20:00",
+      "span_id": "b5.s2",
+      "kind": "create",
+      "element_id": "clm7",
+      "participant": "Okafor, Jun",
+      "payload": {
+        "title": "Clauseline's docs say contracts are processed in an EU region (vendor-stated, unverified)",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 15,
+      "ts": "2026-10-06T11:20:00",
+      "span_id": "b5.s3",
+      "kind": "create",
+      "element_id": "con4",
+      "participant": "Okafor, Jun",
+      "payload": {
+        "title": "Vendor contract text must stay in the US (data residency rule)",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 16,
+      "ts": "2026-10-06T11:20:00",
+      "span_id": "b5.s3",
+      "kind": "create",
+      "element_id": "clm8",
+      "participant": "Okafor, Jun",
+      "payload": {
+        "title": "Opposes Clauseline (A) because its docs say contracts are processed in an EU region",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 17,
+      "ts": "2026-10-06T14:05:00",
+      "span_id": "b6.s2",
+      "kind": "create",
+      "element_id": "con5",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Final decision on A vs B gated on Oct 21 SOC 2 report from Jun",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 18,
+      "ts": "2026-10-06T14:05:00",
+      "span_id": "b6.s2",
+      "kind": "create",
+      "element_id": "clm9",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Final call on Clauseline (A) vs build (B) deferred until Oct 21",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 19,
+      "ts": "2026-10-06T14:05:00",
+      "span_id": "b6.s3",
+      "kind": "create",
+      "element_id": "blk1",
+      "participant": "Nair, Priya",
+      "payload": {
+        "title": "Clauseline's data location (EU region vs US-only rule) must be reviewed by security before deciding on A",
+        "kind": "blocker"
+      },
+      "because": []
+    },
+    {
+      "seq": 20,
+      "ts": "2026-10-07T09:10:00",
+      "span_id": "b7.s1",
+      "kind": "create",
+      "element_id": "clm10",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "title": "Clauseline quote received: $54k per year on a three-year term",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 21,
+      "ts": "2026-10-07T09:10:00",
+      "span_id": "b7.s2",
+      "kind": "create",
+      "element_id": "clm11",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "title": "Clauseline quote of $54k/year is within Carla's $60k annual cap",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 22,
+      "ts": "2026-10-07T09:10:00",
+      "span_id": "b7.s2",
+      "kind": "create",
+      "element_id": "con6",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "title": "Carla's annual budget cap is $60k",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 23,
+      "ts": "2026-10-08T16:00:00",
+      "span_id": "b8.s1",
+      "kind": "create",
+      "element_id": "con7",
+      "participant": "Duarte, Ines",
+      "payload": {
+        "title": "Q4-only budget; contract must be signed by Nov 15 or the budget is lost",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 24,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 25,
+      "ts": "2026-10-05T10:12:00",
+      "span_id": "b2.s4",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Whitfield, Tom",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 26,
+      "ts": "2026-10-05T13:30:00",
+      "span_id": "b3.s1",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Raman, Dev",
+      "payload": {
+        "stance": "undecided",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 27,
+      "ts": "2026-10-05T13:30:00",
+      "span_id": "b3.s3",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Raman, Dev",
+      "payload": {
+        "stance": "undecided",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 28,
+      "ts": "2026-10-07T09:10:00",
+      "span_id": "b7.s2",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Mendes, Carla",
+      "payload": {
+        "stance": "conditional",
+        "prev": null,
+        "conditions": "supports A (Clauseline) only once security clears the data location",
+        "inferred": true,
+        "inferred_reason": "span never names 'Buy Clauseline, a hosted contract review tool'"
+      },
+      "because": [
+        "clm11"
+      ]
+    },
+    {
+      "seq": 29,
+      "ts": "2026-10-08T16:00:00",
+      "span_id": "b8.s1",
+      "kind": "attach",
+      "element_id": "con7",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 30,
+      "ts": "2026-10-08T16:00:00",
+      "span_id": "b8.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Duarte, Ines",
+      "payload": {
+        "stance": "conditional",
+        "prev": null,
+        "conditions": "fine with A once security clears the data location"
+      },
+      "because": [
+        "con7"
+      ]
+    }
+  ],
+  "warnings": [
+    "extract: 1 candidates cited a span outside their batch and were ignored",
+    "inferred stance (span never names 'Buy Clauseline, a hosted contract review tool'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"supports A (Clauseline) only once security clears the data location\", \"span\": \"b7.s2\", \"because\": [\"clm11\"]}"
+  ],
+  "followups": 0,
+  "_enterprise": {
+    "source_type": "email",
+    "subject": "Contract review pilot: vendor or build?",
+    "speakers": [
+      "Nair, Priya",
+      "Whitfield, Tom",
+      "Raman, Dev",
+      "Mendes, Carla",
+      "Okafor, Jun",
+      "Duarte, Ines"
+    ],
+    "observers": [],
+    "msg_meta": [
+      {
+        "id": "m1",
+        "author": "Nair, Priya",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m2",
+        "author": "Whitfield, Tom",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m3",
+        "author": "Raman, Dev",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m4",
+        "author": "Mendes, Carla",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m5",
+        "author": "Okafor, Jun",
+        "restricted": true,
+        "restricted_reason": "'keep this to yourself' (Okafor, Jun)",
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m6",
+        "author": "Nair, Priya",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m7",
+        "author": "Mendes, Carla",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Duarte, Ines",
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      },
+      {
+        "id": "m8",
+        "author": "Duarte, Ines",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Nair, Priya",
+          "Whitfield, Tom",
+          "Mendes, Carla",
+          "Okafor, Jun",
+          "Raman, Dev",
+          "Duarte, Ines"
+        ],
+        "subject": "RE: Contract review pilot: vendor or build?"
+      }
+    ],
+    "spans": [
+      {
+        "id": "b1.s1",
+        "burst_id": "b1",
+        "author": "Nair, Priya",
+        "ts": "2026-10-05T09:00:00",
+        "text": "We have budget for one contract review pilot in Q4",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s2",
+        "burst_id": "b1",
+        "author": "Nair, Priya",
+        "ts": "2026-10-05T09:00:00",
+        "text": "Two options: A) buy Clauseline, a hosted tool",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s3",
+        "burst_id": "b1",
+        "author": "Nair, Priya",
+        "ts": "2026-10-05T09:00:00",
+        "text": "B) build it on our internal platform",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s4",
+        "burst_id": "b1",
+        "author": "Nair, Priya",
+        "ts": "2026-10-05T09:00:00",
+        "text": "I would like a view from each of you by Thursday",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s5",
+        "burst_id": "b1",
+        "author": "Nair, Priya",
+        "ts": "2026-10-05T09:00:00",
+        "text": "Please reply all so we can see where everyone is",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s1",
+        "burst_id": "b2",
+        "author": "Whitfield, Tom",
+        "ts": "2026-10-05T10:12:00",
+        "text": "I support A",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s2",
+        "burst_id": "b2",
+        "author": "Whitfield, Tom",
+        "ts": "2026-10-05T10:12:00",
+        "text": "Legal reviews about 40 vendor contracts a month and redline turnaround is our biggest delay",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s3",
+        "burst_id": "b2",
+        "author": "Whitfield, Tom",
+        "ts": "2026-10-05T10:12:00",
+        "text": "Clauseline claims a 2-day turnaround",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s4",
+        "burst_id": "b2",
+        "author": "Whitfield, Tom",
+        "ts": "2026-10-05T10:12:00",
+        "text": "I do not have capacity to help with a build",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s1",
+        "burst_id": "b3",
+        "author": "Raman, Dev",
+        "ts": "2026-10-05T13:30:00",
+        "text": "I would pick B",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'B' = build it on our internal platform",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s2",
+        "burst_id": "b3",
+        "author": "Raman, Dev",
+        "ts": "2026-10-05T13:30:00",
+        "text": "Two engineers for 8 weeks and we keep the data in house",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s3",
+        "burst_id": "b3",
+        "author": "Raman, Dev",
+        "ts": "2026-10-05T13:30:00",
+        "text": "But I am not saying A is wrong",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'A' = buy Clauseline, a hosted tool",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s4",
+        "burst_id": "b3",
+        "author": "Raman, Dev",
+        "ts": "2026-10-05T13:30:00",
+        "text": "I just want the build cost on the table",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s1",
+        "burst_id": "b4",
+        "author": "Mendes, Carla",
+        "ts": "2026-10-06T08:45:00",
+        "text": "A works for procurement if the annual cost stays under $60k",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s2",
+        "burst_id": "b4",
+        "author": "Mendes, Carla",
+        "ts": "2026-10-06T08:45:00",
+        "text": "I will ask Clauseline for a written quote by Oct 14",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s1",
+        "burst_id": "b5",
+        "author": "Okafor, Jun",
+        "ts": "2026-10-06T11:20:00",
+        "text": "Priya, before anyone commits to A",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b5.s2",
+        "burst_id": "b5",
+        "author": "Okafor, Jun",
+        "ts": "2026-10-06T11:20:00",
+        "text": "their docs say contracts are processed in an EU region",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s3",
+        "burst_id": "b5",
+        "author": "Okafor, Jun",
+        "ts": "2026-10-06T11:20:00",
+        "text": "We have a rule that vendor contract text stays in the US",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s4",
+        "burst_id": "b5",
+        "author": "Okafor, Jun",
+        "ts": "2026-10-06T11:20:00",
+        "text": "Please keep this to yourself until I have read their SOC 2 report",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s5",
+        "burst_id": "b5",
+        "author": "Okafor, Jun",
+        "ts": "2026-10-06T11:20:00",
+        "text": "I expect it by Oct 21",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'it' = their SOC 2 report",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s1",
+        "burst_id": "b6",
+        "author": "Nair, Priya",
+        "ts": "2026-10-06T14:05:00",
+        "text": "Thanks Jun. All",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b6.s2",
+        "burst_id": "b6",
+        "author": "Nair, Priya",
+        "ts": "2026-10-06T14:05:00",
+        "text": "I am holding the final call until Oct 21",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s3",
+        "burst_id": "b6",
+        "author": "Nair, Priya",
+        "ts": "2026-10-06T14:05:00",
+        "text": "security still has to review Clauseline's data location",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s4",
+        "burst_id": "b6",
+        "author": "Nair, Priya",
+        "ts": "2026-10-06T14:05:00",
+        "text": "Carla, please still get the quote",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s1",
+        "burst_id": "b7",
+        "author": "Mendes, Carla",
+        "ts": "2026-10-07T09:10:00",
+        "text": "Quote received: $54k a year on a three-year term",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s2",
+        "burst_id": "b7",
+        "author": "Mendes, Carla",
+        "ts": "2026-10-07T09:10:00",
+        "text": "That is within my cap, so I support A, assuming security clears it",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'That' = $54k a year on a three-year term",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s1",
+        "burst_id": "b8",
+        "author": "Duarte, Ines",
+        "ts": "2026-10-08T16:00:00",
+        "text": "I am fine with A once security clears. The budget is only available in Q4, so the contract has to be signed by Nov 15 or we lose it. Priya, please own the signing date.\n\nInes",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      }
+    ],
+    "classified": [
+      {
+        "span_id": "b1.s1",
+        "author": "Nair, Priya",
+        "text": "We have budget for one contract review pilot in Q4",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.8,
+            "gist": "Budget for only one contract review pilot in Q4"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s2",
+        "author": "Nair, Priya",
+        "text": "Two options: A) buy Clauseline, a hosted tool",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.85,
+            "gist": "Option A: buy Clauseline, a hosted contract review tool"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s3",
+        "author": "Nair, Priya",
+        "text": "B) build it on our internal platform",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.8,
+            "gist": "B) build contract review pilot on internal platform, introduced as alternative to Clauseline"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s4",
+        "author": "Nair, Priya",
+        "text": "I would like a view from each of you by Thursday",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "Priya asks each participant to share their view by Thursday (call for input on the decision)"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s5",
+        "author": "Nair, Priya",
+        "text": "Please reply all so we can see where everyone is",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.9,
+            "gist": "Priya asks everyone to reply with their view so the group can see where people stand"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s1",
+        "author": "Whitfield, Tom",
+        "text": "I support A",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Tom Whitfield supports option A (buy Clauseline, hosted tool)"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s2",
+        "author": "Whitfield, Tom",
+        "text": "Legal reviews about 40 vendor contracts a month and redline turnaround is our biggest delay",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Legal reviews about 40 vendor contracts a month; redline turnaround is the biggest delay"
+          },
+          {
+            "type": "criterion",
+            "confidence": 0.5,
+            "gist": "Redline turnaround speed as a factor for judging options"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s3",
+        "author": "Whitfield, Tom",
+        "text": "Clauseline claims a 2-day turnaround",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Clauseline (option A, already named by Priya) claims a 2-day contract redline turnaround"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s4",
+        "author": "Whitfield, Tom",
+        "text": "I do not have capacity to help with a build",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.6,
+            "gist": "Tom has no engineering capacity to help build option B (internal build)"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.55,
+            "gist": "Tom objects to building option B due to lack of capacity"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s1",
+        "author": "Raman, Dev",
+        "text": "I would pick B",
+        "status": "active",
+        "context_note": "'B' = build it on our internal platform",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Dev Raman prefers option B (build on internal platform)"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s2",
+        "author": "Raman, Dev",
+        "text": "Two engineers for 8 weeks and we keep the data in house",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Building option B needs two engineers for 8 weeks; data stays in house"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s3",
+        "author": "Raman, Dev",
+        "text": "But I am not saying A is wrong",
+        "status": "active",
+        "context_note": "'A' = buy Clauseline, a hosted tool",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Dev says he is not saying option A (buy Clauseline) is wrong; softens opposition, stance on A is undecided/open rather than endorsed"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s4",
+        "author": "Raman, Dev",
+        "text": "I just want the build cost on the table",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Dev wants the build cost of option B surfaced; a request for information rather than a clear personal commitment"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s1",
+        "author": "Mendes, Carla",
+        "text": "A works for procurement if the annual cost stays under $60k",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Carla: A (buy Clauseline) works for procurement, conditional on annual cost staying under $60k"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.5,
+            "gist": "Annual cost of the tool should stay under $60k"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s2",
+        "author": "Mendes, Carla",
+        "text": "I will ask Clauseline for a written quote by Oct 14",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.9,
+            "gist": "Carla will request a written quote from Clauseline by Oct 14"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s1",
+        "author": "Okafor, Jun",
+        "text": "Priya, before anyone commits to A",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.6,
+            "gist": "Jun interrupts to raise a check before the group commits to option A, a facilitation/gating step"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s2",
+        "author": "Okafor, Jun",
+        "text": "their docs say contracts are processed in an EU region",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Clauseline's docs say contracts are processed in an EU region (vendor-stated fact, unverified)"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s3",
+        "author": "Okafor, Jun",
+        "text": "We have a rule that vendor contract text stays in the US",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.8,
+            "gist": "Vendor contract text must stay in the US (data residency rule); conflicts with Clauseline's EU-region processing"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.5,
+            "gist": "Opposes Clauseline (option A) because its docs say contracts are processed in an EU region"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s4",
+        "author": "Okafor, Jun",
+        "text": "Please keep this to yourself until I have read their SOC 2 report",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "separate_issue",
+            "confidence": 0.5,
+            "gist": "Request to keep information confidential until SOC 2 report is read; side issue about vendor security documentation, not the option choice itself"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s5",
+        "author": "Okafor, Jun",
+        "text": "I expect it by Oct 21",
+        "status": "active",
+        "context_note": "'it' = their SOC 2 report",
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Jun Okafor expects to receive Clauseline's SOC 2 report by Oct 21 (to review it)"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s1",
+        "author": "Nair, Priya",
+        "text": "Thanks Jun. All",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.7,
+            "gist": "thanks to Jun; greeting/acknowledgement with no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s2",
+        "author": "Nair, Priya",
+        "text": "I am holding the final call until Oct 21",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Final call on Clauseline (A) vs build (B) deferred until Oct 21, not settled now"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.5,
+            "gist": "Final decision date gated on Oct 21 SOC 2 report from Jun"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s3",
+        "author": "Nair, Priya",
+        "text": "security still has to review Clauseline's data location",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.8,
+            "gist": "Clauseline's data location (EU region vs US-only rule) is unverified and must be reviewed by security before deciding on option A"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s4",
+        "author": "Nair, Priya",
+        "text": "Carla, please still get the quote",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Carla Mendes asked to obtain the written Clauseline quote"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s1",
+        "author": "Mendes, Carla",
+        "text": "Quote received: $54k a year on a three-year term",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.85,
+            "gist": "Clauseline quote received: $54k per year on a three-year term"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s2",
+        "author": "Mendes, Carla",
+        "text": "That is within my cap, so I support A, assuming security clears it",
+        "status": "active",
+        "context_note": "'That' = $54k a year on a three-year term",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Carla supports option A (Clauseline) conditional on security clearing it"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Clauseline quote of $54k/year is within Carla's $60k annual cap"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s1",
+        "author": "Duarte, Ines",
+        "text": "I am fine with A once security clears. The budget is only available in Q4, so the contract has to be signed by Nov 15 or we lose it. Priya, please own the signing date.\n\nInes",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Ines supports option A (Clauseline) conditional on security clearing it"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.6,
+            "gist": "Q4-only budget; contract must be signed by Nov 15 or the budget is lost"
+          },
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Priya asked to own the contract signing date"
+          }
+        ]
+      }
+    ]
+  },
+  "summary": "No decision was reached. 1 open question, 1 open blocker, 3 people took an explicit position on an option.\n\nSUMMARY\nNo decision was reached. 1 open question, 1 open blocker, 3 people took an explicit position on an option.\n\nPriya Nair opened the thread saying there is budget for one contract review pilot in Q4 and presented two options: buying Clauseline, a hosted tool (Option A), or building on the internal platform (Option B), asking everyone to reply by Thursday. Tom Whitfield supports Option A, citing that legal processes about 40 vendor contracts a month and redline turnaround is the biggest delay; he also said he has no capacity to help with a build. Dev Raman prefers Option B, proposing two engineers for 8 weeks with data kept in-house, but stopped short of saying Option A is wrong and asked only that the build cost be put on the table; Priya has not confirmed whether that figure will be produced. Carla Mendes reported the Clauseline quote came in at $54k a year on a three-year term, within her $60k cap, and supports Option A assuming security clears it. Ines Duarte is fine with Option A once security clears it and warned that the contract must be signed by November 15 or the Q4 budget is lost, asking Priya to own that signing deadline. The thread ends without a decision, without the SOC 2 review completed, and without a build cost for Option B on the table.\n\n## Open questions\n\n- Priya Nair: which contract review pilot to pursue in Q4 \u2014 Clauseline (A) or internal build (B).\n\n## Where people stand\n\n- Tom Whitfield: supports Option A, citing legal's 40 contracts a month and redline turnaround as the biggest delay; said he has no capacity to help with a build.\n- Dev Raman: \"I would pick B \u2014 two engineers for 8 weeks and we keep the data in house. But I am not saying A is wrong. I just want the build cost on the table.\"\n- Carla Mendes: \"That is within my cap, so I support A, assuming security clears it.\"\n- Ines Duarte: \"I am fine with A once security clears. The budget is only available in Q4, so the contract has to be signed by Nov 15 or we lose it. Priya, please own the signing date.\"\n- Jun Okafor: no explicit position recorded.\n- Priya Nair: \"I am holding the final call until Oct 21.\"\n\n## What is blocking progress\n\n- Clauseline's data location (EU processing vs. a US-only rule) must be reviewed by security before a decision on Option A can be made; final call deferred to Oct 21, pending a SOC 2 report (raised by Jun Okafor).\n\n## Next steps\n\n- Carla Mendes asked Clauseline for a written quote by Oct 14 (quote since received: $54k/year, three-year term).\n- Ines Duarte asked Priya Nair to own the Nov 15 contract signing deadline.\n- Dev Raman asked that the build cost for Option B be put on the table; no owner named.\n\n## Awaiting a reply\n\n- Priya Nair asked the group for a view from each person by Thursday; Jun Okafor has not replied with a position in the shared thread.\n\n## Things people asserted that others may want to check\n\n- Dev Raman said building Option B would require two engineers for 8 weeks.\n- Carla Mendes said the Clauseline quote is $54k per year on a three-year term.\n\n## Marked private\n\n- Marked private by Jun Okafor: Clauseline's documentation states contracts are processed in an EU region (vendor-stated, unverified).\n- Marked private by Jun Okafor: the company has a rule that vendor contract text must stay in the US.\n- Marked private by Jun Okafor: Jun objects to anyone committing to Option A until he has reviewed Clauseline's SOC 2 report, which he expects by Oct 21.\n- Marked private by Jun Okafor: \"I expect it by Oct 21.\""
+}

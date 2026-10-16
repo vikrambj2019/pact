@@ -1,0 +1,1465 @@
+{
+  "source": "enterprise/evals/sources/ent-09-email-offsite-reversal-forward.txt",
+  "model": "claude-haiku-5-5",
+  "participants": [
+    "Hale, Rosa",
+    "Pike, Andre",
+    "Soto, Marguerite",
+    "Grant, Wei-Ling",
+    "Bose, Anil",
+    "Okoye, Dana"
+  ],
+  "span_msgs": {
+    "b1.s1": "m1",
+    "b1.s2": "m1",
+    "b1.s3": "m1",
+    "b1.s4": "m1",
+    "b2.s1": "m2",
+    "b3.s1": "m3",
+    "b3.s2": "m3",
+    "b3.s3": "m3",
+    "b4.s1": "m4",
+    "b5.s1": "m5",
+    "b6.s1": "m6",
+    "b6.s2": "m6",
+    "b7.s1": "m7",
+    "b7.s2": "m7",
+    "b7.s3": "m7",
+    "b7.s4": "m7",
+    "b8.s1": "m8",
+    "b8.s2": "m8",
+    "b9.s1": "m9",
+    "b9.s2": "m9",
+    "b9.s3": "m9"
+  },
+  "elements": [
+    {
+      "id": "q1",
+      "kind": "question",
+      "title": "Which location/date to pick for the Q1 offsite",
+      "author": "Hale, Rosa",
+      "created_span": "b1.s1",
+      "status": "decided",
+      "question_id": null,
+      "aliases": [
+        "Which dates/location for the Q1 offsite"
+      ],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s1",
+        "b3.s2",
+        "b7.s1",
+        "b8.s1"
+      ]
+    },
+    {
+      "id": "opt1",
+      "kind": "option",
+      "title": "Austin on Feb 9-11",
+      "author": "Hale, Rosa",
+      "created_span": "b1.s1",
+      "status": "dropped",
+      "question_id": "q1",
+      "aliases": [
+        "Austin Feb 9-11"
+      ],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s1",
+        "b7.s2",
+        "b2.s1",
+        "b3.s2",
+        "b3.s3",
+        "b4.s1",
+        "b5.s1",
+        "b6.s1",
+        "b6.s2",
+        "b8.s1"
+      ]
+    },
+    {
+      "id": "opt2",
+      "kind": "option",
+      "title": "Denver on Feb 23-25",
+      "author": "Hale, Rosa",
+      "created_span": "b1.s1",
+      "status": "chosen",
+      "question_id": "q1",
+      "aliases": [
+        "Denver Feb 23-25"
+      ],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s1",
+        "b7.s1",
+        "b3.s1",
+        "b6.s2",
+        "b8.s1"
+      ]
+    },
+    {
+      "id": "con1",
+      "kind": "constraint",
+      "title": "Venue holds expire Oct 16",
+      "author": "Hale, Rosa",
+      "created_span": "b1.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s2"
+      ]
+    },
+    {
+      "id": "clm1",
+      "kind": "claim",
+      "title": "Venue holds for the Q1 offsite expire Oct 16",
+      "author": "Hale, Rosa",
+      "created_span": "b1.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s2"
+      ]
+    },
+    {
+      "id": "clm2",
+      "kind": "claim",
+      "title": "Feb 9 start date clashes with the audit",
+      "author": "Soto, Marguerite",
+      "created_span": "b3.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s2"
+      ]
+    },
+    {
+      "id": "clm3",
+      "kind": "claim",
+      "title": "Austin Feb 9-11 clashes with the audit work, affecting Andre's team too",
+      "author": "Pike, Andre",
+      "created_span": "b6.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s1"
+      ]
+    },
+    {
+      "id": "clm4",
+      "kind": "claim",
+      "title": "Denver has support from Marguerite and Andre (current tally)",
+      "author": "Hale, Rosa",
+      "created_span": "b7.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s1"
+      ]
+    },
+    {
+      "id": "clm5",
+      "kind": "claim",
+      "title": "Anil has not yet stated a preference between Austin and Denver",
+      "author": "Hale, Rosa",
+      "created_span": "b7.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s3"
+      ]
+    },
+    {
+      "id": "blk1",
+      "kind": "blocker",
+      "title": "Can Wei-Ling still do Feb 23 (Denver dates)?",
+      "author": "Hale, Rosa",
+      "created_span": "b7.s4",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "missing_info"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b7.s4"
+      ]
+    },
+    {
+      "id": "clm6",
+      "kind": "claim",
+      "title": "Venue deposit for the Denver hold is $3,200",
+      "author": "Okoye, Dana",
+      "created_span": "b9.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s2"
+      ]
+    },
+    {
+      "id": "blk2",
+      "kind": "blocker",
+      "title": "Whether the $3,200 venue deposit for the Denver hold is acceptable to the group",
+      "author": "Okoye, Dana",
+      "created_span": "b9.s3",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "open_question"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s3"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-10-05T08:00:00",
+      "span_id": "b1.s1",
+      "kind": "create",
+      "element_id": "q1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Which location/date to pick for the Q1 offsite",
+        "kind": "question"
+      },
+      "because": []
+    },
+    {
+      "seq": 2,
+      "ts": "2026-10-05T09:15:00",
+      "span_id": "b3.s2",
+      "kind": "attach",
+      "element_id": "q1",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 3,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s1",
+      "kind": "alias",
+      "element_id": "q1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "alias": "Which dates/location for the Q1 offsite"
+      },
+      "because": []
+    },
+    {
+      "seq": 4,
+      "ts": "2026-10-05T08:00:00",
+      "span_id": "b1.s1",
+      "kind": "create",
+      "element_id": "opt1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Austin on Feb 9-11",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 5,
+      "ts": "2026-10-05T08:00:00",
+      "span_id": "b1.s1",
+      "kind": "create",
+      "element_id": "opt2",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Denver on Feb 23-25",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 6,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s1",
+      "kind": "alias",
+      "element_id": "opt2",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "alias": "Denver Feb 23-25"
+      },
+      "because": []
+    },
+    {
+      "seq": 7,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s2",
+      "kind": "alias",
+      "element_id": "opt1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "alias": "Austin Feb 9-11"
+      },
+      "because": []
+    },
+    {
+      "seq": 8,
+      "ts": "2026-10-05T08:00:00",
+      "span_id": "b1.s2",
+      "kind": "create",
+      "element_id": "con1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Venue holds expire Oct 16",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 9,
+      "ts": "2026-10-05T08:00:00",
+      "span_id": "b1.s2",
+      "kind": "create",
+      "element_id": "clm1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Venue holds for the Q1 offsite expire Oct 16",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 10,
+      "ts": "2026-10-05T09:15:00",
+      "span_id": "b3.s2",
+      "kind": "create",
+      "element_id": "clm2",
+      "participant": "Soto, Marguerite",
+      "payload": {
+        "title": "Feb 9 start date clashes with the audit",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 11,
+      "ts": "2026-10-06T08:20:00",
+      "span_id": "b6.s1",
+      "kind": "create",
+      "element_id": "clm3",
+      "participant": "Pike, Andre",
+      "payload": {
+        "title": "Austin Feb 9-11 clashes with the audit work, affecting Andre's team too",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 12,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s1",
+      "kind": "create",
+      "element_id": "clm4",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Denver has support from Marguerite and Andre (current tally)",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 13,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s3",
+      "kind": "create",
+      "element_id": "clm5",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Anil has not yet stated a preference between Austin and Denver",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 14,
+      "ts": "2026-10-06T10:45:00",
+      "span_id": "b7.s4",
+      "kind": "create",
+      "element_id": "blk1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "title": "Can Wei-Ling still do Feb 23 (Denver dates)?",
+        "kind": "blocker"
+      },
+      "because": []
+    },
+    {
+      "seq": 15,
+      "ts": "2026-10-07T09:40:00",
+      "span_id": "b9.s2",
+      "kind": "create",
+      "element_id": "clm6",
+      "participant": "Okoye, Dana",
+      "payload": {
+        "title": "Venue deposit for the Denver hold is $3,200",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 16,
+      "ts": "2026-10-07T09:40:00",
+      "span_id": "b9.s3",
+      "kind": "create",
+      "element_id": "blk2",
+      "participant": "Okoye, Dana",
+      "payload": {
+        "title": "Whether the $3,200 venue deposit for the Denver hold is acceptable to the group",
+        "kind": "blocker"
+      },
+      "because": []
+    },
+    {
+      "seq": 17,
+      "ts": "2026-10-05T08:40:00",
+      "span_id": "b2.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Pike, Andre",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 18,
+      "ts": "2026-10-05T09:15:00",
+      "span_id": "b3.s1",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Soto, Marguerite",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 19,
+      "ts": "2026-10-05T09:15:00",
+      "span_id": "b3.s2",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Soto, Marguerite",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 20,
+      "ts": "2026-10-05T09:15:00",
+      "span_id": "b3.s3",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Soto, Marguerite",
+      "payload": {
+        "stance": "oppose",
+        "prev": "oppose"
+      },
+      "because": []
+    },
+    {
+      "seq": 21,
+      "ts": "2026-10-05T11:02:00",
+      "span_id": "b4.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Grant, Wei-Ling",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 22,
+      "ts": "2026-10-05T15:30:00",
+      "span_id": "b5.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Bose, Anil",
+      "payload": {
+        "stance": "undecided",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span never names 'Austin on Feb 9-11'"
+      },
+      "because": []
+    },
+    {
+      "seq": 23,
+      "ts": "2026-10-06T08:20:00",
+      "span_id": "b6.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Pike, Andre",
+      "payload": {
+        "stance": "oppose",
+        "prev": "support",
+        "inferred": true,
+        "inferred_reason": "span never names 'Austin on Feb 9-11'"
+      },
+      "because": []
+    },
+    {
+      "seq": 24,
+      "ts": "2026-10-06T08:20:00",
+      "span_id": "b6.s2",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Pike, Andre",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 25,
+      "ts": "2026-10-06T08:20:00",
+      "span_id": "b6.s2",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Pike, Andre",
+      "payload": {
+        "stance": "withdrawn",
+        "prev": "support",
+        "inferred": true,
+        "inferred_reason": "span names 'Denver on Feb 23-25', not 'Austin on Feb 9-11'"
+      },
+      "because": []
+    },
+    {
+      "seq": 26,
+      "ts": "2026-10-07T09:00:00",
+      "span_id": "b8.s1",
+      "kind": "decide",
+      "element_id": "q1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "chosen": [
+          "opt2"
+        ],
+        "ruled_out": [
+          "opt1"
+        ],
+        "conditional": false,
+        "conditions": "",
+        "from": "open",
+        "to": "decided"
+      },
+      "because": []
+    },
+    {
+      "seq": 27,
+      "ts": "2026-10-07T09:00:00",
+      "span_id": "b8.s1",
+      "kind": "status",
+      "element_id": "opt2",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "from": "active",
+        "to": "chosen"
+      },
+      "because": [
+        "q1"
+      ]
+    },
+    {
+      "seq": 28,
+      "ts": "2026-10-07T09:00:00",
+      "span_id": "b8.s1",
+      "kind": "status",
+      "element_id": "opt1",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "from": "active",
+        "to": "dropped"
+      },
+      "because": [
+        "q1"
+      ]
+    },
+    {
+      "seq": 29,
+      "ts": "2026-10-07T09:00:00",
+      "span_id": "b8.s1",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Hale, Rosa",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    }
+  ],
+  "warnings": [
+    "extract: 1 candidates cited a span outside their batch and were ignored",
+    "inferred stance (span never names 'Austin on Feb 9-11'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"undecided\", \"span\": \"b5.s1\", \"because\": [\"Anil says either option is fine, no preference stated\"]}",
+    "inferred stance (span never names 'Austin on Feb 9-11'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"span\": \"b6.s1\", \"because\": [\"Andre says the audit clash with Feb 9 Austin dates also hits his team\"]}",
+    "inferred stance (span names 'Denver on Feb 23-25', not 'Austin on Feb 9-11'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"withdrawn\", \"span\": \"b6.s2\", \"because\": [\"Andre withdraws his support for Austin\"]}"
+  ],
+  "followups": 0,
+  "_enterprise": {
+    "source_type": "email",
+    "subject": "Q1 team offsite: Austin or Denver?",
+    "speakers": [
+      "Hale, Rosa",
+      "Pike, Andre",
+      "Soto, Marguerite",
+      "Grant, Wei-Ling",
+      "Bose, Anil",
+      "Okoye, Dana"
+    ],
+    "observers": [
+      "Frey, Nate"
+    ],
+    "msg_meta": [
+      {
+        "id": "m1",
+        "author": "Hale, Rosa",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m2",
+        "author": "Pike, Andre",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m3",
+        "author": "Soto, Marguerite",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m4",
+        "author": "Grant, Wei-Ling",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m5",
+        "author": "Bose, Anil",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m6",
+        "author": "Pike, Andre",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m7",
+        "author": "Hale, Rosa",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa",
+          "Pike, Andre",
+          "Soto, Marguerite",
+          "Grant, Wei-Ling",
+          "Bose, Anil",
+          "Frey, Nate"
+        ],
+        "subject": "RE: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m8",
+        "author": "Hale, Rosa",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Okoye, Dana",
+          "Hale, Rosa"
+        ],
+        "subject": "FW: Q1 team offsite: Austin or Denver?"
+      },
+      {
+        "id": "m9",
+        "author": "Okoye, Dana",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [
+          "Hale, Rosa",
+          "Okoye, Dana"
+        ],
+        "subject": "RE: FW: Q1 team offsite: Austin or Denver?"
+      }
+    ],
+    "spans": [
+      {
+        "id": "b1.s1",
+        "burst_id": "b1",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-05T08:00:00",
+        "text": "For the Q1 offsite we have two options: Austin on Feb 9-11 or Denver on Feb 23-25",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s2",
+        "burst_id": "b1",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-05T08:00:00",
+        "text": "The venue holds expire Oct 16",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s3",
+        "burst_id": "b1",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-05T08:00:00",
+        "text": "I need a pick from everyone by then",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'then' = Oct 16 venue hold expiry",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s4",
+        "burst_id": "b1",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-05T08:00:00",
+        "text": "Please reply all",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s1",
+        "burst_id": "b2",
+        "author": "Pike, Andre",
+        "ts": "2026-10-05T08:40:00",
+        "text": "Austin for me",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'Austin' = Austin on Feb 9-11 offsite option",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s1",
+        "burst_id": "b3",
+        "author": "Soto, Marguerite",
+        "ts": "2026-10-05T09:15:00",
+        "text": "Denver",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s2",
+        "burst_id": "b3",
+        "author": "Soto, Marguerite",
+        "ts": "2026-10-05T09:15:00",
+        "text": "Feb 9 clashes with the audit",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s3",
+        "burst_id": "b3",
+        "author": "Soto, Marguerite",
+        "ts": "2026-10-05T09:15:00",
+        "text": "Austin is a problem for me",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'Austin' = Austin on Feb 9-11",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s1",
+        "burst_id": "b4",
+        "author": "Grant, Wei-Ling",
+        "ts": "2026-10-05T11:02:00",
+        "text": "Austin works for me.",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s1",
+        "burst_id": "b5",
+        "author": "Bose, Anil",
+        "ts": "2026-10-05T15:30:00",
+        "text": "Either is fine with me.\n\nAnil",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b6.s1",
+        "burst_id": "b6",
+        "author": "Pike, Andre",
+        "ts": "2026-10-06T08:20:00",
+        "text": "Marguerite's audit point hits my team too",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s2",
+        "burst_id": "b6",
+        "author": "Pike, Andre",
+        "ts": "2026-10-06T08:20:00",
+        "text": "Switching to Denver",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s1",
+        "burst_id": "b7",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-06T10:45:00",
+        "text": "Tally so far: Denver has Marguerite and Andre",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s2",
+        "burst_id": "b7",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-06T10:45:00",
+        "text": "Austin has Wei-Ling",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s3",
+        "burst_id": "b7",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-06T10:45:00",
+        "text": "Anil is open",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s4",
+        "burst_id": "b7",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-06T10:45:00",
+        "text": "Wei-Ling, can you still do Feb 23?",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s1",
+        "burst_id": "b8",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-07T09:00:00",
+        "text": "we are going with Denver, Feb 23-25",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s2",
+        "burst_id": "b8",
+        "author": "Hale, Rosa",
+        "ts": "2026-10-07T09:00:00",
+        "text": "Please book the hold before it expires on Oct 16",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s1",
+        "burst_id": "b9",
+        "author": "Okoye, Dana",
+        "ts": "2026-10-07T09:40:00",
+        "text": "Will do",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s2",
+        "burst_id": "b9",
+        "author": "Okoye, Dana",
+        "ts": "2026-10-07T09:40:00",
+        "text": "The deposit is $3,200",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s3",
+        "burst_id": "b9",
+        "author": "Okoye, Dana",
+        "ts": "2026-10-07T09:40:00",
+        "text": "Is that okay?",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'that' = the $3,200 deposit",
+        "verified": true,
+        "recovered": false
+      }
+    ],
+    "classified": [
+      {
+        "span_id": "b1.s1",
+        "author": "Hale, Rosa",
+        "text": "For the Q1 offsite we have two options: Austin on Feb 9-11 or Denver on Feb 23-25",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.85,
+            "gist": "Austin on Feb 9-11 for Q1 offsite (new)"
+          },
+          {
+            "type": "candidate_question",
+            "confidence": 0.8,
+            "gist": "Which location/date to pick for the Q1 offsite"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s2",
+        "author": "Hale, Rosa",
+        "text": "The venue holds expire Oct 16",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "venue holds for the Q1 offsite expire Oct 16"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.5,
+            "gist": "venue hold expiry Oct 16 gates when the group must pick Austin or Denver"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s3",
+        "author": "Hale, Rosa",
+        "text": "I need a pick from everyone by then",
+        "status": "active",
+        "context_note": "'then' = Oct 16 venue hold expiry",
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "organiser asks everyone to reply with a pick by the Oct 16 venue hold expiry"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s4",
+        "author": "Hale, Rosa",
+        "text": "Please reply all",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.85,
+            "gist": "Organizer asks everyone to reply with their pick for the offsite venue/date"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s1",
+        "author": "Pike, Andre",
+        "text": "Austin for me",
+        "status": "active",
+        "context_note": "'Austin' = Austin on Feb 9-11 offsite option",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.95,
+            "gist": "Andre supports the Austin Feb 9-11 offsite option"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s1",
+        "author": "Soto, Marguerite",
+        "text": "Denver",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Marguerite supports Denver (Feb 23-25) for the Q1 offsite"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s2",
+        "author": "Soto, Marguerite",
+        "text": "Feb 9 clashes with the audit",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Opposes Austin Feb 9-11 because of audit clash"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Feb 9 start date clashes with the audit (causal reason against Austin Feb 9-11)"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s3",
+        "author": "Soto, Marguerite",
+        "text": "Austin is a problem for me",
+        "status": "active",
+        "context_note": "'Austin' = Austin on Feb 9-11",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Marguerite opposes the Austin Feb 9-11 option"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Austin Feb 9-11 clashes with the audit"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s1",
+        "author": "Grant, Wei-Ling",
+        "text": "Austin works for me.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Wei-Ling supports Austin (Feb 9-11) for the Q1 offsite"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s1",
+        "author": "Bose, Anil",
+        "text": "Either is fine with me.\n\nAnil",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Anil is fine with either existing option (Austin Feb 9-11 or Denver Feb 23-25), no preference stated"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s1",
+        "author": "Pike, Andre",
+        "text": "Marguerite's audit point hits my team too",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Feb 9 Austin dates conflict with audit work affecting Andre's team too"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Opposes Austin Feb 9-11 because of audit clash"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s2",
+        "author": "Pike, Andre",
+        "text": "Switching to Denver",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Andre switches his stance to support Denver (Feb 23-25) over Austin"
+          },
+          {
+            "type": "option",
+            "confidence": 0.5,
+            "gist": "Austin (Feb 9-11) status change: Andre withdraws his support, Austin loses his vote"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s1",
+        "author": "Hale, Rosa",
+        "text": "Tally so far: Denver has Marguerite and Andre",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Tally: Denver has support from Marguerite and Andre (factual count of current positions, not a decision)"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s2",
+        "author": "Hale, Rosa",
+        "text": "Austin has Wei-Ling",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Wei-Ling is currently the only supporter of Austin in the tally"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s3",
+        "author": "Hale, Rosa",
+        "text": "Anil is open",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Anil has not yet stated a preference between Austin and Denver"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s4",
+        "author": "Hale, Rosa",
+        "text": "Wei-Ling, can you still do Feb 23?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.7,
+            "gist": "Rosa asks a specific person (Wei-Ling) to weigh in on Feb 23 (Denver) availability"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s1",
+        "author": "Hale, Rosa",
+        "text": "we are going with Denver, Feb 23-25",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "decision",
+            "confidence": 0.9,
+            "gist": "Group chooses Denver, Feb 23-25 for the Q1 offsite"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s2",
+        "author": "Hale, Rosa",
+        "text": "Please book the hold before it expires on Oct 16",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Rosa asks the group (Dana, who replies 'Will do') to book the Denver venue hold before it expires Oct 16"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s1",
+        "author": "Okoye, Dana",
+        "text": "Will do",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Dana commits to booking the Denver venue hold before the Oct 16 expiry"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s2",
+        "author": "Okoye, Dana",
+        "text": "The deposit is $3,200",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Venue deposit for the Denver hold is $3,200"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s3",
+        "author": "Okoye, Dana",
+        "text": "Is that okay?",
+        "status": "active",
+        "context_note": "'that' = the $3,200 deposit",
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.5,
+            "gist": "Whether the $3,200 venue deposit is acceptable to the group is unresolved"
+          }
+        ]
+      }
+    ]
+  },
+  "summary": "Decision announced by Rosa Hale in a message sent only to Dana Okoye: Denver on Feb 23-25. 2 open blockers, 4 people took an explicit position on an option.\n\n**Decision**\n\nRosa Hale announced \"we are going with Denver, Feb 23-25\" in a message sent only to Dana Okoye. Andre Pike and Marguerite Soto had stated support for Denver before the announcement. Dana Okoye, the only other recipient, replied asking whether the $3,200 deposit is acceptable \u2014 no confirmation of that figure is recorded. Andre Pike, Anil Bose, Marguerite Soto, and Wei-Ling Grant were not sent this announcement and have no reply recorded.\n\n**Open questions**\n\n- Whether the $3,200 venue deposit for Denver is approved (raised by Dana Okoye; seen only by Dana Okoye and Rosa Hale).\n- Whether Wei-Ling Grant can attend on Feb 23 (raised by Rosa Hale; no reply recorded from Wei-Ling).\n\n**Where people stand**\n\n- Marguerite Soto: objects to Austin because Feb 9 clashes with the audit; supports Denver.\n- Andre Pike: first said Austin, then \"Switching to Denver\" after agreeing that the audit conflict affects his team too.\n- Wei-Ling Grant: wants Austin \u2014 \"Austin works for me.\"\n- Anil Bose: \"Either is fine with me. Anil\"\n\n**What is blocking progress**\n\n- Whether Wei-Ling Grant can do Feb 23 remains unanswered (raised by Rosa Hale).\n- Whether the $3,200 deposit is acceptable has not been confirmed (raised by Dana Okoye; seen only by Dana Okoye and Rosa Hale).\n\n**Next steps**\n\n- Rosa Hale asked Dana Okoye to \"book the hold before it expires on Oct 16\" (seen only by Dana Okoye and Rosa Hale); Dana Okoye then raised the deposit question with no answer recorded.\n\n**Awaiting a reply**\n\n- Rosa Hale asked Wei-Ling Grant \"Wei-Ling, can you still do Feb 23?\"; no reply recorded.\n\n**Things people asserted that others may want to check**\n\n- Marguerite Soto said Feb 9 clashes with the audit.\n- Rosa Hale said venue holds expire Oct 16.\n- Dana Okoye said the venue deposit for the Denver hold is $3,200 (seen only by Dana Okoye and Rosa Hale)."
+}

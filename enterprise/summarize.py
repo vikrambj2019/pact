@@ -54,8 +54,10 @@ WRITE, in this order, using exactly these headings. Skip a heading whose section
    Never write "the group chose/selected/agreed". Silence is not agreement. If the DECISION block says the announcement went
    only to some people, say so in the same sentence and do not describe anyone else as told or as having replied.
 3. Presented, no challenge recorded -- up to four bullets. Shared ground, never "agreed" or "aligned". Leave this section out
-   when the source is an exchange of feedback or a back-and-forth; use it only for explanations nobody answered.
-4. Open questions -- up to five bullets, merge near-duplicates. Say who raised each.
+   when the source is an exchange of feedback or a back-and-forth, and whenever a DECISION block exists; use it only for
+   explanations nobody answered.
+4. Open questions -- up to five bullets, merge near-duplicates. Say who raised each. If a DECISION block exists, do not list
+   the question it answers as open.
 5. Where people stand -- one bullet per person who expressed a view, from POSITIONS DRAFT: "<Name>: <what they want, propose
    or object to, in their own terms>". OPTIONS stances only confirm a line; never add a stance that POSITIONS DRAFT lacks, and never
    put a dollar figure or a condition on a person's view unless their own words did. Someone who moved: "<Name> first said <X>,
@@ -64,11 +66,14 @@ WRITE, in this order, using exactly these headings. Skip a heading whose section
 6. What is blocking progress -- up to five bullets, merged, each with who raised it. "Deferred to <follow-up>" gets its own bullet.
 7. Next steps -- up to six bullets: "<Name> will <do X> by <date>" only when the words are a commitment; "<Name> asked <Name> to <X>"
    when they are a request; a short acceptance ("Will do") belongs to the ask before it. Keep dates and times exactly as written.
-8. Awaiting a reply -- one bullet per item: "<Name> asked <Name> ...; no reply recorded." For open calls say what the replies show
-   and no more.
-9. Ground rules people set -- up to five lines, with the speaker. Skip anything that is only a date for a follow-up.
+8. Awaiting a reply -- only items that are NOT already a line under Next steps: "<Name> asked <Name> ...; no reply recorded."
+   For open calls say what the replies show and no more. If every item is already in Next steps, leave this section out.
+9. Ground rules people set -- up to five lines, with the speaker: limits, thresholds ("more than ten percent, come back to me"),
+   time limits ("until March, not forever") and confidentiality requests. Skip anything that is only a date for a follow-up.
+   If a decision carries a condition or limit, say it in the decision sentence too.
 10. Things people asserted that others may want to check -- at most four, "<Name> said ...".
 11. Flags -- what the speaker said and what the record shows, one sentence each.
+Never write "(recipient unspecified)" or any note about a missing addressee. If the words do not name who was asked, write the line as "<Name> asked for ..." with no addressee. In an email chain, do not add a "Presented" section.
 12. Marked private -- only if PRIVATE is present. One short bullet per item, each starting "Marked private by <Name>:".
     Nothing private appears in any other section.
 
@@ -85,8 +90,11 @@ RULES
 - Keep the speakers' vocabulary for products and teams. A name that looks garbled in the input is copied as given.
 - Do not mention the data structure, ids, spans, models or confidence.
 - Scope notes: an item tagged with a narrower audience is written with "(seen only by <Names>)".
-- Plain sentences. No bold except the headings. Hard limit 450 words. If the input has more items than a section allows,
-  keep the ones with the most named people attached and end the section with "and N more".
+- Plain sentences. No bold except the headings. Say each fact once: if the main point already says it, a later section repeats
+  it only to add a name, a condition, a number, a date or the speaker's own words. Cut repeated words and filler, never a
+  distinct point: every stance, condition, figure, date, caveat and objection survives, even if it looks minor, because the
+  reader decides what matters. Drop only pleasantries and talk about nothing in the discussion. If the input has more items
+  than a section allows, keep the ones with the most named people attached and end the section with "and N more".
 - If STATUS says no decision was reached, never imply one."""
 
 _JUNK = re.compile(r"(sent from my|get outlook|confidential|disclaimer|mailto:|unsubscribe|^from:|^sent:|^to:|^cc:|"
@@ -266,6 +274,19 @@ def _decision(d, cx, els, rec):
 # ----------------------------------------------------------------------------- status
 
 
+def _announced(dec, limit=230):
+    """The announcement in its own words, minus leading filler ("Back to the vendor. Here is where I land."). '' if unusable."""
+    t = re.sub(r"\s+", " ", (dec.get("text") or "")).strip()
+    parts = re.split(r"(?<=[.!?])\s+", t)
+    while len(parts) > 1 and len(parts[0].split()) <= 6:
+        parts.pop(0)
+    while len(parts) > 1 and parts[-1].endswith("?"):
+        parts.pop()                        # "Any objection?" is a question to the room, not part of the decision
+    t = " ".join(parts).strip().rstrip(".")
+    t = t.replace('"', "'")
+    return t if 3 <= len(t.split()) and len(t) <= limit else ""
+
+
 def status_line(d, cx=None, rec=None, dec=None) -> str:
     cx = cx or Ctx(d)
     els = _live(d)
@@ -279,7 +300,7 @@ def status_line(d, cx=None, rec=None, dec=None) -> str:
             (_n(people, "person", "people") + " took an explicit position on an option") if people else "no one took an explicit position on an option"]
     if dec:
         to = f" in a message sent only to {', '.join(dec['sent_to'])}" if dec["narrow"] else ""
-        head = f"Decision announced by {disp(dec['who'])}{to}: {'; '.join(dec['titles'])}."
+        head = f"Decision announced by {disp(dec['who'])}{to}: {_announced(dec) or '; '.join(dec['titles'])}."
     else:
         head = "No decision was reached."
     tail = [t for t in tail if not t.startswith("0 ")]
@@ -674,17 +695,56 @@ Output the SUMMARY again, unchanged except:
 Keep the headings, the first line and everything supported exactly as written. Output only the summary, nothing else."""
 
 
+TIGHTEN_SYSTEM = """You tighten a summary of a group discussion. Do not shorten it by dropping points.
+Output the SUMMARY again with the same headings, in the same order, changed only by:
+- a fact that is stated more than once is stated once, in the section where it is most useful; the other places keep only what
+  they add (a name, a condition, a number, a date, a quote);
+- wording is cut: repeated words, filler, "it was noted that", restating who the person is;
+- two bullets that say the same thing become one bullet that keeps both names;
+- a heading whose items are now all elsewhere is deleted.
+Never delete or change a number, a date, a quoted phrase, a name, a condition ("only if", "until", "unless"), an objection or a
+caveat, even a minor one. Never add anything. Output only the summary."""
+
+
+_NUM = re.compile(r"\$?\d[\d,.]*\s?(?:[kKmM]\b|%|bp\b)?")
+_QUO = re.compile(r'"([^"]{3,})"|\u201c([^\u201d]{3,})\u201d')
+_CAP = re.compile(r"\b[A-Z][a-z]{2,}\b")
+
+
+def _facts(text):
+    body = "\n".join(l for l in text.split("\n") if not l.lstrip().startswith("#"))
+    nums = {m.group(0).strip().rstrip(".,") for m in _NUM.finditer(body)}
+    quotes = {(a or b).strip().lower() for a, b in _QUO.findall(body)}
+    caps = set(_CAP.findall(body))
+    return nums, quotes, caps
+
+
+def _tighten(call_llm, text):
+    """Keep the tightened text only if it is shorter and lost no number, quoted phrase or capitalised name."""
+    try:
+        new = call_llm(TIGHTEN_SYSTEM, "SUMMARY\n" + text).strip()
+    except Exception:
+        return text
+    if not new or len(new) >= len(text):
+        return text
+    a, b = _facts(text), _facts(new)
+    if any(x - y for x, y in zip(a, b)):
+        return text
+    return new
+
+
 def _norm_first(line):
     return re.sub(r"^[\s*#>]*status\s*:\s*", "", line.strip(), flags=re.I).strip("* ")
 
 
 def make_summary(d, call_llm, include_private: bool = True, audit: bool = True) -> str:
-    """call_llm(system, user) -> str. Calls: (1) full-read main point, (2) full-read positions, (3) structured summary, (4) audit against the
+    """call_llm(system, user) -> str. Calls: (1) full-read main point, (2) full-read positions, (3) structured summary, (3b) tighten (kept only if no fact is lost), (4) audit against the
     conversation (set audit=False to skip). The first line is forced to match the computed status, once."""
     conv = "\n".join(_conversation(Ctx(d), include_private, budget=10**6))
     draft = call_llm(MAIN_POINT_SYSTEM, conv).strip()
     positions = call_llm(POSITIONS_SYSTEM, conv).strip()
     text = call_llm(SUMMARY_SYSTEM, build_input(d, include_private, main_point=draft, positions=positions)).strip()
+    text = _tighten(call_llm, text)
     if audit:
         text = call_llm(AUDIT_SYSTEM, "CONVERSATION\n" + conv + "\n\nSUMMARY\n" + text).strip()
     want = status_line(d)

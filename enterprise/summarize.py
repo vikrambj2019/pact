@@ -37,16 +37,17 @@ INPUT (computed from the transcript; the only source of truth)
   OPTIONS PROPOSED ONLY have a proposer and no recorded reaction.
 - OTHER WORDS ABOUT THE OPTIONS: what people with no explicit stance on file said. Report their words; never turn them into
   "supports" or "opposes".
+- POSITIONS DRAFT: each person's view in one or two lines, written from a full read of the exchange.
 - BLOCKERS, CONSTRAINTS, CRITERIA, PRESENTED, CLAIMS, FLAGS.
 - NEXT STEPS: commitments and requests, in the speakers' own words, in order.
 - AWAITING A REPLY: questions put to a named person who has not spoken since, and open calls for a volunteer with the replies that followed.
 - PRIVATE: items the sender asked to keep private. Only present if the reader may see them.
 
 WRITE, in this order, using exactly these headings. Skip a heading whose section is absent from the input. Never write "None".
-1. Status -- the STATUS line, verbatim.
+1. Status -- the STATUS line, verbatim, as the first line of your answer, with no label such as "Status:" in front of it.
 2. The main point -- three to five plain sentences, written the way you would explain it to a colleague who missed it:
    who wants what and why; what was asked of whom, and whether the person asked actually gave it (a reply that proposes something
-   else is not a yes); where two people disagree, what each says; what is still unresolved and what it is holding up. Use only what
+   else is not a yes); where two people disagree, what each says; what is still unresolved. Use only what
    CONVERSATION shows, name every person, and say "asked ... and has not confirmed" rather than guessing at agreement.
    Put the figure, date or deadline at stake in this section if CONVERSATION states one. If a DECISION block exists, replace this with "Decision" and write what was decided,
    "announced by <Name>", then who replied with agreement or an objection (their words, briefly), and "No reply recorded from <Names>".
@@ -55,9 +56,10 @@ WRITE, in this order, using exactly these headings. Skip a heading whose section
 3. Presented, no challenge recorded -- up to four bullets. Shared ground, never "agreed" or "aligned". Leave this section out
    when the source is an exchange of feedback or a back-and-forth; use it only for explanations nobody answered.
 4. Open questions -- up to five bullets, merge near-duplicates. Say who raised each.
-5. Where people stand -- one bullet per option that has a stance: "<Option>: <Name> supports; <Name> supports if <condition>; ...".
-   Someone who moved: "<Name> first supported <X>, then <Y>". Options with no stance: one line "Proposed, no reaction recorded: ..."
-   (at most six, then "and N more"). Say "no explicit position recorded", never "no position" or "no view".
+5. Where people stand -- one bullet per person who expressed a view, from POSITIONS DRAFT: "<Name>: <what they want, propose
+   or object to, in their own terms>". OPTIONS stances only confirm a line; never add a stance that POSITIONS DRAFT lacks, and never
+   put a dollar figure or a condition on a person's view unless their own words did. Someone who moved: "<Name> first said <X>,
+   then <Y>". Options with no stance anywhere: one line "Proposed, no reaction recorded: ..." (at most six, then "and N more"). Say "no explicit position recorded", never "no position" or "no view".
    People under OTHER WORDS: one line quoting what they said, e.g. "Erik Lindqvist said 'I'm fine with the second then'."
 6. What is blocking progress -- up to five bullets, merged, each with who raised it. "Deferred to <follow-up>" gets its own bullet.
 7. Next steps -- up to six bullets: "<Name> will <do X> by <date>" only when the words are a commitment; "<Name> asked <Name> to <X>"
@@ -75,6 +77,9 @@ RULES
 - Stance words come only from the given stances. Do not upgrade a conditional to a support, or a question to a position.
   The speaker's own words are given with each stance: if they speak about capacity, availability or logistics rather than about
   the option itself, say that in plain words ("Tom said he has no capacity to help build") instead of "opposes".
+- Every line under Next steps and Where people stand must be traceable to words in CONVERSATION or NEXT STEPS. Never name
+  someone as owner, lead, convener or supporter unless their words (or the words directed at them and accepted) say so.
+  A condition on a stance ("only if ...") must be one the speaker said, not one a different speaker raised.
 - Do not recommend, rank, or predict. Do not use: consensus, alignment, aligned, clearly, obviously, key takeaway,
   going forward, leverage, synergy, robust.
 - Keep the speakers' vocabulary for products and teams. A name that looks garbled in the input is copied as given.
@@ -102,8 +107,9 @@ def disp(n):
         return "an unidentified sender"
     if "," in n:
         last, first = (x.strip() for x in n.split(",", 1))
+        nick = re.search(r"\((.*?)\)", first)
         first = re.sub(r"\s*\(.*?\)", "", first).strip()
-        return f"{first} {last}".strip()
+        return f"{first} {last}".strip() + (f" ({nick.group(1)})" if nick else "")   # keep the nickname: others write "Walle"
     return n.strip()
 
 
@@ -418,6 +424,7 @@ _PRIORITY = {"objection": 4, "decision": 4, "blocker": 3, "candidate_question": 
 def _conversation(cx, include_private=True, budget=1100):
     """The exchange in order, grouped by message, thinned to the lines that carry weight when it is too long."""
     keep = []
+    first_msg = cx.span_msg.get(min(cx.spans, key=lambda x: int(re.sub(r"\D", "", str(cx.span_msg.get(x["id"]) or "0")) or 0))["id"]) if cx.spans else None
     for s in cx.spans:
         t = s["text"].strip()
         sc = cx.span_scope(s["id"])
@@ -425,6 +432,8 @@ def _conversation(cx, include_private=True, budget=1100):
             continue
         labs = [l["type"] for l in (cx.cls.get(s["id"], {}).get("labels") or [])]
         pr = max([_PRIORITY.get(l, 1) for l in labs] or [1])
+        if cx.span_msg.get(s["id"]) == first_msg:
+            pr = max(pr, 2)                   # whoever opens the exchange (e.g. sends the memo) is always shown
         if pr < 0:
             continue
         keep.append((s, pr, len(_clip(t, 220).split())))
@@ -435,6 +444,8 @@ def _conversation(cx, include_private=True, budget=1100):
         keep = [k for k in keep if k[1] >= floor]
         total = sum(w for _, _, w in keep)
     out, last, line = [], None, None
+    mnum = lambda sid: int(re.sub(r"\D", "", str(cx.span_msg.get(sid) or "0")) or 0)
+    keep.sort(key=lambda k: (mnum(k[0]["id"]), cx.order.get(k[0]["id"], 0)))      # message order, not engine order
     for s, pr, _ in keep:
         m = cx.span_msg.get(s["id"])
         if m != last:
@@ -464,7 +475,7 @@ def _dedupe(items, key=lambda x: x, thr=0.7):
 # ----------------------------------------------------------------------------- input
 
 
-def build_input(d, include_private: bool = True, budget: int = 6000, main_point: str = "") -> str:
+def build_input(d, include_private: bool = True, budget: int = 6000, main_point: str = "", positions: str = "") -> str:
     cx = Ctx(d)
     els_all = _live(d)
     sc = {e["id"]: cx.scope(e) for e in els_all}
@@ -566,6 +577,8 @@ def build_input(d, include_private: bool = True, budget: int = 6000, main_point:
             L.append(f"- {'[met] ' if e['status'] == 'satisfied' else ''}{e['title']} ({disp(e['author'])}, {e['kind']}){tag(e)}")
 
     shown, used = _presented(d, [e for e in els if e["id"] in public_ids])
+    if (d.get("_enterprise") or {}).get("source_type") == "email":
+        shown = []                            # an email chain is replies and feedback, not a talk nobody answered
     if shown:
         L += ["", "PRESENTED (explained to the group; nothing recorded disputes it; not voted on)"]
         for e in shown:
@@ -620,6 +633,8 @@ def build_input(d, include_private: bool = True, budget: int = 6000, main_point:
             L.append(f"- {disp(e['author'])} ({e['kind']}; {sc[e['id']][1]}): {e['title']}")
         for x in (priv_acts if include_private else []):
             L.append(f'- {disp(x["author"])} (step; {x["scope"][1]}): "{x["text"]}"')
+    if positions:
+        L += ["", "POSITIONS DRAFT (each person's view, written from a full read of CONVERSATION; section 5 is written from this)", positions.strip()]
     if main_point:
         L += ["", "MAIN POINT DRAFT (written from a full read of CONVERSATION; keep its substance in section 2, "
                   "change it only where CONVERSATION contradicts it)", main_point.strip()]
@@ -627,23 +642,57 @@ def build_input(d, include_private: bool = True, budget: int = 6000, main_point:
 
 
 MAIN_POINT_SYSTEM = """You are given a group discussion (an email chain, a meeting transcript or a chat) as the speakers' own words.
-Write the main point of it in four to six plain sentences, for a colleague who missed it.
+Write the main point of it in six to eight plain sentences, for a colleague who missed it.
 Cover: who wants what and why; what was asked of whom and whether the person asked actually gave it (a reply that proposes
-something else is not a yes); where two people disagree and what each says; what is still unresolved and what it is holding up;
-any figure, date or deadline at stake.
-Use only what the words show. Name every person. Do not recommend or predict. Do not say anyone agreed unless they said so.
+something else is not a yes); EVERY distinct point on which two people disagree, each with what each person says (for example
+what the thing is, whether a problem exists, who supplies the people, what is enough); what is still unresolved; any figure,
+date or deadline at stake.
+Use only what the words show. Name every person. A name in brackets after a person is the name others use for them: one person.
+Do not recommend or predict. Do not say anyone agreed, disagreed or refused unless their words say so; describe what they
+proposed or asked instead ("did not confirm, and recommended ..."). Do not say what is holding something up unless a speaker
+says so; say what the thread shows instead ("the thread ends without ..."). Quote the figure exactly as written.
 Do not use: consensus, alignment, aligned, clearly, obviously, leverage, synergy, robust. No headings, no bullets."""
 
 
-def make_summary(d, call_llm, include_private: bool = True) -> str:
-    """call_llm(system, user) -> str. Two model calls: a full-read main point, then the structured summary. The first line is
-    forced to match the computed status."""
-    # pass 1: read the whole exchange (no thinning) and write only the main point
-    draft = call_llm(MAIN_POINT_SYSTEM, "\n".join(_conversation(Ctx(d), include_private, budget=10**6))).strip()
-    # pass 2: the full summary, with that draft and the structured blocks
-    text = call_llm(SUMMARY_SYSTEM, build_input(d, include_private, main_point=draft)).strip()
+POSITIONS_SYSTEM = """You are given a group discussion as the speakers' own words.
+For each person who expressed a view on how the matter should be handled, write one or two lines:
+"<Name>: <what they want, propose, ask for or object to>; <what they said about another person's proposal, if anything>".
+Use only what their words show, in their own terms. Do not turn a question into a position. Do not attach a figure or a condition
+to a person unless their words did. If a person partly agreed with someone ("I agree with your point of ..."), say so. Include the
+person's proposals even when nobody reacted to them. A name in brackets after a person is the name others use for them: one person.
+Skip people who only passed information along or scheduled things. No headings, no commentary, one line per person."""
+
+
+AUDIT_SYSTEM = """You check a summary of a group discussion against the discussion itself.
+You get CONVERSATION (the speakers' own words) and a SUMMARY. For every statement in the SUMMARY about what a named person said,
+wants, supports, opposes, will do, asked or owns, check that the words in CONVERSATION support it, including who said it
+and any condition attached to it.
+Output the SUMMARY again, unchanged except:
+- a statement the words do not support is deleted, or rewritten to say only what the words show;
+- a statement credited to the wrong person is corrected to the right person, or deleted if unclear;
+- a next step or role nobody stated is deleted.
+Keep the headings, the first line and everything supported exactly as written. Output only the summary, nothing else."""
+
+
+def _norm_first(line):
+    return re.sub(r"^[\s*#>]*status\s*:\s*", "", line.strip(), flags=re.I).strip("* ")
+
+
+def make_summary(d, call_llm, include_private: bool = True, audit: bool = True) -> str:
+    """call_llm(system, user) -> str. Calls: (1) full-read main point, (2) full-read positions, (3) structured summary, (4) audit against the
+    conversation (set audit=False to skip). The first line is forced to match the computed status, once."""
+    conv = "\n".join(_conversation(Ctx(d), include_private, budget=10**6))
+    draft = call_llm(MAIN_POINT_SYSTEM, conv).strip()
+    positions = call_llm(POSITIONS_SYSTEM, conv).strip()
+    text = call_llm(SUMMARY_SYSTEM, build_input(d, include_private, main_point=draft, positions=positions)).strip()
+    if audit:
+        text = call_llm(AUDIT_SYSTEM, "CONVERSATION\n" + conv + "\n\nSUMMARY\n" + text).strip()
     want = status_line(d)
-    return text if text.startswith(want) else want + "\n\n" + text
+    lines = text.split("\n")
+    if lines and _norm_first(lines[0]) == want:
+        lines[0] = want                    # the model labelled or decorated it; keep one clean copy
+        return "\n".join(lines)
+    return want + "\n\n" + text
 
 
 if __name__ == "__main__":

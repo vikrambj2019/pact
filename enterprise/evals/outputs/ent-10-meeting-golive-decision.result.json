@@ -1,0 +1,2605 @@
+{
+  "source": "evals/sources/ent-10-meeting-golive-decision.txt",
+  "model": "claude-sonnet-4-6",
+  "participants": [
+    "Reyes, Camila",
+    "Lindqvist, Erik",
+    "Tran, Mei",
+    "Voss, Jonas",
+    "Abara, Nneka"
+  ],
+  "span_msgs": {
+    "b1.s1": "m1",
+    "b1.s2": "m1",
+    "b1.s3": "m1",
+    "b2.s1": "m2",
+    "b2.s2": "m2",
+    "b3.s1": "m3",
+    "b3.s2": "m3",
+    "b4.s1": "m4",
+    "b5.s1": "m5",
+    "b6.s1": "m6",
+    "b6.s2": "m6",
+    "b7.s1": "m7",
+    "b8.s1": "m8",
+    "b9.s1": "m9",
+    "b9.s2": "m9",
+    "b10.s1": "m10",
+    "b11.s1": "m11",
+    "b11.s2": "m11",
+    "b12.s1": "m12",
+    "b12.s2": "m12",
+    "b12.s3": "m12",
+    "b13.s1": "m13",
+    "b13.s2": "m13",
+    "b14.s1": "m14",
+    "b15.s1": "m15",
+    "b16.s1": "m16",
+    "b17.s1": "m17",
+    "b18.s1": "m18",
+    "b19.s1": "m19",
+    "b19.s2": "m19",
+    "b20.s1": "m20",
+    "b20.s2": "m20",
+    "b21.s1": "m21",
+    "b22.s1": "m22",
+    "b22.s2": "m22",
+    "b23.s1": "m23",
+    "b24.s1": "m24",
+    "b24.s2": "m24",
+    "b25.s1": "m25"
+  },
+  "elements": [
+    {
+      "id": "q1",
+      "kind": "question",
+      "title": "Claims dashboard go-live date",
+      "author": "Reyes, Camila",
+      "created_span": "b1.s2",
+      "status": "decided",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s2",
+        "b24.s1"
+      ]
+    },
+    {
+      "id": "opt1",
+      "kind": "option",
+      "title": "November 2nd go-live",
+      "author": "Reyes, Camila",
+      "created_span": "b1.s3",
+      "status": "chosen",
+      "question_id": "q1",
+      "aliases": [
+        "Nov 2",
+        "Nov 2nd"
+      ],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s3",
+        "b3.s1",
+        "b9.s2",
+        "b10.s1",
+        "b11.s2",
+        "b12.s1",
+        "b11.s1",
+        "b12.s3",
+        "b14.s1",
+        "b17.s1",
+        "b23.s1",
+        "b24.s1",
+        "b21.s1"
+      ]
+    },
+    {
+      "id": "opt2",
+      "kind": "option",
+      "title": "November 16th go-live",
+      "author": "Reyes, Camila",
+      "created_span": "b1.s3",
+      "status": "dropped",
+      "question_id": "q1",
+      "aliases": [
+        "Nov 16",
+        "Nov 16th"
+      ],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b1.s3",
+        "b12.s1",
+        "b24.s1"
+      ]
+    },
+    {
+      "id": "clm1",
+      "kind": "claim",
+      "title": "Nov 2 ships with manual refresh",
+      "author": "Lindqvist, Erik",
+      "created_span": "b2.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s1"
+      ]
+    },
+    {
+      "id": "clm2",
+      "kind": "claim",
+      "title": "Nov 16 includes automated refresh",
+      "author": "Lindqvist, Erik",
+      "created_span": "b2.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual",
+        "about": [
+          "opt2"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s2"
+      ]
+    },
+    {
+      "id": "crit1",
+      "kind": "criterion",
+      "title": "Refresh type at launch (automated vs manual)",
+      "author": "Lindqvist, Erik",
+      "created_span": "b2.s2",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b2.s2"
+      ]
+    },
+    {
+      "id": "clm3",
+      "kind": "claim",
+      "title": "Regional leads requesting dashboard since September",
+      "author": "Tran, Mei",
+      "created_span": "b3.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s2"
+      ]
+    },
+    {
+      "id": "crit2",
+      "kind": "criterion",
+      "title": "Business / regional-lead demand timing",
+      "author": "Tran, Mei",
+      "created_span": "b3.s2",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s2"
+      ]
+    },
+    {
+      "id": "con1",
+      "kind": "constraint",
+      "title": "Compliance must review access list before go-live",
+      "author": "Voss, Jonas",
+      "created_span": "b6.s1",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s1"
+      ]
+    },
+    {
+      "id": "clm4",
+      "kind": "claim",
+      "title": "Compliance access-list review takes five business days",
+      "author": "Voss, Jonas",
+      "created_span": "b6.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s2",
+        "b22.s2"
+      ]
+    },
+    {
+      "id": "clm5",
+      "kind": "claim",
+      "title": "Nov 2 manual refresh requires someone to run it every Monday",
+      "author": "Lindqvist, Erik",
+      "created_span": "b9.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "causal",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s1"
+      ]
+    },
+    {
+      "id": "blk1",
+      "kind": "blocker",
+      "title": "No one available to run Monday manual refresh if Nov 2 goes live",
+      "author": "Lindqvist, Erik",
+      "created_span": "b9.s2",
+      "status": "resolved",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "unresolved_dependency",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s2",
+        "b10.s1"
+      ]
+    },
+    {
+      "id": "clm6",
+      "kind": "claim",
+      "title": "Mei's team can run Monday manual refresh for first month",
+      "author": "Tran, Mei",
+      "created_span": "b10.s1",
+      "status": "unverified",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s1",
+        "b11.s1"
+      ]
+    },
+    {
+      "id": "clm7",
+      "kind": "claim",
+      "title": "Manual refresh has known duplicate-claims bug",
+      "author": "Abara, Nneka",
+      "created_span": "b12.s2",
+      "status": "conflicting",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b12.s2",
+        "b13.s1"
+      ]
+    },
+    {
+      "id": "clm8",
+      "kind": "claim",
+      "title": "Duplicate-claims bug risks bad numbers reaching regional leads",
+      "author": "Abara, Nneka",
+      "created_span": "b12.s3",
+      "status": "conflicting",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "causal",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b12.s3",
+        "b13.s1"
+      ]
+    },
+    {
+      "id": "clm9",
+      "kind": "claim",
+      "title": "Duplicate-claims bug is fixed in the branch",
+      "author": "Lindqvist, Erik",
+      "created_span": "b13.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual",
+        "about": [
+          "clm7"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b13.s1"
+      ]
+    },
+    {
+      "id": "clm10",
+      "kind": "claim",
+      "title": "Group converging on November 2nd go-live",
+      "author": "Reyes, Camila",
+      "created_span": "b15.s1",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "consensus"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b15.s1",
+        "b24.s1"
+      ]
+    },
+    {
+      "id": "con2",
+      "kind": "constraint",
+      "title": "Tran unavailable week of Nov 9 \u2014 cannot run manual refresh",
+      "author": "Tran, Mei",
+      "created_span": "b19.s1",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "negotiable"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b19.s1"
+      ]
+    },
+    {
+      "id": "blk2",
+      "kind": "blocker",
+      "title": "No volunteer to cover Monday refresh week of Nov 9",
+      "author": "Reyes, Camila",
+      "created_span": "b20.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "unresolved_dependency",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b20.s2"
+      ]
+    },
+    {
+      "id": "clm11",
+      "kind": "claim",
+      "title": "Erik declines to cover Monday refresh week of Nov 9",
+      "author": "Lindqvist, Erik",
+      "created_span": "b21.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual",
+        "about": [
+          "opt1"
+        ]
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b21.s1"
+      ]
+    },
+    {
+      "id": "con3",
+      "kind": "constraint",
+      "title": "Access list due by Oct 23 for compliance five-day review",
+      "author": "Reyes, Camila",
+      "created_span": "b22.s2",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b22.s2"
+      ]
+    },
+    {
+      "id": "con4",
+      "kind": "constraint",
+      "title": "No compliance sign-off without access list by Oct 23",
+      "author": "Voss, Jonas",
+      "created_span": "b23.s1",
+      "status": "active",
+      "question_id": "q1",
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "mandatory"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b23.s1"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2000-01-01T00:00:05",
+      "span_id": "b1.s2",
+      "kind": "create",
+      "element_id": "q1",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "Claims dashboard go-live date",
+        "kind": "question"
+      },
+      "because": []
+    },
+    {
+      "seq": 2,
+      "ts": "2000-01-01T00:00:05",
+      "span_id": "b1.s3",
+      "kind": "create",
+      "element_id": "opt1",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "November 2nd go-live",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 3,
+      "ts": "2000-01-01T00:00:05",
+      "span_id": "b1.s3",
+      "kind": "create",
+      "element_id": "opt2",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "November 16th go-live",
+        "kind": "option"
+      },
+      "because": []
+    },
+    {
+      "seq": 4,
+      "ts": "2000-01-01T00:00:20",
+      "span_id": "b2.s1",
+      "kind": "create",
+      "element_id": "clm1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Nov 2 ships with manual refresh",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 5,
+      "ts": "2000-01-01T00:00:20",
+      "span_id": "b2.s2",
+      "kind": "create",
+      "element_id": "clm2",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Nov 16 includes automated refresh",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 6,
+      "ts": "2000-01-01T00:00:20",
+      "span_id": "b2.s2",
+      "kind": "create",
+      "element_id": "crit1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Refresh type at launch (automated vs manual)",
+        "kind": "criterion"
+      },
+      "because": [
+        "clm1",
+        "clm2"
+      ]
+    },
+    {
+      "seq": 7,
+      "ts": "2000-01-01T00:00:34",
+      "span_id": "b3.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Tran, Mei",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 8,
+      "ts": "2000-01-01T00:00:34",
+      "span_id": "b3.s2",
+      "kind": "create",
+      "element_id": "clm3",
+      "participant": "Tran, Mei",
+      "payload": {
+        "title": "Regional leads requesting dashboard since September",
+        "kind": "claim"
+      },
+      "because": [
+        "opt1"
+      ]
+    },
+    {
+      "seq": 9,
+      "ts": "2000-01-01T00:00:34",
+      "span_id": "b3.s2",
+      "kind": "create",
+      "element_id": "crit2",
+      "participant": "Tran, Mei",
+      "payload": {
+        "title": "Business / regional-lead demand timing",
+        "kind": "criterion"
+      },
+      "because": [
+        "clm3"
+      ]
+    },
+    {
+      "seq": 10,
+      "ts": "2000-01-01T00:00:55",
+      "span_id": "b6.s1",
+      "kind": "create",
+      "element_id": "con1",
+      "participant": "Voss, Jonas",
+      "payload": {
+        "title": "Compliance must review access list before go-live",
+        "kind": "constraint"
+      },
+      "because": []
+    },
+    {
+      "seq": 11,
+      "ts": "2000-01-01T00:00:55",
+      "span_id": "b6.s2",
+      "kind": "create",
+      "element_id": "clm4",
+      "participant": "Voss, Jonas",
+      "payload": {
+        "title": "Compliance access-list review takes five business days",
+        "kind": "claim"
+      },
+      "because": [
+        "con1"
+      ]
+    },
+    {
+      "seq": 12,
+      "ts": "2000-01-01T00:01:40",
+      "span_id": "b9.s1",
+      "kind": "create",
+      "element_id": "clm5",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Nov 2 manual refresh requires someone to run it every Monday",
+        "kind": "claim"
+      },
+      "because": [
+        "clm1",
+        "opt1"
+      ]
+    },
+    {
+      "seq": 13,
+      "ts": "2000-01-01T00:01:40",
+      "span_id": "b9.s2",
+      "kind": "create",
+      "element_id": "blk1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "No one available to run Monday manual refresh if Nov 2 goes live",
+        "kind": "blocker"
+      },
+      "because": [
+        "clm5",
+        "clm1",
+        "opt1"
+      ]
+    },
+    {
+      "seq": 14,
+      "ts": "2000-01-01T00:01:40",
+      "span_id": "b9.s2",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "stance": "oppose",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span is ['blocker'], not a stance"
+      },
+      "because": [
+        "blk1",
+        "clm5"
+      ]
+    },
+    {
+      "seq": 15,
+      "ts": "2000-01-01T00:01:55",
+      "span_id": "b10.s1",
+      "kind": "create",
+      "element_id": "clm6",
+      "participant": "Tran, Mei",
+      "payload": {
+        "title": "Mei's team can run Monday manual refresh for first month",
+        "kind": "claim"
+      },
+      "because": [
+        "blk1"
+      ]
+    },
+    {
+      "seq": 16,
+      "ts": "2000-01-01T00:01:55",
+      "span_id": "b10.s1",
+      "kind": "status",
+      "element_id": "blk1",
+      "participant": "Tran, Mei",
+      "payload": {
+        "from": "open",
+        "to": "resolved"
+      },
+      "because": [
+        "clm6"
+      ]
+    },
+    {
+      "seq": 17,
+      "ts": "2000-01-01T00:01:55",
+      "span_id": "b10.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Tran, Mei",
+      "payload": {
+        "stance": "conditional",
+        "prev": "support",
+        "conditions": "Mei's team covers Monday manual refresh for the first month",
+        "inferred": true,
+        "inferred_reason": "span never names 'November 2nd go-live'"
+      },
+      "because": [
+        "clm6",
+        "blk1"
+      ]
+    },
+    {
+      "seq": 18,
+      "ts": "2000-01-01T00:02:05",
+      "span_id": "b11.s1",
+      "kind": "attach",
+      "element_id": "clm6",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 19,
+      "ts": "2000-01-01T00:02:05",
+      "span_id": "b11.s2",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span never names 'November 2nd go-live'"
+      },
+      "because": [
+        "clm6"
+      ]
+    },
+    {
+      "seq": 20,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 21,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "stance": "oppose",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'November 16th go-live', not 'November 2nd go-live'"
+      },
+      "because": []
+    },
+    {
+      "seq": 22,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s2",
+      "kind": "create",
+      "element_id": "clm7",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "title": "Manual refresh has known duplicate-claims bug",
+        "kind": "claim"
+      },
+      "because": []
+    },
+    {
+      "seq": 23,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s3",
+      "kind": "create",
+      "element_id": "clm8",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "title": "Duplicate-claims bug risks bad numbers reaching regional leads",
+        "kind": "claim"
+      },
+      "because": [
+        "clm7"
+      ]
+    },
+    {
+      "seq": 24,
+      "ts": "2000-01-01T00:02:05",
+      "span_id": "b11.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "stance": "conditional",
+        "prev": null,
+        "conditions": "Mei's team covers the manual refresh for the first month"
+      },
+      "because": [
+        "clm6",
+        "blk1"
+      ]
+    },
+    {
+      "seq": 25,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s3",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "stance": "oppose",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span never names 'November 2nd go-live'"
+      },
+      "because": [
+        "clm7",
+        "clm8"
+      ]
+    },
+    {
+      "seq": 26,
+      "ts": "2000-01-01T00:02:20",
+      "span_id": "b12.s3",
+      "kind": "attach",
+      "element_id": "clm8",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 27,
+      "ts": "2000-01-01T00:02:45",
+      "span_id": "b13.s1",
+      "kind": "create",
+      "element_id": "clm9",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Duplicate-claims bug is fixed in the branch",
+        "kind": "claim"
+      },
+      "because": [
+        "clm7",
+        "clm8"
+      ]
+    },
+    {
+      "seq": 28,
+      "ts": "2000-01-01T00:02:45",
+      "span_id": "b13.s1",
+      "kind": "status",
+      "element_id": "clm7",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "from": "unverified",
+        "to": "conflicting"
+      },
+      "because": [
+        "clm9"
+      ]
+    },
+    {
+      "seq": 29,
+      "ts": "2000-01-01T00:02:45",
+      "span_id": "b13.s1",
+      "kind": "status",
+      "element_id": "clm8",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "from": "unverified",
+        "to": "conflicting"
+      },
+      "because": [
+        "clm9"
+      ]
+    },
+    {
+      "seq": 30,
+      "ts": "2000-01-01T00:02:58",
+      "span_id": "b14.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Abara, Nneka",
+      "payload": {
+        "stance": "conditional",
+        "prev": null,
+        "conditions": "Bug fix is merged and tested",
+        "inferred": true,
+        "inferred_reason": "span never names 'November 2nd go-live'"
+      },
+      "because": [
+        "clm9"
+      ]
+    },
+    {
+      "seq": 31,
+      "ts": "2000-01-01T00:03:10",
+      "span_id": "b15.s1",
+      "kind": "create",
+      "element_id": "clm10",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "Group converging on November 2nd go-live",
+        "kind": "claim"
+      },
+      "because": [
+        "opt1",
+        "clm9"
+      ]
+    },
+    {
+      "seq": 32,
+      "ts": "2000-01-01T00:03:10",
+      "span_id": "b15.s1",
+      "kind": "flag",
+      "element_id": "clm10",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "type": "consensus_conflict",
+        "mismatches": [
+          {
+            "participant": "Lindqvist, Erik",
+            "option": "opt1",
+            "asserted": "support",
+            "actual": "conditional"
+          },
+          {
+            "participant": "Voss, Jonas",
+            "option": "opt1",
+            "asserted": "support",
+            "actual": "blank"
+          },
+          {
+            "participant": "Abara, Nneka",
+            "option": "opt1",
+            "asserted": "support",
+            "actual": "blank"
+          }
+        ]
+      },
+      "because": []
+    },
+    {
+      "seq": 33,
+      "ts": "2000-01-01T00:03:22",
+      "span_id": "b17.s1",
+      "kind": "attach",
+      "element_id": "opt1",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 34,
+      "ts": "2000-01-01T00:03:36",
+      "span_id": "b19.s1",
+      "kind": "create",
+      "element_id": "con2",
+      "participant": "Tran, Mei",
+      "payload": {
+        "title": "Tran unavailable week of Nov 9 \u2014 cannot run manual refresh",
+        "kind": "constraint"
+      },
+      "because": [
+        "opt1",
+        "clm6"
+      ]
+    },
+    {
+      "seq": 35,
+      "ts": "2000-01-01T00:03:22",
+      "span_id": "b17.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Tran, Mei",
+      "payload": {
+        "stance": "support",
+        "prev": "support"
+      },
+      "because": [
+        "opt1"
+      ]
+    },
+    {
+      "seq": 36,
+      "ts": "2000-01-01T00:03:50",
+      "span_id": "b20.s2",
+      "kind": "create",
+      "element_id": "blk2",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "No volunteer to cover Monday refresh week of Nov 9",
+        "kind": "blocker"
+      },
+      "because": [
+        "con2",
+        "clm6"
+      ]
+    },
+    {
+      "seq": 37,
+      "ts": "2000-01-01T00:03:58",
+      "span_id": "b21.s1",
+      "kind": "create",
+      "element_id": "clm11",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "title": "Erik declines to cover Monday refresh week of Nov 9",
+        "kind": "claim"
+      },
+      "because": [
+        "blk2"
+      ]
+    },
+    {
+      "seq": 38,
+      "ts": "2000-01-01T00:04:05",
+      "span_id": "b22.s2",
+      "kind": "create",
+      "element_id": "con3",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "title": "Access list due by Oct 23 for compliance five-day review",
+        "kind": "constraint"
+      },
+      "because": [
+        "con1",
+        "clm4"
+      ]
+    },
+    {
+      "seq": 39,
+      "ts": "2000-01-01T00:04:05",
+      "span_id": "b22.s2",
+      "kind": "attach",
+      "element_id": "clm4",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 40,
+      "ts": "2000-01-01T00:04:15",
+      "span_id": "b23.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Voss, Jonas",
+      "payload": {
+        "stance": "conditional",
+        "prev": null,
+        "conditions": "Compliance access list delivered by Oct 23 and someone covers the Monday refresh week of Nov 9",
+        "inferred": true,
+        "inferred_reason": "span is ['constraint'], not a stance"
+      },
+      "because": [
+        "con3"
+      ]
+    },
+    {
+      "seq": 41,
+      "ts": "2000-01-01T00:04:15",
+      "span_id": "b23.s1",
+      "kind": "create",
+      "element_id": "con4",
+      "participant": "Voss, Jonas",
+      "payload": {
+        "title": "No compliance sign-off without access list by Oct 23",
+        "kind": "constraint"
+      },
+      "because": [
+        "con3"
+      ]
+    },
+    {
+      "seq": 42,
+      "ts": "2000-01-01T00:04:22",
+      "span_id": "b24.s1",
+      "kind": "decide",
+      "element_id": "q1",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "chosen": [
+          "opt1"
+        ],
+        "ruled_out": [
+          "opt2"
+        ],
+        "conditional": false,
+        "conditions": "",
+        "from": "open",
+        "to": "decided"
+      },
+      "because": []
+    },
+    {
+      "seq": 43,
+      "ts": "2000-01-01T00:04:22",
+      "span_id": "b24.s1",
+      "kind": "status",
+      "element_id": "opt1",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "from": "active",
+        "to": "chosen"
+      },
+      "because": [
+        "q1"
+      ]
+    },
+    {
+      "seq": 44,
+      "ts": "2000-01-01T00:04:22",
+      "span_id": "b24.s1",
+      "kind": "status",
+      "element_id": "opt2",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "from": "active",
+        "to": "dropped"
+      },
+      "because": [
+        "q1"
+      ]
+    },
+    {
+      "seq": 45,
+      "ts": "2000-01-01T00:04:22",
+      "span_id": "b24.s1",
+      "kind": "attach",
+      "element_id": "opt2",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 46,
+      "ts": "2000-01-01T00:04:22",
+      "span_id": "b24.s1",
+      "kind": "status",
+      "element_id": "clm10",
+      "participant": "Reyes, Camila",
+      "payload": {
+        "from": "conflicting",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 47,
+      "ts": "2000-01-01T00:03:58",
+      "span_id": "b21.s1",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Lindqvist, Erik",
+      "payload": {
+        "stance": "conditional",
+        "prev": "conditional",
+        "conditions": "Someone else covers the Monday manual refresh week of Nov 9 (Erik declines to cover it)"
+      },
+      "because": [
+        "clm11",
+        "blk2"
+      ]
+    }
+  ],
+  "warnings": [
+    "inferred stance (span is ['blocker'], not a stance): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"span\": \"b9.s2\", \"because\": [\"blk1\", \"clm5\"]}",
+    "inferred stance (span never names 'November 2nd go-live'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"Mei's team covers Monday manual refresh for the first month\", \"span\": \"b10.s1\", \"because\": [\"clm6\", \"blk1\"]}",
+    "inferred stance (span never names 'November 2nd go-live'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"span\": \"b11.s2\", \"because\": [\"clm6\"]}",
+    "inferred stance (span names 'November 16th go-live', not 'November 2nd go-live'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"span\": \"b12.s1\", \"because\": []}",
+    "inferred stance (span never names 'November 2nd go-live'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"span\": \"b12.s3\", \"because\": [\"clm7\", \"clm8\"]}",
+    "inferred stance (span never names 'November 2nd go-live'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"Bug fix is merged and tested\", \"span\": \"b14.s1\", \"because\": [\"clm9\"]}",
+    "inferred stance (span is ['constraint'], not a stance): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"Compliance access list delivered by Oct 23 and someone covers the Monday refresh week of Nov 9\", \"span\": \"b23.s1\", \"because\":"
+  ],
+  "followups": 3,
+  "_enterprise": {
+    "source_type": "teams_transcript",
+    "subject": "",
+    "speakers": [
+      "Reyes, Camila",
+      "Lindqvist, Erik",
+      "Tran, Mei",
+      "Voss, Jonas",
+      "Abara, Nneka"
+    ],
+    "observers": [],
+    "msg_meta": [
+      {
+        "id": "m1",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m2",
+        "author": "Lindqvist, Erik",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m3",
+        "author": "Tran, Mei",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m4",
+        "author": "Voss, Jonas",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m5",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m6",
+        "author": "Voss, Jonas",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m7",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m8",
+        "author": "Abara, Nneka",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m9",
+        "author": "Lindqvist, Erik",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m10",
+        "author": "Tran, Mei",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m11",
+        "author": "Lindqvist, Erik",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m12",
+        "author": "Abara, Nneka",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m13",
+        "author": "Lindqvist, Erik",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m14",
+        "author": "Abara, Nneka",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m15",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m16",
+        "author": "Voss, Jonas",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m17",
+        "author": "Tran, Mei",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m18",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m19",
+        "author": "Tran, Mei",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m20",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m21",
+        "author": "Lindqvist, Erik",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m22",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m23",
+        "author": "Voss, Jonas",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m24",
+        "author": "Reyes, Camila",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      },
+      {
+        "id": "m25",
+        "author": "Voss, Jonas",
+        "restricted": false,
+        "restricted_reason": null,
+        "audience": [],
+        "subject": ""
+      }
+    ],
+    "spans": [
+      {
+        "id": "b1.s1",
+        "burst_id": "b1",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:00:05",
+        "text": "Okay, let's get started",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b1.s2",
+        "burst_id": "b1",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:00:05",
+        "text": "The main thing today is the go-live date for the claims dashboard",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s3",
+        "burst_id": "b1",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:00:05",
+        "text": "Two options, November 2nd or November 16th",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s1",
+        "burst_id": "b2",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:00:20",
+        "text": "November 2nd means we ship with the manual refresh",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s2",
+        "burst_id": "b2",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:00:20",
+        "text": "November 16th gets us the automated refresh",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s1",
+        "burst_id": "b3",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:00:34",
+        "text": "From the business side, November 2nd",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s2",
+        "burst_id": "b3",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:00:34",
+        "text": "The regional leads have been asking since September",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s1",
+        "burst_id": "b4",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:00:41",
+        "text": "Yeah.",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s1",
+        "burst_id": "b5",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:00:48",
+        "text": "Jonas, did you want to weigh in?",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s1",
+        "burst_id": "b6",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:00:55",
+        "text": "Compliance has to review the access list before anything goes live",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s2",
+        "burst_id": "b6",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:00:55",
+        "text": "That takes five business days once I get it",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'That' = Compliance review of the access list",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s1",
+        "burst_id": "b7",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:01:12",
+        "text": "can you get Jonas the access list",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s1",
+        "burst_id": "b8",
+        "author": "Abara, Nneka",
+        "ts": "2000-01-01T00:01:18",
+        "text": "I can get you the access list by Friday the 23rd",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s1",
+        "burst_id": "b9",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:01:40",
+        "text": "If we go on the second, manual refresh means someone has to run it every Monday",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s2",
+        "burst_id": "b9",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:01:40",
+        "text": "I don't have anyone for that",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s1",
+        "burst_id": "b10",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:01:55",
+        "text": "My team can run it for the first month",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'it' = manual refresh run every Monday",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s1",
+        "burst_id": "b11",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:02:05",
+        "text": "that changes my view",
+        "source_message_ids": [
+          "m11"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'that' = Tran, Mei's team can run the manual refresh for the first month",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s2",
+        "burst_id": "b11",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:02:05",
+        "text": "I'm fine with the second then",
+        "source_message_ids": [
+          "m11"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b12.s1",
+        "burst_id": "b12",
+        "author": "Abara, Nneka",
+        "ts": "2000-01-01T00:02:20",
+        "text": "I'd still rather wait for the 16th",
+        "source_message_ids": [
+          "m12"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b12.s2",
+        "burst_id": "b12",
+        "author": "Abara, Nneka",
+        "ts": "2000-01-01T00:02:20",
+        "text": "The manual refresh has a known bug with duplicate claims",
+        "source_message_ids": [
+          "m12"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b12.s3",
+        "burst_id": "b12",
+        "author": "Abara, Nneka",
+        "ts": "2000-01-01T00:02:20",
+        "text": "I don't want the regional leads to see bad numbers",
+        "source_message_ids": [
+          "m12"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b13.s1",
+        "burst_id": "b13",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:02:45",
+        "text": "That bug is fixed in the branch",
+        "source_message_ids": [
+          "m13"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'That bug' = known bug with duplicate claims in the manual refresh",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b13.s2",
+        "burst_id": "b13",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:02:45",
+        "text": "I'll confirm it's merged by Wednesday",
+        "source_message_ids": [
+          "m13"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b14.s1",
+        "burst_id": "b14",
+        "author": "Abara, Nneka",
+        "ts": "2000-01-01T00:02:58",
+        "text": "If it's merged and tested, I'm okay with the second",
+        "source_message_ids": [
+          "m14"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'the second' = the second option for the manual refresh start (per preceding discussion)",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b15.s1",
+        "burst_id": "b15",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:03:10",
+        "text": "Great, so that one then?",
+        "source_message_ids": [
+          "m15"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'that one' = the second option (the second date)",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b16.s1",
+        "burst_id": "b16",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:03:15",
+        "text": "Yeah, yeah.",
+        "source_message_ids": [
+          "m16"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b17.s1",
+        "burst_id": "b17",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:03:22",
+        "text": "Works for me.",
+        "source_message_ids": [
+          "m17"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b18.s1",
+        "burst_id": "b18",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:03:30",
+        "text": "Mei, can you own the Monday refresh?",
+        "source_message_ids": [
+          "m18"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b19.s1",
+        "burst_id": "b19",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:03:36",
+        "text": "I can't take it the week of the 9th",
+        "source_message_ids": [
+          "m19"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b19.s2",
+        "burst_id": "b19",
+        "author": "Tran, Mei",
+        "ts": "2000-01-01T00:03:36",
+        "text": "I'll be out",
+        "source_message_ids": [
+          "m19"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b20.s1",
+        "burst_id": "b20",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:03:50",
+        "text": "Then someone else needs to cover the week of the 9th",
+        "source_message_ids": [
+          "m20"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b20.s2",
+        "burst_id": "b20",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:03:50",
+        "text": "Anyone?",
+        "source_message_ids": [
+          "m20"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b21.s1",
+        "burst_id": "b21",
+        "author": "Lindqvist, Erik",
+        "ts": "2000-01-01T00:03:58",
+        "text": "Not me.",
+        "source_message_ids": [
+          "m21"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'Not me' = Erik cannot cover the week of the 9th (Camila asked 'Anyone?')",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b22.s1",
+        "burst_id": "b22",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:04:05",
+        "text": "we'll figure out that week",
+        "source_message_ids": [
+          "m22"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'that week' = the week of the 9th",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b22.s2",
+        "burst_id": "b22",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:04:05",
+        "text": "Jonas, you still need the list by the 23rd for your five days",
+        "source_message_ids": [
+          "m22"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b23.s1",
+        "burst_id": "b23",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:04:15",
+        "text": "I won't sign off without it",
+        "source_message_ids": [
+          "m23"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'it' = the list needed by the 23rd for the five days",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b24.s1",
+        "burst_id": "b24",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:04:22",
+        "text": "So the decision is go live November 2nd with the manual refresh",
+        "source_message_ids": [
+          "m24"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b24.s2",
+        "burst_id": "b24",
+        "author": "Reyes, Camila",
+        "ts": "2000-01-01T00:04:22",
+        "text": "I'll send notes",
+        "source_message_ids": [
+          "m24"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b25.s1",
+        "burst_id": "b25",
+        "author": "Voss, Jonas",
+        "ts": "2000-01-01T00:04:30",
+        "text": "Sure.",
+        "source_message_ids": [
+          "m25"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      }
+    ],
+    "classified": [
+      {
+        "span_id": "b1.s1",
+        "author": "Reyes, Camila",
+        "text": "Okay, let's get started",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.9,
+            "gist": "opening the meeting / starting the discussion"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s2",
+        "author": "Reyes, Camila",
+        "text": "The main thing today is the go-live date for the claims dashboard",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "candidate_question",
+            "confidence": 0.9,
+            "gist": "Go-live date for the claims dashboard is the decision to be made"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s3",
+        "author": "Reyes, Camila",
+        "text": "Two options, November 2nd or November 16th",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.85,
+            "gist": "November 2nd go-live date for claims dashboard"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s1",
+        "author": "Lindqvist, Erik",
+        "text": "November 2nd means we ship with the manual refresh",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Nov 2 go-live means shipping with the manual refresh"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s2",
+        "author": "Lindqvist, Erik",
+        "text": "November 16th gets us the automated refresh",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Nov 16 go-live would include the automated refresh"
+          },
+          {
+            "type": "criterion",
+            "confidence": 0.5,
+            "gist": "automated refresh vs manual refresh at launch"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s1",
+        "author": "Tran, Mei",
+        "text": "From the business side, November 2nd",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Mei Tran supports November 2nd go-live from the business side"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s2",
+        "author": "Tran, Mei",
+        "text": "The regional leads have been asking since September",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Regional leads have been requesting the dashboard since September (supports the Nov 2 date as business pressure)"
+          },
+          {
+            "type": "criterion",
+            "confidence": 0.5,
+            "gist": "Business/regional lead demand timing as a factor for choosing go-live date"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s1",
+        "author": "Voss, Jonas",
+        "text": "Yeah.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.6,
+            "gist": "filler acknowledgement 'Yeah.' with no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s1",
+        "author": "Reyes, Camila",
+        "text": "Jonas, did you want to weigh in?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.9,
+            "gist": "asking Jonas Voss to weigh in on the go-live date discussion"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s1",
+        "author": "Voss, Jonas",
+        "text": "Compliance has to review the access list before anything goes live",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.6,
+            "gist": "Compliance review of the access list must happen before any go-live"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s2",
+        "author": "Voss, Jonas",
+        "text": "That takes five business days once I get it",
+        "status": "active",
+        "context_note": "'That' = Compliance review of the access list",
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Compliance access-list review takes five business days once the list is received"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s1",
+        "author": "Reyes, Camila",
+        "text": "can you get Jonas the access list",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Asked Nneka Abara (or whoever owns the list) to send Jonas the access list for Compliance review"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s1",
+        "author": "Abara, Nneka",
+        "text": "I can get you the access list by Friday the 23rd",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.9,
+            "gist": "Nneka Abara commits to delivering the access list to Jonas by Friday the 23rd"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s1",
+        "author": "Lindqvist, Erik",
+        "text": "If we go on the second, manual refresh means someone has to run it every Monday",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Manual refresh on Nov 2nd requires someone to run it every Monday"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s2",
+        "author": "Lindqvist, Erik",
+        "text": "I don't have anyone for that",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.5,
+            "gist": "No one currently available to run the manual Monday refresh if Nov 2 goes live; unresolved staffing dependency"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s1",
+        "author": "Tran, Mei",
+        "text": "My team can run it for the first month",
+        "status": "active",
+        "context_note": "'it' = manual refresh run every Monday",
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.75,
+            "gist": "Mei's team will run the manual weekly refresh for the first month"
+          },
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Mei supports Nov 2 go-live with manual refresh, since her team covers the Monday runs for a month"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s1",
+        "author": "Lindqvist, Erik",
+        "text": "that changes my view",
+        "status": "active",
+        "context_note": "'that' = Tran, Mei's team can run the manual refresh for the first month",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Erik shifts his view and now supports the November 2nd go-live (given Mei's team covering manual refresh for the first month)"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s2",
+        "author": "Lindqvist, Erik",
+        "text": "I'm fine with the second then",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.85,
+            "gist": "Erik Lindqvist supports the November 2nd go-live (with manual refresh), now that Mei's team can run it for the first month"
+          }
+        ]
+      },
+      {
+        "span_id": "b12.s1",
+        "author": "Abara, Nneka",
+        "text": "I'd still rather wait for the 16th",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.9,
+            "gist": "Nneka prefers the November 16th go-live over November 2nd"
+          }
+        ]
+      },
+      {
+        "span_id": "b12.s2",
+        "author": "Abara, Nneka",
+        "text": "The manual refresh has a known bug with duplicate claims",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.8,
+            "gist": "Manual refresh (Nov 2 option) has a known bug with duplicate claims; concern against shipping on Nov 2"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Manual refresh has a known duplicate-claims bug"
+          }
+        ]
+      },
+      {
+        "span_id": "b12.s3",
+        "author": "Abara, Nneka",
+        "text": "I don't want the regional leads to see bad numbers",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Nneka opposes the November 2nd go-live (prefers waiting for the 16th) because she doesn't want regional leads seeing bad numbers"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Concern that the manual refresh path would show regional leads bad numbers"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Manual refresh risks bad numbers reaching regional leads (duplicate claims bug)"
+          }
+        ]
+      },
+      {
+        "span_id": "b13.s1",
+        "author": "Lindqvist, Erik",
+        "text": "That bug is fixed in the branch",
+        "status": "active",
+        "context_note": "'That bug' = known bug with duplicate claims in the manual refresh",
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Erik asserts the known duplicate-claims bug in the manual refresh is already fixed in the branch (unverified; merge pending)"
+          }
+        ]
+      },
+      {
+        "span_id": "b13.s2",
+        "author": "Lindqvist, Erik",
+        "text": "I'll confirm it's merged by Wednesday",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Erik to confirm the duplicate-claims bug fix is merged by Wednesday"
+          }
+        ]
+      },
+      {
+        "span_id": "b14.s1",
+        "author": "Abara, Nneka",
+        "text": "If it's merged and tested, I'm okay with the second",
+        "status": "active",
+        "context_note": "'the second' = the second option for the manual refresh start (per preceding discussion)",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Nneka conditionally supports the November 2nd go-live if the manual refresh bug fix is merged and tested"
+          }
+        ]
+      },
+      {
+        "span_id": "b15.s1",
+        "author": "Reyes, Camila",
+        "text": "Great, so that one then?",
+        "status": "active",
+        "context_note": "'that one' = the second option (the second date)",
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Group appears to be converging on November 2nd go-live (per Lindqvist, Tran, Abara conditions); Camila's question is a tentative read of consensus"
+          }
+        ]
+      },
+      {
+        "span_id": "b16.s1",
+        "author": "Voss, Jonas",
+        "text": "Yeah, yeah.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.6,
+            "gist": "Acknowledgement 'Yeah, yeah' with no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b17.s1",
+        "author": "Tran, Mei",
+        "text": "Works for me.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.8,
+            "gist": "Mei supports the November 2nd go-live (the second date)"
+          }
+        ]
+      },
+      {
+        "span_id": "b18.s1",
+        "author": "Reyes, Camila",
+        "text": "Mei, can you own the Monday refresh?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Mei Tran asked to own the Monday manual refresh run for the claims dashboard"
+          }
+        ]
+      },
+      {
+        "span_id": "b19.s1",
+        "author": "Tran, Mei",
+        "text": "I can't take it the week of the 9th",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.8,
+            "gist": "Mei Tran is unavailable the week of the 9th, so she cannot run the Monday manual refresh that week"
+          }
+        ]
+      },
+      {
+        "span_id": "b19.s2",
+        "author": "Tran, Mei",
+        "text": "I'll be out",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.6,
+            "gist": "Mei is absent the week of the 9th, so she cannot cover the Monday manual refresh that week"
+          }
+        ]
+      },
+      {
+        "span_id": "b20.s1",
+        "author": "Reyes, Camila",
+        "text": "Then someone else needs to cover the week of the 9th",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.35,
+            "gist": "Someone else needs to cover the Monday manual refresh for the week of the 9th (task being requested of group)"
+          }
+        ]
+      },
+      {
+        "span_id": "b20.s2",
+        "author": "Reyes, Camila",
+        "text": "Anyone?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "Camila calls for someone to volunteer to cover the Monday refresh the week of the 9th"
+          }
+        ]
+      },
+      {
+        "span_id": "b21.s1",
+        "author": "Lindqvist, Erik",
+        "text": "Not me.",
+        "status": "active",
+        "context_note": "'Not me' = Erik cannot cover the week of the 9th (Camila asked 'Anyone?')",
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Erik declines to cover the Monday refresh for the week of the 9th"
+          }
+        ]
+      },
+      {
+        "span_id": "b22.s1",
+        "author": "Reyes, Camila",
+        "text": "we'll figure out that week",
+        "status": "active",
+        "context_note": "'that week' = the week of the 9th",
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Camila says the group will work out coverage for the week of the 9th (no named owner; vague deferral)"
+          }
+        ]
+      },
+      {
+        "span_id": "b22.s2",
+        "author": "Reyes, Camila",
+        "text": "Jonas, you still need the list by the 23rd for your five days",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.75,
+            "gist": "Nneka to deliver the access list to Jonas by Friday the 23rd for compliance review"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.5,
+            "gist": "Compliance review of access list needs five business days before go-live; list due by the 23rd"
+          }
+        ]
+      },
+      {
+        "span_id": "b23.s1",
+        "author": "Voss, Jonas",
+        "text": "I won't sign off without it",
+        "status": "active",
+        "context_note": "'it' = the list needed by the 23rd for the five days",
+        "labels": [
+          {
+            "type": "constraint",
+            "confidence": 0.6,
+            "gist": "Compliance sign-off requires the access list by the 23rd; no go-live without it"
+          }
+        ]
+      },
+      {
+        "span_id": "b24.s1",
+        "author": "Reyes, Camila",
+        "text": "So the decision is go live November 2nd with the manual refresh",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "decision",
+            "confidence": 0.9,
+            "gist": "Go live November 2nd with the manual refresh; group settles on Nov 2 over Nov 16"
+          }
+        ]
+      },
+      {
+        "span_id": "b24.s2",
+        "author": "Reyes, Camila",
+        "text": "I'll send notes",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.85,
+            "gist": "closing remark: Camila says she will send meeting notes; logistics, not decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b25.s1",
+        "author": "Voss, Jonas",
+        "text": "Sure.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.6,
+            "gist": "Jonas's brief acknowledgement 'Sure' with no content; not an agreement to a requirement or a stance"
+          }
+        ]
+      }
+    ]
+  },
+  "summary": "Decision announced by Camila Reyes: November 2nd go-live. 1 open blocker, 3 people took an explicit position on an option.\n\n## Status\nDecision announced by Camila Reyes: November 2nd go-live. 1 open blocker, 3 people took an explicit position on an option.\n\n## Decision\nCamila Reyes announced the go-live as November 2nd with the manual refresh. Mei Tran said \"Works for me\" before the announcement. No reply recorded after the announcement from Erik Lindqvist, Mei Tran, or Nneka Abara.\n\n## Open questions\n- Who will cover the Monday manual refresh during the week of November 9th (raised by Camila Reyes)?\n\n## Where people stand\n- November 2nd go-live: Mei Tran supports (\"Works for me.\"); Erik Lindqvist supports if someone else covers the Monday refresh the week of November 9th (\"Not me.\").\n- November 16th go-live: Nneka Abara supports (\"I'd still rather wait for the 16th\"), then said \"If it's merged and tested, I'm okay with the second.\" No explicit position on November 2nd recorded after that condition.\n- Jonas Voss: no explicit position recorded on either date.\n\n## What is blocking progress\n- No one has agreed to cover the Monday manual refresh the week of November 9th; Mei Tran said she will be out and Erik Lindqvist declined (raised by Camila Reyes).\n\n## Next steps\n- Camila Reyes asked Nneka Abara to get Jonas Voss the access list; Nneka Abara said \"I can get you the access list by Friday the 23rd.\"\n- Mei Tran will have her team run the Monday refresh for the first month.\n- Erik Lindqvist will confirm the duplicate-claims bug fix is merged by Wednesday.\n- Camila Reyes said \"we'll figure out that week\" regarding coverage the week of November 9th.\n\n## Awaiting a reply\n- Camila Reyes asked for someone to cover the Monday refresh the week of November 9th; Erik Lindqvist said \"Not me\"; no one else volunteered.\n\n## Things people asserted that others may want to check\n- Nneka Abara said the manual refresh has a known bug that produces duplicate claims and risks regional leads seeing bad numbers.\n- Erik Lindqvist said that bug is fixed in the branch and will confirm it is merged by Wednesday.\n- Jonas Voss said compliance access-list review takes five business days once he receives the list.\n- Mei Tran said regional leads have been requesting the dashboard since September.\n\n## Flags\n- Camila Reyes described the group as converging on November 2nd; the record shows Erik Lindqvist's support is conditional on someone covering the week of November 9th, Nneka Abara's acceptance is conditional on the bug fix being confirmed merged and tested, and Jonas Voss has no explicit position recorded."
+}

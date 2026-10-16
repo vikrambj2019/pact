@@ -1,0 +1,73 @@
+From: Duarte, Ines <ines.duarte@dummycompany.com>
+Sent: Thursday, October 8, 2026 4:00 PM
+To: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+I am fine with A once security clears. The budget is only available in Q4, so the contract has to be signed by Nov 15 or we lose it. Priya, please own the signing date.
+
+Ines
+
+From: Mendes, Carla <carla.mendes@dummycompany.com>
+Sent: Wednesday, October 7, 2026 9:10 AM
+To: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+Quote received: $54k a year on a three-year term. That is within my cap, so I support A, assuming security clears it.
+
+Carla
+
+From: Nair, Priya <priya.nair@dummycompany.com>
+Sent: Tuesday, October 6, 2026 2:05 PM
+To: Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+Thanks Jun. All, I am holding the final call until Oct 21 because security still has to review Clauseline's data location. Carla, please still get the quote.
+
+Priya
+
+From: Okafor, Jun <jun.okafor@dummycompany.com>
+Sent: Tuesday, October 6, 2026 11:20 AM
+To: Nair, Priya <priya.nair@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+Priya, before anyone commits to A: their docs say contracts are processed in an EU region. We have a rule that vendor contract text stays in the US. Please keep this to yourself until I have read their SOC 2 report. I expect it by Oct 21.
+
+Jun
+
+From: Mendes, Carla <carla.mendes@dummycompany.com>
+Sent: Tuesday, October 6, 2026 8:45 AM
+To: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+A works for procurement if the annual cost stays under $60k. I will ask Clauseline for a written quote by Oct 14.
+
+Carla
+
+From: Raman, Dev <dev.raman@dummycompany.com>
+Sent: Monday, October 5, 2026 1:30 PM
+To: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+I would pick B. Two engineers for 8 weeks and we keep the data in house. But I am not saying A is wrong, I just want the build cost on the table.
+
+Dev
+
+From: Whitfield, Tom <tom.whitfield@dummycompany.com>
+Sent: Monday, October 5, 2026 10:12 AM
+To: Nair, Priya <priya.nair@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: RE: Contract review pilot: vendor or build?
+
+I support A. Legal reviews about 40 vendor contracts a month and redline turnaround is our biggest delay. Clauseline claims a 2-day turnaround. I do not have capacity to help with a build.
+
+Tom
+
+From: Nair, Priya <priya.nair@dummycompany.com>
+Sent: Monday, October 5, 2026 9:00 AM
+To: Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>
+Subject: Contract review pilot: vendor or build?
+
+Team,
+
+We have budget for one contract review pilot in Q4. Two options: A) buy Clauseline, a hosted tool, or B) build it on our internal platform. I would like a view from each of you by Thursday. Please reply all so we can see where everyone is.
+
+Priya

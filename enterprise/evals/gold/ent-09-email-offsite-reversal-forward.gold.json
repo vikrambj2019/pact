@@ -1,0 +1,186 @@
+{
+  "calibration": [
+    "Rosa's 'we are going with Denver' may be 'support' or 'proposed': she is the organiser announcing, not voting.",
+    "Anil's 'Either is fine' may be 'undecided' or 'acknowledged': the extractor prompt lists 'I'm fine with anything' as acknowledged. Either way it is never support.",
+    "Blocker owners are no longer scored as a hard check (no owner field on blockers)."
+  ],
+  "id": "ent-09-email-offsite-reversal-forward",
+  "level": "email-hard",
+  "scenario_notes": "A vote switch (Andre), a non-answer (Anil), a question never answered (Wei-Ling), and a forward to a new person (Dana) in which the organiser announces a decision the group never confirmed. Nate is cc'd on every group mail and never writes.",
+  "decision_question": "Should the Q1 offsite be in Austin (Feb 9-11) or Denver (Feb 23-25)?",
+  "outcome": "Rosa has told Dana to book Denver; the group has not confirmed",
+  "pact_state": {
+    "options": [
+      {
+        "title": "Austin, Feb 9-11",
+        "status": "active"
+      },
+      {
+        "title": "Denver, Feb 23-25",
+        "status": "active"
+      }
+    ],
+    "positions": [
+      {
+        "participant": "Rosa",
+        "option": "Austin and Denver",
+        "stance": "proposed",
+        "msgs": [
+          "m1"
+        ],
+        "quote": "Austin on Feb 9-11 or Denver on Feb 23-25"
+      },
+      {
+        "participant": "Rosa",
+        "option": "Denver",
+        "stance": "support",
+        "stance_any": [
+          "support",
+          "proposed"
+        ],
+        "msgs": [
+          "m8"
+        ],
+        "quote": "we are going with Denver, Feb 23-25"
+      },
+      {
+        "participant": "Andre",
+        "option": "Austin",
+        "stance": "superseded",
+        "msgs": [
+          "m2"
+        ],
+        "quote": "Austin for me."
+      },
+      {
+        "participant": "Andre",
+        "option": "Denver",
+        "stance": "support",
+        "msgs": [
+          "m6"
+        ],
+        "quote": "Switching to Denver."
+      },
+      {
+        "participant": "Marguerite",
+        "option": "Denver",
+        "stance": "support",
+        "msgs": [
+          "m3"
+        ],
+        "quote": "Denver."
+      },
+      {
+        "participant": "Wei-Ling",
+        "option": "Austin",
+        "stance": "support",
+        "msgs": [
+          "m4"
+        ],
+        "quote": "Austin works for me."
+      },
+      {
+        "participant": "Anil",
+        "option": "either",
+        "stance": "undecided",
+        "stance_any": [
+          "undecided",
+          "acknowledged"
+        ],
+        "msgs": [
+          "m5"
+        ],
+        "quote": "Either is fine with me."
+      }
+    ],
+    "objections": [
+      {
+        "text": "Austin dates (Feb 9) clash with the audit",
+        "status": "open",
+        "by": "Marguerite",
+        "against": "Austin",
+        "msgs": [
+          "m3",
+          "m6"
+        ],
+        "quote": "Feb 9 clashes with the audit"
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Wei-Ling has not answered whether she can do Feb 23",
+        "status": "open",
+        "owner": "Wei-Ling",
+        "msgs": [
+          "m7"
+        ],
+        "quote": "Wei-Ling, can you still do Feb 23?"
+      },
+      {
+        "text": "Deposit of $3,200 needs approval",
+        "status": "open",
+        "owner": "Rosa",
+        "msgs": [
+          "m9"
+        ],
+        "quote": "The deposit is $3,200."
+      }
+    ],
+    "actions": [
+      {
+        "text": "Book the Denver hold before Oct 16",
+        "owner": "Dana",
+        "owner_confirmed": true,
+        "due": "Oct 16",
+        "msgs": [
+          "m8",
+          "m9"
+        ],
+        "quote": "Please book the hold before it expires on Oct 16."
+      }
+    ],
+    "emerging_preference": {
+      "direction": "Denver, Feb 23-25",
+      "reason": "explicit support from Marguerite, Andre and Rosa; one explicit for Austin (Wei-Ling)"
+    }
+  },
+  "executive_summary": {
+    "title": "Should the Q1 offsite be in Austin (Feb 9-11) or Denver (Feb 23-25)?",
+    "counts": {
+      "options": 2,
+      "dropped": 0,
+      "open_objections": 1,
+      "open_blockers": 2,
+      "unowned_actions": 0
+    },
+    "preference": "Denver, Feb 23-25 is ahead"
+  },
+  "audience": {
+    "effective_audience_m1": "Rosa, Andre, Marguerite, Wei-Ling, Anil, Nate (cc) and Dana (forward carried the history)",
+    "dana_only_messages": [
+      "m8",
+      "m9"
+    ],
+    "not_participants": [
+      "Nate",
+      "Dana"
+    ]
+  },
+  "traps": [
+    "Andre's Austin support must be superseded by his Denver switch, not counted for both",
+    "Anil's 'Either is fine' is not support for either option",
+    "Nate (cc) never writes and must not appear as a supporter or an owner",
+    "Dana is on the thread only through the forward; her 'Will do' is a commitment to book, not a vote",
+    "Rosa's 'we are going with Denver' is the organiser's announcement; Wei-Ling never answered the date question, so it is NOT committed by the group",
+    "The $3,200 deposit question to Rosa is unanswered, not approved"
+  ],
+  "card_must_include": [
+    "Wei-Ling",
+    "Oct 16",
+    "deposit"
+  ],
+  "card_must_not_include": [
+    "Nate supports",
+    "committed: Denver"
+  ]
+}

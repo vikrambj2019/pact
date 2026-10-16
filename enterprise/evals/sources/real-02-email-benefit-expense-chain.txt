@@ -1,0 +1,182 @@
+Don’t share
+We need to discuss this
+
+From: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Sent: Monday, September 21, 2026 4:09 PM
+To: Chennuru, Ashok <ashok.chennuru@dummycompany.com>; Smith, Monique <Monique.Smith3@dummycompany.com>
+Subject: FW: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+FYI….keep it to yourself
+
+From: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Date: Sunday, September 20, 2026 at 10:02 PM
+To: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+Thanks Steve. I understand building more and better predictive capabilities, but predictive is not the only thing that we need for CoC or clinical, we also need retrospective and real-time models too. We need horizontal capabilities like Clinical Intelligence to manage this, which we are already creating. Now I think you are saying you need BEPMMCI ( we are adding more letters to this) to be an organizing body for the business. If that's the case, then the discussion should not be about funding or predictive models. Because the predictive models should be prioritized as part of the CoC funding we are already allocating - we will build it once and leverage it for Clinical or other areas that need it through Clinical Intelligence.
+
+Thanks
+Ratnakar
+
+From: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Sent: Sunday, September 20, 2026 3:59 PM
+To: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Ok. Thanks Ratnakar.
+
+The whole idea is to create one vehicle/project and coordinated team scoped around the predictive capabilities and translating them into care/CoC management. I think we could call much of what will be needed for success in Benefit Expense Projection & Management Modernization Clinical Intelligence, only today the latter feels like an abstract concept because the work is happening in pockets and pieces under different SVRO projects. To my knowledge, there is no project, governing body nor convening, cross-functional group called Clinical Intelligence.
+
+If there were no duplication today (which I am not sure of because we are still working with SVRO to pull together a full view of all that is in the works), then we definitely will be at risk of creating duplication in the future if we proceed to develop necessary capabilities under each individual SVRO project that requires, in essence, just a few foundational capabilities across them.
+
+Thanks,
+Steve
+
+From: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Sent: Sunday, 20 September 2026 14:29:24
+To: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Thanks Steve. What is BEPMM? Is it a capability or a governing body? Just because we keep saying there is duplication doesn’t make it so. Clinical Intelligence is a horizontal capability that supports multiple use cases across the enterprise. The work in this is informed by the different needs across the various programs.
+
+As for resources,  I agree with your point of working closer to the teams that own the initiatives. I don’t see this any different than how we do it across the enterprise - we embed dedicated resources including Data Science resources to program owners : CoC, UM, Claims etc. Let’s define what resources are needed and technology will provide the resources.
+
+Thanks
+Ratnakar
+
+From: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Sent: Sunday, September 20, 2026 1:59 PM
+To: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: RE: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Ratnakar, thanks for your quick response and readiness to partner on the work.
+
+I want to clarify that we appear to be focused on the same critical goal – not making any of this work “a separate set of work.” The purpose of the BEPMM proposal is in fact to coordinate and track the work that is being done and integrate parallel workstreams wherever it makes sense.
+
+The example you raise is a case in point – what exactly is the Clinical Intelligence platform and how is it being funded? Is that a standalone SVRO project today? Given that the capabilities you describe as being a part of this will be used for CoC, Member Orchestration and any other use cases (e.g. HealthOS/TMV), how do you propose we ensure transparency, lack of duplication of work and funding, and the appropriate degree of enterprise focus, if not by bringing all related work in one place (BEPMM)?
+
+I also want to make clear my team has no intention of doing any end-to-end work independently. We are 100% aligned with deploying into production through DPAIO leveraging common platforms. My team would, however, like to ensure iterative ML/AI model development occurs close to our Actuarial and Finance SMEs who drive our predictive capabilities today, with embedded data scientists working closely together day-to-day. This is what Strategic Finance uniquely offers to the cross-functional working group.
+
+Thank you,
+Steve
+
+From: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Sent: Sunday, September 20, 2026 1:35 PM
+To: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Steve,
+
+Thanks for sharing this with me.
+
+I have been talking to the various teams that you have been working with - member orchestration, CoC, Clinical Intelligence. They all believe this should not be a separate set of work, but should be integrated into the work that’s being done. For example, the Clinical Intelligence platform will have the ability to have predictive, reactive, and realtime models and algorithms. ML models as well as Gen AI models. Those will then be used for CoC, Member Orchestration, and any other use cases. I also comeback to us working together to build these models out versus you hiring resources to do it independently as they all need to be deployed into production leveraging common platforms that we are building out for the enterprise. My recommendation is to change the below paragraph to ask for approval to make this a priority, and Strategic Finance and Technology will work together to allocate the right capacity to accomplish the work while integrating into the enterprise ecosystem.
+
+Thanks
+Ratnakar
+
+Approve Benefit Expense Projection & Management Modernization (BEPMM). Approve the proposed $15.0M one-time 2027 investment and $4.65M annual run rate to modernize benefit-expense projections and management, including a common Trend Advantage methodology, forward-looking forecasts and glidepaths, trend-driver attribution, and Finance-certified value measurement and prioritization. Funding is proposed through reallocation from existing initiatives that require these capabilities, with Strategic Finance as business owner and governance lead, working in close collaboration with Health Solutions, Health Outcomes Organization and DPAIO
+
+From: Tanal, Stephen <stephen.tanal@dummycompany.com>
+Sent: Sunday, 20 September 2026 12:43:17
+To: Lavu, Ratnakar <Ratnakar.Lavu@dummycompany.com>
+Cc: Kaye, Mark <Mark.Kaye@dummycompany.com>
+Subject: FW: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Ratnakar, we are working to finalize the EPGC memo related to Enterprise Trend Management, including the recommendation to pursue further development of capabilities to predict and manage benefit expense in one coordinated project (Benefit Expense Projection & Management Modernization) funded by allocations from multiple projects requiring related capabilities (Member Orchestration, Medical Cost Command Center, HealthOS, etc.). We would like to confirm whether you are aligned with this recommendation as well, per the highlight below and the callout in the memo attached.
+
+Thank you,
+Steve
+
+From: Ali, Kanwal (Walle) <Kanwal.Ali@dummycompany.com>
+Sent: Friday, September 18, 2026 2:04 PM
+To: Weber, Kyle <kyle.weber@dummycompany.com>; Milloy, Abby <Abigail.Milloy@dummycompany.com>; Gaffigan, Catherine <Catherine.Gaffigan@dummycompany.com>; Tanal, Stephen <stephen.tanal@dummycompany.com>; Pols, Cynthia <cynthia.pols@dummycompany.com>
+Cc: McCoy, Paul <paul.mccoy@dummycompany.com>; Wickiser, Maggie <margaret.wickiser@dummycompany.com>; Busaba, Joseph <joseph.busaba@dummycompany.com>; Klein, Josh <Josh.Klein@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Hi Team,
+
+Thanks for the revisions to the memo. We just met with Mark and have a couple more points of feedback. We’d appreciate it if you can send back final versions of the memo(s) to us by 10am EST Monday,
+
+    • Split this memo into two separate memos. First with the assumptions and long-term strategy and second with the immediate leadership actions/decisions
+
+    • For the discussion, start with the assumptions and long-term strategy memo to get agreement from the Council on the approach, assumptions and five strategic areas to pressure test.
+        ◦ FWIW - My push on the five areas of focus as they are currently framed out, is that we need to validate whether these are the right areas using actual historical experience from commercial, government, and Carelon on where we have tried some of these strategies, where they have or have not worked, and what would be different this time. (Speaking from firsthand experience building/launching several of these in Commercial)
+
+    • For the immediate leadership actions/decisions memo
+        ◦ Clarify upfront what work we have completed since the decision was made in August
+        ◦ For the budgeted positions ask, produce a table for CoC, MCCC, and ETM (separated out by each) that shows the expense ($) and number of positions supporting each work stream for 2024, 2025, 2026, and 2027 (projection). We are seeking to understand the trajectory of expense across this work.
+        ◦ For the proposed funding reallocation for BEPMM, confirm that Ratnakar is aligned with this ask.
+
+Please reach out with any questions.
+
+Thanks,
+Walle
+
+From: Weber, Kyle <kyle.weber@dummycompany.com>
+Date: Friday, September 18, 2026 at 12:28 AM
+To: Milloy, Abby <Abigail.Milloy@dummycompany.com>; Gaffigan, Catherine <Catherine.Gaffigan@dummycompany.com>; Tanal, Stephen <stephen.tanal@dummycompany.com>; Pols, Cynthia <cynthia.pols@dummycompany.com>
+Cc: McCoy, Paul <paul.mccoy@dummycompany.com>; Wickiser, Maggie <margaret.wickiser@dummycompany.com>; Busaba, Joseph <joseph.busaba@dummycompany.com>; Ali, Kanwal (Walle) <Kanwal.Ali@dummycompany.com>; Klein, Josh <Josh.Klein@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+Here you go.
+
+Big thanks to this group on the email for the quick turnaround on this.  I’m confident Abby and Walle will tell us this is the very best memo of all going to EPGC…😊
+
+Get Outlook for Mac
+From: Milloy, Abby <Abigail.Milloy@dummycompany.com>
+Date: Thursday, September 17, 2026 at 9:50 PM
+To: Weber, Kyle <kyle.weber@dummycompany.com>; Gaffigan, Catherine <Catherine.Gaffigan@dummycompany.com>; Tanal, Stephen <stephen.tanal@dummycompany.com>; Pols, Cynthia <cynthia.pols@dummycompany.com>
+Cc: McCoy, Paul <paul.mccoy@dummycompany.com>; Wickiser, Maggie <margaret.wickiser@dummycompany.com>; Busaba, Joseph <joseph.busaba@dummycompany.com>; Ali, Kanwal (Walle) <Kanwal.Ali@dummycompany.com>; Klein, Josh <Josh.Klein@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+Hi Team,
+
+Just wanted to follow up to check in on timing for your next turn of the memo. We're reviewing pre-reads with Mark tomorrow late morning.
+
+If you can let me know if we should expect another turn by that time, I'd appreciate it very much.
+
+Thank you!
+Abby
+
+From: Milloy, Abby <Abigail.Milloy@dummycompany.com>
+Sent: Wednesday, September 16, 2026 8:21 PM
+To: Weber, Kyle <kyle.weber@dummycompany.com>; Gaffigan, Catherine <Catherine.Gaffigan@dummycompany.com>; Tanal, Stephen <stephen.tanal@dummycompany.com>; Pols, Cynthia <cynthia.pols@dummycompany.com>
+Cc: McCoy, Paul <paul.mccoy@dummycompany.com>; Wickiser, Maggie <margaret.wickiser@dummycompany.com>; Busaba, Joseph <joseph.busaba@dummycompany.com>; Ali, Kanwal (Walle) <Kanwal.Ali@dummycompany.com>; Klein, Josh <Josh.Klein@dummycompany.com>
+Subject: Re: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Hi Team,
+
+Thanks so much for your submission.  Walle and I reviewed and have a few points of feedback we'd recommend incorporating if you can share another turn of the materials by 5pm EST tomorrow:
+
+·         Reframe the paper around the four questions on the September agenda:
+·         What must the enterprise do differently if elevated trend persists? Note: The memo states "ETM's expanded ambition cannot be absorbed within today's cost of care funding, capacity, etc." but does not acknowledge what changes or support the broader enterprise may need to ideate or execute differently. We'd recommend including additional detail about changes required to make effectively managing through elevated trend an embedded enterprise-wide capability.
+·         Which pricing, product, network, benefit, operating, strategic, and investment assumptions change?
+·         Which no-regret actions and contingency triggers should enter the 2027 plan now?
+·         How will the enterprise exceed the relative 25-basis-point target? Note: This question in particular remains unaddressed by what was submitted. Anything you can do to clarify actions, timing, confidence level, etc. would be helpful. If we can't answer yet, provide some clarity about what is still outstanding.
+·         Reinforce what the September EPGC must decide; ETM was already approved in August. We would not recommend too much re-emphasis on this as a decision point. It is fine to remind folks of what was already decided as part of the total response to elevated trend, but we recommend re-emphasizing new approvals, funding, scope, priorities, or accepted risks required on September 24.
+·         Define the proposed BEPMM decision. It is unclear what scope, funding, timing, owner, expected result, or changes are implied with that decision.
+·         Clarify how the five longer-term strategic moves were determined:
+·         Market intelligence
+·         Data
+·         Competitor insights
+·         Add measurable triggers—for example, sustained trend, margin, utilization, affordability, membership, or market signals—and state what strategic action each trigger activates.
+·         Reduce the four-page main body to two pages, three pages maximum. Feel free to move background and longer descriptions of the five strategic moves to an appendix to make the memo body more concise.
+
+Feel free to reach out to me or Walle with any questions or clarifications. Thanks again for your work!
+
+Abby
+
+From: Klein, Josh <Josh.Klein@dummycompany.com>
+Sent: Tuesday, September 15, 2026 7:51 PM
+To: Milloy, Abby <Abigail.Milloy@dummycompany.com>; Ali, Kanwal (Walle) <Kanwal.Ali@dummycompany.com>
+Cc: Weber, Kyle <kyle.weber@dummycompany.com>; Gaffigan, Catherine <Catherine.Gaffigan@dummycompany.com>; Tanal, Stephen <stephen.tanal@dummycompany.com>; Pols, Cynthia <cynthia.pols@dummycompany.com>; McCoy, Paul <paul.mccoy@dummycompany.com>; Wickiser, Maggie <margaret.wickiser@dummycompany.com>; Busaba, Joseph <joseph.busaba@dummycompany.com>
+Subject: EPGC: Operating in a Sustained 10% Trend Environment Memo
+
+Hi Walle, Abby,
+
+I've attached the memo for the Operating in a Sustained 10% Trend Environment topic for EPGC. Let us know if you have feedback or need anything else.
+
+Best,
+Josh

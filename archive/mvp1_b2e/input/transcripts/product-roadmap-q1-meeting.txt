@@ -1,0 +1,49 @@
+Meeting: Q1 Product Roadmap Prioritization
+Date: October 8, 2026
+Attendees: Rachel Kim (Product), Dev Patel (Engineering), Nina Torres (Design), Chris Abara (Sales), Lena Schwartz (CEO)
+
+[00:00] Rachel Kim: Alright, let's get started. We have 45 minutes to agree on the Q1 roadmap. We have three major candidates: the mobile app rewrite, the analytics dashboard, and the SSO integration. We can realistically ship two of the three in Q1.
+
+[00:42] Dev Patel: I want to flag that the mobile rewrite is technically the most complex. We estimated 11 weeks. That's a stretch for Q1 even if we start today.
+
+[01:15] Chris Abara: From sales, the SSO integration is the single biggest deal blocker we have. We lost two enterprise deals last quarter specifically because we don't support SAML. I'd say it's non-negotiable.
+
+[01:48] Nina Torres: Agreed on SSO from a customer perspective. We've had three enterprise customers ask about it in the last two weeks in onboarding.
+
+[02:10] Rachel Kim: That aligns with what I'm hearing. SSO should be locked in. The question is really between the analytics dashboard and the mobile rewrite for the second slot.
+
+[02:35] Lena Schwartz: What's the revenue impact estimate for each?
+
+[02:48] Dev Patel: We haven't modeled it formally. Chris, you probably have better data.
+
+[03:02] Chris Abara: Analytics dashboard directly unlocks the mid-market segment — I'd estimate $800K in ARR within two quarters if we ship it. Mobile rewrite is more about retention; hard to put a number on it.
+
+[03:30] Nina Torres: I'd push back on deprioritizing the mobile rewrite. Our mobile NPS is 31 compared to 58 for web. That gap is a churn risk, not just an acquisition issue.
+
+[04:05] Dev Patel: The mobile rewrite also has significant technical debt implications. If we defer it another quarter, we're accumulating risk. But I hear that the analytics dashboard has a clearer revenue case.
+
+[04:40] Rachel Kim: Let me try to summarize where we are. SSO is locked. The debate is analytics dashboard versus mobile rewrite. The revenue case favors analytics, the retention and technical debt case favors mobile.
+
+[05:10] Lena Schwartz: Is there any version of the mobile rewrite we could scope down to fit in Q1 alongside SSO?
+
+[05:28] Dev Patel: A partial rewrite — iOS only, core flows only — is probably 6 weeks. That's feasible alongside SSO if we start this sprint.
+
+[05:52] Nina Torres: That's actually acceptable from a design standpoint. iOS is 68% of our mobile users.
+
+[06:15] Chris Abara: I'm okay with iOS-only scope as long as SSO doesn't slip. SSO is my red line.
+
+[06:35] Rachel Kim: So the proposal is: SSO integration full scope, mobile rewrite iOS-only. Analytics dashboard moves to Q2. Is everyone aligned?
+
+[06:55] Dev Patel: Aligned, with the caveat that SSO and iOS rewrite share the same team. We'll need to sequence them rather than run them in parallel.
+
+[07:18] Lena Schwartz: That's fine. Rachel, document this and send the sequencing plan by end of week.
+
+[07:30] Rachel Kim: Will do. Any last objections?
+
+[07:40] Chris Abara: No objections from me. Just need SSO shipped before the Meridian deal closes — that's March 15th.
+
+[07:55] Nina Torres: None from me.
+
+[08:05] Dev Patel: Good with this. I'll have the sequencing plan to Rachel by Thursday.
+
+[08:15] Rachel Kim: Great. Roadmap confirmed: SSO full scope, mobile iOS-only rewrite, analytics dashboard to Q2. Meeting closed.

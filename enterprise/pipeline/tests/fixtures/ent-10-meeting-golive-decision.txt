@@ -1,0 +1,157 @@
+Transcript. Use arrow keys to navigate between transcript entries.
+
+
+Search
+
+AI-generated content may be incorrect
+
+Speaker 1 started transcription
+CR
+Reyes, Camila
+5 seconds0:05
+Reyes, Camila 5 seconds
+Okay, let's get started. The main thing today is the go-live date for the claims dashboard. Two options, November 2nd or November 16th.
+
+EL
+Lindqvist, Erik
+20 seconds0:20
+Lindqvist, Erik 20 seconds
+Quick context. November 2nd means we ship with the manual refresh. November 16th gets us the automated refresh.
+
+MT
+Tran, Mei
+34 seconds0:34
+Tran, Mei 34 seconds
+From the business side, November 2nd. The regional leads have been asking since September.
+
+JV
+Voss, Jonas
+41 seconds0:41
+Voss, Jonas 41 seconds
+Yeah.
+
+CR
+Reyes, Camila
+48 seconds0:48
+Reyes, Camila 48 seconds
+Jonas, did you want to weigh in?
+
+JV
+Voss, Jonas
+55 seconds0:55
+Voss, Jonas 55 seconds
+Compliance has to review the access list before anything goes live. That takes five business days once I get it.
+
+CR
+Reyes, Camila
+1 minute 12 seconds1:12
+Reyes, Camila 1 minute 12 seconds
+Nikka, can you get Jonas the access list?
+
+NA
+Abara, Nneka
+1 minute 18 seconds1:18
+Abara, Nneka 1 minute 18 seconds
+I can get you the access list by Friday the 23rd.
+
+EL
+Lindqvist, Erik
+1 minute 40 seconds1:40
+Lindqvist, Erik 1 minute 40 seconds
+If we go on the second, manual refresh means someone has to run it every Monday. I don't have anyone for that.
+
+MT
+Tran, Mei
+1 minute 55 seconds1:55
+Tran, Mei 1 minute 55 seconds
+My team can run it for the first month.
+
+EL
+Lindqvist, Erik
+2 minutes 5 seconds2:05
+Lindqvist, Erik 2 minutes 5 seconds
+Okay, that changes my view. I'm fine with the second then.
+
+NA
+Abara, Nneka
+2 minutes 20 seconds2:20
+Abara, Nneka 2 minutes 20 seconds
+I'd still rather wait for the 16th. The manual refresh has a known bug with duplicate claims and I don't want the regional leads to see bad numbers.
+
+EL
+Lindqvist, Erik
+2 minutes 45 seconds2:45
+Lindqvist, Erik 2 minutes 45 seconds
+That bug is fixed in the branch. I'll confirm it's merged by Wednesday.
+
+NA
+Abara, Nneka
+2 minutes 58 seconds2:58
+Abara, Nneka 2 minutes 58 seconds
+If it's merged and tested, I'm okay with the second.
+
+CR
+Reyes, Camila
+3 minutes 10 seconds3:10
+Reyes, Camila 3 minutes 10 seconds
+Great, so that one then?
+
+JV
+Voss, Jonas
+3 minutes 15 seconds3:15
+Voss, Jonas 3 minutes 15 seconds
+Yeah, yeah.
+
+MT
+Tran, Mei
+3 minutes 22 seconds3:22
+Tran, Mei 3 minutes 22 seconds
+Works for me.
+
+CR
+Reyes, Camila
+3 minutes 30 seconds3:30
+Reyes, Camila 3 minutes 30 seconds
+Okay. Mei, can you own the Monday refresh?
+
+MT
+Tran, Mei
+3 minutes 36 seconds3:36
+Tran, Mei 3 minutes 36 seconds
+I can't take it the week of the 9th. I'll be out.
+
+CR
+Reyes, Camila
+3 minutes 50 seconds3:50
+Reyes, Camila 3 minutes 50 seconds
+Then someone else needs to cover the week of the 9th. Anyone?
+
+EL
+Lindqvist, Erik
+3 minutes 58 seconds3:58
+Lindqvist, Erik 3 minutes 58 seconds
+Not me.
+
+CR
+Reyes, Camila
+4 minutes 5 seconds4:05
+Reyes, Camila 4 minutes 5 seconds
+Okay, we'll figure out that week. Jonas, you still need the list by the 23rd for your five days.
+
+JV
+Voss, Jonas
+4 minutes 15 seconds4:15
+Voss, Jonas 4 minutes 15 seconds
+Right, and I won't sign off without it.
+
+CR
+Reyes, Camila
+4 minutes 22 seconds4:22
+Reyes, Camila 4 minutes 22 seconds
+So the decision is go live November 2nd with the manual refresh. I'll send notes.
+
+JV
+Voss, Jonas
+4 minutes 30 seconds4:30
+Voss, Jonas 4 minutes 30 seconds
+Sure.

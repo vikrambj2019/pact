@@ -1,0 +1,37 @@
+Meeting: Q4 Budget Review — Engineering Headcount
+Date: October 7, 2026
+Attendees: Lena Schwartz (CEO), Omar Farouk (CFO), Dev Patel (Engineering), Rachel Kim (Product)
+
+[00:00] Lena Schwartz: We need to decide on the Q4 engineering headcount request. Dev, you submitted a request for four additional engineers. Omar has concerns about the budget. Walk us through it.
+
+[00:38] Dev Patel: We have three open positions from the approved HC plan — two backend, one SRE. The fourth is new: a platform engineer for the infrastructure migration. Without that role, the migration timeline extends from Q1 to Q3 next year.
+
+[01:15] Omar Farouk: The HC plan was approved at three heads. Adding a fourth unplanned hire mid-quarter affects our burn rate. We're already tracking 8% above plan for Q3.
+
+[01:44] Dev Patel: I understand the constraint. But the infrastructure migration is a dependency for three Q1 features, including the SSO integration. Slipping that to Q3 has revenue implications that exceed the cost of one engineer.
+
+[02:10] Rachel Kim: That's accurate. SSO alone is blocking an estimated $800K in enterprise ARR. The platform engineer is the cheapest way to protect that revenue.
+
+[02:35] Omar Farouk: Can we contract the work instead of a full-time hire? A contractor would hit OpEx differently and we have budget flexibility there.
+
+[03:00] Dev Patel: We tried that for the last infrastructure project. The onboarding overhead for contractors on our codebase is high — typically 6–8 weeks before they're productive. A contractor wouldn't be ready in time.
+
+[03:28] Lena Schwartz: What if we hire the platform engineer and offset by deferring one of the approved backend roles to Q1?
+
+[03:50] Omar Farouk: That works from a budget perspective. Net headcount stays the same for Q4. I'm okay with that.
+
+[04:05] Dev Patel: The backend roles are also important — they're tied to the mobile rewrite. But if I have to choose, platform engineer first. The infrastructure migration is the harder dependency.
+
+[04:30] Rachel Kim: Agreed. Platform engineer in Q4, one backend hire deferred to Q1 is the right tradeoff given the SSO dependency.
+
+[04:55] Lena Schwartz: Then that's the decision. Approve platform engineer for Q4, defer one backend hire to Q1. The SRE and one backend hire remain as approved. Omar, can you update the HC plan today?
+
+[05:15] Omar Farouk: Yes, I'll have the updated plan to HR by end of day.
+
+[05:25] Lena Schwartz: Good. Dev, please have an offer out for the platform engineer within two weeks. We need them starting no later than November 10th to hit the migration timeline.
+
+[05:42] Dev Patel: Understood. I'll have a candidate shortlist to Rachel by Friday for a quick review before we extend.
+
+[05:55] Rachel Kim: Works for me.
+
+[06:05] Lena Schwartz: Decision recorded. Platform engineer approved for Q4, one backend deferred to Q1.

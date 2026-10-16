@@ -1,0 +1,328 @@
+Transcript. Use arrow keys to navigate between transcript entries.
+
+
+Search
+
+AI-generated content may be incorrect
+
+Speaker 1 started transcription
+BV
+
+Bandugula, Vikram
+0 minutes 4 seconds0:04
+Bandugula, Vikram 0 minutes 4 seconds
+Yeah.
+
+Benjamin, Danielle T.
+0 minutes 9 seconds0:09
+Benjamin, Danielle T. 0 minutes 9 seconds
+Hey, guys.
+BV
+
+Bandugula, Vikram
+0 minutes 11 seconds0:11
+Bandugula, Vikram 0 minutes 11 seconds
+Hello.
+
+Camarro, Jennifer
+0 minutes 32 seconds0:32
+Camarro, Jennifer 0 minutes 32 seconds
+Wait, Danielle, who are we waiting for? Just Rob? Looks like Neal is out.
+
+Benjamin, Danielle T.
+0 minutes 36 seconds0:36
+Benjamin, Danielle T. 0 minutes 36 seconds
+Yeah, we'll wait for Rob or we'll just get started depending on where Rob can join. I think we have everybody else. We do have facilitator on. So Jen, I will.
+Benjamin, Danielle T. 0 minutes 49 seconds
+defer to you. I know one of the things that I want to make sure that we can get clear on is, and I did read the one pager. Thank you for sending that over that got shared. Let us know where we are, what is outstanding from the deliverables, because I have the list, but I want to make sure that we don't overlook anything. And then ultimately who you may be
+Benjamin, Danielle T. 1 minute 9 seconds
+waiting on things for so that we can then align on how to best work together to keep this thing moving.
+
+Camarro, Jennifer
+1 minute 16 seconds1:16
+Camarro, Jennifer 1 minute 16 seconds
+Yeah, sure.
+Camarro, Jennifer 1 minute 19 seconds
+Yeah, absolutely. It's what I said. It's no different than what I already said. So, you know, still, of course, kind of going back and forth with folks, but let me just pull up the latest and greatest. Give me one second.
+
+Benjamin, Danielle T.
+1 minute 22 seconds1:22
+Benjamin, Danielle T. 1 minute 22 seconds
+Perfect.
+
+Camarro, Jennifer
+2 minutes 58 seconds2:58
+Camarro, Jennifer 2 minutes 58 seconds
+Okay, all right. All right, let me share my screen. So it's no different than what I sent yesterday. Okay.
+Camarro, Jennifer 3 minutes 5 seconds
+All right. So ESG will start there. That's been a pretty challenging category. It looks like they're still tracking an old submission and a new. I just followed up with them again this morning. Like, no, look at this submission. So this is like my third ESG submission. So I'm going to follow up again on Monday and make sure that folks are good to go with that.
+Camarro, Jennifer 3 minutes 28 seconds
+And then if there's anything outstanding after that, I'll let you know. One thing I think that might be helpful here, team, is like Danielle with you and James jumping in to provide additional support. Perhaps we can each take one of these categories and then just relentlessly follow up on it. I will, it's been challenging to do that as a single person without a project manager.
+Camarro, Jennifer 3 minutes 52 seconds
+So that would be a huge help to me if I could assign you guys each one of these elements and, you know, you take accountability for hounding them and I will hound the rest of the folks. Let me know.
+
+Benjamin, Danielle T.
+4 minutes 3 seconds4:03
+Benjamin, Danielle T. 4 minutes 3 seconds
+Sure, and I would even offer Jennifer, if you want to give me more than one, that way you're still not shouldering too many of them. Happy to do that. And if there are some that group together more naturally, that would, I'm happy to lean in for you there.
+
+Camarro, Jennifer
+4 minutes 14 seconds4:14
+Camarro, Jennifer 4 minutes 14 seconds
+Yeah, yeah.
+Camarro, Jennifer 4 minutes 18 seconds
+Perfect. Okay, yep, I'll assign those out. It probably makes sense for me to keep ESG because you're not going to have the background on, you know, which additional technologies in the ESG, what is the LLM doing? You know, like I don't want you to have to go in circles there. I will keep ESG and I'll keep procurement and I can farm out the rest.
+
+Benjamin, Danielle T.
+4 minutes 30 seconds4:30
+Benjamin, Danielle T. 4 minutes 30 seconds
+Sure.
+
+Camarro, Jennifer
+4 minutes 38 seconds4:38
+Camarro, Jennifer 4 minutes 38 seconds
+How does that sound? Okay, so we'll start there. Prasad Edathil reached out on his task around the architecture solution design. There was nothing indicated in the TGov ticket what they were looking for. So he has reached back out and I will follow up again. Well, actually, if I assign this one.
+
+Benjamin, Danielle T.
+4 minutes 39 seconds4:39
+Benjamin, Danielle T. 4 minutes 39 seconds
+Sure. Works for me.
+
+Camarro, Jennifer
+4 minutes 57 seconds4:57
+Camarro, Jennifer 4 minutes 57 seconds
+to someone else, I'll ask you to. But he's not getting a response yet on that. Responsible AI.
+Camarro, Jennifer 5 minutes 7 seconds
+I followed up three, four, five times with these folks. I haven't gotten a response. So I will assign this one out. And they did give me a point of contact, which is Michael, Michael R. So we'll need someone to take that one. ESG again, I'm on the third ESG hopefully. Oh, yeah, go ahead, Danielle.
+
+Benjamin, Danielle T.
+5 minutes 26 seconds5:26
+Benjamin, Danielle T. 5 minutes 26 seconds
+Oh no, no, I'm following along. I was just letting you know, yep, following. I have it up on my side too, so that we're all just tracking.
+
+Camarro, Jennifer
+5 minutes 29 seconds5:29
+Camarro, Jennifer 5 minutes 29 seconds
+Okay, good.
+Camarro, Jennifer 5 minutes 32 seconds
+No problem.
+
+Garnett, Robert T.
+5 minutes 33 seconds5:33
+Garnett, Robert T. 5 minutes 33 seconds
+James, did you, James, did you have a similar issue on the responsible AI? Like, was that a barrier we had to get through as well, or is it different experience, same?
+
+Haskins, James
+5 minutes 45 seconds5:45
+Haskins, James 5 minutes 45 seconds
+Nope, because technically Lilac doesn't use any AI.
+
+Camarro, Jennifer
+5 minutes 50 seconds5:50
+Camarro, Jennifer 5 minutes 50 seconds
+Ah, there you go. Okay. Yep.
+Camarro, Jennifer 5 minutes 54 seconds
+Okay. ESG is the one I'll take. And I think where some of this gets complicated is there's two components. There's the digital quality measure component, and then there is the year-round chart collection component. They can be independent or connected. Yeah, so I filled it out.
+Camarro, Jennifer 6 minutes 13 seconds
+for both, right, because we want it to be a connected entity, not disconnected, but we can potentially move ahead with one versus the other faster. You know, like get one rolling and then move towards the other.
+Camarro, Jennifer 6 minutes 29 seconds
+This is 1 I will assign out, enterprise security architecture.
+Camarro, Jennifer 6 minutes 34 seconds
+So this one is dependent on ESG, right? So as soon as I can get them to reply to the most current ESG that I submitted, then it looks like...
+Camarro, Jennifer 6 minutes 45 seconds
+Enterprise security architecture will pick that up. So that one is like a dependency.
+Camarro, Jennifer 6 minutes 54 seconds
+This one, I'll sign this one out. I don't even know what this is. I keep asking them, what do you need? Who are you looking for? Who are you waiting on? So this is where I could use some additional relentless support. And then procurement. How about Rob, you and I tag team that one?
+Camarro, Jennifer 7 minutes 13 seconds
+Okay, good. So this has been with procurement for a while, and we have originally we had Glenn Link, and then he brought in James Dodson. James Dodson seems to be driving this now. But where I think we are with this is if we can get an agreement that covers us to share data,
+Camarro, Jennifer 7 minutes 34 seconds
+to do, let's call it a pilot, if you will, to at least get pipes open and get some testing going. That would be enough, right, without a full-blown MSA contract.
+Camarro, Jennifer 7 minutes 47 seconds
+So.
+Camarro, Jennifer 7 minutes 48 seconds
+Right? Like we just need the ability to at least start like, let's get an FTP set up. Let's start looking at the formats for the YRDC component. You know, let's get a UAT environment that's licensed to us, you know, so that we can have Brandon's folks go in and start to, you know, poke with the utility of the tool and do parallel testing against the current YRDC component.
+Camarro, Jennifer 8 minutes 10 seconds
+human abstraction process.
+
+Haskins, James
+8 minutes 13 seconds8:13
+Haskins, James 8 minutes 13 seconds
+I have a question. I have a question. So when you, so my understanding is we need the, you need an, you have to have an MSA before we're willing to start any of that. So do we have the MSA done or is that not even close?
+
+Camarro, Jennifer
+8 minutes 14 seconds8:14
+Camarro, Jennifer 8 minutes 14 seconds
+So, yeah.
+Camarro, Jennifer 8 minutes 21 seconds
+Mhm.
+Camarro, Jennifer 8 minutes 26 seconds
+No, we have it very close to done. We've already had red lines go back and forth twice. And the last communication I got from James Dodson is right here or wherever it was. He said that he just had a couple more things and then it was going to legal review. And then yesterday he said, okay, now it's going to a different person. It's no longer with the original person he thought it would be.
+Camarro, Jennifer 8 minutes 51 seconds
+So that's the one I'll leave Rob into where we can continue to push, right? Getting that MSA to the end. It's already gone back to the vendor, gone back to procurement. It's already made the rounds twice.
+
+Garnett, Robert T.
+9 minutes 3 seconds9:03
+Garnett, Robert T. 9 minutes 3 seconds
+Is there is yeah, go ahead.
+
+Haskins, James
+9 minutes 3 seconds9:03
+Haskins, James 9 minutes 3 seconds
+Yeah. The only, I mean, I know you guys offer to take that. So just as a point of reference, James, Jay and Lauren are who are doing lilac. So I talk with them daily. So if you would like some additional assistance, I have a very active Teams chat with them.
+
+Camarro, Jennifer
+9 minutes 16 seconds9:16
+Camarro, Jennifer 9 minutes 16 seconds
+Oh, cool.
+
+Haskins, James
+9 minutes 22 seconds9:22
+Haskins, James 9 minutes 22 seconds
+Every single day, yeah.
+
+Camarro, Jennifer
+9 minutes 24 seconds9:24
+Camarro, Jennifer 9 minutes 24 seconds
+Oh, wonderful. And you are also part of the procurement party. Okay.
+
+Garnett, Robert T.
+9 minutes 28 seconds9:28
+Garnett, Robert T. 9 minutes 28 seconds
+Is there anything, Jennifer, with them that's like a hard disagreement on the MSA? Like, is there anything that like we're hung up on or is it just a matter of completion?
+
+Camarro, Jennifer
+9 minutes 36 seconds9:36
+Camarro, Jennifer 9 minutes 36 seconds
+Nope.
+Camarro, Jennifer 9 minutes 38 seconds
+No.
+Camarro, Jennifer 9 minutes 40 seconds
+Just a matter of completion. The vendor was very amendable to things, very little back and forth, and very little back and forth on our side either. It's just about it moving ahead now.
+
+Garnett, Robert T.
+9 minutes 41 seconds9:41
+Garnett, Robert T. 9 minutes 41 seconds
+Okay.
+Garnett, Robert T. 9 minutes 51 seconds
+Okay, yeah, because that's usually the sticking point is like there's some legal provision that they're like not budging on and we're not budging on and then it's ultimately like a grudge match. So that's good.
+
+Camarro, Jennifer
+9 minutes 58 seconds9:58
+Camarro, Jennifer 9 minutes 58 seconds
+No.
+Camarro, Jennifer 10 minutes
+Now, the only piece that there could be some back and forth on, and this is where I think there's a dependency of them finalizing their review of the latest and greatest ESG, and then moving to enterprise security architecture and the EA final review, is there's two ways that the chart tool can be deployed
+Camarro, Jennifer 10 minutes 20 seconds
+for Elevance. The first is deploy it within our walls, within our Snowflake and AWS, and the others, there's 23 other components of AWS that go along with it, deploy it within our environment, and then set up an Estrada employee
+Camarro, Jennifer 10 minutes 40 seconds
+as like a contractor, right, with admin access, because there are some like management things that happen within the tool that would be beneficial if they were to occur. The second way is to have it sit within Estrada's walls and we leverage it as
+Camarro, Jennifer 10 minutes 58 seconds
+software, right, hosted within their environment. That is the piece where I think enterprise security will potentially want to weigh in, but they haven't yet because they're waiting for the final ESG to be approved. So that's the only place I could see there being some back and forth. And Brandon, I know you've been in those conversations.
+Camarro, Jennifer 11 minutes 19 seconds
+with Estrada, like my understanding is the way the tool was built, it will operate at the highest level of functionality. If it's within their walls, it will still operate within our walls, but we will need essentially a traffic cop with credentials.
+
+O'Hara, Brandon M.
+11 minutes 38 seconds11:38
+O'Hara, Brandon M. 11 minutes 38 seconds
+Yeah, yeah, I mean, I think their preference is their environment, and especially if we really did want to move quickly on a pilot, it might be worth starting in their environment and maybe having a long-term plan to migrate to our environment, especially once the engine component is up, because that will obviously, I think that will be in our environment.
+
+Camarro, Jennifer
+11 minutes 47 seconds11:47
+Camarro, Jennifer 11 minutes 47 seconds
+Mhm.
+
+O'Hara, Brandon M.
+11 minutes 59 seconds11:59
+O'Hara, Brandon M. 11 minutes 59 seconds
+For sure, right, so...
+
+Camarro, Jennifer
+12 minutes12:00
+Camarro, Jennifer 12 minutes
+Yes, exactly. Yep. The digital quality measure will be in our environment. That's not even a question. It's just the chart tool. You know, I agree, though. If we want to get a pilot up and running, that's the way to go. And quite frankly, it's going to have lesser overall cost on our side versus standing that environment up.
+
+O'Hara, Brandon M.
+12 minutes 6 seconds12:06
+O'Hara, Brandon M. 12 minutes 6 seconds
+Yeah.
+
+Camarro, Jennifer
+12 minutes 21 seconds12:21
+Camarro, Jennifer 12 minutes 21 seconds
+As well, over here versus just leveraging the Snowflake and Cloud environment on their side, so...
+Camarro, Jennifer 12 minutes 30 seconds
+So that's kind of where we, that is where we are with TGOV, right? So what I shared with you yesterday, Rob, this is the current status. Like we have some that are complete, which is wonderful. There's a couple that are in progress that are waiting again on the ESG.
+Camarro, Jennifer 12 minutes 47 seconds
+And we will, I can divvy these up and we can relentlessly pursue them together.
+Camarro, Jennifer 12 minutes 55 seconds
+So it's 66% through. I know, right? So go ahead, Danielle.
+
+Benjamin, Danielle T.
+13 minutes 3 seconds13:03
+Benjamin, Danielle T. 13 minutes 3 seconds
+I was just going to ask about the items that have Prasad E's name next to them. Is Anil?
+Benjamin, Danielle T. 13 minutes 10 seconds
+aware of this project as, okay, I just want to make sure before I start adding people in for visibility, you know, Vikram especially is, you know, a peer of Anil, making sure that we have the right support from an E3 side standpoint as needed.
+
+Camarro, Jennifer
+13 minutes 12 seconds13:12
+Camarro, Jennifer 13 minutes 12 seconds
+He is, yeah, he is. Yep.
+Camarro, Jennifer 13 minutes 26 seconds
+Yeah, so Anil is in the loop, but there hasn't been a lot for him to respond to recently, right? Prasad has always been in constant communication and at the moment he is waiting for Enterprise Architecture to let him know what additional element do they need him to complete because there was nothing indicated.
+
+Benjamin, Danielle T.
+13 minutes 32 seconds13:32
+Benjamin, Danielle T. 13 minutes 32 seconds
+Cheng.
+Benjamin, Danielle T. 13 minutes 46 seconds
+Sure.
+
+Camarro, Jennifer
+13 minutes 46 seconds13:46
+Camarro, Jennifer 13 minutes 46 seconds
+They just keep, yeah, they just keep sending it to him saying, you need to complete this. And he is saying, complete what? Please articulate, right? So.
+
+Benjamin, Danielle T.
+13 minutes 52 seconds13:52
+Benjamin, Danielle T. 13 minutes 52 seconds
+What? Yes. Tell me more. I need more. Help me help you. Yeah.
+
+Camarro, Jennifer
+13 minutes 56 seconds13:56
+Camarro, Jennifer 13 minutes 56 seconds
+Right, right, yep.
+Camarro, Jennifer 13 minutes 59 seconds
+So, that's where we're at.
+
+Benjamin, Danielle T.
+13 minutes 59 seconds13:59
+Benjamin, Danielle T. 13 minutes 59 seconds
+Okay, perfect. I just want to make sure, you know, as we're tagging in people, I don't want to.
+
+Camarro, Jennifer
+14 minutes 4 seconds14:04
+Camarro, Jennifer 14 minutes 4 seconds
+Yeah, and then.
+
+Benjamin, Danielle T.
+14 minutes 5 seconds14:05
+Benjamin, Danielle T. 14 minutes 5 seconds
+Including one who shouldn't be.
+
+Camarro, Jennifer
+14 minutes 7 seconds14:07
+Camarro, Jennifer 14 minutes 7 seconds
+James, I don't know if you got a response to this. I've followed up twice now this week. I understand that the TGOV process is going to undergo a revamp and they have produced a new PowerPoint deck. I have asked if that is required for any exist, you know, projects that are already submitted and still in the approval process. I have not gotten a response. I don't know if that's something
+Camarro, Jennifer 14 minutes 32 seconds
+That you have already gotten a response on.
+
+Haskins, James
+14 minutes 35 seconds14:35
+Haskins, James 14 minutes 35 seconds
+I had to follow the PowerPoint. We were given a PowerPoint template already and we filled, we already filled it out with Vikram help. So if we need, if we need to do that again, I'm more than happy to assist with that one as one as well.
+
+Camarro, Jennifer
+14 minutes 47 seconds14:47
+Camarro, Jennifer 14 minutes 47 seconds
+Well...

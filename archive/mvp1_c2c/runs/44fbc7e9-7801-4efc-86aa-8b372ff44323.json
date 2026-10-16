@@ -1,0 +1,177 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "44fbc7e9-7801-4efc-86aa-8b372ff44323",
+    "card_version": 1,
+    "topic": {
+      "title": "Where should our group go for a hiking trip?",
+      "problem": "Where should our group go for a hiking trip?",
+      "decision_requested": "Where should our group go for a hiking trip?",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "You",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "experienced hiker",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Sam",
+        "role": "budget-conscious planner",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "accessibility-focused traveler",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": []
+    },
+    "criteria": [],
+    "proposals": [],
+    "claims": [],
+    "assumptions": [],
+    "arguments": [],
+    "positions": [],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "msg_1",
+        "speaker_id": "human_admin",
+        "text": "hey guys, ready for yearly hiking, any thoughts on where and when?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:10:31.912002+00:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [],
+    "audit": [
+      {
+        "at": "2026-10-04T19:10:31.991564+00:00",
+        "event": "observation_error",
+        "detail": "URLError",
+        "message_id": "msg_1"
+      }
+    ],
+    "bot_turns": 0,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3"
+    ],
+    "next_bot_index": 0,
+    "facilitation": [],
+    "run_settings": {
+      "backend": "live",
+      "participant_model": "gpt-4.1-mini",
+      "research_model": "gpt-4.1-mini"
+    }
+  },
+  "profiles": [
+    {
+      "id": "sim_1",
+      "name": "Alex",
+      "role": "experienced hiker",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Prioritize challenging trails and explain what makes a route worthwhile."
+    },
+    {
+      "id": "sim_2",
+      "name": "Sam",
+      "role": "budget-conscious planner",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Keep costs manageable and ask for concrete cost assumptions."
+    },
+    {
+      "id": "sim_3",
+      "name": "Jordan",
+      "role": "accessibility-focused traveler",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Focus on practical access needs and travel burdens."
+    }
+  ]
+}

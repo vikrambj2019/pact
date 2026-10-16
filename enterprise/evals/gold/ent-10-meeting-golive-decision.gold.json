@@ -1,0 +1,206 @@
+{
+  "calibration": [
+    "Jonas's 'Yeah, yeah.' as an acknowledged position is optional: not recording it is harmless; crediting him with support is the failure.",
+    "Blocker owners (Erik, Nneka) are checked through the matching action, since blockers have no owner field."
+  ],
+  "id": "ent-10-meeting-golive-decision",
+  "level": "meeting-medium",
+  "scenario_notes": "A real decision in a Teams transcript. Vague 'that one', a mis-transcribed name (Nikka for Nneka), backchannel from Jonas, a verbal assignment that is refused for one week, and conditions that must be met for the date to hold. No time gaps.",
+  "decision_question": "When should the claims dashboard go live: November 2 or November 16?",
+  "outcome": "Decided by the facilitator: Nov 2 with manual refresh, subject to open conditions",
+  "pact_state": {
+    "options": [
+      {
+        "title": "Go live November 2 with manual refresh",
+        "status": "active"
+      },
+      {
+        "title": "Go live November 16 with automated refresh",
+        "status": "active"
+      }
+    ],
+    "positions": [
+      {
+        "participant": "Mei",
+        "option": "Nov 2",
+        "stance": "support",
+        "msgs": [
+          "u3"
+        ],
+        "quote": "From the business side, November 2nd."
+      },
+      {
+        "participant": "Erik",
+        "option": "Nov 2",
+        "stance": "support",
+        "msgs": [
+          "u11"
+        ],
+        "quote": "I'm fine with the second then."
+      },
+      {
+        "participant": "Nneka",
+        "option": "Nov 16",
+        "stance": "superseded",
+        "msgs": [
+          "u12"
+        ],
+        "quote": "I'd still rather wait for the 16th."
+      },
+      {
+        "participant": "Nneka",
+        "option": "Nov 2",
+        "stance": "conditional",
+        "msgs": [
+          "u14"
+        ],
+        "quote": "If it's merged and tested, I'm okay with the second."
+      },
+      {
+        "participant": "Jonas",
+        "option": "Nov 2",
+        "stance": "acknowledged",
+        "required": false,
+        "msgs": [
+          "u4",
+          "u16"
+        ],
+        "quote": "Yeah, yeah."
+      },
+      {
+        "participant": "Mei",
+        "option": "Nov 2",
+        "stance": "support",
+        "msgs": [
+          "u17"
+        ],
+        "quote": "Works for me."
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Compliance needs the access list five business days before go-live",
+        "msgs": [
+          "u6"
+        ],
+        "quote": "That takes five business days once I get it."
+      },
+      {
+        "text": "Jonas will not sign off without the access list",
+        "msgs": [
+          "u23"
+        ],
+        "quote": "I won't sign off without it."
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Duplicate-claims bug fix merged and tested",
+        "status": "open",
+        "owner": "Erik",
+        "due": "Wed Oct 21",
+        "msgs": [
+          "u13",
+          "u14"
+        ],
+        "quote": "I'll confirm it's merged by Wednesday."
+      },
+      {
+        "text": "Access list to compliance by Oct 23",
+        "status": "open",
+        "owner": "Nneka",
+        "due": "Oct 23",
+        "msgs": [
+          "u8",
+          "u22"
+        ],
+        "quote": "I can get you the access list by Friday the 23rd."
+      },
+      {
+        "text": "Nobody covers the Monday refresh the week of Nov 9",
+        "status": "open",
+        "owner": null,
+        "msgs": [
+          "u19",
+          "u20",
+          "u21"
+        ],
+        "quote": "Then someone else needs to cover the week of the 9th."
+      }
+    ],
+    "objections": [
+      {
+        "text": "Manual refresh has a duplicate-claims bug",
+        "status": "resolved_conditionally",
+        "by": "Nneka",
+        "against": "Nov 2",
+        "msgs": [
+          "u12",
+          "u14"
+        ],
+        "quote": "The manual refresh has a known bug with duplicate claims"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Run the Monday manual refresh for the first month except the week of Nov 9",
+        "owner": "Mei",
+        "owner_confirmed": true,
+        "msgs": [
+          "u10",
+          "u19"
+        ],
+        "quote": "My team can run it for the first month."
+      },
+      {
+        "text": "Cover the Monday refresh the week of Nov 9",
+        "owner": null,
+        "msgs": [
+          "u20",
+          "u21"
+        ],
+        "quote": "Then someone else needs to cover the week of the 9th."
+      },
+      {
+        "text": "Send meeting notes",
+        "owner": "Camila",
+        "owner_confirmed": true,
+        "msgs": [
+          "u24"
+        ],
+        "quote": "I'll send notes."
+      }
+    ],
+    "emerging_preference": {
+      "direction": "Go live Nov 2 with manual refresh",
+      "reason": "explicit support from Mei and Erik, conditional Nneka, no open objection"
+    }
+  },
+  "executive_summary": {
+    "title": "When should the claims dashboard go live: November 2 or November 16?",
+    "counts": {
+      "options": 2,
+      "dropped": 0,
+      "open_objections": 0,
+      "open_blockers": 3,
+      "unowned_actions": 1
+    },
+    "preference": "Go live Nov 2 with manual refresh"
+  },
+  "traps": [
+    "Jonas's two 'Yeah' lines are backchannel, never support",
+    "'Great, so that one then?' is a question by the facilitator; 'that one' resolves to November 2 only through context",
+    "'Nikka' is Nneka",
+    "Mei declined the week of the 9th, so the refresh action is only partly owned and that week has no owner",
+    "Erik's 'fine with the second' follows Mei's offer to run the refresh; do not drop it as backchannel",
+    "Nneka moves from Nov 16 to a conditional Nov 2; do not count both"
+  ],
+  "card_must_include": [
+    "Oct 23",
+    "Oct 21",
+    "week of the 9th"
+  ],
+  "card_must_not_include": [
+    "Jonas supports"
+  ]
+}

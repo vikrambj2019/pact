@@ -1,0 +1,4154 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "50100dc3-7c88-4ec8-90f3-6b11290cebc5",
+    "card_version": 1,
+    "topic": {
+      "title": "Hiking 04 - interleaved decisions, sarcasm, misquotes, a retraction, a returning member",
+      "problem": "Hiking 04 - interleaved decisions, sarcasm, misquotes, a retraction, a returning member",
+      "decision_requested": "Hiking 04 - interleaved decisions, sarcasm, misquotes, a retraction, a returning member",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "Sam",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Priya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_4",
+        "name": "Maya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_5",
+        "name": "Leo",
+        "role": "participant",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_4",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_5",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": []
+    },
+    "criteria": [
+      {
+        "description": "Trip must not be excessively expensive.",
+        "raised_by": "sim_4",
+        "id": "criteria_cost",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "A hut-to-hut experience is strongly preferred by Leo.",
+        "raised_by": "sim_5",
+        "id": "criteria_hut_experience",
+        "source_message_ids": [
+          "m006"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Accommodation must have a kitchen (Maya intends to cook to save money).",
+        "raised_by": "sim_4",
+        "id": "criteria_kitchen",
+        "source_message_ids": [
+          "m056"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Accommodation should be close to a cable car; Leo wants at least a couple of high-altitude days.",
+        "raised_by": "sim_5",
+        "id": "criteria_cable_car_access",
+        "source_message_ids": [
+          "m077"
+        ],
+        "revision": 1
+      }
+    ],
+    "proposals": [
+      {
+        "title": "Patagonia \u2013 Torres del Paine",
+        "description": "Hiking trip to Torres del Paine, Patagonia.",
+        "proposed_by": "sim_1",
+        "status": "proposed",
+        "id": "proposal_patagonia",
+        "source_message_ids": [
+          "m002"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Dolomites \u2013 hut to hut",
+        "description": "Hut-to-hut hiking in the Dolomites, staying in rifugi.",
+        "proposed_by": "sim_2",
+        "status": "proposed",
+        "id": "proposal_dolomites_hut",
+        "source_message_ids": [
+          "m003"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Dates: Nov 14 to 21",
+        "description": "Trip dates November 14 to 21.",
+        "proposed_by": "human_admin",
+        "status": "proposed",
+        "id": "proposal_dates_nov14_21",
+        "source_message_ids": [
+          "m007"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Budget: $2,500 per person all-in",
+        "description": "Maximum per-person budget of $2,500 covering all costs.",
+        "proposed_by": "human_admin",
+        "status": "proposed",
+        "id": "proposal_budget_2500",
+        "source_message_ids": [
+          "m013"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Dolomites \u2013 valley-based day hikes",
+        "description": "Valley hiking in the Dolomites from a base accommodation (huts closed by Nov 14).",
+        "proposed_by": "sim_2",
+        "status": "under_consideration",
+        "id": "proposal_dolomites_valley",
+        "source_message_ids": [
+          "m031"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Chalet in Ortisei",
+        "description": "Six-bed chalet in Ortisei, $2,240 for the week (~$373 per person).",
+        "proposed_by": "sim_2",
+        "status": "proposed",
+        "id": "proposal_chalet_ortisei",
+        "source_message_ids": [
+          "m041"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Rental cars (two cars for the week)",
+        "description": "Two rental cars for the week, estimated $560 total (~$93 per person plus fuel).",
+        "proposed_by": "sim_3",
+        "status": "proposed",
+        "id": "proposal_rental_cars",
+        "source_message_ids": [
+          "m059"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Train Venice\u2013Bolzano + bus into valley",
+        "description": "Take the train from Venice to Bolzano, then a bus into the Dolomites valley. Slower but cheaper than rental cars.",
+        "proposed_by": "sim_2",
+        "status": "proposed",
+        "id": "proposal_train_bus",
+        "source_message_ids": [
+          "m063"
+        ],
+        "revision": 1
+      }
+    ],
+    "claims": [
+      {
+        "statement": "Alex retracts prior $1,300 Patagonia flight claim \u2014 it was a spring fare. Confirms $1,800 is correct for Nov 14\u201321 dates.",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_alex_patagonia_flights_1300",
+        "source_message_ids": [
+          "m045"
+        ],
+        "revision": 2,
+        "retracted": true
+      },
+      {
+        "statement": "Patagonia flights for Nov 14\u201321 from SFO are $1,800 round trip (Priya checked). Alex's $1,300 figure was for a different, older fare.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_patagonia_flights_1800",
+        "source_message_ids": [
+          "m044"
+        ],
+        "revision": 2
+      },
+      {
+        "statement": "Flights to Venice (Dolomites) are around $900, with a train connection to Cortina.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_dolomites_flights_900",
+        "source_message_ids": [
+          "m023"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Dolomites huts are basically all closed by mid-November.",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_alex_dolomites_huts_closed",
+        "source_message_ids": [
+          "m024"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Most rifugi around Cortina and Val Gardena close between late October and about Nov 5, based on Priya's review of their websites.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_rifugi_close_oct_nov5",
+        "source_message_ids": [
+          "m030"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Cable cars in the Dolomite valleys still run until early December (Priya believes).",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_cable_cars_dec",
+        "source_message_ids": [
+          "m034"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Chalet in Ortisei: 6 beds, $2,240 for the week, approximately $373 per person.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_chalet_price",
+        "source_message_ids": [
+          "m041"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Estimated Dolomites total: flights ~$900 + chalet ~$373 + food ~$500 = ~$1,800 per person, leaving room under the $2,500 cap.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_maya_dolomites_budget_estimate",
+        "source_message_ids": [
+          "m042"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Two rental cars for the week cost about $560 total, approximately $93 per person plus fuel.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_jordan_rental_cars_560",
+        "source_message_ids": [
+          "m059"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Italy requires winter tires or chains from November 15 (Maya believes); the trip dates Nov 14\u201321 straddle this requirement.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_maya_winter_tires_nov15",
+        "source_message_ids": [
+          "m060"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "The chalet in Ortisei is a short walk from the Seceda lift.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_seceda_lift_walk",
+        "source_message_ids": [
+          "m078"
+        ],
+        "revision": 1
+      }
+    ],
+    "assumptions": [
+      {
+        "description": "Leo must be back by November 22.",
+        "raised_by": "sim_5",
+        "id": "assumption_leo_back_22nd",
+        "source_message_ids": [
+          "m012"
+        ],
+        "revision": 1
+      }
+    ],
+    "arguments": [
+      {
+        "proposal_id": "proposal_patagonia",
+        "stance": "supports",
+        "summary": "Alex claims airfares for Patagonia will drop if they wait a week.",
+        "made_by": "sim_1",
+        "id": "arg_alex_flights_will_drop",
+        "source_message_ids": [
+          "m021"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "arg_alex_flights_will_drop",
+        "stance": "opposes",
+        "summary": "Jordan (sarcastically) rejects the claim that airfares will fall; implies prices may not drop.",
+        "made_by": "sim_3",
+        "id": "arg_jordan_sarcasm_flights",
+        "source_message_ids": [
+          "m022"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites_hut",
+        "stance": "opposes",
+        "summary": "Alex argues that Dolomites huts close before mid-November, making hut-to-hut infeasible for the proposed dates.",
+        "made_by": "sim_1",
+        "id": "arg_alex_huts_closed_vs_dolomites",
+        "source_message_ids": [
+          "m024"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_patagonia",
+        "stance": "opposes",
+        "summary": "Maya argues that $1,800 flights to Patagonia make it difficult to stay within the $2,500 budget.",
+        "made_by": "sim_4",
+        "id": "arg_maya_patagonia_over_budget",
+        "source_message_ids": [
+          "m025"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "supports",
+        "summary": "Priya argues valley hiking is still great as cable cars run until early December.",
+        "made_by": "sim_2",
+        "id": "arg_priya_valley_still_good",
+        "source_message_ids": [
+          "m034"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "supports",
+        "summary": "Valley hiking eliminates hut fees, making it cheaper.",
+        "made_by": "sim_4",
+        "id": "arg_maya_valley_cheaper",
+        "source_message_ids": [
+          "m036"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "supports",
+        "summary": "Jordan updated preference to Dolomites after Priya revealed the flight price difference.",
+        "made_by": "sim_3",
+        "id": "arg_jordan_price_diff_changed_view",
+        "source_message_ids": [
+          "m040"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_patagonia",
+        "stance": "supports",
+        "summary": "Alex argues Patagonia is still the better trip despite higher flight cost.",
+        "made_by": "sim_1",
+        "id": "arg_alex_patagonia_better_trip",
+        "source_message_ids": [
+          "m046"
+        ],
+        "revision": 1
+      }
+    ],
+    "positions": [
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "agree",
+        "summary": "Alex agrees to Nov 14\u201321 dates.",
+        "id": "pos_alex_dates",
+        "source_message_ids": [
+          "m008"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "agree",
+        "summary": "Priya agrees to Nov 14\u201321 dates.",
+        "id": "pos_priya_dates",
+        "source_message_ids": [
+          "m009"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "agree",
+        "summary": "Jordan agrees to Nov 14\u201321 dates.",
+        "id": "pos_jordan_dates",
+        "source_message_ids": [
+          "m010"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "agree",
+        "summary": "Maya agrees to Nov 14\u201321 dates.",
+        "id": "pos_maya_dates",
+        "source_message_ids": [
+          "m011"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "agree",
+        "summary": "Leo agrees to Nov 14\u201321 dates; must be back by Nov 22.",
+        "id": "pos_leo_dates",
+        "source_message_ids": [
+          "m012"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "agree",
+        "summary": "Alex agrees to the $2,500 budget.",
+        "id": "pos_alex_budget",
+        "source_message_ids": [
+          "m014"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "agree",
+        "summary": "Priya agrees to the $2,500 budget.",
+        "id": "pos_priya_budget",
+        "source_message_ids": [
+          "m015"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "agree",
+        "summary": "Jordan agrees to the $2,500 budget.",
+        "id": "pos_jordan_budget",
+        "source_message_ids": [
+          "m016"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "agree",
+        "summary": "Maya agrees to the $2,500 cap but would prefer spending less.",
+        "id": "pos_maya_budget",
+        "source_message_ids": [
+          "m017"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "agree",
+        "summary": "Leo agrees to the $2,500 budget.",
+        "id": "pos_leo_budget",
+        "source_message_ids": [
+          "m018"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Jordan prefers Dolomites valley option because it is cheaper.",
+        "id": "pos_jordan_dolomites_valley",
+        "source_message_ids": [
+          "m038"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Priya votes Dolomites in the formal vote.",
+        "id": "pos_priya_vote_dolomites",
+        "source_message_ids": [
+          "m048"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Jordan votes Dolomites in the formal vote.",
+        "id": "pos_jordan_vote_dolomites",
+        "source_message_ids": [
+          "m049"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Maya votes Dolomites in the formal vote.",
+        "id": "pos_maya_vote_dolomites",
+        "source_message_ids": [
+          "m050"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_patagonia",
+        "stance": "agree",
+        "summary": "Alex votes Patagonia in the formal vote.",
+        "id": "pos_alex_vote_patagonia",
+        "source_message_ids": [
+          "m051"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "human_admin",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Sam votes Dolomites; notes 4 to 1 result.",
+        "id": "pos_sam_vote_dolomites",
+        "source_message_ids": [
+          "m052"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Alex reaffirms reluctant acceptance of Dolomites decision; dissent noted alongside Leo's.",
+        "id": "pos_alex_reluctant_dolomites",
+        "source_message_ids": [
+          "m075"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_chalet_ortisei",
+        "stance": "agree",
+        "summary": "Jordan formally confirms the Ortisei chalet.",
+        "id": "pos_jordan_chalet",
+        "source_message_ids": [
+          "m081"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_chalet_ortisei",
+        "stance": "agree",
+        "summary": "Maya fully confirms the Ortisei chalet after reviewing kitchen photos \u2014 no remaining conditions.",
+        "conditions": "Kitchen photos required.",
+        "id": "pos_maya_chalet_conditional",
+        "source_message_ids": [
+          "m087"
+        ],
+        "revision": 3
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_chalet_ortisei",
+        "stance": "agree",
+        "summary": "Alex formally confirms the Ortisei chalet.",
+        "id": "pos_alex_chalet",
+        "source_message_ids": [
+          "m083"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_dolomites_hut",
+        "stance": "agree",
+        "summary": "Leo clarifies he was genuinely excited about hut-to-hut and was not indifferent \u2014 his flexibility was misread as no preference.",
+        "id": "pos_leo_clarifies_not_indifferent",
+        "source_message_ids": [
+          "m069"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_patagonia",
+        "stance": "agree",
+        "summary": "Leo would prefer Patagonia (refugios provide the hut experience he wanted) over Dolomites valley hiking.",
+        "id": "pos_leo_prefers_patagonia",
+        "source_message_ids": [
+          "m071"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_dolomites_valley",
+        "stance": "agree",
+        "summary": "Leo accepts majority Dolomites decision but registers preference for Patagonia; wanted preference noted.",
+        "id": "pos_leo_accepts_majority",
+        "source_message_ids": [
+          "m074"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_chalet_ortisei",
+        "stance": "agree",
+        "summary": "Leo formally confirms the Ortisei chalet.",
+        "id": "pos_leo_chalet",
+        "source_message_ids": [
+          "m084"
+        ],
+        "revision": 1
+      }
+    ],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [
+      {
+        "type": "open_question",
+        "description": "Destination for November hiking trip to be decided.",
+        "status": "open",
+        "id": "unresolved_destination",
+        "source_message_ids": [
+          "m001"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Priya verified Dolomites hut closure dates: most close late October to ~Nov 5.",
+        "assigned_to": "sim_2",
+        "status": "resolved",
+        "id": "unresolved_hut_closure_dates",
+        "source_message_ids": [
+          "m030"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "dropped_option",
+        "description": "Dolomites hut-to-hut ruled out for Nov 14\u201321 because rifugi close before mid-November (late Oct\u2013Nov 5).",
+        "status": "resolved",
+        "id": "unresolved_dolomites_hut_dropped",
+        "source_message_ids": [
+          "m031"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "open_question",
+        "description": "Sam stated Patagonia flights as $1,300 (Alex's figure), but Priya and Alex clarified the correct Nov 14\u201321 figure is $1,800. The $1,300 was a retracted, older fare.",
+        "status": "resolved",
+        "id": "unresolved_sam_misquote_patagonia_flights",
+        "source_message_ids": [
+          "m043"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "open_question",
+        "description": "Sam assumed Leo's 'fine with anything' counted as a vote for Dolomites. Leo later clarified he had a preference for huts and would have preferred Patagonia, but ultimately accepted the majority decision (4-2 with Leo's preference noted).",
+        "status": "resolved",
+        "id": "unresolved_leo_not_in_vote",
+        "source_message_ids": [
+          "m052"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "All participants confirmed Ortisei chalet. Priya to book before Friday.",
+        "status": "resolved",
+        "id": "unresolved_chalet_availability_deadline",
+        "source_message_ids": [
+          "m087"
+        ],
+        "revision": 3
+      },
+      {
+        "type": "open_question",
+        "description": "Italy may require winter tires or chains from Nov 15. Maya to check (or defer to Jordan's car pricing research).",
+        "status": "open",
+        "id": "unresolved_winter_tires",
+        "source_message_ids": [
+          "m092"
+        ],
+        "revision": 2,
+        "assigned_to": "sim_4"
+      },
+      {
+        "type": "action_item",
+        "description": "Jordan to post rental car prices including winter tires/chains by tomorrow.",
+        "assigned_to": "sim_3",
+        "status": "open",
+        "id": "unresolved_transport_open",
+        "source_message_ids": [
+          "m090"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "action_item",
+        "description": "Priya to post train (Venice\u2013Bolzano) and bus times into the Dolomites valley.",
+        "assigned_to": "sim_2",
+        "status": "open",
+        "id": "unresolved_train_bus_times",
+        "source_message_ids": [
+          "m091"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "action_item",
+        "description": "Priya to verify November operating dates for the Seceda lift in Ortisei.",
+        "assigned_to": "sim_2",
+        "status": "open",
+        "id": "unresolved_seceda_nov_operating",
+        "source_message_ids": [
+          "m078"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Priya booked the Ortisei chalet. Confirmation in the app.",
+        "assigned_to": "sim_2",
+        "status": "resolved",
+        "id": "unresolved_priya_books_chalet",
+        "source_message_ids": [
+          "m096"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "action_item",
+        "description": "Leo to research day hike routes from Ortisei, Seceda, and Alpe di Siusi.",
+        "assigned_to": "sim_5",
+        "status": "open",
+        "id": "unresolved_day_hike_routes",
+        "source_message_ids": [
+          "m093"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Alex to look up November lift schedules in the Dolomites.",
+        "assigned_to": "sim_1",
+        "status": "open",
+        "id": "unresolved_lift_schedules",
+        "source_message_ids": [
+          "m094"
+        ],
+        "revision": 1
+      }
+    ],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "m001",
+        "speaker_id": "human_admin",
+        "text": "Team. November hiking trip. Let's actually decide this week. Destination, dates, budget.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:30:00"
+      },
+      {
+        "id": "m002",
+        "speaker_id": "sim_1",
+        "text": "Patagonia. Torres del Paine. I've been saying it for two years.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:31:00"
+      },
+      {
+        "id": "m003",
+        "speaker_id": "sim_2",
+        "text": "Dolomites, hut to hut. Rifugio dinners, mountains, done.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:32:00"
+      },
+      {
+        "id": "m004",
+        "speaker_id": "sim_3",
+        "text": "I'm good with either honestly, just tell me where to show up.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:34:00"
+      },
+      {
+        "id": "m005",
+        "speaker_id": "sim_4",
+        "text": "Either is fine if it's not crazy expensive.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:35:00"
+      },
+      {
+        "id": "m006",
+        "speaker_id": "sim_5",
+        "text": "I'm flexible on almost everything, but I'd love a proper hut-to-hut trip. Never done one.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:37:00"
+      },
+      {
+        "id": "m007",
+        "speaker_id": "human_admin",
+        "text": "Dates: Nov 14 to 21?",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:39:00"
+      },
+      {
+        "id": "m008",
+        "speaker_id": "sim_1",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:40:00"
+      },
+      {
+        "id": "m009",
+        "speaker_id": "sim_2",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:41:00"
+      },
+      {
+        "id": "m010",
+        "speaker_id": "sim_3",
+        "text": "Yes",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:42:00"
+      },
+      {
+        "id": "m011",
+        "speaker_id": "sim_4",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:43:00"
+      },
+      {
+        "id": "m012",
+        "speaker_id": "sim_5",
+        "text": "Yes, good for me. Need to be back by the 22nd.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:44:00"
+      },
+      {
+        "id": "m013",
+        "speaker_id": "human_admin",
+        "text": "Budget $2,500 per person all in?",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:46:00"
+      },
+      {
+        "id": "m014",
+        "speaker_id": "sim_1",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:47:00"
+      },
+      {
+        "id": "m015",
+        "speaker_id": "sim_2",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:48:00"
+      },
+      {
+        "id": "m016",
+        "speaker_id": "sim_3",
+        "text": "Sure.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:49:00"
+      },
+      {
+        "id": "m017",
+        "speaker_id": "sim_4",
+        "text": "Fine, ideally less.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:50:00"
+      },
+      {
+        "id": "m018",
+        "speaker_id": "sim_5",
+        "text": "Fine by me. Heading into a meeting, back tonight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:51:00"
+      },
+      {
+        "id": "m019",
+        "speaker_id": "sim_1",
+        "text": "Patagonia flights are about $1,300 round trip. I checked earlier.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:57:00"
+      },
+      {
+        "id": "m020",
+        "speaker_id": "sim_2",
+        "text": "I just checked for Nov 14 to 21 specifically and I'm seeing $1,800 from SFO.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T12:59:00"
+      },
+      {
+        "id": "m021",
+        "speaker_id": "sim_1",
+        "text": "Then wait a week, they'll drop. They always drop.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:00:00"
+      },
+      {
+        "id": "m022",
+        "speaker_id": "sim_3",
+        "text": "Oh sure, because airfare famously only goes down.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:01:00"
+      },
+      {
+        "id": "m023",
+        "speaker_id": "sim_2",
+        "text": "Dolomites is around $900 into Venice, and there's a train to Cortina.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:03:00"
+      },
+      {
+        "id": "m024",
+        "speaker_id": "sim_1",
+        "text": "Fair, but the Dolomites huts are basically all closed by mid-November.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:04:00"
+      },
+      {
+        "id": "m025",
+        "speaker_id": "sim_4",
+        "text": "Oh great, $1,800 for flights. Budget's just a suggestion I guess.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:05:00"
+      },
+      {
+        "id": "m026",
+        "speaker_id": "sim_2",
+        "text": "Alex, hut opening dates vary. I'll check the actual dates tonight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:07:00"
+      },
+      {
+        "id": "m027",
+        "speaker_id": "sim_1",
+        "text": "Priya's flight number can't be right, I saw $1,300.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:08:00"
+      },
+      {
+        "id": "m028",
+        "speaker_id": "sim_2",
+        "text": "Al, mine is for the exact dates. Yours may have been for another month.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:09:00"
+      },
+      {
+        "id": "m029",
+        "speaker_id": "sim_1",
+        "text": "Could be. Patagonia is still worth it.",
+        "source": "simulated",
+        "recorded_at": "2026-09-17T13:11:00"
+      },
+      {
+        "id": "m030",
+        "speaker_id": "sim_2",
+        "text": "Hut update. I went through the websites of the main rifugi around Cortina and Val Gardena. Most close between late October and about Nov 5.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:11:00"
+      },
+      {
+        "id": "m031",
+        "speaker_id": "sim_2",
+        "text": "So for Nov 14 to 21, hut to hut is basically off the table. Al was right about that.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:12:00"
+      },
+      {
+        "id": "m032",
+        "speaker_id": "sim_1",
+        "text": "Told you.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:13:00"
+      },
+      {
+        "id": "m033",
+        "speaker_id": "sim_3",
+        "text": "So it's just valley hiking in the Dolomites then? Day hikes from a base?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:15:00"
+      },
+      {
+        "id": "m034",
+        "speaker_id": "sim_2",
+        "text": "Yes, and that could be great. I think the cable cars in the valleys still run until early December.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:16:00"
+      },
+      {
+        "id": "m035",
+        "speaker_id": "human_admin",
+        "text": "Leo said he's fine with anything, so that's Leo covered.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:18:00"
+      },
+      {
+        "id": "m036",
+        "speaker_id": "sim_4",
+        "text": "Valley hiking is cheaper too, no hut fees.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:19:00"
+      },
+      {
+        "id": "m037",
+        "speaker_id": "human_admin",
+        "text": "J, are you on team Dolomites then?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:20:00"
+      },
+      {
+        "id": "m038",
+        "speaker_id": "sim_3",
+        "text": "Yeah, if it's cheaper. Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:21:00"
+      },
+      {
+        "id": "m039",
+        "speaker_id": "sim_1",
+        "text": "JD, come on, you said either.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:22:00"
+      },
+      {
+        "id": "m040",
+        "speaker_id": "sim_3",
+        "text": "I said either, then Priya found the price difference.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:23:00"
+      },
+      {
+        "id": "m041",
+        "speaker_id": "sim_2",
+        "text": "Separate thing. I found a chalet in Ortisei. Six beds, $2,240 for the week, so about $373 each.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:26:00"
+      },
+      {
+        "id": "m042",
+        "speaker_id": "sim_4",
+        "text": "$373 is fine. Flights $900, chalet $373, food maybe $500. That's about $1,800, so there's room.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:28:00"
+      },
+      {
+        "id": "m043",
+        "speaker_id": "human_admin",
+        "text": "So Patagonia flights are $1,300 like Alex said and the Dolomites total is about $1,800.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:30:00"
+      },
+      {
+        "id": "m044",
+        "speaker_id": "sim_2",
+        "text": "Sam, I said $1,800 for the Patagonia flights. Alex's $1,300 was an older number.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:31:00"
+      },
+      {
+        "id": "m045",
+        "speaker_id": "sim_1",
+        "text": "She's right. Scratch my $1,300, that was a spring fare. $1,800 is right for these dates.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:33:00"
+      },
+      {
+        "id": "m046",
+        "speaker_id": "sim_1",
+        "text": "But Patagonia is still the better trip.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:34:00"
+      },
+      {
+        "id": "m047",
+        "speaker_id": "human_admin",
+        "text": "Ok, calling it. Vote. Patagonia or the Dolomites (valley-based)? One word please.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:37:00"
+      },
+      {
+        "id": "m048",
+        "speaker_id": "sim_2",
+        "text": "Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:38:00"
+      },
+      {
+        "id": "m049",
+        "speaker_id": "sim_3",
+        "text": "Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:39:00"
+      },
+      {
+        "id": "m050",
+        "speaker_id": "sim_4",
+        "text": "Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:40:00"
+      },
+      {
+        "id": "m051",
+        "speaker_id": "sim_1",
+        "text": "Patagonia.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:41:00"
+      },
+      {
+        "id": "m052",
+        "speaker_id": "human_admin",
+        "text": "Dolomites from me too. That's 4 to 1, and Leo's fine with anything, so it's decided.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:43:00"
+      },
+      {
+        "id": "m053",
+        "speaker_id": "sim_1",
+        "text": "Fine. I'm not thrilled but fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:45:00"
+      },
+      {
+        "id": "m054",
+        "speaker_id": "sim_2",
+        "text": "Back to the chalet. It's free that week, but I think it'll be gone by Friday.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:50:00"
+      },
+      {
+        "id": "m055",
+        "speaker_id": "sim_3",
+        "text": "Looks great. I'm in on the chalet.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:52:00"
+      },
+      {
+        "id": "m056",
+        "speaker_id": "sim_4",
+        "text": "Chalet is fine cost-wise. I'd want to see the kitchen though, I'd cook to save money.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:53:00"
+      },
+      {
+        "id": "m057",
+        "speaker_id": "human_admin",
+        "text": "Leaning yes on the chalet. Alex?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:55:00"
+      },
+      {
+        "id": "m058",
+        "speaker_id": "sim_1",
+        "text": "I'll go wherever. Chalet's fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T07:56:00"
+      },
+      {
+        "id": "m059",
+        "speaker_id": "sim_3",
+        "text": "Rental cars? Two cars for the week is about $560 total, so about $93 each plus fuel.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:00:00"
+      },
+      {
+        "id": "m060",
+        "speaker_id": "sim_4",
+        "text": "Careful, I think Italy requires winter tires or chains from Nov 15. Our dates straddle that.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:01:00"
+      },
+      {
+        "id": "m061",
+        "speaker_id": "sim_3",
+        "text": "Rental companies include them, no?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:02:00"
+      },
+      {
+        "id": "m062",
+        "speaker_id": "sim_4",
+        "text": "Not sure. Probably costs extra.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:03:00"
+      },
+      {
+        "id": "m063",
+        "speaker_id": "sim_2",
+        "text": "We could also take the train from Venice to Bolzano and then a bus into the valley. Slower but cheap.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:06:00"
+      },
+      {
+        "id": "m064",
+        "speaker_id": "human_admin",
+        "text": "Let's not decide transport yet. Jordan, can you price cars including tires?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:08:00"
+      },
+      {
+        "id": "m065",
+        "speaker_id": "sim_3",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:09:00"
+      },
+      {
+        "id": "m066",
+        "speaker_id": "sim_2",
+        "text": "I'll look at the train and bus times.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T08:10:00"
+      },
+      {
+        "id": "m067",
+        "speaker_id": "sim_5",
+        "text": "Catching up. Dolomites valley hiking? I thought we were doing huts?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:10:00"
+      },
+      {
+        "id": "m068",
+        "speaker_id": "human_admin",
+        "text": "The huts close before mid-Nov, Priya checked. So valley hiking from a chalet. Everyone's on board, and you said you're fine with anything.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:14:00"
+      },
+      {
+        "id": "m069",
+        "speaker_id": "sim_5",
+        "text": "I said I was flexible, not that I didn't care. I was really excited about the huts.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:16:00"
+      },
+      {
+        "id": "m070",
+        "speaker_id": "sim_2",
+        "text": "Sorry Leo, the huts really do close before our dates.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:18:00"
+      },
+      {
+        "id": "m071",
+        "speaker_id": "sim_5",
+        "text": "Ok. Then honestly I'd rather do Patagonia with the refugios, that's the hut experience.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:21:00"
+      },
+      {
+        "id": "m072",
+        "speaker_id": "sim_1",
+        "text": "Yes! Leo gets it. Patagonia.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:22:00"
+      },
+      {
+        "id": "m073",
+        "speaker_id": "human_admin",
+        "text": "Leo, we voted while you were away. It was 4 to 1 for the Dolomites. With you it's 4 to 2.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:25:00"
+      },
+      {
+        "id": "m074",
+        "speaker_id": "sim_5",
+        "text": "Fine, majority rules. I'll go along. Just wanted it noted.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:27:00"
+      },
+      {
+        "id": "m075",
+        "speaker_id": "sim_1",
+        "text": "Same here. I'll go along. Also noted.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:28:00"
+      },
+      {
+        "id": "m076",
+        "speaker_id": "human_admin",
+        "text": "Thanks both, I appreciate it.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:30:00"
+      },
+      {
+        "id": "m077",
+        "speaker_id": "sim_5",
+        "text": "Chalet's fine. Is it close to a cable car though? I'd want a couple of high days.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:33:00"
+      },
+      {
+        "id": "m078",
+        "speaker_id": "sim_2",
+        "text": "It's a short walk to the Seceda lift in Ortisei. I'll double check the November operating dates.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:35:00"
+      },
+      {
+        "id": "m079",
+        "speaker_id": "human_admin",
+        "text": "Great, so the chalet is Ortisei, six of us. Priya, can you book before Friday?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:37:00"
+      },
+      {
+        "id": "m080",
+        "speaker_id": "sim_2",
+        "text": "Not until everyone confirms. Alex, Maya, Jordan, Leo, can you each confirm the chalet?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:38:00"
+      },
+      {
+        "id": "m081",
+        "speaker_id": "sim_3",
+        "text": "Confirmed.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:39:00"
+      },
+      {
+        "id": "m082",
+        "speaker_id": "sim_4",
+        "text": "Confirmed, once I've seen the kitchen photos.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:40:00"
+      },
+      {
+        "id": "m083",
+        "speaker_id": "sim_1",
+        "text": "Confirmed.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:41:00"
+      },
+      {
+        "id": "m084",
+        "speaker_id": "sim_5",
+        "text": "Confirmed.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:42:00"
+      },
+      {
+        "id": "m085",
+        "speaker_id": "sim_2",
+        "text": "Sent the kitchen photos.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:45:00"
+      },
+      {
+        "id": "m086",
+        "speaker_id": "sim_2",
+        "text": "<Media omitted>",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:46:00"
+      },
+      {
+        "id": "m087",
+        "speaker_id": "sim_4",
+        "text": "Kitchen is fine. Fully confirmed.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:48:00"
+      },
+      {
+        "id": "m088",
+        "speaker_id": "sim_2",
+        "text": "Ok, I'll book it tonight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:49:00"
+      },
+      {
+        "id": "m089",
+        "speaker_id": "human_admin",
+        "text": "Recap: Dolomites, valley-based, Ortisei chalet, Nov 14 to 21, $2,500 cap. Transport still open. Right?",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:54:00"
+      },
+      {
+        "id": "m090",
+        "speaker_id": "sim_3",
+        "text": "Right. I'll post car prices with tires by tomorrow.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:55:00"
+      },
+      {
+        "id": "m091",
+        "speaker_id": "sim_2",
+        "text": "I'll post train and bus times.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:56:00"
+      },
+      {
+        "id": "m092",
+        "speaker_id": "sim_4",
+        "text": "I'll check whether we need chains, unless Jordan finds out first.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:57:00"
+      },
+      {
+        "id": "m093",
+        "speaker_id": "sim_5",
+        "text": "I'll research day hike routes from Ortisei, Seceda and Alpe di Siusi at least.",
+        "source": "simulated",
+        "recorded_at": "2026-09-18T23:59:00"
+      },
+      {
+        "id": "m094",
+        "speaker_id": "sim_1",
+        "text": "I'll look at the November lift schedules.",
+        "source": "simulated",
+        "recorded_at": "2026-09-19T00:00:00"
+      },
+      {
+        "id": "m095",
+        "speaker_id": "human_admin",
+        "text": "Perfect. Thanks all.",
+        "source": "simulated",
+        "recorded_at": "2026-09-19T00:02:00"
+      },
+      {
+        "id": "m096",
+        "speaker_id": "sim_2",
+        "text": "Booked. Confirmation is in the app.",
+        "source": "simulated",
+        "recorded_at": "2026-09-19T04:02:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [
+      {
+        "version": 1,
+        "entity_id": "unresolved_destination",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Destination for November hiking trip to be decided.",
+          "status": "open",
+          "id": "unresolved_destination",
+          "source_message_ids": [
+            "m001"
+          ]
+        },
+        "source_message_id": "m001",
+        "quote": "Destination, dates, budget.",
+        "reason": "Admin opens the decision on destination, dates, and budget \u2014 all unresolved at this point.",
+        "recorded_at": "2026-10-07T00:35:38.251082+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_patagonia",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "title": "Patagonia \u2013 Torres del Paine",
+          "description": "Hiking trip to Torres del Paine, Patagonia.",
+          "proposed_by": "sim_1",
+          "status": "proposed",
+          "id": "proposal_patagonia",
+          "source_message_ids": [
+            "m002"
+          ]
+        },
+        "source_message_id": "m002",
+        "quote": "Patagonia. Torres del Paine.",
+        "reason": "Alex proposes Patagonia / Torres del Paine as the hiking destination.",
+        "recorded_at": "2026-10-07T00:35:38.251178+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_dolomites_hut",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "title": "Dolomites \u2013 hut to hut",
+          "description": "Hut-to-hut hiking in the Dolomites, staying in rifugi.",
+          "proposed_by": "sim_2",
+          "status": "proposed",
+          "id": "proposal_dolomites_hut",
+          "source_message_ids": [
+            "m003"
+          ]
+        },
+        "source_message_id": "m003",
+        "quote": "Dolomites, hut to hut. Rifugio dinners, mountains, done.",
+        "reason": "Priya proposes Dolomites hut-to-hut as the hiking destination.",
+        "recorded_at": "2026-10-07T00:35:38.251214+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_cost",
+        "section": "criteria",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "description": "Trip must not be excessively expensive.",
+          "raised_by": "sim_4",
+          "id": "criteria_cost",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "Either is fine if it's not crazy expensive.",
+        "reason": "Maya sets cost as an evaluation criterion \u2014 destination must not be excessively expensive.",
+        "recorded_at": "2026-10-07T00:35:38.251239+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_hut_experience",
+        "section": "criteria",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "description": "A hut-to-hut experience is strongly preferred by Leo.",
+          "raised_by": "sim_5",
+          "id": "criteria_hut_experience",
+          "source_message_ids": [
+            "m006"
+          ]
+        },
+        "source_message_id": "m006",
+        "quote": "I'd love a proper hut-to-hut trip. Never done one.",
+        "reason": "Leo expresses a preference for a hut-to-hut experience as a criterion.",
+        "recorded_at": "2026-10-07T00:35:38.251254+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_dates_nov14_21",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "title": "Dates: Nov 14 to 21",
+          "description": "Trip dates November 14 to 21.",
+          "proposed_by": "human_admin",
+          "status": "proposed",
+          "id": "proposal_dates_nov14_21",
+          "source_message_ids": [
+            "m007"
+          ]
+        },
+        "source_message_id": "m007",
+        "quote": "Dates: Nov 14 to 21?",
+        "reason": "Admin proposes November 14\u201321 as the trip dates.",
+        "recorded_at": "2026-10-07T00:35:38.251271+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_dates",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "agree",
+          "summary": "Alex agrees to Nov 14\u201321 dates.",
+          "id": "pos_alex_dates",
+          "source_message_ids": [
+            "m008"
+          ]
+        },
+        "source_message_id": "m008",
+        "quote": "Yes.",
+        "reason": "Alex confirms Nov 14\u201321 dates.",
+        "recorded_at": "2026-10-07T00:35:38.251292+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_priya_dates",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "agree",
+          "summary": "Priya agrees to Nov 14\u201321 dates.",
+          "id": "pos_priya_dates",
+          "source_message_ids": [
+            "m009"
+          ]
+        },
+        "source_message_id": "m009",
+        "quote": "Yes.",
+        "reason": "Priya confirms Nov 14\u201321 dates.",
+        "recorded_at": "2026-10-07T00:35:38.251310+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_dates",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "agree",
+          "summary": "Jordan agrees to Nov 14\u201321 dates.",
+          "id": "pos_jordan_dates",
+          "source_message_ids": [
+            "m010"
+          ]
+        },
+        "source_message_id": "m010",
+        "quote": "Yes",
+        "reason": "Jordan confirms Nov 14\u201321 dates.",
+        "recorded_at": "2026-10-07T00:35:38.251328+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_dates",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "agree",
+          "summary": "Maya agrees to Nov 14\u201321 dates.",
+          "id": "pos_maya_dates",
+          "source_message_ids": [
+            "m011"
+          ]
+        },
+        "source_message_id": "m011",
+        "quote": "Yes.",
+        "reason": "Maya confirms Nov 14\u201321 dates.",
+        "recorded_at": "2026-10-07T00:35:38.251352+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_dates",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "agree",
+          "summary": "Leo agrees to Nov 14\u201321 dates; must be back by Nov 22.",
+          "id": "pos_leo_dates",
+          "source_message_ids": [
+            "m012"
+          ]
+        },
+        "source_message_id": "m012",
+        "quote": "Yes, good for me. Need to be back by the 22nd.",
+        "reason": "Leo confirms Nov 14\u201321 dates with a constraint of being back by the 22nd.",
+        "recorded_at": "2026-10-07T00:35:38.251371+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "assumption_leo_back_22nd",
+        "section": "assumptions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "description": "Leo must be back by November 22.",
+          "raised_by": "sim_5",
+          "id": "assumption_leo_back_22nd",
+          "source_message_ids": [
+            "m012"
+          ]
+        },
+        "source_message_id": "m012",
+        "quote": "Need to be back by the 22nd.",
+        "reason": "Leo states a hard constraint: must return by November 22.",
+        "recorded_at": "2026-10-07T00:35:38.251385+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_budget_2500",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "title": "Budget: $2,500 per person all-in",
+          "description": "Maximum per-person budget of $2,500 covering all costs.",
+          "proposed_by": "human_admin",
+          "status": "proposed",
+          "id": "proposal_budget_2500",
+          "source_message_ids": [
+            "m013"
+          ]
+        },
+        "source_message_id": "m013",
+        "quote": "Budget $2,500 per person all in?",
+        "reason": "Admin proposes a $2,500 per person all-in budget.",
+        "recorded_at": "2026-10-07T00:35:38.251403+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_budget",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "agree",
+          "summary": "Alex agrees to the $2,500 budget.",
+          "id": "pos_alex_budget",
+          "source_message_ids": [
+            "m014"
+          ]
+        },
+        "source_message_id": "m014",
+        "quote": "Fine.",
+        "reason": "Alex accepts the $2,500 budget.",
+        "recorded_at": "2026-10-07T00:35:38.251422+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_priya_budget",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "agree",
+          "summary": "Priya agrees to the $2,500 budget.",
+          "id": "pos_priya_budget",
+          "source_message_ids": [
+            "m015"
+          ]
+        },
+        "source_message_id": "m015",
+        "quote": "Fine.",
+        "reason": "Priya accepts the $2,500 budget.",
+        "recorded_at": "2026-10-07T00:35:38.251439+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_budget",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "agree",
+          "summary": "Jordan agrees to the $2,500 budget.",
+          "id": "pos_jordan_budget",
+          "source_message_ids": [
+            "m016"
+          ]
+        },
+        "source_message_id": "m016",
+        "quote": "Sure.",
+        "reason": "Jordan accepts the $2,500 budget.",
+        "recorded_at": "2026-10-07T00:35:38.251456+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_budget",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "agree",
+          "summary": "Maya agrees to the $2,500 cap but would prefer spending less.",
+          "id": "pos_maya_budget",
+          "source_message_ids": [
+            "m017"
+          ]
+        },
+        "source_message_id": "m017",
+        "quote": "Fine, ideally less.",
+        "reason": "Maya accepts $2,500 but prefers to come in lower.",
+        "recorded_at": "2026-10-07T00:35:38.251475+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_budget",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "agree",
+          "summary": "Leo agrees to the $2,500 budget.",
+          "id": "pos_leo_budget",
+          "source_message_ids": [
+            "m018"
+          ]
+        },
+        "source_message_id": "m018",
+        "quote": "Fine by me.",
+        "reason": "Leo accepts the $2,500 budget.",
+        "recorded_at": "2026-10-07T00:35:38.251492+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_alex_patagonia_flights_1300",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Patagonia flights are about $1,300 round trip (Alex checked earlier).",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_alex_patagonia_flights_1300",
+          "source_message_ids": [
+            "m019"
+          ]
+        },
+        "source_message_id": "m019",
+        "quote": "Patagonia flights are about $1,300 round trip. I checked earlier.",
+        "reason": "Alex claims Patagonia flights are approximately $1,300 round trip based on an earlier check.",
+        "recorded_at": "2026-10-07T00:35:38.251511+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_patagonia_flights_1800",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Patagonia flights for Nov 14\u201321 from SFO are $1,800 round trip (Priya checked).",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_patagonia_flights_1800",
+          "source_message_ids": [
+            "m020"
+          ]
+        },
+        "source_message_id": "m020",
+        "quote": "I just checked for Nov 14 to 21 specifically and I'm seeing $1,800 from SFO.",
+        "reason": "Priya states she checked and found Patagonia flights at $1,800 from SFO for the specific Nov 14\u201321 dates.",
+        "recorded_at": "2026-10-07T00:35:38.251540+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_alex_flights_will_drop",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_patagonia",
+          "stance": "supports",
+          "summary": "Alex claims airfares for Patagonia will drop if they wait a week.",
+          "made_by": "sim_1",
+          "id": "arg_alex_flights_will_drop",
+          "source_message_ids": [
+            "m021"
+          ]
+        },
+        "source_message_id": "m021",
+        "quote": "Then wait a week, they'll drop. They always drop.",
+        "reason": "Alex argues that Patagonia flight prices will decrease if they wait.",
+        "recorded_at": "2026-10-07T00:35:38.251561+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_jordan_sarcasm_flights",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "arg_alex_flights_will_drop",
+          "stance": "opposes",
+          "summary": "Jordan (sarcastically) rejects the claim that airfares will fall; implies prices may not drop.",
+          "made_by": "sim_3",
+          "id": "arg_jordan_sarcasm_flights",
+          "source_message_ids": [
+            "m022"
+          ]
+        },
+        "source_message_id": "m022",
+        "quote": "Oh sure, because airfare famously only goes down.",
+        "reason": "Jordan sarcastically dismisses Alex's claim that airfares will drop \u2014 this is an argument against the wait-and-see approach on Patagonia flights.",
+        "recorded_at": "2026-10-07T00:35:38.251577+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_dolomites_flights_900",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Flights to Venice (Dolomites) are around $900, with a train connection to Cortina.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_dolomites_flights_900",
+          "source_message_ids": [
+            "m023"
+          ]
+        },
+        "source_message_id": "m023",
+        "quote": "Dolomites is around $900 into Venice, and there's a train to Cortina.",
+        "reason": "Priya claims Dolomites flights cost around $900 into Venice, with a train connection to Cortina.",
+        "recorded_at": "2026-10-07T00:35:38.251599+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_alex_dolomites_huts_closed",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Dolomites huts are basically all closed by mid-November.",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_alex_dolomites_huts_closed",
+          "source_message_ids": [
+            "m024"
+          ]
+        },
+        "source_message_id": "m024",
+        "quote": "the Dolomites huts are basically all closed by mid-November.",
+        "reason": "Alex claims that Dolomites mountain huts are mostly closed by mid-November.",
+        "recorded_at": "2026-10-07T00:35:38.251633+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_alex_huts_closed_vs_dolomites",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites_hut",
+          "stance": "opposes",
+          "summary": "Alex argues that Dolomites huts close before mid-November, making hut-to-hut infeasible for the proposed dates.",
+          "made_by": "sim_1",
+          "id": "arg_alex_huts_closed_vs_dolomites",
+          "source_message_ids": [
+            "m024"
+          ]
+        },
+        "source_message_id": "m024",
+        "quote": "the Dolomites huts are basically all closed by mid-November.",
+        "reason": "Alex uses hut closure timing as an argument against the Dolomites hut-to-hut proposal for these dates.",
+        "recorded_at": "2026-10-07T00:35:38.251656+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_maya_patagonia_over_budget",
+        "section": "arguments",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_patagonia",
+          "stance": "opposes",
+          "summary": "Maya argues that $1,800 flights to Patagonia make it difficult to stay within the $2,500 budget.",
+          "made_by": "sim_4",
+          "id": "arg_maya_patagonia_over_budget",
+          "source_message_ids": [
+            "m025"
+          ]
+        },
+        "source_message_id": "m025",
+        "quote": "Oh great, $1,800 for flights. Budget's just a suggestion I guess.",
+        "reason": "Maya (sarcastically) argues that $1,800 Patagonia flights would put the trip over or close to budget, undermining its feasibility.",
+        "recorded_at": "2026-10-07T00:35:38.251677+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_hut_closure_dates",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to verify actual Dolomites hut closure dates for November.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_hut_closure_dates",
+          "source_message_ids": [
+            "m026"
+          ]
+        },
+        "source_message_id": "m026",
+        "quote": "Alex, hut opening dates vary. I'll check the actual dates tonight.",
+        "reason": "Priya flags that Dolomites hut closure dates vary and commits to checking them that night \u2014 open action item.",
+        "recorded_at": "2026-10-07T00:35:38.251700+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_rifugi_close_oct_nov5",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Most rifugi around Cortina and Val Gardena close between late October and about Nov 5, based on Priya's review of their websites.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_rifugi_close_oct_nov5",
+          "source_message_ids": [
+            "m030"
+          ]
+        },
+        "source_message_id": "m030",
+        "quote": "I went through the websites of the main rifugi around Cortina and Val Gardena. Most close between late October and about Nov 5.",
+        "reason": "Priya reports her research finding: most rifugi around Cortina and Val Gardena close between late October and Nov 5.",
+        "recorded_at": "2026-10-07T00:35:38.251721+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_hut_closure_dates",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Priya to verify actual Dolomites hut closure dates for November.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_hut_closure_dates",
+          "source_message_ids": [
+            "m026"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya verified Dolomites hut closure dates: most close late October to ~Nov 5.",
+          "assigned_to": "sim_2",
+          "status": "resolved",
+          "id": "unresolved_hut_closure_dates",
+          "source_message_ids": [
+            "m030"
+          ]
+        },
+        "source_message_id": "m030",
+        "quote": "I went through the websites of the main rifugi around Cortina and Val Gardena. Most close between late October and about Nov 5.",
+        "reason": "Priya has completed her action item on hut closure dates.",
+        "recorded_at": "2026-10-07T00:35:38.251744+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_dolomites_hut_dropped",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "dropped_option",
+          "description": "Dolomites hut-to-hut ruled out for Nov 14\u201321 because rifugi close before mid-November (late Oct\u2013Nov 5).",
+          "status": "resolved",
+          "id": "unresolved_dolomites_hut_dropped",
+          "source_message_ids": [
+            "m031"
+          ]
+        },
+        "source_message_id": "m031",
+        "quote": "So for Nov 14 to 21, hut to hut is basically off the table.",
+        "reason": "The Dolomites hut-to-hut option is ruled out for the Nov 14\u201321 dates due to hut closures. Recording rationale in unresolved per rules.",
+        "recorded_at": "2026-10-07T00:35:38.251775+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_dolomites_valley",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "title": "Dolomites \u2013 valley-based day hikes",
+          "description": "Valley hiking in the Dolomites from a base accommodation (huts closed by Nov 14).",
+          "proposed_by": "sim_2",
+          "status": "under_consideration",
+          "id": "proposal_dolomites_valley",
+          "source_message_ids": [
+            "m031"
+          ]
+        },
+        "source_message_id": "m031",
+        "quote": "So for Nov 14 to 21, hut to hut is basically off the table.",
+        "reason": "With huts closed, the Dolomites option shifts to valley-based hiking from a base. Introduced implicitly by Priya's finding and discussed in m033.",
+        "recorded_at": "2026-10-07T00:35:38.251792+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_cable_cars_dec",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Cable cars in the Dolomite valleys still run until early December (Priya believes).",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_cable_cars_dec",
+          "source_message_ids": [
+            "m034"
+          ]
+        },
+        "source_message_id": "m034",
+        "quote": "I think the cable cars in the valleys still run until early December.",
+        "reason": "Priya believes cable cars in the Dolomite valleys run until early December (hedged claim).",
+        "recorded_at": "2026-10-07T00:35:38.251811+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_priya_valley_still_good",
+        "section": "arguments",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "supports",
+          "summary": "Priya argues valley hiking is still great as cable cars run until early December.",
+          "made_by": "sim_2",
+          "id": "arg_priya_valley_still_good",
+          "source_message_ids": [
+            "m034"
+          ]
+        },
+        "source_message_id": "m034",
+        "quote": "Yes, and that could be great. I think the cable cars in the valleys still run until early December.",
+        "reason": "Priya argues valley-based Dolomites hiking is still viable because cable cars run through early December.",
+        "recorded_at": "2026-10-07T00:35:38.251826+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_maya_valley_cheaper",
+        "section": "arguments",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "supports",
+          "summary": "Valley hiking eliminates hut fees, making it cheaper.",
+          "made_by": "sim_4",
+          "id": "arg_maya_valley_cheaper",
+          "source_message_ids": [
+            "m036"
+          ]
+        },
+        "source_message_id": "m036",
+        "quote": "Valley hiking is cheaper too, no hut fees.",
+        "reason": "Maya argues valley hiking is cheaper due to the absence of hut fees.",
+        "recorded_at": "2026-10-07T00:35:38.251846+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_dolomites_valley",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Jordan prefers Dolomites valley option because it is cheaper.",
+          "id": "pos_jordan_dolomites_valley",
+          "source_message_ids": [
+            "m038"
+          ]
+        },
+        "source_message_id": "m038",
+        "quote": "Yeah, if it's cheaper. Dolomites.",
+        "reason": "Jordan explicitly states a preference for Dolomites (valley-based) given it is cheaper.",
+        "recorded_at": "2026-10-07T00:35:38.251866+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_jordan_price_diff_changed_view",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "supports",
+          "summary": "Jordan updated preference to Dolomites after Priya revealed the flight price difference.",
+          "made_by": "sim_3",
+          "id": "arg_jordan_price_diff_changed_view",
+          "source_message_ids": [
+            "m040"
+          ]
+        },
+        "source_message_id": "m040",
+        "quote": "I said either, then Priya found the price difference.",
+        "reason": "Jordan explains that the price difference between Patagonia and Dolomites flights, surfaced by Priya, shifted their preference.",
+        "recorded_at": "2026-10-07T00:35:38.251882+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_chalet_ortisei",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "title": "Chalet in Ortisei",
+          "description": "Six-bed chalet in Ortisei, $2,240 for the week (~$373 per person).",
+          "proposed_by": "sim_2",
+          "status": "proposed",
+          "id": "proposal_chalet_ortisei",
+          "source_message_ids": [
+            "m041"
+          ]
+        },
+        "source_message_id": "m041",
+        "quote": "I found a chalet in Ortisei. Six beds, $2,240 for the week, so about $373 each.",
+        "reason": "Priya proposes a specific chalet in Ortisei with 6 beds at $2,240/week (~$373 per person).",
+        "recorded_at": "2026-10-07T00:35:38.251901+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_chalet_price",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Chalet in Ortisei: 6 beds, $2,240 for the week, approximately $373 per person.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_chalet_price",
+          "source_message_ids": [
+            "m041"
+          ]
+        },
+        "source_message_id": "m041",
+        "quote": "Six beds, $2,240 for the week, so about $373 each.",
+        "reason": "Priya states the chalet costs $2,240 for the week (6 people = ~$373 each).",
+        "recorded_at": "2026-10-07T00:35:38.251918+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_maya_dolomites_budget_estimate",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Estimated Dolomites total: flights ~$900 + chalet ~$373 + food ~$500 = ~$1,800 per person, leaving room under the $2,500 cap.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_maya_dolomites_budget_estimate",
+          "source_message_ids": [
+            "m042"
+          ]
+        },
+        "source_message_id": "m042",
+        "quote": "$373 is fine. Flights $900, chalet $373, food maybe $500. That's about $1,800, so there's room.",
+        "reason": "Maya estimates a Dolomites total of ~$1,800 per person (flights $900 + chalet $373 + food ~$500), within the $2,500 cap.",
+        "recorded_at": "2026-10-07T00:35:38.251935+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_sam_misquote_patagonia_flights",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Sam stated Patagonia flights as $1,300 (Alex's figure), but Priya and Alex clarified the correct Nov 14\u201321 figure is $1,800. The $1,300 was a retracted, older fare.",
+          "status": "resolved",
+          "id": "unresolved_sam_misquote_patagonia_flights",
+          "source_message_ids": [
+            "m043"
+          ]
+        },
+        "source_message_id": "m043",
+        "quote": "So Patagonia flights are $1,300 like Alex said and the Dolomites total is about $1,800.",
+        "reason": "Sam misquotes the Patagonia flight price as $1,300 (Alex's retracted figure); Priya corrects this in m044. Recording as unresolved/misquote for accuracy.",
+        "recorded_at": "2026-10-07T00:35:38.251951+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_patagonia_flights_1800",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "statement": "Patagonia flights for Nov 14\u201321 from SFO are $1,800 round trip (Priya checked).",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_patagonia_flights_1800",
+          "source_message_ids": [
+            "m020"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "statement": "Patagonia flights for Nov 14\u201321 from SFO are $1,800 round trip (Priya checked). Alex's $1,300 figure was for a different, older fare.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_patagonia_flights_1800",
+          "source_message_ids": [
+            "m044"
+          ]
+        },
+        "source_message_id": "m044",
+        "quote": "Sam, I said $1,800 for the Patagonia flights. Alex's $1,300 was an older number.",
+        "reason": "Priya corrects Sam's misquote: the Patagonia flight price for Nov 14\u201321 is $1,800, not $1,300.",
+        "recorded_at": "2026-10-07T00:35:38.251981+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_alex_patagonia_flights_1300",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": {
+          "statement": "Patagonia flights are about $1,300 round trip (Alex checked earlier).",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_alex_patagonia_flights_1300",
+          "source_message_ids": [
+            "m019"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "statement": "Alex retracts prior $1,300 Patagonia flight claim \u2014 it was a spring fare. Confirms $1,800 is correct for Nov 14\u201321 dates.",
+          "made_by": "sim_1",
+          "retracted": true,
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_alex_patagonia_flights_1300",
+          "source_message_ids": [
+            "m045"
+          ]
+        },
+        "source_message_id": "m045",
+        "quote": "Scratch my $1,300, that was a spring fare. $1,800 is right for these dates.",
+        "reason": "Alex retracts his $1,300 Patagonia flight claim, confirming it was a spring fare and that $1,800 is correct for Nov 14\u201321.",
+        "recorded_at": "2026-10-07T00:35:38.252007+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_alex_patagonia_better_trip",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_patagonia",
+          "stance": "supports",
+          "summary": "Alex argues Patagonia is still the better trip despite higher flight cost.",
+          "made_by": "sim_1",
+          "id": "arg_alex_patagonia_better_trip",
+          "source_message_ids": [
+            "m046"
+          ]
+        },
+        "source_message_id": "m046",
+        "quote": "But Patagonia is still the better trip.",
+        "reason": "Alex continues to argue Patagonia is the superior destination despite the higher flight cost.",
+        "recorded_at": "2026-10-07T00:35:38.252025+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_priya_vote_dolomites",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Priya votes Dolomites in the formal vote.",
+          "id": "pos_priya_vote_dolomites",
+          "source_message_ids": [
+            "m048"
+          ]
+        },
+        "source_message_id": "m048",
+        "quote": "Dolomites.",
+        "reason": "Priya votes for Dolomites (valley-based) in the formal vote.",
+        "recorded_at": "2026-10-07T00:35:38.252052+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_vote_dolomites",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Jordan votes Dolomites in the formal vote.",
+          "id": "pos_jordan_vote_dolomites",
+          "source_message_ids": [
+            "m049"
+          ]
+        },
+        "source_message_id": "m049",
+        "quote": "Dolomites.",
+        "reason": "Jordan votes for Dolomites in the formal vote.",
+        "recorded_at": "2026-10-07T00:35:38.252070+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_vote_dolomites",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Maya votes Dolomites in the formal vote.",
+          "id": "pos_maya_vote_dolomites",
+          "source_message_ids": [
+            "m050"
+          ]
+        },
+        "source_message_id": "m050",
+        "quote": "Dolomites.",
+        "reason": "Maya votes for Dolomites in the formal vote.",
+        "recorded_at": "2026-10-07T00:35:38.252089+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_vote_patagonia",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "agree",
+          "summary": "Alex votes Patagonia in the formal vote.",
+          "id": "pos_alex_vote_patagonia",
+          "source_message_ids": [
+            "m051"
+          ]
+        },
+        "source_message_id": "m051",
+        "quote": "Patagonia.",
+        "reason": "Alex votes for Patagonia in the formal vote.",
+        "recorded_at": "2026-10-07T00:35:38.252108+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_sam_vote_dolomites",
+        "section": "positions",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "human_admin",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Sam votes Dolomites; notes 4 to 1 result.",
+          "id": "pos_sam_vote_dolomites",
+          "source_message_ids": [
+            "m052"
+          ]
+        },
+        "source_message_id": "m052",
+        "quote": "Dolomites from me too.",
+        "reason": "Sam votes for Dolomites, making it 4\u20131 among those who voted.",
+        "recorded_at": "2026-10-07T00:35:38.252130+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_leo_not_in_vote",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Sam assumed Leo's 'fine with anything' counted as a vote for Dolomites. Leo later clarified he had a preference for huts and would have preferred Patagonia, but ultimately accepted the majority decision (4-2 with Leo's preference noted).",
+          "status": "resolved",
+          "id": "unresolved_leo_not_in_vote",
+          "source_message_ids": [
+            "m052"
+          ]
+        },
+        "source_message_id": "m052",
+        "quote": "That's 4 to 1, and Leo's fine with anything, so it's decided.",
+        "reason": "Sam counted Leo as supporting the Dolomites by assuming his 'fine with anything' means agreement; Leo later disputes this. Recording as unresolved because Leo had not actually voted.",
+        "recorded_at": "2026-10-07T00:35:38.252148+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_reluctant_dolomites",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Alex reluctantly accepts Dolomites decision \u2014 not thrilled but will go along.",
+          "id": "pos_alex_reluctant_dolomites",
+          "source_message_ids": [
+            "m053"
+          ]
+        },
+        "source_message_id": "m053",
+        "quote": "Fine. I'm not thrilled but fine.",
+        "reason": "Alex accepts the Dolomites outcome but makes clear he is not enthusiastic.",
+        "recorded_at": "2026-10-07T00:35:38.252167+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_chalet_availability_deadline",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Ortisei chalet is available for the trip week but Priya believes it may be booked by Friday \u2014 booking decision urgent.",
+          "status": "open",
+          "id": "unresolved_chalet_availability_deadline",
+          "source_message_ids": [
+            "m054"
+          ]
+        },
+        "source_message_id": "m054",
+        "quote": "It's free that week, but I think it'll be gone by Friday.",
+        "reason": "Priya flags that the Ortisei chalet may not be available after Friday \u2014 time-sensitive decision.",
+        "recorded_at": "2026-10-07T00:35:38.252183+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_chalet",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Jordan is in favour of the Ortisei chalet.",
+          "id": "pos_jordan_chalet",
+          "source_message_ids": [
+            "m055"
+          ]
+        },
+        "source_message_id": "m055",
+        "quote": "I'm in on the chalet.",
+        "reason": "Jordan positively endorses the Ortisei chalet.",
+        "recorded_at": "2026-10-07T00:35:38.252203+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_chalet_conditional",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Maya supports chalet cost-wise but wants to see kitchen photos first; intends to cook to save money.",
+          "conditions": "Pending kitchen photo review.",
+          "id": "pos_maya_chalet_conditional",
+          "source_message_ids": [
+            "m056"
+          ]
+        },
+        "source_message_id": "m056",
+        "quote": "Chalet is fine cost-wise. I'd want to see the kitchen though, I'd cook to save money.",
+        "reason": "Maya conditionally supports the chalet pending review of kitchen photos; plans to cook to save money.",
+        "recorded_at": "2026-10-07T00:35:38.252226+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_kitchen",
+        "section": "criteria",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "description": "Accommodation must have a kitchen (Maya intends to cook to save money).",
+          "raised_by": "sim_4",
+          "id": "criteria_kitchen",
+          "source_message_ids": [
+            "m056"
+          ]
+        },
+        "source_message_id": "m056",
+        "quote": "I'd want to see the kitchen though, I'd cook to save money.",
+        "reason": "Maya requires a kitchen in the accommodation so she can cook and reduce costs.",
+        "recorded_at": "2026-10-07T00:35:38.252240+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_chalet",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Alex is fine with the Ortisei chalet.",
+          "id": "pos_alex_chalet",
+          "source_message_ids": [
+            "m058"
+          ]
+        },
+        "source_message_id": "m058",
+        "quote": "Chalet's fine.",
+        "reason": "Alex agrees to the Ortisei chalet.",
+        "recorded_at": "2026-10-07T00:35:38.252259+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_rental_cars",
+        "section": "proposals",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "title": "Rental cars (two cars for the week)",
+          "description": "Two rental cars for the week, estimated $560 total (~$93 per person plus fuel).",
+          "proposed_by": "sim_3",
+          "status": "proposed",
+          "id": "proposal_rental_cars",
+          "source_message_ids": [
+            "m059"
+          ]
+        },
+        "source_message_id": "m059",
+        "quote": "Rental cars? Two cars for the week is about $560 total, so about $93 each plus fuel.",
+        "reason": "Jordan proposes renting two cars for transport, estimating ~$560 total (~$93/person plus fuel).",
+        "recorded_at": "2026-10-07T00:35:38.252276+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_jordan_rental_cars_560",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Two rental cars for the week cost about $560 total, approximately $93 per person plus fuel.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_jordan_rental_cars_560",
+          "source_message_ids": [
+            "m059"
+          ]
+        },
+        "source_message_id": "m059",
+        "quote": "Two cars for the week is about $560 total, so about $93 each plus fuel.",
+        "reason": "Jordan estimates two rental cars for the week at about $560 total (~$93 per person).",
+        "recorded_at": "2026-10-07T00:35:38.252298+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_maya_winter_tires_nov15",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Italy requires winter tires or chains from November 15 (Maya believes); the trip dates Nov 14\u201321 straddle this requirement.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_maya_winter_tires_nov15",
+          "source_message_ids": [
+            "m060"
+          ]
+        },
+        "source_message_id": "m060",
+        "quote": "I think Italy requires winter tires or chains from Nov 15. Our dates straddle that.",
+        "reason": "Maya claims Italy requires winter tires or chains from November 15 (hedged), and their dates (Nov 14\u201321) straddle that requirement.",
+        "recorded_at": "2026-10-07T00:35:38.252317+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_winter_tires",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Italy may require winter tires or chains from Nov 15. Need to confirm: (1) whether this applies to rental cars in the Dolomites area, and (2) whether it costs extra.",
+          "status": "open",
+          "id": "unresolved_winter_tires",
+          "source_message_ids": [
+            "m060"
+          ]
+        },
+        "source_message_id": "m060",
+        "quote": "I think Italy requires winter tires or chains from Nov 15. Our dates straddle that.",
+        "reason": "Whether rental cars include winter tires/chains and whether they cost extra is unresolved.",
+        "recorded_at": "2026-10-07T00:35:38.252332+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_train_bus",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "title": "Train Venice\u2013Bolzano + bus into valley",
+          "description": "Take the train from Venice to Bolzano, then a bus into the Dolomites valley. Slower but cheaper than rental cars.",
+          "proposed_by": "sim_2",
+          "status": "proposed",
+          "id": "proposal_train_bus",
+          "source_message_ids": [
+            "m063"
+          ]
+        },
+        "source_message_id": "m063",
+        "quote": "We could also take the train from Venice to Bolzano and then a bus into the valley. Slower but cheap.",
+        "reason": "Priya proposes a train+bus alternative for transport: Venice \u2192 Bolzano by train, then bus into the valley.",
+        "recorded_at": "2026-10-07T00:35:38.252353+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_transport_open",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Jordan to research rental car prices including winter tires/chains for Nov 14\u201321 in the Dolomites.",
+          "assigned_to": "sim_3",
+          "status": "open",
+          "id": "unresolved_transport_open",
+          "source_message_ids": [
+            "m064"
+          ]
+        },
+        "source_message_id": "m064",
+        "quote": "Let's not decide transport yet. Jordan, can you price cars including tires?",
+        "reason": "Admin defers the transport decision and assigns Jordan an action to get rental car prices including winter tires.",
+        "recorded_at": "2026-10-07T00:35:38.252369+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_train_bus_times",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to research train (Venice\u2013Bolzano) and bus times into the Dolomites valley.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_train_bus_times",
+          "source_message_ids": [
+            "m066"
+          ]
+        },
+        "source_message_id": "m066",
+        "quote": "I'll look at the train and bus times.",
+        "reason": "Priya commits to researching train and bus times as an alternative transport option.",
+        "recorded_at": "2026-10-07T00:35:38.252387+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_clarifies_not_indifferent",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_dolomites_hut",
+          "stance": "agree",
+          "summary": "Leo clarifies he was genuinely excited about hut-to-hut and was not indifferent \u2014 his flexibility was misread as no preference.",
+          "id": "pos_leo_clarifies_not_indifferent",
+          "source_message_ids": [
+            "m069"
+          ]
+        },
+        "source_message_id": "m069",
+        "quote": "I said I was flexible, not that I didn't care. I was really excited about the huts.",
+        "reason": "Leo clarifies that 'flexible' did not mean indifferent \u2014 he had a genuine preference for hut-to-hut hiking.",
+        "recorded_at": "2026-10-07T00:35:38.252415+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_prefers_patagonia",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "agree",
+          "summary": "Leo would prefer Patagonia (refugios provide the hut experience he wanted) over Dolomites valley hiking.",
+          "id": "pos_leo_prefers_patagonia",
+          "source_message_ids": [
+            "m071"
+          ]
+        },
+        "source_message_id": "m071",
+        "quote": "Then honestly I'd rather do Patagonia with the refugios, that's the hut experience.",
+        "reason": "Leo states a clear preference for Patagonia as the hut-equivalent experience after learning Dolomites huts are closed.",
+        "recorded_at": "2026-10-07T00:35:38.252436+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_accepts_majority",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Leo accepts majority Dolomites decision but registers preference for Patagonia; wanted preference noted.",
+          "id": "pos_leo_accepts_majority",
+          "source_message_ids": [
+            "m074"
+          ]
+        },
+        "source_message_id": "m074",
+        "quote": "Fine, majority rules. I'll go along. Just wanted it noted.",
+        "reason": "Leo accepts the Dolomites majority decision while noting his preference for Patagonia on the record.",
+        "recorded_at": "2026-10-07T00:35:38.252457+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_reluctant_dolomites",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Alex reluctantly accepts Dolomites decision \u2014 not thrilled but will go along.",
+          "id": "pos_alex_reluctant_dolomites",
+          "source_message_ids": [
+            "m053"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_dolomites_valley",
+          "stance": "agree",
+          "summary": "Alex reaffirms reluctant acceptance of Dolomites decision; dissent noted alongside Leo's.",
+          "id": "pos_alex_reluctant_dolomites",
+          "source_message_ids": [
+            "m075"
+          ]
+        },
+        "source_message_id": "m075",
+        "quote": "Same here. I'll go along. Also noted.",
+        "reason": "Alex reaffirms his acceptance of the Dolomites decision while similarly registering his dissent.",
+        "recorded_at": "2026-10-07T00:35:38.252481+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_cable_car_access",
+        "section": "criteria",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "description": "Accommodation should be close to a cable car; Leo wants at least a couple of high-altitude days.",
+          "raised_by": "sim_5",
+          "id": "criteria_cable_car_access",
+          "source_message_ids": [
+            "m077"
+          ]
+        },
+        "source_message_id": "m077",
+        "quote": "Is it close to a cable car though? I'd want a couple of high days.",
+        "reason": "Leo requires proximity to a cable car for high-altitude hiking days.",
+        "recorded_at": "2026-10-07T00:35:38.252498+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_seceda_lift_walk",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "The chalet in Ortisei is a short walk from the Seceda lift.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_seceda_lift_walk",
+          "source_message_ids": [
+            "m078"
+          ]
+        },
+        "source_message_id": "m078",
+        "quote": "It's a short walk to the Seceda lift in Ortisei.",
+        "reason": "Priya states the Ortisei chalet is a short walk from the Seceda lift.",
+        "recorded_at": "2026-10-07T00:35:38.252530+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_seceda_nov_operating",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to verify November operating dates for the Seceda lift in Ortisei.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_seceda_nov_operating",
+          "source_message_ids": [
+            "m078"
+          ]
+        },
+        "source_message_id": "m078",
+        "quote": "I'll double check the November operating dates.",
+        "reason": "Priya commits to verifying Seceda lift operating dates in November \u2014 still open.",
+        "recorded_at": "2026-10-07T00:35:38.252546+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_chalet_availability_deadline",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "type": "open_question",
+          "description": "Ortisei chalet is available for the trip week but Priya believes it may be booked by Friday \u2014 booking decision urgent.",
+          "status": "open",
+          "id": "unresolved_chalet_availability_deadline",
+          "source_message_ids": [
+            "m054"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Ortisei chalet must be confirmed by all participants (Alex, Maya, Jordan, Leo) before Priya can book. Availability may lapse by Friday.",
+          "status": "open",
+          "id": "unresolved_chalet_availability_deadline",
+          "source_message_ids": [
+            "m080"
+          ]
+        },
+        "source_message_id": "m080",
+        "quote": "Not until everyone confirms. Alex, Maya, Jordan, Leo, can you each confirm the chalet?",
+        "reason": "Priya sets a prerequisite: all participants must confirm before she books the chalet. Updating the chalet unresolved item to reflect this.",
+        "recorded_at": "2026-10-07T00:35:38.252567+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_jordan_chalet",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Jordan is in favour of the Ortisei chalet.",
+          "id": "pos_jordan_chalet",
+          "source_message_ids": [
+            "m055"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Jordan formally confirms the Ortisei chalet.",
+          "id": "pos_jordan_chalet",
+          "source_message_ids": [
+            "m081"
+          ]
+        },
+        "source_message_id": "m081",
+        "quote": "Confirmed.",
+        "reason": "Jordan formally confirms the Ortisei chalet.",
+        "recorded_at": "2026-10-07T00:35:38.252594+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_chalet_conditional",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Maya supports chalet cost-wise but wants to see kitchen photos first; intends to cook to save money.",
+          "conditions": "Pending kitchen photo review.",
+          "id": "pos_maya_chalet_conditional",
+          "source_message_ids": [
+            "m056"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Maya confirms pending kitchen photo review.",
+          "conditions": "Kitchen photos required.",
+          "id": "pos_maya_chalet_conditional",
+          "source_message_ids": [
+            "m082"
+          ]
+        },
+        "source_message_id": "m082",
+        "quote": "Confirmed, once I've seen the kitchen photos.",
+        "reason": "Maya conditionally confirms the chalet, pending kitchen photos.",
+        "recorded_at": "2026-10-07T00:35:38.252624+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_alex_chalet",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Alex is fine with the Ortisei chalet.",
+          "id": "pos_alex_chalet",
+          "source_message_ids": [
+            "m058"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Alex formally confirms the Ortisei chalet.",
+          "id": "pos_alex_chalet",
+          "source_message_ids": [
+            "m083"
+          ]
+        },
+        "source_message_id": "m083",
+        "quote": "Confirmed.",
+        "reason": "Alex formally confirms the Ortisei chalet.",
+        "recorded_at": "2026-10-07T00:35:38.252656+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_leo_chalet",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Leo formally confirms the Ortisei chalet.",
+          "id": "pos_leo_chalet",
+          "source_message_ids": [
+            "m084"
+          ]
+        },
+        "source_message_id": "m084",
+        "quote": "Confirmed.",
+        "reason": "Leo formally confirms the Ortisei chalet.",
+        "recorded_at": "2026-10-07T00:35:38.252677+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "pos_maya_chalet_conditional",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Maya confirms pending kitchen photo review.",
+          "conditions": "Kitchen photos required.",
+          "id": "pos_maya_chalet_conditional",
+          "source_message_ids": [
+            "m082"
+          ],
+          "revision": 2
+        },
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_chalet_ortisei",
+          "stance": "agree",
+          "summary": "Maya fully confirms the Ortisei chalet after reviewing kitchen photos \u2014 no remaining conditions.",
+          "id": "pos_maya_chalet_conditional",
+          "source_message_ids": [
+            "m087"
+          ]
+        },
+        "source_message_id": "m087",
+        "quote": "Kitchen is fine. Fully confirmed.",
+        "reason": "Maya removes her condition and fully confirms the chalet after seeing kitchen photos.",
+        "recorded_at": "2026-10-07T00:35:38.252705+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_chalet_availability_deadline",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Ortisei chalet must be confirmed by all participants (Alex, Maya, Jordan, Leo) before Priya can book. Availability may lapse by Friday.",
+          "status": "open",
+          "id": "unresolved_chalet_availability_deadline",
+          "source_message_ids": [
+            "m080"
+          ],
+          "revision": 2
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "All participants confirmed Ortisei chalet. Priya to book before Friday.",
+          "status": "resolved",
+          "id": "unresolved_chalet_availability_deadline",
+          "source_message_ids": [
+            "m087"
+          ]
+        },
+        "source_message_id": "m087",
+        "quote": "Kitchen is fine. Fully confirmed.",
+        "reason": "All participants have now confirmed the chalet; Priya can proceed to book.",
+        "recorded_at": "2026-10-07T00:35:38.252725+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_priya_books_chalet",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to book the Ortisei chalet tonight.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_priya_books_chalet",
+          "source_message_ids": [
+            "m088"
+          ]
+        },
+        "source_message_id": "m088",
+        "quote": "Ok, I'll book it tonight.",
+        "reason": "Priya commits to booking the chalet that night.",
+        "recorded_at": "2026-10-07T00:35:38.252742+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_transport_open",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Jordan to research rental car prices including winter tires/chains for Nov 14\u201321 in the Dolomites.",
+          "assigned_to": "sim_3",
+          "status": "open",
+          "id": "unresolved_transport_open",
+          "source_message_ids": [
+            "m064"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Jordan to post rental car prices including winter tires/chains by tomorrow.",
+          "assigned_to": "sim_3",
+          "status": "open",
+          "id": "unresolved_transport_open",
+          "source_message_ids": [
+            "m090"
+          ]
+        },
+        "source_message_id": "m090",
+        "quote": "Right. I'll post car prices with tires by tomorrow.",
+        "reason": "Jordan commits to posting car prices including winter tires by tomorrow.",
+        "recorded_at": "2026-10-07T00:35:38.252774+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_train_bus_times",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Priya to research train (Venice\u2013Bolzano) and bus times into the Dolomites valley.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_train_bus_times",
+          "source_message_ids": [
+            "m066"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to post train (Venice\u2013Bolzano) and bus times into the Dolomites valley.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_train_bus_times",
+          "source_message_ids": [
+            "m091"
+          ]
+        },
+        "source_message_id": "m091",
+        "quote": "I'll post train and bus times.",
+        "reason": "Priya reconfirms she will post train and bus times.",
+        "recorded_at": "2026-10-07T00:35:38.252798+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_winter_tires",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "type": "open_question",
+          "description": "Italy may require winter tires or chains from Nov 15. Need to confirm: (1) whether this applies to rental cars in the Dolomites area, and (2) whether it costs extra.",
+          "status": "open",
+          "id": "unresolved_winter_tires",
+          "source_message_ids": [
+            "m060"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "open_question",
+          "description": "Italy may require winter tires or chains from Nov 15. Maya to check (or defer to Jordan's car pricing research).",
+          "assigned_to": "sim_4",
+          "status": "open",
+          "id": "unresolved_winter_tires",
+          "source_message_ids": [
+            "m092"
+          ]
+        },
+        "source_message_id": "m092",
+        "quote": "I'll check whether we need chains, unless Jordan finds out first.",
+        "reason": "Maya commits to checking winter chain/tire requirements unless Jordan's car research covers it.",
+        "recorded_at": "2026-10-07T00:35:38.252820+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_day_hike_routes",
+        "section": "unresolved",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Leo to research day hike routes from Ortisei, Seceda, and Alpe di Siusi.",
+          "assigned_to": "sim_5",
+          "status": "open",
+          "id": "unresolved_day_hike_routes",
+          "source_message_ids": [
+            "m093"
+          ]
+        },
+        "source_message_id": "m093",
+        "quote": "I'll research day hike routes from Ortisei, Seceda and Alpe di Siusi at least.",
+        "reason": "Leo takes on the action item of researching day hike routes from Ortisei, Seceda and Alpe di Siusi.",
+        "recorded_at": "2026-10-07T00:35:38.252837+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_lift_schedules",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Alex to look up November lift schedules in the Dolomites.",
+          "assigned_to": "sim_1",
+          "status": "open",
+          "id": "unresolved_lift_schedules",
+          "source_message_ids": [
+            "m094"
+          ]
+        },
+        "source_message_id": "m094",
+        "quote": "I'll look at the November lift schedules.",
+        "reason": "Alex commits to researching November lift operating schedules in the Dolomites.",
+        "recorded_at": "2026-10-07T00:35:38.252856+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_priya_books_chalet",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Priya to book the Ortisei chalet tonight.",
+          "assigned_to": "sim_2",
+          "status": "open",
+          "id": "unresolved_priya_books_chalet",
+          "source_message_ids": [
+            "m088"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya booked the Ortisei chalet. Confirmation in the app.",
+          "assigned_to": "sim_2",
+          "status": "resolved",
+          "id": "unresolved_priya_books_chalet",
+          "source_message_ids": [
+            "m096"
+          ]
+        },
+        "source_message_id": "m096",
+        "quote": "Booked. Confirmation is in the app.",
+        "reason": "Priya confirms she has booked the Ortisei chalet; confirmation is in the app.",
+        "recorded_at": "2026-10-07T00:35:38.252878+00:00"
+      }
+    ],
+    "audit": [],
+    "bot_turns": 0,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3",
+      "sim_4",
+      "sim_5"
+    ],
+    "next_bot_index": 0,
+    "facilitation": []
+  },
+  "gold": {
+    "id": "hiking-04-interleaved-threads",
+    "level": 4,
+    "scenario_notes": "Three decisions run at once (destination, lodging, transport). Includes nicknames (J and JD = Jordan, Al = Alex), reply links in the JSON, sarcasm, a misquote and its correction, a retraction, a claim about a person's stance that the person later contradicts, a member who is absent then returns and reopens a decided question, and a conditional confirmation. The destination is decided by a vote called by Sam without an agreed decision rule; two members accept with stated reservations.",
+    "decision_question": "Where should the group go on its November hiking trip?",
+    "aliases": {
+      "Jordan": [
+        "J",
+        "JD"
+      ],
+      "Alex": [
+        "Al"
+      ]
+    },
+    "options": [
+      {
+        "name": "Dolomites, valley-based day hikes",
+        "status": "chosen (4 to 2 vote, all accepted, two with reservations)",
+        "proposed_by": "Priya",
+        "msgs": [
+          "m003",
+          "m033",
+          "m047",
+          "m048",
+          "m049",
+          "m050",
+          "m052"
+        ]
+      },
+      {
+        "name": "Patagonia (Torres del Paine)",
+        "status": "not chosen",
+        "proposed_by": "Alex",
+        "msgs": [
+          "m002",
+          "m051",
+          "m071",
+          "m072"
+        ]
+      }
+    ],
+    "preferences": [
+      {
+        "person": "Alex",
+        "stance": "Patagonia; accepts the Dolomites with reservation ('not thrilled')",
+        "msgs": [
+          "m002",
+          "m051",
+          "m053",
+          "m075"
+        ]
+      },
+      {
+        "person": "Leo",
+        "stance": "wanted hut-to-hut; on return prefers Patagonia refugios; accepts the Dolomites with reservation",
+        "msgs": [
+          "m006",
+          "m069",
+          "m071",
+          "m074"
+        ]
+      },
+      {
+        "person": "Priya",
+        "stance": "Dolomites",
+        "msgs": [
+          "m003",
+          "m048"
+        ]
+      },
+      {
+        "person": "Jordan",
+        "stance": "either at first, then Dolomites if cheaper",
+        "msgs": [
+          "m004",
+          "m038",
+          "m040",
+          "m049"
+        ]
+      },
+      {
+        "person": "Maya",
+        "stance": "either if not expensive; votes Dolomites",
+        "msgs": [
+          "m005",
+          "m050"
+        ]
+      },
+      {
+        "person": "Sam",
+        "stance": "Dolomites",
+        "msgs": [
+          "m052"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Dates Nov 14 to 21",
+        "status": "agreed by all six",
+        "msgs": [
+          "m007",
+          "m008",
+          "m009",
+          "m010",
+          "m011",
+          "m012"
+        ]
+      },
+      {
+        "text": "Leo must be back by the 22nd",
+        "status": "stated",
+        "msgs": [
+          "m012"
+        ]
+      },
+      {
+        "text": "Budget $2,500 per person all in (Maya: ideally less)",
+        "status": "agreed by all six",
+        "msgs": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017",
+          "m018"
+        ]
+      },
+      {
+        "text": "Hut-to-hut is off the table for Nov 14 to 21 because the main rifugi close between late October and about Nov 5 (Priya's reading of their websites)",
+        "status": "accepted in chat; unverified externally",
+        "msgs": [
+          "m030",
+          "m031",
+          "m032"
+        ]
+      }
+    ],
+    "criteria": [
+      {
+        "text": "Cost",
+        "raised_by": [
+          "Maya",
+          "Jordan"
+        ],
+        "msgs": [
+          "m005",
+          "m017",
+          "m036",
+          "m038"
+        ]
+      },
+      {
+        "text": "Hut-to-hut experience",
+        "raised_by": [
+          "Leo",
+          "Priya"
+        ],
+        "msgs": [
+          "m003",
+          "m006",
+          "m069"
+        ]
+      },
+      {
+        "text": "Access to cable cars or lifts for high days",
+        "raised_by": [
+          "Leo"
+        ],
+        "msgs": [
+          "m077"
+        ]
+      },
+      {
+        "text": "A kitchen, so meals can be cooked to save money",
+        "raised_by": [
+          "Maya"
+        ],
+        "msgs": [
+          "m056"
+        ]
+      }
+    ],
+    "claims": [
+      {
+        "text": "Patagonia flights are about $1,300 round trip",
+        "by": "Alex",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "RETRACTED by Alex: a spring fare, older number",
+        "msgs": [
+          "m019",
+          "m027",
+          "m045"
+        ]
+      },
+      {
+        "text": "Patagonia flights are $1,800 from SFO for Nov 14 to 21",
+        "by": "Priya",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "accepted by Alex; unverified externally",
+        "msgs": [
+          "m020",
+          "m028",
+          "m044",
+          "m045"
+        ]
+      },
+      {
+        "text": "Dolomites flights around $900 into Venice; train to Cortina",
+        "by": "Priya",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m023"
+        ]
+      },
+      {
+        "text": "Dolomites huts are basically all closed by mid-November",
+        "by": "Alex",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "supported by Priya's website check (m030, m031); Alex accepts (m032)",
+        "msgs": [
+          "m024",
+          "m030",
+          "m031",
+          "m032"
+        ]
+      },
+      {
+        "text": "Cable cars in the valleys run until early December",
+        "by": "Priya",
+        "type": "factual, hedged ('I think')",
+        "checkable": true,
+        "status_in_chat": "unchallenged, unverified",
+        "msgs": [
+          "m034"
+        ]
+      },
+      {
+        "text": "Ortisei chalet: six beds, $2,240 for the week, about $373 each",
+        "by": "Priya",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged; booked",
+        "msgs": [
+          "m041",
+          "m096"
+        ]
+      },
+      {
+        "text": "Dolomites total about $1,800 per person (flights $900, chalet $373, food about $500)",
+        "by": "Maya",
+        "type": "estimate",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m042"
+        ]
+      },
+      {
+        "text": "Patagonia flights are $1,300 like Alex said (Sam's restatement)",
+        "by": "Sam",
+        "type": "misquote",
+        "checkable": false,
+        "status_in_chat": "CORRECTED by Priya, accepted by Alex",
+        "msgs": [
+          "m043",
+          "m044",
+          "m045"
+        ]
+      },
+      {
+        "text": "The chalet will probably be gone by Friday",
+        "by": "Priya",
+        "type": "prediction, hedged ('I think')",
+        "checkable": true,
+        "status_in_chat": "unchallenged; booked before Friday",
+        "msgs": [
+          "m054",
+          "m096"
+        ]
+      },
+      {
+        "text": "Two rental cars for the week cost about $560 total, about $93 each plus fuel",
+        "by": "Jordan",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged, unverified",
+        "msgs": [
+          "m059"
+        ]
+      },
+      {
+        "text": "Italy requires winter tires or chains from Nov 15",
+        "by": "Maya",
+        "type": "factual, hedged ('I think')",
+        "checkable": true,
+        "status_in_chat": "UNRESOLVED: Jordan wonders if rentals include them; Maya unsure; both assigned to check",
+        "msgs": [
+          "m060",
+          "m061",
+          "m062",
+          "m064",
+          "m092"
+        ]
+      },
+      {
+        "text": "Leo is fine with anything",
+        "by": "Sam",
+        "type": "claim about a person's stance",
+        "checkable": false,
+        "status_in_chat": "CONTRADICTED by Leo: 'flexible, not that I didn't care'",
+        "msgs": [
+          "m035",
+          "m052",
+          "m068",
+          "m069"
+        ]
+      },
+      {
+        "text": "The chalet is a short walk to the Seceda lift; November operating dates to be checked",
+        "by": "Priya",
+        "type": "factual, partly pending",
+        "checkable": true,
+        "status_in_chat": "pending check",
+        "msgs": [
+          "m078"
+        ]
+      }
+    ],
+    "agreements": [
+      {
+        "text": "Dates Nov 14 to 21",
+        "explicit_affirmers": [
+          "Alex",
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Leo",
+          "Sam"
+        ],
+        "msgs": [
+          "m007",
+          "m008",
+          "m009",
+          "m010",
+          "m011",
+          "m012"
+        ]
+      },
+      {
+        "text": "Budget $2,500 per person all in",
+        "explicit_affirmers": [
+          "Alex",
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Leo",
+          "Sam"
+        ],
+        "msgs": [
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017",
+          "m018"
+        ]
+      },
+      {
+        "text": "Destination: Dolomites, valley-based",
+        "explicit_affirmers": [
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Sam"
+        ],
+        "msgs": [
+          "m047",
+          "m048",
+          "m049",
+          "m050",
+          "m052"
+        ],
+        "accepted_with_reservation": [
+          "Alex",
+          "Leo"
+        ],
+        "reservation_msgs": [
+          "m053",
+          "m074",
+          "m075"
+        ],
+        "note": "Vote called by Sam while Leo was away; no decision rule was agreed beforehand. Leo says 'majority rules' when accepting (m074)."
+      },
+      {
+        "text": "Lodging: Ortisei chalet for six",
+        "explicit_affirmers": [
+          "Jordan",
+          "Alex",
+          "Leo",
+          "Maya",
+          "Sam",
+          "Priya"
+        ],
+        "msgs": [
+          "m055",
+          "m056",
+          "m058",
+          "m077",
+          "m079",
+          "m081",
+          "m082",
+          "m083",
+          "m084",
+          "m087"
+        ],
+        "note": "Maya's confirmation was conditional on the kitchen photos (m082) and became unconditional at m087."
+      }
+    ],
+    "other_decisions": [
+      {
+        "question": "Where should the group stay?",
+        "status": "decided: Ortisei chalet, booked by Priya",
+        "options": [
+          {
+            "name": "Ortisei chalet, six beds, $2,240 for the week",
+            "msgs": [
+              "m041",
+              "m096"
+            ]
+          }
+        ],
+        "msgs": [
+          "m041",
+          "m054",
+          "m055",
+          "m056",
+          "m057",
+          "m058",
+          "m077",
+          "m078",
+          "m079",
+          "m080",
+          "m081",
+          "m082",
+          "m083",
+          "m084",
+          "m085",
+          "m086",
+          "m087",
+          "m088",
+          "m096"
+        ]
+      },
+      {
+        "question": "How will the group get around?",
+        "status": "open",
+        "options": [
+          {
+            "name": "Two rental cars, about $93 each plus fuel",
+            "msgs": [
+              "m059"
+            ]
+          },
+          {
+            "name": "Train Venice to Bolzano, then a bus into the valley",
+            "msgs": [
+              "m063"
+            ]
+          }
+        ],
+        "open_questions": [
+          "Do rentals include winter tires or chains, and are they required from Nov 15?"
+        ],
+        "msgs": [
+          "m059",
+          "m060",
+          "m061",
+          "m062",
+          "m063",
+          "m064",
+          "m065",
+          "m066",
+          "m090",
+          "m091",
+          "m092"
+        ]
+      }
+    ],
+    "open_issues": [
+      {
+        "text": "Transport not decided: cars versus train and bus; winter tire rules unverified",
+        "msgs": [
+          "m059",
+          "m060",
+          "m061",
+          "m062",
+          "m063",
+          "m064"
+        ]
+      },
+      {
+        "text": "Alex and Leo accepted the Dolomites with reservations; Leo's stance was misreported earlier",
+        "msgs": [
+          "m053",
+          "m069",
+          "m071",
+          "m074",
+          "m075"
+        ]
+      },
+      {
+        "text": "Seceda lift November operating dates not yet confirmed",
+        "msgs": [
+          "m078",
+          "m094"
+        ]
+      }
+    ],
+    "outcome": "Destination: Dolomites, valley-based, Nov 14 to 21, $2,500 cap. Lodging: Ortisei chalet booked. Transport open.",
+    "next_steps": [
+      {
+        "who": "Jordan",
+        "task": "Price rental cars including winter tires; post tomorrow",
+        "msgs": [
+          "m064",
+          "m065",
+          "m090"
+        ]
+      },
+      {
+        "who": "Priya",
+        "task": "Post train and bus times",
+        "msgs": [
+          "m066",
+          "m091"
+        ]
+      },
+      {
+        "who": "Priya",
+        "task": "Double-check Seceda lift November operating dates",
+        "msgs": [
+          "m078"
+        ]
+      },
+      {
+        "who": "Maya",
+        "task": "Check whether chains are needed, unless Jordan finds out first",
+        "msgs": [
+          "m092"
+        ]
+      },
+      {
+        "who": "Leo",
+        "task": "Research day hike routes from Ortisei, Seceda and Alpe di Siusi",
+        "msgs": [
+          "m093"
+        ]
+      },
+      {
+        "who": "Alex",
+        "task": "Look at the November lift schedules",
+        "msgs": [
+          "m094"
+        ]
+      }
+    ],
+    "traps": [
+      {
+        "msgs": [
+          "m022"
+        ],
+        "note": "Sarcasm: 'airfare famously only goes down' means airfares may not drop. Not a real claim that they do."
+      },
+      {
+        "msgs": [
+          "m025"
+        ],
+        "note": "Sarcasm: 'budget's just a suggestion' means Maya objects to the $1,800 flight price. It is not agreement."
+      },
+      {
+        "msgs": [
+          "m028",
+          "m037",
+          "m039",
+          "m040"
+        ],
+        "note": "Nicknames: Al is Alex, J and JD are Jordan. Map them to the right people."
+      },
+      {
+        "msgs": [
+          "m035",
+          "m052",
+          "m068"
+        ],
+        "note": "Sam says Leo is fine with anything. Leo said the opposite (m006, m069). Do not record 'fine with anything' as Leo's stance."
+      },
+      {
+        "msgs": [
+          "m043",
+          "m044",
+          "m045"
+        ],
+        "note": "Misquote, correction, retraction. Final Patagonia flight figure is $1,800 for these dates. $1,300 is retracted."
+      },
+      {
+        "msgs": [
+          "m047",
+          "m052"
+        ],
+        "note": "A vote was called without an agreed rule while Leo was away."
+      },
+      {
+        "msgs": [
+          "m067",
+          "m068",
+          "m069",
+          "m071",
+          "m073",
+          "m074"
+        ],
+        "note": "Leo returns, objects, and reopens the question. Sam recaps incorrectly ('everyone's on board'). Final state: accepted by all, with reservations from Alex and Leo."
+      },
+      {
+        "msgs": [
+          "m082",
+          "m087"
+        ],
+        "note": "Conditional confirmation from Maya, later made unconditional."
+      },
+      {
+        "msgs": [
+          "m086"
+        ],
+        "note": "'<Media omitted>' carries no content. Do not infer it."
+      },
+      {
+        "msgs": [
+          "m030",
+          "m031"
+        ],
+        "note": "Priya's hut finding rests on her reading of the huts' own websites. Record the source and mark it unverified externally."
+      }
+    ],
+    "card_must_include": [
+      "Destination Dolomites, valley-based; hut-to-hut dropped because the main huts close before Nov 14 (per Priya's website check)",
+      "Alex and Leo accepted the Dolomites with reservations; Leo said he had wanted huts",
+      "Dates Nov 14 to 21 and budget $2,500 per person, agreed by all six",
+      "Lodging: Ortisei chalet, booked by Priya",
+      "Transport still open with owners: Jordan prices cars with tires, Priya train and bus times, Maya checks chains",
+      "Winter tire and chain requirement shown as unverified"
+    ],
+    "card_must_not_include": [
+      "Everyone was on board or the decision was unanimous without reservations",
+      "Leo is fine with anything",
+      "Patagonia flights are $1,300",
+      "The Dolomites huts are open in mid-November",
+      "Transport decided",
+      "Jordan or Alex confused with each other by nickname"
+    ]
+  },
+  "errors": []
+}

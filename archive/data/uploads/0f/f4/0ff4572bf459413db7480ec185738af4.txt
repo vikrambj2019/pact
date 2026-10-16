@@ -1,0 +1,90 @@
+Okafor, Dana
+0 minutes 4 seconds
+So the goal for Friday is a simple story. We want nobody walking out
+thinking we built the same thing twice, even though from our side
+it doesn't feel like duplication.
+
+Brandt, Raj
+0 minutes 22 seconds
+Right. So I went through the deck. I'd move slides 5 and 6 to the
+appendix. They're mostly about where the intelligence layer plugs in.
+
+Okafor, Dana
+0 minutes 35 seconds
+Yeah, yeah.
+
+Brandt, Raj
+0 minutes 38 seconds
+And I'd open with slide 2. What actually is clinical intelligence?
+It's a reusable capability. It's not a platform, Atlas is the
+platform. We also have services, so I want to be clear about
+the difference between a capability and a.
+
+Lindqvist, Mina
+1 minute 2 seconds
+Sorry, I thought the data foundation was part of it?
+
+Brandt, Raj
+1 minute 8 seconds
+No, I'd say that sits on top of Atlas. So the way I'd put it is
+clinical intelligence is a reusable.
+
+Osei, Tom
+1 minute 20 seconds
+And MO is the one that uses it for outreach.
+
+Park, Lee
+1 minute 26 seconds
+Sorry, what's MO?
+
+Okafor, Dana
+1 minute 29 seconds
+Member orchestration. We'll cover it.
+
+Vale, Priya
+1 minute 40 seconds
+Honestly the intelligence part is a commodity at this point. What
+matters is whether anyone applies judgment on top of it and runs
+it as one integrated model.
+
+Brandt, Raj
+1 minute 58 seconds
+I think you should say that on Friday.
+
+Vale, Priya
+2 minutes 1 second
+Okay.
+
+Osei, Tom
+2 minutes 10 seconds
+One example. Say we close a gap in care for a member, then a
+different vendor reaches the same member for another condition.
+That's what MO can catch.
+
+Lindqvist, Mina
+2 minutes 24 seconds
+So we'd bundle it into one care plan.
+
+Osei, Tom
+2 minutes 27 seconds
+Yes.
+
+Okafor, Dana
+2 minutes 40 seconds
+Okay. Raj, can I see a cleaned-up version tomorrow?
+
+Brandt, Raj
+2 minutes 44 seconds
+Yeah, tomorrow.
+
+Park, Lee
+2 minutes 50 seconds
+And the gap list?
+
+Okafor, Dana
+2 minutes 53 seconds
+We'll lay that out.
+
+Lindqvist, Mina
+2 minutes 58 seconds
+Sounds good.

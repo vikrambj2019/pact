@@ -1,0 +1,3644 @@
+{
+  "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/social/evals/transcripts/ent-04-hiking-trip.txt",
+  "model": "claude-haiku-5-5",
+  "messages": 75,
+  "spans": [
+    {
+      "id": "b1.s1",
+      "burst_id": "b1",
+      "author": "Maya",
+      "ts": "2026-11-02T19:41:00",
+      "text": "which trail are we doing",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b1.s2",
+      "burst_id": "b1",
+      "author": "Maya",
+      "ts": "2026-11-02T19:41:00",
+      "text": "which day",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s1",
+      "burst_id": "b2",
+      "author": "Leo",
+      "ts": "2026-11-02T19:42:00",
+      "text": "sat nov 14 or sun nov 15?",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s2",
+      "burst_id": "b2",
+      "author": "Leo",
+      "ts": "2026-11-02T19:42:00",
+      "text": "those are the weekend dates i meant",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'those' = sat nov 14 and sun nov 15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s1",
+      "burst_id": "b3",
+      "author": "Sam",
+      "ts": "2026-11-02T19:43:00",
+      "text": "what about mission peak?",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s1",
+      "burst_id": "b4",
+      "author": "Priya",
+      "ts": "2026-11-02T19:44:00",
+      "text": "bean has to come",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s2",
+      "burst_id": "b4",
+      "author": "Priya",
+      "ts": "2026-11-02T19:44:00",
+      "text": "no dog = i can't join",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s1",
+      "burst_id": "b5",
+      "author": "Arjun",
+      "ts": "2026-11-02T19:45:00",
+      "text": "sat works",
+      "source_message_ids": [
+        "m5"
+      ],
+      "status": "self_corrected",
+      "superseded_by": "b5.s2",
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s2",
+      "burst_id": "b5",
+      "author": "Arjun",
+      "ts": "2026-11-02T19:45:00",
+      "text": "wait no",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s3",
+      "burst_id": "b5",
+      "author": "Arjun",
+      "ts": "2026-11-02T19:45:00",
+      "text": "sat is my kid's recital",
+      "source_message_ids": [
+        "m7"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s4",
+      "burst_id": "b5",
+      "author": "Arjun",
+      "ts": "2026-11-02T19:45:00",
+      "text": "sun works",
+      "source_message_ids": [
+        "m8"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s1",
+      "burst_id": "b6",
+      "author": "Nora",
+      "ts": "2026-11-02T19:47:00",
+      "text": "can't do sat",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'sat' = sat nov 14",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s2",
+      "burst_id": "b6",
+      "author": "Nora",
+      "ts": "2026-11-02T19:47:00",
+      "text": "sun is good",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'sun' = sun nov 15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s1",
+      "burst_id": "b7",
+      "author": "Maya",
+      "ts": "2026-11-02T19:49:00",
+      "text": "Mt. Diablo summit trail?",
+      "source_message_ids": [
+        "m10"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s2",
+      "burst_id": "b7",
+      "author": "Maya",
+      "ts": "2026-11-02T19:49:00",
+      "text": "the diablo one, same trail",
+      "source_message_ids": [
+        "m10"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b8.s1",
+      "burst_id": "b8",
+      "author": "Leo",
+      "ts": "2026-11-02T19:50:00",
+      "text": "12 miles uphill in the heat, sounds relaxing",
+      "source_message_ids": [
+        "m11"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s1",
+      "burst_id": "b9",
+      "author": "Priya",
+      "ts": "2026-11-02T19:52:00",
+      "text": "does mission peak allow dogs?",
+      "source_message_ids": [
+        "m12"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s2",
+      "burst_id": "b9",
+      "author": "Priya",
+      "ts": "2026-11-02T19:52:00",
+      "text": "need that answer before picking it",
+      "source_message_ids": [
+        "m12"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Mission Peak trail choice",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b10.s1",
+      "burst_id": "b10",
+      "author": "Sam",
+      "ts": "2026-11-02T19:53:00",
+      "text": "parking at mission peak's stanford ave trailhead is free",
+      "source_message_ids": [
+        "m13"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s1",
+      "burst_id": "b11",
+      "author": "Maya",
+      "ts": "2026-11-02T19:54:00",
+      "text": "i'll check the parking page tonight",
+      "source_message_ids": [
+        "m14"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b12.s1",
+      "burst_id": "b12",
+      "author": "Arjun",
+      "ts": "2026-11-02T19:55:00",
+      "text": "views are worth getting up early for",
+      "source_message_ids": [
+        "m15"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b13.s1",
+      "burst_id": "b13",
+      "author": "Nora",
+      "ts": "2026-11-02T19:57:00",
+      "text": "is leo's birthday dinner still friday?",
+      "source_message_ids": [
+        "m16"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b14.s1",
+      "burst_id": "b14",
+      "author": "Leo",
+      "ts": "2026-11-02T19:58:00",
+      "text": "yep friday, noodles at 7",
+      "source_message_ids": [
+        "m17"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b15.s1",
+      "burst_id": "b15",
+      "author": "Priya",
+      "ts": "2026-11-02T19:59:00",
+      "text": "birthday boy owes us dumplings",
+      "source_message_ids": [
+        "m18"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b16.s1",
+      "burst_id": "b16",
+      "author": "Nora",
+      "ts": "2026-11-02T20:00:00",
+      "text": "i'll bring candles for that dinner",
+      "source_message_ids": [
+        "m19"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that dinner' = Leo's birthday dinner on Friday, noodles at 7",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b17.s1",
+      "burst_id": "b17",
+      "author": "Sam",
+      "ts": "2026-11-02T20:03:00",
+      "text": "mission is still my pick",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b17.s2",
+      "burst_id": "b17",
+      "author": "Sam",
+      "ts": "2026-11-02T20:03:00",
+      "text": "i know that route already",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that route' = mission",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s1",
+      "burst_id": "b18",
+      "author": "Maya",
+      "ts": "2026-11-02T20:05:00",
+      "text": "i can do sat too",
+      "source_message_ids": [
+        "m21"
+      ],
+      "status": "self_corrected",
+      "superseded_by": "b18.s2",
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s2",
+      "burst_id": "b18",
+      "author": "Maya",
+      "ts": "2026-11-02T20:05:00",
+      "text": "sun* sorry, typo",
+      "source_message_ids": [
+        "m22"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s3",
+      "burst_id": "b18",
+      "author": "Maya",
+      "ts": "2026-11-02T20:05:00",
+      "text": "sat i'm working",
+      "source_message_ids": [
+        "m23"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b19.s1",
+      "burst_id": "b19",
+      "author": "Leo",
+      "ts": "2026-11-02T20:07:00",
+      "text": "my knee can't do more than 6 miles",
+      "source_message_ids": [
+        "m24"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b19.s2",
+      "burst_id": "b19",
+      "author": "Leo",
+      "ts": "2026-11-02T20:07:00",
+      "text": "that's a hard stop",
+      "source_message_ids": [
+        "m24"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = my knee can't do more than 6 miles",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s1",
+      "burst_id": "b20",
+      "author": "Maya",
+      "ts": "2026-11-02T20:09:00",
+      "text": "the diablo one has a 5-mile version starting at the summit lot",
+      "source_message_ids": [
+        "m25"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s2",
+      "burst_id": "b20",
+      "author": "Maya",
+      "ts": "2026-11-02T20:09:00",
+      "text": "not the 12-mile climb",
+      "source_message_ids": [
+        "m25"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b21.s1",
+      "burst_id": "b21",
+      "author": "Leo",
+      "ts": "2026-11-02T20:10:00",
+      "text": "diablo yes if it's genuinely under 6 miles",
+      "source_message_ids": [
+        "m26"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s1",
+      "burst_id": "b22",
+      "author": "Sam",
+      "ts": "2026-11-02T20:11:00",
+      "text": "i'm against diablo",
+      "source_message_ids": [
+        "m27"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s2",
+      "burst_id": "b22",
+      "author": "Sam",
+      "ts": "2026-11-02T20:11:00",
+      "text": "12 miles sounds like a death march",
+      "source_message_ids": [
+        "m27"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'12 miles' = the 12-mile climb",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b23.s1",
+      "burst_id": "b23",
+      "author": "Maya",
+      "ts": "2026-11-02T20:12:00",
+      "text": "i'd pick diablo",
+      "source_message_ids": [
+        "m28"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b24.s1",
+      "burst_id": "b24",
+      "author": "Arjun",
+      "ts": "2026-11-02T20:13:00",
+      "text": "diablo works if dogs are allowed on that exact route",
+      "source_message_ids": [
+        "m29"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s1",
+      "burst_id": "b25",
+      "author": "Priya",
+      "ts": "2026-11-02T20:15:00",
+      "text": "mission peak allows dogs on leash",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s2",
+      "burst_id": "b25",
+      "author": "Priya",
+      "ts": "2026-11-02T20:15:00",
+      "text": "checked the park page",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s3",
+      "burst_id": "b25",
+      "author": "Priya",
+      "ts": "2026-11-02T20:15:00",
+      "text": "that question's answered",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = whether dogs are allowed on the Mission Peak hike",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s4",
+      "burst_id": "b25",
+      "author": "Priya",
+      "ts": "2026-11-02T20:16:00",
+      "text": "haven't found the dog rule for the diablo summit-lot route yet",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s5",
+      "burst_id": "b25",
+      "author": "Priya",
+      "ts": "2026-11-02T20:16:00",
+      "text": "still need that before we choose it",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = the dog rule for the diablo summit-lot route",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b26.s1",
+      "burst_id": "b26",
+      "author": "Sam",
+      "ts": "2026-11-02T20:18:00",
+      "text": "dropping mission peak",
+      "source_message_ids": [
+        "m32"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b26.s2",
+      "burst_id": "b26",
+      "author": "Sam",
+      "ts": "2026-11-02T20:18:00",
+      "text": "that parking queue can eat an hour, not worth it",
+      "source_message_ids": [
+        "m32"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b27.s1",
+      "burst_id": "b27",
+      "author": "Maya",
+      "ts": "2026-11-02T20:20:00",
+      "text": "mission parking is $10 now, not free",
+      "source_message_ids": [
+        "m33"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b27.s2",
+      "burst_id": "b27",
+      "author": "Maya",
+      "ts": "2026-11-02T20:20:00",
+      "text": "just checked the fee page",
+      "source_message_ids": [
+        "m33"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s1",
+      "burst_id": "b28",
+      "author": "Leo",
+      "ts": "2026-11-02T20:22:00",
+      "text": "that 5-mile version works",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = the 5-mile version (route in question is diablo summit-lot route)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s2",
+      "burst_id": "b28",
+      "author": "Leo",
+      "ts": "2026-11-02T20:22:00",
+      "text": "i'm in for diablo",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b29.s1",
+      "burst_id": "b29",
+      "author": "Sam",
+      "ts": "2026-11-02T20:24:00",
+      "text": "what about sunol little yosemite loop?",
+      "source_message_ids": [
+        "m35"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b29.s2",
+      "burst_id": "b29",
+      "author": "Sam",
+      "ts": "2026-11-02T20:24:00",
+      "text": "i'd pick that instead",
+      "source_message_ids": [
+        "m35"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = sunol little yosemite loop",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s1",
+      "burst_id": "b30",
+      "author": "Maya",
+      "ts": "2026-11-02T20:26:00",
+      "text": "sunol is my backup",
+      "source_message_ids": [
+        "m36"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s1",
+      "burst_id": "b31",
+      "author": "Sam",
+      "ts": "2026-11-02T20:28:00",
+      "text": "i'm out this weekend sorry",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s2",
+      "burst_id": "b31",
+      "author": "Sam",
+      "ts": "2026-11-02T20:28:00",
+      "text": "withdraw my diablo and sunol votes for now",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s1",
+      "burst_id": "b32",
+      "author": "Sam",
+      "ts": "2026-11-02T20:34:00",
+      "text": "actually i'm back in",
+      "source_message_ids": [
+        "m38"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s2",
+      "burst_id": "b32",
+      "author": "Sam",
+      "ts": "2026-11-02T20:34:00",
+      "text": "jen swapped her shift so i'm free again",
+      "source_message_ids": [
+        "m39"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s3",
+      "burst_id": "b32",
+      "author": "Sam",
+      "ts": "2026-11-02T20:34:00",
+      "text": "changed my mind on diablo; i'm for it",
+      "source_message_ids": [
+        "m40"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s4",
+      "burst_id": "b32",
+      "author": "Sam",
+      "ts": "2026-11-02T20:34:00",
+      "text": "that summit-lot route is only 5 miles",
+      "source_message_ids": [
+        "m40"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that summit-lot route' = the Diablo hike option",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b33.s1",
+      "burst_id": "b33",
+      "author": "Maya",
+      "ts": "2026-11-02T20:36:00",
+      "text": "everyone's good with diablo",
+      "source_message_ids": [
+        "m41"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b34.s1",
+      "burst_id": "b34",
+      "author": "Arjun",
+      "ts": "2026-11-02T20:37:00",
+      "text": "not an unconditional yes from me",
+      "source_message_ids": [
+        "m42"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b34.s2",
+      "burst_id": "b34",
+      "author": "Arjun",
+      "ts": "2026-11-02T20:37:00",
+      "text": "still only if bean can come",
+      "source_message_ids": [
+        "m42"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b35.s1",
+      "burst_id": "b35",
+      "author": "Priya",
+      "ts": "2026-11-02T20:39:00",
+      "text": "found it: dogs on leash are allowed on the diablo summit-lot route",
+      "source_message_ids": [
+        "m43"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b35.s2",
+      "burst_id": "b35",
+      "author": "Priya",
+      "ts": "2026-11-02T20:39:00",
+      "text": "dog-rule gap closed",
+      "source_message_ids": [
+        "m43"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b36.s1",
+      "burst_id": "b36",
+      "author": "Arjun",
+      "ts": "2026-11-02T20:40:00",
+      "text": "then diablo yes",
+      "source_message_ids": [
+        "m44"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'diablo' = the diablo summit-lot route",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b37.s1",
+      "burst_id": "b37",
+      "author": "Priya",
+      "ts": "2026-11-02T20:41:00",
+      "text": "diablo yes from me too",
+      "source_message_ids": [
+        "m45"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b37.s2",
+      "burst_id": "b37",
+      "author": "Priya",
+      "ts": "2026-11-02T20:41:00",
+      "text": "sunday yes",
+      "source_message_ids": [
+        "m45"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b38.s1",
+      "burst_id": "b38",
+      "author": "Maya",
+      "ts": "2026-11-02T20:43:00",
+      "text": "diablo it is then",
+      "source_message_ids": [
+        "m46"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'diablo' = the diablo summit-lot route",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b38.s2",
+      "burst_id": "b38",
+      "author": "Maya",
+      "ts": "2026-11-02T20:43:00",
+      "text": "sunday nov 15 is settled too",
+      "source_message_ids": [
+        "m46"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b39.s1",
+      "burst_id": "b39",
+      "author": "Leo",
+      "ts": "2026-11-02T20:44:00",
+      "text": "yep diablo",
+      "source_message_ids": [
+        "m47"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b39.s2",
+      "burst_id": "b39",
+      "author": "Leo",
+      "ts": "2026-11-02T20:44:00",
+      "text": "sunday",
+      "source_message_ids": [
+        "m47"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'sunday' = Sunday Nov 15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b40.s1",
+      "burst_id": "b40",
+      "author": "Maya",
+      "ts": "2026-11-02T20:46:00",
+      "text": "gas split is $10 each",
+      "source_message_ids": [
+        "m48"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b40.s2",
+      "burst_id": "b40",
+      "author": "Maya",
+      "ts": "2026-11-02T20:46:00",
+      "text": "everyone ok with that requirement?",
+      "source_message_ids": [
+        "m48"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = gas split is $10 each",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b41.s1",
+      "burst_id": "b41",
+      "author": "Arjun",
+      "ts": "2026-11-02T20:47:00",
+      "text": "yes to the $10 gas split",
+      "source_message_ids": [
+        "m49"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b42.s1",
+      "burst_id": "b42",
+      "author": "Priya",
+      "ts": "2026-11-02T20:48:00",
+      "text": "$10 each is fine",
+      "source_message_ids": [
+        "m50"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'$10 each' = $10 gas split per person",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b43.s1",
+      "burst_id": "b43",
+      "author": "Sam",
+      "ts": "2026-11-02T20:49:00",
+      "text": "agree to $10 for gas",
+      "source_message_ids": [
+        "m51"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'$10' = gas split of $10 each from Maya's question",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b44.s1",
+      "burst_id": "b44",
+      "author": "Leo",
+      "ts": "2026-11-02T20:50:00",
+      "text": "same, $10 gas is fine",
+      "source_message_ids": [
+        "m52"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'same' = agree to $10 gas split",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b45.s1",
+      "burst_id": "b45",
+      "author": "Nora",
+      "ts": "2026-11-02T20:51:00",
+      "text": "i accept the $10 gas split",
+      "source_message_ids": [
+        "m53"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'the $10 gas split' = $10 gas split",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b46.s1",
+      "burst_id": "b46",
+      "author": "Maya",
+      "ts": "2026-11-02T20:52:00",
+      "text": "me too, $10 gas agreed",
+      "source_message_ids": [
+        "m54"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'me too' = agreement with the $10 gas split",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b47.s1",
+      "burst_id": "b47",
+      "author": "Nora",
+      "ts": "2026-11-02T20:54:00",
+      "text": "how are we getting there?",
+      "source_message_ids": [
+        "m55"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b48.s1",
+      "burst_id": "b48",
+      "author": "Maya",
+      "ts": "2026-11-02T20:55:00",
+      "text": "let's carpool",
+      "source_message_ids": [
+        "m56"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b48.s2",
+      "burst_id": "b48",
+      "author": "Maya",
+      "ts": "2026-11-02T20:55:00",
+      "text": "we still need someone to drive",
+      "source_message_ids": [
+        "m56"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b49.s1",
+      "burst_id": "b49",
+      "author": "Sam",
+      "ts": "2026-11-02T20:56:00",
+      "text": "or meet at the trailhead",
+      "source_message_ids": [
+        "m57"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b49.s2",
+      "burst_id": "b49",
+      "author": "Sam",
+      "ts": "2026-11-02T20:56:00",
+      "text": "i'd do that",
+      "source_message_ids": [
+        "m57"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = meet at the trailhead",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b49.s3",
+      "burst_id": "b49",
+      "author": "Sam",
+      "ts": "2026-11-02T20:58:00",
+      "text": "sunday is good for me",
+      "source_message_ids": [
+        "m58"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b49.s4",
+      "burst_id": "b49",
+      "author": "Sam",
+      "ts": "2026-11-02T20:58:00",
+      "text": "forgot to say",
+      "source_message_ids": [
+        "m58"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b50.s1",
+      "burst_id": "b50",
+      "author": "Maya",
+      "ts": "2026-11-03T18:02:00",
+      "text": "the forecast now says 40 mph gusts on diablo for sunday",
+      "source_message_ids": [
+        "m59"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b51.s1",
+      "burst_id": "b51",
+      "author": "Leo",
+      "ts": "2026-11-03T18:03:00",
+      "text": "reopening diablo, that new forecast changes the choice",
+      "source_message_ids": [
+        "m60"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that new forecast' = the forecast of 40 mph gusts on diablo for sunday",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b51.s2",
+      "burst_id": "b51",
+      "author": "Leo",
+      "ts": "2026-11-03T18:04:00",
+      "text": "i'm not doing diablo in that",
+      "source_message_ids": [
+        "m61"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = the forecast of 40 mph gusts on diablo for sunday",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b51.s3",
+      "burst_id": "b51",
+      "author": "Leo",
+      "ts": "2026-11-03T18:04:00",
+      "text": "the exposed ridge would be unsafe",
+      "source_message_ids": [
+        "m61"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b52.s1",
+      "burst_id": "b52",
+      "author": "Priya",
+      "ts": "2026-11-03T18:06:00",
+      "text": "diablo is a no from me now",
+      "source_message_ids": [
+        "m62"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b52.s2",
+      "burst_id": "b52",
+      "author": "Priya",
+      "ts": "2026-11-03T18:06:00",
+      "text": "bean gets spooked by strong wind",
+      "source_message_ids": [
+        "m62"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'bean' = Priya's dog, implied by context of trail hike",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s1",
+      "burst_id": "b53",
+      "author": "Maya",
+      "ts": "2026-11-03T18:08:00",
+      "text": "withdrawing my diablo pick",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s2",
+      "burst_id": "b53",
+      "author": "Maya",
+      "ts": "2026-11-03T18:08:00",
+      "text": "diablo's dropped",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'diablo' = the Diablo option withdrawn by Maya",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s3",
+      "burst_id": "b53",
+      "author": "Maya",
+      "ts": "2026-11-03T18:08:00",
+      "text": "bringing sunol back off backup",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s4",
+      "burst_id": "b53",
+      "author": "Maya",
+      "ts": "2026-11-03T18:08:00",
+      "text": "sunol is my pick now",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b54.s1",
+      "burst_id": "b54",
+      "author": "Arjun",
+      "ts": "2026-11-03T18:10:00",
+      "text": "sunol works for me",
+      "source_message_ids": [
+        "m64"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b55.s1",
+      "burst_id": "b55",
+      "author": "Leo",
+      "ts": "2026-11-03T18:12:00",
+      "text": "sunol yes",
+      "source_message_ids": [
+        "m65"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b55.s2",
+      "burst_id": "b55",
+      "author": "Leo",
+      "ts": "2026-11-03T18:12:00",
+      "text": "if that loop is under 6 miles",
+      "source_message_ids": [
+        "m65"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b56.s1",
+      "burst_id": "b56",
+      "author": "Priya",
+      "ts": "2026-11-03T18:13:00",
+      "text": "sunol yes",
+      "source_message_ids": [
+        "m66"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'sunol' = Sunol option for the hike",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b56.s2",
+      "burst_id": "b56",
+      "author": "Priya",
+      "ts": "2026-11-03T18:13:00",
+      "text": "bean can come there too according to the park page",
+      "source_message_ids": [
+        "m66"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'bean' = Priya's dog",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b57.s1",
+      "burst_id": "b57",
+      "author": "Sam",
+      "ts": "2026-11-03T18:15:00",
+      "text": "diablo's a no from me now",
+      "source_message_ids": [
+        "m67"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'diablo' = Diablo option (Maya's withdrawn pick)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b57.s2",
+      "burst_id": "b57",
+      "author": "Sam",
+      "ts": "2026-11-03T18:15:00",
+      "text": "sunol yes. not meeting separately anymore; carpool if someone drives",
+      "source_message_ids": [
+        "m67"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b58.s1",
+      "burst_id": "b58",
+      "author": "Nora",
+      "ts": "2026-11-03T18:17:00",
+      "text": "i'll check the sunol loop distance now",
+      "source_message_ids": [
+        "m68"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b59.s1",
+      "burst_id": "b59",
+      "author": "Nora",
+      "ts": "2026-11-03T18:20:00",
+      "text": "mapped the little yosemite loop we mean",
+      "source_message_ids": [
+        "m69"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b59.s2",
+      "burst_id": "b59",
+      "author": "Nora",
+      "ts": "2026-11-03T18:20:00",
+      "text": "5.4 miles total, including the walk from parking",
+      "source_message_ids": [
+        "m69"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b60.s1",
+      "burst_id": "b60",
+      "author": "Leo",
+      "ts": "2026-11-03T18:21:00",
+      "text": "sunol yes",
+      "source_message_ids": [
+        "m70"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b60.s2",
+      "burst_id": "b60",
+      "author": "Leo",
+      "ts": "2026-11-03T18:21:00",
+      "text": "no distance condition left",
+      "source_message_ids": [
+        "m70"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b61.s1",
+      "burst_id": "b61",
+      "author": "Maya",
+      "ts": "2026-11-03T18:23:00",
+      "text": "settled: sunol little yosemite loop",
+      "source_message_ids": [
+        "m71"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b61.s2",
+      "burst_id": "b61",
+      "author": "Maya",
+      "ts": "2026-11-03T18:23:00",
+      "text": "sunday nov 15",
+      "source_message_ids": [
+        "m71"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b61.s3",
+      "burst_id": "b61",
+      "author": "Maya",
+      "ts": "2026-11-03T18:23:00",
+      "text": "plan is carpool, conditional on a driver",
+      "source_message_ids": [
+        "m71"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b61.s4",
+      "burst_id": "b61",
+      "author": "Maya",
+      "ts": "2026-11-03T18:23:00",
+      "text": "meeting separately is dropped",
+      "source_message_ids": [
+        "m71"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b62.s1",
+      "burst_id": "b62",
+      "author": "Nora",
+      "ts": "2026-11-03T18:25:00",
+      "text": "who's actually driving? can't lock transport till we know",
+      "source_message_ids": [
+        "m72"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b62.s2",
+      "burst_id": "b62",
+      "author": "Nora",
+      "ts": "2026-11-03T18:25:00",
+      "text": "i can't drive",
+      "source_message_ids": [
+        "m72"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b63.s1",
+      "burst_id": "b63",
+      "author": "Arjun",
+      "ts": "2026-11-03T18:28:00",
+      "text": "i'll bring the first aid kit",
+      "source_message_ids": [
+        "m73"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b64.s1",
+      "burst_id": "b64",
+      "author": "Priya",
+      "ts": "2026-11-03T18:30:00",
+      "text": "i'll bring bean's water and a spare leash",
+      "source_message_ids": [
+        "m74"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b65.s1",
+      "burst_id": "b65",
+      "author": "Maya",
+      "ts": "2026-11-03T18:33:00",
+      "text": "i'll buy the sunol parking pass tomorrow",
+      "source_message_ids": [
+        "m75"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    }
+  ],
+  "classified": [
+    {
+      "span_id": "b1.s1",
+      "author": "Maya",
+      "text": "which trail are we doing",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.9,
+          "gist": "Which trail the group should hike"
+        }
+      ],
+      "rationale": "The span asks which trail the group must decide on, which is the decision being deliberated, with no alternative introduced."
+    },
+    {
+      "span_id": "b1.s2",
+      "author": "Maya",
+      "text": "which day",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.7,
+          "gist": "which day the group should do the trail hike"
+        }
+      ],
+      "rationale": "Maya asks which day to go, which is the decision the group must settle, so it is a candidate question rather than a process or information request."
+    },
+    {
+      "span_id": "b2.s1",
+      "author": "Leo",
+      "text": "sat nov 14 or sun nov 15?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.8,
+          "gist": "Which day of the hike weekend to do: Sat Nov 14 or Sun Nov 15"
+        },
+        {
+          "type": "option",
+          "confidence": 0.5,
+          "gist": "Sat Nov 14 as hike day"
+        }
+      ],
+      "rationale": "Leo poses the day choice as a question the group must decide, which is the candidate question; the two dates it names are alternatives introduced here for the first time, but since the span is only a question they are weaker options that should be labeled as new."
+    },
+    {
+      "span_id": "b2.s2",
+      "author": "Leo",
+      "text": "those are the weekend dates i meant",
+      "status": "active",
+      "context_note": "'those' = sat nov 14 and sun nov 15",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Sat Nov 14 and Sun Nov 15 are the weekend dates Leo meant in the hike-day question"
+        }
+      ],
+      "rationale": "Leo is clarifying which dates he meant, a factual restatement rather than a new option, position, or decision."
+    },
+    {
+      "span_id": "b3.s1",
+      "author": "Sam",
+      "text": "what about mission peak?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.85,
+          "gist": "Mission Peak trail introduced as an alternative hike"
+        }
+      ],
+      "rationale": "Sam floats a new trail alternative via a question, which is an option per rule 13, and the trail choice is the decision being deliberated."
+    },
+    {
+      "span_id": "b4.s1",
+      "author": "Priya",
+      "text": "bean has to come",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Priya's dog (Bean) must come along on the hike; no dog means she can't join"
+        }
+      ],
+      "rationale": "Bean coming is a hard requirement that filters trail/plan options for the whole group, and it is a stated limit on Priya's own attendance rather than a stance on a specific option."
+    },
+    {
+      "span_id": "b4.s2",
+      "author": "Priya",
+      "text": "no dog = i can't join",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Dog must come on the hike; participant cannot join without dog (personal attendance requirement)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Priya cannot join if the dog is not allowed, i.e. opposes any no-dog trail option"
+        }
+      ],
+      "rationale": "Priya states an attendance requirement (dog must come), which is a constraint on the hike, and this implicitly rules out no-dog options, so a weak position is also included."
+    },
+    {
+      "span_id": "b5.s1",
+      "author": "Arjun",
+      "text": "sat works",
+      "status": "self_corrected",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Arjun initially supports Saturday (Nov 14), later retracted"
+        },
+        {
+          "type": "constraint",
+          "confidence": 0.5,
+          "gist": "Arjun unavailable Saturday due to kid's recital"
+        }
+      ],
+      "rationale": "The span is a self-corrected statement of support for Saturday, which was retracted, and the follow-up explains a Saturday absence that constrains the options."
+    },
+    {
+      "span_id": "b5.s2",
+      "author": "Arjun",
+      "text": "wait no",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.6,
+          "gist": "Arjun retracting prior statement; non-content discussion marker"
+        }
+      ],
+      "rationale": "\"wait no\" is only a retraction marker with no independent content; the substantive stance is in the surrounding spans."
+    },
+    {
+      "span_id": "b5.s3",
+      "author": "Arjun",
+      "text": "sat is my kid's recital",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Arjun is unavailable Sat Nov 14 due to kid's recital; rules out Saturday"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Arjun opposes Sat Nov 14 (recital conflict)"
+        }
+      ],
+      "rationale": "A personal absence from the planned day is a constraint that also rules out Saturday, so it carries a position against that option; no new option is introduced."
+    },
+    {
+      "span_id": "b5.s4",
+      "author": "Arjun",
+      "text": "sun works",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Arjun supports Sunday Nov 15 as the hike day"
+        }
+      ],
+      "rationale": "Arjun's \"sun works\" states support for an option already on the table (Sun Nov 15), so it is a position, not a new option."
+    },
+    {
+      "span_id": "b6.s1",
+      "author": "Nora",
+      "text": "can't do sat",
+      "status": "active",
+      "context_note": "'sat' = sat nov 14",
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.75,
+          "gist": "Nora is unavailable Sat Nov 14 (personal absence from the planned hike)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Nora rules out Sat Nov 14 as an option"
+        }
+      ],
+      "rationale": "Nora's own absence from the Saturday hike is a constraint, and by ruling out Sat Nov 14 it also takes a position against that date."
+    },
+    {
+      "span_id": "b6.s2",
+      "author": "Nora",
+      "text": "sun is good",
+      "status": "active",
+      "context_note": "'sun' = sun nov 15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Nora supports Sun Nov 15 as her day"
+        }
+      ],
+      "rationale": "Nora states she supports Sunday Nov 15, which is her stance on a date option, not a requirement or decision."
+    },
+    {
+      "span_id": "b7.s1",
+      "author": "Maya",
+      "text": "Mt. Diablo summit trail?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Mt. Diablo summit trail as a hike option"
+        }
+      ],
+      "rationale": "Maya floats Mt. Diablo summit trail as a new trail alternative not previously named (Sam's Mission Peak was earlier), so it is a new option rather than a question for input."
+    },
+    {
+      "span_id": "b7.s2",
+      "author": "Maya",
+      "text": "the diablo one, same trail",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Maya supports the Mt. Diablo summit trail as the hike option"
+        }
+      ],
+      "rationale": "Mt. Diablo was already introduced in the earlier message, so this span only states Maya's stance on it, which is a position rather than a new option."
+    },
+    {
+      "span_id": "b8.s1",
+      "author": "Leo",
+      "text": "12 miles uphill in the heat, sounds relaxing",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Leo objects to Mt. Diablo summit trail as too strenuous: 12 miles uphill in the heat"
+        }
+      ],
+      "rationale": "The sarcastic remark is an explicit concern against the Diablo option, which is already named earlier, so it is an objection; the distance/heat detail is a factual claim supporting it."
+    },
+    {
+      "span_id": "b9.s1",
+      "author": "Priya",
+      "text": "does mission peak allow dogs?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.85,
+          "gist": "Unknown whether Mission Peak allows dogs; needed before choosing the trail (Bean must come)"
+        }
+      ],
+      "rationale": "Priya asks an open factual question about dog policy that must be answered before the group can pick Mission Peak, which is a pending dependency rather than a claim or option."
+    },
+    {
+      "span_id": "b9.s2",
+      "author": "Priya",
+      "text": "need that answer before picking it",
+      "status": "active",
+      "context_note": "'it' = Mission Peak trail choice",
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Mission Peak dog policy unanswered; needed before choosing the trail"
+        }
+      ],
+      "rationale": "Priya's earlier question about whether Mission Peak allows dogs is still unanswered, and she says the group needs that answer before picking it, which makes it a blocker rather than a stance."
+    },
+    {
+      "span_id": "b10.s1",
+      "author": "Sam",
+      "text": "parking at mission peak's stanford ave trailhead is free",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Mission Peak Stanford Ave trailhead parking is free"
+        }
+      ],
+      "rationale": "Sam states a factual assertion about parking at the Mission Peak trailhead, which is unverified and not a position, option, or question."
+    },
+    {
+      "span_id": "b11.s1",
+      "author": "Maya",
+      "text": "i'll check the parking page tonight",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.75,
+          "gist": "Maya will check the Mission Peak parking page tonight"
+        }
+      ],
+      "rationale": "Maya commits to a concrete task outside the chat (checking the parking page), which is an action, not a blocker or claim."
+    },
+    {
+      "span_id": "b12.s1",
+      "author": "Arjun",
+      "text": "views are worth getting up early for",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.6,
+          "gist": "scenic views as a factor for judging trail options (worth an early start)"
+        }
+      ],
+      "rationale": "The span is a justification that names a factor (views) for judging the trail options, so it is a claim and a criterion, not a position."
+    },
+    {
+      "span_id": "b13.s1",
+      "author": "Nora",
+      "text": "is leo's birthday dinner still friday?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.8,
+          "gist": "Leo's birthday dinner on Friday is a side topic unrelated to the hike decision"
+        }
+      ],
+      "rationale": "The question about Leo's birthday dinner is an unrelated side thread from the trail and date decision, so it is a separate issue rather than content for the hike."
+    },
+    {
+      "span_id": "b14.s1",
+      "author": "Leo",
+      "text": "yep friday, noodles at 7",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.85,
+          "gist": "Leo confirms Friday birthday dinner plans (side chat, not the hike decision)"
+        }
+      ],
+      "rationale": "The span answers a side question about Leo's birthday dinner, which is unrelated chit-chat to the trail decision."
+    },
+    {
+      "span_id": "b15.s1",
+      "author": "Priya",
+      "text": "birthday boy owes us dumplings",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.85,
+          "gist": "joking side remark about Leo's birthday dumplings, not about the hike decision"
+        }
+      ],
+      "rationale": "The span is a playful joke about dumplings at the birthday dinner, with no bearing on the trail or day decision."
+    },
+    {
+      "span_id": "b16.s1",
+      "author": "Nora",
+      "text": "i'll bring candles for that dinner",
+      "status": "active",
+      "context_note": "'that dinner' = Leo's birthday dinner on Friday, noodles at 7",
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "Nora's candle offer for Leo's birthday dinner is a side remark unrelated to the hike decision"
+        }
+      ],
+      "rationale": "The span is about bringing candles to Leo's birthday dinner, which is off-topic chatter rather than content about the trail or date decision."
+    },
+    {
+      "span_id": "b17.s1",
+      "author": "Sam",
+      "text": "mission is still my pick",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam supports Mission Peak as the trail choice"
+        }
+      ],
+      "rationale": "Sam explicitly states a stance on Mission Peak, which was already named earlier by Sam, so it is a position rather than a new option."
+    },
+    {
+      "span_id": "b17.s2",
+      "author": "Sam",
+      "text": "i know that route already",
+      "status": "active",
+      "context_note": "'that route' = mission",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Sam says they already know the Mission Peak route, implying familiarity with that option"
+        }
+      ],
+      "rationale": "The span is a factual remark about prior knowledge of the Mission Peak route, not a new option, and it carries only a weak implicit stance since Sam already stated Mission Peak is their pick."
+    },
+    {
+      "span_id": "b18.s1",
+      "author": "Maya",
+      "text": "i can do sat too",
+      "status": "self_corrected",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Maya initially says she can do Saturday (Nov 14), later retracted as a typo; she is actually available Sunday and working Saturday"
+        }
+      ],
+      "rationale": "The span states a stance on the existing Saturday option, which was retracted by its author, so it's a low-confidence position rather than a constraint or decision."
+    },
+    {
+      "span_id": "b18.s2",
+      "author": "Maya",
+      "text": "sun* sorry, typo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Maya corrects her availability to Sunday Nov 15 (supports Sun, not Sat)"
+        }
+      ],
+      "rationale": "The span is a correction stating Maya can do Sunday, which is a stance on the day option, not a decision or agreement."
+    },
+    {
+      "span_id": "b18.s3",
+      "author": "Maya",
+      "text": "sat i'm working",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Maya is unavailable Saturday Nov 14 (working), so Saturday is ruled out for her"
+        }
+      ],
+      "rationale": "Maya's own availability on Saturday is a constraint on the planned hike, and rejecting Saturday for herself is a position on that date, not an option or decision."
+    },
+    {
+      "span_id": "b19.s1",
+      "author": "Leo",
+      "text": "my knee can't do more than 6 miles",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Leo's physical limit: cannot hike more than 6 miles (hard stop) \u2014 filters trail options"
+        }
+      ],
+      "rationale": "A personal physical limit that filters trail options is a constraint, and it implicitly undercuts the 12-mile Diablo route, but the span itself doesn't explicitly oppose an option, so objection is only a weak secondary label."
+    },
+    {
+      "span_id": "b19.s2",
+      "author": "Leo",
+      "text": "that's a hard stop",
+      "status": "active",
+      "context_note": "'that' = my knee can't do more than 6 miles",
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Leo's physical limit: cannot do more than 6 miles, a hard stop on hike length"
+        }
+      ],
+      "rationale": "The span states a hard personal limit on hike length that filters options, which is a constraint; it implicitly rules out the 12-mile option, but that stance is weaker and secondary."
+    },
+    {
+      "span_id": "b20.s1",
+      "author": "Maya",
+      "text": "the diablo one has a 5-mile version starting at the summit lot",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Mt. Diablo has a 5-mile version starting at the summit lot"
+        }
+      ],
+      "rationale": "Mt. Diablo was already named earlier, so describing its 5-mile variant is a factual claim about an existing option, not a new option; the variant is a factual detail, so the option label is only a low-confidence extra."
+    },
+    {
+      "span_id": "b20.s2",
+      "author": "Maya",
+      "text": "not the 12-mile climb",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Diablo 12-mile climb route dropped; Maya rules out the full 12-mile version"
+        },
+        {
+          "type": "position",
+          "confidence": 0.55,
+          "gist": "Maya opposes the 12-mile Diablo climb"
+        }
+      ],
+      "rationale": "The span rules out the full 12-mile Diablo climb, which was already named earlier, so it changes that option's status and expresses Maya's stance against it."
+    },
+    {
+      "span_id": "b21.s1",
+      "author": "Leo",
+      "text": "diablo yes if it's genuinely under 6 miles",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Leo conditionally supports Mt. Diablo (5-mile version) if it is genuinely under 6 miles"
+        },
+        {
+          "type": "constraint",
+          "confidence": 0.5,
+          "gist": "Leo's knee limits hiking to no more than 6 miles"
+        }
+      ],
+      "rationale": "Diablo was already named earlier, so the span is a conditional stance on an existing option, and the 6-mile limit is a hard personal constraint previously stated."
+    },
+    {
+      "span_id": "b22.s1",
+      "author": "Sam",
+      "text": "i'm against diablo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam opposes Mt. Diablo as the trail option"
+        }
+      ],
+      "rationale": "Sam explicitly states opposition to the already-named Diablo option, which is a position rather than a new option or objection with stated reasons in this span."
+    },
+    {
+      "span_id": "b22.s2",
+      "author": "Sam",
+      "text": "12 miles sounds like a death march",
+      "status": "active",
+      "context_note": "'12 miles' = the 12-mile climb",
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.85,
+          "gist": "Sam objects to the 12-mile Mt. Diablo climb as too long/hard"
+        }
+      ],
+      "rationale": "The span is an explicit objection to the 12-mile Diablo climb option, which was already named earlier, so it is an objection rather than a new option or position."
+    },
+    {
+      "span_id": "b23.s1",
+      "author": "Maya",
+      "text": "i'd pick diablo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Maya supports Mt. Diablo (5-mile version from summit lot) as her pick"
+        }
+      ],
+      "rationale": "Diablo was already named earlier, so this is Maya's own stance on an existing option, not a new option or decision."
+    },
+    {
+      "span_id": "b24.s1",
+      "author": "Arjun",
+      "text": "diablo works if dogs are allowed on that exact route",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.75,
+          "gist": "Arjun: Mt. Diablo works conditionally, if dogs are allowed on that exact route"
+        }
+      ],
+      "rationale": "Arjun states a conditional stance supporting Diablo, and the dog-policy condition on that exact route is an open dependency, though the blocker label is secondary and lower confidence."
+    },
+    {
+      "span_id": "b25.s1",
+      "author": "Priya",
+      "text": "mission peak allows dogs on leash",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Mission Peak allows dogs on leash (answers Priya's dog-policy question; factual assertion)"
+        }
+      ],
+      "rationale": "Priya states a factual finding about the Mission Peak dog policy, which is a verifiable claim answering an earlier question, not a position, blocker, or decision."
+    },
+    {
+      "span_id": "b25.s2",
+      "author": "Priya",
+      "text": "checked the park page",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.5,
+          "gist": "Priya checked the park page for dog rules (task done, reporting result)"
+        }
+      ],
+      "rationale": "The span only reports that Priya checked the park page, which is a status report of a completed check rather than a stance, claim, or decision; the substantive answer comes in the next message."
+    },
+    {
+      "span_id": "b25.s3",
+      "author": "Priya",
+      "text": "that question's answered",
+      "status": "active",
+      "context_note": "'that' = whether dogs are allowed on the Mission Peak hike",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Priya says the dog question for Mission Peak is answered; Mission Peak allows dogs on leash per park page"
+        }
+      ],
+      "rationale": "The span reports a checked fact (Mission Peak dog rule answered), which is a claim; it confirms the dog requirement is met for Mission Peak, but it is a factual report rather than a stance, so the agreement label is weak."
+    },
+    {
+      "span_id": "b25.s4",
+      "author": "Priya",
+      "text": "haven't found the dog rule for the diablo summit-lot route yet",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Dog rule for the Diablo summit-lot 5-mile route not yet found; needed before choosing it"
+        }
+      ],
+      "rationale": "Priya names an unanswered dependency (whether dogs are allowed on the Diablo summit-lot route) that must be resolved before the group can decide, so it is a blocker."
+    },
+    {
+      "span_id": "b25.s5",
+      "author": "Priya",
+      "text": "still need that before we choose it",
+      "status": "active",
+      "context_note": "'that' = the dog rule for the diablo summit-lot route",
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.85,
+          "gist": "Dog rule for the Diablo summit-lot route is still unknown and needed before choosing Diablo"
+        }
+      ],
+      "rationale": "Priya names an unanswered dependency (dog policy on the Diablo summit-lot route) that must be resolved before the group can decide, which is a blocker."
+    },
+    {
+      "span_id": "b26.s1",
+      "author": "Sam",
+      "text": "dropping mission peak",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Mission Peak hike: existing option, status changed to dropped by Sam"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sam withdraws support for Mission Peak"
+        }
+      ],
+      "rationale": "Mission Peak was already named earlier, so dropping it is a status change plus Sam's withdrawal position (rule 6)."
+    },
+    {
+      "span_id": "b26.s2",
+      "author": "Sam",
+      "text": "that parking queue can eat an hour, not worth it",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.8,
+          "gist": "Mission Peak parking queue can take an hour; not worth it (concern against Mission Peak)"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Mission Peak parking queue can eat an hour"
+        }
+      ],
+      "rationale": "Sam's remark is an explicit concern against the already-introduced Mission Peak option, framed by a causal claim about parking delay, so it is an objection, with the factual part also a claim."
+    },
+    {
+      "span_id": "b27.s1",
+      "author": "Maya",
+      "text": "mission parking is $10 now, not free",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Mission Peak parking now costs $10, not free (factual correction)"
+        }
+      ],
+      "rationale": "Maya states a factual correction about Mission Peak parking cost, which is a claim bearing on the parking criterion, not a position or option change."
+    },
+    {
+      "span_id": "b27.s2",
+      "author": "Maya",
+      "text": "just checked the fee page",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Maya checked the fee page; confirms Mission Peak parking now costs $10 (fact verification, not a stance)"
+        }
+      ],
+      "rationale": "The span reports a checked fact about Mission Peak parking fees, which is a factual claim rather than a stance, option change, or process step."
+    },
+    {
+      "span_id": "b28.s1",
+      "author": "Leo",
+      "text": "that 5-mile version works",
+      "status": "active",
+      "context_note": "'that' = the 5-mile version (route in question is diablo summit-lot route)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Leo says the 5-mile Diablo summit-lot version works for him, supporting Diablo under his knee limit"
+        }
+      ],
+      "rationale": "Leo explicitly states that an existing option (the Diablo 5-mile version) works for him, which is a position; it does not introduce a new option or set a requirement."
+    },
+    {
+      "span_id": "b28.s2",
+      "author": "Leo",
+      "text": "i'm in for diablo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Leo supports the Mt. Diablo summit-lot 5-mile route option"
+        }
+      ],
+      "rationale": "Leo states his own stance in favor of the already-named Diablo option, so it is a position rather than a new option or a group decision."
+    },
+    {
+      "span_id": "b29.s1",
+      "author": "Sam",
+      "text": "what about sunol little yosemite loop?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.85,
+          "gist": "Sunol Little Yosemite loop introduced as alternative trail"
+        }
+      ],
+      "rationale": "Sam floats a new alternative trail never named before, phrased as a question, so it is an option (new) rather than a candidate question."
+    },
+    {
+      "span_id": "b29.s2",
+      "author": "Sam",
+      "text": "i'd pick that instead",
+      "status": "active",
+      "context_note": "'that' = sunol little yosemite loop",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam supports the Sunol Little Yosemite loop as their pick"
+        }
+      ],
+      "rationale": "Sunol Little Yosemite loop was introduced in the immediately preceding message by Sam, so this span only states Sam's stance on it; the option label is a weaker secondary since the option was first named just before this span."
+    },
+    {
+      "span_id": "b30.s1",
+      "author": "Maya",
+      "text": "sunol is my backup",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Sunol Little Yosemite loop named as backup/fallback option (status change)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Maya supports Sunol as the fallback if Diablo doesn't work out"
+        }
+      ],
+      "rationale": "Sunol was already introduced by Sam earlier, so naming it as the backup is a status change, and as the speaker's own fallback preference it also counts as a position."
+    },
+    {
+      "span_id": "b31.s1",
+      "author": "Sam",
+      "text": "i'm out this weekend sorry",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Sam is unavailable for this weekend's hike (absence from the planned outing)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Sam is not joining the weekend hike, ruling out participation in the plan"
+        }
+      ],
+      "rationale": "Sam's own absence from the planned weekend hike is a constraint per the availability rule, and it also rules Sam out of the plan, though the context after shows Sam reverses it, so the position is low-confidence."
+    },
+    {
+      "span_id": "b31.s2",
+      "author": "Sam",
+      "text": "withdraw my diablo and sunol votes for now",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sam withdraws support for Diablo and Sunol options for now"
+        }
+      ],
+      "rationale": "Sam explicitly withdraws his own support for two options, which is a position (withdrawn) plus an option status change, though the context shows he reversed moments later."
+    },
+    {
+      "span_id": "b32.s1",
+      "author": "Sam",
+      "text": "actually i'm back in",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam reverses earlier withdrawal and is back in, supporting the Diablo summit-lot option"
+        }
+      ],
+      "rationale": "Sam's \"back in\" restates a stance reversal on the Diablo option (position), and the availability change is a factual claim, though the context-after message explicitly states the stance so the position is the main label."
+    },
+    {
+      "span_id": "b32.s2",
+      "author": "Sam",
+      "text": "jen swapped her shift so i'm free again",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Sam's availability restored because a coworker swapped shifts; factual reason for changing back to being free this weekend"
+        }
+      ],
+      "rationale": "The span states a factual reason for Sam's availability returning, which is a claim; it does not itself name an option, so any stance is only implicit and low confidence."
+    },
+    {
+      "span_id": "b32.s3",
+      "author": "Sam",
+      "text": "changed my mind on diablo; i'm for it",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Sam now supports the Mt. Diablo summit-lot hike (changed from against)"
+        }
+      ],
+      "rationale": "Sam's explicit stance on Diablo, an option already named earlier, so it is a position rather than a new option or decision."
+    },
+    {
+      "span_id": "b32.s4",
+      "author": "Sam",
+      "text": "that summit-lot route is only 5 miles",
+      "status": "active",
+      "context_note": "'that summit-lot route' = the Diablo hike option",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Diablo summit-lot route is only 5 miles (factual claim about the Diablo option)"
+        }
+      ],
+      "rationale": "Sam states a factual claim about the route's length, which is a claim rather than a position, option, or agreement, since Diablo was already introduced earlier."
+    },
+    {
+      "span_id": "b33.s1",
+      "author": "Maya",
+      "text": "everyone's good with diablo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Maya asserts the group is on board with the Diablo option; not actually true (Arjun conditional, Priya's dog question open)"
+        }
+      ],
+      "rationale": "Maya reports what the group thinks about Diablo, which is a report of others' views rather than a group-declared decision, so it is a claim and not a decision."
+    },
+    {
+      "span_id": "b34.s1",
+      "author": "Arjun",
+      "text": "not an unconditional yes from me",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.7,
+          "gist": "Arjun is not unconditionally backing Mt. Diablo summit-lot option; conditional on dog access"
+        }
+      ],
+      "rationale": "The span is Arjun's conditional stance on the already-named Diablo option, which is a position; it also voices a concern tied to the dog requirement, but the stance is the primary label."
+    },
+    {
+      "span_id": "b34.s2",
+      "author": "Arjun",
+      "text": "still only if bean can come",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Arjun conditionally supports Diablo summit-lot route only if dog (Bean) can come"
+        }
+      ],
+      "rationale": "Arjun states a conditional stance on the existing Diablo option, which is a position; the dog requirement is a restated soft limit, though it is mainly his conditional stance."
+    },
+    {
+      "span_id": "b35.s1",
+      "author": "Priya",
+      "text": "found it: dogs on leash are allowed on the diablo summit-lot route",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dogs on leash are allowed on the Diablo summit-lot route, per Priya's check of the park page"
+        }
+      ],
+      "rationale": "Priya reports a verified fact that resolves the dog-access blocker, which is a claim; it does not state her own stance or restate a requirement as a requirement, so agreement is only a weak secondary reading."
+    },
+    {
+      "span_id": "b35.s2",
+      "author": "Priya",
+      "text": "dog-rule gap closed",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.55,
+          "gist": "The dog-rule question for the Diablo summit-lot route has been resolved (dogs on leash allowed)"
+        },
+        {
+          "type": "agreement",
+          "confidence": 0.5,
+          "gist": "Priya confirms the dog-access requirement is now satisfied for the Diablo summit-lot route"
+        }
+      ],
+      "rationale": "Priya reports that the previously open dog-rule blocker is now resolved, which is a factual assertion rather than a stance on the option."
+    },
+    {
+      "span_id": "b36.s1",
+      "author": "Arjun",
+      "text": "then diablo yes",
+      "status": "active",
+      "context_note": "'diablo' = the diablo summit-lot route",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Arjun supports the Diablo summit-lot route, now that dogs are confirmed allowed on it"
+        }
+      ],
+      "rationale": "Arjun explicitly states support for the Diablo summit-lot route, which is an existing option, so it is a position; the agreement label is a weaker secondary read since his earlier conditional was about bean coming, not a stated requirement he is restating here."
+    },
+    {
+      "span_id": "b37.s1",
+      "author": "Priya",
+      "text": "diablo yes from me too",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Priya supports the Diablo summit-lot route (dog rule now confirmed)"
+        }
+      ],
+      "rationale": "Priya explicitly states her own support for the already-named Diablo option, which is a position, not a decision by the organiser."
+    },
+    {
+      "span_id": "b37.s2",
+      "author": "Priya",
+      "text": "sunday yes",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Priya supports Sunday Nov 15 as the day for the hike"
+        }
+      ],
+      "rationale": "\"Sunday yes\" is Priya's explicit support for the Sunday option (Nov 15), which is an existing option, so it is a position rather than a decision or agreement."
+    },
+    {
+      "span_id": "b38.s1",
+      "author": "Maya",
+      "text": "diablo it is then",
+      "status": "active",
+      "context_note": "'diablo' = the diablo summit-lot route",
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.85,
+          "gist": "Diablo summit-lot route chosen for the weekend hike (group settled)"
+        }
+      ],
+      "rationale": "Maya declares the trail choice settled on behalf of the group after everyone has signalled yes, which is a group closure decision rather than a personal stance."
+    },
+    {
+      "span_id": "b38.s2",
+      "author": "Maya",
+      "text": "sunday nov 15 is settled too",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.8,
+          "gist": "Sunday Nov 15 declared settled as the hike day"
+        }
+      ],
+      "rationale": "Maya declares the day question settled on behalf of the group, following the group's consensus on Sunday and Diablo, so it is a group_closure decision rather than a claim or position."
+    },
+    {
+      "span_id": "b39.s1",
+      "author": "Leo",
+      "text": "yep diablo",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Leo supports the Mt. Diablo summit-lot route (5-mile version)"
+        }
+      ],
+      "rationale": "Leo explicitly endorses Diablo, an option already introduced earlier, so this is a position rather than a new option or decision."
+    },
+    {
+      "span_id": "b39.s2",
+      "author": "Leo",
+      "text": "sunday",
+      "status": "active",
+      "context_note": "'sunday' = Sunday Nov 15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Leo supports Sunday Nov 15 as the day for the hike"
+        }
+      ],
+      "rationale": "Bare \"sunday\" in reply to the group settling the day is Leo's stance supporting Sunday Nov 15, not a decision or a requirement affirmation."
+    },
+    {
+      "span_id": "b40.s1",
+      "author": "Maya",
+      "text": "gas split is $10 each",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "gas cost split is $10 per person, a requirement put to the whole group"
+        }
+      ],
+      "rationale": "Maya states a group-wide cost requirement, which the context confirms the group is asked to accept, so it is a constraint."
+    },
+    {
+      "span_id": "b40.s2",
+      "author": "Maya",
+      "text": "everyone ok with that requirement?",
+      "status": "active",
+      "context_note": "'that' = gas split is $10 each",
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Maya asks the group to confirm the $10 gas split requirement (objection/consent check)"
+        }
+      ],
+      "rationale": "Asking the whole group to confirm acceptance of a requirement is a facilitation step about the discussion, not content, so it is process rather than a candidate question or agreement."
+    },
+    {
+      "span_id": "b41.s1",
+      "author": "Arjun",
+      "text": "yes to the $10 gas split",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.9,
+          "gist": "Arjun accepts the group requirement of a $10 gas split per person"
+        }
+      ],
+      "rationale": "Maya put the $10 gas split to the group as a requirement, and Arjun explicitly affirms it, which is agreement rather than a position on an option."
+    },
+    {
+      "span_id": "b42.s1",
+      "author": "Priya",
+      "text": "$10 each is fine",
+      "status": "active",
+      "context_note": "'$10 each' = $10 gas split per person",
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.85,
+          "gist": "Priya affirms the $10 per person gas split requirement"
+        }
+      ],
+      "rationale": "Priya explicitly confirms the group requirement \"gas split is $10 each\" in reply to Maya's check, which makes it agreement rather than a position on an option."
+    },
+    {
+      "span_id": "b43.s1",
+      "author": "Sam",
+      "text": "agree to $10 for gas",
+      "status": "active",
+      "context_note": "'$10' = gas split of $10 each from Maya's question",
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.9,
+          "gist": "Sam agrees to the $10 gas split requirement"
+        }
+      ],
+      "rationale": "Sam affirms the explicit $10-per-person gas split requirement put to the group, which is agreement rather than a position on an option."
+    },
+    {
+      "span_id": "b44.s1",
+      "author": "Leo",
+      "text": "same, $10 gas is fine",
+      "status": "active",
+      "context_note": "'same' = agree to $10 gas split",
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.9,
+          "gist": "Leo affirms the $10 gas split requirement"
+        }
+      ],
+      "rationale": "Leo explicitly affirms the stated requirement of a $10 gas split per person, which is agreement rather than a position on an option."
+    },
+    {
+      "span_id": "b45.s1",
+      "author": "Nora",
+      "text": "i accept the $10 gas split",
+      "status": "active",
+      "context_note": "'the $10 gas split' = $10 gas split",
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.9,
+          "gist": "Nora accepts the $10 per-person gas split requirement"
+        }
+      ],
+      "rationale": "Nora affirms an explicit cost requirement put to the group, which is agreement rather than a position on an option."
+    },
+    {
+      "span_id": "b46.s1",
+      "author": "Maya",
+      "text": "me too, $10 gas agreed",
+      "status": "active",
+      "context_note": "'me too' = agreement with the $10 gas split",
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.9,
+          "gist": "Maya affirms the $10 gas split requirement"
+        }
+      ],
+      "rationale": "Maya explicitly confirms the stated $10 gas split requirement, which is agreement rather than a vote on an option."
+    },
+    {
+      "span_id": "b47.s1",
+      "author": "Nora",
+      "text": "how are we getting there?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.7,
+          "gist": "how the group gets to the trailhead (transport/carpool arrangement) is still to be decided"
+        }
+      ],
+      "rationale": "Per the rules, \"how are we getting there?\" opens a question the group must decide, so it is a candidate_question rather than process or an option."
+    },
+    {
+      "span_id": "b48.s1",
+      "author": "Maya",
+      "text": "let's carpool",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "carpool as the way to get to the trailhead (new alternative to meeting there separately)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Maya proposes carpooling to the trailhead"
+        }
+      ],
+      "rationale": "\"let's carpool\" introduces a new transport alternative for getting to the hike, which is a proposal and therefore an option with Maya's stance in favor; it is not a process step or a decision since no driver is settled yet."
+    },
+    {
+      "span_id": "b48.s2",
+      "author": "Maya",
+      "text": "we still need someone to drive",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "still need a driver for the carpool to the trailhead; unresolved dependency for getting there"
+        }
+      ],
+      "rationale": "The span names an unresolved dependency (no driver yet) that must be settled before the carpool plan can be finished, which fits a blocker rather than a process step or decision."
+    },
+    {
+      "span_id": "b49.s1",
+      "author": "Sam",
+      "text": "or meet at the trailhead",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "meet at the trailhead instead of carpooling (alternative logistics option)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sam prefers meeting at the trailhead over carpooling"
+        }
+      ],
+      "rationale": "Sam floats an alternative to carpooling, which is a new option stated as a question-like alternative, and the follow-up context shows Sam's preference, so it is an option plus position rather than process."
+    },
+    {
+      "span_id": "b49.s2",
+      "author": "Sam",
+      "text": "i'd do that",
+      "status": "active",
+      "context_note": "'that' = meet at the trailhead",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam supports meeting at the trailhead instead of carpooling"
+        }
+      ],
+      "rationale": "Sam's \"i'd do that\" expresses a stance on the earlier-named option \"meet at the trailhead,\" which was already introduced, so it is a position rather than a new option."
+    },
+    {
+      "span_id": "b49.s3",
+      "author": "Sam",
+      "text": "sunday is good for me",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam supports Sunday Nov 15 for the hike"
+        }
+      ],
+      "rationale": "Sam states support for the Sunday date, which is a stance on an existing option, not a decision or agreement."
+    },
+    {
+      "span_id": "b49.s4",
+      "author": "Sam",
+      "text": "forgot to say",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.7,
+          "gist": "filler opener 'forgot to say' with no content; introduces nothing by itself"
+        }
+      ],
+      "rationale": "The span is only a filler lead-in with no decision content; the substantive message follows in later spans."
+    },
+    {
+      "span_id": "b50.s1",
+      "author": "Maya",
+      "text": "the forecast now says 40 mph gusts on diablo for sunday",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Forecast now shows 40 mph gusts on Mt. Diablo for Sunday, a factual claim about conditions"
+        }
+      ],
+      "rationale": "The span states a factual forecast about conditions on the already-named Diablo option, without stating a stance, so it is a claim rather than a status change or position."
+    },
+    {
+      "span_id": "b51.s1",
+      "author": "Leo",
+      "text": "reopening diablo, that new forecast changes the choice",
+      "status": "active",
+      "context_note": "'that new forecast' = the forecast of 40 mph gusts on diablo for sunday",
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Diablo summit-lot route reopened (status change from decided back to open) because of the 40 mph gust forecast"
+        },
+        {
+          "type": "position",
+          "confidence": 0.7,
+          "gist": "Leo reopens Diablo and opposes it now given the forecast"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "New forecast of 40 mph gusts on Diablo for Sunday changes the choice"
+        }
+      ],
+      "rationale": "Leo reopens the previously chosen Diablo option (status change) and states a stance against it, while the forecast change is a claim about conditions."
+    },
+    {
+      "span_id": "b51.s2",
+      "author": "Leo",
+      "text": "i'm not doing diablo in that",
+      "status": "active",
+      "context_note": "'that' = the forecast of 40 mph gusts on diablo for sunday",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Leo opposes Mt. Diablo summit-lot route given the forecast of 40 mph gusts; withdraws his support"
+        },
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Mt. Diablo summit-lot route status changed to dropped/withdrawn"
+        }
+      ],
+      "rationale": "Diablo was already named earlier, so this is a status change to dropped plus Leo's own stance against it, not a new option or a decision."
+    },
+    {
+      "span_id": "b51.s3",
+      "author": "Leo",
+      "text": "the exposed ridge would be unsafe",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "exposed ridge on Diablo would be unsafe in the forecast wind"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "safety in wind on the exposed ridge as a factor for judging Diablo"
+        }
+      ],
+      "rationale": "The span is a causal/factual assertion about the ridge's safety under the forecast wind, which is a claim; it also names safety as a factor for judging the Diablo option."
+    },
+    {
+      "span_id": "b52.s1",
+      "author": "Priya",
+      "text": "diablo is a no from me now",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Priya opposes Mt. Diablo now (withdraws support) due to the wind forecast"
+        },
+        {
+          "type": "option",
+          "confidence": 0.5,
+          "gist": "Mt. Diablo summit-lot route status changed to dropped by Priya's objection"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.5,
+          "gist": "strong wind forecast on Diablo makes it unsafe for Priya's dog"
+        }
+      ],
+      "rationale": "Priya explicitly states her stance against Diablo (a status change from her earlier yes), with the wind concern as an objection to that option."
+    },
+    {
+      "span_id": "b52.s2",
+      "author": "Priya",
+      "text": "bean gets spooked by strong wind",
+      "status": "active",
+      "context_note": "'bean' = Priya's dog, implied by context of trail hike",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Bean (Priya's dog) gets spooked by strong wind, implying wind is a risk for the hike"
+        }
+      ],
+      "rationale": "The span is a factual/causal assertion about the dog's reaction to wind, supporting the case against Diablo in the windy forecast without itself stating a stance on an option."
+    },
+    {
+      "span_id": "b53.s1",
+      "author": "Maya",
+      "text": "withdrawing my diablo pick",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Maya withdraws her support for the Mt. Diablo summit-lot option"
+        },
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Mt. Diablo summit-lot route dropped (status change, withdrawn)"
+        }
+      ],
+      "rationale": "Maya explicitly withdraws her own Diablo pick, which is a position (withdrawn) plus an option status change to dropped, per rule 6."
+    },
+    {
+      "span_id": "b53.s2",
+      "author": "Maya",
+      "text": "diablo's dropped",
+      "status": "active",
+      "context_note": "'diablo' = the Diablo option withdrawn by Maya",
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Mt. Diablo summit-lot trail: status changed to dropped by Maya"
+        },
+        {
+          "type": "decision",
+          "confidence": 0.5,
+          "gist": "Diablo ruled out for the group by Maya"
+        }
+      ],
+      "rationale": "Maya drops the previously chosen Diablo option, which is a status change; it is her own withdrawal and reads as ruling it out, though the group-level closure is less certain given the context."
+    },
+    {
+      "span_id": "b53.s3",
+      "author": "Maya",
+      "text": "bringing sunol back off backup",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Sunol little yosemite loop: status changed from backup back to active option"
+        },
+        {
+          "type": "position",
+          "confidence": 0.7,
+          "gist": "Maya supports Sunol as her pick now"
+        }
+      ],
+      "rationale": "Sunol was previously named and made the backup, so bringing it back is a status change plus Maya's own stated preference for it."
+    },
+    {
+      "span_id": "b53.s4",
+      "author": "Maya",
+      "text": "sunol is my pick now",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Maya supports Sunol Little Yosemite loop as her pick now"
+        }
+      ],
+      "rationale": "Sunol was already named earlier, so this is Maya's explicit stance favoring it now (position), not a new option; the statement is a personal pick rather than a group-level settled decision."
+    },
+    {
+      "span_id": "b54.s1",
+      "author": "Arjun",
+      "text": "sunol works for me",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Arjun supports Sunol Little Yosemite loop as the option"
+        }
+      ],
+      "rationale": "Sunol was already named earlier (as backup, then picked by Maya), so this is Arjun's explicit stance of support, i.e. a position, not a new option."
+    },
+    {
+      "span_id": "b55.s1",
+      "author": "Leo",
+      "text": "sunol yes",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Leo supports the Sunol little yosemite loop option (conditional on loop being under 6 miles)"
+        }
+      ],
+      "rationale": "Leo states his own stance in favor of an already-named option (Sunol), which is a position, not a new option or decision."
+    },
+    {
+      "span_id": "b55.s2",
+      "author": "Leo",
+      "text": "if that loop is under 6 miles",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Leo's hard limit: hike must be under 6 miles (knee limit)"
+        }
+      ],
+      "rationale": "The span restates Leo's hard 6-mile knee limit as a condition on the Sunol loop, so it is mainly a constraint, with a conditional stance on Sunol as a secondary reading."
+    },
+    {
+      "span_id": "b56.s1",
+      "author": "Priya",
+      "text": "sunol yes",
+      "status": "active",
+      "context_note": "'sunol' = Sunol option for the hike",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Priya supports Sunol (Sunol little yosemite loop) as the hike option"
+        }
+      ],
+      "rationale": "Sunol was already introduced earlier and is being endorsed by Priya, so this is a position, not a new option."
+    },
+    {
+      "span_id": "b56.s2",
+      "author": "Priya",
+      "text": "bean can come there too according to the park page",
+      "status": "active",
+      "context_note": "'bean' = Priya's dog",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Priya reports the park page says her dog Bean can come to the site (dog access fact for the trail)"
+        }
+      ],
+      "rationale": "This is a factual assertion about dog access per the park page, not a stance on an option, and it is not a new option or a decision."
+    },
+    {
+      "span_id": "b57.s1",
+      "author": "Sam",
+      "text": "diablo's a no from me now",
+      "status": "active",
+      "context_note": "'diablo' = Diablo option (Maya's withdrawn pick)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam opposes the Diablo option (rules it out for now)"
+        }
+      ],
+      "rationale": "Sam's explicit stance against Diablo, an option already named earlier, is a position; it is not a group decision or new option."
+    },
+    {
+      "span_id": "b57.s2",
+      "author": "Sam",
+      "text": "sunol yes. not meeting separately anymore; carpool if someone drives",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Sam supports the Sunol Little Yosemite loop option"
+        }
+      ],
+      "rationale": "Sam explicitly says \"sunol yes\", which is a position on an already-named option, and the carpool remark is a conditional logistics preference rather than a settled decision or new option."
+    },
+    {
+      "span_id": "b58.s1",
+      "author": "Nora",
+      "text": "i'll check the sunol loop distance now",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Nora commits to checking the Sunol little yosemite loop distance"
+        }
+      ],
+      "rationale": "Nora takes on a concrete task outside the chat (checking the loop distance), which is an action rather than a claim or position."
+    },
+    {
+      "span_id": "b59.s1",
+      "author": "Nora",
+      "text": "mapped the little yosemite loop we mean",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Nora reports she mapped the Little Yosemite loop at Sunol (the sunol option being discussed)"
+        }
+      ],
+      "rationale": "Nora is reporting a factual finding about the existing Sunol option, which is neither a new option nor a position, so it is a claim."
+    },
+    {
+      "span_id": "b59.s2",
+      "author": "Nora",
+      "text": "5.4 miles total, including the walk from parking",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Sunol little yosemite loop is 5.4 miles total including walk from parking"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "trail distance under Leo's 6-mile limit"
+        }
+      ],
+      "rationale": "Nora reports a measured fact about the Sunol loop's total distance, which is a factual claim; it bears on Leo's 6-mile limit, so distance works as an evaluative factor."
+    },
+    {
+      "span_id": "b60.s1",
+      "author": "Leo",
+      "text": "sunol yes",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Leo supports the Sunol Little Yosemite loop option"
+        }
+      ],
+      "rationale": "Leo explicitly states support for an already-named option, which is a position, not a decision or new option."
+    },
+    {
+      "span_id": "b60.s2",
+      "author": "Leo",
+      "text": "no distance condition left",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.6,
+          "gist": "Leo confirms the 6-mile knee limit is satisfied by the Sunol loop (5.4 miles), affirming the requirement"
+        }
+      ],
+      "rationale": "Leo restates that his stated distance requirement (under 6 miles) is now met, which affirms an explicit requirement rather than voting on an option."
+    },
+    {
+      "span_id": "b61.s1",
+      "author": "Maya",
+      "text": "settled: sunol little yosemite loop",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.85,
+          "gist": "Sunol Little Yosemite loop chosen as the hike for Sunday Nov 15"
+        }
+      ],
+      "rationale": "Maya declares the option settled on behalf of the group, which is a decision; the Sunol option was already named earlier so it is not re-introduced, and the stance is carried by the decision rather than a separate position."
+    },
+    {
+      "span_id": "b61.s2",
+      "author": "Maya",
+      "text": "sunday nov 15",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.5,
+          "gist": "Sunday Nov 15 date settled for the hike"
+        }
+      ],
+      "rationale": "The span is a bare restatement of the Sunday date, which the group already converged on earlier; in context it reads as Maya closing the date question, a group-level settlement, though the span itself is terse."
+    },
+    {
+      "span_id": "b61.s3",
+      "author": "Maya",
+      "text": "plan is carpool, conditional on a driver",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Carpool plan, conditional on a driver being found"
+        }
+      ],
+      "rationale": "The span states a transport plan conditioned on finding a driver; it is a proposal rather than a settled decision, and the carpool mode was already floated earlier (\"let's carpool\"), so it is at most a lightly new option, with the decision-like phrasing kept low-confidence."
+    },
+    {
+      "span_id": "b61.s4",
+      "author": "Maya",
+      "text": "meeting separately is dropped",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "separate meeting at the trailhead (not carpooling) is dropped"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Maya opposes meeting separately; prefers carpool"
+        }
+      ],
+      "rationale": "Maya declares the separate-meeting alternative dropped, which changes that option's status and reflects her stance against it."
+    },
+    {
+      "span_id": "b62.s1",
+      "author": "Nora",
+      "text": "who's actually driving? can't lock transport till we know",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "Driver for carpool to Sunol is unassigned, so transport can't be locked yet"
+        }
+      ],
+      "rationale": "The span asks who will drive, an unanswered dependency that stops transport being locked, so it is a blocker; the request for a driver is the discussion facilitation."
+    },
+    {
+      "span_id": "b62.s2",
+      "author": "Nora",
+      "text": "i can't drive",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Nora is unable to drive to the sunol carpool plan"
+        }
+      ],
+      "rationale": "Nora's statement is a participant's own unavailability for the planned carpool, which is a constraint on transport, with a secondary claim that a driver is still needed."
+    },
+    {
+      "span_id": "b63.s1",
+      "author": "Arjun",
+      "text": "i'll bring the first aid kit",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.85,
+          "gist": "Arjun commits to bringing the first aid kit for the Sunol hike"
+        }
+      ],
+      "rationale": "A concrete personal commitment to a task outside the chat is an action, not a decision or position."
+    },
+    {
+      "span_id": "b64.s1",
+      "author": "Priya",
+      "text": "i'll bring bean's water and a spare leash",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Priya commits to bringing bean's water and a spare leash for the Sunol hike"
+        }
+      ],
+      "rationale": "A concrete personal commitment to bring items for the outing, which is an action outside the chat, not a decision or position."
+    },
+    {
+      "span_id": "b65.s1",
+      "author": "Maya",
+      "text": "i'll buy the sunol parking pass tomorrow",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.85,
+          "gist": "Maya commits to buying the Sunol parking pass tomorrow"
+        }
+      ],
+      "rationale": "Maya personally commits to a concrete task outside the chat, which is an action, not a decision or position."
+    }
+  ]
+}

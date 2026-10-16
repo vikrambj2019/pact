@@ -1,0 +1,298 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "cf551c2f-94b6-45d8-b964-b3c855c8f167",
+    "card_version": 6,
+    "topic": {
+      "title": "Where should our group go for a hiking trip?",
+      "problem": "Where should our group go for a hiking trip?",
+      "decision_requested": "Where should our group go for a hiking trip?",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "You",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "experienced hiker",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Sam",
+        "role": "budget-conscious planner",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "accessibility-focused traveler",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "id": "unresolved_verify_sam_enchantments_permit",
+          "participant_id": "human_admin",
+          "proposed_type": "unresolved",
+          "proposed_statement": {
+            "description": "Fact-check Sam's claims: (1) 'the Enchantments requires a permit lottery' and (2) 'the Wind Rivers involve a long drive or fly-in'",
+            "raised_by": "human_admin",
+            "status": "open"
+          },
+          "source_message_ids": [
+            "msg_4"
+          ],
+          "change": {
+            "section": "unresolved",
+            "operation": "add",
+            "entity_id": "unresolved_verify_sam_enchantments_permit",
+            "participant_id": "human_admin",
+            "quote": "check sams claim",
+            "needs_confirmation": true,
+            "reason": "Admin requests verification of Sam's factual claims. Sam made two verifiable claims: (1) the Enchantments requires a permit lottery, and (2) the Wind Rivers involve a long drive or fly-in. Recording as an unresolved item pending fact-check, as 'sams claim' is ambiguous about which specific claim to check.",
+            "value_json": "{\"description\": \"Fact-check Sam's claims: (1) 'the Enchantments requires a permit lottery' and (2) 'the Wind Rivers involve a long drive or fly-in'\", \"raised_by\": \"human_admin\", \"status\": \"open\"}"
+          },
+          "base_card_version": 4,
+          "confirmation": {
+            "status": "confirmed",
+            "confirmed_by": "human_admin",
+            "source_message_id": "msg_5"
+          },
+          "included_in_confirmed_state": true
+        }
+      ]
+    },
+    "criteria": [],
+    "proposals": [],
+    "claims": [],
+    "assumptions": [],
+    "arguments": [],
+    "positions": [],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [
+      {
+        "description": "Fact-check Sam's claims: (1) 'the Enchantments requires a permit lottery' and (2) 'the Wind Rivers involve a long drive or fly-in'",
+        "raised_by": "human_admin",
+        "status": "open",
+        "id": "unresolved_verify_sam_enchantments_permit",
+        "source_message_ids": [
+          "msg_4"
+        ],
+        "revision": 1
+      }
+    ],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "msg_1",
+        "speaker_id": "human_admin",
+        "text": "hey guys, ready for yearly hiking, any thoughts on where and when?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:25:13.623270+00:00"
+      },
+      {
+        "id": "msg_2",
+        "speaker_id": "sim_1",
+        "text": "Absolutely, love that we're doing this again! I'd push for something with real elevation gain and technical terrain — somewhere like the Enchantments in Washington or the Wind River Range in Wyoming would make the trip genuinely rewarding. Fall timing is tricky with weather, so if we're going soon we should aim for a window in the next few weeks before conditions deteriorate at altitude. What's everyone's fitness level looking like this year?",
+        "source": "simulated",
+        "recorded_at": "2026-10-04T19:25:32.342737+00:00"
+      },
+      {
+        "id": "msg_3",
+        "speaker_id": "sim_2",
+        "text": "Both of those sound amazing, but I want to make sure we're realistic about costs before we get too excited — the Enchantments requires a permit lottery and the Wind Rivers involve a long drive or fly-in, so can we get a rough sense of what everyone's budget is? I'd love to find somewhere that doesn't break the bank on permits, gear rentals, or travel. Are we thinking car-accessible trailheads, or is everyone okay with spending more to get somewhere remote?",
+        "source": "simulated",
+        "recorded_at": "2026-10-04T19:26:09.803780+00:00"
+      },
+      {
+        "id": "msg_4",
+        "speaker_id": "human_admin",
+        "text": "pact, check sams claim",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:27:20.197997+00:00"
+      },
+      {
+        "id": "msg_5",
+        "speaker_id": "human_admin",
+        "text": "Confirm this interpretation.",
+        "source": "human_confirmation",
+        "recorded_at": "2026-10-04T19:27:44.137960+00:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [
+      {
+        "version": 6,
+        "entity_id": "unresolved_verify_sam_enchantments_permit",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "description": "Fact-check Sam's claims: (1) 'the Enchantments requires a permit lottery' and (2) 'the Wind Rivers involve a long drive or fly-in'",
+          "raised_by": "human_admin",
+          "status": "open",
+          "id": "unresolved_verify_sam_enchantments_permit",
+          "source_message_ids": [
+            "msg_4"
+          ]
+        },
+        "source_message_id": "msg_4",
+        "quote": "check sams claim",
+        "reason": "Admin requests verification of Sam's factual claims. Sam made two verifiable claims: (1) the Enchantments requires a permit lottery, and (2) the Wind Rivers involve a long drive or fly-in. Recording as an unresolved item pending fact-check, as 'sams claim' is ambiguous about which specific claim to check.",
+        "recorded_at": "2026-10-04T19:27:44.140622+00:00"
+      }
+    ],
+    "audit": [
+      {
+        "at": "2026-10-04T19:25:20.137806+00:00",
+        "event": "observation_error",
+        "detail": "ValueError",
+        "message_id": "msg_1"
+      },
+      {
+        "at": "2026-10-04T19:25:44.204374+00:00",
+        "event": "observation_error",
+        "detail": "ValueError",
+        "message_id": "msg_2"
+      },
+      {
+        "at": "2026-10-04T19:26:28.149726+00:00",
+        "event": "observation_error",
+        "detail": "ValueError",
+        "message_id": "msg_3"
+      },
+      {
+        "at": "2026-10-04T19:27:25.337641+00:00",
+        "event": "interpretation_pending",
+        "detail": "Ambiguous item held for confirmation.",
+        "message_id": "msg_4"
+      },
+      {
+        "at": "2026-10-04T19:27:25.337679+00:00",
+        "event": "observation",
+        "detail": "Processed 1 proposed card change(s).",
+        "message_id": "msg_4"
+      },
+      {
+        "at": "2026-10-04T19:27:44.140646+00:00",
+        "event": "interpretation_review",
+        "detail": "confirmed",
+        "interpretation_id": "unresolved_verify_sam_enchantments_permit"
+      }
+    ],
+    "bot_turns": 2,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3"
+    ],
+    "next_bot_index": 2,
+    "facilitation": [],
+    "run_settings": {
+      "backend": "live",
+      "participant_model": "claude-sonnet-4-6",
+      "research_model": "claude-sonnet-4-6"
+    }
+  },
+  "profiles": [
+    {
+      "id": "sim_1",
+      "name": "Alex",
+      "role": "experienced hiker",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Prioritize challenging trails and explain what makes a route worthwhile."
+    },
+    {
+      "id": "sim_2",
+      "name": "Sam",
+      "role": "budget-conscious planner",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Keep costs manageable and ask for concrete cost assumptions."
+    },
+    {
+      "id": "sim_3",
+      "name": "Jordan",
+      "role": "accessibility-focused traveler",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Focus on practical access needs and travel burdens."
+    }
+  ]
+}

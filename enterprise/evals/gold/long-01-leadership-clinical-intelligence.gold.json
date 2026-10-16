@@ -1,0 +1,1220 @@
+{
+ "spans": [
+  {
+   "msg": "m14",
+   "text": "I apologize, I have to leave at 5:15, so in like forty-five minutes",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m28",
+   "text": "I will drop off at, hopefully we can finish in 45 minutes",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m20",
+   "text": "How do we create small pods and start to execute on the the member level?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m36",
+   "text": "it is a business enterprise business issue that we need to sort through in terms of rationalizing the number of models that are there, what are their purpose, and then how do we think about it more enterprise-wide in terms of managing models, outcomes, and kind of experiences overall",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m38",
+   "text": "clinical intelligence, that is a single capability. that we share across the enterprise. And really what we mean by that is that that's our ability to transform clinical and non-clinical data into the context, clinical information, signals, and prediction that we need to do the activities of our enterprise. So to do that, we have to take our data, which can be clinical, as well as our claims, social data, so forth and so on, to really take that foundation to then be able to leverage that into information that is going to enable us, whether that's in terms of making sure we're paying the right amount, understanding what is truly, you know, intensity and coding accuracy, making sure that we are getting the things right from a HEDIS and STARS perspective, making sure that we are understanding the next step that a care manager needs to do with engaging with a member and the journeys that folks need to be on. And that is what fundamentally allows us to drive value.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m39",
+   "text": "this is our centralized data foundation, where we bring together all our data, whether it's, you know, what we call administrative, which is things like claims and eligibility and provider, product, grievances and appeals, you know, it's on and on and on, those kinds of things, right? This is how this is data as we collect as part of running our, you know, health plan. Then all our clinical data that we are acquiring through health OS, right, whether it's the electronic medical records or ADT, you know, discharge records, those kinds of things. And then, you know, social data. And then more recently, what we call our engagement data as well. This is all the interactions we have with our members, right, whether we are calling them or they're you know, we are sending them SMS messages, how often we did that, what was the intent of that. So all of those kinds of things, we really bring all that together and stitch it so we have that longitudinal history about all of our members and providers and all of that. So that's really the basis of everything we do. And then clinical intelligence is really. all the things we've been doing for, you know, several years now, you know, it's not a new thing we've invented. It's, you know, these are all the predictions and the things that we've been doing over this, you know, several years. And Monique here will give a few examples of what those are. It's really taking all the data that we have in the foundation and creating new insights out of that. right, whether it's predicting a risk score for a member or, you know, predicting a health trajectory for a member or, you know, identifying a care gap for a member, all of those kinds of things. And when we identify those, you know, signals, we persist that back into the data foundation. So it again becomes part of the data, right? So it's not something we predict and throw away. It's we predict and create these things and they become part of our data as well. So we continue to reach enrich our data foundation.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "constraint"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m41",
+   "text": "this prediction models that we have built so far, we've supporting all the career outreaches so far. We did stars, we have risk adjustment.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m43",
+   "text": "Standardize the way we build these models, standardize the way we consume these models, standardize the way we out deploy these models, because if you're able to accomplish that. Today, we have ML. Tomorrow, we'll be able to do advanced architecture like transformers, and tomorrow we don't know what it could be, but unless we have this step, it's very hard for us to innovate at the scale that we want to do.",
+   "labels": [],
+   "allowed": [
+    "constraint"
+   ],
+   "any_of": [
+    "position",
+    "claim",
+    "criterion"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m44",
+   "text": "if I know that Gregg, you know, had a super elevated A1C 10 years ago at 10, super sick diabetic, and now, you know, last month had an A1C that was normal, right? That's something that, you know, we could list that as data that we have, but it's not meaningful until we say, ah, Gregg was a poorly controlled diabetic that now largely has his diabetes resolved. Right, and the way in which we then understand that from the authorizations that we approve to the way we actually manage care and the journeys that we orchestrate for Gregg are going to be fundamentally different based on how that information is used. And that's also something that then feeds into our models in a new and different way.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m54",
+   "text": "the data centralization work will then unlock this even further for us. Is that correct?",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m56",
+   "text": "we need to have one definition of what the data means, right? Because if you have 10 definitions of data, right, if you have something in CBH versus, you know, SCS, and if the data doesn't line up properly, it becomes much harder for AI, you know, for us to even give that context to AI, right? You have to create so many rules and then AI will get further confused. So first you have to clean the data up and make it standardized.",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "constraint",
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m59",
+   "text": "we're advocating we move forward with the Caroline Data Foundation",
+   "labels": [
+    "option",
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m59",
+   "text": "all of them have to come to the data intelligence there because we want one mechanism to be able to reach out to the member",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim",
+    "position"
+   ]
+  },
+  {
+   "msg": "m59",
+   "text": "The key question I think for us is going to be, well, which model actually works better?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m61",
+   "text": "the feedback loop is the one that actually should tell",
+   "labels": [
+    "criterion"
+   ],
+   "allowed": [
+    "claim",
+    "position"
+   ]
+  },
+  {
+   "msg": "m63",
+   "text": "that feedback comes in, and then you know whether the model actually was effective or not",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m64",
+   "text": "we still need to You know, like enable that, so we have one person ID, you know, across all the Katyal on entities",
+   "labels": [],
+   "any_of": [
+    "claim",
+    "action",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m64",
+   "text": "why we would like to limit access to the raw health of US data",
+   "labels": [],
+   "any_of": [
+    "position",
+    "constraint",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m64",
+   "text": "hemoglobin A1C has 350 ways",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m68",
+   "text": "cleaning should be standardized. Why solve a problem already solved?",
+   "labels": [],
+   "any_of": [
+    "position",
+    "claim",
+    "criterion"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m70",
+   "text": "is that meant to be on a member by member, i.e. individual basis?",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "candidate_question",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m71",
+   "text": "we're going to have a conversation in a couple of weeks with a small set of folks who are going to be super clear about what we are solving for, what capabilities we therefore need, and how this all fits together.",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "there is nothing on this page right now that actually indicates the actual interventions",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "we as a leadership team. We need to be very clear about what we're solving for, what this delivers, and then what gaps there are",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "who is going to be the business leader",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "candidate_question",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m71",
+   "text": "maybe there are too many",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m71",
+   "text": "who should be aligned to member orchestration or member engagement",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m75",
+   "text": "agents consume information versus people consume information, right, that's probably the simplest way to explain it. So, once you have a context layer, right, agents can, you know, interrogate that context. and ask a question and get a result and take action on, you know, it's all, you know, what I call a headless experience, right? Whereas the way an analyst interacts with data, they need that more. Sort of interactive experience where they ask a question and say, say, you know, I know, I know, Stephen, you know, you were, you were playing a lot with some of the, you know, AI enabled BI tools we've given you, right? So, you, you know, you ask a seemingly simple question, hey, what is my trend for this region? right, or whatever the question might be. You know, then it needs to be that interactive experience where it not only answers the question, but it actually, you know, gives you graphs and charts and things like that. And then maybe ask you a follow up question, you know, is this what you meant? Is this where you want to drill down? It's that interactive experience where we want to give those tools to be able to do that. So ECAP is a perfect example of that. where ECAP gives you a lot of insights out-of-the-box. but it can't answer, you know, it can't create every possible scenario, right? So we also give you a chat interface where you can ask questions and then either about something that's already on the page or something totally unrelated. And it'll take you through that experience, right? So you need those kind of experiences as well. And where TMV comes in is. Say you have a call center, you know, that wants, you know, a person called in and you want to know everything about that person ready at the tip, right? And TMV is that experience where we've already curated all the information about that member. And then you can simply pull up, make a simple API call and pull up all the information necessary about that member. So that that nurse or you know the call center agent that's talking to the member or the provider can provide that information that you know they have that information at the fingertips. So really it's about you know having our data you know in a good shape, then having the context, and then having the context available to both. AI, you know, agentic experiences as well as human experiences.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m77",
+   "text": "You've got my full commitment to backless work",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m77",
+   "text": "this is not a case of sort of the, there's an American, the build it and then they will come kind of model",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m80",
+   "text": "I want to know, like, what are we, to Catherine's point, solving for it?",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "candidate_question"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m81",
+   "text": "It's not like we're building it and they come. This is building it. Actually, we do build it with a lot of the business partnership",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m86",
+   "text": "a lot of the stuff that you're seeing actually is real",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m92",
+   "text": "The use cases are across the enterprise",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m94",
+   "text": "So they will come to clinical intelligence teams and say, well, I need this model, I need that model. Here is the same thing, here is in stars. They'll also say, I need this model, I need that model. So this is actually powers across the enterprise and there are many different constituents",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m96",
+   "text": "A platform actually powers many constituents who are there within the enterprise. And through those constituents, we prioritize what needs to actually end up in the platform.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m96",
+   "text": "Now what we have to decide is, is that the model that we want to continue going forward?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m96",
+   "text": "do we want to shift to a model where there's only one business constituent and one tech constituent?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "candidate_question",
+    "position"
+   ]
+  },
+  {
+   "msg": "m96",
+   "text": "all we want is to be able to orchestrate across all the businesses",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m97",
+   "text": "if we don't drive it with a platform-centric approach, then we are not reusing some foundational capability",
+   "labels": [],
+   "allowed": [
+    "objection",
+    "criterion"
+   ],
+   "any_of": [
+    "position",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m97",
+   "text": "How do we pivot our way from admiring static dashboards or, you know, to more interacting with data?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m97",
+   "text": "15,000 people who interact with dashboards on Tableau",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m98",
+   "text": "for an organization of our size, $350 million. feels good. This should probably be $700 million",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m98",
+   "text": "I also don't think we should take weeks to do it if possible.",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "constraint"
+   ],
+   "any_of": [
+    "position",
+    "option",
+    "action"
+   ]
+  },
+  {
+   "msg": "m98",
+   "text": "I think we should try to get together, maybe not another Friday night.",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position",
+    "action"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m99",
+   "text": "Yeah, sure.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m101",
+   "text": "we'll outline the who are all the constituents",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m105",
+   "text": "There are almost 2000 models that have been created over the years",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m105",
+   "text": "how do we, as an enterprise, how do we want to orchestrate all of this?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m105",
+   "text": "Is it a single individual who manages this again? Or is it a consortium or a group?",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "candidate_question",
+    "position"
+   ]
+  },
+  {
+   "msg": "m105",
+   "text": "that I think is the most important thing that we need to get right",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m105",
+   "text": "there's a lot of vendor footprint that is getting created in terms of those outreaches",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m105",
+   "text": "whoever it is that you all tell us, we will work with them and then say, here's the clinical intelligence, as I said, the capabilities and all of that. And here's kind of how we are going to actually outreach to the members, and here's how we will outline the clinical journeys",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m106",
+   "text": "if we do it broadly and call it all clinical intelligence, you end up needing a consortium, which kind of worries me a little bit because it's so broad and it's so big",
+   "labels": [
+    "objection"
+   ],
+   "allowed": [
+    "claim",
+    "position"
+   ]
+  },
+  {
+   "msg": "m106",
+   "text": "if we start to parse out what are those capabilities, then I think you can get to smaller teams or even single accountable owners",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m107",
+   "text": "Let's say there's a conflicting next best action amongst those two kind of perspectives, because it's still going to the member. As a member, I might receive one from Pop Health. one from individual, one from ID strat, one from something else. What do we do? Who Trump's who in the whole equation?",
+   "labels": [],
+   "allowed": [
+    "claim"
+   ],
+   "any_of": [
+    "candidate_question",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m107",
+   "text": "we need predictive intelligence at the member level",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m107",
+   "text": "a group that says it also should be at population level",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m108",
+   "text": "we're underestimating the work effort that is ahead of us",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m112",
+   "text": "There's so many people outreaching the member.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m113",
+   "text": "What gets shut off?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m114",
+   "text": "I think we need to shut off.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m116",
+   "text": "it goes back to what we talked to the board about with care at home, where we got palliative, post-acute, and we have CareBridge, and we're all reaching out at the same time",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m121",
+   "text": "I just think the biggest thing is like the tech and the business working together because you get out what you put in",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "constraint",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m124",
+   "text": "it just comes back to interventions. Right, like what you guys are talking about when you do an outreach, it's an intervention, right? There is a care journey associated with that intervention, I would argue",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position",
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m126",
+   "text": "right now, I don't think we actually as a company",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m128",
+   "text": "what are the interventions, right? When do we engage with a member and how do we engage with a member and what do we engage with them on?",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim",
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m130",
+   "text": "That is all a blank slate.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m133",
+   "text": "all of that to me is still a blank slate and has to be addressed together",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m134",
+   "text": "we need to know what we're doing today in order from where we are to where we need to get to",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "claim",
+    "constraint"
+   ]
+  },
+  {
+   "msg": "m134",
+   "text": "there's a lot of sausage making and some of us don't even know where it's being made",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m134",
+   "text": "we got to figure that out first before we can take the next step",
+   "labels": [
+    "blocker"
+   ],
+   "allowed": [
+    "constraint",
+    "claim",
+    "position"
+   ]
+  },
+  {
+   "msg": "m140",
+   "text": "there is a behavioral science element to this too",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion"
+   ]
+  },
+  {
+   "msg": "m144",
+   "text": "we do have some of that that we can showcase on the 20th",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m147",
+   "text": "none of this is clinical yet",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m150",
+   "text": "We have never, I would argue, in this company, really brought those, the admin and the clinical together",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m150",
+   "text": "that is a big piece of what we have to do going forward",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m151",
+   "text": "the starting point is what we know today about the member",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "constraint",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m153",
+   "text": "we cannot source any other data from anywhere else",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m154",
+   "text": "Caroline does the vast majority of health benefits, clinical engagement",
+   "labels": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m154",
+   "text": "I don't own that",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m159",
+   "text": "I'm bullish, certainly, on our ability to mature that",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m162",
+   "text": "you need a clinician who can sort of look at it and say, what is the best way to talk to somebody",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m164",
+   "text": "It's a low-code, no-code environment, so we can build the journeys and we can move them and bring them to market quickly.",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m166",
+   "text": "we own that relationship with the consumer, so that's an asset too",
+   "labels": [],
+   "allowed": [
+    "objection",
+    "claim",
+    "position"
+   ],
+   "any_of": [
+    "constraint",
+    "objection",
+    "claim"
+   ]
+  },
+  {
+   "msg": "m169",
+   "text": "there might be a partner out there",
+   "labels": [
+    "option"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m169",
+   "text": "I'm worried about us from a speed perspective",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "position"
+   ]
+  },
+  {
+   "msg": "m171",
+   "text": "150 clinical journeys that would address 95% of our members' issues",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m173",
+   "text": "I'm worried about us like doing fast enough versus there's potentially a partner out there",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position",
+    "option",
+    "objection"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m174",
+   "text": "instead of looking at a vendor, can we just ask AI to say, look, can you just create like this 10 clinical journeys?",
+   "labels": [
+    "option",
+    "position"
+   ]
+  },
+  {
+   "msg": "m176",
+   "text": "can we trust that the AI can create better clinical journeys and we're good with it?",
+   "labels": [
+    "candidate_question"
+   ],
+   "allowed": [
+    "position",
+    "blocker",
+    "claim",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m176",
+   "text": "We can move really fast, actually.",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m177",
+   "text": "we need to create the right journey so that we're all not going after the member at the same time, which we're doing today",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "criterion",
+    "constraint",
+    "blocker"
+   ]
+  },
+  {
+   "msg": "m177",
+   "text": "things have to connect",
+   "labels": [
+    "constraint"
+   ],
+   "allowed": [
+    "claim",
+    "criterion"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m180",
+   "text": "we don't have insight, you know, that Ratnakar into like, who's doing what?",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m180",
+   "text": "building those APIs so that I see who the hell is on 1st",
+   "labels": [],
+   "any_of": [
+    "option",
+    "position",
+    "action"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m182",
+   "text": "once we build the Caroline data platform, we actually will have a holistic member information",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "position"
+   ]
+  },
+  {
+   "msg": "m186",
+   "text": "in the future, you'll actually be able to see, oh, Catherine actually connected with them",
+   "labels": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m186",
+   "text": "this whole work that we're going to do about connecting the data platform is really critical for us",
+   "labels": [],
+   "any_of": [
+    "position",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m187",
+   "text": "even if you found a vendor, right, that somehow did all of this really well, the hard part of connecting the data, bringing the data together and actually having it make sense, that work doesn't go away. We still have to do that. Then that's probably 60, 70 percent of the work",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection"
+   ]
+  },
+  {
+   "msg": "m188",
+   "text": "even if pick the right vendor, which I think we can look for, as long as we protect the member data and they do it within our ecosystem",
+   "labels": [
+    "position",
+    "constraint"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m188",
+   "text": "I think we can use some acceleration opportunities",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m190",
+   "text": "we're not moving fast enough",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "position"
+   ]
+  },
+  {
+   "msg": "m190",
+   "text": "I'm not saying that we have to have a vendor",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "claim",
+    "option"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m192",
+   "text": "I agree with that.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m193",
+   "text": "I'm just super worried that we're not moving fast enough",
+   "labels": [
+    "claim"
+   ],
+   "allowed": [
+    "objection",
+    "position"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m193",
+   "text": "a smaller group in 10-20, right, to come out with like what are the capabilities that we truly need",
+   "labels": [],
+   "any_of": [
+    "action",
+    "candidate_question",
+    "claim",
+    "blocker"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m194",
+   "text": "Companies that own, have to own data, okay? That much is my core tenant of that",
+   "labels": [],
+   "allowed": [
+    "claim",
+    "position"
+   ],
+   "any_of": [
+    "constraint",
+    "claim",
+    "position"
+   ]
+  },
+  {
+   "msg": "m194",
+   "text": "If there's a great company, let's go buy them.",
+   "labels": [
+    "option",
+    "position"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m194",
+   "text": "We should continue to look. I agree with that.",
+   "labels": [
+    "position"
+   ],
+   "allowed": [
+    "agreement",
+    "claim"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m198",
+   "text": "this to the people on the tech side, all the stakeholders that we work with on the business side",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ]
+  },
+  {
+   "msg": "m198",
+   "text": "how much of this is actually complete and ready to be operationalized",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "blocker",
+    "claim",
+    "candidate_question"
+   ],
+   "optional": true
+  },
+  {
+   "msg": "m198",
+   "text": "we still have to organize ourselves in terms of the kind of the clinical journeys, who makes certain decisions. That's the 20th meeting",
+   "labels": [],
+   "any_of": [
+    "action",
+    "blocker",
+    "candidate_question"
+   ]
+  },
+  {
+   "msg": "m198",
+   "text": "I want Stephen and them to also participate in this",
+   "labels": [
+    "action"
+   ],
+   "allowed": [
+    "claim"
+   ],
+   "optional": true
+  }
+ ]
+}

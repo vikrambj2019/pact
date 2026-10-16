@@ -1,0 +1,3489 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "369b3c68-8eec-42ec-bb07-e2e216dee013",
+    "card_version": 1,
+    "topic": {
+      "title": "Hiking 01 - simple",
+      "problem": "Hiking 01 - simple",
+      "decision_requested": "Hiking 01 - simple",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "Sam",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Priya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_4",
+        "name": "Maya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_5",
+        "name": "Leo",
+        "role": "participant",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_4",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_5",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": []
+    },
+    "criteria": [
+      {
+        "description": "Prefer to come in under budget if possible \u2014 lower cost is desirable.",
+        "raised_by": "sim_4",
+        "id": "criteria_lower_cost_preferred",
+        "source_message_ids": [
+          "m017"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Great hiking quality and good views.",
+        "raised_by": "human_admin",
+        "id": "criteria_great_hiking",
+        "source_message_ids": [
+          "m020"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Hiking quality is top priority, followed by cost.",
+        "raised_by": "sim_1",
+        "id": "criteria_hiking_quality_cost",
+        "source_message_ids": [
+          "m021"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Hiking quality first, plus variety in trail types.",
+        "raised_by": "sim_2",
+        "id": "criteria_trail_variety",
+        "source_message_ids": [
+          "m022"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Cost and weather are key criteria; cold rainy conditions are undesirable.",
+        "raised_by": "sim_3",
+        "id": "criteria_cost_weather",
+        "source_message_ids": [
+          "m023"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Good weather and ease of logistics.",
+        "raised_by": "sim_4",
+        "id": "criteria_weather_logistics",
+        "source_message_ids": [
+          "m024"
+        ],
+        "revision": 1
+      },
+      {
+        "description": "Hiking quality and views are top criteria.",
+        "raised_by": "sim_5",
+        "id": "criteria_leo_hiking_views",
+        "source_message_ids": [
+          "m025"
+        ],
+        "revision": 1
+      }
+    ],
+    "proposals": [
+      {
+        "title": "November Hiking Trip",
+        "description": "Lock in destination for the group's November hiking trip.",
+        "status": "under_consideration",
+        "proposed_by": "human_admin",
+        "id": "proposal_november_trip",
+        "source_message_ids": [
+          "m001"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Patagonia (Torres del Paine)",
+        "description": "Hike Torres del Paine, Patagonia.",
+        "status": "proposed",
+        "proposed_by": "sim_1",
+        "id": "proposal_patagonia",
+        "source_message_ids": [
+          "m002"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Dolomites (hut-to-hut)",
+        "description": "Hut-to-hut hiking in the Dolomites.",
+        "status": "proposed",
+        "proposed_by": "sim_2",
+        "id": "proposal_dolomites",
+        "source_message_ids": [
+          "m003"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Banff",
+        "description": "Hiking in Banff; close destination with cheap flights.",
+        "status": "proposed",
+        "proposed_by": "sim_3",
+        "id": "proposal_banff",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Yosemite",
+        "description": "Hiking in Yosemite; cheaper and no passports needed.",
+        "status": "proposed",
+        "proposed_by": "sim_4",
+        "id": "proposal_yosemite",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Trip Dates: Nov 14\u201321",
+        "description": "Seven-day trip from November 14 to November 21.",
+        "status": "proposed",
+        "proposed_by": "human_admin",
+        "id": "proposal_dates_nov14_21",
+        "source_message_ids": [
+          "m007"
+        ],
+        "revision": 1
+      },
+      {
+        "title": "Budget: ~$2,500 per person all-in",
+        "description": "Approximately $2,500 per person covering all trip costs.",
+        "status": "proposed",
+        "proposed_by": "human_admin",
+        "id": "proposal_budget_2500",
+        "source_message_ids": [
+          "m014"
+        ],
+        "revision": 1
+      }
+    ],
+    "claims": [
+      {
+        "statement": "Banff is close and flights to Banff are cheap.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_banff_flights_cheap",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Yosemite is cheaper than other options and requires no passport.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_yosemite_no_passport",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "A Banff trip would cost well under $2,500 per person all-in.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_banff_under_2500",
+        "source_message_ids": [
+          "m016"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Patagonia round-trip flights are usually around $1,300 per person (checked last week).",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_patagonia_flights_1300",
+        "source_message_ids": [
+          "m026"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Flights to the Dolomites are around $900 round trip, and hut availability in November could be tight.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_dolomites_flights_900",
+        "source_message_ids": [
+          "m027"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Banff in mid-November is usually snowy and many trails would likely be hard to hike.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_banff_november_snow",
+        "source_message_ids": [
+          "m028"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Yosemite is easy to reach.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_yosemite_easy_reach",
+        "source_message_ids": [
+          "m029"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Patagonia in November is spring \u2014 mild weather with longer days.",
+        "made_by": "sim_5",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_patagonia_november_spring",
+        "source_message_ids": [
+          "m030"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Flights are about $1,300 round trip for Patagonia and about $900 for the Dolomites.",
+        "made_by": "human_admin",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_sam_summarizes_flights",
+        "source_message_ids": [
+          "m031"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Alex's passport is valid.",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_alex_passport_valid",
+        "source_message_ids": [
+          "m051"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Priya's passport is valid.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_priya_passport_valid",
+        "source_message_ids": [
+          "m052"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Jordan's passport is valid.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_jordan_passport_valid",
+        "source_message_ids": [
+          "m053"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Maya's passport is valid.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_maya_passport_valid",
+        "source_message_ids": [
+          "m054"
+        ],
+        "revision": 1
+      },
+      {
+        "statement": "Leo's passport is valid.",
+        "made_by": "sim_5",
+        "verification": {
+          "status": "not_checked"
+        },
+        "id": "claim_leo_passport_valid",
+        "source_message_ids": [
+          "m055"
+        ],
+        "revision": 1
+      }
+    ],
+    "assumptions": [],
+    "arguments": [
+      {
+        "proposal_id": "proposal_patagonia",
+        "direction": "against",
+        "summary": "Patagonia flights would eat a large portion of the $2,500 budget.",
+        "made_by": "sim_1",
+        "id": "arg_patagonia_flights_costly",
+        "source_message_ids": [
+          "m018"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites",
+        "direction": "against",
+        "summary": "Hut availability in the Dolomites in November could be tight.",
+        "made_by": "sim_2",
+        "id": "arg_dolomites_hut_availability",
+        "source_message_ids": [
+          "m027"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_banff",
+        "direction": "against",
+        "summary": "Banff in mid-November is usually snowy, likely making many trails hard to hike.",
+        "made_by": "sim_3",
+        "id": "arg_banff_snow_trails",
+        "source_message_ids": [
+          "m028"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_yosemite",
+        "direction": "against",
+        "summary": "Yosemite is a bit tame for a full week of hiking.",
+        "made_by": "sim_4",
+        "id": "arg_yosemite_tame",
+        "source_message_ids": [
+          "m029"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_patagonia",
+        "direction": "for",
+        "summary": "November is spring in Patagonia \u2014 mild weather and longer days.",
+        "made_by": "sim_5",
+        "id": "arg_patagonia_spring_weather",
+        "source_message_ids": [
+          "m030"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal_id": "proposal_dolomites",
+        "direction": "against",
+        "summary": "Hut availability in the Dolomites in November is a concern for Priya.",
+        "made_by": "sim_2",
+        "id": "arg_dolomites_hut_nov_concern",
+        "source_message_ids": [
+          "m035"
+        ],
+        "revision": 1
+      }
+    ],
+    "positions": [
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Alex gives final explicit yes: Torres del Paine, here we come.",
+        "id": "position_alex_patagonia",
+        "source_message_ids": [
+          "m044"
+        ],
+        "revision": 3
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_dolomites",
+        "stance": "for",
+        "summary": "Priya wants the Dolomites for hut-to-hut hiking.",
+        "id": "position_priya_dolomites",
+        "source_message_ids": [
+          "m003"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_banff",
+        "stance": "for",
+        "summary": "Jordan proposes Banff citing low cost and proximity.",
+        "id": "position_jordan_banff",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_yosemite",
+        "stance": "for",
+        "summary": "Maya proposes Yosemite citing lower cost and no passport requirement.",
+        "id": "position_maya_yosemite",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Alex confirms Nov 14\u201321 works.",
+        "id": "position_alex_dates",
+        "source_message_ids": [
+          "m008"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Priya confirms Nov 14\u201321 works.",
+        "id": "position_priya_dates",
+        "source_message_ids": [
+          "m009"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Jordan confirms Nov 14\u201321 and has put it on their calendar.",
+        "id": "position_jordan_dates",
+        "source_message_ids": [
+          "m010"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Maya confirms she is free Nov 14\u201321.",
+        "id": "position_maya_dates",
+        "source_message_ids": [
+          "m011"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Leo confirms Nov 14\u201321 is perfect; gets him home on the 21st.",
+        "id": "position_leo_dates",
+        "source_message_ids": [
+          "m012"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "human_admin",
+        "proposal_id": "proposal_dates_nov14_21",
+        "stance": "for",
+        "summary": "Sam declares dates locked: Nov 14\u201321, seven days.",
+        "id": "position_sam_dates",
+        "source_message_ids": [
+          "m013"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "for",
+        "summary": "Priya confirms $2,500 is fine.",
+        "id": "position_priya_budget",
+        "source_message_ids": [
+          "m015"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "for",
+        "summary": "Jordan confirms $2,500 is fine; notes Banff would come in well under.",
+        "id": "position_jordan_budget",
+        "source_message_ids": [
+          "m016"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "for",
+        "summary": "Maya accepts $2,500 but prefers spending less if possible.",
+        "id": "position_maya_budget",
+        "source_message_ids": [
+          "m017"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_1",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "for",
+        "summary": "Alex accepts $2,500 but notes Patagonia flights would consume much of it.",
+        "id": "position_alex_budget",
+        "source_message_ids": [
+          "m018"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_budget_2500",
+        "stance": "for",
+        "summary": "Leo confirms $2,500 is OK.",
+        "id": "position_leo_budget",
+        "source_message_ids": [
+          "m019"
+        ],
+        "revision": 1
+      },
+      {
+        "participant_id": "sim_5",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Leo gives final explicit yes.",
+        "id": "position_leo_patagonia",
+        "source_message_ids": [
+          "m048"
+        ],
+        "revision": 3
+      },
+      {
+        "participant_id": "sim_2",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Priya gives final explicit yes.",
+        "id": "position_priya_patagonia",
+        "source_message_ids": [
+          "m045"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "sim_3",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Jordan gives final explicit yes.",
+        "id": "position_jordan_patagonia",
+        "source_message_ids": [
+          "m046"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "sim_4",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Maya gives final explicit yes.",
+        "id": "position_maya_patagonia",
+        "source_message_ids": [
+          "m047"
+        ],
+        "revision": 2
+      },
+      {
+        "participant_id": "human_admin",
+        "proposal_id": "proposal_patagonia",
+        "stance": "for",
+        "summary": "Sam gives final explicit yes, completing unanimous agreement.",
+        "id": "position_sam_patagonia",
+        "source_message_ids": [
+          "m049"
+        ],
+        "revision": 1
+      }
+    ],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [
+      {
+        "type": "constraint",
+        "description": "Leo must be back by Sunday the 22nd (November 22). Resolved: Nov 14\u201321 end date satisfies this constraint.",
+        "raised_by": "sim_5",
+        "status": "resolved",
+        "id": "unresolved_leo_return_constraint",
+        "source_message_ids": [
+          "m013"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "dropped_option",
+        "description": "Banff dropped by its proposer (Jordan) due to expected snowy conditions in mid-November making trails difficult.",
+        "raised_by": "sim_3",
+        "status": "noted",
+        "id": "unresolved_banff_dropped",
+        "source_message_ids": [
+          "m032"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "dropped_option",
+        "description": "Yosemite dropped by its proposer (Maya) as better suited for a long weekend than a week-long hiking trip.",
+        "raised_by": "sim_4",
+        "status": "noted",
+        "id": "unresolved_yosemite_dropped",
+        "source_message_ids": [
+          "m033"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "open_question",
+        "description": "Shortlist confirmed as Patagonia vs. Dolomites. Dolomites concern: hut availability in November.",
+        "raised_by": "sim_1",
+        "status": "resolved",
+        "id": "unresolved_shortlist_two",
+        "source_message_ids": [
+          "m035"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "dropped_option",
+        "description": "Dolomites dropped: proposer Priya withdrew strong support in favour of Patagonia, citing hut availability concerns in November.",
+        "raised_by": "sim_2",
+        "status": "noted",
+        "id": "unresolved_dolomites_dropped",
+        "source_message_ids": [
+          "m038"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Sam to book flights by Friday.",
+        "owner": "human_admin",
+        "status": "open",
+        "id": "unresolved_sam_book_flights",
+        "source_message_ids": [
+          "m050"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "All participants to confirm their passports are valid.",
+        "owner": "all",
+        "status": "open",
+        "id": "unresolved_passport_confirmation",
+        "source_message_ids": [
+          "m050"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Alex to look at W trek itineraries and post options.",
+        "owner": "sim_1",
+        "status": "open",
+        "id": "unresolved_alex_wtrek_itineraries",
+        "source_message_ids": [
+          "m051"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Priya to research refugio and campsite bookings in Torres del Paine.",
+        "owner": "sim_2",
+        "status": "open",
+        "id": "unresolved_priya_refugio_bookings",
+        "source_message_ids": [
+          "m052"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Jordan to look at travel insurance options and post them to the group.",
+        "owner": "sim_3",
+        "status": "open",
+        "id": "unresolved_jordan_travel_insurance",
+        "source_message_ids": [
+          "m053"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Maya to set up a shared expense sheet \u2014 link coming the following day.",
+        "owner": "sim_4",
+        "status": "open",
+        "id": "unresolved_maya_expense_sheet",
+        "source_message_ids": [
+          "m059"
+        ],
+        "revision": 2
+      },
+      {
+        "type": "action_item",
+        "description": "Leo to check gear rental options in Puerto Natales.",
+        "owner": "sim_5",
+        "status": "open",
+        "id": "unresolved_leo_gear_rental",
+        "source_message_ids": [
+          "m055"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Alex to find out the best way to get from Punta Arenas to Torres del Paine park.",
+        "owner": "sim_1",
+        "status": "open",
+        "id": "unresolved_alex_transport_punta_arenas",
+        "source_message_ids": [
+          "m056"
+        ],
+        "revision": 1
+      },
+      {
+        "type": "action_item",
+        "description": "Priya to ping the group with refugio booking responses.",
+        "owner": "sim_2",
+        "status": "open",
+        "id": "unresolved_priya_refugio_followup",
+        "source_message_ids": [
+          "m057"
+        ],
+        "revision": 1
+      }
+    ],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "m001",
+        "speaker_id": "human_admin",
+        "text": "Hey all, should we lock in our November hiking trip? Let's use this thread to decide where we're going.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:40:00"
+      },
+      {
+        "id": "m002",
+        "speaker_id": "sim_1",
+        "text": "Yes! I've been thinking Patagonia. Torres del Paine has been on my list for years.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:41:00"
+      },
+      {
+        "id": "m003",
+        "speaker_id": "sim_2",
+        "text": "I'd like the Dolomites. Hut-to-hut hiking would be amazing.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:42:00"
+      },
+      {
+        "id": "m004",
+        "speaker_id": "sim_3",
+        "text": "I'll throw in Banff. It's close and the flights are cheap.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:44:00"
+      },
+      {
+        "id": "m005",
+        "speaker_id": "sim_4",
+        "text": "What about Yosemite? Even cheaper and no passports needed.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:45:00"
+      },
+      {
+        "id": "m006",
+        "speaker_id": "sim_5",
+        "text": "Any of those work for me. I just need to be back by Sunday the 22nd.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:48:00"
+      },
+      {
+        "id": "m007",
+        "speaker_id": "human_admin",
+        "text": "Good to know, Leo. So the dates would be Nov 14 to 21?",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:50:00"
+      },
+      {
+        "id": "m008",
+        "speaker_id": "sim_1",
+        "text": "Nov 14-21 works for me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:51:00"
+      },
+      {
+        "id": "m009",
+        "speaker_id": "sim_2",
+        "text": "Works for me too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:52:00"
+      },
+      {
+        "id": "m010",
+        "speaker_id": "sim_3",
+        "text": "Same here, I already put it on my calendar.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:54:00"
+      },
+      {
+        "id": "m011",
+        "speaker_id": "sim_4",
+        "text": "I'm free those dates too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:55:00"
+      },
+      {
+        "id": "m012",
+        "speaker_id": "sim_5",
+        "text": "Nov 14-21 is perfect, that gets me home on the 21st.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:57:00"
+      },
+      {
+        "id": "m013",
+        "speaker_id": "human_admin",
+        "text": "Great, dates are locked: Nov 14 to 21, seven days.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T19:58:00"
+      },
+      {
+        "id": "m014",
+        "speaker_id": "human_admin",
+        "text": "Next, budget. I was thinking around $2,500 per person all in. Does that work?",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:02:00"
+      },
+      {
+        "id": "m015",
+        "speaker_id": "sim_2",
+        "text": "$2,500 is fine for me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:03:00"
+      },
+      {
+        "id": "m016",
+        "speaker_id": "sim_3",
+        "text": "Fine for me. Banff would come in well under that.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:04:00"
+      },
+      {
+        "id": "m017",
+        "speaker_id": "sim_4",
+        "text": "Works for me, though I'd rather come in lower if we can.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:06:00"
+      },
+      {
+        "id": "m018",
+        "speaker_id": "sim_1",
+        "text": "$2,500 works. Patagonia flights would eat a lot of it though.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:07:00"
+      },
+      {
+        "id": "m019",
+        "speaker_id": "sim_5",
+        "text": "$2,500 is OK by me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:09:00"
+      },
+      {
+        "id": "m020",
+        "speaker_id": "human_admin",
+        "text": "What matters most to everyone? I care mostly about great hiking and good views.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:14:00"
+      },
+      {
+        "id": "m021",
+        "speaker_id": "sim_1",
+        "text": "Same, hiking quality first. Then cost.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:15:00"
+      },
+      {
+        "id": "m022",
+        "speaker_id": "sim_2",
+        "text": "Hiking first, and I'd like some variety in the trail types.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:16:00"
+      },
+      {
+        "id": "m023",
+        "speaker_id": "sim_3",
+        "text": "For me it's cost and weather. I don't love cold rain.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:18:00"
+      },
+      {
+        "id": "m024",
+        "speaker_id": "sim_4",
+        "text": "Weather too. And how easy the logistics are.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:19:00"
+      },
+      {
+        "id": "m025",
+        "speaker_id": "sim_5",
+        "text": "Hiking and views, like Sam. I'm flexible on everything else.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:21:00"
+      },
+      {
+        "id": "m026",
+        "speaker_id": "sim_1",
+        "text": "Patagonia flights are usually around $1,300 round trip for us, I checked last week.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:25:00"
+      },
+      {
+        "id": "m027",
+        "speaker_id": "sim_2",
+        "text": "The Dolomites are around $900 for flights, but hut availability in November could be tight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:26:00"
+      },
+      {
+        "id": "m028",
+        "speaker_id": "sim_3",
+        "text": "Banff in mid-November is usually snowy, so I'd guess a lot of trails would be hard to hike.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:28:00"
+      },
+      {
+        "id": "m029",
+        "speaker_id": "sim_4",
+        "text": "Yosemite is easy to reach, but I think it's a bit tame for a week of hiking.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:30:00"
+      },
+      {
+        "id": "m030",
+        "speaker_id": "sim_5",
+        "text": "Patagonia in November is spring, so it should be mild with longer days.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:31:00"
+      },
+      {
+        "id": "m031",
+        "speaker_id": "human_admin",
+        "text": "Thanks all. So flights are about $1,300 for Patagonia and $900 for the Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:34:00"
+      },
+      {
+        "id": "m032",
+        "speaker_id": "sim_3",
+        "text": "Given the snow thing, I'm happy to drop Banff. Let's not hike in a foot of snow.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:39:00"
+      },
+      {
+        "id": "m033",
+        "speaker_id": "sim_4",
+        "text": "I'll drop Yosemite too, it's better for a long weekend anyway.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:40:00"
+      },
+      {
+        "id": "m034",
+        "speaker_id": "sim_1",
+        "text": "So it's down to Patagonia and the Dolomites?",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:42:00"
+      },
+      {
+        "id": "m035",
+        "speaker_id": "sim_2",
+        "text": "Yes. And honestly the hut availability worries me for the Dolomites in November.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:43:00"
+      },
+      {
+        "id": "m036",
+        "speaker_id": "sim_5",
+        "text": "Then Patagonia sounds better to me on the weather too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:45:00"
+      },
+      {
+        "id": "m037",
+        "speaker_id": "human_admin",
+        "text": "Anyone still strongly for the Dolomites?",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:46:00"
+      },
+      {
+        "id": "m038",
+        "speaker_id": "sim_2",
+        "text": "Not strongly. I'm happy with Patagonia, it's been on my list too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:49:00"
+      },
+      {
+        "id": "m039",
+        "speaker_id": "sim_3",
+        "text": "Patagonia works for me. Flights are a stretch but still inside $2,500.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:50:00"
+      },
+      {
+        "id": "m040",
+        "speaker_id": "sim_4",
+        "text": "I'm in for Patagonia too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:52:00"
+      },
+      {
+        "id": "m041",
+        "speaker_id": "sim_1",
+        "text": "Great, I'm obviously in for Patagonia.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:53:00"
+      },
+      {
+        "id": "m042",
+        "speaker_id": "sim_5",
+        "text": "Patagonia, yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:55:00"
+      },
+      {
+        "id": "m043",
+        "speaker_id": "human_admin",
+        "text": "Then Patagonia it is. Are all six of us agreed?",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:56:00"
+      },
+      {
+        "id": "m044",
+        "speaker_id": "sim_1",
+        "text": "Yes, all in. Torres del Paine, here we come.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:57:00"
+      },
+      {
+        "id": "m045",
+        "speaker_id": "sim_2",
+        "text": "Yes from me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:58:00"
+      },
+      {
+        "id": "m046",
+        "speaker_id": "sim_3",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T20:59:00"
+      },
+      {
+        "id": "m047",
+        "speaker_id": "sim_4",
+        "text": "Yes, I'm in.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T21:00:00"
+      },
+      {
+        "id": "m048",
+        "speaker_id": "sim_5",
+        "text": "Yes, count me in.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T21:02:00"
+      },
+      {
+        "id": "m049",
+        "speaker_id": "human_admin",
+        "text": "I'm in too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-14T21:03:00"
+      },
+      {
+        "id": "m050",
+        "speaker_id": "human_admin",
+        "text": "Morning! I'll book flights by Friday. Please all confirm your passports are valid.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:03:00"
+      },
+      {
+        "id": "m051",
+        "speaker_id": "sim_1",
+        "text": "Passport is good. I'll look at W trek itineraries and post options tonight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:11:00"
+      },
+      {
+        "id": "m052",
+        "speaker_id": "sim_2",
+        "text": "Passport is fine. I'll research refugio and campsite bookings.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:14:00"
+      },
+      {
+        "id": "m053",
+        "speaker_id": "sim_3",
+        "text": "Passport good. I'll look at travel insurance and post options here.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:18:00"
+      },
+      {
+        "id": "m054",
+        "speaker_id": "sim_4",
+        "text": "Passport good. I'll set up a shared expense sheet.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:20:00"
+      },
+      {
+        "id": "m055",
+        "speaker_id": "sim_5",
+        "text": "Passport good. I'll check gear rental in Puerto Natales.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:25:00"
+      },
+      {
+        "id": "m056",
+        "speaker_id": "sim_1",
+        "text": "Also, I'll find out the best way to get from Punta Arenas to the park.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:31:00"
+      },
+      {
+        "id": "m057",
+        "speaker_id": "sim_2",
+        "text": "Great. I'll ping the group when I hear back from the refugios.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:34:00"
+      },
+      {
+        "id": "m058",
+        "speaker_id": "sim_3",
+        "text": "Nice, this went fast. Thanks Sam for organizing.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:38:00"
+      },
+      {
+        "id": "m059",
+        "speaker_id": "sim_4",
+        "text": "Agreed, thanks Sam. Sheet link coming tomorrow.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:40:00"
+      },
+      {
+        "id": "m060",
+        "speaker_id": "sim_5",
+        "text": "Thanks all, this is going to be a great trip.",
+        "source": "simulated",
+        "recorded_at": "2026-09-15T09:43:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [
+      {
+        "version": 1,
+        "entity_id": "proposal_november_trip",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "title": "November Hiking Trip",
+          "description": "Lock in destination for the group's November hiking trip.",
+          "status": "under_consideration",
+          "proposed_by": "human_admin",
+          "id": "proposal_november_trip",
+          "source_message_ids": [
+            "m001"
+          ]
+        },
+        "source_message_id": "m001",
+        "quote": "should we lock in our November hiking trip? Let's use this thread to decide where we're going.",
+        "reason": "Sam opens the decision: locking in a November hiking trip destination.",
+        "recorded_at": "2026-10-07T00:26:24.876640+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_patagonia",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "title": "Patagonia (Torres del Paine)",
+          "description": "Hike Torres del Paine, Patagonia.",
+          "status": "proposed",
+          "proposed_by": "sim_1",
+          "id": "proposal_patagonia",
+          "source_message_ids": [
+            "m002"
+          ]
+        },
+        "source_message_id": "m002",
+        "quote": "I've been thinking Patagonia. Torres del Paine has been on my list for years.",
+        "reason": "Alex proposes Patagonia / Torres del Paine as a destination option.",
+        "recorded_at": "2026-10-07T00:26:24.876665+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_alex_patagonia",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Alex wants Patagonia / Torres del Paine.",
+          "id": "position_alex_patagonia",
+          "source_message_ids": [
+            "m002"
+          ]
+        },
+        "source_message_id": "m002",
+        "quote": "I've been thinking Patagonia. Torres del Paine has been on my list for years.",
+        "reason": "Alex expresses a clear preference for Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876676+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_dolomites",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "title": "Dolomites (hut-to-hut)",
+          "description": "Hut-to-hut hiking in the Dolomites.",
+          "status": "proposed",
+          "proposed_by": "sim_2",
+          "id": "proposal_dolomites",
+          "source_message_ids": [
+            "m003"
+          ]
+        },
+        "source_message_id": "m003",
+        "quote": "I'd like the Dolomites. Hut-to-hut hiking would be amazing.",
+        "reason": "Priya proposes the Dolomites with hut-to-hut hiking as a destination option.",
+        "recorded_at": "2026-10-07T00:26:24.876684+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_priya_dolomites",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_dolomites",
+          "stance": "for",
+          "summary": "Priya wants the Dolomites for hut-to-hut hiking.",
+          "id": "position_priya_dolomites",
+          "source_message_ids": [
+            "m003"
+          ]
+        },
+        "source_message_id": "m003",
+        "quote": "I'd like the Dolomites. Hut-to-hut hiking would be amazing.",
+        "reason": "Priya expresses a clear preference for the Dolomites.",
+        "recorded_at": "2026-10-07T00:26:24.876691+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_banff",
+        "section": "proposals",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "title": "Banff",
+          "description": "Hiking in Banff; close destination with cheap flights.",
+          "status": "proposed",
+          "proposed_by": "sim_3",
+          "id": "proposal_banff",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "I'll throw in Banff. It's close and the flights are cheap.",
+        "reason": "Jordan proposes Banff as a destination option, citing proximity and cheap flights.",
+        "recorded_at": "2026-10-07T00:26:24.876696+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_banff_flights_cheap",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Banff is close and flights to Banff are cheap.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_banff_flights_cheap",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "It's close and the flights are cheap.",
+        "reason": "Jordan asserts Banff flights are cheap. Stated as fact but unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876703+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_jordan_banff",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_banff",
+          "stance": "for",
+          "summary": "Jordan proposes Banff citing low cost and proximity.",
+          "id": "position_jordan_banff",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "I'll throw in Banff.",
+        "reason": "Jordan proposes and supports Banff.",
+        "recorded_at": "2026-10-07T00:26:24.876708+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_yosemite",
+        "section": "proposals",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "title": "Yosemite",
+          "description": "Hiking in Yosemite; cheaper and no passports needed.",
+          "status": "proposed",
+          "proposed_by": "sim_4",
+          "id": "proposal_yosemite",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "What about Yosemite? Even cheaper and no passports needed.",
+        "reason": "Maya proposes Yosemite as a destination option, citing lower cost and no passport requirement.",
+        "recorded_at": "2026-10-07T00:26:24.876713+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_yosemite_no_passport",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Yosemite is cheaper than other options and requires no passport.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_yosemite_no_passport",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "Even cheaper and no passports needed.",
+        "reason": "Maya asserts Yosemite requires no passport and is cheaper than other options. Unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876719+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_maya_yosemite",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_yosemite",
+          "stance": "for",
+          "summary": "Maya proposes Yosemite citing lower cost and no passport requirement.",
+          "id": "position_maya_yosemite",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "What about Yosemite? Even cheaper and no passports needed.",
+        "reason": "Maya proposes and supports Yosemite.",
+        "recorded_at": "2026-10-07T00:26:24.876724+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_leo_return_constraint",
+        "section": "unresolved",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "type": "constraint",
+          "description": "Leo must be back by Sunday the 22nd (November 22). This constrains the trip end date.",
+          "raised_by": "sim_5",
+          "status": "open",
+          "id": "unresolved_leo_return_constraint",
+          "source_message_ids": [
+            "m006"
+          ]
+        },
+        "source_message_id": "m006",
+        "quote": "I just need to be back by Sunday the 22nd.",
+        "reason": "Leo states a hard return constraint: must be home by Sunday November 22nd. This constrains date selection.",
+        "recorded_at": "2026-10-07T00:26:24.876729+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_dates_nov14_21",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "title": "Trip Dates: Nov 14\u201321",
+          "description": "Seven-day trip from November 14 to November 21.",
+          "status": "proposed",
+          "proposed_by": "human_admin",
+          "id": "proposal_dates_nov14_21",
+          "source_message_ids": [
+            "m007"
+          ]
+        },
+        "source_message_id": "m007",
+        "quote": "So the dates would be Nov 14 to 21?",
+        "reason": "Sam proposes November 14\u201321 as the trip dates, derived from Leo's constraint.",
+        "recorded_at": "2026-10-07T00:26:24.876734+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_alex_dates",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Alex confirms Nov 14\u201321 works.",
+          "id": "position_alex_dates",
+          "source_message_ids": [
+            "m008"
+          ]
+        },
+        "source_message_id": "m008",
+        "quote": "Nov 14-21 works for me.",
+        "reason": "Alex confirms Nov 14\u201321 works.",
+        "recorded_at": "2026-10-07T00:26:24.876740+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_priya_dates",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Priya confirms Nov 14\u201321 works.",
+          "id": "position_priya_dates",
+          "source_message_ids": [
+            "m009"
+          ]
+        },
+        "source_message_id": "m009",
+        "quote": "Works for me too.",
+        "reason": "Priya confirms Nov 14\u201321 works.",
+        "recorded_at": "2026-10-07T00:26:24.876745+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_jordan_dates",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Jordan confirms Nov 14\u201321 and has put it on their calendar.",
+          "id": "position_jordan_dates",
+          "source_message_ids": [
+            "m010"
+          ]
+        },
+        "source_message_id": "m010",
+        "quote": "Same here, I already put it on my calendar.",
+        "reason": "Jordan confirms Nov 14\u201321 and has calendared it.",
+        "recorded_at": "2026-10-07T00:26:24.876750+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_maya_dates",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Maya confirms she is free Nov 14\u201321.",
+          "id": "position_maya_dates",
+          "source_message_ids": [
+            "m011"
+          ]
+        },
+        "source_message_id": "m011",
+        "quote": "I'm free those dates too.",
+        "reason": "Maya confirms availability for Nov 14\u201321.",
+        "recorded_at": "2026-10-07T00:26:24.876756+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_leo_dates",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Leo confirms Nov 14\u201321 is perfect; gets him home on the 21st.",
+          "id": "position_leo_dates",
+          "source_message_ids": [
+            "m012"
+          ]
+        },
+        "source_message_id": "m012",
+        "quote": "Nov 14-21 is perfect, that gets me home on the 21st.",
+        "reason": "Leo confirms Nov 14\u201321 is perfect and satisfies his return constraint.",
+        "recorded_at": "2026-10-07T00:26:24.876761+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_sam_dates",
+        "section": "positions",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "human_admin",
+          "proposal_id": "proposal_dates_nov14_21",
+          "stance": "for",
+          "summary": "Sam declares dates locked: Nov 14\u201321, seven days.",
+          "id": "position_sam_dates",
+          "source_message_ids": [
+            "m013"
+          ]
+        },
+        "source_message_id": "m013",
+        "quote": "Great, dates are locked: Nov 14 to 21, seven days.",
+        "reason": "Sam (admin) declares dates locked after all six participants confirmed. Recording Sam's position for completeness.",
+        "recorded_at": "2026-10-07T00:26:24.876766+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_leo_return_constraint",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": {
+          "type": "constraint",
+          "description": "Leo must be back by Sunday the 22nd (November 22). This constrains the trip end date.",
+          "raised_by": "sim_5",
+          "status": "open",
+          "id": "unresolved_leo_return_constraint",
+          "source_message_ids": [
+            "m006"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "constraint",
+          "description": "Leo must be back by Sunday the 22nd (November 22). Resolved: Nov 14\u201321 end date satisfies this constraint.",
+          "raised_by": "sim_5",
+          "status": "resolved",
+          "id": "unresolved_leo_return_constraint",
+          "source_message_ids": [
+            "m013"
+          ]
+        },
+        "source_message_id": "m013",
+        "quote": "Great, dates are locked: Nov 14 to 21, seven days.",
+        "reason": "Leo's return constraint is resolved: Nov 14\u201321 satisfies it.",
+        "recorded_at": "2026-10-07T00:26:24.876778+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal_budget_2500",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "title": "Budget: ~$2,500 per person all-in",
+          "description": "Approximately $2,500 per person covering all trip costs.",
+          "status": "proposed",
+          "proposed_by": "human_admin",
+          "id": "proposal_budget_2500",
+          "source_message_ids": [
+            "m014"
+          ]
+        },
+        "source_message_id": "m014",
+        "quote": "I was thinking around $2,500 per person all in. Does that work?",
+        "reason": "Sam proposes a budget of approximately $2,500 per person all-in.",
+        "recorded_at": "2026-10-07T00:26:24.876784+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_priya_budget",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "for",
+          "summary": "Priya confirms $2,500 is fine.",
+          "id": "position_priya_budget",
+          "source_message_ids": [
+            "m015"
+          ]
+        },
+        "source_message_id": "m015",
+        "quote": "$2,500 is fine for me.",
+        "reason": "Priya confirms $2,500 budget works.",
+        "recorded_at": "2026-10-07T00:26:24.876789+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_jordan_budget",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "for",
+          "summary": "Jordan confirms $2,500 is fine; notes Banff would come in well under.",
+          "id": "position_jordan_budget",
+          "source_message_ids": [
+            "m016"
+          ]
+        },
+        "source_message_id": "m016",
+        "quote": "Fine for me. Banff would come in well under that.",
+        "reason": "Jordan confirms $2,500 budget works and notes Banff would be cheaper.",
+        "recorded_at": "2026-10-07T00:26:24.876794+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_banff_under_2500",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "statement": "A Banff trip would cost well under $2,500 per person all-in.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_banff_under_2500",
+          "source_message_ids": [
+            "m016"
+          ]
+        },
+        "source_message_id": "m016",
+        "quote": "Banff would come in well under that.",
+        "reason": "Jordan asserts Banff trip cost would be well under $2,500 per person. Unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876800+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_maya_budget",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "for",
+          "summary": "Maya accepts $2,500 but prefers spending less if possible.",
+          "id": "position_maya_budget",
+          "source_message_ids": [
+            "m017"
+          ]
+        },
+        "source_message_id": "m017",
+        "quote": "Works for me, though I'd rather come in lower if we can.",
+        "reason": "Maya accepts $2,500 but prefers to come in lower.",
+        "recorded_at": "2026-10-07T00:26:24.876805+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_lower_cost_preferred",
+        "section": "criteria",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "description": "Prefer to come in under budget if possible \u2014 lower cost is desirable.",
+          "raised_by": "sim_4",
+          "id": "criteria_lower_cost_preferred",
+          "source_message_ids": [
+            "m017"
+          ]
+        },
+        "source_message_id": "m017",
+        "quote": "I'd rather come in lower if we can.",
+        "reason": "Maya expresses a preference for minimizing cost below the $2,500 ceiling.",
+        "recorded_at": "2026-10-07T00:26:24.876809+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_alex_budget",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "for",
+          "summary": "Alex accepts $2,500 but notes Patagonia flights would consume much of it.",
+          "id": "position_alex_budget",
+          "source_message_ids": [
+            "m018"
+          ]
+        },
+        "source_message_id": "m018",
+        "quote": "$2,500 works. Patagonia flights would eat a lot of it though.",
+        "reason": "Alex accepts $2,500 budget but flags Patagonia flights as a large portion.",
+        "recorded_at": "2026-10-07T00:26:24.876815+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_patagonia_flights_costly",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_patagonia",
+          "direction": "against",
+          "summary": "Patagonia flights would eat a large portion of the $2,500 budget.",
+          "made_by": "sim_1",
+          "id": "arg_patagonia_flights_costly",
+          "source_message_ids": [
+            "m018"
+          ]
+        },
+        "source_message_id": "m018",
+        "quote": "Patagonia flights would eat a lot of it though.",
+        "reason": "Alex raises a concern that Patagonia flights would consume a large share of the $2,500 budget.",
+        "recorded_at": "2026-10-07T00:26:24.876819+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_leo_budget",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_budget_2500",
+          "stance": "for",
+          "summary": "Leo confirms $2,500 is OK.",
+          "id": "position_leo_budget",
+          "source_message_ids": [
+            "m019"
+          ]
+        },
+        "source_message_id": "m019",
+        "quote": "$2,500 is OK by me.",
+        "reason": "Leo confirms the $2,500 budget works.",
+        "recorded_at": "2026-10-07T00:26:24.876824+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_great_hiking",
+        "section": "criteria",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "description": "Great hiking quality and good views.",
+          "raised_by": "human_admin",
+          "id": "criteria_great_hiking",
+          "source_message_ids": [
+            "m020"
+          ]
+        },
+        "source_message_id": "m020",
+        "quote": "I care mostly about great hiking and good views.",
+        "reason": "Sam states hiking quality and views are the primary criteria.",
+        "recorded_at": "2026-10-07T00:26:24.876830+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_hiking_quality_cost",
+        "section": "criteria",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "description": "Hiking quality is top priority, followed by cost.",
+          "raised_by": "sim_1",
+          "id": "criteria_hiking_quality_cost",
+          "source_message_ids": [
+            "m021"
+          ]
+        },
+        "source_message_id": "m021",
+        "quote": "Same, hiking quality first. Then cost.",
+        "reason": "Alex prioritizes hiking quality first, then cost.",
+        "recorded_at": "2026-10-07T00:26:24.876834+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_trail_variety",
+        "section": "criteria",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "description": "Hiking quality first, plus variety in trail types.",
+          "raised_by": "sim_2",
+          "id": "criteria_trail_variety",
+          "source_message_ids": [
+            "m022"
+          ]
+        },
+        "source_message_id": "m022",
+        "quote": "Hiking first, and I'd like some variety in the trail types.",
+        "reason": "Priya values hiking quality and variety in trail types.",
+        "recorded_at": "2026-10-07T00:26:24.876838+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_cost_weather",
+        "section": "criteria",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "description": "Cost and weather are key criteria; cold rainy conditions are undesirable.",
+          "raised_by": "sim_3",
+          "id": "criteria_cost_weather",
+          "source_message_ids": [
+            "m023"
+          ]
+        },
+        "source_message_id": "m023",
+        "quote": "For me it's cost and weather. I don't love cold rain.",
+        "reason": "Jordan prioritizes cost and weather, specifically dislikes cold rain.",
+        "recorded_at": "2026-10-07T00:26:24.876843+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_weather_logistics",
+        "section": "criteria",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "description": "Good weather and ease of logistics.",
+          "raised_by": "sim_4",
+          "id": "criteria_weather_logistics",
+          "source_message_ids": [
+            "m024"
+          ]
+        },
+        "source_message_id": "m024",
+        "quote": "Weather too. And how easy the logistics are.",
+        "reason": "Maya values good weather and logistical ease.",
+        "recorded_at": "2026-10-07T00:26:24.876847+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criteria_leo_hiking_views",
+        "section": "criteria",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "description": "Hiking quality and views are top criteria.",
+          "raised_by": "sim_5",
+          "id": "criteria_leo_hiking_views",
+          "source_message_ids": [
+            "m025"
+          ]
+        },
+        "source_message_id": "m025",
+        "quote": "Hiking and views, like Sam.",
+        "reason": "Leo aligns with Sam: hiking quality and views are top criteria.",
+        "recorded_at": "2026-10-07T00:26:24.876851+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_patagonia_flights_1300",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Patagonia round-trip flights are usually around $1,300 per person (checked last week).",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_patagonia_flights_1300",
+          "source_message_ids": [
+            "m026"
+          ]
+        },
+        "source_message_id": "m026",
+        "quote": "Patagonia flights are usually around $1,300 round trip for us, I checked last week.",
+        "reason": "Alex claims Patagonia round-trip flights are around $1,300, based on a check last week. Hedged ('usually around') and unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876856+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_dolomites_flights_900",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Flights to the Dolomites are around $900 round trip, and hut availability in November could be tight.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_dolomites_flights_900",
+          "source_message_ids": [
+            "m027"
+          ]
+        },
+        "source_message_id": "m027",
+        "quote": "The Dolomites are around $900 for flights, but hut availability in November could be tight.",
+        "reason": "Priya claims Dolomites flights are around $900 and flags potential tight hut availability in November. Both are hedged and unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876861+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_dolomites_hut_availability",
+        "section": "arguments",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites",
+          "direction": "against",
+          "summary": "Hut availability in the Dolomites in November could be tight.",
+          "made_by": "sim_2",
+          "id": "arg_dolomites_hut_availability",
+          "source_message_ids": [
+            "m027"
+          ]
+        },
+        "source_message_id": "m027",
+        "quote": "hut availability in November could be tight.",
+        "reason": "Priya raises a risk concern about the Dolomites: hut availability in November may be limited.",
+        "recorded_at": "2026-10-07T00:26:24.876865+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_banff_november_snow",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Banff in mid-November is usually snowy and many trails would likely be hard to hike.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_banff_november_snow",
+          "source_message_ids": [
+            "m028"
+          ]
+        },
+        "source_message_id": "m028",
+        "quote": "Banff in mid-November is usually snowy, so I'd guess a lot of trails would be hard to hike.",
+        "reason": "Jordan asserts Banff is usually snowy in mid-November and guesses many trails would be difficult. Hedged ('usually', 'I'd guess') and unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876871+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_banff_snow_trails",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_banff",
+          "direction": "against",
+          "summary": "Banff in mid-November is usually snowy, likely making many trails hard to hike.",
+          "made_by": "sim_3",
+          "id": "arg_banff_snow_trails",
+          "source_message_ids": [
+            "m028"
+          ]
+        },
+        "source_message_id": "m028",
+        "quote": "Banff in mid-November is usually snowy, so I'd guess a lot of trails would be hard to hike.",
+        "reason": "Jordan argues against Banff due to snowy conditions making trails difficult in mid-November.",
+        "recorded_at": "2026-10-07T00:26:24.876875+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_yosemite_tame",
+        "section": "arguments",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_yosemite",
+          "direction": "against",
+          "summary": "Yosemite is a bit tame for a full week of hiking.",
+          "made_by": "sim_4",
+          "id": "arg_yosemite_tame",
+          "source_message_ids": [
+            "m029"
+          ]
+        },
+        "source_message_id": "m029",
+        "quote": "I think it's a bit tame for a week of hiking.",
+        "reason": "Maya argues Yosemite is too tame for a full week of hiking.",
+        "recorded_at": "2026-10-07T00:26:24.876880+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_yosemite_easy_reach",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Yosemite is easy to reach.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_yosemite_easy_reach",
+          "source_message_ids": [
+            "m029"
+          ]
+        },
+        "source_message_id": "m029",
+        "quote": "Yosemite is easy to reach, but I think it's a bit tame for a week of hiking.",
+        "reason": "Maya asserts Yosemite is easy to reach. Unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876884+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_patagonia_november_spring",
+        "section": "claims",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Patagonia in November is spring \u2014 mild weather with longer days.",
+          "made_by": "sim_5",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_patagonia_november_spring",
+          "source_message_ids": [
+            "m030"
+          ]
+        },
+        "source_message_id": "m030",
+        "quote": "Patagonia in November is spring, so it should be mild with longer days.",
+        "reason": "Leo asserts November is spring in Patagonia with mild weather and longer days. Hedged ('should be') and unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876890+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_patagonia_spring_weather",
+        "section": "arguments",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_patagonia",
+          "direction": "for",
+          "summary": "November is spring in Patagonia \u2014 mild weather and longer days.",
+          "made_by": "sim_5",
+          "id": "arg_patagonia_spring_weather",
+          "source_message_ids": [
+            "m030"
+          ]
+        },
+        "source_message_id": "m030",
+        "quote": "Patagonia in November is spring, so it should be mild with longer days.",
+        "reason": "Leo argues in favour of Patagonia: November is spring there, meaning mild conditions and longer days.",
+        "recorded_at": "2026-10-07T00:26:24.876894+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_sam_summarizes_flights",
+        "section": "claims",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Flights are about $1,300 round trip for Patagonia and about $900 for the Dolomites.",
+          "made_by": "human_admin",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_sam_summarizes_flights",
+          "source_message_ids": [
+            "m031"
+          ]
+        },
+        "source_message_id": "m031",
+        "quote": "flights are about $1,300 for Patagonia and $900 for the Dolomites.",
+        "reason": "Sam summarises the flight cost claims from Alex and Priya. These remain estimates and unverified.",
+        "recorded_at": "2026-10-07T00:26:24.876899+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_banff_dropped",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "type": "dropped_option",
+          "description": "Banff dropped by its proposer (Jordan) due to expected snowy conditions in mid-November making trails difficult.",
+          "raised_by": "sim_3",
+          "status": "noted",
+          "id": "unresolved_banff_dropped",
+          "source_message_ids": [
+            "m032"
+          ]
+        },
+        "source_message_id": "m032",
+        "quote": "Given the snow thing, I'm happy to drop Banff. Let's not hike in a foot of snow.",
+        "reason": "Jordan drops Banff from consideration due to likely snow conditions in mid-November.",
+        "recorded_at": "2026-10-07T00:26:24.876904+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_yosemite_dropped",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "type": "dropped_option",
+          "description": "Yosemite dropped by its proposer (Maya) as better suited for a long weekend than a week-long hiking trip.",
+          "raised_by": "sim_4",
+          "status": "noted",
+          "id": "unresolved_yosemite_dropped",
+          "source_message_ids": [
+            "m033"
+          ]
+        },
+        "source_message_id": "m033",
+        "quote": "I'll drop Yosemite too, it's better for a long weekend anyway.",
+        "reason": "Maya drops Yosemite from consideration, deeming it better suited to a long weekend than a week-long trip.",
+        "recorded_at": "2026-10-07T00:26:24.876908+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_shortlist_two",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "type": "open_question",
+          "description": "Is the shortlist now just Patagonia and the Dolomites?",
+          "raised_by": "sim_1",
+          "status": "open",
+          "id": "unresolved_shortlist_two",
+          "source_message_ids": [
+            "m034"
+          ]
+        },
+        "source_message_id": "m034",
+        "quote": "So it's down to Patagonia and the Dolomites?",
+        "reason": "Alex notes the shortlist is now Patagonia vs. Dolomites.",
+        "recorded_at": "2026-10-07T00:26:24.876912+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg_dolomites_hut_nov_concern",
+        "section": "arguments",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "proposal_id": "proposal_dolomites",
+          "direction": "against",
+          "summary": "Hut availability in the Dolomites in November is a concern for Priya.",
+          "made_by": "sim_2",
+          "id": "arg_dolomites_hut_nov_concern",
+          "source_message_ids": [
+            "m035"
+          ]
+        },
+        "source_message_id": "m035",
+        "quote": "the hut availability worries me for the Dolomites in November.",
+        "reason": "Priya reiterates concern about Dolomites hut availability in November as a reason to prefer Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876919+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_shortlist_two",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "type": "open_question",
+          "description": "Is the shortlist now just Patagonia and the Dolomites?",
+          "raised_by": "sim_1",
+          "status": "open",
+          "id": "unresolved_shortlist_two",
+          "source_message_ids": [
+            "m034"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "open_question",
+          "description": "Shortlist confirmed as Patagonia vs. Dolomites. Dolomites concern: hut availability in November.",
+          "raised_by": "sim_1",
+          "status": "resolved",
+          "id": "unresolved_shortlist_two",
+          "source_message_ids": [
+            "m035"
+          ]
+        },
+        "source_message_id": "m035",
+        "quote": "Yes. And honestly the hut availability worries me for the Dolomites in November.",
+        "reason": "Priya confirms the shortlist is Patagonia and Dolomites.",
+        "recorded_at": "2026-10-07T00:26:24.876926+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_leo_patagonia",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Leo prefers Patagonia over Dolomites on weather grounds.",
+          "id": "position_leo_patagonia",
+          "source_message_ids": [
+            "m036"
+          ]
+        },
+        "source_message_id": "m036",
+        "quote": "Then Patagonia sounds better to me on the weather too.",
+        "reason": "Leo expresses preference for Patagonia over Dolomites, citing weather.",
+        "recorded_at": "2026-10-07T00:26:24.876931+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_priya_patagonia",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Priya accepts Patagonia; not strongly in favour of Dolomites.",
+          "id": "position_priya_patagonia",
+          "source_message_ids": [
+            "m038"
+          ]
+        },
+        "source_message_id": "m038",
+        "quote": "Not strongly. I'm happy with Patagonia, it's been on my list too.",
+        "reason": "Priya drops strong support for Dolomites and accepts Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876937+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_dolomites_dropped",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "dropped_option",
+          "description": "Dolomites dropped: proposer Priya withdrew strong support in favour of Patagonia, citing hut availability concerns in November.",
+          "raised_by": "sim_2",
+          "status": "noted",
+          "id": "unresolved_dolomites_dropped",
+          "source_message_ids": [
+            "m038"
+          ]
+        },
+        "source_message_id": "m038",
+        "quote": "Not strongly. I'm happy with Patagonia, it's been on my list too.",
+        "reason": "Priya (the Dolomites proposer) withdraws strong support, effectively letting the Dolomites option fall away.",
+        "recorded_at": "2026-10-07T00:26:24.876943+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_jordan_patagonia",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Jordan accepts Patagonia; notes flights are a stretch but within $2,500.",
+          "id": "position_jordan_patagonia",
+          "source_message_ids": [
+            "m039"
+          ]
+        },
+        "source_message_id": "m039",
+        "quote": "Patagonia works for me. Flights are a stretch but still inside $2,500.",
+        "reason": "Jordan supports Patagonia while noting flights are a stretch within the budget.",
+        "recorded_at": "2026-10-07T00:26:24.876949+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_maya_patagonia",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Maya is in for Patagonia.",
+          "id": "position_maya_patagonia",
+          "source_message_ids": [
+            "m040"
+          ]
+        },
+        "source_message_id": "m040",
+        "quote": "I'm in for Patagonia too.",
+        "reason": "Maya confirms support for Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876954+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_alex_patagonia",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Alex wants Patagonia / Torres del Paine.",
+          "id": "position_alex_patagonia",
+          "source_message_ids": [
+            "m002"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Alex is strongly in for Patagonia.",
+          "id": "position_alex_patagonia",
+          "source_message_ids": [
+            "m041"
+          ]
+        },
+        "source_message_id": "m041",
+        "quote": "Great, I'm obviously in for Patagonia.",
+        "reason": "Alex reaffirms strong support for Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876961+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_leo_patagonia",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Leo prefers Patagonia over Dolomites on weather grounds.",
+          "id": "position_leo_patagonia",
+          "source_message_ids": [
+            "m036"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Leo confirms Patagonia.",
+          "id": "position_leo_patagonia",
+          "source_message_ids": [
+            "m042"
+          ]
+        },
+        "source_message_id": "m042",
+        "quote": "Patagonia, yes.",
+        "reason": "Leo explicitly confirms Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876968+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_alex_patagonia",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Alex is strongly in for Patagonia.",
+          "id": "position_alex_patagonia",
+          "source_message_ids": [
+            "m041"
+          ],
+          "revision": 2
+        },
+        "new_value": {
+          "participant_id": "sim_1",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Alex gives final explicit yes: Torres del Paine, here we come.",
+          "id": "position_alex_patagonia",
+          "source_message_ids": [
+            "m044"
+          ]
+        },
+        "source_message_id": "m044",
+        "quote": "Yes, all in. Torres del Paine, here we come.",
+        "reason": "Alex gives explicit final yes to Patagonia / Torres del Paine.",
+        "recorded_at": "2026-10-07T00:26:24.876974+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_priya_patagonia",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Priya accepts Patagonia; not strongly in favour of Dolomites.",
+          "id": "position_priya_patagonia",
+          "source_message_ids": [
+            "m038"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_2",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Priya gives final explicit yes.",
+          "id": "position_priya_patagonia",
+          "source_message_ids": [
+            "m045"
+          ]
+        },
+        "source_message_id": "m045",
+        "quote": "Yes from me.",
+        "reason": "Priya gives explicit final yes to Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876981+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_jordan_patagonia",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Jordan accepts Patagonia; notes flights are a stretch but within $2,500.",
+          "id": "position_jordan_patagonia",
+          "source_message_ids": [
+            "m039"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_3",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Jordan gives final explicit yes.",
+          "id": "position_jordan_patagonia",
+          "source_message_ids": [
+            "m046"
+          ]
+        },
+        "source_message_id": "m046",
+        "quote": "Yes.",
+        "reason": "Jordan gives explicit final yes to Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876988+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_maya_patagonia",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Maya is in for Patagonia.",
+          "id": "position_maya_patagonia",
+          "source_message_ids": [
+            "m040"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "participant_id": "sim_4",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Maya gives final explicit yes.",
+          "id": "position_maya_patagonia",
+          "source_message_ids": [
+            "m047"
+          ]
+        },
+        "source_message_id": "m047",
+        "quote": "Yes, I'm in.",
+        "reason": "Maya gives explicit final yes to Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.876995+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_leo_patagonia",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Leo confirms Patagonia.",
+          "id": "position_leo_patagonia",
+          "source_message_ids": [
+            "m042"
+          ],
+          "revision": 2
+        },
+        "new_value": {
+          "participant_id": "sim_5",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Leo gives final explicit yes.",
+          "id": "position_leo_patagonia",
+          "source_message_ids": [
+            "m048"
+          ]
+        },
+        "source_message_id": "m048",
+        "quote": "Yes, count me in.",
+        "reason": "Leo gives explicit final yes to Patagonia.",
+        "recorded_at": "2026-10-07T00:26:24.877003+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position_sam_patagonia",
+        "section": "positions",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "participant_id": "human_admin",
+          "proposal_id": "proposal_patagonia",
+          "stance": "for",
+          "summary": "Sam gives final explicit yes, completing unanimous agreement.",
+          "id": "position_sam_patagonia",
+          "source_message_ids": [
+            "m049"
+          ]
+        },
+        "source_message_id": "m049",
+        "quote": "I'm in too.",
+        "reason": "Sam (admin) gives explicit final yes to Patagonia, completing unanimous agreement.",
+        "recorded_at": "2026-10-07T00:26:24.877009+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_sam_book_flights",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Sam to book flights by Friday.",
+          "owner": "human_admin",
+          "status": "open",
+          "id": "unresolved_sam_book_flights",
+          "source_message_ids": [
+            "m050"
+          ]
+        },
+        "source_message_id": "m050",
+        "quote": "I'll book flights by Friday.",
+        "reason": "Sam commits to booking flights by Friday. Action item pending.",
+        "recorded_at": "2026-10-07T00:26:24.877028+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_passport_confirmation",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "All participants to confirm their passports are valid.",
+          "owner": "all",
+          "status": "open",
+          "id": "unresolved_passport_confirmation",
+          "source_message_ids": [
+            "m050"
+          ]
+        },
+        "source_message_id": "m050",
+        "quote": "Please all confirm your passports are valid.",
+        "reason": "Sam requests all participants confirm passport validity. Open action item for the group.",
+        "recorded_at": "2026-10-07T00:26:24.877034+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_alex_passport_valid",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Alex's passport is valid.",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_alex_passport_valid",
+          "source_message_ids": [
+            "m051"
+          ]
+        },
+        "source_message_id": "m051",
+        "quote": "Passport is good.",
+        "reason": "Alex confirms their passport is valid.",
+        "recorded_at": "2026-10-07T00:26:24.877040+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_alex_wtrek_itineraries",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Alex to look at W trek itineraries and post options.",
+          "owner": "sim_1",
+          "status": "open",
+          "id": "unresolved_alex_wtrek_itineraries",
+          "source_message_ids": [
+            "m051"
+          ]
+        },
+        "source_message_id": "m051",
+        "quote": "I'll look at W trek itineraries and post options tonight.",
+        "reason": "Alex commits to researching W trek itineraries and sharing options.",
+        "recorded_at": "2026-10-07T00:26:24.877048+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_priya_passport_valid",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Priya's passport is valid.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_priya_passport_valid",
+          "source_message_ids": [
+            "m052"
+          ]
+        },
+        "source_message_id": "m052",
+        "quote": "Passport is fine.",
+        "reason": "Priya confirms passport is valid.",
+        "recorded_at": "2026-10-07T00:26:24.877053+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_priya_refugio_bookings",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to research refugio and campsite bookings in Torres del Paine.",
+          "owner": "sim_2",
+          "status": "open",
+          "id": "unresolved_priya_refugio_bookings",
+          "source_message_ids": [
+            "m052"
+          ]
+        },
+        "source_message_id": "m052",
+        "quote": "I'll research refugio and campsite bookings.",
+        "reason": "Priya commits to researching refugio and campsite bookings.",
+        "recorded_at": "2026-10-07T00:26:24.877061+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_jordan_passport_valid",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Jordan's passport is valid.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_jordan_passport_valid",
+          "source_message_ids": [
+            "m053"
+          ]
+        },
+        "source_message_id": "m053",
+        "quote": "Passport good.",
+        "reason": "Jordan confirms passport is valid.",
+        "recorded_at": "2026-10-07T00:26:24.877068+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_jordan_travel_insurance",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Jordan to look at travel insurance options and post them to the group.",
+          "owner": "sim_3",
+          "status": "open",
+          "id": "unresolved_jordan_travel_insurance",
+          "source_message_ids": [
+            "m053"
+          ]
+        },
+        "source_message_id": "m053",
+        "quote": "I'll look at travel insurance and post options here.",
+        "reason": "Jordan commits to researching travel insurance options.",
+        "recorded_at": "2026-10-07T00:26:24.877074+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_maya_passport_valid",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Maya's passport is valid.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_maya_passport_valid",
+          "source_message_ids": [
+            "m054"
+          ]
+        },
+        "source_message_id": "m054",
+        "quote": "Passport good.",
+        "reason": "Maya confirms passport is valid.",
+        "recorded_at": "2026-10-07T00:26:24.877081+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_maya_expense_sheet",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Maya to set up a shared expense sheet.",
+          "owner": "sim_4",
+          "status": "open",
+          "id": "unresolved_maya_expense_sheet",
+          "source_message_ids": [
+            "m054"
+          ]
+        },
+        "source_message_id": "m054",
+        "quote": "I'll set up a shared expense sheet.",
+        "reason": "Maya commits to setting up a shared expense sheet.",
+        "recorded_at": "2026-10-07T00:26:24.877087+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim_leo_passport_valid",
+        "section": "claims",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "statement": "Leo's passport is valid.",
+          "made_by": "sim_5",
+          "verification": {
+            "status": "not_checked"
+          },
+          "id": "claim_leo_passport_valid",
+          "source_message_ids": [
+            "m055"
+          ]
+        },
+        "source_message_id": "m055",
+        "quote": "Passport good.",
+        "reason": "Leo confirms passport is valid.",
+        "recorded_at": "2026-10-07T00:26:24.877093+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_leo_gear_rental",
+        "section": "unresolved",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Leo to check gear rental options in Puerto Natales.",
+          "owner": "sim_5",
+          "status": "open",
+          "id": "unresolved_leo_gear_rental",
+          "source_message_ids": [
+            "m055"
+          ]
+        },
+        "source_message_id": "m055",
+        "quote": "I'll check gear rental in Puerto Natales.",
+        "reason": "Leo commits to checking gear rental options in Puerto Natales.",
+        "recorded_at": "2026-10-07T00:26:24.877098+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_alex_transport_punta_arenas",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Alex to find out the best way to get from Punta Arenas to Torres del Paine park.",
+          "owner": "sim_1",
+          "status": "open",
+          "id": "unresolved_alex_transport_punta_arenas",
+          "source_message_ids": [
+            "m056"
+          ]
+        },
+        "source_message_id": "m056",
+        "quote": "I'll find out the best way to get from Punta Arenas to the park.",
+        "reason": "Alex commits to researching transport from Punta Arenas to Torres del Paine.",
+        "recorded_at": "2026-10-07T00:26:24.877103+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_priya_refugio_followup",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "type": "action_item",
+          "description": "Priya to ping the group with refugio booking responses.",
+          "owner": "sim_2",
+          "status": "open",
+          "id": "unresolved_priya_refugio_followup",
+          "source_message_ids": [
+            "m057"
+          ]
+        },
+        "source_message_id": "m057",
+        "quote": "I'll ping the group when I hear back from the refugios.",
+        "reason": "Priya commits to updating the group once she hears back from refugios.",
+        "recorded_at": "2026-10-07T00:26:24.877109+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_maya_expense_sheet",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": {
+          "type": "action_item",
+          "description": "Maya to set up a shared expense sheet.",
+          "owner": "sim_4",
+          "status": "open",
+          "id": "unresolved_maya_expense_sheet",
+          "source_message_ids": [
+            "m054"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "type": "action_item",
+          "description": "Maya to set up a shared expense sheet \u2014 link coming the following day.",
+          "owner": "sim_4",
+          "status": "open",
+          "id": "unresolved_maya_expense_sheet",
+          "source_message_ids": [
+            "m059"
+          ]
+        },
+        "source_message_id": "m059",
+        "quote": "Sheet link coming tomorrow.",
+        "reason": "Maya provides an expected timeline: expense sheet link coming the next day.",
+        "recorded_at": "2026-10-07T00:26:24.877122+00:00"
+      }
+    ],
+    "audit": [],
+    "bot_turns": 0,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3",
+      "sim_4",
+      "sim_5"
+    ],
+    "next_bot_index": 0,
+    "facilitation": []
+  },
+  "gold": {
+    "id": "hiking-01-simple",
+    "level": 1,
+    "scenario_notes": "Clean, linear. Every member says exactly 10 messages. Options proposed, dates and budget confirmed by each person, two options withdrawn by their proposers, explicit unanimous choice, then next steps. Tests baseline extraction with no traps beyond claim handling.",
+    "decision_question": "Where should the group go on its November hiking trip?",
+    "options": [
+      {
+        "name": "Patagonia (Torres del Paine)",
+        "status": "chosen",
+        "proposed_by": "Alex",
+        "msgs": [
+          "m002",
+          "m043",
+          "m049"
+        ]
+      },
+      {
+        "name": "Dolomites",
+        "status": "not chosen",
+        "proposed_by": "Priya",
+        "msgs": [
+          "m003",
+          "m035",
+          "m038"
+        ]
+      },
+      {
+        "name": "Banff",
+        "status": "dropped",
+        "proposed_by": "Jordan",
+        "msgs": [
+          "m004",
+          "m032"
+        ]
+      },
+      {
+        "name": "Yosemite",
+        "status": "dropped",
+        "proposed_by": "Maya",
+        "msgs": [
+          "m005",
+          "m033"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Dates Nov 14 to 21 (7 days)",
+        "status": "agreed",
+        "msgs": [
+          "m007",
+          "m008",
+          "m009",
+          "m010",
+          "m011",
+          "m012",
+          "m013"
+        ]
+      },
+      {
+        "text": "Leo must be home by Sunday Nov 22",
+        "status": "stated",
+        "msgs": [
+          "m006",
+          "m012"
+        ]
+      },
+      {
+        "text": "Budget about $2,500 per person all in",
+        "status": "agreed",
+        "msgs": [
+          "m014",
+          "m015",
+          "m016",
+          "m017",
+          "m018",
+          "m019"
+        ],
+        "note": "Maya would prefer lower (m017); a soft preference that does not block agreement."
+      }
+    ],
+    "criteria": [
+      {
+        "text": "Hiking quality",
+        "raised_by": [
+          "Sam",
+          "Alex",
+          "Priya",
+          "Leo"
+        ],
+        "msgs": [
+          "m020",
+          "m021",
+          "m022",
+          "m025"
+        ]
+      },
+      {
+        "text": "Views",
+        "raised_by": [
+          "Sam",
+          "Leo"
+        ],
+        "msgs": [
+          "m020",
+          "m025"
+        ]
+      },
+      {
+        "text": "Cost",
+        "raised_by": [
+          "Alex",
+          "Jordan"
+        ],
+        "msgs": [
+          "m021",
+          "m023"
+        ]
+      },
+      {
+        "text": "Weather",
+        "raised_by": [
+          "Jordan",
+          "Maya"
+        ],
+        "msgs": [
+          "m023",
+          "m024"
+        ]
+      },
+      {
+        "text": "Easy logistics",
+        "raised_by": [
+          "Maya"
+        ],
+        "msgs": [
+          "m024"
+        ]
+      },
+      {
+        "text": "Trail variety",
+        "raised_by": [
+          "Priya"
+        ],
+        "msgs": [
+          "m022"
+        ]
+      }
+    ],
+    "claims": [
+      {
+        "text": "Patagonia flights are around $1,300 round trip",
+        "by": "Alex",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m026",
+          "m031"
+        ]
+      },
+      {
+        "text": "Dolomites flights are around $900",
+        "by": "Priya",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m027",
+          "m031"
+        ]
+      },
+      {
+        "text": "Dolomites hut availability in November could be tight",
+        "by": "Priya",
+        "type": "prediction, hedged",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m027",
+          "m035"
+        ]
+      },
+      {
+        "text": "Banff in mid-November is usually snowy and many trails would be hard to hike",
+        "by": "Jordan",
+        "type": "generalization, hedged",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m028",
+          "m032"
+        ]
+      },
+      {
+        "text": "Yosemite is a bit tame for a week of hiking",
+        "by": "Maya",
+        "type": "opinion",
+        "checkable": false,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m029"
+        ]
+      },
+      {
+        "text": "Patagonia in November is spring: mild with longer days",
+        "by": "Leo",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m030"
+        ]
+      }
+    ],
+    "agreements": [
+      {
+        "text": "Dates Nov 14 to 21",
+        "explicit_affirmers": [
+          "Alex",
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Leo",
+          "Sam"
+        ],
+        "msgs": [
+          "m008",
+          "m009",
+          "m010",
+          "m011",
+          "m012",
+          "m013"
+        ]
+      },
+      {
+        "text": "Budget about $2,500 per person all in",
+        "explicit_affirmers": [
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Alex",
+          "Leo",
+          "Sam"
+        ],
+        "msgs": [
+          "m014",
+          "m015",
+          "m016",
+          "m017",
+          "m018",
+          "m019"
+        ]
+      },
+      {
+        "text": "Destination: Patagonia",
+        "explicit_affirmers": [
+          "Priya",
+          "Jordan",
+          "Maya",
+          "Alex",
+          "Leo",
+          "Sam"
+        ],
+        "msgs": [
+          "m038",
+          "m039",
+          "m040",
+          "m041",
+          "m042",
+          "m044",
+          "m045",
+          "m046",
+          "m047",
+          "m048",
+          "m049"
+        ]
+      },
+      {
+        "text": "Banff dropped",
+        "explicit_affirmers": [
+          "Jordan"
+        ],
+        "msgs": [
+          "m032"
+        ],
+        "note": "Withdrawn by its proposer; nobody objected."
+      },
+      {
+        "text": "Yosemite dropped",
+        "explicit_affirmers": [
+          "Maya"
+        ],
+        "msgs": [
+          "m033"
+        ],
+        "note": "Withdrawn by its proposer; nobody objected."
+      }
+    ],
+    "open_issues": [],
+    "outcome": "Patagonia (Torres del Paine), Nov 14 to 21, about $2,500 per person, explicitly agreed by all six.",
+    "next_steps": [
+      {
+        "who": "Sam",
+        "task": "Book flights by Friday",
+        "msgs": [
+          "m050"
+        ]
+      },
+      {
+        "who": "Everyone",
+        "task": "Confirm passports are valid (all six confirmed or asked)",
+        "msgs": [
+          "m050",
+          "m051",
+          "m052",
+          "m053",
+          "m054",
+          "m055"
+        ]
+      },
+      {
+        "who": "Alex",
+        "task": "Post W trek itinerary options tonight",
+        "msgs": [
+          "m051"
+        ]
+      },
+      {
+        "who": "Alex",
+        "task": "Find the best way from Punta Arenas to the park",
+        "msgs": [
+          "m056"
+        ]
+      },
+      {
+        "who": "Priya",
+        "task": "Research refugio and campsite bookings and report back",
+        "msgs": [
+          "m052",
+          "m057"
+        ]
+      },
+      {
+        "who": "Jordan",
+        "task": "Post travel insurance options",
+        "msgs": [
+          "m053"
+        ]
+      },
+      {
+        "who": "Maya",
+        "task": "Set up a shared expense sheet (link tomorrow)",
+        "msgs": [
+          "m054",
+          "m059"
+        ]
+      },
+      {
+        "who": "Leo",
+        "task": "Check gear rental in Puerto Natales",
+        "msgs": [
+          "m055"
+        ]
+      }
+    ],
+    "traps": [
+      {
+        "msgs": [
+          "m031"
+        ],
+        "note": "Sam restates Alex's and Priya's flight prices as plain fact. They stay attributed, unverified claims."
+      },
+      {
+        "msgs": [
+          "m017",
+          "m039"
+        ],
+        "note": "Soft concerns (Maya prefers a lower budget, Jordan calls flights a stretch) are not conditions and do not block agreement."
+      },
+      {
+        "msgs": [
+          "m035",
+          "m038"
+        ],
+        "note": "Priya's worry is that hut availability could be tight. Nobody says the huts are closed."
+      }
+    ],
+    "card_must_include": [
+      "Patagonia (Torres del Paine) chosen, agreed by all six",
+      "Dates Nov 14 to 21 and budget about $2,500 per person",
+      "Banff and Yosemite withdrawn by their proposers; Dolomites not chosen",
+      "Next steps with owners: Sam flights, Alex itineraries and the Punta Arenas transfer, Priya refugios, Jordan insurance, Maya expense sheet, Leo gear rental",
+      "Flight prices shown as unverified claims with their source"
+    ],
+    "card_must_not_include": [
+      "The Dolomites huts are closed",
+      "Any unresolved disagreement about the destination",
+      "Flight prices presented as verified",
+      "Banff or Yosemite rejected by the whole group (only their proposers withdrew them)"
+    ]
+  },
+  "errors": [
+    {
+      "msg": "m049",
+      "error": "Card update has no exact source quote."
+    }
+  ]
+}

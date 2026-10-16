@@ -1,0 +1,3691 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "717ea4b0-cca5-4bde-872c-ceb0b508b1e2",
+    "card_version": 1,
+    "topic": {
+      "title": "Hiking 03 - shifting constraints, a revived option, an ambiguous \"sounds good\"",
+      "problem": "Hiking 03 - shifting constraints, a revived option, an ambiguous \"sounds good\"",
+      "decision_requested": "Hiking 03 - shifting constraints, a revived option, an ambiguous \"sounds good\"",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "Sam",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Priya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_4",
+        "name": "Maya",
+        "role": "participant",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_5",
+        "name": "Leo",
+        "role": "participant",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_4",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_5",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": []
+    },
+    "criteria": [
+      {
+        "id": "criterion-proximity",
+        "description": "Destination should be close / low travel distance.",
+        "raised_by": "sim_3",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "criterion-cost",
+        "description": "Destination should be affordable / low cost.",
+        "raised_by": "sim_3",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "criterion-budget-2000",
+        "description": "Budget cap: $2,000 per person all-in (agreed by all six participants).",
+        "raised_by": "human_admin",
+        "source_message_ids": [
+          "m030"
+        ],
+        "revision": 1
+      }
+    ],
+    "proposals": [
+      {
+        "id": "proposal-patagonia",
+        "title": "Patagonia \u2013 Torres del Paine, W Trek",
+        "status": "proposed",
+        "proposed_by": "sim_1",
+        "source_message_ids": [
+          "m002"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-dolomites",
+        "title": "Dolomites (hut-to-hut)",
+        "status": "proposed",
+        "proposed_by": "sim_2",
+        "source_message_ids": [
+          "m003"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-banff",
+        "title": "Banff / Canmore area",
+        "status": "proposed",
+        "proposed_by": "sim_3",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-yosemite",
+        "title": "Yosemite",
+        "status": "proposed",
+        "proposed_by": "sim_4",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-zion",
+        "title": "Zion National Park (Utah)",
+        "status": "proposed",
+        "proposed_by": "sim_5",
+        "source_message_ids": [
+          "m006"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-dates-nov14-21",
+        "title": "Dates: Nov 14\u201321",
+        "status": "proposed",
+        "proposed_by": "human_admin",
+        "source_message_ids": [
+          "m007"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-budget-2500",
+        "title": "Budget: $2,500 per person all-in",
+        "status": "proposed",
+        "proposed_by": "human_admin",
+        "source_message_ids": [
+          "m018"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-budget-2000",
+        "title": "Budget: $2,000 per person all-in",
+        "status": "proposed",
+        "proposed_by": "sim_4",
+        "source_message_ids": [
+          "m024"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-5day-closer-dest",
+        "title": "5-day trip to a closer destination (e.g. Banff) so all 6 can attend",
+        "status": "proposed",
+        "proposed_by": "sim_3",
+        "source_message_ids": [
+          "m054"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "proposal-7day-jordan-partial",
+        "title": "Full 7-day trip (Nov 14\u201321) with Jordan joining for the first 5 days only",
+        "status": "proposed",
+        "proposed_by": "sim_1",
+        "source_message_ids": [
+          "m055"
+        ],
+        "revision": 1
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-dolomites-needs-6-7-days",
+        "statement": "The Dolomites needs six or seven days to do properly.",
+        "made_by": "sim_2",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m010"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-patagonia-flights-1300",
+        "statement": "Flights to Patagonia cost approximately $1,300 per person.",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m029"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-banff-nov-snow",
+        "statement": "In mid-November Banff is hit or miss; many trails are under snow.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m031"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-zion-nov-weather",
+        "statement": "Zion canyon in mid-November is usually in the 60s\u00b0F and sunny, with very few crowds.",
+        "made_by": "sim_5",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m037"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-zion-nearby-parks",
+        "statement": "Zion, Bryce Canyon, and Snow Canyon are all within a couple of hours of each other.",
+        "made_by": "sim_5",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m040"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-patagonia-refugios-600",
+        "statement": "W Trek refugios cost approximately $600 per person. Combined with ~$1,300 flights, total is approximately $1,900, leaving ~$100 for other costs.",
+        "made_by": "sim_1",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m043"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-calgary-flights-380",
+        "statement": "Calgary round-trip flights found for $380 per person.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m047"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-canmore-lodge-90",
+        "statement": "A lodge in Canmore is available at $90 per night. Jordan estimates Banff could come in well under $2,000 per person all-in.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m048"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-canmore-lower-trails",
+        "statement": "The lower trails around Canmore stay walkable in November.",
+        "made_by": "sim_3",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m051"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-banff-nov-temp-20f",
+        "statement": "Banff temperatures in November are around 20\u00b0F.",
+        "made_by": "sim_4",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m059"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "claim-zion-narrows-nov",
+        "statement": "The Narrows at Zion in November is empty and gorgeous, though on some days it may be too cold to wade.",
+        "made_by": "sim_5",
+        "verification": {
+          "status": "not_checked"
+        },
+        "source_message_ids": [
+          "m062"
+        ],
+        "revision": 1
+      }
+    ],
+    "assumptions": [],
+    "arguments": [
+      {
+        "id": "arg-patagonia-needs-more-days",
+        "proposal_id": "proposal-patagonia",
+        "type": "con",
+        "participant_id": "sim_1",
+        "statement": "Patagonia is not worth the long flight for only five days.",
+        "source_message_ids": [
+          "m009"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-dolomites-needs-more-days",
+        "proposal_id": "proposal-dolomites",
+        "type": "con",
+        "participant_id": "sim_2",
+        "statement": "The Dolomites needs 6\u20137 days, so a 5-day window does not work for it either.",
+        "source_message_ids": [
+          "m010"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-patagonia-over-budget",
+        "proposal_id": "proposal-patagonia",
+        "type": "con",
+        "participant_id": "sim_1",
+        "statement": "At a $2,000 budget, Patagonia flights alone (~$1,300) leave almost nothing for accommodation and food.",
+        "source_message_ids": [
+          "m029"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-banff-snow-risk",
+        "proposal_id": "proposal-banff",
+        "type": "con",
+        "participant_id": "sim_3",
+        "statement": "Banff in mid-November is hit or miss; many trails may be snow-covered.",
+        "source_message_ids": [
+          "m031"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-nov-conditions",
+        "proposal_id": "proposal-zion",
+        "type": "pro",
+        "participant_id": "sim_5",
+        "statement": "Zion in mid-November is typically 60s\u00b0F, sunny, and uncrowded.",
+        "source_message_ids": [
+          "m037"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-week-content",
+        "proposal_id": "proposal-zion",
+        "type": "pro",
+        "participant_id": "sim_5",
+        "statement": "Zion, Bryce, and Snow Canyon are all within a couple of hours, providing a full week of hiking.",
+        "source_message_ids": [
+          "m040"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-road-trip-not-hike",
+        "proposal_id": "proposal-zion",
+        "type": "con",
+        "participant_id": "sim_1",
+        "statement": "Combining Zion, Bryce, and Snow Canyon makes it a road trip rather than a proper hiking trip.",
+        "source_message_ids": [
+          "m041"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-patagonia-tight-fits",
+        "proposal_id": "proposal-patagonia",
+        "type": "pro",
+        "participant_id": "sim_1",
+        "statement": "Flights (~$1,300) + refugios (~$600) = ~$1,900, so Patagonia technically fits within $2,000, albeit very tightly.",
+        "source_message_ids": [
+          "m043"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-patagonia-100-not-enough",
+        "proposal_id": "proposal-patagonia",
+        "type": "con",
+        "participant_id": "sim_2",
+        "statement": "After flights and refugios (~$1,900), only ~$100 remains for food, buses, and gear \u2014 insufficient.",
+        "source_message_ids": [
+          "m044"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-patagonia-skip-gear-cook",
+        "proposal_id": "proposal-patagonia",
+        "type": "pro",
+        "participant_id": "sim_1",
+        "statement": "Skipping gear rental and cooking own food could bring Patagonia within the $2,000 budget.",
+        "source_message_ids": [
+          "m045"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-patagonia-stretch-trip",
+        "proposal_id": "proposal-patagonia",
+        "type": "con",
+        "participant_id": "sim_4",
+        "statement": "If participants need to skip gear rental and self-cater, Patagonia is a 'stretch trip', not a budget trip.",
+        "source_message_ids": [
+          "m046"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-banff-budget-strong",
+        "proposal_id": "proposal-banff",
+        "type": "pro",
+        "participant_id": "sim_3",
+        "statement": "Calgary flights at $380 RT + Canmore lodge at $90/night means Banff could come in well under $2,000.",
+        "source_message_ids": [
+          "m048"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-banff-snowshoeing-not-hiking",
+        "proposal_id": "proposal-banff",
+        "type": "con",
+        "participant_id": "sim_1",
+        "statement": "Banff in November means snowshoeing, not hiking.",
+        "source_message_ids": [
+          "m050"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-banff-walkable-plus-snowshoe",
+        "proposal_id": "proposal-banff",
+        "type": "pro",
+        "participant_id": "sim_3",
+        "statement": "Lower Canmore trails stay walkable in November, and snowshoeing is a valid activity.",
+        "source_message_ids": [
+          "m051"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-warmer-than-banff",
+        "proposal_id": "proposal-zion",
+        "type": "pro",
+        "participant_id": "sim_4",
+        "statement": "Zion's November temperatures (~60s\u00b0F) are much more comfortable than Banff's (~20\u00b0F) for hiking.",
+        "source_message_ids": [
+          "m059"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-banff-beautiful-ice-springs",
+        "proposal_id": "proposal-banff",
+        "type": "pro",
+        "participant_id": "sim_3",
+        "statement": "Banff is beautiful in winter and offers ice walks and hot springs as additional activities.",
+        "source_message_ids": [
+          "m060"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-not-special",
+        "proposal_id": "proposal-zion",
+        "type": "con",
+        "participant_id": "sim_1",
+        "statement": "Zion is essentially the same as Yosemite \u2014 comfortable and close but not a special or distinctive hiking destination.",
+        "source_message_ids": [
+          "m061"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "arg-zion-narrows-special",
+        "proposal_id": "proposal-zion",
+        "type": "pro",
+        "participant_id": "sim_5",
+        "statement": "Zion is special; The Narrows in November is empty and gorgeous.",
+        "source_message_ids": [
+          "m062"
+        ],
+        "revision": 1
+      }
+    ],
+    "positions": [
+      {
+        "id": "position-alex-patagonia",
+        "participant_id": "sim_1",
+        "proposal_id": "proposal-patagonia",
+        "stance": "supports",
+        "statement": "Alex wants Patagonia / Torres del Paine W Trek.",
+        "source_message_ids": [
+          "m002"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-priya-dolomites",
+        "participant_id": "sim_2",
+        "proposal_id": "proposal-dolomites",
+        "stance": "supports",
+        "statement": "Priya wants the Dolomites.",
+        "source_message_ids": [
+          "m003"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-jordan-banff",
+        "participant_id": "sim_3",
+        "proposal_id": "proposal-banff",
+        "stance": "supports",
+        "statement": "Jordan wants Banff because it is close and cheap.",
+        "source_message_ids": [
+          "m004"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-maya-yosemite",
+        "participant_id": "sim_4",
+        "proposal_id": "proposal-yosemite",
+        "stance": "supports",
+        "statement": "Maya suggests Yosemite as cheap and easy.",
+        "source_message_ids": [
+          "m005"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-leo-zion",
+        "participant_id": "sim_5",
+        "proposal_id": "proposal-zion",
+        "stance": "supports",
+        "statement": "Leo wants Zion; says Utah in November is underrated.",
+        "source_message_ids": [
+          "m006"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-maya-budget-2000",
+        "participant_id": "sim_4",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Maya prefers a $2,000 per-person budget.",
+        "source_message_ids": [
+          "m024"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-sam-budget-2000",
+        "participant_id": "human_admin",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Sam is OK with $2,000 if everyone else agrees.",
+        "source_message_ids": [
+          "m025"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-priya-budget-2000",
+        "participant_id": "sim_2",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Priya accepts $2,000 per-person budget.",
+        "source_message_ids": [
+          "m026"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-jordan-budget-2000",
+        "participant_id": "sim_3",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Jordan accepts $2,000 per-person budget; notes it suits Banff well.",
+        "source_message_ids": [
+          "m027"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-leo-budget-2000",
+        "participant_id": "sim_5",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Leo accepts $2,000 per-person budget.",
+        "source_message_ids": [
+          "m028"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-alex-budget-2000",
+        "participant_id": "sim_1",
+        "proposal_id": "proposal-budget-2000",
+        "stance": "supports",
+        "statement": "Alex accepts $2,000 budget but notes it nearly eliminates Patagonia given ~$1,300 flights.",
+        "source_message_ids": [
+          "m029"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-maya-zion",
+        "participant_id": "sim_4",
+        "proposal_id": "proposal-zion",
+        "stance": "supports",
+        "statement": "Maya prefers Zion over Yosemite for November and is happy to drop Yosemite if Zion stays.",
+        "source_message_ids": [
+          "m038"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-alex-prefers-patagonia-dolomites",
+        "participant_id": "sim_1",
+        "stance": "supports",
+        "statement": "Alex prefers Patagonia or the Dolomites over Zion.",
+        "source_message_ids": [
+          "m041"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-priya-banff-cautious",
+        "participant_id": "sim_2",
+        "proposal_id": "proposal-banff",
+        "stance": "neutral",
+        "statement": "Priya is not against reopening Banff but acknowledges Alex's concern about hiking quality in November.",
+        "source_message_ids": [
+          "m053"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-maya-patagonia-out",
+        "participant_id": "sim_4",
+        "proposal_id": "proposal-patagonia",
+        "stance": "opposes",
+        "statement": "Maya thinks Patagonia is basically out because it cannot fit within the $2,000 budget.",
+        "source_message_ids": [
+          "m064"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "position-alex-patagonia-still-in",
+        "participant_id": "sim_1",
+        "proposal_id": "proposal-patagonia",
+        "stance": "supports",
+        "statement": "Alex insists Patagonia is not out \u2014 it is tight but still feasible within $2,000.",
+        "source_message_ids": [
+          "m065"
+        ],
+        "revision": 1
+      }
+    ],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [
+      {
+        "id": "unresolved-decision-topic",
+        "description": "November hiking trip destination, dates, and budget to be decided.",
+        "status": "open",
+        "source_message_ids": [
+          "m001"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-jordan-availability",
+        "description": "Jordan can only attend Nov 14\u201318 due to a work commitment on the 19th (stated as unmovable at this point). This conflicts with the Nov 14\u201321 proposal.",
+        "status": "open",
+        "source_message_ids": [
+          "m008"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-leo-home-by-22nd",
+        "description": "Leo needs to be home by Nov 22, which is compatible with Nov 14\u201321 but should be noted as a constraint.",
+        "status": "open",
+        "source_message_ids": [
+          "m016"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-date-window-split",
+        "description": "Five participants available Nov 14\u201321; Jordan only available Nov 14\u201318. Whether to do 5 days or 7 days (and whether Jordan attends part of a longer trip) is unresolved.",
+        "status": "open",
+        "source_message_ids": [
+          "m017"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-banff-dropped-snow",
+        "description": "Banff initially dropped by group consensus (Sam, Maya, Priya, Jordan agreed) due to mid-November snow risk making hiking unreliable. Later revived \u2014 see unresolved-banff-revived.",
+        "status": "open",
+        "source_message_ids": [
+          "m035"
+        ],
+        "revision": 2
+      },
+      {
+        "id": "unresolved-yosemite-dropped",
+        "description": "Yosemite dropped from consideration. Maya (proposer) agreed to drop it in favour of Zion. No objections raised by others. Rationale: Zion viewed as better for November.",
+        "status": "open",
+        "source_message_ids": [
+          "m038"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-zion-enough-days",
+        "description": "Open question: Does Zion area offer enough hiking content for a full 7-day trip?",
+        "status": "open",
+        "source_message_ids": [
+          "m039"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-banff-revived",
+        "description": "Banff was initially dropped over snow risk, then revived by Maya and Jordan after new price data (Calgary flights $380 RT, Canmore lodge $90/night). Sam's summary (m063) re-lists it as an active option. Group has not formally objected to its revival.",
+        "status": "open",
+        "source_message_ids": [
+          "m063"
+        ],
+        "revision": 2
+      },
+      {
+        "id": "unresolved-patagonia-budget-viability",
+        "description": "Disputed: Alex says Patagonia is tight but viable within $2,000; Maya says it is basically out; Priya says the ~$100 remaining after flights and refugios is insufficient. Alex to price it properly (m070).",
+        "status": "open",
+        "source_message_ids": [
+          "m065"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-dolomites-budget-unknown",
+        "description": "Dolomites flight prices and total budget have not been checked yet. Priya to research and report (m071).",
+        "status": "open",
+        "source_message_ids": [
+          "m066"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-poll-tomorrow",
+        "description": "Poll with all four options and prices is on hold until Jordan confirms whether the Nov 19 work commitment can be moved, resolving the 5-day vs 7-day dates question.",
+        "status": "open",
+        "source_message_ids": [
+          "m078"
+        ],
+        "revision": 2
+      },
+      {
+        "id": "action-alex-price-patagonia",
+        "description": "Action item: Alex to provide a full Patagonia price breakdown including flights, refugios, food, and transfers.",
+        "status": "open",
+        "owner": "sim_1",
+        "source_message_ids": [
+          "m070"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "action-priya-price-dolomites",
+        "description": "Action item: Priya to research and provide a full Dolomites price breakdown.",
+        "status": "open",
+        "owner": "sim_2",
+        "source_message_ids": [
+          "m071"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "action-jordan-price-banff-check-work",
+        "description": "Action item: Jordan to (1) provide full Banff price breakdown and (2) check if the Nov 19 work commitment can be moved. Everyone waiting on this before committing to dates or running the poll.",
+        "status": "open",
+        "owner": "sim_3",
+        "source_message_ids": [
+          "m076"
+        ],
+        "revision": 2
+      },
+      {
+        "id": "action-leo-price-zion",
+        "description": "Action item: Leo to provide a full Zion price breakdown.",
+        "status": "open",
+        "owner": "sim_5",
+        "source_message_ids": [
+          "m073"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "action-maya-comparison-sheet",
+        "description": "Action item: Maya to build the destination comparison sheet for the poll.",
+        "status": "open",
+        "owner": "sim_4",
+        "source_message_ids": [
+          "m074"
+        ],
+        "revision": 1
+      },
+      {
+        "id": "unresolved-dates-5-or-7",
+        "description": "Whether the trip is 5 days (Nov 14\u201318, all attend) or 7 days (Nov 14\u201321, Jordan partial) must be settled before the destination poll. Contingent on Jordan's work situation.",
+        "status": "open",
+        "source_message_ids": [
+          "m075"
+        ],
+        "revision": 1
+      }
+    ],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "m001",
+        "speaker_id": "human_admin",
+        "text": "Time to decide the November hiking trip. Options, dates, budget. Go.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:15:00"
+      },
+      {
+        "id": "m002",
+        "speaker_id": "sim_1",
+        "text": "Patagonia. Torres del Paine, the W trek. It's the trip.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:16:00"
+      },
+      {
+        "id": "m003",
+        "speaker_id": "sim_2",
+        "text": "Dolomites, please. Huts and food.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:17:00"
+      },
+      {
+        "id": "m004",
+        "speaker_id": "sim_3",
+        "text": "Banff for me, it's close and cheap.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:19:00"
+      },
+      {
+        "id": "m005",
+        "speaker_id": "sim_4",
+        "text": "Yosemite? Cheap and easy.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:20:00"
+      },
+      {
+        "id": "m006",
+        "speaker_id": "sim_5",
+        "text": "I'd like to add Zion to the list. Utah in November is underrated.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:23:00"
+      },
+      {
+        "id": "m007",
+        "speaker_id": "human_admin",
+        "text": "Five options then. Dates first. I proposed Nov 14 to 21. Anyone blocked?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:25:00"
+      },
+      {
+        "id": "m008",
+        "speaker_id": "sim_3",
+        "text": "I can only do the 14th to the 18th. I have a work thing on the 19th that I can't move.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:27:00"
+      },
+      {
+        "id": "m009",
+        "speaker_id": "sim_1",
+        "text": "That's five days. Patagonia isn't worth flying to for five days.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:28:00"
+      },
+      {
+        "id": "m010",
+        "speaker_id": "sim_2",
+        "text": "The Dolomites also needs six or seven days.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:29:00"
+      },
+      {
+        "id": "m011",
+        "speaker_id": "sim_4",
+        "text": "Can the rest of us do the full week?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:31:00"
+      },
+      {
+        "id": "m012",
+        "speaker_id": "human_admin",
+        "text": "I can.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:32:00"
+      },
+      {
+        "id": "m013",
+        "speaker_id": "sim_2",
+        "text": "I can.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:33:00"
+      },
+      {
+        "id": "m014",
+        "speaker_id": "sim_1",
+        "text": "I can.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:34:00"
+      },
+      {
+        "id": "m015",
+        "speaker_id": "sim_4",
+        "text": "I can do the full week too.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:35:00"
+      },
+      {
+        "id": "m016",
+        "speaker_id": "sim_5",
+        "text": "I can, but I need to be home by the 22nd.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:37:00"
+      },
+      {
+        "id": "m017",
+        "speaker_id": "human_admin",
+        "text": "Ok, so five of us can do Nov 14 to 21 and Jordan can only do the 14th to 18th. Parking that.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:38:00"
+      },
+      {
+        "id": "m018",
+        "speaker_id": "human_admin",
+        "text": "Budget. $2,500 per person all in?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:41:00"
+      },
+      {
+        "id": "m019",
+        "speaker_id": "sim_1",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:42:00"
+      },
+      {
+        "id": "m020",
+        "speaker_id": "sim_2",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:43:00"
+      },
+      {
+        "id": "m021",
+        "speaker_id": "sim_3",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:44:00"
+      },
+      {
+        "id": "m022",
+        "speaker_id": "human_admin",
+        "text": "Alex, Priya and Jordan are OK with $2,500. Maya, Leo?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:46:00"
+      },
+      {
+        "id": "m023",
+        "speaker_id": "sim_5",
+        "text": "Fine.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:47:00"
+      },
+      {
+        "id": "m024",
+        "speaker_id": "sim_4",
+        "text": "I'd be more comfortable at $2,000. Could we do that instead?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:51:00"
+      },
+      {
+        "id": "m025",
+        "speaker_id": "human_admin",
+        "text": "I'm OK with $2,000 if everyone else is.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:53:00"
+      },
+      {
+        "id": "m026",
+        "speaker_id": "sim_2",
+        "text": "$2,000 works for me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:54:00"
+      },
+      {
+        "id": "m027",
+        "speaker_id": "sim_3",
+        "text": "$2,000 is fine, it's easier for Banff anyway.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:55:00"
+      },
+      {
+        "id": "m028",
+        "speaker_id": "sim_5",
+        "text": "$2,000 works.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:57:00"
+      },
+      {
+        "id": "m029",
+        "speaker_id": "sim_1",
+        "text": "Fine with $2,000, but then Patagonia is basically out. Flights alone are $1,300.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T20:59:00"
+      },
+      {
+        "id": "m030",
+        "speaker_id": "human_admin",
+        "text": "Ok, so budget is now $2,000 per person all in. Patagonia is the one at risk.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:00:00"
+      },
+      {
+        "id": "m031",
+        "speaker_id": "sim_3",
+        "text": "Fair warning on Banff. Mid-November is hit or miss, lots of trails are under snow.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:06:00"
+      },
+      {
+        "id": "m032",
+        "speaker_id": "human_admin",
+        "text": "If Banff is snowy I'd rather drop it. Any objections?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:07:00"
+      },
+      {
+        "id": "m033",
+        "speaker_id": "sim_4",
+        "text": "Fine with dropping Banff.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:08:00"
+      },
+      {
+        "id": "m034",
+        "speaker_id": "sim_2",
+        "text": "Drop it, I think.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:09:00"
+      },
+      {
+        "id": "m035",
+        "speaker_id": "sim_3",
+        "text": "Ok, dropping Banff. It was my suggestion anyway.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:11:00"
+      },
+      {
+        "id": "m036",
+        "speaker_id": "sim_1",
+        "text": "Good, less to argue about.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:12:00"
+      },
+      {
+        "id": "m037",
+        "speaker_id": "sim_5",
+        "text": "Now Zion. Mid-November is usually in the 60s and sunny in the canyon, and there's hardly any crowds.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:17:00"
+      },
+      {
+        "id": "m038",
+        "speaker_id": "sim_4",
+        "text": "Zion sounds great. Better than Yosemite for November, so I'm happy dropping Yosemite if Zion stays.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:19:00"
+      },
+      {
+        "id": "m039",
+        "speaker_id": "sim_2",
+        "text": "Are there enough hikes for a full week though?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:20:00"
+      },
+      {
+        "id": "m040",
+        "speaker_id": "sim_5",
+        "text": "Yes. Zion, Bryce and Snow Canyon are all within a couple of hours of each other.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:21:00"
+      },
+      {
+        "id": "m041",
+        "speaker_id": "sim_1",
+        "text": "That's a road trip more than a hike trip. I'd rather do Patagonia or the Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:24:00"
+      },
+      {
+        "id": "m042",
+        "speaker_id": "human_admin",
+        "text": "Alex, Patagonia is over budget on flights alone though.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:25:00"
+      },
+      {
+        "id": "m043",
+        "speaker_id": "sim_1",
+        "text": "Flights are $1,300 and the W trek refugios are about $600. That's $1,900. Tight but it fits.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:27:00"
+      },
+      {
+        "id": "m044",
+        "speaker_id": "sim_2",
+        "text": "That leaves $100 for food, buses and gear. It doesn't fit.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:28:00"
+      },
+      {
+        "id": "m045",
+        "speaker_id": "sim_1",
+        "text": "I'd skip the gear rental and cook my own food. It can work.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:29:00"
+      },
+      {
+        "id": "m046",
+        "speaker_id": "sim_4",
+        "text": "Then it's not a budget trip, it's a stretch trip.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:31:00"
+      },
+      {
+        "id": "m047",
+        "speaker_id": "sim_3",
+        "text": "While we're on budgets, I just found Calgary flights for $380 round trip.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:34:00"
+      },
+      {
+        "id": "m048",
+        "speaker_id": "sim_3",
+        "text": "And a lodge in Canmore at $90 a night. Banff might come in well under $2,000 with money to spare.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:35:00"
+      },
+      {
+        "id": "m049",
+        "speaker_id": "sim_4",
+        "text": "Ok that's very tempting. Maybe I want Banff back on the list.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:37:00"
+      },
+      {
+        "id": "m050",
+        "speaker_id": "sim_1",
+        "text": "Banff in November isn't hiking. It's snowshoeing.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:38:00"
+      },
+      {
+        "id": "m051",
+        "speaker_id": "sim_3",
+        "text": "The lower trails around Canmore stay walkable. And snowshoeing counts.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:39:00"
+      },
+      {
+        "id": "m052",
+        "speaker_id": "human_admin",
+        "text": "I'm fine reopening Banff if people want it.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:41:00"
+      },
+      {
+        "id": "m053",
+        "speaker_id": "sim_2",
+        "text": "I'm not against it, but Alex has a point about the hiking.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:42:00"
+      },
+      {
+        "id": "m054",
+        "speaker_id": "sim_3",
+        "text": "What if we do just 5 days somewhere closer like Banff so I can be there for all of it?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:45:00"
+      },
+      {
+        "id": "m055",
+        "speaker_id": "sim_1",
+        "text": "Or we do the full 7 days somewhere else and Jordan joins for part of it?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:46:00"
+      },
+      {
+        "id": "m056",
+        "speaker_id": "sim_5",
+        "text": "Sounds good.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:48:00"
+      },
+      {
+        "id": "m057",
+        "speaker_id": "human_admin",
+        "text": "Leo, sounds good to which one, the 5-day Banff or the split trip?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:49:00"
+      },
+      {
+        "id": "m058",
+        "speaker_id": "sim_5",
+        "text": "Ha, honestly both. I'm fine either way.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:51:00"
+      },
+      {
+        "id": "m059",
+        "speaker_id": "sim_4",
+        "text": "Weather-wise, Zion in the 60s sounds nicer than Banff at 20\u00b0F for a week.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:55:00"
+      },
+      {
+        "id": "m060",
+        "speaker_id": "sim_3",
+        "text": "You'd layer up, but Banff is beautiful. And there are ice walks and hot springs.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:56:00"
+      },
+      {
+        "id": "m061",
+        "speaker_id": "sim_1",
+        "text": "Zion is the same idea as Yosemite. Comfortable, close, not special.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:57:00"
+      },
+      {
+        "id": "m062",
+        "speaker_id": "sim_5",
+        "text": "Zion is special. The Narrows in November is empty and gorgeous. Too cold to wade some days though, honestly.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T21:59:00"
+      },
+      {
+        "id": "m063",
+        "speaker_id": "human_admin",
+        "text": "Let me try to summarize. Budget is $2,000. Dates are Nov 14 to 21 for five of us, Jordan is limited to the 14th to 18th. Options are Patagonia, Dolomites, Banff (Jordan reopened it) and Zion. Yosemite is dropped. Right?",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:03:00"
+      },
+      {
+        "id": "m064",
+        "speaker_id": "sim_4",
+        "text": "Yes, but I think Patagonia is basically out on budget.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:04:00"
+      },
+      {
+        "id": "m065",
+        "speaker_id": "sim_1",
+        "text": "Not out. Tight.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:05:00"
+      },
+      {
+        "id": "m066",
+        "speaker_id": "sim_2",
+        "text": "I'd also like to check the Dolomites budget. I haven't looked at flights yet.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:07:00"
+      },
+      {
+        "id": "m067",
+        "speaker_id": "sim_3",
+        "text": "The summary is right.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:08:00"
+      },
+      {
+        "id": "m068",
+        "speaker_id": "sim_5",
+        "text": "Yes.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:09:00"
+      },
+      {
+        "id": "m069",
+        "speaker_id": "human_admin",
+        "text": "Ok. Let's do a poll tomorrow night with all four options and a price for each.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:11:00"
+      },
+      {
+        "id": "m070",
+        "speaker_id": "sim_1",
+        "text": "I'll price Patagonia properly, including food and transfers.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:12:00"
+      },
+      {
+        "id": "m071",
+        "speaker_id": "sim_2",
+        "text": "I'll price the Dolomites.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:13:00"
+      },
+      {
+        "id": "m072",
+        "speaker_id": "sim_3",
+        "text": "I'll price Banff, and check if I can move my work thing.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:14:00"
+      },
+      {
+        "id": "m073",
+        "speaker_id": "sim_5",
+        "text": "I'll price Zion.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:15:00"
+      },
+      {
+        "id": "m074",
+        "speaker_id": "sim_4",
+        "text": "I'll build the comparison sheet.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:16:00"
+      },
+      {
+        "id": "m075",
+        "speaker_id": "sim_1",
+        "text": "The dates question should be settled before the poll though. 5 days or 7.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:20:00"
+      },
+      {
+        "id": "m076",
+        "speaker_id": "sim_3",
+        "text": "Agree. Let me see if I can move the work thing before you all commit.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:21:00"
+      },
+      {
+        "id": "m077",
+        "speaker_id": "sim_2",
+        "text": "Good, thanks Jordan.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:22:00"
+      },
+      {
+        "id": "m078",
+        "speaker_id": "human_admin",
+        "text": "Ok, then we wait for Jordan's answer on dates before the poll.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:24:00"
+      },
+      {
+        "id": "m079",
+        "speaker_id": "sim_4",
+        "text": "Sounds good.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:25:00"
+      },
+      {
+        "id": "m080",
+        "speaker_id": "sim_5",
+        "text": "Works for me.",
+        "source": "simulated",
+        "recorded_at": "2026-09-16T22:26:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [
+      {
+        "version": 1,
+        "entity_id": "unresolved-decision-topic",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-decision-topic",
+          "description": "November hiking trip destination, dates, and budget to be decided.",
+          "status": "open",
+          "source_message_ids": [
+            "m001"
+          ]
+        },
+        "source_message_id": "m001",
+        "quote": "Time to decide the November hiking trip. Options, dates, budget. Go.",
+        "reason": "Admin opens the decision covering three dimensions: destination, dates, and budget.",
+        "recorded_at": "2026-10-07T00:32:19.965615+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-patagonia",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-patagonia",
+          "title": "Patagonia \u2013 Torres del Paine, W Trek",
+          "status": "proposed",
+          "proposed_by": "sim_1",
+          "source_message_ids": [
+            "m002"
+          ]
+        },
+        "source_message_id": "m002",
+        "quote": "Patagonia. Torres del Paine, the W trek. It's the trip.",
+        "reason": "Alex proposes Patagonia / Torres del Paine W trek as a destination option.",
+        "recorded_at": "2026-10-07T00:32:19.966076+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-alex-patagonia",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-alex-patagonia",
+          "participant_id": "sim_1",
+          "proposal_id": "proposal-patagonia",
+          "stance": "supports",
+          "statement": "Alex wants Patagonia / Torres del Paine W Trek.",
+          "source_message_ids": [
+            "m002"
+          ]
+        },
+        "source_message_id": "m002",
+        "quote": "Patagonia. Torres del Paine, the W trek. It's the trip.",
+        "reason": "Alex clearly advocates for Patagonia as the destination.",
+        "recorded_at": "2026-10-07T00:32:19.966115+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-dolomites",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-dolomites",
+          "title": "Dolomites (hut-to-hut)",
+          "status": "proposed",
+          "proposed_by": "sim_2",
+          "source_message_ids": [
+            "m003"
+          ]
+        },
+        "source_message_id": "m003",
+        "quote": "Dolomites, please. Huts and food.",
+        "reason": "Priya proposes the Dolomites as a destination option.",
+        "recorded_at": "2026-10-07T00:32:19.966135+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-priya-dolomites",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-priya-dolomites",
+          "participant_id": "sim_2",
+          "proposal_id": "proposal-dolomites",
+          "stance": "supports",
+          "statement": "Priya wants the Dolomites.",
+          "source_message_ids": [
+            "m003"
+          ]
+        },
+        "source_message_id": "m003",
+        "quote": "Dolomites, please. Huts and food.",
+        "reason": "Priya clearly advocates for the Dolomites.",
+        "recorded_at": "2026-10-07T00:32:19.966155+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-banff",
+        "section": "proposals",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-banff",
+          "title": "Banff / Canmore area",
+          "status": "proposed",
+          "proposed_by": "sim_3",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "Banff for me, it's close and cheap.",
+        "reason": "Jordan proposes Banff as a destination option.",
+        "recorded_at": "2026-10-07T00:32:19.966172+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-jordan-banff",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-jordan-banff",
+          "participant_id": "sim_3",
+          "proposal_id": "proposal-banff",
+          "stance": "supports",
+          "statement": "Jordan wants Banff because it is close and cheap.",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "Banff for me, it's close and cheap.",
+        "reason": "Jordan clearly prefers Banff.",
+        "recorded_at": "2026-10-07T00:32:19.966201+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criterion-proximity",
+        "section": "criteria",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "criterion-proximity",
+          "description": "Destination should be close / low travel distance.",
+          "raised_by": "sim_3",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "Banff for me, it's close and cheap.",
+        "reason": "Jordan names closeness (proximity / travel distance) as a value criterion.",
+        "recorded_at": "2026-10-07T00:32:19.966216+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criterion-cost",
+        "section": "criteria",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "criterion-cost",
+          "description": "Destination should be affordable / low cost.",
+          "raised_by": "sim_3",
+          "source_message_ids": [
+            "m004"
+          ]
+        },
+        "source_message_id": "m004",
+        "quote": "Banff for me, it's close and cheap.",
+        "reason": "Jordan names cheapness (low cost) as a value criterion.",
+        "recorded_at": "2026-10-07T00:32:19.966230+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-yosemite",
+        "section": "proposals",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-yosemite",
+          "title": "Yosemite",
+          "status": "proposed",
+          "proposed_by": "sim_4",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "Yosemite? Cheap and easy.",
+        "reason": "Maya proposes Yosemite as a destination option.",
+        "recorded_at": "2026-10-07T00:32:19.966251+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-maya-yosemite",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-maya-yosemite",
+          "participant_id": "sim_4",
+          "proposal_id": "proposal-yosemite",
+          "stance": "supports",
+          "statement": "Maya suggests Yosemite as cheap and easy.",
+          "source_message_ids": [
+            "m005"
+          ]
+        },
+        "source_message_id": "m005",
+        "quote": "Yosemite? Cheap and easy.",
+        "reason": "Maya suggests Yosemite.",
+        "recorded_at": "2026-10-07T00:32:19.966271+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-zion",
+        "section": "proposals",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-zion",
+          "title": "Zion National Park (Utah)",
+          "status": "proposed",
+          "proposed_by": "sim_5",
+          "source_message_ids": [
+            "m006"
+          ]
+        },
+        "source_message_id": "m006",
+        "quote": "I'd like to add Zion to the list. Utah in November is underrated.",
+        "reason": "Leo proposes Zion (Utah) as a destination option.",
+        "recorded_at": "2026-10-07T00:32:19.966287+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-leo-zion",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-leo-zion",
+          "participant_id": "sim_5",
+          "proposal_id": "proposal-zion",
+          "stance": "supports",
+          "statement": "Leo wants Zion; says Utah in November is underrated.",
+          "source_message_ids": [
+            "m006"
+          ]
+        },
+        "source_message_id": "m006",
+        "quote": "I'd like to add Zion to the list. Utah in November is underrated.",
+        "reason": "Leo advocates for Zion.",
+        "recorded_at": "2026-10-07T00:32:19.966307+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-dates-nov14-21",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-dates-nov14-21",
+          "title": "Dates: Nov 14\u201321",
+          "status": "proposed",
+          "proposed_by": "human_admin",
+          "source_message_ids": [
+            "m007"
+          ]
+        },
+        "source_message_id": "m007",
+        "quote": "I proposed Nov 14 to 21.",
+        "reason": "Sam proposes the date window Nov 14\u201321.",
+        "recorded_at": "2026-10-07T00:32:19.966329+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-jordan-availability",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-jordan-availability",
+          "description": "Jordan can only attend Nov 14\u201318 due to a work commitment on the 19th (stated as unmovable at this point). This conflicts with the Nov 14\u201321 proposal.",
+          "status": "open",
+          "source_message_ids": [
+            "m008"
+          ]
+        },
+        "source_message_id": "m008",
+        "quote": "I can only do the 14th to the 18th. I have a work thing on the 19th that I can't move.",
+        "reason": "Jordan is only available Nov 14\u201318, creating a scheduling conflict with the proposed Nov 14\u201321 window.",
+        "recorded_at": "2026-10-07T00:32:19.966344+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-needs-more-days",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-needs-more-days",
+          "proposal_id": "proposal-patagonia",
+          "type": "con",
+          "participant_id": "sim_1",
+          "statement": "Patagonia is not worth the long flight for only five days.",
+          "source_message_ids": [
+            "m009"
+          ]
+        },
+        "source_message_id": "m009",
+        "quote": "Patagonia isn't worth flying to for five days.",
+        "reason": "Alex argues that a 5-day trip is insufficient for Patagonia, opposing the short-date scenario.",
+        "recorded_at": "2026-10-07T00:32:19.966374+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-dolomites-needs-6-7-days",
+        "section": "claims",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-dolomites-needs-6-7-days",
+          "statement": "The Dolomites needs six or seven days to do properly.",
+          "made_by": "sim_2",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m010"
+          ]
+        },
+        "source_message_id": "m010",
+        "quote": "The Dolomites also needs six or seven days.",
+        "reason": "Priya asserts that the Dolomites requires 6\u20137 days minimum.",
+        "recorded_at": "2026-10-07T00:32:19.966610+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-dolomites-needs-more-days",
+        "section": "arguments",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-dolomites-needs-more-days",
+          "proposal_id": "proposal-dolomites",
+          "type": "con",
+          "participant_id": "sim_2",
+          "statement": "The Dolomites needs 6\u20137 days, so a 5-day window does not work for it either.",
+          "source_message_ids": [
+            "m010"
+          ]
+        },
+        "source_message_id": "m010",
+        "quote": "The Dolomites also needs six or seven days.",
+        "reason": "Priya argues that a 5-day trip is also insufficient for the Dolomites.",
+        "recorded_at": "2026-10-07T00:32:19.966982+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-leo-home-by-22nd",
+        "section": "unresolved",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-leo-home-by-22nd",
+          "description": "Leo needs to be home by Nov 22, which is compatible with Nov 14\u201321 but should be noted as a constraint.",
+          "status": "open",
+          "source_message_ids": [
+            "m016"
+          ]
+        },
+        "source_message_id": "m016",
+        "quote": "I can, but I need to be home by the 22nd.",
+        "reason": "Leo can do the full week but has a hard return constraint of Nov 22.",
+        "recorded_at": "2026-10-07T00:32:19.967009+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-date-window-split",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-date-window-split",
+          "description": "Five participants available Nov 14\u201321; Jordan only available Nov 14\u201318. Whether to do 5 days or 7 days (and whether Jordan attends part of a longer trip) is unresolved.",
+          "status": "open",
+          "source_message_ids": [
+            "m017"
+          ]
+        },
+        "source_message_id": "m017",
+        "quote": "five of us can do Nov 14 to 21 and Jordan can only do the 14th to 18th. Parking that.",
+        "reason": "Sam notes the date split (5 vs 7 days) and explicitly defers resolution.",
+        "recorded_at": "2026-10-07T00:32:19.967032+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-budget-2500",
+        "section": "proposals",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-budget-2500",
+          "title": "Budget: $2,500 per person all-in",
+          "status": "proposed",
+          "proposed_by": "human_admin",
+          "source_message_ids": [
+            "m018"
+          ]
+        },
+        "source_message_id": "m018",
+        "quote": "$2,500 per person all in?",
+        "reason": "Sam proposes a $2,500 per-person all-in budget.",
+        "recorded_at": "2026-10-07T00:32:19.967049+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-budget-2000",
+        "section": "proposals",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-budget-2000",
+          "title": "Budget: $2,000 per person all-in",
+          "status": "proposed",
+          "proposed_by": "sim_4",
+          "source_message_ids": [
+            "m024"
+          ]
+        },
+        "source_message_id": "m024",
+        "quote": "I'd be more comfortable at $2,000. Could we do that instead?",
+        "reason": "Maya counter-proposes a $2,000 per-person all-in budget.",
+        "recorded_at": "2026-10-07T00:32:19.967305+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-maya-budget-2000",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-maya-budget-2000",
+          "participant_id": "sim_4",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Maya prefers a $2,000 per-person budget.",
+          "source_message_ids": [
+            "m024"
+          ]
+        },
+        "source_message_id": "m024",
+        "quote": "I'd be more comfortable at $2,000. Could we do that instead?",
+        "reason": "Maya explicitly prefers the $2,000 budget over $2,500.",
+        "recorded_at": "2026-10-07T00:32:19.967326+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-sam-budget-2000",
+        "section": "positions",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-sam-budget-2000",
+          "participant_id": "human_admin",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Sam is OK with $2,000 if everyone else agrees.",
+          "source_message_ids": [
+            "m025"
+          ]
+        },
+        "source_message_id": "m025",
+        "quote": "I'm OK with $2,000 if everyone else is.",
+        "reason": "Sam conditionally agrees to $2,000 budget.",
+        "recorded_at": "2026-10-07T00:32:19.967351+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-priya-budget-2000",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-priya-budget-2000",
+          "participant_id": "sim_2",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Priya accepts $2,000 per-person budget.",
+          "source_message_ids": [
+            "m026"
+          ]
+        },
+        "source_message_id": "m026",
+        "quote": "$2,000 works for me.",
+        "reason": "Priya agrees to $2,000 budget.",
+        "recorded_at": "2026-10-07T00:32:19.967369+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-jordan-budget-2000",
+        "section": "positions",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-jordan-budget-2000",
+          "participant_id": "sim_3",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Jordan accepts $2,000 per-person budget; notes it suits Banff well.",
+          "source_message_ids": [
+            "m027"
+          ]
+        },
+        "source_message_id": "m027",
+        "quote": "$2,000 is fine, it's easier for Banff anyway.",
+        "reason": "Jordan agrees to $2,000 budget.",
+        "recorded_at": "2026-10-07T00:32:19.967389+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-leo-budget-2000",
+        "section": "positions",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-leo-budget-2000",
+          "participant_id": "sim_5",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Leo accepts $2,000 per-person budget.",
+          "source_message_ids": [
+            "m028"
+          ]
+        },
+        "source_message_id": "m028",
+        "quote": "$2,000 works.",
+        "reason": "Leo agrees to $2,000 budget.",
+        "recorded_at": "2026-10-07T00:32:19.967579+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-alex-budget-2000",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-alex-budget-2000",
+          "participant_id": "sim_1",
+          "proposal_id": "proposal-budget-2000",
+          "stance": "supports",
+          "statement": "Alex accepts $2,000 budget but notes it nearly eliminates Patagonia given ~$1,300 flights.",
+          "source_message_ids": [
+            "m029"
+          ]
+        },
+        "source_message_id": "m029",
+        "quote": "Fine with $2,000, but then Patagonia is basically out. Flights alone are $1,300.",
+        "reason": "Alex agrees to $2,000 budget but flags it puts Patagonia at risk.",
+        "recorded_at": "2026-10-07T00:32:19.967599+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-patagonia-flights-1300",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-patagonia-flights-1300",
+          "statement": "Flights to Patagonia cost approximately $1,300 per person.",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m029"
+          ]
+        },
+        "source_message_id": "m029",
+        "quote": "Flights alone are $1,300.",
+        "reason": "Alex claims Patagonia flights cost approximately $1,300.",
+        "recorded_at": "2026-10-07T00:32:19.967615+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-over-budget",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-over-budget",
+          "proposal_id": "proposal-patagonia",
+          "type": "con",
+          "participant_id": "sim_1",
+          "statement": "At a $2,000 budget, Patagonia flights alone (~$1,300) leave almost nothing for accommodation and food.",
+          "source_message_ids": [
+            "m029"
+          ]
+        },
+        "source_message_id": "m029",
+        "quote": "then Patagonia is basically out. Flights alone are $1,300.",
+        "reason": "Alex argues that with a $2,000 budget, Patagonia is basically infeasible given flight costs alone.",
+        "recorded_at": "2026-10-07T00:32:19.967639+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "criterion-budget-2000",
+        "section": "criteria",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "criterion-budget-2000",
+          "description": "Budget cap: $2,000 per person all-in (agreed by all six participants).",
+          "raised_by": "human_admin",
+          "source_message_ids": [
+            "m030"
+          ]
+        },
+        "source_message_id": "m030",
+        "quote": "budget is now $2,000 per person all in",
+        "reason": "All six participants have now agreed to a $2,000 per-person all-in budget cap. Recording as an adopted criterion.",
+        "recorded_at": "2026-10-07T00:32:19.967653+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-banff-nov-snow",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-banff-nov-snow",
+          "statement": "In mid-November Banff is hit or miss; many trails are under snow.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m031"
+          ]
+        },
+        "source_message_id": "m031",
+        "quote": "Mid-November is hit or miss, lots of trails are under snow.",
+        "reason": "Jordan claims that Banff trails are frequently under snow in mid-November.",
+        "recorded_at": "2026-10-07T00:32:19.967669+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-banff-snow-risk",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-banff-snow-risk",
+          "proposal_id": "proposal-banff",
+          "type": "con",
+          "participant_id": "sim_3",
+          "statement": "Banff in mid-November is hit or miss; many trails may be snow-covered.",
+          "source_message_ids": [
+            "m031"
+          ]
+        },
+        "source_message_id": "m031",
+        "quote": "Mid-November is hit or miss, lots of trails are under snow.",
+        "reason": "Jordan raises the snow risk in Banff mid-November as a con for the proposal.",
+        "recorded_at": "2026-10-07T00:32:19.967682+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-banff-dropped-snow",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-banff-dropped-snow",
+          "description": "Sam proposes dropping Banff due to mid-November snow risk. Group reaction pending.",
+          "status": "open",
+          "source_message_ids": [
+            "m032"
+          ]
+        },
+        "source_message_id": "m032",
+        "quote": "If Banff is snowy I'd rather drop it. Any objections?",
+        "reason": "Sam proposes dropping Banff due to snow risk, inviting group to object.",
+        "recorded_at": "2026-10-07T00:32:19.967696+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-banff-dropped-snow",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": {
+          "id": "unresolved-banff-dropped-snow",
+          "description": "Sam proposes dropping Banff due to mid-November snow risk. Group reaction pending.",
+          "status": "open",
+          "source_message_ids": [
+            "m032"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "id": "unresolved-banff-dropped-snow",
+          "description": "Banff initially dropped by group consensus (Sam, Maya, Priya, Jordan agreed) due to mid-November snow risk making hiking unreliable. Later revived \u2014 see unresolved-banff-revived.",
+          "status": "open",
+          "source_message_ids": [
+            "m035"
+          ]
+        },
+        "source_message_id": "m035",
+        "quote": "Ok, dropping Banff. It was my suggestion anyway.",
+        "reason": "Jordan (original proposer) also agrees to drop Banff; combined with Maya (m033) and Priya (m034), the group consensus leans toward dropping. Recording as dropped with rationale in unresolved.",
+        "recorded_at": "2026-10-07T00:32:19.967726+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-zion-nov-weather",
+        "section": "claims",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-zion-nov-weather",
+          "statement": "Zion canyon in mid-November is usually in the 60s\u00b0F and sunny, with very few crowds.",
+          "made_by": "sim_5",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m037"
+          ]
+        },
+        "source_message_id": "m037",
+        "quote": "Mid-November is usually in the 60s and sunny in the canyon, and there's hardly any crowds.",
+        "reason": "Leo claims Zion canyon is typically in the 60s\u00b0F and sunny in mid-November with few crowds.",
+        "recorded_at": "2026-10-07T00:32:19.967907+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-nov-conditions",
+        "section": "arguments",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-nov-conditions",
+          "proposal_id": "proposal-zion",
+          "type": "pro",
+          "participant_id": "sim_5",
+          "statement": "Zion in mid-November is typically 60s\u00b0F, sunny, and uncrowded.",
+          "source_message_ids": [
+            "m037"
+          ]
+        },
+        "source_message_id": "m037",
+        "quote": "Mid-November is usually in the 60s and sunny in the canyon, and there's hardly any crowds.",
+        "reason": "Leo argues Zion's November conditions (mild weather, low crowds) are a pro for the proposal.",
+        "recorded_at": "2026-10-07T00:32:19.967924+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-maya-zion",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-maya-zion",
+          "participant_id": "sim_4",
+          "proposal_id": "proposal-zion",
+          "stance": "supports",
+          "statement": "Maya prefers Zion over Yosemite for November and is happy to drop Yosemite if Zion stays.",
+          "source_message_ids": [
+            "m038"
+          ]
+        },
+        "source_message_id": "m038",
+        "quote": "Zion sounds great. Better than Yosemite for November, so I'm happy dropping Yosemite if Zion stays.",
+        "reason": "Maya explicitly supports Zion and is willing to drop Yosemite in favour of it.",
+        "recorded_at": "2026-10-07T00:32:19.967948+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-yosemite-dropped",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-yosemite-dropped",
+          "description": "Yosemite dropped from consideration. Maya (proposer) agreed to drop it in favour of Zion. No objections raised by others. Rationale: Zion viewed as better for November.",
+          "status": "open",
+          "source_message_ids": [
+            "m038"
+          ]
+        },
+        "source_message_id": "m038",
+        "quote": "I'm happy dropping Yosemite if Zion stays.",
+        "reason": "Maya conditionally drops Yosemite. Rationale: Zion is better for November. Not all participants have weighed in on dropping Yosemite explicitly, but it disappears from later discussion.",
+        "recorded_at": "2026-10-07T00:32:19.967962+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-zion-enough-days",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-zion-enough-days",
+          "description": "Open question: Does Zion area offer enough hiking content for a full 7-day trip?",
+          "status": "open",
+          "source_message_ids": [
+            "m039"
+          ]
+        },
+        "source_message_id": "m039",
+        "quote": "Are there enough hikes for a full week though?",
+        "reason": "Priya raises an open question about whether Zion has sufficient hiking for a full week.",
+        "recorded_at": "2026-10-07T00:32:19.967981+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-zion-nearby-parks",
+        "section": "claims",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-zion-nearby-parks",
+          "statement": "Zion, Bryce Canyon, and Snow Canyon are all within a couple of hours of each other.",
+          "made_by": "sim_5",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m040"
+          ]
+        },
+        "source_message_id": "m040",
+        "quote": "Zion, Bryce and Snow Canyon are all within a couple of hours of each other.",
+        "reason": "Leo claims Zion, Bryce Canyon, and Snow Canyon are all within a couple of hours of each other, supporting a week's worth of hiking.",
+        "recorded_at": "2026-10-07T00:32:19.968003+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-week-content",
+        "section": "arguments",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-week-content",
+          "proposal_id": "proposal-zion",
+          "type": "pro",
+          "participant_id": "sim_5",
+          "statement": "Zion, Bryce, and Snow Canyon are all within a couple of hours, providing a full week of hiking.",
+          "source_message_ids": [
+            "m040"
+          ]
+        },
+        "source_message_id": "m040",
+        "quote": "Yes. Zion, Bryce and Snow Canyon are all within a couple of hours of each other.",
+        "reason": "Leo argues there is sufficient content (multiple parks nearby) for a full week around Zion.",
+        "recorded_at": "2026-10-07T00:32:19.968017+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-road-trip-not-hike",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-road-trip-not-hike",
+          "proposal_id": "proposal-zion",
+          "type": "con",
+          "participant_id": "sim_1",
+          "statement": "Combining Zion, Bryce, and Snow Canyon makes it a road trip rather than a proper hiking trip.",
+          "source_message_ids": [
+            "m041"
+          ]
+        },
+        "source_message_id": "m041",
+        "quote": "That's a road trip more than a hike trip. I'd rather do Patagonia or the Dolomites.",
+        "reason": "Alex argues that combining multiple parks makes it a road trip rather than a focused hiking trip, opposing Zion.",
+        "recorded_at": "2026-10-07T00:32:19.968169+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-alex-prefers-patagonia-dolomites",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-alex-prefers-patagonia-dolomites",
+          "participant_id": "sim_1",
+          "stance": "supports",
+          "statement": "Alex prefers Patagonia or the Dolomites over Zion.",
+          "source_message_ids": [
+            "m041"
+          ]
+        },
+        "source_message_id": "m041",
+        "quote": "I'd rather do Patagonia or the Dolomites.",
+        "reason": "Alex explicitly states preference for Patagonia or Dolomites over Zion.",
+        "recorded_at": "2026-10-07T00:32:19.968194+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-patagonia-refugios-600",
+        "section": "claims",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-patagonia-refugios-600",
+          "statement": "W Trek refugios cost approximately $600 per person. Combined with ~$1,300 flights, total is approximately $1,900, leaving ~$100 for other costs.",
+          "made_by": "sim_1",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m043"
+          ]
+        },
+        "source_message_id": "m043",
+        "quote": "the W trek refugios are about $600. That's $1,900. Tight but it fits.",
+        "reason": "Alex claims W trek refugio costs are approximately $600, giving a total of ~$1,900 for flights + accommodation.",
+        "recorded_at": "2026-10-07T00:32:19.968212+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-tight-fits",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-tight-fits",
+          "proposal_id": "proposal-patagonia",
+          "type": "pro",
+          "participant_id": "sim_1",
+          "statement": "Flights (~$1,300) + refugios (~$600) = ~$1,900, so Patagonia technically fits within $2,000, albeit very tightly.",
+          "source_message_ids": [
+            "m043"
+          ]
+        },
+        "source_message_id": "m043",
+        "quote": "Tight but it fits.",
+        "reason": "Alex argues Patagonia can technically fit within $2,000 if costs are minimised.",
+        "recorded_at": "2026-10-07T00:32:19.968227+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-100-not-enough",
+        "section": "arguments",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-100-not-enough",
+          "proposal_id": "proposal-patagonia",
+          "type": "con",
+          "participant_id": "sim_2",
+          "statement": "After flights and refugios (~$1,900), only ~$100 remains for food, buses, and gear \u2014 insufficient.",
+          "source_message_ids": [
+            "m044"
+          ]
+        },
+        "source_message_id": "m044",
+        "quote": "That leaves $100 for food, buses and gear. It doesn't fit.",
+        "reason": "Priya counters that $100 remaining after flights and refugios is not enough for food, buses, and gear.",
+        "recorded_at": "2026-10-07T00:32:19.968243+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-skip-gear-cook",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-skip-gear-cook",
+          "proposal_id": "proposal-patagonia",
+          "type": "pro",
+          "participant_id": "sim_1",
+          "statement": "Skipping gear rental and cooking own food could bring Patagonia within the $2,000 budget.",
+          "source_message_ids": [
+            "m045"
+          ]
+        },
+        "source_message_id": "m045",
+        "quote": "I'd skip the gear rental and cook my own food. It can work.",
+        "reason": "Alex argues individual cost-cutting (no gear rental, self-catering) could make Patagonia work.",
+        "recorded_at": "2026-10-07T00:32:19.968257+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-patagonia-stretch-trip",
+        "section": "arguments",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-patagonia-stretch-trip",
+          "proposal_id": "proposal-patagonia",
+          "type": "con",
+          "participant_id": "sim_4",
+          "statement": "If participants need to skip gear rental and self-cater, Patagonia is a 'stretch trip', not a budget trip.",
+          "source_message_ids": [
+            "m046"
+          ]
+        },
+        "source_message_id": "m046",
+        "quote": "Then it's not a budget trip, it's a stretch trip.",
+        "reason": "Maya argues that requiring personal cost-cutting to meet budget means Patagonia doesn't genuinely fit the budget criterion.",
+        "recorded_at": "2026-10-07T00:32:19.968278+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-calgary-flights-380",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-calgary-flights-380",
+          "statement": "Calgary round-trip flights found for $380 per person.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m047"
+          ]
+        },
+        "source_message_id": "m047",
+        "quote": "I just found Calgary flights for $380 round trip.",
+        "reason": "Jordan claims to have found Calgary round-trip flights for $380.",
+        "recorded_at": "2026-10-07T00:32:19.968305+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-canmore-lodge-90",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-canmore-lodge-90",
+          "statement": "A lodge in Canmore is available at $90 per night. Jordan estimates Banff could come in well under $2,000 per person all-in.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m048"
+          ]
+        },
+        "source_message_id": "m048",
+        "quote": "a lodge in Canmore at $90 a night. Banff might come in well under $2,000 with money to spare.",
+        "reason": "Jordan claims a lodge in Canmore is available at $90/night and estimates total Banff cost well under $2,000.",
+        "recorded_at": "2026-10-07T00:32:19.968323+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-banff-budget-strong",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-banff-budget-strong",
+          "proposal_id": "proposal-banff",
+          "type": "pro",
+          "participant_id": "sim_3",
+          "statement": "Calgary flights at $380 RT + Canmore lodge at $90/night means Banff could come in well under $2,000.",
+          "source_message_ids": [
+            "m048"
+          ]
+        },
+        "source_message_id": "m048",
+        "quote": "Banff might come in well under $2,000 with money to spare.",
+        "reason": "Jordan argues the new price data makes Banff a strong budget option.",
+        "recorded_at": "2026-10-07T00:32:19.968342+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-banff-revived",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-banff-revived",
+          "description": "Maya wants Banff back on the list after Jordan found Calgary flights at $380 RT and a Canmore lodge at $90/night. Sam (m052) is also open to reopening it. Group has not formally re-added it. Whether to reinstate Banff is unresolved.",
+          "status": "open",
+          "source_message_ids": [
+            "m049"
+          ]
+        },
+        "source_message_id": "m049",
+        "quote": "Ok that's very tempting. Maybe I want Banff back on the list.",
+        "reason": "Maya wants to revive Banff after the new price data. Banff was previously dropped; revival is not yet confirmed by group.",
+        "recorded_at": "2026-10-07T00:32:19.968358+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-banff-snowshoeing-not-hiking",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-banff-snowshoeing-not-hiking",
+          "proposal_id": "proposal-banff",
+          "type": "con",
+          "participant_id": "sim_1",
+          "statement": "Banff in November means snowshoeing, not hiking.",
+          "source_message_ids": [
+            "m050"
+          ]
+        },
+        "source_message_id": "m050",
+        "quote": "Banff in November isn't hiking. It's snowshoeing.",
+        "reason": "Alex argues Banff in November does not offer proper hiking, only snowshoeing.",
+        "recorded_at": "2026-10-07T00:32:19.968373+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-canmore-lower-trails",
+        "section": "claims",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-canmore-lower-trails",
+          "statement": "The lower trails around Canmore stay walkable in November.",
+          "made_by": "sim_3",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m051"
+          ]
+        },
+        "source_message_id": "m051",
+        "quote": "The lower trails around Canmore stay walkable.",
+        "reason": "Jordan claims the lower trails around Canmore remain walkable in November.",
+        "recorded_at": "2026-10-07T00:32:19.968389+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-banff-walkable-plus-snowshoe",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-banff-walkable-plus-snowshoe",
+          "proposal_id": "proposal-banff",
+          "type": "pro",
+          "participant_id": "sim_3",
+          "statement": "Lower Canmore trails stay walkable in November, and snowshoeing is a valid activity.",
+          "source_message_ids": [
+            "m051"
+          ]
+        },
+        "source_message_id": "m051",
+        "quote": "The lower trails around Canmore stay walkable. And snowshoeing counts.",
+        "reason": "Jordan argues walkable lower trails and snowshoeing are both valid activities, countering Alex's dismissal.",
+        "recorded_at": "2026-10-07T00:32:19.968404+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-priya-banff-cautious",
+        "section": "positions",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-priya-banff-cautious",
+          "participant_id": "sim_2",
+          "proposal_id": "proposal-banff",
+          "stance": "neutral",
+          "statement": "Priya is not against reopening Banff but acknowledges Alex's concern about hiking quality in November.",
+          "source_message_ids": [
+            "m053"
+          ]
+        },
+        "source_message_id": "m053",
+        "quote": "I'm not against it, but Alex has a point about the hiking.",
+        "reason": "Priya is not opposed to reopening Banff but has reservations about the hiking quality.",
+        "recorded_at": "2026-10-07T00:32:19.968422+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-5day-closer-dest",
+        "section": "proposals",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-5day-closer-dest",
+          "title": "5-day trip to a closer destination (e.g. Banff) so all 6 can attend",
+          "status": "proposed",
+          "proposed_by": "sim_3",
+          "source_message_ids": [
+            "m054"
+          ]
+        },
+        "source_message_id": "m054",
+        "quote": "What if we do just 5 days somewhere closer like Banff so I can be there for all of it?",
+        "reason": "Jordan proposes a 5-day trip to a closer destination (e.g. Banff) so Jordan can attend the whole trip.",
+        "recorded_at": "2026-10-07T00:32:19.968438+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "proposal-7day-jordan-partial",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "proposal-7day-jordan-partial",
+          "title": "Full 7-day trip (Nov 14\u201321) with Jordan joining for the first 5 days only",
+          "status": "proposed",
+          "proposed_by": "sim_1",
+          "source_message_ids": [
+            "m055"
+          ]
+        },
+        "source_message_id": "m055",
+        "quote": "Or we do the full 7 days somewhere else and Jordan joins for part of it?",
+        "reason": "Alex proposes the full 7-day trip with Jordan joining only for part of it.",
+        "recorded_at": "2026-10-07T00:32:19.968454+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-banff-nov-temp-20f",
+        "section": "claims",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-banff-nov-temp-20f",
+          "statement": "Banff temperatures in November are around 20\u00b0F.",
+          "made_by": "sim_4",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m059"
+          ]
+        },
+        "source_message_id": "m059",
+        "quote": "Banff at 20\u00b0F for a week.",
+        "reason": "Maya asserts Banff temperatures are around 20\u00b0F in November.",
+        "recorded_at": "2026-10-07T00:32:19.968728+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-warmer-than-banff",
+        "section": "arguments",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-warmer-than-banff",
+          "proposal_id": "proposal-zion",
+          "type": "pro",
+          "participant_id": "sim_4",
+          "statement": "Zion's November temperatures (~60s\u00b0F) are much more comfortable than Banff's (~20\u00b0F) for hiking.",
+          "source_message_ids": [
+            "m059"
+          ]
+        },
+        "source_message_id": "m059",
+        "quote": "Weather-wise, Zion in the 60s sounds nicer than Banff at 20\u00b0F for a week.",
+        "reason": "Maya argues that Zion's weather (~60s\u00b0F) is significantly more comfortable than Banff (~20\u00b0F) for a hiking trip.",
+        "recorded_at": "2026-10-07T00:32:19.968751+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-banff-beautiful-ice-springs",
+        "section": "arguments",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-banff-beautiful-ice-springs",
+          "proposal_id": "proposal-banff",
+          "type": "pro",
+          "participant_id": "sim_3",
+          "statement": "Banff is beautiful in winter and offers ice walks and hot springs as additional activities.",
+          "source_message_ids": [
+            "m060"
+          ]
+        },
+        "source_message_id": "m060",
+        "quote": "Banff is beautiful. And there are ice walks and hot springs.",
+        "reason": "Jordan argues Banff's scenery and alternative winter activities (ice walks, hot springs) are appealing.",
+        "recorded_at": "2026-10-07T00:32:19.968767+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-not-special",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-not-special",
+          "proposal_id": "proposal-zion",
+          "type": "con",
+          "participant_id": "sim_1",
+          "statement": "Zion is essentially the same as Yosemite \u2014 comfortable and close but not a special or distinctive hiking destination.",
+          "source_message_ids": [
+            "m061"
+          ]
+        },
+        "source_message_id": "m061",
+        "quote": "Zion is the same idea as Yosemite. Comfortable, close, not special.",
+        "reason": "Alex argues Zion is too similar to Yosemite and not sufficiently distinctive or special.",
+        "recorded_at": "2026-10-07T00:32:19.968784+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "claim-zion-narrows-nov",
+        "section": "claims",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "claim-zion-narrows-nov",
+          "statement": "The Narrows at Zion in November is empty and gorgeous, though on some days it may be too cold to wade.",
+          "made_by": "sim_5",
+          "verification": {
+            "status": "not_checked"
+          },
+          "source_message_ids": [
+            "m062"
+          ]
+        },
+        "source_message_id": "m062",
+        "quote": "The Narrows in November is empty and gorgeous. Too cold to wade some days though, honestly.",
+        "reason": "Leo claims the Narrows at Zion is empty and beautiful in November but may be too cold to wade on some days.",
+        "recorded_at": "2026-10-07T00:32:19.968801+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "arg-zion-narrows-special",
+        "section": "arguments",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "arg-zion-narrows-special",
+          "proposal_id": "proposal-zion",
+          "type": "pro",
+          "participant_id": "sim_5",
+          "statement": "Zion is special; The Narrows in November is empty and gorgeous.",
+          "source_message_ids": [
+            "m062"
+          ]
+        },
+        "source_message_id": "m062",
+        "quote": "Zion is special. The Narrows in November is empty and gorgeous.",
+        "reason": "Leo counters Alex's 'not special' claim by pointing to the Narrows as a unique and distinctive experience.",
+        "recorded_at": "2026-10-07T00:32:19.968816+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-banff-revived",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": {
+          "id": "unresolved-banff-revived",
+          "description": "Maya wants Banff back on the list after Jordan found Calgary flights at $380 RT and a Canmore lodge at $90/night. Sam (m052) is also open to reopening it. Group has not formally re-added it. Whether to reinstate Banff is unresolved.",
+          "status": "open",
+          "source_message_ids": [
+            "m049"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "id": "unresolved-banff-revived",
+          "description": "Banff was initially dropped over snow risk, then revived by Maya and Jordan after new price data (Calgary flights $380 RT, Canmore lodge $90/night). Sam's summary (m063) re-lists it as an active option. Group has not formally objected to its revival.",
+          "status": "open",
+          "source_message_ids": [
+            "m063"
+          ]
+        },
+        "source_message_id": "m063",
+        "quote": "Options are Patagonia, Dolomites, Banff (Jordan reopened it) and Zion. Yosemite is dropped. Right?",
+        "reason": "Sam's summary re-lists Banff as an active option (crediting Jordan's reopening) alongside Patagonia, Dolomites, Zion. This reflects the group's working state going into the poll.",
+        "recorded_at": "2026-10-07T00:32:19.968836+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-maya-patagonia-out",
+        "section": "positions",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-maya-patagonia-out",
+          "participant_id": "sim_4",
+          "proposal_id": "proposal-patagonia",
+          "stance": "opposes",
+          "statement": "Maya thinks Patagonia is basically out because it cannot fit within the $2,000 budget.",
+          "source_message_ids": [
+            "m064"
+          ]
+        },
+        "source_message_id": "m064",
+        "quote": "Yes, but I think Patagonia is basically out on budget.",
+        "reason": "Maya explicitly views Patagonia as effectively eliminated on budget grounds.",
+        "recorded_at": "2026-10-07T00:32:19.968853+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "position-alex-patagonia-still-in",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "position-alex-patagonia-still-in",
+          "participant_id": "sim_1",
+          "proposal_id": "proposal-patagonia",
+          "stance": "supports",
+          "statement": "Alex insists Patagonia is not out \u2014 it is tight but still feasible within $2,000.",
+          "source_message_ids": [
+            "m065"
+          ]
+        },
+        "source_message_id": "m065",
+        "quote": "Not out. Tight.",
+        "reason": "Alex maintains Patagonia is still in contention, just tight on budget.",
+        "recorded_at": "2026-10-07T00:32:19.968870+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-patagonia-budget-viability",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-patagonia-budget-viability",
+          "description": "Disputed: Alex says Patagonia is tight but viable within $2,000; Maya says it is basically out; Priya says the ~$100 remaining after flights and refugios is insufficient. Alex to price it properly (m070).",
+          "status": "open",
+          "source_message_ids": [
+            "m065"
+          ]
+        },
+        "source_message_id": "m065",
+        "quote": "Not out. Tight.",
+        "reason": "Whether Patagonia fits within the $2,000 budget is disputed between Alex and Maya (and Priya); remains unresolved pending proper pricing.",
+        "recorded_at": "2026-10-07T00:32:19.968884+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-dolomites-budget-unknown",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-dolomites-budget-unknown",
+          "description": "Dolomites flight prices and total budget have not been checked yet. Priya to research and report (m071).",
+          "status": "open",
+          "source_message_ids": [
+            "m066"
+          ]
+        },
+        "source_message_id": "m066",
+        "quote": "I'd also like to check the Dolomites budget. I haven't looked at flights yet.",
+        "reason": "Priya notes she has not checked Dolomites flight prices; budget viability is unknown.",
+        "recorded_at": "2026-10-07T00:32:19.968897+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-poll-tomorrow",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-poll-tomorrow",
+          "description": "Sam plans a poll the following night with all four destination options and a price for each. Poll is contingent on Jordan resolving the dates question first.",
+          "status": "open",
+          "source_message_ids": [
+            "m069"
+          ]
+        },
+        "source_message_id": "m069",
+        "quote": "Let's do a poll tomorrow night with all four options and a price for each.",
+        "reason": "Sam commits to a poll the next night covering all four options with prices. This is contingent on Jordan's date answer (m078).",
+        "recorded_at": "2026-10-07T00:32:19.968913+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-alex-price-patagonia",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "action-alex-price-patagonia",
+          "description": "Action item: Alex to provide a full Patagonia price breakdown including flights, refugios, food, and transfers.",
+          "status": "open",
+          "owner": "sim_1",
+          "source_message_ids": [
+            "m070"
+          ]
+        },
+        "source_message_id": "m070",
+        "quote": "I'll price Patagonia properly, including food and transfers.",
+        "reason": "Alex commits to pricing Patagonia fully (food and transfers included).",
+        "recorded_at": "2026-10-07T00:32:19.968927+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-priya-price-dolomites",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "id": "action-priya-price-dolomites",
+          "description": "Action item: Priya to research and provide a full Dolomites price breakdown.",
+          "status": "open",
+          "owner": "sim_2",
+          "source_message_ids": [
+            "m071"
+          ]
+        },
+        "source_message_id": "m071",
+        "quote": "I'll price the Dolomites.",
+        "reason": "Priya commits to pricing the Dolomites.",
+        "recorded_at": "2026-10-07T00:32:19.968941+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-jordan-price-banff-check-work",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": null,
+        "new_value": {
+          "id": "action-jordan-price-banff-check-work",
+          "description": "Action item: Jordan to (1) provide a full Banff price breakdown and (2) check if the Nov 19 work commitment can be moved, which would resolve the dates question.",
+          "status": "open",
+          "owner": "sim_3",
+          "source_message_ids": [
+            "m072"
+          ]
+        },
+        "source_message_id": "m072",
+        "quote": "I'll price Banff, and check if I can move my work thing.",
+        "reason": "Jordan commits to pricing Banff and checking whether the Nov 19 work commitment can be moved.",
+        "recorded_at": "2026-10-07T00:32:19.968959+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-leo-price-zion",
+        "section": "unresolved",
+        "participant_id": "sim_5",
+        "previous_value": null,
+        "new_value": {
+          "id": "action-leo-price-zion",
+          "description": "Action item: Leo to provide a full Zion price breakdown.",
+          "status": "open",
+          "owner": "sim_5",
+          "source_message_ids": [
+            "m073"
+          ]
+        },
+        "source_message_id": "m073",
+        "quote": "I'll price Zion.",
+        "reason": "Leo commits to pricing Zion.",
+        "recorded_at": "2026-10-07T00:32:19.969003+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-maya-comparison-sheet",
+        "section": "unresolved",
+        "participant_id": "sim_4",
+        "previous_value": null,
+        "new_value": {
+          "id": "action-maya-comparison-sheet",
+          "description": "Action item: Maya to build the destination comparison sheet for the poll.",
+          "status": "open",
+          "owner": "sim_4",
+          "source_message_ids": [
+            "m074"
+          ]
+        },
+        "source_message_id": "m074",
+        "quote": "I'll build the comparison sheet.",
+        "reason": "Maya commits to building a comparison sheet for the poll.",
+        "recorded_at": "2026-10-07T00:32:19.969018+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-dates-5-or-7",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "id": "unresolved-dates-5-or-7",
+          "description": "Whether the trip is 5 days (Nov 14\u201318, all attend) or 7 days (Nov 14\u201321, Jordan partial) must be settled before the destination poll. Contingent on Jordan's work situation.",
+          "status": "open",
+          "source_message_ids": [
+            "m075"
+          ]
+        },
+        "source_message_id": "m075",
+        "quote": "The dates question should be settled before the poll though. 5 days or 7.",
+        "reason": "Alex raises that the 5-day vs 7-day decision must be resolved before the poll can proceed.",
+        "recorded_at": "2026-10-07T00:32:19.969034+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "action-jordan-price-banff-check-work",
+        "section": "unresolved",
+        "participant_id": "sim_3",
+        "previous_value": {
+          "id": "action-jordan-price-banff-check-work",
+          "description": "Action item: Jordan to (1) provide a full Banff price breakdown and (2) check if the Nov 19 work commitment can be moved, which would resolve the dates question.",
+          "status": "open",
+          "owner": "sim_3",
+          "source_message_ids": [
+            "m072"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "id": "action-jordan-price-banff-check-work",
+          "description": "Action item: Jordan to (1) provide full Banff price breakdown and (2) check if the Nov 19 work commitment can be moved. Everyone waiting on this before committing to dates or running the poll.",
+          "status": "open",
+          "owner": "sim_3",
+          "source_message_ids": [
+            "m076"
+          ]
+        },
+        "source_message_id": "m076",
+        "quote": "Agree. Let me see if I can move the work thing before you all commit.",
+        "reason": "Jordan reaffirms the commitment to check on moving the work thing, which will determine whether the trip is 5 or 7 days.",
+        "recorded_at": "2026-10-07T00:32:19.969059+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved-poll-tomorrow",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": {
+          "id": "unresolved-poll-tomorrow",
+          "description": "Sam plans a poll the following night with all four destination options and a price for each. Poll is contingent on Jordan resolving the dates question first.",
+          "status": "open",
+          "source_message_ids": [
+            "m069"
+          ],
+          "revision": 1
+        },
+        "new_value": {
+          "id": "unresolved-poll-tomorrow",
+          "description": "Poll with all four options and prices is on hold until Jordan confirms whether the Nov 19 work commitment can be moved, resolving the 5-day vs 7-day dates question.",
+          "status": "open",
+          "source_message_ids": [
+            "m078"
+          ]
+        },
+        "source_message_id": "m078",
+        "quote": "Ok, then we wait for Jordan's answer on dates before the poll.",
+        "reason": "Sam confirms the poll is on hold pending Jordan's dates answer.",
+        "recorded_at": "2026-10-07T00:32:19.969078+00:00"
+      }
+    ],
+    "audit": [
+      {
+        "at": "2026-10-07T00:32:19.968473+00:00",
+        "event": "interpretation_skipped",
+        "detail": "Ambiguous item for simulated participant not queued; no confirmer available.",
+        "message_id": "m056"
+      }
+    ],
+    "bot_turns": 0,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3",
+      "sim_4",
+      "sim_5"
+    ],
+    "next_bot_index": 0,
+    "facilitation": []
+  },
+  "gold": {
+    "id": "hiking-03-shifting-constraints",
+    "level": 3,
+    "scenario_notes": "Constraints move during the chat. Budget is superseded ($2,500 to $2,000). One member cannot do the full week, so dates are contested. An option is dropped and then revived. A 'Sounds good' is ambiguous between two proposals. A budget calculation is disputed. Yosemite is dropped only conditionally. The poll plan is superseded by a wait for Jordan's answer. No decision is reached.",
+    "decision_question": "Where should the group go on its November hiking trip?",
+    "options": [
+      {
+        "name": "Patagonia (Torres del Paine)",
+        "status": "at risk on budget, disputed",
+        "proposed_by": "Alex",
+        "msgs": [
+          "m002",
+          "m029",
+          "m042",
+          "m043",
+          "m044",
+          "m046",
+          "m064",
+          "m065"
+        ]
+      },
+      {
+        "name": "Dolomites",
+        "status": "considering, not yet priced",
+        "proposed_by": "Priya",
+        "msgs": [
+          "m003",
+          "m066",
+          "m071"
+        ]
+      },
+      {
+        "name": "Banff",
+        "status": "dropped, then reopened; contested",
+        "proposed_by": "Jordan",
+        "msgs": [
+          "m004",
+          "m035",
+          "m049",
+          "m050",
+          "m052",
+          "m053"
+        ]
+      },
+      {
+        "name": "Yosemite",
+        "status": "dropped, but only if Zion stays",
+        "proposed_by": "Maya",
+        "msgs": [
+          "m005",
+          "m038",
+          "m063"
+        ]
+      },
+      {
+        "name": "Zion",
+        "status": "considering",
+        "proposed_by": "Leo",
+        "msgs": [
+          "m006",
+          "m037",
+          "m038",
+          "m041",
+          "m061",
+          "m062"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Dates Nov 14 to 21 (7 days)",
+        "status": "contested: five can do the full week, Jordan only Nov 14 to 18",
+        "msgs": [
+          "m007",
+          "m008",
+          "m012",
+          "m013",
+          "m014",
+          "m015",
+          "m016",
+          "m017",
+          "m075",
+          "m076"
+        ]
+      },
+      {
+        "text": "Leo must be home by the 22nd",
+        "status": "stated",
+        "msgs": [
+          "m016"
+        ]
+      },
+      {
+        "text": "Budget $2,500 per person all in",
+        "status": "superseded by $2,000",
+        "msgs": [
+          "m018",
+          "m019",
+          "m020",
+          "m021",
+          "m023"
+        ]
+      },
+      {
+        "text": "Budget $2,000 per person all in",
+        "status": "agreed by all six",
+        "msgs": [
+          "m024",
+          "m025",
+          "m026",
+          "m027",
+          "m028",
+          "m029",
+          "m030"
+        ],
+        "note": "Alex accepts but says Patagonia is then basically out (m029). Sam's OK is conditional on everyone else (m025)."
+      }
+    ],
+    "criteria": [
+      {
+        "text": "Hiking (real hiking, not a road trip or snowshoeing)",
+        "raised_by": [
+          "Alex",
+          "Priya"
+        ],
+        "msgs": [
+          "m041",
+          "m050",
+          "m053"
+        ]
+      },
+      {
+        "text": "Budget fit",
+        "raised_by": [
+          "Maya",
+          "Alex",
+          "Priya",
+          "Jordan"
+        ],
+        "msgs": [
+          "m024",
+          "m043",
+          "m044",
+          "m046",
+          "m048"
+        ]
+      },
+      {
+        "text": "Weather",
+        "raised_by": [
+          "Maya",
+          "Leo",
+          "Jordan"
+        ],
+        "msgs": [
+          "m031",
+          "m037",
+          "m059",
+          "m060"
+        ]
+      }
+    ],
+    "claims": [
+      {
+        "text": "Patagonia flights alone are $1,300",
+        "by": "Alex",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m029",
+          "m043"
+        ]
+      },
+      {
+        "text": "Patagonia costs about $1,900 (flights plus about $600 W trek refugios) and fits the budget",
+        "by": "Alex",
+        "type": "factual, own calculation",
+        "checkable": true,
+        "status_in_chat": "DISPUTED: Priya says only $100 remains for food, buses and gear; Maya calls it a stretch; Alex says he would skip gear rental and cook",
+        "msgs": [
+          "m043",
+          "m044",
+          "m045",
+          "m046"
+        ]
+      },
+      {
+        "text": "Banff in mid-November is hit or miss, lots of trails under snow",
+        "by": "Jordan",
+        "type": "generalization, hedged",
+        "checkable": true,
+        "status_in_chat": "later softened: lower trails around Canmore stay walkable",
+        "msgs": [
+          "m031",
+          "m051"
+        ]
+      },
+      {
+        "text": "Calgary flights are $380 round trip; Canmore lodge $90 a night; Banff could come in well under $2,000",
+        "by": "Jordan",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m047",
+          "m048"
+        ]
+      },
+      {
+        "text": "Banff in November is snowshoeing, not hiking",
+        "by": "Alex",
+        "type": "opinion / generalization",
+        "checkable": false,
+        "status_in_chat": "contested by Jordan (m051)",
+        "msgs": [
+          "m050",
+          "m051"
+        ]
+      },
+      {
+        "text": "Zion in mid-November is usually in the 60s and sunny with hardly any crowds",
+        "by": "Leo",
+        "type": "factual, hedged",
+        "checkable": true,
+        "status_in_chat": "repeated by Maya (m059)",
+        "msgs": [
+          "m037",
+          "m059"
+        ]
+      },
+      {
+        "text": "Zion, Bryce and Snow Canyon are within a couple of hours of each other",
+        "by": "Leo",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "Alex calls it a road trip, not a hike trip",
+        "msgs": [
+          "m040",
+          "m041"
+        ]
+      },
+      {
+        "text": "Banff is about 20F in November",
+        "by": "Maya",
+        "type": "factual",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m059"
+        ]
+      },
+      {
+        "text": "The Narrows in November is empty; too cold to wade some days",
+        "by": "Leo",
+        "type": "factual, hedged",
+        "checkable": true,
+        "status_in_chat": "unchallenged",
+        "msgs": [
+          "m062"
+        ]
+      }
+    ],
+    "agreements": [
+      {
+        "text": "Budget $2,000 per person all in (supersedes $2,500)",
+        "explicit_affirmers": [
+          "Maya",
+          "Sam",
+          "Priya",
+          "Jordan",
+          "Leo",
+          "Alex"
+        ],
+        "msgs": [
+          "m024",
+          "m025",
+          "m026",
+          "m027",
+          "m028",
+          "m029",
+          "m030"
+        ]
+      },
+      {
+        "text": "Banff dropped (first time)",
+        "explicit_affirmers": [
+          "Jordan",
+          "Maya",
+          "Priya"
+        ],
+        "msgs": [
+          "m032",
+          "m033",
+          "m034",
+          "m035"
+        ],
+        "note": "Later reopened; see traps."
+      },
+      {
+        "text": "Yosemite dropped, conditional on Zion staying on the list",
+        "explicit_affirmers": [
+          "Maya"
+        ],
+        "msgs": [
+          "m038"
+        ],
+        "note": "Sam's summary lists it as dropped; Jordan and Leo say the summary is right (m063, m067, m068)."
+      },
+      {
+        "text": "Wait for Jordan's answer on dates before running the poll",
+        "explicit_affirmers": [
+          "Sam",
+          "Maya",
+          "Leo"
+        ],
+        "msgs": [
+          "m078",
+          "m079",
+          "m080"
+        ],
+        "note": "Alex and Jordan proposed it (m075, m076), Priya thanked Jordan (m077). Supersedes the poll-tomorrow plan in m069."
+      }
+    ],
+    "open_issues": [
+      {
+        "text": "Dates: 7 days for five people versus Jordan's Nov 14 to 18 limit; Jordan will try to move his work commitment",
+        "msgs": [
+          "m008",
+          "m017",
+          "m054",
+          "m055",
+          "m072",
+          "m075",
+          "m076"
+        ]
+      },
+      {
+        "text": "Does Patagonia fit under $2,000? (disputed calculation)",
+        "msgs": [
+          "m043",
+          "m044",
+          "m045",
+          "m046",
+          "m064",
+          "m065"
+        ]
+      },
+      {
+        "text": "Is Banff in November a hiking trip? Reopened by Jordan and Maya, questioned by Alex and Priya",
+        "msgs": [
+          "m049",
+          "m050",
+          "m051",
+          "m052",
+          "m053"
+        ]
+      },
+      {
+        "text": "Dolomites budget not yet checked",
+        "msgs": [
+          "m066"
+        ]
+      },
+      {
+        "text": "Poll timing and format",
+        "msgs": [
+          "m069",
+          "m078"
+        ]
+      }
+    ],
+    "outcome": "None yet. Budget settled at $2,000; dates contested; four options remain (Patagonia, Dolomites, Banff, Zion), poll waiting on Jordan.",
+    "next_steps": [
+      {
+        "who": "Alex",
+        "task": "Price Patagonia properly including food and transfers",
+        "msgs": [
+          "m070"
+        ]
+      },
+      {
+        "who": "Priya",
+        "task": "Price the Dolomites",
+        "msgs": [
+          "m071"
+        ]
+      },
+      {
+        "who": "Jordan",
+        "task": "Price Banff and check whether he can move his work commitment",
+        "msgs": [
+          "m072",
+          "m076"
+        ]
+      },
+      {
+        "who": "Leo",
+        "task": "Price Zion",
+        "msgs": [
+          "m073"
+        ]
+      },
+      {
+        "who": "Maya",
+        "task": "Build the comparison sheet",
+        "msgs": [
+          "m074"
+        ]
+      },
+      {
+        "who": "Sam",
+        "task": "Run the poll after Jordan answers on dates",
+        "msgs": [
+          "m078"
+        ]
+      }
+    ],
+    "traps": [
+      {
+        "msgs": [
+          "m024",
+          "m030"
+        ],
+        "note": "Budget constraint changes from $2,500 to $2,000. The card must show the current value and not the old one."
+      },
+      {
+        "msgs": [
+          "m054",
+          "m055",
+          "m056",
+          "m057",
+          "m058"
+        ],
+        "note": "Leo says 'Sounds good' after two conflicting proposals. Sam asks which one; Leo says 'both, fine either way'. This is not agreement to either proposal."
+      },
+      {
+        "msgs": [
+          "m035",
+          "m049",
+          "m052"
+        ],
+        "note": "Banff is dropped, then reopened. Status is 'reopened, contested', not dropped and not agreed."
+      },
+      {
+        "msgs": [
+          "m053"
+        ],
+        "note": "'I'm not against it' is not agreement."
+      },
+      {
+        "msgs": [
+          "m038",
+          "m063"
+        ],
+        "note": "Yosemite is dropped only if Zion stays. Record the condition."
+      },
+      {
+        "msgs": [
+          "m063",
+          "m064",
+          "m065"
+        ],
+        "note": "Sam's summary is affirmed by Jordan and Leo, but Maya and Alex dispute the Patagonia budget status inside the same exchange."
+      },
+      {
+        "msgs": [
+          "m067",
+          "m068"
+        ],
+        "note": "'The summary is right' and 'Yes' affirm the summary as an accurate record, not a preference for any option."
+      },
+      {
+        "msgs": [
+          "m069",
+          "m078"
+        ],
+        "note": "The poll-tomorrow plan is superseded by waiting for Jordan."
+      },
+      {
+        "msgs": [
+          "m043",
+          "m044"
+        ],
+        "note": "Arithmetic dispute: $1,300 plus $600 is $1,900, leaving $100 of a $2,000 budget. Both readings are recorded, and neither person is judged."
+      }
+    ],
+    "card_must_include": [
+      "Budget now $2,000 per person (replaced $2,500), agreed by all six",
+      "Dates Nov 14 to 21 for five people; Jordan limited to Nov 14 to 18; unresolved",
+      "Options: Patagonia (budget disputed), Dolomites, Banff (reopened, contested), Zion; Yosemite dropped if Zion stays",
+      "Poll waits for Jordan's answer on dates; each person to price their option",
+      "Open issues: dates, Patagonia budget fit, whether Banff counts as hiking"
+    ],
+    "card_must_not_include": [
+      "Leo agreed to the 5-day Banff trip or to the split trip",
+      "Patagonia has been eliminated",
+      "Budget $2,500",
+      "Banff permanently dropped",
+      "Dates settled",
+      "A poll scheduled for tomorrow night"
+    ]
+  },
+  "errors": [
+    {
+      "msg": "m058",
+      "error": "Observer cannot update an unknown entity."
+    }
+  ]
+}

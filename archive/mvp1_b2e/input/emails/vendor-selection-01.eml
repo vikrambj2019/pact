@@ -1,0 +1,123 @@
+From: Sarah Chen <sarah.chen@acme.com>
+To: decision-team@acme.com
+Date: Mon, 06 Oct 2026 09:14:00 -0700
+Subject: Vendor selection — CRM platform decision
+Message-ID: <msg001@acme.com>
+
+Team,
+
+We need to finalize our CRM vendor by end of month. Procurement is pushing back on extending the evaluation period. The three finalists are Salesforce Enterprise, HubSpot Sales Hub Pro, and Dynamics 365.
+
+My recommendation is Salesforce. We've run the pilot and our sales team is already comfortable with it. Migrations costs are high but manageable.
+
+Sarah
+
+---
+
+From: Marcus Webb <marcus.webb@acme.com>
+To: decision-team@acme.com
+Date: Mon, 06 Oct 2026 10:32:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg002@acme.com>
+In-Reply-To: <msg001@acme.com>
+
+Sarah,
+
+I'm not convinced. Salesforce licensing is $180/seat/month at our scale — that's $2.16M annually before add-ons. HubSpot comes in at $95/seat and the API is better for our engineering team.
+
+Also worth noting: our data residency requirements for the EU subsidiary are still unresolved. Legal hasn't confirmed which vendors are compliant.
+
+Marcus
+
+---
+
+From: Priya Nair <priya.nair@acme.com>
+To: decision-team@acme.com
+Date: Mon, 06 Oct 2026 11:45:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg003@acme.com>
+In-Reply-To: <msg002@acme.com>
+
+Both valid points. I want to add a concern about migration timeline. IT estimates 14 weeks for a full Salesforce migration, 8 weeks for HubSpot. We have a hard constraint: the new system must be live before Q1 kickoff on January 5th.
+
+That's 12 weeks from today. Salesforce migration timeline looks risky.
+
+Priya
+
+---
+
+From: Sarah Chen <sarah.chen@acme.com>
+To: decision-team@acme.com
+Date: Mon, 06 Oct 2026 14:20:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg004@acme.com>
+In-Reply-To: <msg003@acme.com>
+
+Fair point on timeline, Priya. But Salesforce has committed to a fast-track implementation with a dedicated team — they said 10 weeks is achievable. That's still a risk though, I agree.
+
+On EU data residency: Marcus is right, we need legal sign-off before we can finalize. I'll ping Rebecca.
+
+Sarah
+
+---
+
+From: Tom Okafor <tom.okafor@acme.com>
+To: decision-team@acme.com
+Date: Tue, 07 Oct 2026 08:55:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg005@acme.com>
+In-Reply-To: <msg004@acme.com>
+
+I spoke with the Dynamics 365 team yesterday. They can integrate with our existing Azure infrastructure at no additional license cost — we already have an M365 E3 agreement. Effective cost comes down to roughly $60/seat.
+
+Their migration timeline is 9 weeks. They also confirmed EU data residency compliance out of the box.
+
+Tom
+
+---
+
+From: Marcus Webb <marcus.webb@acme.com>
+To: decision-team@acme.com
+Date: Tue, 07 Oct 2026 09:40:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg006@acme.com>
+In-Reply-To: <msg005@acme.com>
+
+Tom, that changes the picture significantly. If the M365 licensing offset is real, Dynamics becomes the cost leader by a wide margin.
+
+My concern is product maturity — Dynamics CRM has a weaker sales pipeline UX compared to Salesforce. Has anyone done a hands-on pilot with the sales team for Dynamics?
+
+Marcus
+
+---
+
+From: Priya Nair <priya.nair@acme.com>
+To: decision-team@acme.com
+Date: Tue, 07 Oct 2026 10:15:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg007@acme.com>
+In-Reply-To: <msg006@acme.com>
+
+No Dynamics pilot yet. The sales team has only seen Salesforce. That's a blocker for me — we can't commit to a platform the end users haven't validated.
+
+Can we get a 2-week pilot for Dynamics and HubSpot before we decide? That still leaves 10 weeks for migration if we move fast.
+
+Priya
+
+---
+
+From: Sarah Chen <sarah.chen@acme.com>
+To: decision-team@acme.com
+Date: Tue, 07 Oct 2026 11:30:00 -0700
+Subject: Re: Vendor selection — CRM platform decision
+Message-ID: <msg008@acme.com>
+In-Reply-To: <msg007@acme.com>
+
+Agreed on running a Dynamics pilot. I'll set it up with Tom by end of week.
+
+Remaining open questions before we can decide:
+1. Legal confirmation on EU data residency (all three vendors)
+2. Sales team feedback from Dynamics and HubSpot pilots
+3. Confirmation of M365 licensing offset from Finance
+
+Sarah

@@ -1,0 +1,1879 @@
+{
+  "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/social/evals/transcripts/ent-01-easy-cutover.txt",
+  "model": "claude-haiku-5-5",
+  "messages": 39,
+  "spans": [
+    {
+      "id": "b1.s1",
+      "burst_id": "b1",
+      "author": "Priya",
+      "ts": "2026-10-19T09:05:00",
+      "text": "We need to pick the weekend for the billing cutover to the new platform",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b1.s2",
+      "burst_id": "b1",
+      "author": "Priya",
+      "ts": "2026-10-19T09:05:00",
+      "text": "Let's settle it in this thread",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s1",
+      "burst_id": "b2",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:06:00",
+      "text": "I'd propose Nov 14-15",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s2",
+      "burst_id": "b2",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:06:00",
+      "text": "UAT should be done by then",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'then' = Nov 14-15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s3",
+      "burst_id": "b2",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:06:00",
+      "text": "it's well before the holidays",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s1",
+      "burst_id": "b3",
+      "author": "Dev",
+      "ts": "2026-10-19T09:08:00",
+      "text": "Another option is Nov 21-22",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s2",
+      "burst_id": "b3",
+      "author": "Dev",
+      "ts": "2026-10-19T09:08:00",
+      "text": "One more week of buffer",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Nov 21-22' = billing cutover weekend option",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s1",
+      "burst_id": "b4",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:09:00",
+      "text": "And Dec 5-6 is possible if we slip",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s2",
+      "burst_id": "b4",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:09:00",
+      "text": "Probably not, but listing it",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Dec 5-6",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s1",
+      "burst_id": "b5",
+      "author": "Priya",
+      "ts": "2026-10-19T09:12:00",
+      "text": "Good. Let's go through constraints first",
+      "source_message_ids": [
+        "m5"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s2",
+      "burst_id": "b5",
+      "author": "Priya",
+      "ts": "2026-10-19T09:12:00",
+      "text": "Marcus, anything from Finance?",
+      "source_message_ids": [
+        "m5"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s1",
+      "burst_id": "b6",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:16:00",
+      "text": "Month-end close takes the last three business days of the month",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s2",
+      "burst_id": "b6",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:16:00",
+      "text": "For this window that means",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b6.s3",
+      "burst_id": "b6",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:16:00",
+      "text": "keep clear of Nov 25-30",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Nov 25-30' = month-end close window",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s4",
+      "burst_id": "b6",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:18:00",
+      "text": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that",
+      "source_message_ids": [
+        "m7"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = Nov 25-30 month-end close window",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s1",
+      "burst_id": "b7",
+      "author": "Elena",
+      "ts": "2026-10-19T09:21:00",
+      "text": "Support constraint: our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.",
+      "source_message_ids": [
+        "m8"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s2",
+      "burst_id": "b7",
+      "author": "Elena",
+      "ts": "2026-10-19T09:22:00",
+      "text": "So Dec 5-6 doesn't work for me.",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Dec 5-6' = Hannah's option of Dec 5-6 if we slip",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s3",
+      "burst_id": "b7",
+      "author": "Elena",
+      "ts": "2026-10-19T09:22:00",
+      "text": "I'd rather not do it then.",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Dec 5-6",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b8.s1",
+      "burst_id": "b8",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:24:00",
+      "text": "withdrawing Dec 5-6",
+      "source_message_ids": [
+        "m10"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Dec 5-6' = Dec 5-6 option previously listed by Hannah",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s1",
+      "burst_id": "b9",
+      "author": "Dev",
+      "ts": "2026-10-19T09:27:00",
+      "text": "From my side I need five full days after UAT sign-off for the final data sync and rehearsal.",
+      "source_message_ids": [
+        "m11"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b10.s1",
+      "burst_id": "b10",
+      "author": "Tom",
+      "ts": "2026-10-19T09:29:00",
+      "text": "UAT sign-off is scheduled for Friday Nov 6",
+      "source_message_ids": [
+        "m12"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b10.s2",
+      "burst_id": "b10",
+      "author": "Tom",
+      "ts": "2026-10-19T09:29:00",
+      "text": "I can hold that date",
+      "source_message_ids": [
+        "m12"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that date' = Friday Nov 6 UAT sign-off",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s1",
+      "burst_id": "b11",
+      "author": "Dev",
+      "ts": "2026-10-19T09:31:00",
+      "text": "Nov 6 plus five days is Nov 11",
+      "source_message_ids": [
+        "m13"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s2",
+      "burst_id": "b11",
+      "author": "Dev",
+      "ts": "2026-10-19T09:31:00",
+      "text": "Nov 14-15 works for me",
+      "source_message_ids": [
+        "m13"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Nov 14-15' = proposed window after UAT sign-off on Nov 6",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s3",
+      "burst_id": "b11",
+      "author": "Dev",
+      "ts": "2026-10-19T09:32:00",
+      "text": "Nov 21-22 works too",
+      "source_message_ids": [
+        "m14"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s4",
+      "burst_id": "b11",
+      "author": "Dev",
+      "ts": "2026-10-19T09:32:00",
+      "text": "I'd rather not stretch it",
+      "source_message_ids": [
+        "m14"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Nov 21-22 window",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b12.s1",
+      "burst_id": "b12",
+      "author": "Priya",
+      "ts": "2026-10-19T09:35:00",
+      "text": "Dev, how long did the last cutover take?",
+      "source_message_ids": [
+        "m15"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b13.s1",
+      "burst_id": "b13",
+      "author": "Dev",
+      "ts": "2026-10-19T09:37:00",
+      "text": "The last one was about 9 hours on a Saturday night",
+      "source_message_ids": [
+        "m16"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b13.s2",
+      "burst_id": "b13",
+      "author": "Dev",
+      "ts": "2026-10-19T09:37:00",
+      "text": "This one is bigger so I'd plan for 12",
+      "source_message_ids": [
+        "m16"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b14.s1",
+      "burst_id": "b14",
+      "author": "Priya",
+      "ts": "2026-10-19T09:39:00",
+      "text": "Criteria then: risk, support coverage and finance close",
+      "source_message_ids": [
+        "m17"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b14.s2",
+      "burst_id": "b14",
+      "author": "Priya",
+      "ts": "2026-10-19T09:39:00",
+      "text": "Anything else?",
+      "source_message_ids": [
+        "m17"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b15.s1",
+      "burst_id": "b15",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:42:00",
+      "text": "We promised customers 5 days notice for billing changes",
+      "source_message_ids": [
+        "m18"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b16.s1",
+      "burst_id": "b16",
+      "author": "Priya",
+      "ts": "2026-10-19T09:44:00",
+      "text": "That's easy for either date",
+      "source_message_ids": [
+        "m19"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'That' = Hannah's customer notice requirement of 5 days notice for billing changes",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b17.s1",
+      "burst_id": "b17",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:47:00",
+      "text": "For me Nov 14-15 is cleaner",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b17.s2",
+      "burst_id": "b17",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:47:00",
+      "text": "Close is well behind us and I can brief the auditors the week before",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s1",
+      "burst_id": "b18",
+      "author": "Elena",
+      "ts": "2026-10-19T09:49:00",
+      "text": "Nov 14-15 works for support",
+      "source_message_ids": [
+        "m21"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s2",
+      "burst_id": "b18",
+      "author": "Elena",
+      "ts": "2026-10-19T09:49:00",
+      "text": "I'll have full weekend cover",
+      "source_message_ids": [
+        "m21"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b19.s1",
+      "burst_id": "b19",
+      "author": "Tom",
+      "ts": "2026-10-19T09:51:00",
+      "text": "Nov 14-15 is good for QA",
+      "source_message_ids": [
+        "m22"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s1",
+      "burst_id": "b20",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:52:00",
+      "text": "Nov 14-15 from me as well",
+      "source_message_ids": [
+        "m23"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s2",
+      "burst_id": "b20",
+      "author": "Hannah",
+      "ts": "2026-10-19T09:52:00",
+      "text": "it was my first pick",
+      "source_message_ids": [
+        "m23"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b21.s1",
+      "burst_id": "b21",
+      "author": "Dev",
+      "ts": "2026-10-19T09:54:00",
+      "text": "Nov 14-15, yes",
+      "source_message_ids": [
+        "m24"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b21.s2",
+      "burst_id": "b21",
+      "author": "Dev",
+      "ts": "2026-10-19T09:54:00",
+      "text": "I'd make Nov 21-22 the backup if UAT slips, not the main plan",
+      "source_message_ids": [
+        "m24"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s1",
+      "burst_id": "b22",
+      "author": "Priya",
+      "ts": "2026-10-19T09:56:00",
+      "text": "Agreed on that. Anyone against Nov 14-15?",
+      "source_message_ids": [
+        "m25"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b23.s1",
+      "burst_id": "b23",
+      "author": "Marcus",
+      "ts": "2026-10-19T09:59:00",
+      "text": "No objection",
+      "source_message_ids": [
+        "m26"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'No objection' = no objection to Nov 14-15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b24.s1",
+      "burst_id": "b24",
+      "author": "Elena",
+      "ts": "2026-10-19T10:00:00",
+      "text": "None here.",
+      "source_message_ids": [
+        "m27"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'None' = no objection to Nov 14-15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s1",
+      "burst_id": "b25",
+      "author": "Tom",
+      "ts": "2026-10-19T10:01:00",
+      "text": "None",
+      "source_message_ids": [
+        "m28"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'None' = no objection to Nov 14-15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b26.s1",
+      "burst_id": "b26",
+      "author": "Hannah",
+      "ts": "2026-10-19T10:02:00",
+      "text": "None",
+      "source_message_ids": [
+        "m29"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'None' = no objection to Nov 14-15",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b27.s1",
+      "burst_id": "b27",
+      "author": "Dev",
+      "ts": "2026-10-19T10:04:00",
+      "text": "None, go",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'None' = no objection",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s1",
+      "burst_id": "b28",
+      "author": "Priya",
+      "ts": "2026-10-19T10:06:00",
+      "text": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Then' = the earlier 'None' replies (no objections) to the cutover dates",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s2",
+      "burst_id": "b28",
+      "author": "Priya",
+      "ts": "2026-10-19T10:06:00",
+      "text": "Backup is Nov 21-22",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s3",
+      "burst_id": "b28",
+      "author": "Priya",
+      "ts": "2026-10-19T10:06:00",
+      "text": "if UAT sign-off slips past Nov 6",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b29.s1",
+      "burst_id": "b29",
+      "author": "Priya",
+      "ts": "2026-10-19T10:09:00",
+      "text": "Next steps",
+      "source_message_ids": [
+        "m32"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b29.s2",
+      "burst_id": "b29",
+      "author": "Priya",
+      "ts": "2026-10-19T10:09:00",
+      "text": "Dev, can you write the runbook and have it reviewed by Nov 9?",
+      "source_message_ids": [
+        "m32"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s1",
+      "burst_id": "b30",
+      "author": "Dev",
+      "ts": "2026-10-19T10:11:00",
+      "text": "Yes, runbook by Nov 9.",
+      "source_message_ids": [
+        "m33"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s1",
+      "burst_id": "b31",
+      "author": "Tom",
+      "ts": "2026-10-19T10:13:00",
+      "text": "I'll sign off UAT on Nov 6",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s1",
+      "burst_id": "b32",
+      "author": "Hannah",
+      "ts": "2026-10-19T10:15:00",
+      "text": "I'll send the customer notice by Nov 9.",
+      "source_message_ids": [
+        "m35"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b33.s1",
+      "burst_id": "b33",
+      "author": "Elena",
+      "ts": "2026-10-19T10:17:00",
+      "text": "I'll lock the weekend support rota by Nov 2",
+      "source_message_ids": [
+        "m36"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b34.s1",
+      "burst_id": "b34",
+      "author": "Marcus",
+      "ts": "2026-10-19T10:20:00",
+      "text": "I'll brief the auditors on Nov 10 and confirm back here",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b35.s1",
+      "burst_id": "b35",
+      "author": "Priya",
+      "ts": "2026-10-19T10:22:00",
+      "text": "I'll book the war room",
+      "source_message_ids": [
+        "m38"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b35.s2",
+      "burst_id": "b35",
+      "author": "Priya",
+      "ts": "2026-10-19T10:22:00",
+      "text": "post the final schedule once the runbook is done",
+      "source_message_ids": [
+        "m38"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b35.s3",
+      "burst_id": "b35",
+      "author": "Priya",
+      "ts": "2026-10-19T10:24:00",
+      "text": "Thanks everyone.",
+      "source_message_ids": [
+        "m39"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    }
+  ],
+  "classified": [
+    {
+      "span_id": "b1.s1",
+      "author": "Priya",
+      "text": "We need to pick the weekend for the billing cutover to the new platform",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.9,
+          "gist": "which weekend to do the billing cutover to the new platform"
+        }
+      ],
+      "rationale": "The span states the decision the group must make: which weekend for the billing cutover."
+    },
+    {
+      "span_id": "b1.s2",
+      "author": "Priya",
+      "text": "Let's settle it in this thread",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.9,
+          "gist": "Priya directs the group to settle the cutover weekend choice in this thread"
+        }
+      ],
+      "rationale": "This is a facilitation step about how the discussion should proceed, not a content label."
+    },
+    {
+      "span_id": "b2.s1",
+      "author": "Hannah",
+      "text": "I'd propose Nov 14-15",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Hannah proposes Nov 14-15 for the cutover"
+        },
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Nov 14-15 proposed as billing cutover weekend"
+        }
+      ],
+      "rationale": "The span introduces Nov 14-15 as a new alternative for the cutover weekend and states Hannah's proposal, which is a position on that option."
+    },
+    {
+      "span_id": "b2.s2",
+      "author": "Hannah",
+      "text": "UAT should be done by then",
+      "status": "active",
+      "context_note": "'then' = Nov 14-15",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.9,
+          "gist": "UAT should be done by Nov 14-15 (supports Nov 14-15 timing)"
+        }
+      ],
+      "rationale": "The span is a causal/predictive assertion justifying Hannah's proposed Nov 14-15 weekend, so it is a claim rather than a position."
+    },
+    {
+      "span_id": "b2.s3",
+      "author": "Hannah",
+      "text": "it's well before the holidays",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Nov 14-15 is well before the holidays (supports Nov 14-15 timing)"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "timing relative to the holidays as a factor for choosing the cutover weekend"
+        }
+      ],
+      "rationale": "The span is a justification for Hannah's Nov 14-15 proposal, so it is a claim and, since it names a timing factor for judging options, also a criterion, not a position."
+    },
+    {
+      "span_id": "b3.s1",
+      "author": "Dev",
+      "text": "Another option is Nov 21-22",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.9,
+          "gist": "Nov 21-22 introduced as an alternative cutover weekend"
+        }
+      ],
+      "rationale": "Nov 21-22 is floated as a new alternative weekend for the cutover that nobody named earlier, so it is a new option."
+    },
+    {
+      "span_id": "b3.s2",
+      "author": "Dev",
+      "text": "One more week of buffer",
+      "status": "active",
+      "context_note": "'Nov 21-22' = billing cutover weekend option",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Nov 21-22 gives one extra week of buffer before cutover"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "schedule buffer between UAT and cutover weekend"
+        }
+      ],
+      "rationale": "The span is a reason supporting the Nov 21-22 option, so it is a claim naming a buffer factor (criterion) rather than a position."
+    },
+    {
+      "span_id": "b4.s1",
+      "author": "Hannah",
+      "text": "And Dec 5-6 is possible if we slip",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Dec 5-6 introduced as a fallback weekend for the billing cutover if things slip"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Hannah floats Dec 5-6 as a possible fallback, while saying it is probably not viable"
+        }
+      ],
+      "rationale": "Dec 5-6 is a new alternative for the cutover weekend, phrased as a conditional fallback, so it is an option; the hedged \"possible if we slip\" is a weak tentative stance."
+    },
+    {
+      "span_id": "b4.s2",
+      "author": "Hannah",
+      "text": "Probably not, but listing it",
+      "status": "active",
+      "context_note": "'it' = Dec 5-6",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Hannah leans against Dec 5-6 as the cutover weekend (not favored), while listing it"
+        }
+      ],
+      "rationale": "Dec 5-6 was already introduced by Hannah earlier, so this is a stance on an existing option (position), not a new option; \"listing it\" is not a facilitation step."
+    },
+    {
+      "span_id": "b5.s1",
+      "author": "Priya",
+      "text": "Good. Let's go through constraints first",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.9,
+          "gist": "Facilitator moves discussion to going through constraints first"
+        }
+      ],
+      "rationale": "\"Let's go through constraints first\" is an agenda step about how the discussion proceeds, so it is process rather than content."
+    },
+    {
+      "span_id": "b5.s2",
+      "author": "Priya",
+      "text": "Marcus, anything from Finance?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.95,
+          "gist": "Priya asks Marcus specifically to weigh in from Finance (facilitation of discussion)"
+        }
+      ],
+      "rationale": "Asking a specific person to weigh in is a facilitation step, so it is process, not content."
+    },
+    {
+      "span_id": "b6.s1",
+      "author": "Marcus",
+      "text": "Month-end close takes the last three business days of the month",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Month-end close occupies the last three business days of the month, a limit on cutover timing"
+        }
+      ],
+      "rationale": "A fixed recurring finance window that filters feasible cutover weekends is a constraint, not a claim or blocker."
+    },
+    {
+      "span_id": "b6.s2",
+      "author": "Marcus",
+      "text": "For this window that means",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Month-end close window implies the cutover should avoid the period (incomplete lead-in to the Nov 25-30 window statement)"
+        }
+      ],
+      "rationale": "The span is an incomplete lead-in whose content is completed in the next message, and on its own it only frames a factual implication about the month-end close, so it is labeled as a claim."
+    },
+    {
+      "span_id": "b6.s3",
+      "author": "Marcus",
+      "text": "keep clear of Nov 25-30",
+      "status": "active",
+      "context_note": "'Nov 25-30' = month-end close window",
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Month-end close window Nov 25-30 must be avoided for the cutover"
+        }
+      ],
+      "rationale": "Marcus states a fixed finance dependency (month-end close window) that filters options regardless of decision, so it is a constraint rather than a position or claim."
+    },
+    {
+      "span_id": "b6.s4",
+      "author": "Marcus",
+      "text": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid that",
+      "status": "active",
+      "context_note": "'that' = Nov 25-30 month-end close window",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.9,
+          "gist": "Nov 14-15, Nov 21-22 and Dec 5-6 all avoid the Nov 25-30 month-end close window"
+        }
+      ],
+      "rationale": "Marcus states a factual check that the named options avoid the month-end close window, which is a claim about options, not a position or new option."
+    },
+    {
+      "span_id": "b7.s1",
+      "author": "Elena",
+      "text": "Support constraint: our holiday staffing freeze starts Nov 23. After that I can't add weekend cover.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.9,
+          "gist": "Support holiday staffing freeze starts Nov 23; no weekend cover after that date"
+        }
+      ],
+      "rationale": "Elena states a fixed dependency that gates feasibility for the cutover weekend, which is a constraint rather than a position, claim, or blocker."
+    },
+    {
+      "span_id": "b7.s2",
+      "author": "Elena",
+      "text": "So Dec 5-6 doesn't work for me.",
+      "status": "active",
+      "context_note": "'Dec 5-6' = Hannah's option of Dec 5-6 if we slip",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Elena opposes Dec 5-6 cutover weekend, since it falls after the Nov 23 staffing freeze"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Dec 5-6 is after the holiday staffing freeze starting Nov 23, so no weekend cover"
+        }
+      ],
+      "rationale": "Elena's explicit stance rejecting Dec 5-6 is a position; the reason tied to the freeze is a claim, not a constraint restatement or a status change of the option."
+    },
+    {
+      "span_id": "b7.s3",
+      "author": "Elena",
+      "text": "I'd rather not do it then.",
+      "status": "active",
+      "context_note": "'it' = Dec 5-6",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Elena opposes Dec 5-6 option"
+        }
+      ],
+      "rationale": "Elena explicitly rules out Dec 5-6, which is a stance on an existing option; the reason for it is already stated as a constraint earlier, so the objection label is a lower-confidence extra."
+    },
+    {
+      "span_id": "b8.s1",
+      "author": "Hannah",
+      "text": "withdrawing Dec 5-6",
+      "status": "active",
+      "context_note": "'Dec 5-6' = Dec 5-6 option previously listed by Hannah",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Hannah withdraws her Dec 5-6 option"
+        },
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Dec 5-6 status changed to dropped/withdrawn"
+        }
+      ],
+      "rationale": "Dec 5-6 was already named earlier, and Hannah's explicit withdrawal is a position plus a status change of that existing option, per the withdrawal rule."
+    },
+    {
+      "span_id": "b9.s1",
+      "author": "Dev",
+      "text": "From my side I need five full days after UAT sign-off for the final data sync and rehearsal.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Dev needs five full days after UAT sign-off for final data sync and rehearsal before cutover"
+        }
+      ],
+      "rationale": "Dev states a fixed duration requirement that gates feasibility of any cutover weekend, so it is a constraint rather than a position or claim."
+    },
+    {
+      "span_id": "b10.s1",
+      "author": "Tom",
+      "text": "UAT sign-off is scheduled for Friday Nov 6",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.85,
+          "gist": "UAT sign-off is scheduled for Fri Nov 6 (fixed dependency gating cutover feasibility)"
+        }
+      ],
+      "rationale": "A fixed scheduled date that gates feasibility is a constraint per rule 5, not a claim or blocker."
+    },
+    {
+      "span_id": "b10.s2",
+      "author": "Tom",
+      "text": "I can hold that date",
+      "status": "active",
+      "context_note": "'that date' = Friday Nov 6 UAT sign-off",
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.6,
+          "gist": "Tom commits to holding the Friday Nov 6 UAT sign-off date (a deliverable he owns)"
+        }
+      ],
+      "rationale": "Tom commits to holding the UAT sign-off date, which is a concrete deliverable he owns outside the chat, so it is an action rather than a position on a cutover option."
+    },
+    {
+      "span_id": "b11.s1",
+      "author": "Dev",
+      "text": "Nov 6 plus five days is Nov 11",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Nov 6 UAT sign-off plus five-day sync/rehearsal window ends Nov 11"
+        }
+      ],
+      "rationale": "Dev's arithmetic applies his earlier five-day requirement to the scheduled Nov 6 UAT date, which is a factual derived assertion rather than a stance on an option."
+    },
+    {
+      "span_id": "b11.s2",
+      "author": "Dev",
+      "text": "Nov 14-15 works for me",
+      "status": "active",
+      "context_note": "'Nov 14-15' = proposed window after UAT sign-off on Nov 6",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.93,
+          "gist": "Dev supports Nov 14-15 as the cutover window"
+        }
+      ],
+      "rationale": "Dev explicitly states support for an already-introduced option (Nov 14-15), which is a position, not agreement or a new option."
+    },
+    {
+      "span_id": "b11.s3",
+      "author": "Dev",
+      "text": "Nov 21-22 works too",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Dev says Nov 21-22 works (acceptable, though not preferred)"
+        }
+      ],
+      "rationale": "Nov 21-22 was already introduced by Dev earlier, so this is a stance on an existing option, which is a position and not a new option."
+    },
+    {
+      "span_id": "b11.s4",
+      "author": "Dev",
+      "text": "I'd rather not stretch it",
+      "status": "active",
+      "context_note": "'it' = Nov 21-22 window",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Dev opposes the Nov 21-22 window, preferring not to stretch the schedule"
+        }
+      ],
+      "rationale": "The span is Dev's explicit stance against the Nov 21-22 option, which was already named earlier, so it is a position rather than a new option; the objection label is a weaker secondary reading."
+    },
+    {
+      "span_id": "b12.s1",
+      "author": "Priya",
+      "text": "Dev, how long did the last cutover take?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.8,
+          "gist": "Priya asks Dev to weigh in on past cutover duration (directed request for input)"
+        }
+      ],
+      "rationale": "Priya directs a specific question to Dev to facilitate discussion, which is a process move rather than a content label."
+    },
+    {
+      "span_id": "b13.s1",
+      "author": "Dev",
+      "text": "The last one was about 9 hours on a Saturday night",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Last billing cutover took about 9 hours on a Saturday night; factual past-duration claim"
+        }
+      ],
+      "rationale": "Dev states a factual past duration in answer to Priya's question, which is a claim rather than a position, decision, or option."
+    },
+    {
+      "span_id": "b13.s2",
+      "author": "Dev",
+      "text": "This one is bigger so I'd plan for 12",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dev estimates this cutover is bigger than the last one, so planning for about 12 hours"
+        }
+      ],
+      "rationale": "Dev's estimate of cutover duration is a factual/predictive claim supporting planning assumptions, not a position on an option or a constraint."
+    },
+    {
+      "span_id": "b14.s1",
+      "author": "Priya",
+      "text": "Criteria then: risk, support coverage and finance close",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.85,
+          "gist": "risk"
+        }
+      ],
+      "rationale": "Priya names the evaluative factors (risk, support coverage, finance close) for judging the cutover window options, which are not hard limits."
+    },
+    {
+      "span_id": "b14.s2",
+      "author": "Priya",
+      "text": "Anything else?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.95,
+          "gist": "Priya asks if anyone has more items to raise before moving on (discussion facilitation)"
+        }
+      ],
+      "rationale": "\"Anything else?\" is an agenda/input-gathering prompt to the group, which is non-content process."
+    },
+    {
+      "span_id": "b15.s1",
+      "author": "Hannah",
+      "text": "We promised customers 5 days notice for billing changes",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Customers must receive 5 days notice before billing changes take effect"
+        }
+      ],
+      "rationale": "Hannah states a group-wide requirement (5 days customer notice for billing changes) that limits feasible cutover dates, so it is a constraint."
+    },
+    {
+      "span_id": "b16.s1",
+      "author": "Priya",
+      "text": "That's easy for either date",
+      "status": "active",
+      "context_note": "'That' = Hannah's customer notice requirement of 5 days notice for billing changes",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Priya asserts the customer 5-day notice requirement is easily met by either Nov 14-15 or Nov 21-22"
+        }
+      ],
+      "rationale": "Span states that an existing requirement is satisfied by the named options, which is a factual claim about feasibility, not a position, agreement, or option."
+    },
+    {
+      "span_id": "b17.s1",
+      "author": "Marcus",
+      "text": "For me Nov 14-15 is cleaner",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Marcus supports Nov 14-15 as the cutover weekend"
+        }
+      ],
+      "rationale": "Marcus explicitly states his preference for an already-introduced option, which is a position, not a new option or decision."
+    },
+    {
+      "span_id": "b17.s2",
+      "author": "Marcus",
+      "text": "Close is well behind us and I can brief the auditors the week before",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Month-end close is behind the Nov 14-15 window; Marcus can brief auditors the week before"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "Finance close timing / audit briefing readiness as a factor for judging dates"
+        }
+      ],
+      "rationale": "This is a justification for Marcus's earlier lean toward Nov 14-15, so it is a claim plus an implied criterion, not a position, since the stance lives in the earlier span."
+    },
+    {
+      "span_id": "b18.s1",
+      "author": "Elena",
+      "text": "Nov 14-15 works for support",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Elena supports Nov 14-15 for the billing cutover (support coverage works)"
+        }
+      ],
+      "rationale": "The span states Elena's explicit support for an already-named option, which is a position rather than an agreement or new option."
+    },
+    {
+      "span_id": "b18.s2",
+      "author": "Elena",
+      "text": "I'll have full weekend cover",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.5,
+          "gist": ""
+        }
+      ],
+      "rationale": "placeholder"
+    },
+    {
+      "span_id": "b19.s1",
+      "author": "Tom",
+      "text": "Nov 14-15 is good for QA",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Tom supports Nov 14-15 for the cutover (QA)"
+        }
+      ],
+      "rationale": "Tom explicitly states his stance that Nov 14-15 works for QA, an existing option, so it is a position only."
+    },
+    {
+      "span_id": "b20.s1",
+      "author": "Hannah",
+      "text": "Nov 14-15 from me as well",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Hannah supports Nov 14-15 for the cutover"
+        }
+      ],
+      "rationale": "Hannah explicitly states her stance in favor of the already-named Nov 14-15 option, which is a position rather than a new option or decision."
+    },
+    {
+      "span_id": "b20.s2",
+      "author": "Hannah",
+      "text": "it was my first pick",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Hannah says Nov 14-15 was her original first pick (restating her earlier proposal)"
+        }
+      ],
+      "rationale": "The span only restates Hannah's earlier proposal of Nov 14-15 as her first choice, which is a factual remark about history rather than a new stance, option, or decision."
+    },
+    {
+      "span_id": "b21.s1",
+      "author": "Dev",
+      "text": "Nov 14-15, yes",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Dev supports Nov 14-15 for the cutover"
+        }
+      ],
+      "rationale": "Dev explicitly backs the already-named Nov 14-15 option, which is a position rather than a decision since Priya has not yet settled it."
+    },
+    {
+      "span_id": "b21.s2",
+      "author": "Dev",
+      "text": "I'd make Nov 21-22 the backup if UAT slips, not the main plan",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.8,
+          "gist": "Nov 21-22 becomes the backup/fallback if UAT slips (previously named alternative)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.7,
+          "gist": "Dev supports Nov 21-22 only as backup, not main plan (Nov 14-15 main)"
+        }
+      ],
+      "rationale": "Nov 21-22 was already named earlier, so naming it as the fallback is a status change, and Dev's stance on it as backup is a position."
+    },
+    {
+      "span_id": "b22.s1",
+      "author": "Priya",
+      "text": "Agreed on that. Anyone against Nov 14-15?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.9,
+          "gist": "objection check: asking if anyone opposes Nov 14-15"
+        }
+      ],
+      "rationale": "\"Anyone against Nov 14-15?\" is a canonical objection check, which is process; \"Agreed on that\" is a low-confidence hint of settlement but the group has not closed it yet, so the decision label is weak."
+    },
+    {
+      "span_id": "b23.s1",
+      "author": "Marcus",
+      "text": "No objection",
+      "status": "active",
+      "context_note": "'No objection' = no objection to Nov 14-15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Marcus has no objection to Nov 14-15 (support for the option being checked)"
+        }
+      ],
+      "rationale": "A reply to an objection check is a position supporting the checked option, never agreement."
+    },
+    {
+      "span_id": "b24.s1",
+      "author": "Elena",
+      "text": "None here.",
+      "status": "active",
+      "context_note": "'None' = no objection to Nov 14-15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.93,
+          "gist": "Elena: no objection to Nov 14-15 (reply to objection check, supports the option)"
+        }
+      ],
+      "rationale": "Reply to an objection check (\"None here\") is a position supporting the option being checked, not agreement."
+    },
+    {
+      "span_id": "b25.s1",
+      "author": "Tom",
+      "text": "None",
+      "status": "active",
+      "context_note": "'None' = no objection to Nov 14-15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Tom has no objection to Nov 14-15, supporting that option in reply to the objection check"
+        }
+      ],
+      "rationale": "A reply to an objection check (\"None\") is a position supporting the option being checked, never agreement."
+    },
+    {
+      "span_id": "b26.s1",
+      "author": "Hannah",
+      "text": "None",
+      "status": "active",
+      "context_note": "'None' = no objection to Nov 14-15",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Hannah has no objection to Nov 14-15 (support for the option being checked)"
+        }
+      ],
+      "rationale": "A reply to an objection check (\"None\") is a position supporting the checked option, not agreement."
+    },
+    {
+      "span_id": "b27.s1",
+      "author": "Dev",
+      "text": "None, go",
+      "status": "active",
+      "context_note": "'None' = no objection",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.93,
+          "gist": "Dev has no objection to Nov 14-15 (support for the option being checked)"
+        }
+      ],
+      "rationale": "Reply to an objection check (\"Anyone against Nov 14-15?\") is a position of support, never agreement."
+    },
+    {
+      "span_id": "b28.s1",
+      "author": "Priya",
+      "text": "Then it's decided: cutover Sat Nov 14 to Sun Nov 15",
+      "status": "active",
+      "context_note": "'Then' = the earlier 'None' replies (no objections) to the cutover dates",
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.95,
+          "gist": "Cutover settled on Sat Nov 14 to Sun Nov 15 after no objections"
+        }
+      ],
+      "rationale": "Priya, the organiser, declares the cutover date settled on behalf of the group after the objection check drew no objections, which is a group_closure decision."
+    },
+    {
+      "span_id": "b28.s2",
+      "author": "Priya",
+      "text": "Backup is Nov 21-22",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Nov 21-22 becomes the backup/fallback cutover weekup if UAT slips past Nov 6"
+        }
+      ],
+      "rationale": "Naming Nov 21-22 as the backup is a status change for an already-introduced option (rule 6), and the speaker's stance on it as fallback is a secondary position."
+    },
+    {
+      "span_id": "b28.s3",
+      "author": "Priya",
+      "text": "if UAT sign-off slips past Nov 6",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "Whether UAT sign-off slips past Nov 6 is an open dependency for the backup plan"
+        }
+      ],
+      "rationale": "The span is a conditional about an unresolved dependency (UAT sign-off timing) rather than a stated option, decision, or constraint, and it is not an explicit call for input."
+    },
+    {
+      "span_id": "b29.s1",
+      "author": "Priya",
+      "text": "Next steps",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Priya moves the discussion to next steps after the decision, a facilitation step with no content"
+        }
+      ],
+      "rationale": "\"Next steps\" is a facilitation marker that moves the agenda forward without deciding or proposing any content."
+    },
+    {
+      "span_id": "b29.s2",
+      "author": "Priya",
+      "text": "Dev, can you write the runbook and have it reviewed by Nov 9?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Dev asked to write the runbook and get it reviewed by Nov 9"
+        }
+      ],
+      "rationale": "Priya explicitly asks Dev to take on a concrete deliverable outside the chat with a deadline, which is an action rather than process or decision."
+    },
+    {
+      "span_id": "b30.s1",
+      "author": "Dev",
+      "text": "Yes, runbook by Nov 9.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Dev commits to writing the cutover runbook by Nov 9"
+        }
+      ],
+      "rationale": "Dev accepts Priya's request to write the runbook by Nov 9, a concrete task owned outside the chat."
+    },
+    {
+      "span_id": "b31.s1",
+      "author": "Tom",
+      "text": "I'll sign off UAT on Nov 6",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Tom commits to signing off UAT on Nov 6"
+        }
+      ],
+      "rationale": "Tom takes on a concrete deliverable outside the chat (UAT sign-off on Nov 6), which is an action rather than a constraint or position."
+    },
+    {
+      "span_id": "b32.s1",
+      "author": "Hannah",
+      "text": "I'll send the customer notice by Nov 9.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Hannah will send the customer billing-change notice by Nov 9"
+        }
+      ],
+      "rationale": "Hannah commits to a concrete deliverable outside the chat with a deadline, which is an action."
+    },
+    {
+      "span_id": "b33.s1",
+      "author": "Elena",
+      "text": "I'll lock the weekend support rota by Nov 2",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Elena commits to locking the weekend support rota by Nov 2"
+        }
+      ],
+      "rationale": "Elena personally commits to a concrete deliverable outside the chat, so it is an action, not a decision or position."
+    },
+    {
+      "span_id": "b34.s1",
+      "author": "Marcus",
+      "text": "I'll brief the auditors on Nov 10 and confirm back here",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Marcus will brief the auditors on Nov 10 and confirm back in the chat"
+        }
+      ],
+      "rationale": "Marcus commits to a concrete task outside the chat (briefing auditors by Nov 10), which is an action rather than a claim or position."
+    },
+    {
+      "span_id": "b35.s1",
+      "author": "Priya",
+      "text": "I'll book the war room",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Priya commits to booking the war room (outside-chat task)"
+        }
+      ],
+      "rationale": "Priya personally commits to a concrete task outside the chat, so it is an action rather than a decision or process step."
+    },
+    {
+      "span_id": "b35.s2",
+      "author": "Priya",
+      "text": "post the final schedule once the runbook is done",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Priya will post the final schedule to the group once Dev's runbook is done (conditional task)"
+        }
+      ],
+      "rationale": "A conditional task for Priya to post the schedule, with the runbook dependency part of the action per rule 7, not a blocker."
+    },
+    {
+      "span_id": "b35.s3",
+      "author": "Priya",
+      "text": "Thanks everyone.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.95,
+          "gist": "closing thanks to the group, no decision content"
+        }
+      ],
+      "rationale": "A pure thank-you with no content; it is not a decision, process step, or action."
+    }
+  ]
+}

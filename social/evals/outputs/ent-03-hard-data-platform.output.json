@@ -1,0 +1,5814 @@
+{
+  "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/social/evals/transcripts/ent-03-hard-data-platform.txt",
+  "model": "claude-haiku-5-5",
+  "messages": 101,
+  "spans": [
+    {
+      "id": "b1.s1",
+      "burst_id": "b1",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:45:00",
+      "text": "Purpose of this thread: land the end-state data platform after the merger and a cutover window",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b1.s2",
+      "burst_id": "b1",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:45:00",
+      "text": "Today we run Halden's Databricks and our Snowflake",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b1.s3",
+      "burst_id": "b1",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:45:00",
+      "text": "I'd like a direction by Wednesday",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b1.s4",
+      "burst_id": "b1",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:45:00",
+      "text": "The exec ask is unified reporting by end of March",
+      "source_message_ids": [
+        "m1"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s1",
+      "burst_id": "b2",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:47:00",
+      "text": "Databricks, obviously",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s2",
+      "burst_id": "b2",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:47:00",
+      "text": "We already run 300+ pipelines on it",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b2.s3",
+      "burst_id": "b2",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:47:00",
+      "text": "the ML team lives there",
+      "source_message_ids": [
+        "m2"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s1",
+      "burst_id": "b3",
+      "author": "Raj",
+      "ts": "2026-10-26T08:48:00",
+      "text": "Snowflake",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s2",
+      "burst_id": "b3",
+      "author": "Raj",
+      "ts": "2026-10-26T08:48:00",
+      "text": "Our whole claims mart is there",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b3.s3",
+      "burst_id": "b3",
+      "author": "Raj",
+      "ts": "2026-10-26T08:48:00",
+      "text": "about 40 stored procedures that don't port cleanly",
+      "source_message_ids": [
+        "m3"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s1",
+      "burst_id": "b4",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:50:00",
+      "text": "Stored procedures port fine with the converter",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b4.s2",
+      "burst_id": "b4",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:50:00",
+      "text": "Halden moved 300 pipelines in 8 weeks last year",
+      "source_message_ids": [
+        "m4"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b5.s1",
+      "burst_id": "b5",
+      "author": "Gareth",
+      "ts": "2026-10-26T08:52:00",
+      "text": "I'm sure we'll do 400 in six weeks with the same team",
+      "source_message_ids": [
+        "m5"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s1",
+      "burst_id": "b6",
+      "author": "Imani",
+      "ts": "2026-10-26T08:54:00",
+      "text": "As the BI person I don't care which one, as long as my dashboards don't break twice",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b6.s2",
+      "burst_id": "b6",
+      "author": "Imani",
+      "ts": "2026-10-26T08:54:00",
+      "text": "Or we just keep querying both forever",
+      "source_message_ids": [
+        "m6"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s1",
+      "burst_id": "b7",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:55:00",
+      "text": "Querying both doubles the cost",
+      "source_message_ids": [
+        "m7"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s2",
+      "burst_id": "b7",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:55:00",
+      "text": "nobody can reconcile the numbers",
+      "source_message_ids": [
+        "m7"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b7.s3",
+      "burst_id": "b7",
+      "author": "Colleen",
+      "ts": "2026-10-26T08:55:00",
+      "text": "Hard no on that",
+      "source_message_ids": [
+        "m7"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = querying both Snowflake and the other platform",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b8.s1",
+      "burst_id": "b8",
+      "author": "Imani",
+      "ts": "2026-10-26T08:56:00",
+      "text": "Dropping that one",
+      "source_message_ids": [
+        "m8"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that one' = querying both forever",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s1",
+      "burst_id": "b9",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:59:00",
+      "text": "Let me capture criteria",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b9.s2",
+      "burst_id": "b9",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:59:00",
+      "text": "I'd rank speed to unified reporting first",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s3",
+      "burst_id": "b9",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:59:00",
+      "text": "then cost",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s4",
+      "burst_id": "b9",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:59:00",
+      "text": "then risk",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b9.s5",
+      "burst_id": "b9",
+      "author": "Sofia",
+      "ts": "2026-10-26T08:59:00",
+      "text": "Agree?",
+      "source_message_ids": [
+        "m9"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b10.s1",
+      "burst_id": "b10",
+      "author": "Dmitri",
+      "ts": "2026-10-26T09:01:00",
+      "text": "Cost has to be in there",
+      "source_message_ids": [
+        "m10"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b10.s2",
+      "burst_id": "b10",
+      "author": "Dmitri",
+      "ts": "2026-10-26T09:01:00",
+      "text": "I heard from Anita that the CFO wants a 15% run-cost reduction on data platforms this year",
+      "source_message_ids": [
+        "m10"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s1",
+      "burst_id": "b11",
+      "author": "Wei",
+      "ts": "2026-10-26T09:03:00",
+      "text": "Compliance needs to be its own item",
+      "source_message_ids": [
+        "m11"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s2",
+      "burst_id": "b11",
+      "author": "Wei",
+      "ts": "2026-10-26T09:03:00",
+      "text": "Anything with PHI needs BAA coverage and the same access controls",
+      "source_message_ids": [
+        "m11"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b11.s3",
+      "burst_id": "b11",
+      "author": "Wei",
+      "ts": "2026-10-26T09:03:00",
+      "text": "we have a regulatory audit in May",
+      "source_message_ids": [
+        "m11"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b12.s1",
+      "burst_id": "b12",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:05:00",
+      "text": "Ranking for now: speed, cost, compliance",
+      "source_message_ids": [
+        "m12"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b13.s1",
+      "burst_id": "b13",
+      "author": "Gareth",
+      "ts": "2026-10-26T09:08:00",
+      "text": "Is the 3pm still on?",
+      "source_message_ids": [
+        "m13"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b14.s1",
+      "burst_id": "b14",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:09:00",
+      "text": "Yes, 3pm",
+      "source_message_ids": [
+        "m14"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b14.s2",
+      "burst_id": "b14",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:09:00",
+      "text": "Raj is walking through the claims mart inventory",
+      "source_message_ids": [
+        "m14"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b15.s1",
+      "burst_id": "b15",
+      "author": "Imani",
+      "ts": "2026-10-26T09:11:00",
+      "text": "where do visitors park at the Halden office on Thursday?",
+      "source_message_ids": [
+        "m15"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b15.s2",
+      "burst_id": "b15",
+      "author": "Imani",
+      "ts": "2026-10-26T09:11:00",
+      "text": "Lot looks full.",
+      "source_message_ids": [
+        "m15"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b16.s1",
+      "burst_id": "b16",
+      "author": "Gareth",
+      "ts": "2026-10-26T09:12:00",
+      "text": "Level 3 of the garage",
+      "source_message_ids": [
+        "m16"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Level 3 of the garage' answers Imani's question about where visitors park at the Halden office on Thursday",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b16.s2",
+      "burst_id": "b16",
+      "author": "Gareth",
+      "ts": "2026-10-26T09:12:00",
+      "text": "security badges them in at the gate",
+      "source_message_ids": [
+        "m16"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b17.s1",
+      "burst_id": "b17",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:15:00",
+      "text": "My view stands, Databricks as the end state",
+      "source_message_ids": [
+        "m17"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b17.s2",
+      "burst_id": "b17",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:15:00",
+      "text": "Raj, what would it take for you?",
+      "source_message_ids": [
+        "m17"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b18.s1",
+      "burst_id": "b18",
+      "author": "Raj",
+      "ts": "2026-10-26T09:18:00",
+      "text": "I could live with Databricks IF the migration tooling covers our 40 stored procedures. I haven't verified that yet.",
+      "source_message_ids": [
+        "m18"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b19.s1",
+      "burst_id": "b19",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:20:00",
+      "text": "Raj is fine with Databricks",
+      "source_message_ids": [
+        "m19"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s1",
+      "burst_id": "b20",
+      "author": "Raj",
+      "ts": "2026-10-26T09:21:00",
+      "text": "That's not what I said",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s2",
+      "burst_id": "b20",
+      "author": "Raj",
+      "ts": "2026-10-26T09:21:00",
+      "text": "I said I could live with it IF the tooling covers the 40 procs",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Databricks",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b20.s3",
+      "burst_id": "b20",
+      "author": "Raj",
+      "ts": "2026-10-26T09:21:00",
+      "text": "That's not \"fine\"",
+      "source_message_ids": [
+        "m20"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b21.s1",
+      "burst_id": "b21",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:22:00",
+      "text": "OK, conditional",
+      "source_message_ids": [
+        "m21"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b21.s2",
+      "burst_id": "b21",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:22:00",
+      "text": "Fair",
+      "source_message_ids": [
+        "m21"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s1",
+      "burst_id": "b22",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:25:00",
+      "text": "Quick poll for the end state",
+      "source_message_ids": [
+        "m22"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s2",
+      "burst_id": "b22",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:25:00",
+      "text": "A is Databricks, B is Snowflake",
+      "source_message_ids": [
+        "m22"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b22.s3",
+      "burst_id": "b22",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:25:00",
+      "text": "Reply with your pick",
+      "source_message_ids": [
+        "m22"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b23.s1",
+      "burst_id": "b23",
+      "author": "Colleen",
+      "ts": "2026-10-26T09:26:00",
+      "text": "A",
+      "source_message_ids": [
+        "m23"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = Databricks (Sofia's poll option A)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b24.s1",
+      "burst_id": "b24",
+      "author": "Imani",
+      "ts": "2026-10-26T09:27:00",
+      "text": "A",
+      "source_message_ids": [
+        "m24"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = Databricks (option A in Sofia's poll)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s1",
+      "burst_id": "b25",
+      "author": "Wei",
+      "ts": "2026-10-26T09:28:00",
+      "text": "A, provided the PHI controls and the BAA are in place before any claims data moves",
+      "source_message_ids": [
+        "m25"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = Databricks",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b25.s2",
+      "burst_id": "b25",
+      "author": "Wei",
+      "ts": "2026-10-26T09:28:00",
+      "text": "the PHI controls and the BAA are in place before any claims data moves",
+      "source_message_ids": [
+        "m25"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b26.s1",
+      "burst_id": "b26",
+      "author": "Raj",
+      "ts": "2026-10-26T09:30:00",
+      "text": "B for now",
+      "source_message_ids": [
+        "m26"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'B' = Snowflake",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b26.s2",
+      "burst_id": "b26",
+      "author": "Raj",
+      "ts": "2026-10-26T09:30:00",
+      "text": "Show me the stored procs working and I'll change",
+      "source_message_ids": [
+        "m26"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b27.s1",
+      "burst_id": "b27",
+      "author": "Dmitri",
+      "ts": "2026-10-26T09:31:00",
+      "text": "No view",
+      "source_message_ids": [
+        "m27"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b27.s2",
+      "burst_id": "b27",
+      "author": "Dmitri",
+      "ts": "2026-10-26T09:31:00",
+      "text": "I just need the cost number either way",
+      "source_message_ids": [
+        "m27"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b28.s1",
+      "burst_id": "b28",
+      "author": "Gareth",
+      "ts": "2026-10-26T09:32:00",
+      "text": "A, but not by March",
+      "source_message_ids": [
+        "m28"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = option A from the preceding options discussion",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b29.s1",
+      "burst_id": "b29",
+      "author": "Sofia",
+      "ts": "2026-10-26T09:34:00",
+      "text": "ok",
+      "source_message_ids": [
+        "m29"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s1",
+      "burst_id": "b30",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:34:00",
+      "text": "Numbers as I have them",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b30.s2",
+      "burst_id": "b30",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:34:00",
+      "text": "Snowflake costs about $2.4M a year",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s3",
+      "burst_id": "b30",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:34:00",
+      "text": "Halden's Databricks about $1.9M",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s4",
+      "burst_id": "b30",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:34:00",
+      "text": "Keeping both is about $4.3M",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b30.s5",
+      "burst_id": "b30",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:34:00",
+      "text": "A merged workload on Databricks should land near $3M",
+      "source_message_ids": [
+        "m30"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s1",
+      "burst_id": "b31",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:39:00",
+      "text": "Correction on what I said earlier",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s2",
+      "burst_id": "b31",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:39:00",
+      "text": "The CFO target is 10%, not 15%",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b31.s3",
+      "burst_id": "b31",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:39:00",
+      "text": "Anita just corrected me",
+      "source_message_ids": [
+        "m31"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b32.s1",
+      "burst_id": "b32",
+      "author": "Imani",
+      "ts": "2026-10-26T10:40:00",
+      "text": "\ud83d\udc4d",
+      "source_message_ids": [
+        "m32"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b33.s1",
+      "burst_id": "b33",
+      "author": "Gareth",
+      "ts": "2026-10-26T10:44:00",
+      "text": "doesn't the Snowflake contract renew soon?",
+      "source_message_ids": [
+        "m33"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b34.s1",
+      "burst_id": "b34",
+      "author": "Raj",
+      "ts": "2026-10-26T10:47:00",
+      "text": "Yes. It renews Feb 28",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b34.s2",
+      "burst_id": "b34",
+      "author": "Raj",
+      "ts": "2026-10-26T10:47:00",
+      "text": "and auto-renews for 3 years unless we give notice 90 days before, so by Nov 30",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b34.s3",
+      "burst_id": "b34",
+      "author": "Raj",
+      "ts": "2026-10-26T10:47:00",
+      "text": "it auto-renews for 3 years unless we give notice 90 days before, so by Nov 30",
+      "source_message_ids": [
+        "m34"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = Snowflake contract",
+      "verified": false,
+      "recovered": false
+    },
+    {
+      "id": "b35.s1",
+      "burst_id": "b35",
+      "author": "Dmitri",
+      "ts": "2026-10-26T10:49:00",
+      "text": "I'll pull the contract and confirm by Wednesday",
+      "source_message_ids": [
+        "m35"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b36.s1",
+      "burst_id": "b36",
+      "author": "Colleen",
+      "ts": "2026-10-26T10:51:00",
+      "text": "Then we serve non-renewal notice by Nov 30",
+      "source_message_ids": [
+        "m36"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b36.s2",
+      "burst_id": "b36",
+      "author": "Colleen",
+      "ts": "2026-10-26T10:51:00",
+      "text": "we're done",
+      "source_message_ids": [
+        "m36"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b37.s1",
+      "burst_id": "b37",
+      "author": "Raj",
+      "ts": "2026-10-26T10:53:00",
+      "text": "If we serve notice we lose Snowflake on Feb 28",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b37.s2",
+      "burst_id": "b37",
+      "author": "Raj",
+      "ts": "2026-10-26T10:53:00",
+      "text": "We won't be on Databricks by then",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b37.s3",
+      "burst_id": "b37",
+      "author": "Raj",
+      "ts": "2026-10-26T10:53:00",
+      "text": "That's a gap",
+      "source_message_ids": [
+        "m37"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'That' = serving notice leaves no Snowflake coverage before Databricks is live",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b38.s1",
+      "burst_id": "b38",
+      "author": "Gareth",
+      "ts": "2026-10-26T10:54:00",
+      "text": "Exactly",
+      "source_message_ids": [
+        "m38"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b38.s2",
+      "burst_id": "b38",
+      "author": "Gareth",
+      "ts": "2026-10-26T10:54:00",
+      "text": "March for 400 pipelines was never going to happen",
+      "source_message_ids": [
+        "m38"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b39.s1",
+      "burst_id": "b39",
+      "author": "Wei",
+      "ts": "2026-10-26T10:56:00",
+      "text": "I also can't see claims data moving by March with the BAA and tokenization review not even started",
+      "source_message_ids": [
+        "m39"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b39.s2",
+      "burst_id": "b39",
+      "author": "Wei",
+      "ts": "2026-10-26T10:56:00",
+      "text": "I'm against a March date",
+      "source_message_ids": [
+        "m39"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b40.s1",
+      "burst_id": "b40",
+      "author": "Colleen",
+      "ts": "2026-10-26T10:58:00",
+      "text": "what's realistic? Q2?",
+      "source_message_ids": [
+        "m40"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b41.s1",
+      "burst_id": "b41",
+      "author": "Raj",
+      "ts": "2026-10-26T11:00:00",
+      "text": "Q2 is workable for me.",
+      "source_message_ids": [
+        "m41"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b42.s1",
+      "burst_id": "b42",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:01:00",
+      "text": "Q2 I could do",
+      "source_message_ids": [
+        "m42"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b42.s2",
+      "burst_id": "b42",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:01:00",
+      "text": "Needs the stored proc answer first",
+      "source_message_ids": [
+        "m42"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b43.s1",
+      "burst_id": "b43",
+      "author": "Imani",
+      "ts": "2026-10-26T11:02:00",
+      "text": "+1",
+      "source_message_ids": [
+        "m43"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'+1' = agreement with Wei's objection to a March date",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b44.s1",
+      "burst_id": "b44",
+      "author": "Sofia",
+      "ts": "2026-10-26T11:05:00",
+      "text": "Dropping the March target then",
+      "source_message_ids": [
+        "m44"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b44.s2",
+      "burst_id": "b44",
+      "author": "Sofia",
+      "ts": "2026-10-26T11:05:00",
+      "text": "I'll plan on Q2 and confirm the date once Raj's assessment is back",
+      "source_message_ids": [
+        "m44"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b45.s1",
+      "burst_id": "b45",
+      "author": "Dmitri",
+      "ts": "2026-10-26T11:07:00",
+      "text": "Q2 works for me",
+      "source_message_ids": [
+        "m45"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Q2' = Q2 target discussed in the preceding context",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b45.s2",
+      "burst_id": "b45",
+      "author": "Dmitri",
+      "ts": "2026-10-26T11:07:00",
+      "text": "It moves most of the spend into next FY anyway",
+      "source_message_ids": [
+        "m45"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b46.s1",
+      "burst_id": "b46",
+      "author": "Imani",
+      "ts": "2026-10-26T11:12:00",
+      "text": "I'm out all next week, surgery",
+      "source_message_ids": [
+        "m46"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b46.s2",
+      "burst_id": "b46",
+      "author": "Imani",
+      "ts": "2026-10-26T11:12:00",
+      "text": "Wei is covering my BI sign-offs",
+      "source_message_ids": [
+        "m46"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b47.s1",
+      "burst_id": "b47",
+      "author": "Wei",
+      "ts": "2026-10-26T11:14:00",
+      "text": "Yes, I'll cover BI sign-offs next week.",
+      "source_message_ids": [
+        "m47"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b48.s1",
+      "burst_id": "b48",
+      "author": "Dmitri",
+      "ts": "2026-10-26T11:17:00",
+      "text": "there's a hiring freeze, so no backfill for Raj's team",
+      "source_message_ids": [
+        "m48"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b48.s2",
+      "burst_id": "b48",
+      "author": "Dmitri",
+      "ts": "2026-10-26T11:17:00",
+      "text": "Please keep that inside this thread",
+      "source_message_ids": [
+        "m48"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = the hiring freeze and no backfill for Raj's team",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b49.s1",
+      "burst_id": "b49",
+      "author": "Raj",
+      "ts": "2026-10-26T11:18:00",
+      "text": "So it's the people we have",
+      "source_message_ids": [
+        "m49"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = no backfill for Raj's team under the hiring freeze",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b50.s1",
+      "burst_id": "b50",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:20:00",
+      "text": "Which makes interim on-call matter",
+      "source_message_ids": [
+        "m50"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Which' = no backfill for Raj's team (hiring freeze)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b50.s2",
+      "burst_id": "b50",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:20:00",
+      "text": "Who owns on-call for the legacy Snowflake pipelines during the migration?",
+      "source_message_ids": [
+        "m50"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b51.s1",
+      "burst_id": "b51",
+      "author": "Colleen",
+      "ts": "2026-10-26T11:22:00",
+      "text": "Anyone know where the expense tool moved?",
+      "source_message_ids": [
+        "m51"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b51.s2",
+      "burst_id": "b51",
+      "author": "Colleen",
+      "ts": "2026-10-26T11:22:00",
+      "text": "The old link is dead",
+      "source_message_ids": [
+        "m51"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b52.s1",
+      "burst_id": "b52",
+      "author": "Imani",
+      "ts": "2026-10-26T11:23:00",
+      "text": "Under Finance Apps now",
+      "source_message_ids": [
+        "m52"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Under Finance Apps now' answers where the expense tool moved",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s1",
+      "burst_id": "b53",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:25:00",
+      "text": "Back to on-call please",
+      "source_message_ids": [
+        "m53"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b53.s2",
+      "burst_id": "b53",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:25:00",
+      "text": "Who owns it?",
+      "source_message_ids": [
+        "m53"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = on-call for the legacy Snowflake pipelines during the migration",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b54.s1",
+      "burst_id": "b54",
+      "author": "Raj",
+      "ts": "2026-10-26T11:26:00",
+      "text": "Not it, my team is already stretched",
+      "source_message_ids": [
+        "m54"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Not it' = declines owning on-call for the legacy Snowflake pipelines during the migration",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b55.s1",
+      "burst_id": "b55",
+      "author": "Colleen",
+      "ts": "2026-10-26T11:27:00",
+      "text": "Halden platform team can't take Snowflake pipelines",
+      "source_message_ids": [
+        "m55"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b55.s2",
+      "burst_id": "b55",
+      "author": "Colleen",
+      "ts": "2026-10-26T11:27:00",
+      "text": "we have no Snowflake skills",
+      "source_message_ids": [
+        "m55"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b56.s1",
+      "burst_id": "b56",
+      "author": "Sofia",
+      "ts": "2026-10-26T11:29:00",
+      "text": "Let's park on-call",
+      "source_message_ids": [
+        "m56"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b56.s2",
+      "burst_id": "b56",
+      "author": "Sofia",
+      "ts": "2026-10-26T11:29:00",
+      "text": "I'll come back to it",
+      "source_message_ids": [
+        "m56"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b57.s1",
+      "burst_id": "b57",
+      "author": "Gareth",
+      "ts": "2026-10-26T11:30:00",
+      "text": "\ud83d\udc4d",
+      "source_message_ids": [
+        "m57"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b58.s1",
+      "burst_id": "b58",
+      "author": "Raj",
+      "ts": "2026-10-27T08:40:00",
+      "text": "First pass on the stored procs with the converter",
+      "source_message_ids": [
+        "m58"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b58.s2",
+      "burst_id": "b58",
+      "author": "Raj",
+      "ts": "2026-10-27T08:40:00",
+      "text": "31 of 40 convert cleanly",
+      "source_message_ids": [
+        "m58"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b58.s3",
+      "burst_id": "b58",
+      "author": "Raj",
+      "ts": "2026-10-27T08:40:00",
+      "text": "9 need rewrites",
+      "source_message_ids": [
+        "m58"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b59.s1",
+      "burst_id": "b59",
+      "author": "Colleen",
+      "ts": "2026-10-27T08:43:00",
+      "text": "That's a good result",
+      "source_message_ids": [
+        "m59"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b59.s2",
+      "burst_id": "b59",
+      "author": "Colleen",
+      "ts": "2026-10-27T08:43:00",
+      "text": "Rewrites are maybe two weeks of work",
+      "source_message_ids": [
+        "m59"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Rewrites' = the 9 stored procs that need rewrites",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b60.s1",
+      "burst_id": "b60",
+      "author": "Raj",
+      "ts": "2026-10-27T08:45:00",
+      "text": "Closer to 4 to 6 weeks with the team we have.",
+      "source_message_ids": [
+        "m60"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Closer to 4 to 6 weeks' = estimate for the 9 stored procs needing rewrites, replacing Colleen's two-week estimate",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b61.s1",
+      "burst_id": "b61",
+      "author": "Colleen",
+      "ts": "2026-10-27T08:47:00",
+      "text": "We can lend two engineers from Halden for the rewrites",
+      "source_message_ids": [
+        "m61"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b62.s1",
+      "burst_id": "b62",
+      "author": "Raj",
+      "ts": "2026-10-27T08:50:00",
+      "text": "If you lend two engineers for the rewrites, A works for me",
+      "source_message_ids": [
+        "m62"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = the option Raj is responding to, the first proposal in the burst",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b62.s2",
+      "burst_id": "b62",
+      "author": "Raj",
+      "ts": "2026-10-27T08:50:00",
+      "text": "and I withdraw B",
+      "source_message_ids": [
+        "m62"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b63.s1",
+      "burst_id": "b63",
+      "author": "Colleen",
+      "ts": "2026-10-27T08:52:00",
+      "text": "Then I'll commit two engineers for six weeks",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Then' = Raj's condition: if two engineers are lent for the rewrites, option A works and B is withdrawn",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b63.s2",
+      "burst_id": "b63",
+      "author": "Colleen",
+      "ts": "2026-10-27T08:52:00",
+      "text": "starting Dec 1",
+      "source_message_ids": [
+        "m63"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b64.s1",
+      "burst_id": "b64",
+      "author": "Gareth",
+      "ts": "2026-10-27T08:54:00",
+      "text": "Dec 1 plus six weeks is mid January",
+      "source_message_ids": [
+        "m64"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b64.s2",
+      "burst_id": "b64",
+      "author": "Gareth",
+      "ts": "2026-10-27T08:54:00",
+      "text": "That works",
+      "source_message_ids": [
+        "m64"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'That' = Colleen's two engineers for six weeks starting Dec 1",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b65.s1",
+      "burst_id": "b65",
+      "author": "Wei",
+      "ts": "2026-10-27T08:59:00",
+      "text": "PHI review update",
+      "source_message_ids": [
+        "m65"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b65.s2",
+      "burst_id": "b65",
+      "author": "Wei",
+      "ts": "2026-10-27T08:59:00",
+      "text": "Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum",
+      "source_message_ids": [
+        "m65"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b65.s3",
+      "burst_id": "b65",
+      "author": "Wei",
+      "ts": "2026-10-27T08:59:00",
+      "text": "Halden says the addendum is standard but I haven't seen it",
+      "source_message_ids": [
+        "m65"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b66.s1",
+      "burst_id": "b66",
+      "author": "Colleen",
+      "ts": "2026-10-27T09:01:00",
+      "text": "It's standard, I've signed one before",
+      "source_message_ids": [
+        "m66"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'It' = the BAA addendum",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b67.s1",
+      "burst_id": "b67",
+      "author": "Wei",
+      "ts": "2026-10-27T09:03:00",
+      "text": "I need to read it myself",
+      "source_message_ids": [
+        "m67"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b67.s2",
+      "burst_id": "b67",
+      "author": "Wei",
+      "ts": "2026-10-27T09:03:00",
+      "text": "Until then my A is conditional on the BAA and tokenization",
+      "source_message_ids": [
+        "m67"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'it' = the BAA addendum",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b68.s1",
+      "burst_id": "b68",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:06:00",
+      "text": "Contract confirmed",
+      "source_message_ids": [
+        "m68"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b68.s2",
+      "burst_id": "b68",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:06:00",
+      "text": "Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30",
+      "source_message_ids": [
+        "m68"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b68.s3",
+      "burst_id": "b68",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:06:00",
+      "text": "Raj was right",
+      "source_message_ids": [
+        "m68"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b69.s1",
+      "burst_id": "b69",
+      "author": "Raj",
+      "ts": "2026-10-27T09:08:00",
+      "text": "So we can't serve notice and still run until Q2",
+      "source_message_ids": [
+        "m69"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b70.s1",
+      "burst_id": "b70",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:10:00",
+      "text": "I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal",
+      "source_message_ids": [
+        "m70"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b70.s2",
+      "burst_id": "b70",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:10:00",
+      "text": "No promise they agree",
+      "source_message_ids": [
+        "m70"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b70.s3",
+      "burst_id": "b70",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:10:00",
+      "text": "I'll ask by Nov 20",
+      "source_message_ids": [
+        "m70"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b71.s1",
+      "burst_id": "b71",
+      "author": "Sofia",
+      "ts": "2026-10-27T09:12:00",
+      "text": "If they refuse we renew for a year and take the hit.",
+      "source_message_ids": [
+        "m71"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'they' = Snowflake (the rep asked for a 6-month extension to Aug 31)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b72.s1",
+      "burst_id": "b72",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:14:00",
+      "text": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY",
+      "source_message_ids": [
+        "m72"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b72.s2",
+      "burst_id": "b72",
+      "author": "Dmitri",
+      "ts": "2026-10-27T09:14:00",
+      "text": "That's the downside",
+      "source_message_ids": [
+        "m72"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'That' = a one-year renewal costing about $2.4M",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b73.s1",
+      "burst_id": "b73",
+      "author": "Sofia",
+      "ts": "2026-10-27T09:17:00",
+      "text": "Understood. Let's see what the rep says.",
+      "source_message_ids": [
+        "m73"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b74.s1",
+      "burst_id": "b74",
+      "author": "Gareth",
+      "ts": "2026-10-27T09:27:00",
+      "text": "Until cutover can we federate queries across both platforms as a bridge?",
+      "source_message_ids": [
+        "m74"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b75.s1",
+      "burst_id": "b75",
+      "author": "Colleen",
+      "ts": "2026-10-27T09:29:00",
+      "text": "As a temporary bridge, ok",
+      "source_message_ids": [
+        "m75"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'As a temporary bridge' = federating queries across both platforms until cutover",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b75.s2",
+      "burst_id": "b75",
+      "author": "Colleen",
+      "ts": "2026-10-27T09:29:00",
+      "text": "As the end state, still no",
+      "source_message_ids": [
+        "m75"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'As the end state' = federating queries across both platforms as the permanent end state",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b76.s1",
+      "burst_id": "b76",
+      "author": "Sofia",
+      "ts": "2026-10-27T09:31:00",
+      "text": "Interim only",
+      "source_message_ids": [
+        "m76"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Interim only' = federating queries across both platforms as a bridge until cutover, not as the end state",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b77.s1",
+      "burst_id": "b77",
+      "author": "Imani",
+      "ts": "2026-10-27T09:32:00",
+      "text": "That works for BI.",
+      "source_message_ids": [
+        "m77"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b78.s1",
+      "burst_id": "b78",
+      "author": "Wei",
+      "ts": "2026-10-27T10:02:00",
+      "text": "Security architecture review is now mandatory before any PHI migration",
+      "source_message_ids": [
+        "m78"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b78.s2",
+      "burst_id": "b78",
+      "author": "Wei",
+      "ts": "2026-10-27T10:02:00",
+      "text": "It's booked for Dec 8 and takes about 3 weeks",
+      "source_message_ids": [
+        "m78"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'It' = Security architecture review",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b79.s1",
+      "burst_id": "b79",
+      "author": "Sofia",
+      "ts": "2026-10-27T10:05:00",
+      "text": "That changes the ranking",
+      "source_message_ids": [
+        "m79"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'That' = Wei's security architecture review now mandatory before any PHI migration",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b79.s2",
+      "burst_id": "b79",
+      "author": "Sofia",
+      "ts": "2026-10-27T10:05:00",
+      "text": "New order: compliance first, then cost, then speed. March is dead, Q2 it is, exact date after the Dec 8 review and Raj's assessment",
+      "source_message_ids": [
+        "m79"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b80.s1",
+      "burst_id": "b80",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:07:00",
+      "text": "Sofia, are we deciding the platform today?",
+      "source_message_ids": [
+        "m80"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b81.s1",
+      "burst_id": "b81",
+      "author": "Sofia",
+      "ts": "2026-10-27T10:09:00",
+      "text": "I'd like a direction",
+      "source_message_ids": [
+        "m81"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b81.s2",
+      "burst_id": "b81",
+      "author": "Sofia",
+      "ts": "2026-10-27T10:09:00",
+      "text": "Can we go with A as the direction, with the open items tracked?",
+      "source_message_ids": [
+        "m81"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'A' = option A (platform option, not named in the burst)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b82.s1",
+      "burst_id": "b82",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:11:00",
+      "text": "Fine, whatever gets us out of this thread.",
+      "source_message_ids": [
+        "m82"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b83.s1",
+      "burst_id": "b83",
+      "author": "Gareth",
+      "ts": "2026-10-27T10:13:00",
+      "text": "A works for me, and Q2 is what makes it work.",
+      "source_message_ids": [
+        "m83"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b84.s1",
+      "burst_id": "b84",
+      "author": "Colleen",
+      "ts": "2026-10-27T10:15:00",
+      "text": "all seven of us are on board with Databricks then",
+      "source_message_ids": [
+        "m84"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b85.s1",
+      "burst_id": "b85",
+      "author": "Wei",
+      "ts": "2026-10-27T10:16:00",
+      "text": "Not all seven",
+      "source_message_ids": [
+        "m85"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b85.s2",
+      "burst_id": "b85",
+      "author": "Wei",
+      "ts": "2026-10-27T10:16:00",
+      "text": "I'm conditional on the BAA and tokenization",
+      "source_message_ids": [
+        "m85"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b85.s3",
+      "burst_id": "b85",
+      "author": "Wei",
+      "ts": "2026-10-27T10:16:00",
+      "text": "not \"on board\"",
+      "source_message_ids": [
+        "m85"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b86.s1",
+      "burst_id": "b86",
+      "author": "Raj",
+      "ts": "2026-10-27T10:17:00",
+      "text": "conditional on the stored procs and the engineers",
+      "source_message_ids": [
+        "m86"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'Same' = conditional stance like Wei's (conditional on the BAA and tokenization)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b87.s1",
+      "burst_id": "b87",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:18:00",
+      "text": "And I abstained",
+      "source_message_ids": [
+        "m87"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b87.s2",
+      "burst_id": "b87",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:18:00",
+      "text": "Count me out of that",
+      "source_message_ids": [
+        "m87"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = Databricks decision (all seven on board)",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b88.s1",
+      "burst_id": "b88",
+      "author": "Colleen",
+      "ts": "2026-10-27T10:20:00",
+      "text": "Five supporters then, some conditional",
+      "source_message_ids": [
+        "m88"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b89.s1",
+      "burst_id": "b89",
+      "author": "Imani",
+      "ts": "2026-10-27T10:40:00",
+      "text": "Someone said earlier the budget is fixed at $3M",
+      "source_message_ids": [
+        "m89"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b89.s2",
+      "burst_id": "b89",
+      "author": "Imani",
+      "ts": "2026-10-27T10:40:00",
+      "text": "Is that right?",
+      "source_message_ids": [
+        "m89"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b90.s1",
+      "burst_id": "b90",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:43:00",
+      "text": "Nobody said that",
+      "source_message_ids": [
+        "m90"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b90.s2",
+      "burst_id": "b90",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:43:00",
+      "text": "$3M was my estimate for the merged workload on Databricks",
+      "source_message_ids": [
+        "m90"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b90.s3",
+      "burst_id": "b90",
+      "author": "Dmitri",
+      "ts": "2026-10-27T10:43:00",
+      "text": "It isn't a budget",
+      "source_message_ids": [
+        "m90"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'It' = $3M",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b91.s1",
+      "burst_id": "b91",
+      "author": "Imani",
+      "ts": "2026-10-27T10:45:00",
+      "text": "Got it, thanks.",
+      "source_message_ids": [
+        "m91"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b92.s1",
+      "burst_id": "b92",
+      "author": "Gareth",
+      "ts": "2026-10-28T07:35:00",
+      "text": "On-call for the legacy Snowflake pipelines is still unowned",
+      "source_message_ids": [
+        "m92"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b92.s2",
+      "burst_id": "b92",
+      "author": "Gareth",
+      "ts": "2026-10-28T07:35:00",
+      "text": "Flagging again",
+      "source_message_ids": [
+        "m92"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b93.s1",
+      "burst_id": "b93",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:39:00",
+      "text": "I'll recap what we have",
+      "source_message_ids": [
+        "m93"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b94.s1",
+      "burst_id": "b94",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:42:00",
+      "text": "Direction: Databricks as the end state",
+      "source_message_ids": [
+        "m94"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b94.s2",
+      "burst_id": "b94",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:42:00",
+      "text": "Q2 cutover, exact date after Raj's assessment and the Dec 8 security review",
+      "source_message_ids": [
+        "m94"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b94.s3",
+      "burst_id": "b94",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:42:00",
+      "text": "Federation only as an interim bridge",
+      "source_message_ids": [
+        "m94"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b94.s4",
+      "burst_id": "b94",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:42:00",
+      "text": "March is off",
+      "source_message_ids": [
+        "m94"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b94.s5",
+      "burst_id": "b94",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:42:00",
+      "text": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30",
+      "source_message_ids": [
+        "m94"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b95.s1",
+      "burst_id": "b95",
+      "author": "Raj",
+      "ts": "2026-10-28T07:45:00",
+      "text": "I'll deliver the full stored procedure assessment by Nov 6",
+      "source_message_ids": [
+        "m95"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b96.s1",
+      "burst_id": "b96",
+      "author": "Wei",
+      "ts": "2026-10-28T07:47:00",
+      "text": "I'll finish the BAA addendum review by Nov 13",
+      "source_message_ids": [
+        "m96"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b97.s1",
+      "burst_id": "b97",
+      "author": "Imani",
+      "ts": "2026-10-28T07:49:00",
+      "text": "I'm out from Monday",
+      "source_message_ids": [
+        "m97"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b97.s2",
+      "burst_id": "b97",
+      "author": "Imani",
+      "ts": "2026-10-28T07:49:00",
+      "text": "BI sign-offs go to Wei",
+      "source_message_ids": [
+        "m97"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b98.s1",
+      "burst_id": "b98",
+      "author": "Dmitri",
+      "ts": "2026-10-28T07:52:00",
+      "text": "The extension request to Snowflake goes out by Nov 20",
+      "source_message_ids": [
+        "m98"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b98.s2",
+      "burst_id": "b98",
+      "author": "Dmitri",
+      "ts": "2026-10-28T07:52:00",
+      "text": "as I said",
+      "source_message_ids": [
+        "m98"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": true
+    },
+    {
+      "id": "b99.s1",
+      "burst_id": "b99",
+      "author": "Colleen",
+      "ts": "2026-10-28T07:54:00",
+      "text": "Two Halden engineers start Dec 1",
+      "source_message_ids": [
+        "m99"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b99.s2",
+      "burst_id": "b99",
+      "author": "Colleen",
+      "ts": "2026-10-28T07:54:00",
+      "text": "I'll confirm names by Nov 13",
+      "source_message_ids": [
+        "m99"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b100.s1",
+      "burst_id": "b100",
+      "author": "Gareth",
+      "ts": "2026-10-28T07:57:00",
+      "text": "Still no owner for on-call though",
+      "source_message_ids": [
+        "m100"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b100.s2",
+      "burst_id": "b100",
+      "author": "Gareth",
+      "ts": "2026-10-28T07:57:00",
+      "text": "Not letting that go",
+      "source_message_ids": [
+        "m100"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": "'that' = no owner for on-call",
+      "verified": true,
+      "recovered": false
+    },
+    {
+      "id": "b101.s1",
+      "burst_id": "b101",
+      "author": "Sofia",
+      "ts": "2026-10-28T07:59:00",
+      "text": "Understood.",
+      "source_message_ids": [
+        "m101"
+      ],
+      "status": "active",
+      "superseded_by": null,
+      "context_note": null,
+      "verified": true,
+      "recovered": false
+    }
+  ],
+  "classified": [
+    {
+      "span_id": "b1.s1",
+      "author": "Sofia",
+      "text": "Purpose of this thread: land the end-state data platform after the merger and a cutover window",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.8,
+          "gist": "Choosing the end-state data platform after the merger and a cutover window"
+        }
+      ],
+      "rationale": "The span states the thread's purpose, which frames the decision question (end-state data platform and cutover window) while also functioning as facilitation of the discussion."
+    },
+    {
+      "span_id": "b1.s2",
+      "author": "Sofia",
+      "text": "Today we run Halden's Databricks and our Snowflake",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Current state: Halden runs Databricks and the company runs Snowflake (two platforms in use today)"
+        }
+      ],
+      "rationale": "A factual statement about the current environment, not a decision, option, or request for input."
+    },
+    {
+      "span_id": "b1.s3",
+      "author": "Sofia",
+      "text": "I'd like a direction by Wednesday",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Group needs a direction on the end-state data platform by Wednesday"
+        }
+      ],
+      "rationale": "Sofia sets a deadline for the decision, which is a fixed time limit that filters the timing of the decision, not a question, option, or process step."
+    },
+    {
+      "span_id": "b1.s4",
+      "author": "Sofia",
+      "text": "The exec ask is unified reporting by end of March",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Exec requires unified reporting delivered by end of March"
+        }
+      ],
+      "rationale": "Sofia states a fixed exec deadline for unified reporting, which gates feasibility of options, so it is a constraint rather than a decision or option."
+    },
+    {
+      "span_id": "b2.s1",
+      "author": "Colleen",
+      "text": "Databricks, obviously",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.75,
+          "gist": "Colleen supports Databricks as the end-state platform"
+        },
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Databricks as the end-state data platform"
+        }
+      ],
+      "rationale": "Databricks is introduced as an option for the platform decision (Sofia only described current state, not as an option), and Colleen's \"obviously\" expresses her explicit support for it."
+    },
+    {
+      "span_id": "b2.s2",
+      "author": "Colleen",
+      "text": "We already run 300+ pipelines on it",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Databricks already runs 300+ pipelines (factual support for Databricks as the platform)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Colleen supports Databricks as the end-state platform"
+        }
+      ],
+      "rationale": "The span states a fact about existing pipelines, which is a claim, and it implicitly backs Databricks, which is an existing option so no new option label applies."
+    },
+    {
+      "span_id": "b2.s3",
+      "author": "Colleen",
+      "text": "the ML team lives there",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "ML team works on Databricks, supporting Databricks as the end-state platform"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Colleen supports Databricks as the end-state platform"
+        }
+      ],
+      "rationale": "Colleen's span gives a reason (ML team lives there) supporting Databricks, so it is a claim; the stance itself is a position on the Databricks option, which was already named earlier in the chat."
+    },
+    {
+      "span_id": "b3.s1",
+      "author": "Raj",
+      "text": "Snowflake",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Snowflake as the end-state platform (alternative to Databricks), introduced by Raj"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Raj supports Snowflake as the platform (stance on Snowflake option)"
+        }
+      ],
+      "rationale": "Snowflake was already mentioned as the current platform but not yet as an end-state option, so Raj introduces it as an alternative and his bare reply signals support for it."
+    },
+    {
+      "span_id": "b3.s2",
+      "author": "Raj",
+      "text": "Our whole claims mart is there",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Raj asserts the whole claims mart lives in Snowflake (factual reason supporting Snowflake)"
+        }
+      ],
+      "rationale": "The span states a factual reason for Raj's Snowflake stance, so it is a claim; the stance itself lives in the earlier \"Snowflake\" span."
+    },
+    {
+      "span_id": "b3.s3",
+      "author": "Raj",
+      "text": "about 40 stored procedures that don't port cleanly",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "About 40 stored procedures in Snowflake claims mart don't port cleanly to Databricks"
+        }
+      ],
+      "rationale": "Raj states a factual claim about migration difficulty that supports his Snowflake stance, which is a reason rather than a position, and it names a factor for judging options."
+    },
+    {
+      "span_id": "b4.s1",
+      "author": "Colleen",
+      "text": "Stored procedures port fine with the converter",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Stored procedures port fine with the converter (factual assertion disputing Raj's porting concern)"
+        }
+      ],
+      "rationale": "The span is a factual assertion about porting feasibility, which is a claim; it also implicitly pushes back on Raj's concern, but that is a weaker secondary label."
+    },
+    {
+      "span_id": "b4.s2",
+      "author": "Colleen",
+      "text": "Halden moved 300 pipelines in 8 weeks last year",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Halden previously migrated 300 pipelines in 8 weeks; past migration speed factual claim"
+        },
+        {
+          "type": "criterion",
+          "confidence": 0.5,
+          "gist": "migration speed/effort as a factor for judging platform options"
+        }
+      ],
+      "rationale": "A factual past-performance assertion offered as evidence for Databricks-side migration effort, so it is a claim, with migration speed as an implied evaluative criterion."
+    },
+    {
+      "span_id": "b5.s1",
+      "author": "Gareth",
+      "text": "I'm sure we'll do 400 in six weeks with the same team",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Gareth predicts the migration can move 400 pipelines in six weeks with the same team"
+        }
+      ],
+      "rationale": "Gareth's statement is a predictive assertion about migration capacity, a claim; it is a factor for judging options only weakly, so a low-confidence criterion is included."
+    },
+    {
+      "span_id": "b6.s1",
+      "author": "Imani",
+      "text": "As the BI person I don't care which one, as long as my dashboards don't break twice",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.55,
+          "gist": "Dashboards should not break twice during migration (minimize BI disruption)"
+        }
+      ],
+      "rationale": "Imani expresses no preference between the platforms but names a factor (BI dashboard disruption) for judging options, which is a criterion rather than a stance."
+    },
+    {
+      "span_id": "b6.s2",
+      "author": "Imani",
+      "text": "Or we just keep querying both forever",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Keep querying both Databricks and Snowflake indefinitely (no consolidation)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Imani floats keeping both platforms as the way forward (tentative, sarcastic)"
+        }
+      ],
+      "rationale": "Imani floats a new alternative (run both platforms indefinitely), which is an option; the tone suggests a tentative/sarcastic stance on it, so position is a lower-confidence secondary label."
+    },
+    {
+      "span_id": "b7.s1",
+      "author": "Colleen",
+      "text": "Querying both doubles the cost",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Querying both Snowflake and Databricks doubles the cost"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Against keeping both platforms queried in parallel (dual-running)"
+        }
+      ],
+      "rationale": "The span is a causal/factual assertion about cost of dual-querying, and it functions as an objection to the dual-run option raised by Imani, though it does not name an option directly."
+    },
+    {
+      "span_id": "b7.s2",
+      "author": "Colleen",
+      "text": "nobody can reconcile the numbers",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "querying both platforms forever means nobody can reconcile the numbers"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.5,
+          "gist": "against running both platforms in parallel because numbers won't reconcile"
+        }
+      ],
+      "rationale": "Colleen's statement is a causal assertion explaining why running both is bad, which is a claim, and it also functions as an objection against the dual-query option that is being rejected in the next lines."
+    },
+    {
+      "span_id": "b7.s3",
+      "author": "Colleen",
+      "text": "Hard no on that",
+      "status": "active",
+      "context_note": "'that' = querying both Snowflake and the other platform",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Colleen opposes the option of querying both platforms indefinitely"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.5,
+          "gist": "Querying both platforms forever is unacceptable (doubles cost, numbers can't be reconciled)"
+        }
+      ],
+      "rationale": "\"Hard no on that\" is an explicit stance rejecting the existing 'query both' option, which was already named earlier, so it is a position; the rejection also works as an objection to that direction."
+    },
+    {
+      "span_id": "b8.s1",
+      "author": "Imani",
+      "text": "Dropping that one",
+      "status": "active",
+      "context_note": "'that one' = querying both forever",
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Querying both Snowflake and Databricks indefinitely is dropped as an option"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Imani withdraws support for keeping both platforms queried in parallel"
+        }
+      ],
+      "rationale": "Imani explicitly withdraws the 'query both forever' alternative, which is an existing option whose status changes to dropped, and that withdrawal is her stance."
+    },
+    {
+      "span_id": "b9.s1",
+      "author": "Sofia",
+      "text": "Let me capture criteria",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Sofia moves the discussion to capturing evaluation criteria (agenda step)"
+        }
+      ],
+      "rationale": "\"Let me capture criteria\" is a facilitation step of the discussion itself, not evaluative content."
+    },
+    {
+      "span_id": "b9.s2",
+      "author": "Sofia",
+      "text": "I'd rank speed to unified reporting first",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.85,
+          "gist": "speed to unified reporting, ranked first among criteria"
+        }
+      ],
+      "rationale": "Sofia names speed to unified reporting as a ranked evaluative factor for judging platform options, which is a criterion; the ranking itself is a light facilitation step but mainly content."
+    },
+    {
+      "span_id": "b9.s3",
+      "author": "Sofia",
+      "text": "then cost",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.8,
+          "gist": "cost as the second-ranked evaluative factor for judging platform options"
+        }
+      ],
+      "rationale": "\"then cost\" continues Sofia's criteria ranking, naming cost as the next evaluative factor, which is a criterion rather than a decision or position."
+    },
+    {
+      "span_id": "b9.s4",
+      "author": "Sofia",
+      "text": "then risk",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.8,
+          "gist": "risk as an evaluative factor for ranking the platform options"
+        }
+      ],
+      "rationale": "Sofia is adding a third ranked evaluative factor (risk) to the criteria list, which is a criterion rather than a process step or decision."
+    },
+    {
+      "span_id": "b9.s5",
+      "author": "Sofia",
+      "text": "Agree?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Sofia asks the group to agree to the proposed ranking of criteria (speed, cost, risk)"
+        }
+      ],
+      "rationale": "\"Agree?\" is a call for input on the criteria ranking, which is facilitation of the discussion rather than content."
+    },
+    {
+      "span_id": "b10.s1",
+      "author": "Dmitri",
+      "text": "Cost has to be in there",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.7,
+          "gist": "cost should be an evaluative criterion for judging platform options"
+        }
+      ],
+      "rationale": "Dmitri names cost as a factor to be included in the criteria, which is a criterion; the insistence on including it is a light stance on the criteria list, not on a specific option."
+    },
+    {
+      "span_id": "b10.s2",
+      "author": "Dmitri",
+      "text": "I heard from Anita that the CFO wants a 15% run-cost reduction on data platforms this year",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Second-hand report that the CFO wants a 15% run-cost reduction on data platforms this year"
+        }
+      ],
+      "rationale": "The span reports a second-hand fact about a cost target, which is a claim, and the target itself works as a soft cost limit on the platform choice."
+    },
+    {
+      "span_id": "b11.s1",
+      "author": "Wei",
+      "text": "Compliance needs to be its own item",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.6,
+          "gist": "Compliance should be a separate evaluation item/factor for judging platform options"
+        }
+      ],
+      "rationale": "Wei asks for compliance to be added as its own evaluative factor for judging the platform options, which is a criterion; it also shapes the criteria list, but the content is the criterion itself."
+    },
+    {
+      "span_id": "b11.s2",
+      "author": "Wei",
+      "text": "Anything with PHI needs BAA coverage and the same access controls",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Any platform handling PHI must have BAA coverage and the same access controls"
+        }
+      ],
+      "rationale": "Wei states a hard requirement that PHI workloads need BAA coverage and matching access controls, which filters options regardless of the decision; the compliance criterion is secondary since Sofia ranks it separately."
+    },
+    {
+      "span_id": "b11.s3",
+      "author": "Wei",
+      "text": "we have a regulatory audit in May",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "A regulatory audit is scheduled for May, which makes compliance a pressing factor for the platform choice"
+        }
+      ],
+      "rationale": "Wei states a fact about a May audit that justifies the compliance criterion, so it is a claim, with a weaker criterion reading since compliance was already raised as an item."
+    },
+    {
+      "span_id": "b12.s1",
+      "author": "Sofia",
+      "text": "Ranking for now: speed, cost, compliance",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.8,
+          "gist": "Ranking of evaluative criteria: speed to unified reporting, cost, compliance"
+        }
+      ],
+      "rationale": "The span lists the evaluative criteria (speed, cost, compliance) in ranked order, which are factors for judging options, and the ranking itself is a facilitation step on criteria rather than a decision."
+    },
+    {
+      "span_id": "b13.s1",
+      "author": "Gareth",
+      "text": "Is the 3pm still on?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.7,
+          "gist": "scheduling side question about whether the 3pm meeting is still on; not about the platform decision"
+        }
+      ],
+      "rationale": "Gareth's question checks meeting logistics, not the platform choice, so it is non-content chit-chat rather than a decision element."
+    },
+    {
+      "span_id": "b14.s1",
+      "author": "Sofia",
+      "text": "Yes, 3pm",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.85,
+          "gist": "confirms the 3pm meeting time; scheduling chatter, not platform content"
+        }
+      ],
+      "rationale": "\"Yes, 3pm\" answers a scheduling question from Gareth and carries no decision content about the platform."
+    },
+    {
+      "span_id": "b14.s2",
+      "author": "Sofia",
+      "text": "Raj is walking through the claims mart inventory",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.8,
+          "gist": "Sofia sets up an agenda step: Raj walks through the claims mart inventory before deciding"
+        }
+      ],
+      "rationale": "Sofia is facilitating the discussion by announcing an agenda step (Raj presenting the claims mart inventory), which is non-content process."
+    },
+    {
+      "span_id": "b15.s1",
+      "author": "Imani",
+      "text": "where do visitors park at the Halden office on Thursday?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.85,
+          "gist": "Visitor parking at the Halden office on Thursday is a side topic unrelated to the platform decision"
+        }
+      ],
+      "rationale": "The span asks about visitor parking, which is unrelated to the data platform decision and is a side thread."
+    },
+    {
+      "span_id": "b15.s2",
+      "author": "Imani",
+      "text": "Lot looks full.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.85,
+          "gist": "side chat about parking lot being full; not about the platform decision"
+        }
+      ],
+      "rationale": "\"Lot looks full\" is chit-chat about parking, unrelated to the data platform decision."
+    },
+    {
+      "span_id": "b16.s1",
+      "author": "Gareth",
+      "text": "Level 3 of the garage",
+      "status": "active",
+      "context_note": "'Level 3 of the garage' answers Imani's question about where visitors park at the Halden office on Thursday",
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.9,
+          "gist": "parking logistics answer about Halden office visitor parking, unrelated to platform decision"
+        }
+      ],
+      "rationale": "The span answers a parking question about the Halden office, which is chit-chat unrelated to the data platform decision."
+    },
+    {
+      "span_id": "b16.s2",
+      "author": "Gareth",
+      "text": "security badges them in at the gate",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "parking logistics side remark about visitor badging at the gate"
+        }
+      ],
+      "rationale": "Gareth's span is a logistics aside about visitor badging, unrelated to the platform decision and not a content label."
+    },
+    {
+      "span_id": "b17.s1",
+      "author": "Colleen",
+      "text": "My view stands, Databricks as the end state",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Colleen supports Databricks as the end-state platform"
+        }
+      ],
+      "rationale": "Colleen restates her explicit stance favoring Databricks, an option already named earlier, so it is a position rather than a new option or decision."
+    },
+    {
+      "span_id": "b17.s2",
+      "author": "Colleen",
+      "text": "Raj, what would it take for you?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.8,
+          "gist": "Colleen asks Raj to state his conditions for the platform decision (asking a specific person to weigh in)"
+        }
+      ],
+      "rationale": "The span asks a specific participant to weigh in on the discussion, which is facilitation rather than content."
+    },
+    {
+      "span_id": "b18.s1",
+      "author": "Raj",
+      "text": "I could live with Databricks IF the migration tooling covers our 40 stored procedures. I haven't verified that yet.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.7,
+          "gist": "Whether migration tooling covers the 40 stored procedures is unverified"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Raj conditionally supports Databricks as end state if migration tooling covers the 40 stored procedures"
+        }
+      ],
+      "rationale": "Conditional support for an existing option is a position, and the explicit \"I haven't verified that yet\" makes the stored-procedure tooling coverage an unresolved blocker."
+    },
+    {
+      "span_id": "b19.s1",
+      "author": "Colleen",
+      "text": "Raj is fine with Databricks",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Colleen asserts Raj accepts Databricks as end state; Raj disputes this (his stance was conditional on procedure tooling)"
+        }
+      ],
+      "rationale": "Colleen's report of Raj's stance is a claim about what others think, not Colleen's own position, and Raj's later correction shows it misrepresents his conditional support."
+    },
+    {
+      "span_id": "b20.s1",
+      "author": "Raj",
+      "text": "That's not what I said",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.7,
+          "gist": "Raj rejects Colleen's characterization that he is fine with Databricks; his support is conditional on migration tooling covering the 40 stored procedures"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Raj is conditionally open to Databricks only if tooling covers the 40 stored procedures, not unconditionally supportive"
+        }
+      ],
+      "rationale": "Raj explicitly disputes being recorded as fine with Databricks, which is an objection to the characterization, and restates his conditional stance on Databricks."
+    },
+    {
+      "span_id": "b20.s2",
+      "author": "Raj",
+      "text": "I said I could live with it IF the tooling covers the 40 procs",
+      "status": "active",
+      "context_note": "'it' = Databricks",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Raj conditionally accepts Databricks as end state, if migration tooling covers the ~40 stored procedures"
+        },
+        {
+          "type": "blocker",
+          "confidence": 0.5,
+          "gist": "Whether migration tooling covers the 40 stored procedures is unverified"
+        }
+      ],
+      "rationale": "The span states Raj's conditional stance on Databricks, and the unverified tooling coverage is an open dependency that stops the group deciding now."
+    },
+    {
+      "span_id": "b20.s3",
+      "author": "Raj",
+      "text": "That's not \"fine\"",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Raj does not accept that he is fine with Databricks; his stance is conditional on migration tooling covering the 40 procedures"
+        }
+      ],
+      "rationale": "Raj corrects Colleen's characterization, restating his conditional stance on Databricks, which is a position rather than agreement or a claim."
+    },
+    {
+      "span_id": "b21.s1",
+      "author": "Colleen",
+      "text": "OK, conditional",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.5,
+          "gist": "acknowledgement of Raj's conditional stance, no new content"
+        }
+      ],
+      "rationale": "\"OK, conditional\" is a short acknowledgement that restates Raj's conditional stance without adding a new position, so it is non-content or at most a weak restatement claim."
+    },
+    {
+      "span_id": "b21.s2",
+      "author": "Colleen",
+      "text": "Fair",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "acknowledgement 'Fair' with no content; not agreement since it's not a stated requirement"
+        }
+      ],
+      "rationale": "\"Fair\" is a bare acknowledgement of Raj's conditional, which carries no requirement or stance of its own, so it is non-content."
+    },
+    {
+      "span_id": "b22.s1",
+      "author": "Sofia",
+      "text": "Quick poll for the end state",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.9,
+          "gist": "Sofia calls a poll on the end-state platform choice (Databricks vs Snowflake)"
+        }
+      ],
+      "rationale": "The span is a facilitation step asking the group to weigh in, with no content of its own, so it is process."
+    },
+    {
+      "span_id": "b22.s2",
+      "author": "Sofia",
+      "text": "A is Databricks, B is Snowflake",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Snowflake introduced as option B for end-state (Databricks already named earlier, so only Snowflake is new\u2014but Snowflake was already named earlier too)"
+        }
+      ],
+      "rationale": "Sofia is labeling the two already-named options for a poll, which is facilitation of the discussion (process), not new option content."
+    },
+    {
+      "span_id": "b22.s3",
+      "author": "Sofia",
+      "text": "Reply with your pick",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Sofia asks participants to reply with their pick in the end-state poll (A=Databricks, B=Snowflake)"
+        }
+      ],
+      "rationale": "Sofia's span is a call for input to run the poll, which is facilitation of the discussion and non-content."
+    },
+    {
+      "span_id": "b23.s1",
+      "author": "Colleen",
+      "text": "A",
+      "status": "active",
+      "context_note": "'A' = Databricks (Sofia's poll option A)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Colleen supports Databricks as the end-state platform (poll reply A)"
+        }
+      ],
+      "rationale": "Reply to a poll asking for a pick is the speaker's explicit stance on an existing option, Databricks, which was already named earlier."
+    },
+    {
+      "span_id": "b24.s1",
+      "author": "Imani",
+      "text": "A",
+      "status": "active",
+      "context_note": "'A' = Databricks (option A in Sofia's poll)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.9,
+          "gist": "Imani picks option A (Databricks) as the end state in the poll"
+        }
+      ],
+      "rationale": "A poll reply choosing an existing option is a position on that option, not a decision by the organiser."
+    },
+    {
+      "span_id": "b25.s1",
+      "author": "Wei",
+      "text": "A, provided the PHI controls and the BAA are in place before any claims data moves",
+      "status": "active",
+      "context_note": "'A' = Databricks",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Wei supports Databricks (option A) conditionally, provided PHI controls and BAA are in place before claims data moves"
+        },
+        {
+          "type": "constraint",
+          "confidence": 0.5,
+          "gist": "PHI controls and BAA must be in place before any claims data moves"
+        }
+      ],
+      "rationale": "Reply to the poll is a conditional position on Databricks; the condition restates a compliance requirement (BAA and PHI controls before data moves), which functions as a constraint on the decision."
+    },
+    {
+      "span_id": "b25.s2",
+      "author": "Wei",
+      "text": "the PHI controls and the BAA are in place before any claims data moves",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "PHI controls and BAA must be in place before any claims data moves to the platform"
+        }
+      ],
+      "rationale": "Wei states a hard requirement (PHI controls and BAA before claims data moves), which filters options regardless of the decision, so it is a constraint rather than a position or blocker."
+    },
+    {
+      "span_id": "b26.s1",
+      "author": "Raj",
+      "text": "B for now",
+      "status": "active",
+      "context_note": "'B' = Snowflake",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Raj picks Snowflake (B) for now in the end-state poll, a stance against Databricks"
+        }
+      ],
+      "rationale": "Raj replies to the poll with a stance on Snowflake (an existing option), which is a position; the tentative \"for now\" keeps it from being a decision, and the follow-up makes clear the stance is conditional on the procs working."
+    },
+    {
+      "span_id": "b26.s2",
+      "author": "Raj",
+      "text": "Show me the stored procs working and I'll change",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "Raj needs proof that the migration tooling runs the ~40 stored procedures before switching to Databricks; open dependency"
+        }
+      ],
+      "rationale": "Raj's demand for a demonstration is an unresolved dependency blocking his switch, and it implies a conditional stance toward Databricks rather than a firm position."
+    },
+    {
+      "span_id": "b27.s1",
+      "author": "Dmitri",
+      "text": "No view",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Dmitri has no view on the end-state platform choice (Databricks vs Snowflake); no stance taken"
+        }
+      ],
+      "rationale": "\"No view\" is a reply to the poll saying no stance on either option, which is a non-committal position rather than a process or agreement."
+    },
+    {
+      "span_id": "b27.s2",
+      "author": "Dmitri",
+      "text": "I just need the cost number either way",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.55,
+          "gist": "Run-cost number for the platforms is missing and needed before choosing the end state"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Dmitri has no stated preference between Databricks and Snowflake; only wants the cost figure before deciding"
+        }
+      ],
+      "rationale": "Dmitri's span is a non-stance that asks for a missing cost figure, which is an unresolved dependency blocking the decision, not a process or irrelevant remark."
+    },
+    {
+      "span_id": "b28.s1",
+      "author": "Gareth",
+      "text": "A, but not by March",
+      "status": "active",
+      "context_note": "'A' = option A from the preceding options discussion",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Gareth supports option A (Databricks) as end state, but not with the March deadline"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Databricks cannot deliver unified reporting by end of March"
+        }
+      ],
+      "rationale": "Gareth explicitly picks option A (Databricks, already named earlier) as a position, with a timing objection that is a claim about feasibility rather than a new option or decision."
+    },
+    {
+      "span_id": "b29.s1",
+      "author": "Sofia",
+      "text": "ok",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "Sofia's 'ok' acknowledgement of replies with no content"
+        }
+      ],
+      "rationale": "A bare acknowledgement with no decision, stance, or content, so it is non-content."
+    },
+    {
+      "span_id": "b30.s1",
+      "author": "Dmitri",
+      "text": "Numbers as I have them",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.7,
+          "gist": "Dmitri introduces the cost figures being shared, a lead-in to the numbers (non-content framing)"
+        }
+      ],
+      "rationale": "The span is a lead-in announcing cost data that follows, which only frames the discussion and carries no substantive claim by itself."
+    },
+    {
+      "span_id": "b30.s2",
+      "author": "Dmitri",
+      "text": "Snowflake costs about $2.4M a year",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.9,
+          "gist": "Snowflake costs about $2.4M per year (cost figure, factual estimate)"
+        }
+      ],
+      "rationale": "A factual cost estimate about an already-named platform is a claim, not a position, option, or decision."
+    },
+    {
+      "span_id": "b30.s3",
+      "author": "Dmitri",
+      "text": "Halden's Databricks about $1.9M",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Halden's Databricks run cost is about $1.9M a year (cost figure, factual estimate)"
+        }
+      ],
+      "rationale": "Dmitri is stating a cost estimate for an existing platform, which is a factual claim rather than an option, position, or decision."
+    },
+    {
+      "span_id": "b30.s4",
+      "author": "Dmitri",
+      "text": "Keeping both is about $4.3M",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Keeping both platforms (Snowflake ~$2.4M + Databricks ~$1.9M) totals about $4.3M a year"
+        }
+      ],
+      "rationale": "Dmitri states a factual cost sum derived from the figures he just gave, which is a claim rather than a new option, position, or decision."
+    },
+    {
+      "span_id": "b30.s5",
+      "author": "Dmitri",
+      "text": "A merged workload on Databricks should land near $3M",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dmitri estimates a merged workload on Databricks would cost about $3M (predictive cost estimate)"
+        }
+      ],
+      "rationale": "A cost estimate/prediction about a merged Databricks workload is a factual/predictive claim, not a position, option, or decision, since Databricks was already named earlier."
+    },
+    {
+      "span_id": "b31.s1",
+      "author": "Dmitri",
+      "text": "Correction on what I said earlier",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.5,
+          "gist": "Meta-comment introducing a correction; no content on the decision itself"
+        }
+      ],
+      "rationale": "The span is only a preamble announcing a correction, with no substantive content about options, criteria, or decisions, so it is non-content chit-chat-style framing."
+    },
+    {
+      "span_id": "b31.s2",
+      "author": "Dmitri",
+      "text": "The CFO target is 10%, not 15%",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Correction: CFO run-cost reduction target on data platforms is 10%, not 15% (relayed from Anita)"
+        }
+      ],
+      "rationale": "Dmitri is correcting a previously stated factual figure about the CFO target, which is an unverified factual assertion rather than a requirement, decision, or option."
+    },
+    {
+      "span_id": "b31.s3",
+      "author": "Dmitri",
+      "text": "Anita just corrected me",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.45,
+          "gist": "Anita corrected the CFO run-cost target from 15% to 10%"
+        }
+      ],
+      "rationale": "The span is a short relay of a correction; it reports what Anita said (a claim about the CFO target), and as a bare attribution it is closest to a non-content acknowledgement, with the corrected target substance being a claim."
+    },
+    {
+      "span_id": "b32.s1",
+      "author": "Imani",
+      "text": "\ud83d\udc4d",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "emoji thumbs-up reaction with no content"
+        }
+      ],
+      "rationale": "A bare thumbs-up emoji is an acknowledgement with no decision content, so it is non-content."
+    },
+    {
+      "span_id": "b33.s1",
+      "author": "Gareth",
+      "text": "doesn't the Snowflake contract renew soon?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "Open question on Snowflake contract renewal timing, which may gate the end-state decision"
+        }
+      ],
+      "rationale": "Gareth asks a factual question about the Snowflake renewal that the group needs answered before deciding, so it is a blocker rather than a candidate question or claim."
+    },
+    {
+      "span_id": "b34.s1",
+      "author": "Raj",
+      "text": "Yes. It renews Feb 28",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Snowflake contract renews Feb 28 (factual answer to Gareth's question)"
+        }
+      ],
+      "rationale": "Raj confirms a factual date about the Snowflake contract, which is an unverified factual assertion rather than a position, constraint, or decision."
+    },
+    {
+      "span_id": "b34.s2",
+      "author": "Raj",
+      "text": "and auto-renews for 3 years unless we give notice 90 days before, so by Nov 30",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Snowflake contract auto-renews for 3 years unless notice is given 90 days before (by Nov 30)"
+        }
+      ],
+      "rationale": "A fixed contractual deadline that gates the feasibility of options is a constraint (rule 5), not an option or position."
+    },
+    {
+      "span_id": "b34.s3",
+      "author": "Raj",
+      "text": "it auto-renews for 3 years unless we give notice 90 days before, so by Nov 30",
+      "status": "active",
+      "context_note": "'it' = Snowflake contract",
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Snowflake contract auto-renews for 3 years on Feb 28 unless notice is given 90 days before (by Nov 30)"
+        }
+      ],
+      "rationale": "A fixed contractual date and notice deadline gates feasibility of the platform decision, so it is a constraint stated as fact rather than a claim or blocker."
+    },
+    {
+      "span_id": "b35.s1",
+      "author": "Dmitri",
+      "text": "I'll pull the contract and confirm by Wednesday",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.85,
+          "gist": "Dmitri will pull the Snowflake contract and confirm the renewal/notice terms by Wednesday"
+        }
+      ],
+      "rationale": "Dmitri commits to a concrete task outside the chat with a deadline, which is an action."
+    },
+    {
+      "span_id": "b36.s1",
+      "author": "Colleen",
+      "text": "Then we serve non-renewal notice by Nov 30",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Serve non-renewal notice on Snowflake contract by Nov 30 (Snowflake exit path)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Colleen proposes serving Snowflake non-renewal notice by Nov 30"
+        }
+      ],
+      "rationale": "Colleen's \"Then we serve...\" proposes a course of action that is a new option (serving notice to exit Snowflake) and expresses her stance in favor, per the proposal rule (option + position), not a group-closing decision."
+    },
+    {
+      "span_id": "b36.s2",
+      "author": "Colleen",
+      "text": "we're done",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.45,
+          "gist": "Colleen declares the end-state/notice question settled for the group"
+        }
+      ],
+      "rationale": "\"we're done\" is a closure declaration by the speaker on behalf of the group, but it is ambiguous as to which question it settles, so confidence is moderate."
+    },
+    {
+      "span_id": "b37.s1",
+      "author": "Raj",
+      "text": "If we serve notice we lose Snowflake on Feb 28",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Serving non-renewal notice would mean losing Snowflake on Feb 28, before Databricks is live"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.5,
+          "gist": "Against serving non-renewal notice (Snowflake exit) as the path, due to coverage gap"
+        }
+      ],
+      "rationale": "Raj states a causal consequence of serving notice (claim), which functions as an implicit concern against the notice-based exit path, so objection is a secondary label."
+    },
+    {
+      "span_id": "b37.s2",
+      "author": "Raj",
+      "text": "We won't be on Databricks by then",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Databricks won't be live by the Feb 28 Snowflake renewal/notice point, so serving notice leaves a coverage gap"
+        }
+      ],
+      "rationale": "The span is a factual/predictive assertion explaining why notice creates a gap, and it implicitly pushes back on Colleen's serve-notice proposal, which is best read as a claim with a light objection."
+    },
+    {
+      "span_id": "b37.s3",
+      "author": "Raj",
+      "text": "That's a gap",
+      "status": "active",
+      "context_note": "'That' = serving notice leaves no Snowflake coverage before Databricks is live",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Serving non-renewal notice would leave no Snowflake coverage before Databricks is live on Feb 28"
+        },
+        {
+          "type": "blocker",
+          "confidence": 0.5,
+          "gist": "Gap: no migration path ready before Snowflake contract lapses, unresolved dependency on timing"
+        }
+      ],
+      "rationale": "Raj is stating a factual consequence of serving notice (a claim), which exposes an unresolved coverage gap the group must address before deciding on notice."
+    },
+    {
+      "span_id": "b38.s1",
+      "author": "Gareth",
+      "text": "Exactly",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "agreement",
+          "confidence": 0.5,
+          "gist": "Gareth affirms Raj's point that serving notice leaves a coverage gap before Databricks is live"
+        }
+      ],
+      "rationale": "\"Exactly\" affirms Raj's stated gap concern; it is an acknowledgement of a claim rather than a stance on an option or a requirement, so the closest fit is a low-confidence agreement-style reply, but it is weak."
+    },
+    {
+      "span_id": "b38.s2",
+      "author": "Gareth",
+      "text": "March for 400 pipelines was never going to happen",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "400 pipelines migrating by March was never realistic (feasibility claim about March timeline)"
+        }
+      ],
+      "rationale": "Gareth asserts a feasibility judgment about the March timeline for migrating 400 pipelines, which is a claim; it also implicitly rejects the March date, a weaker position label."
+    },
+    {
+      "span_id": "b39.s1",
+      "author": "Wei",
+      "text": "I also can't see claims data moving by March with the BAA and tokenization review not even started",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Claims data cannot move by March because BAA and tokenization review has not started"
+        },
+        {
+          "type": "blocker",
+          "confidence": 0.5,
+          "gist": "BAA and tokenization review not started, pending before claims data can move"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Wei opposes a March date for the cutover"
+        }
+      ],
+      "rationale": "Wei's statement is a factual/causal claim that March is unrealistic because the BAA and tokenization review is unstarted, which also signals opposition to the March option; the stance is only implied, so position is moderate."
+    },
+    {
+      "span_id": "b39.s2",
+      "author": "Wei",
+      "text": "I'm against a March date",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Wei opposes a March unified-reporting/cutover date due to unfinished BAA and tokenization review"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Wei opposes March as the cutover date"
+        }
+      ],
+      "rationale": "Wei explicitly objects to the March date, which is a timeline option being weighed, so it is an objection; the stance against March is also a position on that date, though March was never formally introduced as an option."
+    },
+    {
+      "span_id": "b40.s1",
+      "author": "Colleen",
+      "text": "what's realistic? Q2?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "candidate_question",
+          "confidence": 0.6,
+          "gist": "What is a realistic cutover timeline for unified reporting (March vs Q2)"
+        },
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Q2 as the cutover target (floated as alternative to March)"
+        }
+      ],
+      "rationale": "The question floats a new alternative timeline, Q2, which was not previously named, so it is an option per rule 13, and the broader realistic-timing question is a candidate question."
+    },
+    {
+      "span_id": "b41.s1",
+      "author": "Raj",
+      "text": "Q2 is workable for me.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Raj supports a Q2 cutover timeline (workable for him)"
+        }
+      ],
+      "rationale": "Raj states his own stance on the Q2 timing option, which was floated by Colleen earlier, so it is a position rather than a new option or decision."
+    },
+    {
+      "span_id": "b42.s1",
+      "author": "Gareth",
+      "text": "Q2 I could do",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Gareth supports a Q2 timeline for the migration"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Q2 as the cutover timeline (already floated by Colleen as 'Q2?')"
+        }
+      ],
+      "rationale": "Gareth states personal support for the already-floated Q2 timeline, which is a position on an existing option, not a new option or decision."
+    },
+    {
+      "span_id": "b42.s2",
+      "author": "Gareth",
+      "text": "Needs the stored proc answer first",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Stored-procedure migration answer is still needed before the end-state/notice decision can be made"
+        }
+      ],
+      "rationale": "Gareth names an unresolved dependency (whether tooling covers the 40 stored procedures, which Raj said is unverified) that must be answered before the group can decide, so it is a blocker."
+    },
+    {
+      "span_id": "b43.s1",
+      "author": "Imani",
+      "text": "+1",
+      "status": "active",
+      "context_note": "'+1' = agreement with Wei's objection to a March date",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Imani supports Wei's objection to a March date (opposes March option)"
+        }
+      ],
+      "rationale": "\"+1\" is an explicit stance backing Wei's objection to the March target, which is an option/date already named in the thread, so it is a position rather than agreement on a requirement."
+    },
+    {
+      "span_id": "b44.s1",
+      "author": "Sofia",
+      "text": "Dropping the March target then",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.8,
+          "gist": "March unified-reporting target dropped; group moves to Q2"
+        }
+      ],
+      "rationale": "Sofia, as organiser, declares the March target off on the group's behalf, which settles the timing question; March was previously proposed as an option, so its status changes to dropped."
+    },
+    {
+      "span_id": "b44.s2",
+      "author": "Sofia",
+      "text": "I'll plan on Q2 and confirm the date once Raj's assessment is back",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Plan on Q2 as the migration target, date pending Raj's stored-proc assessment"
+        },
+        {
+          "type": "action",
+          "confidence": 0.5,
+          "gist": "Sofia to confirm the Q2 cutover date once Raj's stored-procedure assessment is back"
+        }
+      ],
+      "rationale": "Sofia plans on Q2 with the exact date contingent on Raj's pending assessment, so it reads as a tentative lean plus a conditional follow-up task rather than a settled group decision."
+    },
+    {
+      "span_id": "b45.s1",
+      "author": "Dmitri",
+      "text": "Q2 works for me",
+      "status": "active",
+      "context_note": "'Q2' = Q2 target discussed in the preceding context",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Dmitri supports Q2 as the migration target date"
+        }
+      ],
+      "rationale": "Dmitri explicitly states support for the Q2 timing option, which was already introduced earlier, so it is a position rather than a new option or agreement."
+    },
+    {
+      "span_id": "b45.s2",
+      "author": "Dmitri",
+      "text": "It moves most of the spend into next FY anyway",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Q2 target moves most of the spend into next fiscal year"
+        }
+      ],
+      "rationale": "Dmitri's remark is a causal/factual claim justifying his Q2 support, not a position itself; it implies a fiscal-timing factor, which is a weaker secondary criterion."
+    },
+    {
+      "span_id": "b46.s1",
+      "author": "Imani",
+      "text": "I'm out all next week, surgery",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.7,
+          "gist": "Imani is out next week for a personal medical matter; affects BI sign-off coverage, not the platform decision"
+        }
+      ],
+      "rationale": "Imani's absence next week only affects her BI sign-offs (covered by Wei), not the platform choice being made, so it is a side issue rather than a constraint."
+    },
+    {
+      "span_id": "b46.s2",
+      "author": "Imani",
+      "text": "Wei is covering my BI sign-offs",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.8,
+          "gist": "Imani's absence next week is covered by Wei for BI sign-offs (side arrangement, does not affect platform choice)"
+        }
+      ],
+      "rationale": "Imani's absence only affects her BI sign-off duties rather than the platform decision itself, so it is a separate issue per the absence rule."
+    },
+    {
+      "span_id": "b47.s1",
+      "author": "Wei",
+      "text": "Yes, I'll cover BI sign-offs next week.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.8,
+          "gist": "Wei covering Imani's BI sign-offs during her absence next week; side issue not about the platform decision"
+        },
+        {
+          "type": "action",
+          "confidence": 0.5,
+          "gist": "Wei commits to cover BI sign-offs next week for Imani"
+        }
+      ],
+      "rationale": "Imani's absence only affects BI sign-offs, not the platform decision, so it is a side issue; Wei's commitment to cover is a task outside the main decision."
+    },
+    {
+      "span_id": "b48.s1",
+      "author": "Dmitri",
+      "text": "there's a hiring freeze, so no backfill for Raj's team",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Hiring freeze: no backfill for Raj's team, limits staffing for the migration"
+        }
+      ],
+      "rationale": "A company-wide hiring freeze stated as a fixed limit on staffing is a constraint that persists regardless of which option is chosen."
+    },
+    {
+      "span_id": "b48.s2",
+      "author": "Dmitri",
+      "text": "Please keep that inside this thread",
+      "status": "active",
+      "context_note": "'that' = the hiring freeze and no backfill for Raj's team",
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.35,
+          "gist": "hiring freeze and no backfill for Raj's team side topic"
+        }
+      ],
+      "rationale": "The span is a request about how the discussion should be handled, which is non-content process, with a weak secondary read as a side topic about staffing."
+    },
+    {
+      "span_id": "b49.s1",
+      "author": "Raj",
+      "text": "So it's the people we have",
+      "status": "active",
+      "context_note": "'it' = no backfill for Raj's team under the hiring freeze",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Raj states the team stays at current staffing because of the hiring freeze and no backfill for his team"
+        }
+      ],
+      "rationale": "Raj restates the staffing reality (no backfill under the hiring freeze), which is a limitation on the plan, best read as a claim with a possible constraint reading."
+    },
+    {
+      "span_id": "b50.s1",
+      "author": "Gareth",
+      "text": "Which makes interim on-call matter",
+      "status": "active",
+      "context_note": "'Which' = no backfill for Raj's team (hiring freeze)",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Because of the hiring freeze with no backfill for Raj's team, interim on-call coverage for legacy Snowflake pipelines matters"
+        }
+      ],
+      "rationale": "The span is a causal reason linking the hiring freeze to the importance of on-call coverage, which is a claim; the unresolved on-call ownership is only implied, so blocker is a lower-confidence secondary label."
+    },
+    {
+      "span_id": "b50.s2",
+      "author": "Gareth",
+      "text": "Who owns on-call for the legacy Snowflake pipelines during the migration?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Unresolved question: who owns on-call for legacy Snowflake pipelines during migration; no owner yet, needed before deciding"
+        }
+      ],
+      "rationale": "The span is an open question about an unowned dependency that the group needs answered before it can settle the migration plan, so it is a blocker rather than a process or action."
+    },
+    {
+      "span_id": "b51.s1",
+      "author": "Colleen",
+      "text": "Anyone know where the expense tool moved?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.85,
+          "gist": "side question about where the expense tool moved; unrelated to the platform decision"
+        }
+      ],
+      "rationale": "The span is an off-topic chit-chat question about an expense tool link, unrelated to the data platform decision."
+    },
+    {
+      "span_id": "b51.s2",
+      "author": "Colleen",
+      "text": "The old link is dead",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "side remark about a dead expense tool link; not part of the platform decision"
+        }
+      ],
+      "rationale": "The span is a side comment about an expense tool link, unrelated to the data platform decision, so it is non-content chit-chat."
+    },
+    {
+      "span_id": "b52.s1",
+      "author": "Imani",
+      "text": "Under Finance Apps now",
+      "status": "active",
+      "context_note": "'Under Finance Apps now' answers where the expense tool moved",
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.9,
+          "gist": "side chat answering where the expense tool moved; unrelated to the platform decision"
+        }
+      ],
+      "rationale": "The span answers an unrelated question about the expense tool's location, which is chit-chat outside the platform decision."
+    },
+    {
+      "span_id": "b53.s1",
+      "author": "Gareth",
+      "text": "Back to on-call please",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.6,
+          "gist": "Gareth redirects the discussion back to the on-call ownership topic"
+        }
+      ],
+      "rationale": "The span is a facilitation move returning the group to the on-call topic, which is a side issue to the main platform decision, so it is mainly process."
+    },
+    {
+      "span_id": "b53.s2",
+      "author": "Gareth",
+      "text": "Who owns it?",
+      "status": "active",
+      "context_note": "'it' = on-call for the legacy Snowflake pipelines during the migration",
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Unresolved question: who owns on-call for legacy Snowflake pipelines during migration (no owner yet)"
+        }
+      ],
+      "rationale": "The span asks an open ownership question that must be answered before the group can proceed, which is a blocker rather than a call for input on the decision itself."
+    },
+    {
+      "span_id": "b54.s1",
+      "author": "Raj",
+      "text": "Not it, my team is already stretched",
+      "status": "active",
+      "context_note": "'Not it' = declines owning on-call for the legacy Snowflake pipelines during the migration",
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Raj objects to taking on interim on-call for legacy Snowflake pipelines because his team is already stretched"
+        }
+      ],
+      "rationale": "Raj explicitly declines the on-call ownership, which is an objection to that assignment, and the reason given is a claim about team capacity."
+    },
+    {
+      "span_id": "b55.s1",
+      "author": "Colleen",
+      "text": "Halden platform team can't take Snowflake pipelines",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Halden platform team cannot take on owning the legacy Snowflake pipelines (on-call), against Snowflake-side ownership"
+        },
+        {
+          "type": "claim",
+          "confidence": 0.5,
+          "gist": "Halden platform team lacks capacity to own Snowflake pipelines"
+        }
+      ],
+      "rationale": "Colleen declines ownership of the Snowflake pipelines on-call, which is an objection to that direction; it is a stated limitation of her team, so a claim is a plausible secondary reading."
+    },
+    {
+      "span_id": "b55.s2",
+      "author": "Colleen",
+      "text": "we have no Snowflake skills",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Colleen asserts the team has no Snowflake skills (causal reason against owning Snowflake on-call/migration work)"
+        }
+      ],
+      "rationale": "A factual assertion about the team's skills that serves as a reason against taking on Snowflake on-call, so it is primarily a claim with a possible objection to the on-call assignment."
+    },
+    {
+      "span_id": "b56.s1",
+      "author": "Sofia",
+      "text": "Let's park on-call",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.85,
+          "gist": "Sofia proposes deferring the on-call ownership discussion to later"
+        }
+      ],
+      "rationale": "Sofia is steering the discussion agenda by parking the on-call topic, which is non-content facilitation rather than a decision or action."
+    },
+    {
+      "span_id": "b56.s2",
+      "author": "Sofia",
+      "text": "I'll come back to it",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.8,
+          "gist": "Sofia parks the on-call discussion and defers it to later"
+        }
+      ],
+      "rationale": "Sofia's \"I'll come back to it\" manages the discussion agenda (deferring the on-call topic), which is non-content facilitation."
+    },
+    {
+      "span_id": "b57.s1",
+      "author": "Gareth",
+      "text": "\ud83d\udc4d",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "emoji reaction \ud83d\udc4d with no content"
+        }
+      ],
+      "rationale": "A bare thumbs-up emoji carries no decision content, so it is non-content chit-chat."
+    },
+    {
+      "span_id": "b58.s1",
+      "author": "Raj",
+      "text": "First pass on the stored procs with the converter",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.6,
+          "gist": "Raj runs a first-pass conversion of the 40 stored procedures with the converter"
+        }
+      ],
+      "rationale": "Raj takes on a concrete assessment task outside the chat (running the converter on the 40 procs), which is an action; the follow-up results are claims but the span itself is just the task announcement."
+    },
+    {
+      "span_id": "b58.s2",
+      "author": "Raj",
+      "text": "31 of 40 convert cleanly",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "31 of the 40 Snowflake stored procedures convert cleanly with the converter, per Raj's first pass"
+        }
+      ],
+      "rationale": "Raj reports a factual result from the first-pass conversion, which is a verifiable claim that bears on the tooling question, not a position, agreement, or blocker."
+    },
+    {
+      "span_id": "b58.s3",
+      "author": "Raj",
+      "text": "9 need rewrites",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "9 of the 40 stored procedures need rewrites after the converter pass (31 of 40 convert cleanly)"
+        }
+      ],
+      "rationale": "Raj is reporting a factual result of the converter pass, which is a claim; the earlier stored-proc question was a blocker but this span resolves part of it, so the blocker label is weak and only included at low confidence."
+    },
+    {
+      "span_id": "b59.s1",
+      "author": "Colleen",
+      "text": "That's a good result",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Colleen says the first-pass result (31 of 40 stored procs convert cleanly) is good news"
+        }
+      ],
+      "rationale": "The span is an evaluative reaction to Raj's conversion result, which is a factual report about feasibility, so it is best read as a claim, with a weak position reading since it favors the Databricks path."
+    },
+    {
+      "span_id": "b59.s2",
+      "author": "Colleen",
+      "text": "Rewrites are maybe two weeks of work",
+      "status": "active",
+      "context_note": "'Rewrites' = the 9 stored procs that need rewrites",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Colleen estimates the 9 stored-proc rewrites take about two weeks of work"
+        }
+      ],
+      "rationale": "The span is a factual estimate about effort for the 9 rewrites, which is a claim, not a position, action, or blocker."
+    },
+    {
+      "span_id": "b60.s1",
+      "author": "Raj",
+      "text": "Closer to 4 to 6 weeks with the team we have.",
+      "status": "active",
+      "context_note": "'Closer to 4 to 6 weeks' = estimate for the 9 stored procs needing rewrites, replacing Colleen's two-week estimate",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Raj estimates the 9 stored-proc rewrites take 4 to 6 weeks with his current team, contradicting Colleen's two-week estimate"
+        }
+      ],
+      "rationale": "The span is a factual estimate of effort by Raj, which is a claim; it is not a position or blocker since it does not state a stance or an unanswered question."
+    },
+    {
+      "span_id": "b61.s1",
+      "author": "Colleen",
+      "text": "We can lend two engineers from Halden for the rewrites",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Colleen offers to lend two Halden engineers for the 9 stored-proc rewrites (conditional on lending, outside chat deliverable)"
+        }
+      ],
+      "rationale": "Colleen commits two Halden engineers to a concrete task outside the chat, so it is an action rather than a position or option."
+    },
+    {
+      "span_id": "b62.s1",
+      "author": "Raj",
+      "text": "If you lend two engineers for the rewrites, A works for me",
+      "status": "active",
+      "context_note": "'A' = the option Raj is responding to, the first proposal in the burst",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Raj conditionally supports option A (Databricks) if Halden lends two engineers for the stored-proc rewrites"
+        }
+      ],
+      "rationale": "Raj states a conditional stance on the existing option A (Databricks), which was already named, so it is a position rather than a new option."
+    },
+    {
+      "span_id": "b62.s2",
+      "author": "Raj",
+      "text": "and I withdraw B",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.85,
+          "gist": "Raj withdraws his support for option B (Snowflake as end state)"
+        },
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Snowflake end-state option (B) dropped by Raj's withdrawal"
+        }
+      ],
+      "rationale": "Per rule 6, withdrawing one's own option is a position (withdrawn) plus an option status change (dropped), since B was already introduced in the poll."
+    },
+    {
+      "span_id": "b63.s1",
+      "author": "Colleen",
+      "text": "Then I'll commit two engineers for six weeks",
+      "status": "active",
+      "context_note": "'Then' = Raj's condition: if two engineers are lent for the rewrites, option A works and B is withdrawn",
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Colleen commits two Halden engineers for six weeks of stored-procedure rewrites starting Dec 1"
+        }
+      ],
+      "rationale": "Colleen's personal commitment to deliver two engineers for the rewrites is a concrete task outside the chat, so it is an action rather than a group decision."
+    },
+    {
+      "span_id": "b63.s2",
+      "author": "Colleen",
+      "text": "starting Dec 1",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.6,
+          "gist": "Colleen's two Halden engineers start the stored-proc rewrites on Dec 1 for six weeks"
+        }
+      ],
+      "rationale": "The span completes Colleen's personal commitment to lend two engineers for six weeks, which is a concrete task outside the chat, so it is an action rather than a decision."
+    },
+    {
+      "span_id": "b64.s1",
+      "author": "Gareth",
+      "text": "Dec 1 plus six weeks is mid January",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dec 1 start plus six weeks of rewrites lands mid-January (timeline arithmetic)"
+        }
+      ],
+      "rationale": "Gareth is stating a derived date from the committed two-engineer, six-week plan, which is a factual/predictive assertion rather than a decision, position, or action."
+    },
+    {
+      "span_id": "b64.s2",
+      "author": "Gareth",
+      "text": "That works",
+      "status": "active",
+      "context_note": "'That' = Colleen's two engineers for six weeks starting Dec 1",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Gareth supports Colleen's offer of two engineers for six weeks starting Dec 1 (conditional support for Databricks path)"
+        }
+      ],
+      "rationale": "Gareth's \"That works\" endorses the resourcing arrangement as a stance on the option, not a restated requirement, so it is a position rather than agreement or a decision."
+    },
+    {
+      "span_id": "b65.s1",
+      "author": "Wei",
+      "text": "PHI review update",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "separate_issue",
+          "confidence": 0.35,
+          "gist": "PHI review status update header, no decision content on its own"
+        }
+      ],
+      "rationale": "The span \"PHI review update\" is only a header line introducing Wei's following compliance findings, which are labeled in their own spans, so it carries no content on its own."
+    },
+    {
+      "span_id": "b65.s2",
+      "author": "Wei",
+      "text": "Preliminary: Databricks needs column-level tokenization on member IDs plus a BAA addendum",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.7,
+          "gist": "Databricks end-state requires column-level tokenization on member IDs plus a BAA addendum (PHI compliance requirement)"
+        }
+      ],
+      "rationale": "A preliminary review finding stating a requirement that gates Databricks is best read as a constraint, with a secondary claim reading as a factual assertion from the review."
+    },
+    {
+      "span_id": "b65.s3",
+      "author": "Wei",
+      "text": "Halden says the addendum is standard but I haven't seen it",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "BAA addendum not yet reviewed by Wei; unresolved compliance dependency for Databricks option"
+        }
+      ],
+      "rationale": "Wei states they have not seen the addendum, an open unverified item that the group needs before deciding, so it is a blocker; the relayed \"standard\" assessment is a secondhand claim."
+    },
+    {
+      "span_id": "b66.s1",
+      "author": "Colleen",
+      "text": "It's standard, I've signed one before",
+      "status": "active",
+      "context_note": "'It' = the BAA addendum",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Colleen asserts the BAA addendum is standard and that she has signed one before (unverified)"
+        }
+      ],
+      "rationale": "Colleen's statement is an unverified factual assertion about the BAA addendum being standard, not a position, agreement, or blocker."
+    },
+    {
+      "span_id": "b67.s1",
+      "author": "Wei",
+      "text": "I need to read it myself",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.55,
+          "gist": "BAA addendum not yet reviewed by Wei; unresolved before Databricks option can be approved for PHI data"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Wei declines to accept Colleen's claim that the BAA addendum is standard; wants to review it personally before relying on it"
+        }
+      ],
+      "rationale": "Wei's statement signals an unresolved dependency (unseen BAA addendum) that stops approval of the PHI-bearing option, which is a blocker, plus an implicit stance of not yet accepting Colleen's reassurance."
+    },
+    {
+      "span_id": "b67.s2",
+      "author": "Wei",
+      "text": "Until then my A is conditional on the BAA and tokenization",
+      "status": "active",
+      "context_note": "'it' = the BAA addendum",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Wei conditionally supports Databricks (option A) pending BAA addendum and tokenization controls"
+        },
+        {
+          "type": "constraint",
+          "confidence": 0.5,
+          "gist": "BAA coverage and PHI tokenization must be in place before claims data moves to Databricks"
+        }
+      ],
+      "rationale": "Wei restates a conditional stance on the already-named Databricks option, which is a position, and the PHI/BAA requirement it depends on is a hard requirement already stated earlier, so it is best captured as a constraint tied to that stance."
+    },
+    {
+      "span_id": "b68.s1",
+      "author": "Dmitri",
+      "text": "Contract confirmed",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.85,
+          "gist": "Snowflake contract confirmed: renews Feb 28 with 3-year auto-renew unless notice given by Nov 30 (Raj's earlier statement is correct)"
+        }
+      ],
+      "rationale": "Dmitri confirms a factual contract detail, which is a claim rather than a decision, position, or agreement under the guidance on confirming facts."
+    },
+    {
+      "span_id": "b68.s2",
+      "author": "Dmitri",
+      "text": "Snowflake renews Feb 28, 3-year auto-renew, notice due Nov 30",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Snowflake contract renews Feb 28 with 3-year auto-renew unless notice is given by Nov 30 (confirms Raj's fact)"
+        },
+        {
+          "type": "constraint",
+          "confidence": 0.5,
+          "gist": "Snowflake notice deadline Nov 30 gates the non-renewal decision"
+        }
+      ],
+      "rationale": "Dmitri is confirming a fact about the contract renewal terms, which is a claim; it is a dated dependency that gates the non-renewal decision, giving a secondary constraint label."
+    },
+    {
+      "span_id": "b68.s3",
+      "author": "Dmitri",
+      "text": "Raj was right",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dmitri confirms Raj was right about the Snowflake contract facts (renewal/notice) \u2014 a confirmation of a fact"
+        }
+      ],
+      "rationale": "Dmitri is confirming a previously stated fact (Raj's contract reading), which is a claim, not a position or decision."
+    },
+    {
+      "span_id": "b69.s1",
+      "author": "Raj",
+      "text": "So we can't serve notice and still run until Q2",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Serving non-renewal notice on Snowflake by Nov 30 would end Snowflake access on Feb 28, before Databricks is ready, leaving a gap"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Opposes serving Snowflake non-renewal notice (Colleen's proposal) because of the coverage gap"
+        }
+      ],
+      "rationale": "Raj states a causal consequence of serving notice (a claim) and implicitly objects to the notice-by-Nov-30 direction, without choosing an option himself."
+    },
+    {
+      "span_id": "b70.s1",
+      "author": "Dmitri",
+      "text": "I'll ask the Snowflake rep for a 6-month extension to Aug 31 instead of the 3-year renewal",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Dmitri will ask the Snowflake rep for a 6-month extension to Aug 31 by Nov 20"
+        },
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Snowflake 6-month extension to Aug 31 instead of the 3-year auto-renewal"
+        }
+      ],
+      "rationale": "Dmitri commits to an outside-chat task (asking the vendor by Nov 20), and the extension is a newly floated alternative to the auto-renewal, so it is also an option."
+    },
+    {
+      "span_id": "b70.s2",
+      "author": "Dmitri",
+      "text": "No promise they agree",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Dmitri is not committing that Snowflake will agree to the 6-month extension to Aug 31 (hedged, uncertain stance on the extension option)"
+        }
+      ],
+      "rationale": "The span hedges on whether Snowflake will accept the extension, which is a claim about an uncertain outcome, with at most a weak undecided stance on the extension option already introduced by Dmitri."
+    },
+    {
+      "span_id": "b70.s3",
+      "author": "Dmitri",
+      "text": "I'll ask by Nov 20",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Dmitri will ask the Snowflake rep for a 6-month extension to Aug 31 by Nov 20"
+        }
+      ],
+      "rationale": "Dmitri commits to a concrete outside-chat task with a deadline, which is an action rather than a decision or claim."
+    },
+    {
+      "span_id": "b71.s1",
+      "author": "Sofia",
+      "text": "If they refuse we renew for a year and take the hit.",
+      "status": "active",
+      "context_note": "'they' = Snowflake (the rep asked for a 6-month extension to Aug 31)",
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.6,
+          "gist": "Fallback: renew Snowflake for one year if the vendor refuses the 6-month extension to Aug 31 (option status change: fallback)"
+        },
+        {
+          "type": "position",
+          "confidence": 0.55,
+          "gist": "Sofia supports one-year Snowflake renewal as fallback if extension refused, accepting the cost hit"
+        }
+      ],
+      "rationale": "Names a conditional fallback (one-year renewal) which makes it the backup option, and the speaker's stance that they would accept it if the extension is refused."
+    },
+    {
+      "span_id": "b72.s1",
+      "author": "Dmitri",
+      "text": "A one-year renewal is about $2.4M, which wrecks the 10% target this FY",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "A one-year Snowflake renewal would cost about $2.4M, which would wreck the 10% run-cost reduction target this FY"
+        }
+      ],
+      "rationale": "The span is a cost consequence claim about the one-year renewal fallback, which was already raised by Sofia, so it is a claim against the 10% target rather than a new option or stance."
+    },
+    {
+      "span_id": "b72.s2",
+      "author": "Dmitri",
+      "text": "That's the downside",
+      "status": "active",
+      "context_note": "'That' = a one-year renewal costing about $2.4M",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "A one-year Snowflake renewal (about $2.4M) would undermine the 10% run-cost reduction target this FY"
+        }
+      ],
+      "rationale": "Dmitri is stating the consequence of the one-year renewal fallback, which is a factual/causal assertion about cost, and it reads as a concern against that fallback rather than a stance on a new option."
+    },
+    {
+      "span_id": "b73.s1",
+      "author": "Sofia",
+      "text": "Understood. Let's see what the rep says.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.6,
+          "gist": "Sofia defers the outcome of the Snowflake extension request until the rep responds, moving the discussion forward"
+        }
+      ],
+      "rationale": "Sofia's acknowledgement and deferral to the rep's response is facilitation of the discussion, not a stance on an option, requirement, or a settled decision."
+    },
+    {
+      "span_id": "b74.s1",
+      "author": "Gareth",
+      "text": "Until cutover can we federate queries across both platforms as a bridge?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "option",
+          "confidence": 0.7,
+          "gist": "Federate queries across Databricks and Snowflake as a bridge until cutover (new alternative, not previously named)"
+        }
+      ],
+      "rationale": "Question floats a new alternative (federation as bridge), which per rule 13 is an option with option_role new; \"Colleen: As a temporary bridge, ok\" is later and is a position, not the span itself."
+    },
+    {
+      "span_id": "b75.s1",
+      "author": "Colleen",
+      "text": "As a temporary bridge, ok",
+      "status": "active",
+      "context_note": "'As a temporary bridge' = federating queries across both platforms until cutover",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Colleen supports federating queries across both platforms as a temporary bridge until cutover (not end state)"
+        }
+      ],
+      "rationale": "The bridge option was first floated by Gareth in the prior message, so Colleen's reply is a position on it; the option label is a low-confidence extra since it's a status change to an existing option being made the interim fallback."
+    },
+    {
+      "span_id": "b75.s2",
+      "author": "Colleen",
+      "text": "As the end state, still no",
+      "status": "active",
+      "context_note": "'As the end state' = federating queries across both platforms as the permanent end state",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Colleen opposes federating queries across both platforms as the permanent end state"
+        },
+        {
+          "type": "objection",
+          "confidence": 0.5,
+          "gist": "Federating across both platforms as end state is not acceptable"
+        }
+      ],
+      "rationale": "Colleen explicitly rejects the federation option as the end state, which is a stance on an option already introduced by Gareth, so it is a position (opposing), with a possible objection to the same option."
+    },
+    {
+      "span_id": "b76.s1",
+      "author": "Sofia",
+      "text": "Interim only",
+      "status": "active",
+      "context_note": "'Interim only' = federating queries across both platforms as a bridge until cutover, not as the end state",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sofia accepts federating queries across both platforms as an interim bridge only, not as the end state"
+        }
+      ],
+      "rationale": "Sofia's \"Interim only\" states a stance on the already-named federation option (bridge only, not end state), which is a position; it does not clearly settle the question for the group as a decision."
+    },
+    {
+      "span_id": "b77.s1",
+      "author": "Imani",
+      "text": "That works for BI.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Imani says the Q2 / 6-month extension plan works for BI (speaker's own stance on the plan; the option is already named earlier)"
+        }
+      ],
+      "rationale": "The span is Imani's stance that the current direction works for BI, which is a position on an already-discussed option rather than an agreement on a stated requirement, with low-confidence irrelevant as a fallback."
+    },
+    {
+      "span_id": "b78.s1",
+      "author": "Wei",
+      "text": "Security architecture review is now mandatory before any PHI migration",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Security architecture review is mandatory before any PHI migration (booked Dec 8, ~3 weeks)"
+        }
+      ],
+      "rationale": "A fixed, mandatory gate on PHI migration that filters feasibility regardless of option, so it is a constraint rather than a blocker or claim."
+    },
+    {
+      "span_id": "b78.s2",
+      "author": "Wei",
+      "text": "It's booked for Dec 8 and takes about 3 weeks",
+      "status": "active",
+      "context_note": "'It' = Security architecture review",
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.8,
+          "gist": "Security architecture review is booked for Dec 8 and takes about 3 weeks; gates any PHI migration"
+        }
+      ],
+      "rationale": "A fixed date and duration for a mandatory review that gates PHI migration is a constraint, not a blocker, since it is scheduled."
+    },
+    {
+      "span_id": "b79.s1",
+      "author": "Sofia",
+      "text": "That changes the ranking",
+      "status": "active",
+      "context_note": "'That' = Wei's security architecture review now mandatory before any PHI migration",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Wei's mandatory security architecture review before PHI migration changes the criteria ranking"
+        }
+      ],
+      "rationale": "The span is Sofia noting that the new mandatory PHI security review changes the ordering, which is a reason-type assertion about the prior ranking rather than a decision or proposal."
+    },
+    {
+      "span_id": "b79.s2",
+      "author": "Sofia",
+      "text": "New order: compliance first, then cost, then speed. March is dead, Q2 it is, exact date after the Dec 8 review and Raj's assessment",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "criterion",
+          "confidence": 0.6,
+          "gist": "Compliance ranked first among decision criteria, ahead of cost and speed"
+        },
+        {
+          "type": "decision",
+          "confidence": 0.6,
+          "gist": "March target dropped; Q2 chosen as the cutover window, exact date pending Dec 8 review and Raj's assessment"
+        }
+      ],
+      "rationale": "Sofia declares the March target dropped and Q2 settled on behalf of the group, and re-ranks the criteria with compliance first, which is a criterion rather than a stance."
+    },
+    {
+      "span_id": "b80.s1",
+      "author": "Dmitri",
+      "text": "Sofia, are we deciding the platform today?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.7,
+          "gist": "Dmitri asks whether the group is deciding the platform today (checking the discussion's agenda/status)"
+        }
+      ],
+      "rationale": "The span is a question about the discussion's agenda and process rather than a content claim, option, or position, so it is facilitation/non-content."
+    },
+    {
+      "span_id": "b81.s1",
+      "author": "Sofia",
+      "text": "I'd like a direction",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.8,
+          "gist": "Sofia states she wants a direction on the platform decision, framing the discussion/next step"
+        }
+      ],
+      "rationale": "\"I'd like a direction\" is a facilitation statement about moving the discussion toward a decision, not a settled decision or a new option."
+    },
+    {
+      "span_id": "b81.s2",
+      "author": "Sofia",
+      "text": "Can we go with A as the direction, with the open items tracked?",
+      "status": "active",
+      "context_note": "'A' = option A (platform option, not named in the burst)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sofia proposes going with Databricks (A) as the direction with open items tracked"
+        }
+      ],
+      "rationale": "Sofia asks a question seeking group confirmation of a direction, which is a proposal rather than a settled decision, so it is a process-style call for agreement with the open items tracked."
+    },
+    {
+      "span_id": "b82.s1",
+      "author": "Dmitri",
+      "text": "Fine, whatever gets us out of this thread.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Dmitri grudgingly accepts going with Databricks (option A) as the direction, reluctantly"
+        }
+      ],
+      "rationale": "Dmitri's reluctant acceptance of option A is a conditional-free stance on the platform option, not a group-level decision since Sofia has not declared it settled."
+    },
+    {
+      "span_id": "b83.s1",
+      "author": "Gareth",
+      "text": "A works for me, and Q2 is what makes it work.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Gareth supports option A (Databricks) as the end state, conditional on Q2 timing"
+        }
+      ],
+      "rationale": "Gareth explicitly states support for option A, with Q2 timing as a stated condition, which makes it a position; the reason it works is a claim."
+    },
+    {
+      "span_id": "b84.s1",
+      "author": "Colleen",
+      "text": "all seven of us are on board with Databricks then",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Colleen claims all seven participants are on board with Databricks; Wei disputes this (conditional support)"
+        }
+      ],
+      "rationale": "A report of what others think is a claim, not a decision, and it is contested by Wei right after."
+    },
+    {
+      "span_id": "b85.s1",
+      "author": "Wei",
+      "text": "Not all seven",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.7,
+          "gist": "Wei disputes Colleen's claim that all seven are on board with Databricks; stance is conditional on BAA and tokenization"
+        },
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Wei is conditional (not supportive) on Databricks as end state, pending BAA and tokenization"
+        }
+      ],
+      "rationale": "Wei rejects the group-consensus claim and restates a conditional stance on Databricks, which is an objection to the claim plus a conditional position on the option."
+    },
+    {
+      "span_id": "b85.s2",
+      "author": "Wei",
+      "text": "I'm conditional on the BAA and tokenization",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Wei conditionally supports Databricks (option A) pending BAA and tokenization"
+        }
+      ],
+      "rationale": "Wei states a conditional stance on the existing option A, which is a position; the condition restates a PHI requirement already raised, so it is a secondary constraint at lower confidence."
+    },
+    {
+      "span_id": "b85.s3",
+      "author": "Wei",
+      "text": "not \"on board\"",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "objection",
+          "confidence": 0.6,
+          "gist": "Wei rejects Colleen's claim that all seven are on board with Databricks; Wei is only conditionally in favor"
+        },
+        {
+          "type": "position",
+          "confidence": 0.5,
+          "gist": "Wei is conditional on BAA and tokenization for Databricks, not fully on board"
+        }
+      ],
+      "rationale": "Wei is disputing the claim that the group is on board, which is an objection to the group-consensus claim, and restates a conditional stance on Databricks rather than a clean endorsement."
+    },
+    {
+      "span_id": "b86.s1",
+      "author": "Raj",
+      "text": "conditional on the stored procs and the engineers",
+      "status": "active",
+      "context_note": "'Same' = conditional stance like Wei's (conditional on the BAA and tokenization)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Raj conditionally supports Databricks (option A) contingent on migration tooling covering the 40 stored procs and two engineers lent for rewrites"
+        }
+      ],
+      "rationale": "Raj states a conditional stance on the Databricks option, which is a position rather than agreement or a new option, and the conditions are the stated dependencies."
+    },
+    {
+      "span_id": "b87.s1",
+      "author": "Dmitri",
+      "text": "And I abstained",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Dmitri abstains on the Databricks direction (neither supports nor opposes)"
+        }
+      ],
+      "rationale": "Dmitri states his own non-supporting stance on the platform direction, which is a position (undecided/abstain), not a decision or agreement."
+    },
+    {
+      "span_id": "b87.s2",
+      "author": "Dmitri",
+      "text": "Count me out of that",
+      "status": "active",
+      "context_note": "'that' = Databricks decision (all seven on board)",
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.8,
+          "gist": "Dmitri opposes the Databricks direction (withdraws from the group's A stance)"
+        }
+      ],
+      "rationale": "Dmitri explicitly rejects being counted in support of Databricks, which is a stance against the option, not a decision or agreement."
+    },
+    {
+      "span_id": "b88.s1",
+      "author": "Colleen",
+      "text": "Five supporters then, some conditional",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Colleen says five people support Databricks, some conditionally (a report of group stance, contested by Wei and Dmitri)"
+        }
+      ],
+      "rationale": "A report of what others think about the Databricks stance is a claim, not a group-declared decision, and it is disputed by earlier replies."
+    },
+    {
+      "span_id": "b89.s1",
+      "author": "Imani",
+      "text": "Someone said earlier the budget is fixed at $3M",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Imani attributes a fixed $3M budget to someone earlier; the claim is unverified and Dmitri later disputes it"
+        }
+      ],
+      "rationale": "The span asserts a budget figure as something someone said, which is an unverified factual claim, not a constraint since the group never stated it and it is disputed."
+    },
+    {
+      "span_id": "b89.s2",
+      "author": "Imani",
+      "text": "Is that right?",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.5,
+          "gist": ""
+        }
+      ],
+      "rationale": "Imani is asking a factual question about whether a budget was fixed; it is a request for information, and the context shows no one actually set a $3M budget, so this is at most a low-confidence blocker rather than a process or claim."
+    },
+    {
+      "span_id": "b90.s1",
+      "author": "Dmitri",
+      "text": "Nobody said that",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.7,
+          "gist": "Dmitri says no one stated the budget is fixed at $3M; the figure was not a budget"
+        }
+      ],
+      "rationale": "Correcting a misattribution is a factual assertion about what was said, not a constraint or position, so it is labelled as a claim with a weaker objection secondary."
+    },
+    {
+      "span_id": "b90.s2",
+      "author": "Dmitri",
+      "text": "$3M was my estimate for the merged workload on Databricks",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "Dmitri: the $3M figure is his own estimate for a merged Databricks workload, not a budget"
+        }
+      ],
+      "rationale": "Clarifying a factual estimate given by the speaker is a claim, not a constraint, since the span explicitly says it is not a budget."
+    },
+    {
+      "span_id": "b90.s3",
+      "author": "Dmitri",
+      "text": "It isn't a budget",
+      "status": "active",
+      "context_note": "'It' = $3M",
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.8,
+          "gist": "$3M is Dmitri's estimate for the merged Databricks workload, not a budget"
+        }
+      ],
+      "rationale": "Dmitri clarifies a fact about the $3M figure, which is a factual assertion rather than a constraint, position, or decision."
+    },
+    {
+      "span_id": "b91.s1",
+      "author": "Imani",
+      "text": "Got it, thanks.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.9,
+          "gist": "acknowledgement thanks, no content"
+        }
+      ],
+      "rationale": "\"Got it, thanks.\" is a pure acknowledgement with no decision content, so it is non-content."
+    },
+    {
+      "span_id": "b92.s1",
+      "author": "Gareth",
+      "text": "On-call for the legacy Snowflake pipelines is still unowned",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "On-call ownership for legacy Snowflake pipelines during migration is still unassigned, unresolved dependency"
+        }
+      ],
+      "rationale": "Names an unresolved ownership gap that the group needs answered before deciding, so it is a blocker rather than an action or claim."
+    },
+    {
+      "span_id": "b92.s2",
+      "author": "Gareth",
+      "text": "Flagging again",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.6,
+          "gist": "Gareth re-raises the unowned on-call item for the legacy Snowflake pipelines, a facilitation step to get it back on the agenda"
+        }
+      ],
+      "rationale": "\"Flagging again\" is a discussion-facilitation move that re-raises the earlier on-call question without adding new content."
+    },
+    {
+      "span_id": "b93.s1",
+      "author": "Sofia",
+      "text": "I'll recap what we have",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "process",
+          "confidence": 0.9,
+          "gist": "Sofia announces she will recap the discussion so far (agenda/facilitation step)"
+        }
+      ],
+      "rationale": "The span is a facilitation step about the discussion itself, not a content claim, decision, or position."
+    },
+    {
+      "span_id": "b94.s1",
+      "author": "Sofia",
+      "text": "Direction: Databricks as the end state",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "claim",
+          "confidence": 0.6,
+          "gist": "Direction declared: Databricks as the end-state platform, with open items tracked"
+        }
+      ],
+      "rationale": "Sofia states the group's direction on Databricks as end state, which settles the platform choice on the group's behalf, though it is framed as a direction with open items."
+    },
+    {
+      "span_id": "b94.s2",
+      "author": "Sofia",
+      "text": "Q2 cutover, exact date after Raj's assessment and the Dec 8 security review",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.6,
+          "gist": "Q2 cutover chosen as timeline; exact date deferred until after Raj's assessment and Dec 8 security review"
+        }
+      ],
+      "rationale": "Sofia, speaking for the group, settles the timeline as Q2 (with March ruled out via the following context), which is a group-level decision; the Q2 timing was already proposed earlier so it is not newly introduced as an option."
+    },
+    {
+      "span_id": "b94.s3",
+      "author": "Sofia",
+      "text": "Federation only as an interim bridge",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "position",
+          "confidence": 0.6,
+          "gist": "Sofia supports federation across platforms only as an interim bridge, not as end state"
+        }
+      ],
+      "rationale": "Federation was already introduced by Gareth and Colleen had responded, so Sofia's line restricts it to interim use, which is a stance on an existing option."
+    },
+    {
+      "span_id": "b94.s4",
+      "author": "Sofia",
+      "text": "March is off",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "decision",
+          "confidence": 0.8,
+          "gist": "March cutover target ruled out for the platform migration"
+        }
+      ],
+      "rationale": "Sofia declares on behalf of the group that March is ruled out, which settles the March option; it was previously named and proposed by others, so this is a status change rather than a new option."
+    },
+    {
+      "span_id": "b94.s5",
+      "author": "Sofia",
+      "text": "I'll confirm the platform formally at the Nov 16 steering so we have the notice decision well before Nov 30",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Sofia will formally confirm the platform decision at the Nov 16 steering committee, ahead of the Nov 30 notice deadline"
+        }
+      ],
+      "rationale": "Sofia commits to a concrete task outside the chat (confirming the platform at the Nov 16 steering), so it is an action rather than a group decision."
+    },
+    {
+      "span_id": "b95.s1",
+      "author": "Raj",
+      "text": "I'll deliver the full stored procedure assessment by Nov 6",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Raj commits to delivering full stored procedure assessment by Nov 6"
+        }
+      ],
+      "rationale": "Raj personally commits to a concrete deliverable outside the chat with a date, which is an action."
+    },
+    {
+      "span_id": "b96.s1",
+      "author": "Wei",
+      "text": "I'll finish the BAA addendum review by Nov 13",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.9,
+          "gist": "Wei commits to finishing the BAA addendum review by Nov 13"
+        }
+      ],
+      "rationale": "Wei personally commits to a concrete deliverable outside the chat with a date, which is an action rather than a blocker or position."
+    },
+    {
+      "span_id": "b97.s1",
+      "author": "Imani",
+      "text": "I'm out from Monday",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "constraint",
+          "confidence": 0.6,
+          "gist": "Imani is absent from Monday onward (next week), which affects BI sign-offs covered by Wei; absence is a constraint but only for the BI sign-off side thread"
+        },
+        {
+          "type": "separate_issue",
+          "confidence": 0.55,
+          "gist": "Imani's absence next week affects BI sign-offs, a side issue unrelated to the platform decision"
+        }
+      ],
+      "rationale": "Imani's absence only affects BI sign-offs covered by Wei, so it is a separate_issue rather than a constraint on the platform choice."
+    },
+    {
+      "span_id": "b97.s2",
+      "author": "Imani",
+      "text": "BI sign-offs go to Wei",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.6,
+          "gist": "Wei covers Imani's BI sign-offs while Imani is out next week (task handoff outside the chat)"
+        }
+      ],
+      "rationale": "Imani restates the handoff of BI sign-offs to Wei, which is a concrete task assignment outside the chat, not a platform decision."
+    },
+    {
+      "span_id": "b98.s1",
+      "author": "Dmitri",
+      "text": "The extension request to Snowflake goes out by Nov 20",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Dmitri will send the Snowflake extension request (6-month to Aug 31 instead of 3-year renewal) by Nov 20"
+        }
+      ],
+      "rationale": "Dmitri commits to a concrete outside-chat task with a deadline, which is an action rather than a decision or option."
+    },
+    {
+      "span_id": "b98.s2",
+      "author": "Dmitri",
+      "text": "as I said",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.5,
+          "gist": "filler reply 'as I said' with no new content on the platform decision"
+        }
+      ],
+      "rationale": "The span is a bare back-reference with no new option, stance, or factual content, so it is non-content."
+    },
+    {
+      "span_id": "b99.s1",
+      "author": "Colleen",
+      "text": "Two Halden engineers start Dec 1",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Colleen commits two Halden engineers to the stored-proc rewrites starting Dec 1 (names to be confirmed by Nov 13)"
+        }
+      ],
+      "rationale": "The span is a personal commitment to provide two engineers outside the chat, which is an action rather than a group decision, with only a weak support signal."
+    },
+    {
+      "span_id": "b99.s2",
+      "author": "Colleen",
+      "text": "I'll confirm names by Nov 13",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "action",
+          "confidence": 0.8,
+          "gist": "Colleen will confirm names of the two Halden engineers for the Databricks stored-proc rewrites by Nov 13"
+        }
+      ],
+      "rationale": "Colleen commits to a concrete deliverable outside the chat (confirming engineer names by a date), which is an action rather than a decision or position."
+    },
+    {
+      "span_id": "b100.s1",
+      "author": "Gareth",
+      "text": "Still no owner for on-call though",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.8,
+          "gist": "Legacy Snowflake pipeline on-call ownership is still unassigned, an open dependency for the migration plan"
+        }
+      ],
+      "rationale": "Gareth restates an unresolved question (who owns on-call) that the group has not answered, which is a pending dependency rather than a decision or action."
+    },
+    {
+      "span_id": "b100.s2",
+      "author": "Gareth",
+      "text": "Not letting that go",
+      "status": "active",
+      "context_note": "'that' = no owner for on-call",
+      "labels": [
+        {
+          "type": "blocker",
+          "confidence": 0.6,
+          "gist": "On-call owner for legacy Snowflake pipelines during migration is still unassigned"
+        }
+      ],
+      "rationale": "Gareth restates that the unowned on-call question is still open and must be resolved, which is an unresolved dependency rather than a stance on an option."
+    },
+    {
+      "span_id": "b101.s1",
+      "author": "Sofia",
+      "text": "Understood.",
+      "status": "active",
+      "context_note": null,
+      "labels": [
+        {
+          "type": "irrelevant",
+          "confidence": 0.8,
+          "gist": "acknowledgement of Dmitri's report that the rep's response is pending; no content stance"
+        }
+      ],
+      "rationale": "\"Understood\" is a bare acknowledgement with no requirement, option, or stance, so it is non-content."
+    }
+  ]
+}

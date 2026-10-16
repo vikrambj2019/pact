@@ -1,0 +1,743 @@
+{
+  "card": {
+    "schema_version": "mvp1_c2c.1",
+    "experiment_id": "ede413f0-45f7-4d2e-b84e-71dd61d9aba0",
+    "card_version": 7,
+    "topic": {
+      "title": "Where should our group go for a hiking trip?",
+      "problem": "Where should our group go for a hiking trip?",
+      "decision_requested": "Where should our group go for a hiking trip?",
+      "scope": "",
+      "status": "open",
+      "source_message_ids": []
+    },
+    "participants": [
+      {
+        "id": "human_admin",
+        "name": "You",
+        "role": "admin and participant",
+        "participant_type": "human"
+      },
+      {
+        "id": "sim_1",
+        "name": "Alex",
+        "role": "experienced hiker",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_2",
+        "name": "Sam",
+        "role": "budget-conscious planner",
+        "participant_type": "simulated"
+      },
+      {
+        "id": "sim_3",
+        "name": "Jordan",
+        "role": "accessibility-focused",
+        "participant_type": "simulated"
+      }
+    ],
+    "decision_process": {
+      "method": "admin_recorded",
+      "approver_ids": [
+        "human_admin"
+      ],
+      "unanimity_required": false,
+      "silence_counts_as_agreement": false
+    },
+    "individual_mapping": {
+      "mvp_version": 1,
+      "policy": {
+        "require_opt_in": true,
+        "record_clear_statements_with_provenance": true,
+        "require_confirmation_for_ambiguous_interpretations": true,
+        "silence_counts_as_confirmation": false
+      },
+      "participant_permissions": [
+        {
+          "participant_id": "human_admin",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_1",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_2",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        },
+        {
+          "participant_id": "sim_3",
+          "mapping": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          },
+          "share_in_group_card": {
+            "status": "granted",
+            "source_message_id": "session_setup"
+          }
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "id": "unresolved_jordan_claim_check",
+          "participant_id": "human_admin",
+          "proposed_type": "unresolved",
+          "proposed_statement": {
+            "question": "Which specific claim(s) from Jordan's message about Arches should be fact-checked? (e.g., well-maintained/paved trails, September heat levels, lower technical difficulty compared to North Cascades/Wind River Range)",
+            "raised_by": "human_admin",
+            "id": "unresolved_jordan_claim_check",
+            "source_message_ids": [
+              "msg_6"
+            ],
+            "revision": 1
+          },
+          "source_message_ids": [
+            "msg_6"
+          ],
+          "change": {
+            "section": "unresolved",
+            "operation": "add",
+            "entity_id": "unresolved_jordan_claim_check",
+            "participant_id": "human_admin",
+            "quote": "check claim on Jordan?",
+            "needs_confirmation": true,
+            "reason": "Admin appears to be requesting a fact-check of Jordan's claims from msg_5 (about Arches accessibility, trail conditions, September heat, and lower technical difficulty). The message is ambiguous ('pact' may be a typo/autocorrect) and it is unclear which specific claim(s) should be checked. Flagging as unresolved pending clarification.",
+            "value_json": "{\"question\": \"Which specific claim(s) from Jordan's message about Arches should be fact-checked? (e.g., well-maintained/paved trails, September heat levels, lower technical difficulty compared to North Cascades/Wind River Range)\", \"raised_by\": \"human_admin\", \"id\": \"unresolved_jordan_claim_check\", \"source_message_ids\": [\"msg_6\"], \"revision\": 1}"
+          },
+          "base_card_version": 6,
+          "confirmation": {
+            "status": "pending",
+            "confirmed_by": null,
+            "source_message_id": null
+          },
+          "included_in_confirmed_state": false
+        },
+        {
+          "id": "unresolved_jordan_claim_check",
+          "participant_id": "human_admin",
+          "proposed_type": "unresolved",
+          "proposed_statement": {
+            "question": "Which specific claim from Jordan's message should be fact-checked? (e.g., Arches accessibility, trail conditions in September, heat levels, or technical difficulty comparison)",
+            "raised_by": "human_admin",
+            "id": "unresolved_jordan_claim_check",
+            "source_message_ids": [
+              "msg_7"
+            ],
+            "revision": 1
+          },
+          "source_message_ids": [
+            "msg_7"
+          ],
+          "change": {
+            "section": "unresolved",
+            "operation": "add",
+            "entity_id": "unresolved_jordan_claim_check",
+            "participant_id": "human_admin",
+            "quote": "check claim on Jordan?",
+            "needs_confirmation": true,
+            "reason": "The admin appears to be requesting a fact-check of a claim made by Jordan (sim_3), but the message is ambiguous — it is unclear which specific claim or statement from Jordan's message (msg_5) is being targeted. Flagging for confirmation before acting.",
+            "value_json": "{\"question\": \"Which specific claim from Jordan's message should be fact-checked? (e.g., Arches accessibility, trail conditions in September, heat levels, or technical difficulty comparison)\", \"raised_by\": \"human_admin\", \"id\": \"unresolved_jordan_claim_check\", \"source_message_ids\": [\"msg_7\"], \"revision\": 1}"
+          },
+          "base_card_version": 7,
+          "confirmation": {
+            "status": "pending",
+            "confirmed_by": null,
+            "source_message_id": null
+          },
+          "included_in_confirmed_state": false
+        }
+      ]
+    },
+    "criteria": [
+      {
+        "criterion": "The destination should have significant elevation gain and technical terrain.",
+        "raised_by": "sim_1",
+        "id": "criterion_elevation_terrain",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      },
+      {
+        "criterion": "The destination should offer stunning scenery that rewards the effort.",
+        "raised_by": "sim_1",
+        "id": "criterion_scenery",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      },
+      {
+        "criterion": "The cost of the trip (flights, permits, gear rentals) should be understood and acceptable before committing to a destination.",
+        "raised_by": "sim_2",
+        "id": "criterion_cost",
+        "source_message_ids": [
+          "msg_3"
+        ],
+        "revision": 1
+      }
+    ],
+    "proposals": [
+      {
+        "proposal": "Go to the North Cascades for the hiking trip.",
+        "proposed_by": "sim_1",
+        "id": "proposal_north_cascades",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal": "Go to the Wind River Range for the hiking trip.",
+        "proposed_by": "sim_1",
+        "id": "proposal_wind_river",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      },
+      {
+        "proposal": "Explore less expensive alternative destinations that still offer good scenery and challenge.",
+        "proposed_by": "sim_2",
+        "id": "proposal_less_expensive_alt",
+        "source_message_ids": [
+          "msg_3"
+        ],
+        "revision": 1
+      }
+    ],
+    "claims": [],
+    "assumptions": [
+      {
+        "assumption": "The group takes a hiking trip on a yearly basis.",
+        "stated_by": "human_admin",
+        "id": "assumption_yearly",
+        "source_message_ids": [
+          "msg_1"
+        ],
+        "revision": 1
+      }
+    ],
+    "arguments": [
+      {
+        "argument": "Late July or August is optimal because snow has cleared from high-country routes but crowds have not yet peaked.",
+        "made_by": "sim_1",
+        "supports": "position_alex_timing",
+        "id": "argument_timing_snow_crowds",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      }
+    ],
+    "positions": [
+      {
+        "position": "Late July or August is the best time for the trip.",
+        "held_by": "sim_1",
+        "id": "position_alex_timing",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "participant_id": "sim_1",
+        "revision": 1
+      }
+    ],
+    "relationships": [],
+    "evidence": [],
+    "claim_checks": [],
+    "unresolved": [
+      {
+        "question": "Where should the group go for the yearly hiking trip?",
+        "raised_by": "human_admin",
+        "id": "unresolved_where",
+        "source_message_ids": [
+          "msg_1"
+        ],
+        "revision": 1
+      },
+      {
+        "question": "When should the group go for the yearly hiking trip?",
+        "raised_by": "human_admin",
+        "id": "unresolved_when",
+        "source_message_ids": [
+          "msg_1"
+        ],
+        "revision": 1
+      },
+      {
+        "question": "What is the group's general fitness level this year?",
+        "raised_by": "sim_1",
+        "id": "unresolved_fitness",
+        "source_message_ids": [
+          "msg_2"
+        ],
+        "revision": 1
+      },
+      {
+        "question": "What are the rough cost estimates for flights, permits, and gear rentals for the North Cascades and Wind River Range options?",
+        "raised_by": "sim_2",
+        "id": "unresolved_cost_estimates",
+        "source_message_ids": [
+          "msg_3"
+        ],
+        "revision": 1
+      },
+      {
+        "question": "Where is each group member flying from, and how does that affect travel costs to the candidate destinations?",
+        "raised_by": "sim_2",
+        "id": "unresolved_departure_locations",
+        "source_message_ids": [
+          "msg_3"
+        ],
+        "revision": 1
+      }
+    ],
+    "decision": {
+      "status": "not_recorded"
+    },
+    "messages": [
+      {
+        "id": "msg_1",
+        "speaker_id": "human_admin",
+        "text": "hi, time for yearly hike, where and when? thoughts?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:41:15.421805+00:00"
+      },
+      {
+        "id": "msg_2",
+        "speaker_id": "sim_1",
+        "text": "Great, love that it's that time again! My vote is for something with real elevation gain and technical terrain — somewhere like the North Cascades or the Wind River Range would give us a proper challenge and stunning scenery that actually rewards the effort. Late July or August tends to be the sweet spot for high-country routes when snow has cleared but crowds haven't peaked. What's the group's general fitness level looking like this year?",
+        "source": "simulated",
+        "recorded_at": "2026-10-04T19:41:36.332772+00:00"
+      },
+      {
+        "id": "msg_3",
+        "speaker_id": "sim_2",
+        "text": "Both options sound amazing, but before I get too excited I'd love to know what we're looking at cost-wise — travel to the North Cascades versus the Wind River Range could be pretty different depending on where everyone is flying from. Can we nail down rough estimates for flights, permits, and gear rentals before we commit to either? I'm also wondering if there are any less expensive alternatives that still check the scenery and challenge boxes.",
+        "source": "simulated",
+        "recorded_at": "2026-10-04T19:42:24.661410+00:00"
+      },
+      {
+        "id": "msg_4",
+        "speaker_id": "human_admin",
+        "text": "how about archies ? I hear its great in September?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:43:27.098092+00:00"
+      },
+      {
+        "id": "msg_5",
+        "speaker_id": "sim_3",
+        "text": "Arches is a really interesting suggestion — it's generally more accessible than the other options, with well-maintained trails and paved paths to many of the iconic features, which I appreciate. That said, September in Arches can still be quite hot, so I'd want to understand how that affects trail conditions and whether everyone in the group can manage heat comfortably. It also tends to be less technically demanding than the North Cascades or Wind River Range, so worth checking if that works for what Alex is looking for too.",
+        "source": "simulated",
+        "recorded_at": "2026-10-04T19:43:51.811789+00:00"
+      },
+      {
+        "id": "msg_6",
+        "speaker_id": "human_admin",
+        "text": "pact, check claim on Jordan?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:46:03.322925+00:00"
+      },
+      {
+        "id": "msg_7",
+        "speaker_id": "human_admin",
+        "text": "pact, check claim on Jordan?",
+        "source": "human",
+        "recorded_at": "2026-10-04T19:46:56.854832+00:00"
+      }
+    ],
+    "snapshots": [],
+    "change_log": [
+      {
+        "version": 1,
+        "entity_id": "unresolved_where",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "question": "Where should the group go for the yearly hiking trip?",
+          "raised_by": "human_admin",
+          "id": "unresolved_where",
+          "source_message_ids": [
+            "msg_1"
+          ]
+        },
+        "source_message_id": "msg_1",
+        "quote": "where and when? thoughts?",
+        "reason": "The admin has opened two key unresolved questions: where the group should hike, and when.",
+        "recorded_at": "2026-10-04T19:41:21.967866+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "unresolved_when",
+        "section": "unresolved",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "question": "When should the group go for the yearly hiking trip?",
+          "raised_by": "human_admin",
+          "id": "unresolved_when",
+          "source_message_ids": [
+            "msg_1"
+          ]
+        },
+        "source_message_id": "msg_1",
+        "quote": "where and when? thoughts?",
+        "reason": "The admin has also raised the question of timing for the trip.",
+        "recorded_at": "2026-10-04T19:41:21.967920+00:00"
+      },
+      {
+        "version": 1,
+        "entity_id": "assumption_yearly",
+        "section": "assumptions",
+        "participant_id": "human_admin",
+        "previous_value": null,
+        "new_value": {
+          "assumption": "The group takes a hiking trip on a yearly basis.",
+          "stated_by": "human_admin",
+          "id": "assumption_yearly",
+          "source_message_ids": [
+            "msg_1"
+          ]
+        },
+        "source_message_id": "msg_1",
+        "quote": "time for yearly hike",
+        "reason": "The admin frames this as a recurring yearly event, which is a background assumption shaping the decision.",
+        "recorded_at": "2026-10-04T19:41:21.967943+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "proposal_north_cascades",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal": "Go to the North Cascades for the hiking trip.",
+          "proposed_by": "sim_1",
+          "id": "proposal_north_cascades",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "somewhere like the North Cascades or the Wind River Range would give us a proper challenge and stunning scenery that actually rewards the effort",
+        "reason": "Alex proposes the North Cascades as a destination candidate, citing challenge and scenery.",
+        "recorded_at": "2026-10-04T19:41:51.166862+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "proposal_wind_river",
+        "section": "proposals",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "proposal": "Go to the Wind River Range for the hiking trip.",
+          "proposed_by": "sim_1",
+          "id": "proposal_wind_river",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "somewhere like the North Cascades or the Wind River Range would give us a proper challenge and stunning scenery that actually rewards the effort",
+        "reason": "Alex proposes the Wind River Range as a destination candidate, citing challenge and scenery.",
+        "recorded_at": "2026-10-04T19:41:51.166922+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "position_alex_timing",
+        "section": "positions",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "position": "Late July or August is the best time for the trip.",
+          "held_by": "sim_1",
+          "id": "position_alex_timing",
+          "source_message_ids": [
+            "msg_2"
+          ],
+          "participant_id": "sim_1"
+        },
+        "source_message_id": "msg_2",
+        "quote": "Late July or August tends to be the sweet spot for high-country routes when snow has cleared but crowds haven't peaked.",
+        "reason": "Alex expresses a personal position that late July or August is the ideal timing window.",
+        "recorded_at": "2026-10-04T19:41:51.166953+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "criterion_elevation_terrain",
+        "section": "criteria",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "criterion": "The destination should have significant elevation gain and technical terrain.",
+          "raised_by": "sim_1",
+          "id": "criterion_elevation_terrain",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "something with real elevation gain and technical terrain",
+        "reason": "Alex raises significant elevation gain and technical terrain as a desirable criterion for the destination.",
+        "recorded_at": "2026-10-04T19:41:51.166975+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "criterion_scenery",
+        "section": "criteria",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "criterion": "The destination should offer stunning scenery that rewards the effort.",
+          "raised_by": "sim_1",
+          "id": "criterion_scenery",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "stunning scenery that actually rewards the effort",
+        "reason": "Alex raises rewarding, stunning scenery as a desirable criterion.",
+        "recorded_at": "2026-10-04T19:41:51.166994+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "argument_timing_snow_crowds",
+        "section": "arguments",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "argument": "Late July or August is optimal because snow has cleared from high-country routes but crowds have not yet peaked.",
+          "made_by": "sim_1",
+          "supports": "position_alex_timing",
+          "id": "argument_timing_snow_crowds",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "Late July or August tends to be the sweet spot for high-country routes when snow has cleared but crowds haven't peaked.",
+        "reason": "Alex provides a factual-style rationale for the late July/August timing: snow has cleared and crowds are not yet at peak.",
+        "recorded_at": "2026-10-04T19:41:51.167011+00:00"
+      },
+      {
+        "version": 2,
+        "entity_id": "unresolved_fitness",
+        "section": "unresolved",
+        "participant_id": "sim_1",
+        "previous_value": null,
+        "new_value": {
+          "question": "What is the group's general fitness level this year?",
+          "raised_by": "sim_1",
+          "id": "unresolved_fitness",
+          "source_message_ids": [
+            "msg_2"
+          ]
+        },
+        "source_message_id": "msg_2",
+        "quote": "What's the group's general fitness level looking like this year?",
+        "reason": "Alex raises the group's current fitness level as an open question relevant to choosing a suitable destination.",
+        "recorded_at": "2026-10-04T19:41:51.167028+00:00"
+      },
+      {
+        "version": 3,
+        "entity_id": "criterion_cost",
+        "section": "criteria",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "criterion": "The cost of the trip (flights, permits, gear rentals) should be understood and acceptable before committing to a destination.",
+          "raised_by": "sim_2",
+          "id": "criterion_cost",
+          "source_message_ids": [
+            "msg_3"
+          ],
+          "revision": 1
+        },
+        "source_message_id": "msg_3",
+        "quote": "before I get too excited I'd love to know what we're looking at cost-wise",
+        "reason": "Sam raises cost as a criterion that should be understood before committing to a destination.",
+        "recorded_at": "2026-10-04T19:42:34.902510+00:00"
+      },
+      {
+        "version": 3,
+        "entity_id": "proposal_less_expensive_alt",
+        "section": "proposals",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "proposal": "Explore less expensive alternative destinations that still offer good scenery and challenge.",
+          "proposed_by": "sim_2",
+          "id": "proposal_less_expensive_alt",
+          "source_message_ids": [
+            "msg_3"
+          ],
+          "revision": 1
+        },
+        "source_message_id": "msg_3",
+        "quote": "I'm also wondering if there are any less expensive alternatives that still check the scenery and challenge boxes.",
+        "reason": "Sam raises the possibility of a less expensive alternative destination that still meets the scenery and challenge criteria.",
+        "recorded_at": "2026-10-04T19:42:34.902587+00:00"
+      },
+      {
+        "version": 3,
+        "entity_id": "unresolved_cost_estimates",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "question": "What are the rough cost estimates for flights, permits, and gear rentals for the North Cascades and Wind River Range options?",
+          "raised_by": "sim_2",
+          "id": "unresolved_cost_estimates",
+          "source_message_ids": [
+            "msg_3"
+          ],
+          "revision": 1
+        },
+        "source_message_id": "msg_3",
+        "quote": "Can we nail down rough estimates for flights, permits, and gear rentals before we commit to either?",
+        "reason": "Sam raises the need for rough cost estimates (flights, permits, gear rentals) for the candidate destinations as an open question.",
+        "recorded_at": "2026-10-04T19:42:34.902629+00:00"
+      },
+      {
+        "version": 3,
+        "entity_id": "unresolved_departure_locations",
+        "section": "unresolved",
+        "participant_id": "sim_2",
+        "previous_value": null,
+        "new_value": {
+          "question": "Where is each group member flying from, and how does that affect travel costs to the candidate destinations?",
+          "raised_by": "sim_2",
+          "id": "unresolved_departure_locations",
+          "source_message_ids": [
+            "msg_3"
+          ],
+          "revision": 1
+        },
+        "source_message_id": "msg_3",
+        "quote": "travel to the North Cascades versus the Wind River Range could be pretty different depending on where everyone is flying from",
+        "reason": "Sam flags that travel costs depend on where group members are flying from, which is currently unknown.",
+        "recorded_at": "2026-10-04T19:42:34.902671+00:00"
+      }
+    ],
+    "audit": [
+      {
+        "at": "2026-10-04T19:41:21.967954+00:00",
+        "event": "observation",
+        "detail": "Processed 3 proposed card change(s).",
+        "message_id": "msg_1"
+      },
+      {
+        "at": "2026-10-04T19:41:51.167038+00:00",
+        "event": "observation",
+        "detail": "Processed 7 proposed card change(s).",
+        "message_id": "msg_2"
+      },
+      {
+        "at": "2026-10-04T19:42:34.902717+00:00",
+        "event": "observation",
+        "detail": "Processed 4 proposed card change(s).",
+        "message_id": "msg_3"
+      },
+      {
+        "at": "2026-10-04T19:43:39.108207+00:00",
+        "event": "observation_error",
+        "detail": "ValueError",
+        "message_id": "msg_4"
+      },
+      {
+        "at": "2026-10-04T19:44:13.722732+00:00",
+        "event": "observation_error",
+        "detail": "ValueError",
+        "message_id": "msg_5"
+      },
+      {
+        "at": "2026-10-04T19:46:09.471489+00:00",
+        "event": "interpretation_pending",
+        "detail": "Ambiguous item held for confirmation.",
+        "message_id": "msg_6"
+      },
+      {
+        "at": "2026-10-04T19:46:09.471523+00:00",
+        "event": "observation",
+        "detail": "Processed 1 proposed card change(s).",
+        "message_id": "msg_6"
+      },
+      {
+        "at": "2026-10-04T19:47:03.188544+00:00",
+        "event": "interpretation_pending",
+        "detail": "Ambiguous item held for confirmation.",
+        "message_id": "msg_7"
+      },
+      {
+        "at": "2026-10-04T19:47:03.188580+00:00",
+        "event": "observation",
+        "detail": "Processed 1 proposed card change(s).",
+        "message_id": "msg_7"
+      }
+    ],
+    "bot_turns": 3,
+    "max_bot_turns": 18,
+    "bot_order": [
+      "sim_1",
+      "sim_2",
+      "sim_3"
+    ],
+    "next_bot_index": 3,
+    "facilitation": [],
+    "run_settings": {
+      "backend": "live",
+      "participant_model": "claude-sonnet-4-6",
+      "research_model": "claude-sonnet-4-6"
+    }
+  },
+  "profiles": [
+    {
+      "id": "sim_1",
+      "name": "Alex",
+      "role": "experienced hiker",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Prioritize challenging trails and explain what makes a route worthwhile."
+    },
+    {
+      "id": "sim_2",
+      "name": "Sam",
+      "role": "budget-conscious planner",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Keep costs manageable and ask for concrete cost assumptions."
+    },
+    {
+      "id": "sim_3",
+      "name": "Jordan",
+      "role": "accessibility-focused",
+      "mapping_allowed": true,
+      "share_allowed": true,
+      "guidance": "Focus on practical access needs and travel burdens."
+    }
+  ]
+}

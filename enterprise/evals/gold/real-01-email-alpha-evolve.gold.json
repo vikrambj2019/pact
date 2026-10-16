@@ -1,0 +1,341 @@
+{
+  "id": "real-01-email-alpha-evolve",
+  "level": "real-email",
+  "source_file": "raw/ent-04-email-thread-example1.txt",
+  "scenario_notes": "Five emails to a group of 6-10 people, then Vikram's unsent draft reply pasted at the top with no headers. 'RL' is Ratnakar Lavu, who is never on the thread. Jessica's plan to present to Ratnakar 'this Friday' is replaced by an Oct 14 meeting with RL. Nobody replies in the thread, so almost nothing is agreed.",
+  "decision_question": "What should Wednesday's (Oct 14) session with RL cover: only the Alpha Evolve progress update, or also the broader always-on learning assessment?",
+  "outcome": "open: Monisha proposes Alpha Evolve only on Wednesday; the broader assessment (end of October) is kept separate; feedback requested",
+  "pact_state": {
+    "options": [
+      {
+        "title": "Wednesday's session covers Alpha Evolve progress, key learnings and potential only",
+        "terms": [
+          "alpha evolve progress",
+          "key learnings",
+          "wednesday"
+        ],
+        "msgs": [
+          "m5"
+        ],
+        "quote": "let's focus on Alpha Evolve's progress, key learnings, and potential"
+      },
+      {
+        "title": "Broader assessment covers Alpha Evolve, Auto-Research and System 1, kept separate",
+        "terms": [
+          "auto-research",
+          "broader",
+          "system 1"
+        ],
+        "msgs": [
+          "m5"
+        ],
+        "quote": "The broader assessment includes Alpha Evolve, Auto-Research, and System 1"
+      },
+      {
+        "title": "Narrow the broader assessment to self-improvement and optimization criteria, without System 1",
+        "terms": [
+          "self-improvement",
+          "optimization",
+          "narrow"
+        ],
+        "msgs": [
+          "m6"
+        ],
+        "required": false,
+        "quote": "Let's narrow down to self-improvement and criteria for optimization please."
+      }
+    ],
+    "positions": [
+      {
+        "participant": "Monisha",
+        "option": "Wednesday's session covers Alpha Evolve progress, key learnings and potential only",
+        "stance": "proposed",
+        "msgs": [
+          "m5"
+        ],
+        "quote": "let's focus on Alpha Evolve's progress, key learnings, and potential",
+        "stance_any": [
+          "proposed",
+          "support"
+        ],
+        "option_terms": [
+          "alpha evolve progress",
+          "key learnings",
+          "wednesday"
+        ]
+      },
+      {
+        "participant": "Monisha",
+        "option": "Broader assessment covers Alpha Evolve, Auto-Research and System 1, kept separate",
+        "stance": "proposed",
+        "msgs": [
+          "m5"
+        ],
+        "quote": "The broader assessment includes Alpha Evolve, Auto-Research, and System 1",
+        "stance_any": [
+          "proposed",
+          "support"
+        ],
+        "option_terms": [
+          "auto-research",
+          "broader",
+          "system 1"
+        ],
+        "required": false
+      },
+      {
+        "participant": "Vikram",
+        "option": "Wednesday's session covers Alpha Evolve progress, key learnings and potential only",
+        "stance": "support",
+        "msgs": [
+          "m6"
+        ],
+        "quote": "I am good with how you are thinking about it",
+        "option_terms": [
+          "alpha evolve progress",
+          "key learnings",
+          "wednesday"
+        ],
+        "required": false,
+        "note": "m6 has no headers (a pasted draft), so its author is unknown to the pipeline; the signature says Vikram"
+      },
+      {
+        "participant": "Vikram",
+        "option": "Narrow the broader assessment to self-improvement and optimization criteria, without System 1",
+        "stance": "proposed",
+        "msgs": [
+          "m6"
+        ],
+        "quote": "Let's narrow down to self-improvement and criteria for optimization please.",
+        "stance_any": [
+          "proposed",
+          "support"
+        ],
+        "option_terms": [
+          "self-improvement",
+          "optimization",
+          "narrow"
+        ],
+        "required": false
+      },
+      {
+        "participant": "Vikram",
+        "option": "Broader assessment covers Alpha Evolve, Auto-Research and System 1, kept separate",
+        "stance": "oppose",
+        "msgs": [
+          "m6"
+        ],
+        "quote": "I would not combine System 1 thinking here.",
+        "stance_any": [
+          "oppose",
+          "conditional"
+        ],
+        "option_terms": [
+          "auto-research",
+          "broader",
+          "system 1"
+        ],
+        "required": false
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Time with RL is hard to come by; the slot is Oct 14 at 10:30 AM ET",
+        "msgs": [
+          "m4"
+        ],
+        "quote": "Please adjust your schedules as time with RL is hard to come by."
+      },
+      {
+        "text": "Broader assessment and recommendations go to RL by the end of October",
+        "msgs": [
+          "m5"
+        ],
+        "quote": "We're targeting the end of October to bring our assessment"
+      }
+    ],
+    "claims": [
+      {
+        "text": "The topic needs another meeting with RL because of the classification of Corporate Services",
+        "msgs": [
+          "m3"
+        ],
+        "quote": "Due to the classification of the Corporate Services"
+      },
+      {
+        "text": "Superseded: the plan to present to Ratnakar this Friday",
+        "msgs": [
+          "m2"
+        ],
+        "quote": "We would like to present the Alpha Evolve progress to Ratnakar this Friday.",
+        "status": "superseded"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Vikram would not combine System 1 in the broader assessment",
+        "status": "open",
+        "by": "Vikram",
+        "against": "Broader assessment covers Alpha Evolve, Auto-Research and System 1, kept separate",
+        "msgs": [
+          "m6"
+        ],
+        "quote": "I would not combine System 1 thinking here.",
+        "match_any": [
+          "system 1"
+        ],
+        "required": false
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Perspectives on the proposed focus requested from Sommer, Jessica, Maddy and Vikram are outstanding",
+        "status": "open",
+        "msgs": [
+          "m5"
+        ],
+        "quote": "welcome your perspectives on the proposed focus ahead of Wednesday",
+        "match_any": [
+          "perspective",
+          "feedback",
+          "input"
+        ],
+        "required": false
+      },
+      {
+        "text": "Guruprasad and Sangeetha have not confirmed the two-pager content and timelines",
+        "status": "open",
+        "msgs": [
+          "m2"
+        ],
+        "quote": "please confirm that I have represented your team's accomplishments",
+        "match_any": [
+          "confirm"
+        ],
+        "required": false
+      }
+    ],
+    "actions": [
+      {
+        "text": "Find exclusive time with RL (with Joanna)",
+        "owner": "Sommer",
+        "status": "done",
+        "msgs": [
+          "m3",
+          "m4"
+        ],
+        "quote": "I will work with Joanna to find exclusive time.",
+        "match_any": [
+          "exclusive time",
+          "time with rl"
+        ],
+        "required": false
+      },
+      {
+        "text": "Send the invite for Oct 14 at 10:30 AM ET",
+        "owner": "Sommer",
+        "msgs": [
+          "m4"
+        ],
+        "quote": "I'm sending an invite to all for this.",
+        "match_any": [
+          "invite",
+          "10:30"
+        ],
+        "required": false
+      },
+      {
+        "text": "Confirm the two-pager represents your team's accomplishments",
+        "owner": "Guruprasad",
+        "owner_confirmed": false,
+        "msgs": [
+          "m2"
+        ],
+        "quote": "please confirm that I have represented your team's accomplishments",
+        "match_any": [
+          "accomplishments",
+          "represented"
+        ],
+        "required": false
+      },
+      {
+        "text": "Confirm you are comfortable with the definitive timelines",
+        "owner": "Sangeetha",
+        "owner_confirmed": false,
+        "msgs": [
+          "m2"
+        ],
+        "quote": "Please confirm you are comfortable with the definitive timelines.",
+        "match_any": [
+          "timelines"
+        ],
+        "required": false
+      },
+      {
+        "text": "Adjust schedules for the Oct 14 meeting",
+        "owner": null,
+        "msgs": [
+          "m4"
+        ],
+        "quote": "Please adjust your schedules as time with RL is hard to come by.",
+        "match_any": [
+          "adjust",
+          "schedule"
+        ],
+        "required": false
+      }
+    ],
+    "emerging_preference": {
+      "direction": "none",
+      "reason": "Monisha proposes; no named recipient has said they support it; Vikram's agreement is in an unsent draft with unknown audience"
+    }
+  },
+  "executive_summary": {
+    "title": "What should Wednesday's (Oct 14) session with RL cover: only the Alpha Evolve progress update, or also the broader always-on learning assessment?",
+    "counts": {
+      "options": 3,
+      "dropped": 0,
+      "open_objections": 0,
+      "open_blockers": 1,
+      "unowned_actions": 1
+    },
+    "count_tolerance": {
+      "open_objections": [
+        0,
+        1
+      ],
+      "open_blockers": [
+        0,
+        3
+      ],
+      "unowned_actions": [
+        0,
+        2
+      ]
+    },
+    "preference": "No directional preference recorded."
+  },
+  "audience": {
+    "audience_unknown_units": [
+      "m6"
+    ],
+    "restricted_units": [],
+    "note": "m5 went to 10 people; Maddy, Naga and Duncan appear only on m5, so earlier mails were carried to them as quoted history"
+  },
+  "traps": [
+    "RL / Ratnakar is mentioned but is not on any header: no position, no action",
+    "Jessica's 'present this Friday' plan is replaced by the Oct 14 meeting; do not list both as live",
+    "'@Parab please confirm' and '@Somayajula please confirm' are actions for them, not acceptance and not agreement",
+    "Being on To or Cc of Monisha's email is not agreement with her focus",
+    "m6 has no sender or recipients: do not attribute it to Jessica, Sommer or Monisha, and do not call it a reply to the group",
+    "Maddy, Naga, Ashok and Duncan are named only in passing and have no position"
+  ],
+  "card_must_include": [
+    "Oct 14",
+    "end of October"
+  ],
+  "card_must_not_include": [
+    "Ratnakar supports",
+    "Monisha has decided"
+  ]
+}

@@ -1,0 +1,3792 @@
+{
+ "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/social/evals/outputs/ent-05-medium-feature-priority.output.json",
+ "model": "claude-sonnet-4-6",
+ "participants": [
+  "Alex",
+  "Beth",
+  "Cam",
+  "Dana",
+  "Eli"
+ ],
+ "span_msgs": {
+  "b1.s1": "m1",
+  "b1.s2": "m1",
+  "b2.s1": "m2",
+  "b2.s2": "m2",
+  "b2.s3": "m2",
+  "b3.s1": "m3",
+  "b3.s2": "m3",
+  "b4.s1": "m4",
+  "b4.s2": "m4",
+  "b5.s1": "m5",
+  "b5.s2": "m5",
+  "b6.s1": "m6",
+  "b6.s2": "m6",
+  "b6.s3": "m6",
+  "b7.s1": "m7",
+  "b7.s2": "m7",
+  "b8.s1": "m8",
+  "b9.s1": "m9",
+  "b9.s2": "m9",
+  "b9.s3": "m9",
+  "b10.s1": "m10",
+  "b10.s2": "m10",
+  "b10.s3": "m10",
+  "b11.s1": "m11",
+  "b12.s1": "m12",
+  "b13.s1": "m13",
+  "b14.s1": "m14",
+  "b14.s2": "m14",
+  "b14.s3": "m14",
+  "b14.s4": "m14",
+  "b15.s1": "m15",
+  "b15.s2": "m15",
+  "b16.s1": "m16",
+  "b16.s2": "m16",
+  "b16.s3": "m16",
+  "b17.s1": "m17",
+  "b18.s1": "m18",
+  "b19.s1": "m19",
+  "b19.s2": "m19",
+  "b19.s3": "m19",
+  "b19.s4": "m19",
+  "b20.s1": "m20",
+  "b21.s1": "m21",
+  "b21.s2": "m21",
+  "b22.s1": "m22",
+  "b22.s2": "m22",
+  "b23.s1": "m23",
+  "b23.s2": "m23",
+  "b23.s3": "m23",
+  "b24.s1": "m24",
+  "b24.s2": "m24",
+  "b25.s1": "m25",
+  "b25.s2": "m25",
+  "b26.s1": "m26",
+  "b26.s2": "m26",
+  "b27.s1": "m27",
+  "b27.s2": "m27",
+  "b27.s3": "m27",
+  "b28.s1": "m28",
+  "b28.s2": "m28",
+  "b28.s3": "m28",
+  "b29.s1": "m29",
+  "b30.s1": "m30",
+  "b31.s1": "m31",
+  "b31.s2": "m31",
+  "b31.s3": "m31",
+  "b32.s1": "m32",
+  "b32.s2": "m32",
+  "b32.s3": "m32",
+  "b33.s1": "m33",
+  "b33.s2": "m33",
+  "b33.s3": "m33",
+  "b33.s4": "m33",
+  "b34.s1": "m34",
+  "b35.s1": "m35",
+  "b35.s2": "m35",
+  "b36.s1": "m36",
+  "b36.s2": "m36",
+  "b36.s3": "m37",
+  "b36.s4": "m37",
+  "b36.s5": "m37",
+  "b37.s1": "m38",
+  "b37.s2": "m38",
+  "b38.s1": "m39",
+  "b39.s1": "m40",
+  "b39.s2": "m40",
+  "b40.s1": "m41",
+  "b41.s1": "m42",
+  "b41.s2": "m42",
+  "b42.s1": "m43",
+  "b43.s1": "m44",
+  "b43.s2": "m44",
+  "b43.s3": "m44",
+  "b44.s1": "m45",
+  "b44.s2": "m45",
+  "b45.s1": "m46",
+  "b45.s2": "m46",
+  "b46.s1": "m47",
+  "b47.s1": "m48",
+  "b48.s1": "m49",
+  "b49.s1": "m50"
+ },
+ "elements": [
+  {
+   "id": "q1",
+   "kind": "question",
+   "title": "Which feature to build in Q1",
+   "author": "Alex",
+   "created_span": "b1.s2",
+   "status": "decided",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s2",
+    "b21.s2",
+    "b45.s1"
+   ]
+  },
+  {
+   "id": "opt1",
+   "kind": "option",
+   "title": "Notifications",
+   "author": "Beth",
+   "created_span": "b2.s1",
+   "status": "chosen",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b5.s1",
+    "b7.s1",
+    "b7.s2",
+    "b10.s1",
+    "b14.s2",
+    "b24.s2",
+    "b25.s1",
+    "b26.s2",
+    "b26.s1",
+    "b28.s1",
+    "b28.s2",
+    "b28.s3",
+    "b29.s1",
+    "b35.s1",
+    "b33.s3",
+    "b36.s5",
+    "b37.s1",
+    "b37.s2",
+    "b39.s1",
+    "b38.s1",
+    "b45.s1",
+    "b46.s1",
+    "b47.s1",
+    "b48.s1"
+   ]
+  },
+  {
+   "id": "clm1",
+   "kind": "claim",
+   "title": "Notifications deferred twice already",
+   "author": "Beth",
+   "created_span": "b2.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s2"
+   ]
+  },
+  {
+   "id": "clm2",
+   "kind": "claim",
+   "title": "Users keep asking for notifications",
+   "author": "Beth",
+   "created_span": "b2.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s3"
+   ]
+  },
+  {
+   "id": "opt2",
+   "kind": "option",
+   "title": "Search",
+   "author": "Cam",
+   "created_span": "b3.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s1",
+    "b5.s1",
+    "b14.s4",
+    "b27.s1",
+    "b35.s1",
+    "b33.s2",
+    "b35.s2",
+    "b45.s1"
+   ]
+  },
+  {
+   "id": "clm3",
+   "kind": "claim",
+   "title": "Search top item on public tracker for six months",
+   "author": "Cam",
+   "created_span": "b3.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s2"
+   ]
+  },
+  {
+   "id": "opt3",
+   "kind": "option",
+   "title": "API integrations",
+   "author": "Dana",
+   "created_span": "b4.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s1",
+    "b5.s1",
+    "b20.s1",
+    "b21.s2",
+    "b22.s1",
+    "b22.s2"
+   ]
+  },
+  {
+   "id": "clm4",
+   "kind": "claim",
+   "title": "Three enterprise deals stalled due to missing OAuth",
+   "author": "Dana",
+   "created_span": "b4.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s2"
+   ]
+  },
+  {
+   "id": "crit1",
+   "kind": "criterion",
+   "title": "Revenue impact (stalled enterprise deals)",
+   "author": "Dana",
+   "created_span": "b4.s2",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s2"
+   ]
+  },
+  {
+   "id": "clm5",
+   "kind": "claim",
+   "title": "All three options (notifications, search, API integrations) are valid",
+   "author": "Eli",
+   "created_span": "b5.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt1",
+     "opt2",
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b5.s1"
+   ]
+  },
+  {
+   "id": "blk1",
+   "kind": "blocker",
+   "title": "Unclear whether team has capacity to ship a Q1 feature",
+   "author": "Eli",
+   "created_span": "b5.s2",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "q1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b5.s2",
+    "b6.s1"
+   ]
+  },
+  {
+   "id": "con1",
+   "kind": "constraint",
+   "title": "Only two backend engineers available for Q1",
+   "author": "Alex",
+   "created_span": "b6.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s1"
+   ]
+  },
+  {
+   "id": "con2",
+   "kind": "constraint",
+   "title": "Diego on infrastructure until end of January",
+   "author": "Alex",
+   "created_span": "b6.s2",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "negotiable"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s2"
+   ]
+  },
+  {
+   "id": "clm6",
+   "kind": "claim",
+   "title": "Effectively one backend engineer available for first month of Q1",
+   "author": "Alex",
+   "created_span": "b6.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s3"
+   ]
+  },
+  {
+   "id": "crit2",
+   "kind": "criterion",
+   "title": "Backend engineer capacity in Q1",
+   "author": "Alex",
+   "created_span": "b6.s3",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s3"
+   ]
+  },
+  {
+   "id": "clm7",
+   "kind": "claim",
+   "title": "Notifications does not require Diego",
+   "author": "Beth",
+   "created_span": "b7.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b7.s1"
+   ]
+  },
+  {
+   "id": "clm8",
+   "kind": "claim",
+   "title": "Core push layer for notifications can be done in two weeks",
+   "author": "Beth",
+   "created_span": "b7.s2",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b7.s2",
+    "b9.s2",
+    "b23.s3"
+   ]
+  },
+  {
+   "id": "blk2",
+   "kind": "blocker",
+   "title": "Whether Beth's two-week notification estimate is realistic",
+   "author": "Cam",
+   "created_span": "b8.s1",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b8.s1",
+    "b9.s1"
+   ]
+  },
+  {
+   "id": "clm9",
+   "kind": "claim",
+   "title": "Beth built notification systems at her last two companies",
+   "author": "Beth",
+   "created_span": "b9.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b9.s1"
+   ]
+  },
+  {
+   "id": "clm10",
+   "kind": "claim",
+   "title": "Notifications needs additional week to hook up email beyond push layer",
+   "author": "Beth",
+   "created_span": "b9.s3",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b9.s3"
+   ]
+  },
+  {
+   "id": "blk3",
+   "kind": "blocker",
+   "title": "December UX study results not yet available",
+   "author": "Dana",
+   "created_span": "b10.s2",
+   "status": "resolved",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "missing_info",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b10.s2",
+    "b10.s3",
+    "b12.s1",
+    "b36.s1"
+   ]
+  },
+  {
+   "id": "blk4",
+   "kind": "blocker",
+   "title": "When will the December UX study results arrive?",
+   "author": "Alex",
+   "created_span": "b11.s1",
+   "status": "resolved",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "open_question",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b11.s1",
+    "b12.s1",
+    "b36.s1"
+   ]
+  },
+  {
+   "id": "clm11",
+   "kind": "claim",
+   "title": "UX study results expected around January 15",
+   "author": "Dana",
+   "created_span": "b12.s1",
+   "status": "superseded",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": "clm28",
+   "spans": [
+    "b12.s1",
+    "b31.s2"
+   ]
+  },
+  {
+   "id": "clm12",
+   "kind": "claim",
+   "title": "Cam would lean toward Search if notifications estimate doesn't hold",
+   "author": "Cam",
+   "created_span": "b14.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "priority",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b14.s4"
+   ]
+  },
+  {
+   "id": "clm13",
+   "kind": "claim",
+   "title": "Search scope: Elasticsearch index rebuild plus relevance model",
+   "author": "Cam",
+   "created_span": "b16.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b16.s1",
+    "b16.s2"
+   ]
+  },
+  {
+   "id": "clm14",
+   "kind": "claim",
+   "title": "Search estimated at four to five weeks",
+   "author": "Cam",
+   "created_span": "b16.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b16.s3",
+    "b27.s2"
+   ]
+  },
+  {
+   "id": "clm15",
+   "kind": "claim",
+   "title": "Search estimate (4-5 weeks) longer than notifications estimate (2-3 weeks)",
+   "author": "Beth",
+   "created_span": "b17.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s1"
+   ]
+  },
+  {
+   "id": "crit3",
+   "kind": "criterion",
+   "title": "Time to ship / build duration",
+   "author": "Beth",
+   "created_span": "b17.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s1"
+   ]
+  },
+  {
+   "id": "clm16",
+   "kind": "claim",
+   "title": "API integrations scope: OAuth plus Salesforce, HubSpot, Zapier connectors",
+   "author": "Dana",
+   "created_span": "b19.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s1"
+   ]
+  },
+  {
+   "id": "clm17",
+   "kind": "claim",
+   "title": "API integrations needs a full quarter minimum to ship",
+   "author": "Dana",
+   "created_span": "b19.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s2"
+   ]
+  },
+  {
+   "id": "clm18",
+   "kind": "claim",
+   "title": "API integrations depends on Diego",
+   "author": "Dana",
+   "created_span": "b19.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s3"
+   ]
+  },
+  {
+   "id": "clm19",
+   "kind": "claim",
+   "title": "OAuth layer touches auth service (implies Diego dependency)",
+   "author": "Dana",
+   "created_span": "b19.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b19.s4"
+   ]
+  },
+  {
+   "id": "clm20",
+   "kind": "claim",
+   "title": "API integrations is out for Q1 if it needs Diego",
+   "author": "Eli",
+   "created_span": "b20.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b20.s1"
+   ]
+  },
+  {
+   "id": "q2",
+   "kind": "question",
+   "title": "Which features to build in Q2",
+   "author": "Alex",
+   "created_span": "b21.s2",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b21.s2"
+   ]
+  },
+  {
+   "id": "clm21",
+   "kind": "claim",
+   "title": "Reliable notification delivery with retry logic takes four to six weeks",
+   "author": "Eli",
+   "created_span": "b23.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b23.s3"
+   ]
+  },
+  {
+   "id": "clm22",
+   "kind": "claim",
+   "title": "Four-to-six-week notifications estimate is for the production version (reliable delivery with retry logic)",
+   "author": "Beth",
+   "created_span": "b24.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b24.s1"
+   ]
+  },
+  {
+   "id": "clm23",
+   "kind": "claim",
+   "title": "Basic push-only notifications v1 still takes two weeks",
+   "author": "Beth",
+   "created_span": "b24.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b24.s2"
+   ]
+  },
+  {
+   "id": "clm24",
+   "kind": "claim",
+   "title": "Shipping a notification system that drops messages is worse than nothing",
+   "author": "Cam",
+   "created_span": "b25.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b25.s1",
+    "b25.s2"
+   ]
+  },
+  {
+   "id": "clm25",
+   "kind": "claim",
+   "title": "Dana agrees push-only notifications v1 that drops messages is unacceptable",
+   "author": "Dana",
+   "created_span": "b26.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b26.s1"
+   ]
+  },
+  {
+   "id": "con3",
+   "kind": "constraint",
+   "title": "Notifications must ship as full reliable-delivery version with retry logic, not push-only v1",
+   "author": "Dana",
+   "created_span": "b26.s2",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b26.s2",
+    "b37.s2",
+    "b38.s1"
+   ]
+  },
+  {
+   "id": "clm26",
+   "kind": "claim",
+   "title": "Notifications full version (4-6 weeks) fits within Q1 timeline",
+   "author": "Beth",
+   "created_span": "b28.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b28.s2"
+   ]
+  },
+  {
+   "id": "clm27",
+   "kind": "claim",
+   "title": "Notifications kickoff proposed for January 6",
+   "author": "Beth",
+   "created_span": "b28.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b28.s3"
+   ]
+  },
+  {
+   "id": "blk5",
+   "kind": "blocker",
+   "title": "UX study results not yet received \u2014 Dana withholding commitment",
+   "author": "Dana",
+   "created_span": "b29.s1",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "missing_info",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b29.s1",
+    "b31.s2",
+    "b36.s1"
+   ]
+  },
+  {
+   "id": "clm28",
+   "kind": "claim",
+   "title": "UX study results ready January 13",
+   "author": "Eli",
+   "created_span": "b31.s2",
+   "status": "superseded",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": "clm39",
+   "spans": [
+    "b31.s2",
+    "b36.s2"
+   ]
+  },
+  {
+   "id": "clm29",
+   "kind": "claim",
+   "title": "Team is lined up on notifications",
+   "author": "Beth",
+   "created_span": "b32.s1",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s1",
+    "b33.s1",
+    "b33.s2"
+   ]
+  },
+  {
+   "id": "clm30",
+   "kind": "claim",
+   "title": "Cam and Dana are both on board with notifications",
+   "author": "Beth",
+   "created_span": "b32.s2",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s2",
+    "b33.s1",
+    "b33.s2"
+   ]
+  },
+  {
+   "id": "clm31",
+   "kind": "claim",
+   "title": "Group agrees API integrations moves to Q2",
+   "author": "Beth",
+   "created_span": "b32.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "consensus",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b32.s3"
+   ]
+  },
+  {
+   "id": "clm32",
+   "kind": "claim",
+   "title": "Beth's claim that team is lined up on notifications is incorrect \u2014 Cam shifted to search and Dana is still conditional",
+   "author": "Alex",
+   "created_span": "b33.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b33.s1"
+   ]
+  },
+  {
+   "id": "clm33",
+   "kind": "claim",
+   "title": "Cam shifted to search (not notifications)",
+   "author": "Alex",
+   "created_span": "b33.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1",
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b33.s2"
+   ]
+  },
+  {
+   "id": "clm34",
+   "kind": "claim",
+   "title": "Dana remains conditional on notifications",
+   "author": "Alex",
+   "created_span": "b33.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b33.s3"
+   ]
+  },
+  {
+   "id": "clm35",
+   "kind": "claim",
+   "title": "Alex rejects Beth's alignment claim \u2014 Cam shifted to search, Dana still conditional",
+   "author": "Alex",
+   "created_span": "b33.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "objection",
+    "about": [
+     "clm29",
+     "clm30"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b33.s4"
+   ]
+  },
+  {
+   "id": "clm36",
+   "kind": "claim",
+   "title": "Cam's shift to search is a lean, not a firm position \u2014 per Beth",
+   "author": "Beth",
+   "created_span": "b34.s1",
+   "status": "conflicting",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "other",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b34.s1",
+    "b35.s2"
+   ]
+  },
+  {
+   "id": "clm37",
+   "kind": "claim",
+   "title": "Cam's support for search is firm, not a tentative lean",
+   "author": "Cam",
+   "created_span": "b35.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b35.s2"
+   ]
+  },
+  {
+   "id": "clm38",
+   "kind": "claim",
+   "title": "UX study results have arrived",
+   "author": "Dana",
+   "created_span": "b36.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b36.s1"
+   ]
+  },
+  {
+   "id": "clm39",
+   "kind": "claim",
+   "title": "Priya delivered UX deck early \u2014 before January 13",
+   "author": "Dana",
+   "created_span": "b36.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b36.s2"
+   ]
+  },
+  {
+   "id": "clm40",
+   "kind": "claim",
+   "title": "UX study top finding: notifications is most requested feature",
+   "author": "Dana",
+   "created_span": "b36.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b36.s3"
+   ]
+  },
+  {
+   "id": "clm41",
+   "kind": "claim",
+   "title": "71% of UX study respondents cited notifications as top request",
+   "author": "Dana",
+   "created_span": "b36.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b36.s4"
+   ]
+  },
+  {
+   "id": "clm42",
+   "kind": "claim",
+   "title": "UX study data changes Cam's view on notifications",
+   "author": "Cam",
+   "created_span": "b37.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b37.s1"
+   ]
+  },
+  {
+   "id": "q3",
+   "kind": "question",
+   "title": "Target launch date for Q1 feature",
+   "author": "Alex",
+   "created_span": "b40.s1",
+   "status": "decided",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b40.s1",
+    "b45.s2"
+   ]
+  },
+  {
+   "id": "opt4",
+   "kind": "option",
+   "title": "End of January",
+   "author": "Alex",
+   "created_span": "b40.s1",
+   "status": "dropped",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b40.s1",
+    "b41.s2",
+    "b45.s2"
+   ]
+  },
+  {
+   "id": "opt5",
+   "kind": "option",
+   "title": "End of February",
+   "author": "Cam",
+   "created_span": "b41.s1",
+   "status": "chosen",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b41.s1",
+    "b41.s2",
+    "b42.s1",
+    "b43.s3",
+    "b44.s1",
+    "b44.s2",
+    "b45.s2",
+    "b46.s1",
+    "b47.s1",
+    "b48.s1"
+   ]
+  },
+  {
+   "id": "clm43",
+   "kind": "claim",
+   "title": "January launch too tight given revised 4-6 week notifications estimate",
+   "author": "Cam",
+   "created_span": "b41.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b41.s2"
+   ]
+  },
+  {
+   "id": "clm44",
+   "kind": "claim",
+   "title": "January launch technically possible if work starts immediately",
+   "author": "Beth",
+   "created_span": "b43.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b43.s1"
+   ]
+  },
+  {
+   "id": "clm45",
+   "kind": "claim",
+   "title": "February launch provides schedule buffer",
+   "author": "Beth",
+   "created_span": "b43.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b43.s2"
+   ]
+  },
+  {
+   "id": "crit4",
+   "kind": "criterion",
+   "title": "Schedule buffer before launch date",
+   "author": "Beth",
+   "created_span": "b43.s2",
+   "status": "active",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b43.s2"
+   ]
+  },
+  {
+   "id": "clm46",
+   "kind": "claim",
+   "title": "February launch gives adequate time to test properly",
+   "author": "Eli",
+   "created_span": "b44.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt5"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b44.s2"
+   ]
+  },
+  {
+   "id": "crit5",
+   "kind": "criterion",
+   "title": "Adequate testing time before launch",
+   "author": "Eli",
+   "created_span": "b44.s2",
+   "status": "active",
+   "question_id": "q3",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b44.s2"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "seq": 1,
+   "ts": "2026-01-08T10:00:00",
+   "span_id": "b1.s2",
+   "kind": "create",
+   "element_id": "q1",
+   "participant": "Alex",
+   "payload": {
+    "title": "Which feature to build in Q1",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 2,
+   "ts": "2026-01-08T10:01:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 3,
+   "ts": "2026-01-08T10:01:00",
+   "span_id": "b2.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 4,
+   "ts": "2026-01-08T10:01:00",
+   "span_id": "b2.s2",
+   "kind": "create",
+   "element_id": "clm1",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications deferred twice already",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 5,
+   "ts": "2026-01-08T10:01:00",
+   "span_id": "b2.s3",
+   "kind": "create",
+   "element_id": "clm2",
+   "participant": "Beth",
+   "payload": {
+    "title": "Users keep asking for notifications",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 6,
+   "ts": "2026-01-08T10:02:00",
+   "span_id": "b3.s1",
+   "kind": "create",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "title": "Search",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 7,
+   "ts": "2026-01-08T10:02:00",
+   "span_id": "b3.s1",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 8,
+   "ts": "2026-01-08T10:02:00",
+   "span_id": "b3.s2",
+   "kind": "create",
+   "element_id": "clm3",
+   "participant": "Cam",
+   "payload": {
+    "title": "Search top item on public tracker for six months",
+    "kind": "claim"
+   },
+   "because": [
+    "opt2"
+   ]
+  },
+  {
+   "seq": 9,
+   "ts": "2026-01-08T10:04:00",
+   "span_id": "b4.s1",
+   "kind": "create",
+   "element_id": "opt3",
+   "participant": "Dana",
+   "payload": {
+    "title": "API integrations",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 10,
+   "ts": "2026-01-08T10:04:00",
+   "span_id": "b4.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Dana",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 11,
+   "ts": "2026-01-08T10:04:00",
+   "span_id": "b4.s2",
+   "kind": "create",
+   "element_id": "clm4",
+   "participant": "Dana",
+   "payload": {
+    "title": "Three enterprise deals stalled due to missing OAuth",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 12,
+   "ts": "2026-01-08T10:04:00",
+   "span_id": "b4.s2",
+   "kind": "create",
+   "element_id": "crit1",
+   "participant": "Dana",
+   "payload": {
+    "title": "Revenue impact (stalled enterprise deals)",
+    "kind": "criterion"
+   },
+   "because": [
+    "clm4"
+   ]
+  },
+  {
+   "seq": 13,
+   "ts": "2026-01-08T10:06:00",
+   "span_id": "b5.s1",
+   "kind": "create",
+   "element_id": "clm5",
+   "participant": "Eli",
+   "payload": {
+    "title": "All three options (notifications, search, API integrations) are valid",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 14,
+   "ts": "2026-01-08T10:06:00",
+   "span_id": "b5.s2",
+   "kind": "create",
+   "element_id": "blk1",
+   "participant": "Eli",
+   "payload": {
+    "title": "Unclear whether team has capacity to ship a Q1 feature",
+    "kind": "blocker"
+   },
+   "because": []
+  },
+  {
+   "seq": 15,
+   "ts": "2026-01-08T10:08:00",
+   "span_id": "b6.s1",
+   "kind": "create",
+   "element_id": "con1",
+   "participant": "Alex",
+   "payload": {
+    "title": "Only two backend engineers available for Q1",
+    "kind": "constraint"
+   },
+   "because": [
+    "blk1"
+   ]
+  },
+  {
+   "seq": 16,
+   "ts": "2026-01-08T10:08:00",
+   "span_id": "b6.s1",
+   "kind": "status",
+   "element_id": "blk1",
+   "participant": "Alex",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "con1"
+   ]
+  },
+  {
+   "seq": 17,
+   "ts": "2026-01-08T10:06:00",
+   "span_id": "b5.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm5"
+   ]
+  },
+  {
+   "seq": 18,
+   "ts": "2026-01-08T10:06:00",
+   "span_id": "b5.s1",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm5"
+   ]
+  },
+  {
+   "seq": 19,
+   "ts": "2026-01-08T10:06:00",
+   "span_id": "b5.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm5"
+   ]
+  },
+  {
+   "seq": 20,
+   "ts": "2026-01-08T10:08:00",
+   "span_id": "b6.s2",
+   "kind": "create",
+   "element_id": "con2",
+   "participant": "Alex",
+   "payload": {
+    "title": "Diego on infrastructure until end of January",
+    "kind": "constraint"
+   },
+   "because": [
+    "con1"
+   ]
+  },
+  {
+   "seq": 21,
+   "ts": "2026-01-08T10:08:00",
+   "span_id": "b6.s3",
+   "kind": "create",
+   "element_id": "clm6",
+   "participant": "Alex",
+   "payload": {
+    "title": "Effectively one backend engineer available for first month of Q1",
+    "kind": "claim"
+   },
+   "because": [
+    "con2",
+    "con1"
+   ]
+  },
+  {
+   "seq": 22,
+   "ts": "2026-01-08T10:08:00",
+   "span_id": "b6.s3",
+   "kind": "create",
+   "element_id": "crit2",
+   "participant": "Alex",
+   "payload": {
+    "title": "Backend engineer capacity in Q1",
+    "kind": "criterion"
+   },
+   "because": [
+    "con2",
+    "clm6"
+   ]
+  },
+  {
+   "seq": 23,
+   "ts": "2026-01-08T10:10:00",
+   "span_id": "b7.s1",
+   "kind": "create",
+   "element_id": "clm7",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications does not require Diego",
+    "kind": "claim"
+   },
+   "because": [
+    "con2",
+    "clm6"
+   ]
+  },
+  {
+   "seq": 24,
+   "ts": "2026-01-08T10:10:00",
+   "span_id": "b7.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed",
+    "conditions": "Notifications doesn't need Diego's backend time"
+   },
+   "because": [
+    "clm7",
+    "con2"
+   ]
+  },
+  {
+   "seq": 25,
+   "ts": "2026-01-08T10:10:00",
+   "span_id": "b7.s2",
+   "kind": "create",
+   "element_id": "clm8",
+   "participant": "Beth",
+   "payload": {
+    "title": "Core push layer for notifications can be done in two weeks",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 26,
+   "ts": "2026-01-08T10:10:00",
+   "span_id": "b7.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 27,
+   "ts": "2026-01-08T10:12:00",
+   "span_id": "b8.s1",
+   "kind": "create",
+   "element_id": "blk2",
+   "participant": "Cam",
+   "payload": {
+    "title": "Whether Beth's two-week notification estimate is realistic",
+    "kind": "blocker"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 28,
+   "ts": "2026-01-08T10:13:00",
+   "span_id": "b9.s1",
+   "kind": "create",
+   "element_id": "clm9",
+   "participant": "Beth",
+   "payload": {
+    "title": "Beth built notification systems at her last two companies",
+    "kind": "claim"
+   },
+   "because": [
+    "blk2",
+    "clm8"
+   ]
+  },
+  {
+   "seq": 29,
+   "ts": "2026-01-08T10:13:00",
+   "span_id": "b9.s1",
+   "kind": "status",
+   "element_id": "blk2",
+   "participant": "Beth",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm9"
+   ]
+  },
+  {
+   "seq": 30,
+   "ts": "2026-01-08T10:13:00",
+   "span_id": "b9.s2",
+   "kind": "attach",
+   "element_id": "clm8",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 31,
+   "ts": "2026-01-08T10:13:00",
+   "span_id": "b9.s3",
+   "kind": "create",
+   "element_id": "clm10",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications needs additional week to hook up email beyond push layer",
+    "kind": "claim"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 32,
+   "ts": "2026-01-08T10:15:00",
+   "span_id": "b10.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "UX study results from December must be reviewed first"
+   },
+   "because": []
+  },
+  {
+   "seq": 33,
+   "ts": "2026-01-08T10:15:00",
+   "span_id": "b10.s2",
+   "kind": "create",
+   "element_id": "blk3",
+   "participant": "Dana",
+   "payload": {
+    "title": "December UX study results not yet available",
+    "kind": "blocker"
+   },
+   "because": []
+  },
+  {
+   "seq": 34,
+   "ts": "2026-01-08T10:15:00",
+   "span_id": "b10.s3",
+   "kind": "attach",
+   "element_id": "blk3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 35,
+   "ts": "2026-01-08T10:16:00",
+   "span_id": "b11.s1",
+   "kind": "create",
+   "element_id": "blk4",
+   "participant": "Alex",
+   "payload": {
+    "title": "When will the December UX study results arrive?",
+    "kind": "blocker"
+   },
+   "because": [
+    "blk3"
+   ]
+  },
+  {
+   "seq": 36,
+   "ts": "2026-01-08T10:17:00",
+   "span_id": "b12.s1",
+   "kind": "create",
+   "element_id": "clm11",
+   "participant": "Dana",
+   "payload": {
+    "title": "UX study results expected around January 15",
+    "kind": "claim"
+   },
+   "because": [
+    "blk3",
+    "blk4"
+   ]
+  },
+  {
+   "seq": 37,
+   "ts": "2026-01-08T10:17:00",
+   "span_id": "b12.s1",
+   "kind": "status",
+   "element_id": "blk4",
+   "participant": "Dana",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm11"
+   ]
+  },
+  {
+   "seq": 38,
+   "ts": "2026-01-08T10:17:00",
+   "span_id": "b12.s1",
+   "kind": "status",
+   "element_id": "blk3",
+   "participant": "Dana",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm11"
+   ]
+  },
+  {
+   "seq": 39,
+   "ts": "2026-01-08T10:20:00",
+   "span_id": "b14.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Beth's two-week push-layer estimate must hold"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 40,
+   "ts": "2026-01-08T10:20:00",
+   "span_id": "b14.s4",
+   "kind": "create",
+   "element_id": "clm12",
+   "participant": "Cam",
+   "payload": {
+    "title": "Cam would lean toward Search if notifications estimate doesn't hold",
+    "kind": "claim"
+   },
+   "because": [
+    "clm8",
+    "opt2"
+   ]
+  },
+  {
+   "seq": 41,
+   "ts": "2026-01-08T10:20:00",
+   "span_id": "b14.s4",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "stance": "conditional",
+    "prev": "proposed",
+    "conditions": "If Beth's two-week push-layer estimate for notifications doesn't hold"
+   },
+   "because": [
+    "clm8",
+    "clm12"
+   ]
+  },
+  {
+   "seq": 42,
+   "ts": "2026-01-08T10:22:00",
+   "span_id": "b16.s1",
+   "kind": "create",
+   "element_id": "clm13",
+   "participant": "Cam",
+   "payload": {
+    "title": "Search scope: Elasticsearch index rebuild plus relevance model",
+    "kind": "claim"
+   },
+   "because": [
+    "opt2"
+   ]
+  },
+  {
+   "seq": 43,
+   "ts": "2026-01-08T10:22:00",
+   "span_id": "b16.s2",
+   "kind": "attach",
+   "element_id": "clm13",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 44,
+   "ts": "2026-01-08T10:22:00",
+   "span_id": "b16.s3",
+   "kind": "create",
+   "element_id": "clm14",
+   "participant": "Cam",
+   "payload": {
+    "title": "Search estimated at four to five weeks",
+    "kind": "claim"
+   },
+   "because": [
+    "opt2",
+    "clm13"
+   ]
+  },
+  {
+   "seq": 45,
+   "ts": "2026-01-08T10:23:00",
+   "span_id": "b17.s1",
+   "kind": "create",
+   "element_id": "clm15",
+   "participant": "Beth",
+   "payload": {
+    "title": "Search estimate (4-5 weeks) longer than notifications estimate (2-3 weeks)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm14",
+    "clm8",
+    "clm10"
+   ]
+  },
+  {
+   "seq": 46,
+   "ts": "2026-01-08T10:23:00",
+   "span_id": "b17.s1",
+   "kind": "create",
+   "element_id": "crit3",
+   "participant": "Beth",
+   "payload": {
+    "title": "Time to ship / build duration",
+    "kind": "criterion"
+   },
+   "because": [
+    "clm14",
+    "clm8",
+    "clm15"
+   ]
+  },
+  {
+   "seq": 47,
+   "ts": "2026-01-08T10:25:00",
+   "span_id": "b19.s1",
+   "kind": "create",
+   "element_id": "clm16",
+   "participant": "Dana",
+   "payload": {
+    "title": "API integrations scope: OAuth plus Salesforce, HubSpot, Zapier connectors",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 48,
+   "ts": "2026-01-08T10:25:00",
+   "span_id": "b19.s2",
+   "kind": "create",
+   "element_id": "clm17",
+   "participant": "Dana",
+   "payload": {
+    "title": "API integrations needs a full quarter minimum to ship",
+    "kind": "claim"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 49,
+   "ts": "2026-01-08T10:25:00",
+   "span_id": "b19.s3",
+   "kind": "create",
+   "element_id": "clm18",
+   "participant": "Dana",
+   "payload": {
+    "title": "API integrations depends on Diego",
+    "kind": "claim"
+   },
+   "because": [
+    "clm16"
+   ]
+  },
+  {
+   "seq": 50,
+   "ts": "2026-01-08T10:25:00",
+   "span_id": "b19.s4",
+   "kind": "create",
+   "element_id": "clm19",
+   "participant": "Dana",
+   "payload": {
+    "title": "OAuth layer touches auth service (implies Diego dependency)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm18"
+   ]
+  },
+  {
+   "seq": 51,
+   "ts": "2026-01-08T10:27:00",
+   "span_id": "b20.s1",
+   "kind": "create",
+   "element_id": "clm20",
+   "participant": "Eli",
+   "payload": {
+    "title": "API integrations is out for Q1 if it needs Diego",
+    "kind": "claim"
+   },
+   "because": [
+    "clm18",
+    "clm19",
+    "con2"
+   ]
+  },
+  {
+   "seq": 52,
+   "ts": "2026-01-08T10:27:00",
+   "span_id": "b20.s1",
+   "kind": "status",
+   "element_id": "opt3",
+   "participant": "Eli",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "clm18",
+    "clm19",
+    "con2"
+   ]
+  },
+  {
+   "seq": 53,
+   "ts": "2026-01-08T10:27:00",
+   "span_id": "b20.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Eli",
+   "payload": {
+    "stance": "oppose",
+    "prev": "support"
+   },
+   "because": [
+    "clm18",
+    "clm19",
+    "con2"
+   ]
+  },
+  {
+   "seq": 54,
+   "ts": "2026-01-08T10:28:00",
+   "span_id": "b21.s2",
+   "kind": "decide",
+   "element_id": "q1",
+   "participant": "Alex",
+   "payload": {
+    "chosen": [],
+    "ruled_out": [
+     "opt3"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": [
+    "clm18",
+    "clm19",
+    "clm20",
+    "con2"
+   ]
+  },
+  {
+   "seq": 55,
+   "ts": "2026-01-08T10:28:00",
+   "span_id": "b21.s2",
+   "kind": "attach",
+   "element_id": "opt3",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm18",
+    "clm19",
+    "clm20",
+    "con2"
+   ]
+  },
+  {
+   "seq": 56,
+   "ts": "2026-01-08T10:28:00",
+   "span_id": "b21.s2",
+   "kind": "attach",
+   "element_id": "opt3",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "opt3"
+   ]
+  },
+  {
+   "seq": 57,
+   "ts": "2026-01-08T10:28:00",
+   "span_id": "b21.s2",
+   "kind": "create",
+   "element_id": "q2",
+   "participant": "Alex",
+   "payload": {
+    "title": "Which features to build in Q2",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 58,
+   "ts": "2026-01-08T10:29:00",
+   "span_id": "b22.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Dana",
+   "payload": {
+    "stance": "acknowledged",
+    "prev": "proposed"
+   },
+   "because": []
+  },
+  {
+   "seq": 59,
+   "ts": "2026-01-08T10:29:00",
+   "span_id": "b22.s2",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Dana",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "acknowledged"
+   },
+   "because": []
+  },
+  {
+   "seq": 60,
+   "ts": "2026-01-08T10:31:00",
+   "span_id": "b23.s3",
+   "kind": "create",
+   "element_id": "clm21",
+   "participant": "Eli",
+   "payload": {
+    "title": "Reliable notification delivery with retry logic takes four to six weeks",
+    "kind": "claim"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 61,
+   "ts": "2026-01-08T10:31:00",
+   "span_id": "b23.s3",
+   "kind": "status",
+   "element_id": "clm8",
+   "participant": "Eli",
+   "payload": {
+    "from": "unverified",
+    "to": "conflicting"
+   },
+   "because": [
+    "clm21"
+   ]
+  },
+  {
+   "seq": 62,
+   "ts": "2026-01-08T10:33:00",
+   "span_id": "b24.s1",
+   "kind": "create",
+   "element_id": "clm22",
+   "participant": "Beth",
+   "payload": {
+    "title": "Four-to-six-week notifications estimate is for the production version (reliable delivery with retry logic)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm21",
+    "clm8"
+   ]
+  },
+  {
+   "seq": 63,
+   "ts": "2026-01-08T10:33:00",
+   "span_id": "b24.s2",
+   "kind": "create",
+   "element_id": "clm23",
+   "participant": "Beth",
+   "payload": {
+    "title": "Basic push-only notifications v1 still takes two weeks",
+    "kind": "claim"
+   },
+   "because": [
+    "clm22"
+   ]
+  },
+  {
+   "seq": 64,
+   "ts": "2026-01-08T10:33:00",
+   "span_id": "b24.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "conditions": "Scoped to basic push-only v1",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm23"
+   ]
+  },
+  {
+   "seq": 65,
+   "ts": "2026-01-08T10:34:00",
+   "span_id": "b25.s1",
+   "kind": "create",
+   "element_id": "clm24",
+   "participant": "Cam",
+   "payload": {
+    "title": "Shipping a notification system that drops messages is worse than nothing",
+    "kind": "claim"
+   },
+   "because": [
+    "clm21"
+   ]
+  },
+  {
+   "seq": 66,
+   "ts": "2026-01-08T10:34:00",
+   "span_id": "b25.s2",
+   "kind": "attach",
+   "element_id": "clm24",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 67,
+   "ts": "2026-01-08T10:34:00",
+   "span_id": "b25.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "oppose",
+    "prev": "conditional",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm24"
+   ]
+  },
+  {
+   "seq": 68,
+   "ts": "2026-01-08T10:35:00",
+   "span_id": "b26.s1",
+   "kind": "create",
+   "element_id": "clm25",
+   "participant": "Dana",
+   "payload": {
+    "title": "Dana agrees push-only notifications v1 that drops messages is unacceptable",
+    "kind": "claim"
+   },
+   "because": [
+    "clm24"
+   ]
+  },
+  {
+   "seq": 69,
+   "ts": "2026-01-08T10:35:00",
+   "span_id": "b26.s2",
+   "kind": "create",
+   "element_id": "con3",
+   "participant": "Dana",
+   "payload": {
+    "title": "Notifications must ship as full reliable-delivery version with retry logic, not push-only v1",
+    "kind": "constraint"
+   },
+   "because": [
+    "clm24",
+    "clm21"
+   ]
+  },
+  {
+   "seq": 70,
+   "ts": "2026-01-08T10:35:00",
+   "span_id": "b26.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "Only if built as full reliable-delivery version with retry logic"
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 71,
+   "ts": "2026-01-08T10:37:00",
+   "span_id": "b27.s1",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": [
+    "con3",
+    "clm21",
+    "clm14"
+   ]
+  },
+  {
+   "seq": 72,
+   "ts": "2026-01-08T10:35:00",
+   "span_id": "b26.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "Only if built as full reliable-delivery version with retry logic (push-only v1 that drops messages is unacceptable)"
+   },
+   "because": [
+    "clm24",
+    "clm25",
+    "con3"
+   ]
+  },
+  {
+   "seq": 73,
+   "ts": "2026-01-08T10:37:00",
+   "span_id": "b27.s2",
+   "kind": "attach",
+   "element_id": "clm14",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 74,
+   "ts": "2026-01-08T10:39:00",
+   "span_id": "b28.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 75,
+   "ts": "2026-01-08T10:39:00",
+   "span_id": "b28.s2",
+   "kind": "create",
+   "element_id": "clm26",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications full version (4-6 weeks) fits within Q1 timeline",
+    "kind": "claim"
+   },
+   "because": [
+    "clm21",
+    "clm22"
+   ]
+  },
+  {
+   "seq": 76,
+   "ts": "2026-01-08T10:39:00",
+   "span_id": "b28.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm26"
+   ]
+  },
+  {
+   "seq": 77,
+   "ts": "2026-01-08T10:39:00",
+   "span_id": "b28.s3",
+   "kind": "create",
+   "element_id": "clm27",
+   "participant": "Beth",
+   "payload": {
+    "title": "Notifications kickoff proposed for January 6",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 78,
+   "ts": "2026-01-08T10:39:00",
+   "span_id": "b28.s3",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "conditional",
+    "prev": "support",
+    "conditions": "Kickoff January 6 or equivalent early-Q1 start date",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm27"
+   ]
+  },
+  {
+   "seq": 79,
+   "ts": "2026-01-08T10:40:00",
+   "span_id": "b29.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "UX study results must land before committing",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "blk3",
+    "clm11"
+   ]
+  },
+  {
+   "seq": 80,
+   "ts": "2026-01-08T10:40:00",
+   "span_id": "b29.s1",
+   "kind": "create",
+   "element_id": "blk5",
+   "participant": "Dana",
+   "payload": {
+    "title": "UX study results not yet received \u2014 Dana withholding commitment",
+    "kind": "blocker"
+   },
+   "because": [
+    "clm11",
+    "blk3"
+   ]
+  },
+  {
+   "seq": 81,
+   "ts": "2026-01-08T10:43:00",
+   "span_id": "b31.s2",
+   "kind": "create",
+   "element_id": "clm28",
+   "participant": "Eli",
+   "payload": {
+    "title": "UX study results ready January 13",
+    "kind": "claim"
+   },
+   "because": [
+    "blk5"
+   ]
+  },
+  {
+   "seq": 82,
+   "ts": "2026-01-08T10:43:00",
+   "span_id": "b31.s2",
+   "kind": "supersede",
+   "element_id": "clm11",
+   "participant": "Eli",
+   "payload": {
+    "from": "unverified",
+    "to": "superseded",
+    "by": "clm28"
+   },
+   "because": [
+    "clm28"
+   ]
+  },
+  {
+   "seq": 83,
+   "ts": "2026-01-08T10:43:00",
+   "span_id": "b31.s2",
+   "kind": "status",
+   "element_id": "blk5",
+   "participant": "Eli",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm28"
+   ]
+  },
+  {
+   "seq": 84,
+   "ts": "2026-01-08T10:45:00",
+   "span_id": "b32.s1",
+   "kind": "create",
+   "element_id": "clm29",
+   "participant": "Beth",
+   "payload": {
+    "title": "Team is lined up on notifications",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 85,
+   "ts": "2026-01-08T10:45:00",
+   "span_id": "b32.s1",
+   "kind": "flag",
+   "element_id": "clm29",
+   "participant": "Beth",
+   "payload": {
+    "type": "consensus_conflict",
+    "mismatches": [
+     {
+      "participant": "Alex",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "blank"
+     },
+     {
+      "participant": "Cam",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Dana",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     }
+    ]
+   },
+   "because": []
+  },
+  {
+   "seq": 86,
+   "ts": "2026-01-08T10:45:00",
+   "span_id": "b32.s2",
+   "kind": "create",
+   "element_id": "clm30",
+   "participant": "Beth",
+   "payload": {
+    "title": "Cam and Dana are both on board with notifications",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 87,
+   "ts": "2026-01-08T10:45:00",
+   "span_id": "b32.s2",
+   "kind": "flag",
+   "element_id": "clm30",
+   "participant": "Beth",
+   "payload": {
+    "type": "consensus_conflict",
+    "mismatches": [
+     {
+      "participant": "Cam",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     },
+     {
+      "participant": "Dana",
+      "option": "opt1",
+      "asserted": "support",
+      "actual": "conditional"
+     }
+    ]
+   },
+   "because": []
+  },
+  {
+   "seq": 88,
+   "ts": "2026-01-08T10:45:00",
+   "span_id": "b32.s3",
+   "kind": "create",
+   "element_id": "clm31",
+   "participant": "Beth",
+   "payload": {
+    "title": "Group agrees API integrations moves to Q2",
+    "kind": "claim"
+   },
+   "because": [
+    "opt3",
+    "q2"
+   ]
+  },
+  {
+   "seq": 89,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s1",
+   "kind": "create",
+   "element_id": "clm32",
+   "participant": "Alex",
+   "payload": {
+    "title": "Beth's claim that team is lined up on notifications is incorrect \u2014 Cam shifted to search and Dana is still conditional",
+    "kind": "claim"
+   },
+   "because": [
+    "clm29",
+    "clm30",
+    "clm12",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 90,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s1",
+   "kind": "attach",
+   "element_id": "clm29",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm32"
+   ]
+  },
+  {
+   "seq": 91,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s1",
+   "kind": "attach",
+   "element_id": "clm30",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm32"
+   ]
+  },
+  {
+   "seq": 92,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s2",
+   "kind": "create",
+   "element_id": "clm33",
+   "participant": "Alex",
+   "payload": {
+    "title": "Cam shifted to search (not notifications)",
+    "kind": "claim"
+   },
+   "because": [
+    "clm29",
+    "clm30",
+    "clm32"
+   ]
+  },
+  {
+   "seq": 93,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s2",
+   "kind": "attach",
+   "element_id": "clm29",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm33"
+   ]
+  },
+  {
+   "seq": 94,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s2",
+   "kind": "attach",
+   "element_id": "clm30",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm33"
+   ]
+  },
+  {
+   "seq": 95,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s3",
+   "kind": "create",
+   "element_id": "clm34",
+   "participant": "Alex",
+   "payload": {
+    "title": "Dana remains conditional on notifications",
+    "kind": "claim"
+   },
+   "because": [
+    "clm29",
+    "clm30",
+    "clm32"
+   ]
+  },
+  {
+   "seq": 96,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s4",
+   "kind": "create",
+   "element_id": "clm35",
+   "participant": "Alex",
+   "payload": {
+    "title": "Alex rejects Beth's alignment claim \u2014 Cam shifted to search, Dana still conditional",
+    "kind": "claim"
+   },
+   "because": [
+    "clm33",
+    "clm34"
+   ]
+  },
+  {
+   "seq": 97,
+   "ts": "2026-01-08T10:48:00",
+   "span_id": "b34.s1",
+   "kind": "create",
+   "element_id": "clm36",
+   "participant": "Beth",
+   "payload": {
+    "title": "Cam's shift to search is a lean, not a firm position \u2014 per Beth",
+    "kind": "claim"
+   },
+   "because": [
+    "clm33"
+   ]
+  },
+  {
+   "seq": 98,
+   "ts": "2026-01-08T10:49:00",
+   "span_id": "b35.s1",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "clm12",
+    "clm33"
+   ]
+  },
+  {
+   "seq": 99,
+   "ts": "2026-01-08T10:49:00",
+   "span_id": "b35.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "conditional",
+    "inferred": true,
+    "inferred_reason": "span names 'Search', not 'Notifications'"
+   },
+   "because": [
+    "clm12",
+    "clm33"
+   ]
+  },
+  {
+   "seq": 100,
+   "ts": "2026-01-08T10:49:00",
+   "span_id": "b35.s2",
+   "kind": "create",
+   "element_id": "clm37",
+   "participant": "Cam",
+   "payload": {
+    "title": "Cam's support for search is firm, not a tentative lean",
+    "kind": "claim"
+   },
+   "because": [
+    "clm36"
+   ]
+  },
+  {
+   "seq": 101,
+   "ts": "2026-01-08T10:49:00",
+   "span_id": "b35.s2",
+   "kind": "status",
+   "element_id": "clm36",
+   "participant": "Cam",
+   "payload": {
+    "from": "unverified",
+    "to": "conflicting"
+   },
+   "because": [
+    "clm37"
+   ]
+  },
+  {
+   "seq": 102,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Alex",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm33",
+    "clm37"
+   ]
+  },
+  {
+   "seq": 103,
+   "ts": "2026-01-08T10:47:00",
+   "span_id": "b33.s3",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Alex",
+   "payload": {
+    "stance": "conditional",
+    "prev": null,
+    "conditions": "Only if built as full reliable-delivery version with retry logic (push-only v1 that drops messages is unacceptable)"
+   },
+   "because": [
+    "clm34"
+   ]
+  },
+  {
+   "seq": 104,
+   "ts": "2026-01-08T10:49:00",
+   "span_id": "b35.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "inferred": true,
+    "inferred_reason": "span names 'Notifications', not 'Search'"
+   },
+   "because": [
+    "clm37",
+    "clm36"
+   ]
+  },
+  {
+   "seq": 105,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s1",
+   "kind": "create",
+   "element_id": "clm38",
+   "participant": "Dana",
+   "payload": {
+    "title": "UX study results have arrived",
+    "kind": "claim"
+   },
+   "because": [
+    "blk3",
+    "blk4",
+    "blk5"
+   ]
+  },
+  {
+   "seq": 106,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s1",
+   "kind": "attach",
+   "element_id": "blk3",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm38"
+   ]
+  },
+  {
+   "seq": 107,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s1",
+   "kind": "attach",
+   "element_id": "blk4",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm38"
+   ]
+  },
+  {
+   "seq": 108,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s1",
+   "kind": "attach",
+   "element_id": "blk5",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm38"
+   ]
+  },
+  {
+   "seq": 109,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s2",
+   "kind": "create",
+   "element_id": "clm39",
+   "participant": "Dana",
+   "payload": {
+    "title": "Priya delivered UX deck early \u2014 before January 13",
+    "kind": "claim"
+   },
+   "because": [
+    "clm28",
+    "clm38"
+   ]
+  },
+  {
+   "seq": 110,
+   "ts": "2026-01-08T10:52:00",
+   "span_id": "b36.s2",
+   "kind": "supersede",
+   "element_id": "clm28",
+   "participant": "Dana",
+   "payload": {
+    "from": "unverified",
+    "to": "superseded",
+    "by": "clm39"
+   },
+   "because": [
+    "clm39"
+   ]
+  },
+  {
+   "seq": 111,
+   "ts": "2026-01-08T10:53:00",
+   "span_id": "b36.s3",
+   "kind": "create",
+   "element_id": "clm40",
+   "participant": "Dana",
+   "payload": {
+    "title": "UX study top finding: notifications is most requested feature",
+    "kind": "claim"
+   },
+   "because": [
+    "clm38"
+   ]
+  },
+  {
+   "seq": 112,
+   "ts": "2026-01-08T10:53:00",
+   "span_id": "b36.s4",
+   "kind": "create",
+   "element_id": "clm41",
+   "participant": "Dana",
+   "payload": {
+    "title": "71% of UX study respondents cited notifications as top request",
+    "kind": "claim"
+   },
+   "because": [
+    "clm38",
+    "clm40"
+   ]
+  },
+  {
+   "seq": 113,
+   "ts": "2026-01-08T10:53:00",
+   "span_id": "b36.s5",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "clm38",
+    "clm40",
+    "clm41"
+   ]
+  },
+  {
+   "seq": 114,
+   "ts": "2026-01-08T10:55:00",
+   "span_id": "b37.s1",
+   "kind": "create",
+   "element_id": "clm42",
+   "participant": "Cam",
+   "payload": {
+    "title": "UX study data changes Cam's view on notifications",
+    "kind": "claim"
+   },
+   "because": [
+    "clm38",
+    "clm40",
+    "clm41"
+   ]
+  },
+  {
+   "seq": 115,
+   "ts": "2026-01-08T10:55:00",
+   "span_id": "b37.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "UX study data is compelling enough to shift back toward notifications from search"
+   },
+   "because": [
+    "clm38",
+    "clm40",
+    "clm41",
+    "clm42"
+   ]
+  },
+  {
+   "seq": 116,
+   "ts": "2026-01-08T10:55:00",
+   "span_id": "b37.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "conditional",
+    "prev": "conditional",
+    "conditions": "Only if the team commits to the full version with retry logic"
+   },
+   "because": [
+    "con3",
+    "clm21",
+    "clm42"
+   ]
+  },
+  {
+   "seq": 117,
+   "ts": "2026-01-08T10:55:00",
+   "span_id": "b37.s2",
+   "kind": "attach",
+   "element_id": "con3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 118,
+   "ts": "2026-01-08T10:56:00",
+   "span_id": "b38.s1",
+   "kind": "attach",
+   "element_id": "con3",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 119,
+   "ts": "2026-01-08T10:57:00",
+   "span_id": "b39.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "clm42",
+    "clm40",
+    "clm41"
+   ]
+  },
+  {
+   "seq": 120,
+   "ts": "2026-01-08T10:58:00",
+   "span_id": "b40.s1",
+   "kind": "create",
+   "element_id": "q3",
+   "participant": "Alex",
+   "payload": {
+    "title": "Target launch date for Q1 feature",
+    "kind": "question"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 121,
+   "ts": "2026-01-08T10:58:00",
+   "span_id": "b40.s1",
+   "kind": "create",
+   "element_id": "opt4",
+   "participant": "Alex",
+   "payload": {
+    "title": "End of January",
+    "kind": "option"
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 122,
+   "ts": "2026-01-08T10:59:00",
+   "span_id": "b41.s1",
+   "kind": "create",
+   "element_id": "opt5",
+   "participant": "Cam",
+   "payload": {
+    "title": "End of February",
+    "kind": "option"
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 123,
+   "ts": "2026-01-08T10:59:00",
+   "span_id": "b41.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 124,
+   "ts": "2026-01-08T10:56:00",
+   "span_id": "b38.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "conditions": "Full version with retry logic, no shortcuts",
+    "inferred": true,
+    "inferred_reason": "span never names 'Notifications'"
+   },
+   "because": [
+    "con3",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 125,
+   "ts": "2026-01-08T10:59:00",
+   "span_id": "b41.s2",
+   "kind": "create",
+   "element_id": "clm43",
+   "participant": "Cam",
+   "payload": {
+    "title": "January launch too tight given revised 4-6 week notifications estimate",
+    "kind": "claim"
+   },
+   "because": [
+    "clm21",
+    "opt4"
+   ]
+  },
+  {
+   "seq": 126,
+   "ts": "2026-01-08T10:59:00",
+   "span_id": "b41.s2",
+   "kind": "stance",
+   "element_id": "opt4",
+   "participant": "Cam",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": [
+    "clm43"
+   ]
+  },
+  {
+   "seq": 127,
+   "ts": "2026-01-08T10:59:00",
+   "span_id": "b41.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "inferred": true,
+    "inferred_reason": "span names 'End of January', not 'End of February'"
+   },
+   "because": [
+    "clm43"
+   ]
+  },
+  {
+   "seq": 128,
+   "ts": "2026-01-08T11:00:00",
+   "span_id": "b42.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Dana",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 129,
+   "ts": "2026-01-08T11:01:00",
+   "span_id": "b43.s1",
+   "kind": "create",
+   "element_id": "clm44",
+   "participant": "Beth",
+   "payload": {
+    "title": "January launch technically possible if work starts immediately",
+    "kind": "claim"
+   },
+   "because": [
+    "opt4"
+   ]
+  },
+  {
+   "seq": 130,
+   "ts": "2026-01-08T11:01:00",
+   "span_id": "b43.s2",
+   "kind": "create",
+   "element_id": "clm45",
+   "participant": "Beth",
+   "payload": {
+    "title": "February launch provides schedule buffer",
+    "kind": "claim"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 131,
+   "ts": "2026-01-08T11:01:00",
+   "span_id": "b43.s2",
+   "kind": "create",
+   "element_id": "crit4",
+   "participant": "Beth",
+   "payload": {
+    "title": "Schedule buffer before launch date",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 132,
+   "ts": "2026-01-08T11:01:00",
+   "span_id": "b43.s3",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm45",
+    "crit4"
+   ]
+  },
+  {
+   "seq": 133,
+   "ts": "2026-01-08T11:02:00",
+   "span_id": "b44.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm43"
+   ]
+  },
+  {
+   "seq": 134,
+   "ts": "2026-01-08T11:02:00",
+   "span_id": "b44.s2",
+   "kind": "create",
+   "element_id": "clm46",
+   "participant": "Eli",
+   "payload": {
+    "title": "February launch gives adequate time to test properly",
+    "kind": "claim"
+   },
+   "because": [
+    "opt5"
+   ]
+  },
+  {
+   "seq": 135,
+   "ts": "2026-01-08T11:02:00",
+   "span_id": "b44.s2",
+   "kind": "create",
+   "element_id": "crit5",
+   "participant": "Eli",
+   "payload": {
+    "title": "Adequate testing time before launch",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 136,
+   "ts": "2026-01-08T11:02:00",
+   "span_id": "b44.s2",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Eli",
+   "payload": {
+    "stance": "support",
+    "prev": "support",
+    "inferred": true,
+    "inferred_reason": "span is ['claim', 'criterion'], not a stance"
+   },
+   "because": [
+    "clm46"
+   ]
+  },
+  {
+   "seq": 137,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s1",
+   "kind": "decide",
+   "element_id": "q1",
+   "participant": "Alex",
+   "payload": {
+    "chosen": [
+     "opt1"
+    ],
+    "ruled_out": [
+     "opt2",
+     "opt3"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": [
+    "clm40",
+    "clm41",
+    "clm42",
+    "con3"
+   ]
+  },
+  {
+   "seq": 138,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s1",
+   "kind": "status",
+   "element_id": "opt1",
+   "participant": "Alex",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 139,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s1",
+   "kind": "status",
+   "element_id": "opt2",
+   "participant": "Alex",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 140,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s1",
+   "kind": "attach",
+   "element_id": "opt2",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm40",
+    "clm41",
+    "clm42"
+   ]
+  },
+  {
+   "seq": 141,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s2",
+   "kind": "decide",
+   "element_id": "q3",
+   "participant": "Alex",
+   "payload": {
+    "chosen": [
+     "opt5"
+    ],
+    "ruled_out": [
+     "opt4"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": [
+    "clm43",
+    "clm45",
+    "clm46",
+    "crit5"
+   ]
+  },
+  {
+   "seq": 142,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s2",
+   "kind": "status",
+   "element_id": "opt5",
+   "participant": "Alex",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 143,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s2",
+   "kind": "status",
+   "element_id": "opt4",
+   "participant": "Alex",
+   "payload": {
+    "from": "active",
+    "to": "dropped"
+   },
+   "because": [
+    "q3"
+   ]
+  },
+  {
+   "seq": 144,
+   "ts": "2026-01-08T11:04:00",
+   "span_id": "b45.s2",
+   "kind": "attach",
+   "element_id": "opt4",
+   "participant": null,
+   "payload": {},
+   "because": [
+    "clm43"
+   ]
+  },
+  {
+   "seq": 145,
+   "ts": "2026-01-08T11:05:00",
+   "span_id": "b46.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 146,
+   "ts": "2026-01-08T11:05:00",
+   "span_id": "b46.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Beth",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 147,
+   "ts": "2026-01-08T11:06:00",
+   "span_id": "b47.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 148,
+   "ts": "2026-01-08T11:06:00",
+   "span_id": "b47.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Cam",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 149,
+   "ts": "2026-01-08T11:07:00",
+   "span_id": "b48.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dana",
+   "payload": {
+    "stance": "support",
+    "prev": "conditional"
+   },
+   "because": [
+    "clm40",
+    "clm41"
+   ]
+  },
+  {
+   "seq": 150,
+   "ts": "2026-01-08T11:07:00",
+   "span_id": "b48.s1",
+   "kind": "stance",
+   "element_id": "opt5",
+   "participant": "Dana",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  }
+ ],
+ "warnings": [
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"span\": \"b7.s2\", \"because\": [\"clm8\"]}",
+  "exact duplicate option redirected to opt3: {\"op\": \"create\", \"ref\": \"n1\", \"kind\": \"option\", \"title\": \"API integrations\", \"question\": \"q2\", \"aliases\": [], \"span\": \"b21.s2\", \"because\": [\"opt3\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"conditions\": \"Scoped to basic push-only v1\", \"span\": \"b24.s2\", \"because\": [\"n1\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"oppose\", \"span\": \"b25.s1\", \"because\": [\"n2\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"span\": \"b28.s2\", \"because\": [\"clm26\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"Kickoff January 6 or equivalent early-Q1 start date\", \"span\": \"b28.s3\", \"because\": [\"clm27\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"conditional\", \"conditions\": \"UX study results must land before committing\", \"span\": \"b29.s1\", \"because\": [\"blk3\", \"clm11\"]}",
+  "inferred stance (span names 'Search', not 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"withdrawn\", \"span\": \"b35.s1\", \"because\": [\"clm12\", \"n1\"]}",
+  "inferred stance (span names 'Notifications', not 'Search'): {\"op\": \"stance\", \"option\": \"opt2\", \"stance\": \"support\", \"span\": \"b35.s2\", \"because\": [\"clm37\", \"clm36\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"span\": \"b36.s5\", \"because\": [\"n1\", \"n3\", \"n4\"]}",
+  "inferred stance (span never names 'Notifications'): {\"op\": \"stance\", \"option\": \"opt1\", \"stance\": \"support\", \"conditions\": \"Full version with retry logic, no shortcuts\", \"span\": \"b38.s1\", \"because\": [\"con3\", \"opt1\"]}",
+  "inferred stance (span names 'End of January', not 'End of February'): {\"op\": \"stance\", \"option\": \"opt5\", \"stance\": \"support\", \"span\": \"b41.s2\", \"because\": [\"clm43\"]}",
+  "inferred stance (span is ['claim', 'criterion'], not a stance): {\"op\": \"stance\", \"option\": \"opt5\", \"stance\": \"support\", \"span\": \"b44.s2\", \"because\": [\"n1\"]}"
+ ],
+ "followups": 5
+}

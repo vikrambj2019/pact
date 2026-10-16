@@ -1,0 +1,218 @@
+{
+  "calibration": [
+    "After the first live run (52/68), three checks were loosened. The reasons are about the text, not about what the model output:",
+    "Priya's neutral 'proposed' is optional: she lists two options without taking a side, so no one is wrong to omit it.",
+    "Jun's note raises a concern and asks for time; 'oppose' or 'conditional' are both fair readings of 'before anyone commits to A'.",
+    "Open objections/blockers may be 1-2: Tom's 'I do not have capacity' (a reason against B) and Dev's unanswered request for the build cost are borderline items a careful reader could file or not.",
+    "Blocker owners are no longer scored as a hard check: blockers have no owner field in the data model."
+  ],
+  "id": "ent-08-email-vendor-private-note",
+  "level": "email-medium",
+  "scenario_notes": "Linear reply-all chain. Jun's private note (m5, sent to Priya only) is quoted to everyone when Priya replies all (m6). Only one explicit supporter of A, so there is no directional preference.",
+  "decision_question": "Should the Q4 contract review pilot buy Clauseline (A) or be built in-house (B)?",
+  "outcome": "open: final call held until Oct 21 pending security review",
+  "pact_state": {
+    "options": [
+      {
+        "title": "A: buy Clauseline",
+        "status": "active"
+      },
+      {
+        "title": "B: build on the internal platform",
+        "status": "active"
+      }
+    ],
+    "positions": [
+      {
+        "participant": "Priya",
+        "option": "A and B",
+        "stance": "proposed",
+        "required": false,
+        "msgs": [
+          "m1"
+        ],
+        "quote": "Two options: A) buy Clauseline"
+      },
+      {
+        "participant": "Tom",
+        "option": "A",
+        "stance": "support",
+        "msgs": [
+          "m2"
+        ],
+        "quote": "I support A."
+      },
+      {
+        "participant": "Dev",
+        "option": "B",
+        "stance": "support",
+        "msgs": [
+          "m3"
+        ],
+        "quote": "I would pick B."
+      },
+      {
+        "participant": "Carla",
+        "option": "A",
+        "stance": "conditional",
+        "msgs": [
+          "m4",
+          "m7"
+        ],
+        "quote": "so I support A, assuming security clears it"
+      },
+      {
+        "participant": "Ines",
+        "option": "A",
+        "stance": "conditional",
+        "msgs": [
+          "m8"
+        ],
+        "quote": "I am fine with A once security clears."
+      },
+      {
+        "participant": "Jun",
+        "option": "A",
+        "stance": "oppose",
+        "stance_any": [
+          "oppose",
+          "conditional"
+        ],
+        "msgs": [
+          "m5"
+        ],
+        "restricted": true,
+        "quote": "before anyone commits to A: their docs say contracts are processed in an EU region"
+      }
+    ],
+    "constraints": [
+      {
+        "text": "Vendor contract text must stay in the US",
+        "msgs": [
+          "m5"
+        ],
+        "restricted": true,
+        "quote": "vendor contract text stays in the US"
+      },
+      {
+        "text": "Annual cost must stay under $60k",
+        "msgs": [
+          "m4"
+        ],
+        "quote": "annual cost stays under $60k"
+      },
+      {
+        "text": "Contract must be signed by Nov 15 or the Q4 budget is lost",
+        "msgs": [
+          "m8"
+        ],
+        "quote": "the contract has to be signed by Nov 15 or we lose it"
+      }
+    ],
+    "blockers": [
+      {
+        "text": "Security review of Clauseline data location (SOC 2 report due Oct 21)",
+        "status": "open",
+        "owner": "Jun",
+        "due": "Oct 21",
+        "msgs": [
+          "m5",
+          "m6"
+        ],
+        "restricted": true,
+        "quote": "I expect it by Oct 21"
+      }
+    ],
+    "objections": [
+      {
+        "text": "Clauseline processes contracts in an EU region, against the US-only rule",
+        "status": "open",
+        "by": "Jun",
+        "against": "A",
+        "msgs": [
+          "m5"
+        ],
+        "restricted": true,
+        "quote": "their docs say contracts are processed in an EU region"
+      }
+    ],
+    "actions": [
+      {
+        "text": "Get written quote from Clauseline",
+        "owner": "Carla",
+        "status": "done",
+        "msgs": [
+          "m4",
+          "m7"
+        ],
+        "quote": "I will ask Clauseline for a written quote by Oct 14"
+      },
+      {
+        "text": "Own the signing date",
+        "owner": "Priya",
+        "owner_confirmed": false,
+        "msgs": [
+          "m8"
+        ],
+        "quote": "Priya, please own the signing date."
+      }
+    ],
+    "emerging_preference": {
+      "direction": "none",
+      "reason": "only one explicit supporter of A (Tom); Carla and Ines are conditional"
+    }
+  },
+  "executive_summary": {
+    "title": "Should the Q4 contract review pilot buy Clauseline (A) or be built in-house (B)?",
+    "counts": {
+      "options": 2,
+      "dropped": 0,
+      "open_objections": 1,
+      "open_blockers": 1,
+      "unowned_actions": 0
+    },
+    "count_tolerance": {
+      "open_objections": [
+        1,
+        2
+      ],
+      "open_blockers": [
+        1,
+        2
+      ]
+    },
+    "preference": "No directional preference recorded.",
+    "scope_line_expected": "email, 8 cited messages"
+  },
+  "audience": {
+    "restricted_units": [
+      "m5"
+    ],
+    "not_restricted_units": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m6",
+      "m7",
+      "m8"
+    ],
+    "effective_audience_m5": "everyone: Priya's reply-all (m6) quoted it",
+    "leak_flag": "m5 was meant for Priya only but reached the whole group; the summary must show the item as private and not repeat Jun's reasoning beyond what Priya herself wrote in m6"
+  },
+  "traps": [
+    "Only Tom is an explicit supporter of A; Carla and Ines are conditional on security, so there is no preference",
+    "Dev's B must not be dropped just because three people lean A",
+    "Jun's privacy request covers his own note, not the wide-group messages quoted below it (m1-m4)",
+    "Jun never replies on the wide thread; his silence there is not support"
+  ],
+  "card_must_include": [
+    "security",
+    "Oct 21",
+    "Nov 15"
+  ],
+  "card_must_not_include": [
+    "EU region reasoning stated as settled fact",
+    "preference for A"
+  ]
+}

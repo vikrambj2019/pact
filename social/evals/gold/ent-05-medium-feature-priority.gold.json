@@ -1,0 +1,230 @@
+{
+ "transcript": "ent-05-medium-feature-priority.txt",
+ "notes": "Product team Q1 feature + launch date. Beth's 2-week claim (m7) superseded by Eli's 4-6 week update (m23). UX blocker (m10) resolves at m36-m37. Beth's false consensus at m32 triggers consensus_conflict. Cam arc: conditional (m14) -> search (m27) -> back to notifications (m38). API integrations dropped early (m21-m22) because it needs Diego.",
+ "spans": [
+  {
+   "msg": "m1",
+   "text": "what feature are we building this quarter",
+   "labels": ["candidate_question"]
+  },
+  {
+   "msg": "m2",
+   "text": "notifications",
+   "labels": ["option"],
+   "allowed": ["position", "claim"]
+  },
+  {
+   "msg": "m2",
+   "text": "we've deferred it twice already",
+   "labels": ["claim"],
+   "allowed": ["criterion"],
+   "optional": true
+  },
+  {
+   "msg": "m3",
+   "text": "search is my vote",
+   "labels": ["option", "position"],
+   "allowed": ["claim"]
+  },
+  {
+   "msg": "m4",
+   "text": "API integrations",
+   "labels": ["option"],
+   "allowed": ["position", "claim"]
+  },
+  {
+   "msg": "m4",
+   "text": "three enterprise deals have stalled because we don't have OAuth",
+   "labels": ["claim"],
+   "allowed": ["criterion"]
+  },
+  {
+   "msg": "m6",
+   "text": "two backend engineers for Q1",
+   "labels": ["constraint"],
+   "allowed": ["claim"]
+  },
+  {
+   "msg": "m6",
+   "text": "Diego is on infrastructure until end of January",
+   "labels": ["constraint"],
+   "allowed": ["claim"]
+  },
+  {
+   "msg": "m7",
+   "text": "core push layer done in two weeks",
+   "labels": ["claim"],
+   "allowed": ["position"]
+  },
+  {
+   "msg": "m10",
+   "text": "I'm conditional on notifications",
+   "labels": ["position"],
+   "allowed": ["blocker", "constraint"]
+  },
+  {
+   "msg": "m10",
+   "text": "UX study in December",
+   "labels": ["blocker"],
+   "allowed": ["claim", "constraint", "position"]
+  },
+  {
+   "msg": "m13",
+   "text": "I'll ping Priya today to get a firm date",
+   "labels": ["action"]
+  },
+  {
+   "msg": "m14",
+   "text": "conditional on notifications",
+   "labels": ["position"],
+   "allowed": ["claim"]
+  },
+  {
+   "msg": "m19",
+   "text": "needs Diego",
+   "labels": [],
+   "any_of": ["constraint", "claim"],
+   "allowed": ["blocker"]
+  },
+  {
+   "msg": "m21",
+   "text": "API integrations moves to Q2",
+   "labels": ["decision"],
+   "allowed": ["position", "option"]
+  },
+  {
+   "msg": "m22",
+   "text": "I'll drop it as a Q1 option",
+   "labels": ["position"],
+   "allowed": ["decision", "option"]
+  },
+  {
+   "msg": "m23",
+   "text": "reliable delivery with retry logic is four to six weeks, not two",
+   "labels": ["claim"],
+   "allowed": ["objection"]
+  },
+  {
+   "msg": "m25",
+   "text": "I wouldn't ship a notification system that drops messages",
+   "labels": ["objection"],
+   "allowed": ["claim", "constraint"]
+  },
+  {
+   "msg": "m26",
+   "text": "if we do notifications it has to be the full version",
+   "labels": ["constraint"],
+   "allowed": ["position", "claim"]
+  },
+  {
+   "msg": "m27",
+   "text": "I'd shift to search",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m28",
+   "text": "I still say notifications",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m29",
+   "text": "staying conditional until the UX results land",
+   "labels": ["position"],
+   "allowed": ["blocker", "constraint"]
+  },
+  {
+   "msg": "m32",
+   "text": "the team is lined up on notifications",
+   "labels": ["claim"],
+   "allowed": ["position", "process"]
+  },
+  {
+   "msg": "m33",
+   "text": "Cam shifted to search and Dana is still conditional",
+   "labels": ["claim"],
+   "allowed": ["position", "process"]
+  },
+  {
+   "msg": "m35",
+   "text": "I said I'd shift to search. that's my current position, not a lean",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m37",
+   "text": "notifications is the single most requested feature",
+   "labels": ["claim"]
+  },
+  {
+   "msg": "m37",
+   "text": "I'm moving to support",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m38",
+   "text": "I'd go back to notifications",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m38",
+   "text": "only if we commit to the full version with retry logic",
+   "labels": [],
+   "any_of": ["constraint", "position"],
+   "allowed": ["claim"]
+  },
+  {
+   "msg": "m40",
+   "text": "I'm in on notifications",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m41",
+   "text": "target launch date: end of January or end of February",
+   "labels": ["candidate_question"]
+  },
+  {
+   "msg": "m42",
+   "text": "end of February",
+   "labels": ["position"],
+   "allowed": ["option"]
+  },
+  {
+   "msg": "m42",
+   "text": "January is too tight given the revised estimate",
+   "labels": [],
+   "any_of": ["claim", "objection"],
+   "allowed": ["constraint"]
+  },
+  {
+   "msg": "m43",
+   "text": "end of February works for me",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m44",
+   "text": "I'd go with February",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m45",
+   "text": "February is better",
+   "labels": ["position"]
+  },
+  {
+   "msg": "m46",
+   "text": "notifications for Q1",
+   "labels": ["decision"],
+   "allowed": ["option", "position"]
+  },
+  {
+   "msg": "m46",
+   "text": "targeting end of February for launch",
+   "labels": ["decision"],
+   "allowed": ["option", "position"]
+  },
+  {
+   "msg": "m50",
+   "text": "updating the roadmap now",
+   "labels": ["action"]
+  }
+ ]
+}

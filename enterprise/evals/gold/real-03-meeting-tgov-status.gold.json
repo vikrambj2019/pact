@@ -1,0 +1,412 @@
+{
+  "id": "real-03-meeting-tgov-status",
+  "level": "real-meeting",
+  "source_file": "raw/ent-05-meeting-transcript-1.txt",
+  "scenario_notes": "A status and task hand-out meeting, not a decision meeting. There is one real choice (where the chart tool is hosted for a pilot), one half-proposal (pilot agreement without a full MSA) and many task allocations. Two different people are called James; Rob is asked to tag-team but his answer is merged into Jennifer's turn.",
+  "decision_question": "Where should the chart tool be deployed for the pilot: inside our own environment or the vendor's hosted environment?",
+  "outcome": "open: Jennifer and Brandon lean to the vendor's environment for the pilot; enterprise security has not weighed in",
+  "pact_state": {
+    "options": [
+      {
+        "title": "Run the chart tool in our own environment (Snowflake and AWS, vendor admin as a contractor)",
+        "terms": [
+          "our own",
+          "our environment",
+          "snowflake",
+          "within our"
+        ],
+        "msgs": [
+          "u30"
+        ],
+        "quote": "deploy it within our environment"
+      },
+      {
+        "title": "Run the chart tool in the vendor's (Estrada's) hosted environment, at least for the pilot",
+        "terms": [
+          "estrada",
+          "vendor",
+          "their environment",
+          "hosted"
+        ],
+        "msgs": [
+          "u30",
+          "u31"
+        ],
+        "quote": "have it sit within Estrada's walls"
+      },
+      {
+        "title": "Start the pilot under a limited data-sharing agreement without waiting for the full MSA",
+        "terms": [
+          "limited",
+          "pilot agreement",
+          "without",
+          "data-sharing",
+          "data sharing"
+        ],
+        "msgs": [
+          "u19"
+        ],
+        "required": false,
+        "quote": "if we can get an agreement that covers us to share data"
+      }
+    ],
+    "positions": [
+      {
+        "participant": "Jennifer",
+        "option": "Run the chart tool in the vendor's (Estrada's) hosted environment, at least for the pilot",
+        "stance": "support",
+        "msgs": [
+          "u34"
+        ],
+        "quote": "If we want to get a pilot up and running, that's the way to go.",
+        "stance_any": [
+          "support",
+          "conditional"
+        ],
+        "option_terms": [
+          "estrada",
+          "vendor",
+          "their environment",
+          "hosted"
+        ]
+      },
+      {
+        "participant": "Brandon",
+        "option": "Run the chart tool in the vendor's (Estrada's) hosted environment, at least for the pilot",
+        "stance": "conditional",
+        "msgs": [
+          "u31"
+        ],
+        "quote": "it might be worth starting in their environment",
+        "stance_any": [
+          "conditional",
+          "support",
+          "proposed"
+        ],
+        "option_terms": [
+          "estrada",
+          "vendor",
+          "their environment",
+          "hosted"
+        ]
+      },
+      {
+        "participant": "Jennifer",
+        "option": "Start the pilot under a limited data-sharing agreement without waiting for the full MSA",
+        "stance": "proposed",
+        "msgs": [
+          "u19"
+        ],
+        "quote": "if we can get an agreement that covers us to share data",
+        "stance_any": [
+          "proposed",
+          "support",
+          "conditional"
+        ],
+        "option_terms": [
+          "limited",
+          "pilot agreement",
+          "without",
+          "data-sharing",
+          "data sharing"
+        ],
+        "required": false
+      },
+      {
+        "participant": "James",
+        "option": "Start the pilot under a limited data-sharing agreement without waiting for the full MSA",
+        "stance": "oppose",
+        "msgs": [
+          "u20"
+        ],
+        "quote": "you have to have an MSA before we're willing to start any of that",
+        "stance_any": [
+          "oppose",
+          "conditional",
+          "undecided"
+        ],
+        "option_terms": [
+          "limited",
+          "pilot agreement",
+          "without",
+          "data-sharing",
+          "data sharing"
+        ],
+        "required": false
+      }
+    ],
+    "constraints": [
+      {
+        "text": "The digital quality measure component will be in our environment",
+        "msgs": [
+          "u34"
+        ],
+        "quote": "The digital quality measure will be in our environment."
+      },
+      {
+        "text": "Enterprise security will weigh in on hosting only after the final ESG is approved",
+        "msgs": [
+          "u30"
+        ],
+        "quote": "they haven't yet because they're waiting for the final ESG to be approved"
+      }
+    ],
+    "claims": [
+      {
+        "text": "Jennifer: vendor-hosted has lower overall cost on our side",
+        "msgs": [
+          "u34"
+        ],
+        "quote": "it's going to have lesser overall cost on our side"
+      },
+      {
+        "text": "Jennifer: the MSA has had two rounds of red lines and is close to done",
+        "msgs": [
+          "u21"
+        ],
+        "quote": "We've already had red lines go back and forth twice."
+      },
+      {
+        "text": "Jennifer: the MSA is only a matter of completion, no hard disagreement",
+        "msgs": [
+          "u28"
+        ],
+        "quote": "Just a matter of completion."
+      },
+      {
+        "text": "James: Responsible AI was not a barrier for his project because it uses no AI",
+        "msgs": [
+          "u18"
+        ],
+        "quote": "technically Lilac doesn't use any AI"
+      },
+      {
+        "text": "Jennifer: Anil is in the loop on the project",
+        "msgs": [
+          "u38"
+        ],
+        "quote": "Anil is in the loop"
+      }
+    ],
+    "objections": [],
+    "blockers": [
+      {
+        "text": "ESG submission is still being tracked against an old and a new version",
+        "status": "open",
+        "owner": "Jennifer",
+        "msgs": [
+          "u8"
+        ],
+        "quote": "It looks like they're still tracking an old submission and a new.",
+        "match_any": [
+          "esg"
+        ]
+      },
+      {
+        "text": "Enterprise security architecture is waiting on ESG approval",
+        "status": "open",
+        "msgs": [
+          "u19",
+          "u30"
+        ],
+        "quote": "So this one is dependent on ESG, right?",
+        "match_any": [
+          "security architecture",
+          "enterprise security"
+        ],
+        "required": false
+      },
+      {
+        "text": "The vendor MSA is not yet complete (legal review moved to a different person)",
+        "status": "open",
+        "owner": "Jennifer",
+        "msgs": [
+          "u21"
+        ],
+        "quote": "now it's going to a different person.",
+        "match_any": [
+          "msa"
+        ]
+      },
+      {
+        "text": "Responsible AI has not answered after repeated follow-ups",
+        "status": "open",
+        "msgs": [
+          "u14"
+        ],
+        "quote": "I followed up three, four, five times with these folks.",
+        "match_any": [
+          "responsible ai"
+        ],
+        "required": false
+      },
+      {
+        "text": "Architecture solution design task: nothing in the TGov ticket says what is needed",
+        "status": "open",
+        "msgs": [
+          "u12",
+          "u38"
+        ],
+        "quote": "There was nothing indicated in the TGov ticket what they were looking for.",
+        "match_any": [
+          "architecture"
+        ],
+        "required": false
+      },
+      {
+        "text": "No answer on whether the new TGov PowerPoint applies to projects already submitted",
+        "status": "open",
+        "msgs": [
+          "u46"
+        ],
+        "quote": "I have not gotten a response.",
+        "match_any": [
+          "powerpoint",
+          "tgov"
+        ],
+        "required": false
+      }
+    ],
+    "actions": [
+      {
+        "text": "Follow up with ESG again on Monday",
+        "owner": "Jennifer",
+        "due": "Monday",
+        "msgs": [
+          "u8"
+        ],
+        "quote": "I'm going to follow up again on Monday",
+        "match_any": [
+          "esg"
+        ],
+        "required": true
+      },
+      {
+        "text": "Keep ESG and procurement",
+        "owner": "Jennifer",
+        "msgs": [
+          "u10"
+        ],
+        "quote": "I will keep ESG and I'll keep procurement",
+        "match_any": [
+          "procurement"
+        ],
+        "required": false
+      },
+      {
+        "text": "Assign the remaining categories to the team",
+        "owner": "Jennifer",
+        "msgs": [
+          "u10"
+        ],
+        "quote": "I'll assign those out.",
+        "match_any": [
+          "assign"
+        ],
+        "required": false
+      },
+      {
+        "text": "Take one or more categories and follow up on them",
+        "owner": "Danielle",
+        "owner_confirmed": true,
+        "msgs": [
+          "u9"
+        ],
+        "quote": "Happy to do that.",
+        "match_any": [
+          "categor",
+          "follow up",
+          "take"
+        ],
+        "required": false
+      },
+      {
+        "text": "Someone takes the Responsible AI follow-up (contact: Michael R.)",
+        "owner": null,
+        "msgs": [
+          "u14"
+        ],
+        "quote": "So we'll need someone to take that one.",
+        "match_any": [
+          "responsible ai"
+        ],
+        "required": false
+      },
+      {
+        "text": "Push the vendor MSA to completion",
+        "owner": "Jennifer",
+        "owner_confirmed": true,
+        "msgs": [
+          "u19",
+          "u21"
+        ],
+        "quote": "How about Rob, you and I tag team that one?",
+        "match_any": [
+          "msa",
+          "procurement"
+        ],
+        "required": false
+      }
+    ],
+    "emerging_preference": {
+      "direction": "none",
+      "direction_any": [
+        "none",
+        "Run the chart tool in the vendor's (Estrada's) hosted environment"
+      ],
+      "terms": [
+        "estrada",
+        "vendor",
+        "their environment",
+        "hosted"
+      ],
+      "reason": "two people lean to vendor-hosted for the pilot, both softly; no explicit objection"
+    }
+  },
+  "executive_summary": {
+    "title": "Where should the chart tool be deployed for the pilot: inside our own environment or the vendor's hosted environment?",
+    "counts": {
+      "options": 3,
+      "dropped": 0,
+      "open_objections": 0,
+      "open_blockers": 5,
+      "unowned_actions": 1
+    },
+    "count_tolerance": {
+      "open_objections": [
+        0,
+        1
+      ],
+      "open_blockers": [
+        3,
+        7
+      ],
+      "unowned_actions": [
+        1,
+        3
+      ]
+    },
+    "preference": "none, or vendor-hosted for the pilot"
+  },
+  "traps": [
+    "Two different Jameses: James Haskins speaks; James Dodson (procurement contact) and Glenn Link are only mentioned. Never give Dodson a position or an action",
+    "Rob (Robert Garnett) is asked to tag-team on procurement but his reply 'Okay, good' sits inside Jennifer's turn; Rob is not a confirmed owner",
+    "Vikram says only 'Yeah.' and 'Hello.'; 'with Vikram help' is a mention. He has no position and no action",
+    "Danielle's 'Sure.' / 'Sure. Works for me.' accept the assignment plan, not a hosting option",
+    "'Mhm.' (Jennifer, Brandon's 'Yeah.') are backchannel, never support",
+    "Jennifer describes both hosting ways before choosing; describing option A is not support for A",
+    "Prasad, Michael R., Anil, Neal and Brandon's folks are mentions, not participants",
+    "'Estrada' is the vendor and 'Lilac' is James Haskins's project; names are copied as written",
+    "'66% through' is a status claim about the TGov list, not a vote or a progress number to compute from"
+  ],
+  "card_must_include": [
+    "ESG",
+    "MSA",
+    "Monday"
+  ],
+  "card_must_not_include": [
+    "Rob confirmed",
+    "Vikram will",
+    "Dodson supports"
+  ]
+}

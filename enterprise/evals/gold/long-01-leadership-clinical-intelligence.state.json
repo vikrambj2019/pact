@@ -1,0 +1,484 @@
+{
+ "_notes": "Built only from the text. A meeting with no decision: options stay active, most cells are blank or undecided, and the weight sits on open questions, blockers, constraints and claims. Where the text leaves a person's stance unclear the accepted list is lenient (see allowed lists); any stance not listed for a person must stay blank. Transcript errors preserved: 'Caroline'/'Katyal on' almost certainly mean the company name, 'backless' likely 'backlog'(?), '10-20' likely 'the 20th'.",
+ "participants": [
+  "Ratnakar",
+  "Ashok",
+  "Catherine",
+  "Mark",
+  "Kristy",
+  "Saurabh",
+  "Venkat",
+  "Stephen",
+  "Monique",
+  "Gloria"
+ ],
+ "questions": [
+  {
+   "key": "who_owns_orchestration",
+   "match": [
+    "orchestrat",
+    "business (leader|owner|constituent)",
+    "consortium",
+    "single (individual|owner)",
+    "(who|how).*(own|manage)"
+   ],
+   "status": [
+    "open"
+   ]
+  },
+  {
+   "key": "build_or_partner_journeys",
+   "match": [
+    "journey",
+    "partner",
+    "vendor",
+    "speed|fast"
+   ],
+   "status": [
+    "open"
+   ]
+  },
+  {
+   "key": "conflicting_outreach_priority",
+   "match": [
+    "next best action",
+    "trump",
+    "conflict",
+    "priorit",
+    "shut off",
+    "outreach"
+   ],
+   "status": [
+    "open"
+   ]
+  },
+  {
+   "key": "rationalize_models",
+   "match": [
+    "rationaliz",
+    "model"
+   ],
+   "status": [
+    "open"
+   ]
+  }
+ ],
+ "options": [
+  {
+   "key": "single_business_leader",
+   "match": [
+    "(single|one) (business )?(leader|owner|individual|constituent)"
+   ],
+   "exclude": [
+    "consortium"
+   ],
+   "status": "active",
+   "stances": {
+    "Ratnakar": [
+     "proposed",
+     "undecided"
+    ]
+   }
+  },
+  {
+   "key": "consortium",
+   "match": [
+    "consortium",
+    "group of"
+   ],
+   "status": "active",
+   "stances": {
+    "Stephen": [
+     "oppose",
+     "conditional"
+    ],
+    "Ratnakar": [
+     "undecided",
+     "blank"
+    ]
+   }
+  },
+  {
+   "key": "smaller_owners_per_capability",
+   "match": [
+    "smaller team",
+    "single accountable",
+    "accountable owner",
+    "parse",
+    "per capabilit"
+   ],
+   "status": "active",
+   "stances": {
+    "Stephen": [
+     "proposed",
+     "conditional"
+    ]
+   }
+  },
+  {
+   "key": "external_partner",
+   "match": [
+    "partner",
+    "vendor",
+    "external"
+   ],
+   "exclude": [
+    "\\bAI\\b",
+    "ChatGPT"
+   ],
+   "status": "active",
+   "stances": {
+    "Catherine": [
+     "proposed",
+     "conditional",
+     "undecided"
+    ],
+    "Ashok": [
+     "conditional",
+     "support"
+    ],
+    "Ratnakar": [
+     "conditional",
+     "undecided",
+     "support"
+    ],
+    "Saurabh": [
+     "blank",
+     "oppose",
+     "conditional"
+    ],
+    "Venkat": [
+     "blank",
+     "undecided",
+     "conditional"
+    ]
+   }
+  },
+  {
+   "key": "ai_generated_journeys",
+   "match": [
+    "\\bAI\\b",
+    "ChatGPT",
+    "generat",
+    "create .*journeys"
+   ],
+   "status": "active",
+   "optional": true,
+   "stances": {
+    "Ratnakar": [
+     "proposed",
+     "undecided"
+    ]
+   }
+  },
+  {
+   "key": "carelon_data_foundation",
+   "match": [
+    "data (foundation|platform)"
+   ],
+   "status": "active",
+   "optional": true,
+   "stances": {
+    "Ratnakar": [
+     "proposed",
+     "support"
+    ],
+    "Ashok": [
+     "support",
+     "blank"
+    ],
+    "Venkat": [
+     "support",
+     "blank"
+    ]
+   }
+  },
+  {
+   "key": "sooner_followup",
+   "match": [
+    "weeks",
+    "sooner",
+    "follow-?up",
+    "get together"
+   ],
+   "status": [
+    "active",
+    "chosen"
+   ],
+   "optional": true,
+   "stances": {
+    "Mark": [
+     "proposed",
+     "support"
+    ],
+    "Ratnakar": [
+     "support",
+     "blank"
+    ]
+   }
+  }
+ ],
+ "elements": [
+  {
+   "key": "almost_2000_models",
+   "msg": "m105",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "2000|models"
+   ],
+   "status": [
+    "unverified",
+    "confirmed"
+   ]
+  },
+  {
+   "key": "underestimating_work",
+   "msg": "m108",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "underestimat|work effort"
+   ],
+   "status": [
+    "unverified",
+    "confirmed",
+    "conflicting"
+   ]
+  },
+  {
+   "key": "not_moving_fast_enough",
+   "msg": "m190",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "fast|speed"
+   ],
+   "status": [
+    "unverified",
+    "conflicting"
+   ]
+  },
+  {
+   "key": "data_work_60_70",
+   "msg": "m187",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "60|70|percent|%|data"
+   ],
+   "status": [
+    "unverified",
+    "conflicting"
+   ]
+  },
+  {
+   "key": "interventions_blank_slate",
+   "msg": "m133",
+   "kinds": [
+    "claim",
+    "blocker"
+   ],
+   "match": [
+    "blank slate|intervention"
+   ],
+   "status": [
+    "unverified",
+    "open"
+   ]
+  },
+  {
+   "key": "dont_know_how_work_is_done_today",
+   "msg": "m134",
+   "kinds": [
+    "blocker",
+    "claim",
+    "constraint"
+   ],
+   "match": [
+    "sausage|today|figure|where"
+   ],
+   "status": [
+    "open",
+    "unverified",
+    "active"
+   ]
+  },
+  {
+   "key": "what_are_we_solving_for",
+   "msg": "m71",
+   "kinds": [
+    "blocker",
+    "claim"
+   ],
+   "match": [
+    "solving|business leader|who"
+   ],
+   "status": [
+    "open",
+    "unverified"
+   ]
+  },
+  {
+   "key": "conflicting_next_best_actions",
+   "msg": "m107",
+   "kinds": [
+    "blocker",
+    "claim"
+   ],
+   "match": [
+    "conflict|trump|next best"
+   ],
+   "status": [
+    "open",
+    "unverified"
+   ]
+  },
+  {
+   "key": "company_must_own_data",
+   "msg": "m194",
+   "kinds": [
+    "constraint",
+    "claim"
+   ],
+   "match": [
+    "own data|tenant|tenet|own"
+   ],
+   "status": [
+    "active",
+    "unverified"
+   ]
+  },
+  {
+   "key": "vendor_within_our_ecosystem",
+   "msg": "m188",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "protect|ecosystem|member data"
+   ],
+   "status": [
+    "active"
+   ]
+  },
+  {
+   "key": "own_consumer_relationship",
+   "msg": "m166",
+   "kinds": [
+    "constraint",
+    "claim"
+   ],
+   "match": [
+    "relationship|asset|consumer"
+   ],
+   "status": [
+    "active",
+    "unverified"
+   ]
+  },
+  {
+   "key": "kaye_leaves_515",
+   "msg": "m14",
+   "kinds": [
+    "constraint"
+   ],
+   "match": [
+    "5:15|leave"
+   ],
+   "status": [
+    "active"
+   ]
+  },
+  {
+   "key": "one_definition_of_data",
+   "msg": "m56",
+   "kinds": [
+    "claim",
+    "constraint"
+   ],
+   "match": [
+    "definition|standard|clean"
+   ],
+   "status": [
+    "active",
+    "unverified"
+   ]
+  },
+  {
+   "key": "one_mechanism_to_reach_member",
+   "msg": "m59",
+   "kinds": [
+    "constraint",
+    "claim"
+   ],
+   "match": [
+    "one mechanism|data intelligence|member is only one|signal"
+   ],
+   "status": [
+    "active",
+    "unverified"
+   ]
+  },
+  {
+   "key": "value_350m_to_700m",
+   "msg": "m98",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "350|700|billion"
+   ],
+   "status": [
+    "unverified"
+   ]
+  },
+  {
+   "key": "admin_and_clinical_never_combined",
+   "msg": "m150",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "admin|clinical|together"
+   ],
+   "status": [
+    "unverified",
+    "confirmed"
+   ]
+  },
+  {
+   "key": "holistic_view_after_platform",
+   "msg": "m182",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "holistic|platform"
+   ],
+   "status": [
+    "unverified"
+   ]
+  },
+  {
+   "key": "overlapping_outreach_care_at_home",
+   "msg": "m116",
+   "kinds": [
+    "claim"
+   ],
+   "match": [
+    "board|palliative|CareBridge|same time|care at home"
+   ],
+   "status": [
+    "unverified",
+    "confirmed"
+   ]
+  }
+ ],
+ "histories": [],
+ "flags": []
+}

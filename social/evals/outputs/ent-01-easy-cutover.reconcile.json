@@ -1,0 +1,1456 @@
+{
+ "source": "/Users/vbandugula/Documents/Dexter/pact/mvp1_b2e/newtest/social/evals/outputs/ent-01-easy-cutover.output.json",
+ "model": "claude-sonnet-4-6",
+ "participants": [
+  "Priya",
+  "Hannah",
+  "Dev",
+  "Marcus",
+  "Elena",
+  "Tom"
+ ],
+ "span_msgs": {
+  "b1.s1": "m1",
+  "b1.s2": "m1",
+  "b2.s1": "m2",
+  "b2.s2": "m2",
+  "b2.s3": "m2",
+  "b3.s1": "m3",
+  "b3.s2": "m3",
+  "b4.s1": "m4",
+  "b4.s2": "m4",
+  "b5.s1": "m5",
+  "b5.s2": "m5",
+  "b6.s1": "m6",
+  "b6.s2": "m6",
+  "b6.s3": "m6",
+  "b6.s4": "m7",
+  "b7.s1": "m8",
+  "b7.s2": "m9",
+  "b7.s3": "m9",
+  "b8.s1": "m10",
+  "b9.s1": "m11",
+  "b10.s1": "m12",
+  "b10.s2": "m12",
+  "b11.s1": "m13",
+  "b11.s2": "m13",
+  "b11.s3": "m14",
+  "b11.s4": "m14",
+  "b12.s1": "m15",
+  "b13.s1": "m16",
+  "b13.s2": "m16",
+  "b14.s1": "m17",
+  "b14.s2": "m17",
+  "b15.s1": "m18",
+  "b16.s1": "m19",
+  "b17.s1": "m20",
+  "b17.s2": "m20",
+  "b18.s1": "m21",
+  "b18.s2": "m21",
+  "b19.s1": "m22",
+  "b20.s1": "m23",
+  "b20.s2": "m23",
+  "b21.s1": "m24",
+  "b21.s2": "m24",
+  "b22.s1": "m25",
+  "b23.s1": "m26",
+  "b24.s1": "m27",
+  "b25.s1": "m28",
+  "b26.s1": "m29",
+  "b27.s1": "m30",
+  "b28.s1": "m31",
+  "b28.s2": "m31",
+  "b28.s3": "m31",
+  "b29.s1": "m32",
+  "b29.s2": "m32",
+  "b30.s1": "m33",
+  "b31.s1": "m34",
+  "b32.s1": "m35",
+  "b33.s1": "m36",
+  "b34.s1": "m37",
+  "b35.s1": "m38",
+  "b35.s2": "m38",
+  "b35.s3": "m39"
+ },
+ "elements": [
+  {
+   "id": "q1",
+   "kind": "question",
+   "title": "Which weekend for the billing cutover",
+   "author": "Priya",
+   "created_span": "b1.s1",
+   "status": "decided",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b1.s1",
+    "b28.s1"
+   ]
+  },
+  {
+   "id": "opt1",
+   "kind": "option",
+   "title": "Nov 14-15",
+   "author": "Hannah",
+   "created_span": "b2.s1",
+   "status": "chosen",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s1",
+    "b11.s2",
+    "b17.s1",
+    "b18.s1",
+    "b19.s1",
+    "b20.s1",
+    "b21.s1",
+    "b23.s1",
+    "b24.s1",
+    "b25.s1",
+    "b26.s1",
+    "b27.s1",
+    "b28.s1"
+   ]
+  },
+  {
+   "id": "clm1",
+   "kind": "claim",
+   "title": "UAT will be done by Nov 14-15",
+   "author": "Hannah",
+   "created_span": "b2.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s2"
+   ]
+  },
+  {
+   "id": "crit1",
+   "kind": "criterion",
+   "title": "Timing relative to the holidays",
+   "author": "Hannah",
+   "created_span": "b2.s3",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s3"
+   ]
+  },
+  {
+   "id": "clm2",
+   "kind": "claim",
+   "title": "Nov 14-15 is well before the holidays",
+   "author": "Hannah",
+   "created_span": "b2.s3",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b2.s3"
+   ]
+  },
+  {
+   "id": "opt2",
+   "kind": "option",
+   "title": "Nov 21-22",
+   "author": "Dev",
+   "created_span": "b3.s1",
+   "status": "fallback",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s1",
+    "b3.s2",
+    "b11.s3",
+    "b11.s4",
+    "b21.s2",
+    "b28.s2"
+   ]
+  },
+  {
+   "id": "clm3",
+   "kind": "claim",
+   "title": "Nov 21-22 gives one extra week of buffer vs Nov 14-15",
+   "author": "Dev",
+   "created_span": "b3.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s2"
+   ]
+  },
+  {
+   "id": "crit2",
+   "kind": "criterion",
+   "title": "Schedule buffer between UAT completion and cutover weekend",
+   "author": "Dev",
+   "created_span": "b3.s2",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b3.s2"
+   ]
+  },
+  {
+   "id": "opt3",
+   "kind": "option",
+   "title": "Dec 5-6",
+   "author": "Hannah",
+   "created_span": "b4.s1",
+   "status": "dropped",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b4.s1",
+    "b4.s2",
+    "b7.s2",
+    "b8.s1"
+   ]
+  },
+  {
+   "id": "con1",
+   "kind": "constraint",
+   "title": "Month-end close occupies last 3 business days of month \u2014 no cutover then",
+   "author": "Marcus",
+   "created_span": "b6.s1",
+   "status": "superseded",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": "con2",
+   "spans": [
+    "b6.s1",
+    "b6.s3"
+   ]
+  },
+  {
+   "id": "con2",
+   "kind": "constraint",
+   "title": "Avoid Nov 25-30 month-end close window",
+   "author": "Marcus",
+   "created_span": "b6.s3",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s3"
+   ]
+  },
+  {
+   "id": "clm4",
+   "kind": "claim",
+   "title": "Nov 14-15, Nov 21-22, and Dec 5-6 all avoid the Nov 25-30 window",
+   "author": "Marcus",
+   "created_span": "b6.s4",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1",
+     "opt2",
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b6.s4"
+   ]
+  },
+  {
+   "id": "con3",
+   "kind": "constraint",
+   "title": "Support staffing freeze from Nov 23 \u2014 no weekend cover after that date",
+   "author": "Elena",
+   "created_span": "b7.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b7.s1"
+   ]
+  },
+  {
+   "id": "clm5",
+   "kind": "claim",
+   "title": "Dec 5-6 falls after the Nov 23 staffing freeze \u2014 no weekend cover available",
+   "author": "Elena",
+   "created_span": "b7.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt3"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b7.s2"
+   ]
+  },
+  {
+   "id": "con4",
+   "kind": "constraint",
+   "title": "Five full days after UAT sign-off required before cutover",
+   "author": "Dev",
+   "created_span": "b9.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b9.s1"
+   ]
+  },
+  {
+   "id": "blk1",
+   "kind": "blocker",
+   "title": "UAT sign-off date gates cutover feasibility",
+   "author": "Tom",
+   "created_span": "b10.s1",
+   "status": "resolved",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt1",
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b10.s1"
+   ]
+  },
+  {
+   "id": "clm6",
+   "kind": "claim",
+   "title": "UAT sign-off Nov 6 \u2014 fixed date",
+   "author": "Tom",
+   "created_span": "b10.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b10.s1"
+   ]
+  },
+  {
+   "id": "clm7",
+   "kind": "claim",
+   "title": "Nov 6 + 5-day window ends Nov 11, clearing Nov 14-15",
+   "author": "Dev",
+   "created_span": "b11.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b11.s1"
+   ]
+  },
+  {
+   "id": "clm8",
+   "kind": "claim",
+   "title": "Last billing cutover took ~9 hours on a Saturday night",
+   "author": "Dev",
+   "created_span": "b13.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b13.s1"
+   ]
+  },
+  {
+   "id": "clm9",
+   "kind": "claim",
+   "title": "This cutover is bigger \u2014 planning for ~12 hours",
+   "author": "Dev",
+   "created_span": "b13.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "predictive"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b13.s2"
+   ]
+  },
+  {
+   "id": "crit3",
+   "kind": "criterion",
+   "title": "Risk",
+   "author": "Priya",
+   "created_span": "b14.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b14.s1"
+   ]
+  },
+  {
+   "id": "crit4",
+   "kind": "criterion",
+   "title": "Support coverage",
+   "author": "Priya",
+   "created_span": "b14.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b14.s1"
+   ]
+  },
+  {
+   "id": "crit5",
+   "kind": "criterion",
+   "title": "Finance close timing",
+   "author": "Priya",
+   "created_span": "b14.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {},
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b14.s1",
+    "b17.s2"
+   ]
+  },
+  {
+   "id": "con5",
+   "kind": "constraint",
+   "title": "Customers must receive 5 days notice before billing changes",
+   "author": "Hannah",
+   "created_span": "b15.s1",
+   "status": "active",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "constraint_kind": "mandatory"
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b15.s1"
+   ]
+  },
+  {
+   "id": "clm10",
+   "kind": "claim",
+   "title": "5-day customer notice requirement easily met by Nov 14-15 or Nov 21-22",
+   "author": "Priya",
+   "created_span": "b16.s1",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "factual",
+    "about": [
+     "opt1",
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b16.s1"
+   ]
+  },
+  {
+   "id": "clm11",
+   "kind": "claim",
+   "title": "Month-end close is behind the Nov 14-15 window; auditors can be briefed the week before",
+   "author": "Marcus",
+   "created_span": "b17.s2",
+   "status": "unverified",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "causal",
+    "about": [
+     "opt1"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b17.s2"
+   ]
+  },
+  {
+   "id": "clm12",
+   "kind": "claim",
+   "title": "Nov 21-22 as fallback only if UAT slips",
+   "author": "Dev",
+   "created_span": "b21.s2",
+   "status": "unverified",
+   "question_id": "q1",
+   "aliases": [],
+   "attrs": {
+    "claim_kind": "conditional",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b21.s2"
+   ]
+  },
+  {
+   "id": "blk2",
+   "kind": "blocker",
+   "title": "UAT sign-off slipping past Nov 6 triggers fallback to Nov 21-22",
+   "author": "Priya",
+   "created_span": "b28.s3",
+   "status": "open",
+   "question_id": null,
+   "aliases": [],
+   "attrs": {
+    "blocker_kind": "unresolved_dependency",
+    "about": [
+     "opt2"
+    ]
+   },
+   "merged_into": null,
+   "superseded_by": null,
+   "spans": [
+    "b28.s3"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "seq": 1,
+   "ts": "2026-10-19T09:05:00",
+   "span_id": "b1.s1",
+   "kind": "create",
+   "element_id": "q1",
+   "participant": "Priya",
+   "payload": {
+    "title": "Which weekend for the billing cutover",
+    "kind": "question"
+   },
+   "because": []
+  },
+  {
+   "seq": 2,
+   "ts": "2026-10-19T09:06:00",
+   "span_id": "b2.s1",
+   "kind": "create",
+   "element_id": "opt1",
+   "participant": "Hannah",
+   "payload": {
+    "title": "Nov 14-15",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 3,
+   "ts": "2026-10-19T09:06:00",
+   "span_id": "b2.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "proposed",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 4,
+   "ts": "2026-10-19T09:06:00",
+   "span_id": "b2.s2",
+   "kind": "create",
+   "element_id": "clm1",
+   "participant": "Hannah",
+   "payload": {
+    "title": "UAT will be done by Nov 14-15",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 5,
+   "ts": "2026-10-19T09:06:00",
+   "span_id": "b2.s3",
+   "kind": "create",
+   "element_id": "crit1",
+   "participant": "Hannah",
+   "payload": {
+    "title": "Timing relative to the holidays",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 6,
+   "ts": "2026-10-19T09:06:00",
+   "span_id": "b2.s3",
+   "kind": "create",
+   "element_id": "clm2",
+   "participant": "Hannah",
+   "payload": {
+    "title": "Nov 14-15 is well before the holidays",
+    "kind": "claim"
+   },
+   "because": [
+    "crit1",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 7,
+   "ts": "2026-10-19T09:08:00",
+   "span_id": "b3.s1",
+   "kind": "create",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "title": "Nov 21-22",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 8,
+   "ts": "2026-10-19T09:08:00",
+   "span_id": "b3.s2",
+   "kind": "create",
+   "element_id": "clm3",
+   "participant": "Dev",
+   "payload": {
+    "title": "Nov 21-22 gives one extra week of buffer vs Nov 14-15",
+    "kind": "claim"
+   },
+   "because": [
+    "opt1",
+    "opt2"
+   ]
+  },
+  {
+   "seq": 9,
+   "ts": "2026-10-19T09:08:00",
+   "span_id": "b3.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "stance": "support",
+    "prev": null,
+    "inferred": true,
+    "inferred_reason": "span is ['claim', 'criterion'], not a stance"
+   },
+   "because": [
+    "clm3"
+   ]
+  },
+  {
+   "seq": 10,
+   "ts": "2026-10-19T09:08:00",
+   "span_id": "b3.s2",
+   "kind": "create",
+   "element_id": "crit2",
+   "participant": "Dev",
+   "payload": {
+    "title": "Schedule buffer between UAT completion and cutover weekend",
+    "kind": "criterion"
+   },
+   "because": [
+    "clm3"
+   ]
+  },
+  {
+   "seq": 11,
+   "ts": "2026-10-19T09:09:00",
+   "span_id": "b4.s1",
+   "kind": "create",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "title": "Dec 5-6",
+    "kind": "option"
+   },
+   "because": []
+  },
+  {
+   "seq": 12,
+   "ts": "2026-10-19T09:09:00",
+   "span_id": "b4.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "proposed",
+    "prev": null,
+    "conditions": "only if schedule slips"
+   },
+   "because": []
+  },
+  {
+   "seq": 13,
+   "ts": "2026-10-19T09:09:00",
+   "span_id": "b4.s2",
+   "kind": "status",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "from": "active",
+    "to": "fallback"
+   },
+   "because": []
+  },
+  {
+   "seq": 14,
+   "ts": "2026-10-19T09:09:00",
+   "span_id": "b4.s2",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "conditional",
+    "prev": "proposed",
+    "conditions": "only if schedule slips; Hannah does not favor it"
+   },
+   "because": []
+  },
+  {
+   "seq": 15,
+   "ts": "2026-10-19T09:16:00",
+   "span_id": "b6.s1",
+   "kind": "create",
+   "element_id": "con1",
+   "participant": "Marcus",
+   "payload": {
+    "title": "Month-end close occupies last 3 business days of month \u2014 no cutover then",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 16,
+   "ts": "2026-10-19T09:16:00",
+   "span_id": "b6.s3",
+   "kind": "create",
+   "element_id": "con2",
+   "participant": "Marcus",
+   "payload": {
+    "title": "Avoid Nov 25-30 month-end close window",
+    "kind": "constraint"
+   },
+   "because": [
+    "con1"
+   ]
+  },
+  {
+   "seq": 17,
+   "ts": "2026-10-19T09:16:00",
+   "span_id": "b6.s3",
+   "kind": "supersede",
+   "element_id": "con1",
+   "participant": "Marcus",
+   "payload": {
+    "from": "active",
+    "to": "superseded",
+    "by": "con2"
+   },
+   "because": [
+    "con2"
+   ]
+  },
+  {
+   "seq": 18,
+   "ts": "2026-10-19T09:18:00",
+   "span_id": "b6.s4",
+   "kind": "create",
+   "element_id": "clm4",
+   "participant": "Marcus",
+   "payload": {
+    "title": "Nov 14-15, Nov 21-22, and Dec 5-6 all avoid the Nov 25-30 window",
+    "kind": "claim"
+   },
+   "because": [
+    "con2"
+   ]
+  },
+  {
+   "seq": 19,
+   "ts": "2026-10-19T09:21:00",
+   "span_id": "b7.s1",
+   "kind": "create",
+   "element_id": "con3",
+   "participant": "Elena",
+   "payload": {
+    "title": "Support staffing freeze from Nov 23 \u2014 no weekend cover after that date",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 20,
+   "ts": "2026-10-19T09:22:00",
+   "span_id": "b7.s2",
+   "kind": "create",
+   "element_id": "clm5",
+   "participant": "Elena",
+   "payload": {
+    "title": "Dec 5-6 falls after the Nov 23 staffing freeze \u2014 no weekend cover available",
+    "kind": "claim"
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 21,
+   "ts": "2026-10-19T09:22:00",
+   "span_id": "b7.s2",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Elena",
+   "payload": {
+    "stance": "oppose",
+    "prev": null
+   },
+   "because": [
+    "con3",
+    "clm5"
+   ]
+  },
+  {
+   "seq": 22,
+   "ts": "2026-10-19T09:24:00",
+   "span_id": "b8.s1",
+   "kind": "stance",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "withdrawn",
+    "prev": "conditional"
+   },
+   "because": [
+    "clm5",
+    "con3"
+   ]
+  },
+  {
+   "seq": 23,
+   "ts": "2026-10-19T09:24:00",
+   "span_id": "b8.s1",
+   "kind": "status",
+   "element_id": "opt3",
+   "participant": "Hannah",
+   "payload": {
+    "from": "fallback",
+    "to": "dropped"
+   },
+   "because": [
+    "clm5",
+    "con3"
+   ]
+  },
+  {
+   "seq": 24,
+   "ts": "2026-10-19T09:27:00",
+   "span_id": "b9.s1",
+   "kind": "create",
+   "element_id": "con4",
+   "participant": "Dev",
+   "payload": {
+    "title": "Five full days after UAT sign-off required before cutover",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 25,
+   "ts": "2026-10-19T09:29:00",
+   "span_id": "b10.s1",
+   "kind": "create",
+   "element_id": "blk1",
+   "participant": "Tom",
+   "payload": {
+    "title": "UAT sign-off date gates cutover feasibility",
+    "kind": "blocker"
+   },
+   "because": [
+    "con4"
+   ]
+  },
+  {
+   "seq": 26,
+   "ts": "2026-10-19T09:29:00",
+   "span_id": "b10.s1",
+   "kind": "create",
+   "element_id": "clm6",
+   "participant": "Tom",
+   "payload": {
+    "title": "UAT sign-off Nov 6 \u2014 fixed date",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 27,
+   "ts": "2026-10-19T09:29:00",
+   "span_id": "b10.s1",
+   "kind": "status",
+   "element_id": "blk1",
+   "participant": "Tom",
+   "payload": {
+    "from": "open",
+    "to": "resolved"
+   },
+   "because": [
+    "clm6"
+   ]
+  },
+  {
+   "seq": 28,
+   "ts": "2026-10-19T09:31:00",
+   "span_id": "b11.s1",
+   "kind": "create",
+   "element_id": "clm7",
+   "participant": "Dev",
+   "payload": {
+    "title": "Nov 6 + 5-day window ends Nov 11, clearing Nov 14-15",
+    "kind": "claim"
+   },
+   "because": [
+    "clm6",
+    "con4"
+   ]
+  },
+  {
+   "seq": 29,
+   "ts": "2026-10-19T09:31:00",
+   "span_id": "b11.s2",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dev",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm7",
+    "con4"
+   ]
+  },
+  {
+   "seq": 30,
+   "ts": "2026-10-19T09:32:00",
+   "span_id": "b11.s3",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "clm7",
+    "con4"
+   ]
+  },
+  {
+   "seq": 31,
+   "ts": "2026-10-19T09:32:00",
+   "span_id": "b11.s4",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "stance": "oppose",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 32,
+   "ts": "2026-10-19T09:37:00",
+   "span_id": "b13.s1",
+   "kind": "create",
+   "element_id": "clm8",
+   "participant": "Dev",
+   "payload": {
+    "title": "Last billing cutover took ~9 hours on a Saturday night",
+    "kind": "claim"
+   },
+   "because": []
+  },
+  {
+   "seq": 33,
+   "ts": "2026-10-19T09:37:00",
+   "span_id": "b13.s2",
+   "kind": "create",
+   "element_id": "clm9",
+   "participant": "Dev",
+   "payload": {
+    "title": "This cutover is bigger \u2014 planning for ~12 hours",
+    "kind": "claim"
+   },
+   "because": [
+    "clm8"
+   ]
+  },
+  {
+   "seq": 34,
+   "ts": "2026-10-19T09:39:00",
+   "span_id": "b14.s1",
+   "kind": "create",
+   "element_id": "crit3",
+   "participant": "Priya",
+   "payload": {
+    "title": "Risk",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 35,
+   "ts": "2026-10-19T09:39:00",
+   "span_id": "b14.s1",
+   "kind": "create",
+   "element_id": "crit4",
+   "participant": "Priya",
+   "payload": {
+    "title": "Support coverage",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 36,
+   "ts": "2026-10-19T09:39:00",
+   "span_id": "b14.s1",
+   "kind": "create",
+   "element_id": "crit5",
+   "participant": "Priya",
+   "payload": {
+    "title": "Finance close timing",
+    "kind": "criterion"
+   },
+   "because": []
+  },
+  {
+   "seq": 37,
+   "ts": "2026-10-19T09:42:00",
+   "span_id": "b15.s1",
+   "kind": "create",
+   "element_id": "con5",
+   "participant": "Hannah",
+   "payload": {
+    "title": "Customers must receive 5 days notice before billing changes",
+    "kind": "constraint"
+   },
+   "because": []
+  },
+  {
+   "seq": 38,
+   "ts": "2026-10-19T09:44:00",
+   "span_id": "b16.s1",
+   "kind": "create",
+   "element_id": "clm10",
+   "participant": "Priya",
+   "payload": {
+    "title": "5-day customer notice requirement easily met by Nov 14-15 or Nov 21-22",
+    "kind": "claim"
+   },
+   "because": [
+    "con5"
+   ]
+  },
+  {
+   "seq": 39,
+   "ts": "2026-10-19T09:47:00",
+   "span_id": "b17.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Marcus",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 40,
+   "ts": "2026-10-19T09:47:00",
+   "span_id": "b17.s2",
+   "kind": "create",
+   "element_id": "clm11",
+   "participant": "Marcus",
+   "payload": {
+    "title": "Month-end close is behind the Nov 14-15 window; auditors can be briefed the week before",
+    "kind": "claim"
+   },
+   "because": [
+    "con2",
+    "opt1"
+   ]
+  },
+  {
+   "seq": 41,
+   "ts": "2026-10-19T09:47:00",
+   "span_id": "b17.s2",
+   "kind": "attach",
+   "element_id": "crit5",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 42,
+   "ts": "2026-10-19T09:49:00",
+   "span_id": "b18.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Elena",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": [
+    "con3"
+   ]
+  },
+  {
+   "seq": 43,
+   "ts": "2026-10-19T09:51:00",
+   "span_id": "b19.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Tom",
+   "payload": {
+    "stance": "support",
+    "prev": null
+   },
+   "because": []
+  },
+  {
+   "seq": 44,
+   "ts": "2026-10-19T09:52:00",
+   "span_id": "b20.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "support",
+    "prev": "proposed"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 45,
+   "ts": "2026-10-19T09:54:00",
+   "span_id": "b21.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dev",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 46,
+   "ts": "2026-10-19T09:54:00",
+   "span_id": "b21.s2",
+   "kind": "status",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "from": "active",
+    "to": "fallback"
+   },
+   "because": [
+    "clm7",
+    "con4"
+   ]
+  },
+  {
+   "seq": 47,
+   "ts": "2026-10-19T09:54:00",
+   "span_id": "b21.s2",
+   "kind": "create",
+   "element_id": "clm12",
+   "participant": "Dev",
+   "payload": {
+    "title": "Nov 21-22 as fallback only if UAT slips",
+    "kind": "claim"
+   },
+   "because": [
+    "clm6",
+    "clm7",
+    "con4"
+   ]
+  },
+  {
+   "seq": 48,
+   "ts": "2026-10-19T09:54:00",
+   "span_id": "b21.s2",
+   "kind": "stance",
+   "element_id": "opt2",
+   "participant": "Dev",
+   "payload": {
+    "stance": "conditional",
+    "prev": "oppose",
+    "conditions": "Only if UAT slips past Nov 11"
+   },
+   "because": [
+    "clm6",
+    "clm7",
+    "con4"
+   ]
+  },
+  {
+   "seq": 49,
+   "ts": "2026-10-19T09:59:00",
+   "span_id": "b23.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Marcus",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": [
+    "opt1"
+   ]
+  },
+  {
+   "seq": 50,
+   "ts": "2026-10-19T10:00:00",
+   "span_id": "b24.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Elena",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 51,
+   "ts": "2026-10-19T10:01:00",
+   "span_id": "b25.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Tom",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 52,
+   "ts": "2026-10-19T10:02:00",
+   "span_id": "b26.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Hannah",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 53,
+   "ts": "2026-10-19T10:04:00",
+   "span_id": "b27.s1",
+   "kind": "stance",
+   "element_id": "opt1",
+   "participant": "Dev",
+   "payload": {
+    "stance": "support",
+    "prev": "support"
+   },
+   "because": []
+  },
+  {
+   "seq": 54,
+   "ts": "2026-10-19T10:06:00",
+   "span_id": "b28.s1",
+   "kind": "decide",
+   "element_id": "q1",
+   "participant": "Priya",
+   "payload": {
+    "chosen": [
+     "opt1"
+    ],
+    "ruled_out": [
+     "opt3"
+    ],
+    "conditional": false,
+    "conditions": "",
+    "from": "open",
+    "to": "decided"
+   },
+   "because": [
+    "opt1",
+    "clm7",
+    "con2",
+    "con3",
+    "con4",
+    "con5"
+   ]
+  },
+  {
+   "seq": 55,
+   "ts": "2026-10-19T10:06:00",
+   "span_id": "b28.s1",
+   "kind": "status",
+   "element_id": "opt1",
+   "participant": "Priya",
+   "payload": {
+    "from": "active",
+    "to": "chosen"
+   },
+   "because": [
+    "q1"
+   ]
+  },
+  {
+   "seq": 56,
+   "ts": "2026-10-19T10:06:00",
+   "span_id": "b28.s2",
+   "kind": "attach",
+   "element_id": "opt2",
+   "participant": null,
+   "payload": {},
+   "because": []
+  },
+  {
+   "seq": 57,
+   "ts": "2026-10-19T10:06:00",
+   "span_id": "b28.s3",
+   "kind": "create",
+   "element_id": "blk2",
+   "participant": "Priya",
+   "payload": {
+    "title": "UAT sign-off slipping past Nov 6 triggers fallback to Nov 21-22",
+    "kind": "blocker"
+   },
+   "because": [
+    "opt2",
+    "clm6",
+    "clm12"
+   ]
+  }
+ ],
+ "warnings": [
+  "inferred stance (span is ['claim', 'criterion'], not a stance): {\"op\": \"stance\", \"option\": \"opt2\", \"stance\": \"support\", \"span\": \"b3.s2\", \"because\": [\"clm3\"]}"
+ ],
+ "followups": 0
+}

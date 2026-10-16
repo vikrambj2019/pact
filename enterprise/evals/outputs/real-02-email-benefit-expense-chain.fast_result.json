@@ -1,0 +1,5051 @@
+{
+  "source": "evals/sources/real-02-email-benefit-expense-chain.txt",
+  "model": "claude-haiku-5-5",
+  "participants": [
+    "Klein, Josh",
+    "Milloy, Abby",
+    "Weber, Kyle",
+    "Ali, Kanwal (Walle)",
+    "Tanal, Stephen",
+    "Lavu, Ratnakar",
+    "Unknown"
+  ],
+  "span_msgs": {
+    "b1.s1": "m13",
+    "b1.s2": "m13",
+    "b2.s1": "m1",
+    "b2.s2": "m1",
+    "b2.s3": "m1",
+    "b3.s1": "m2",
+    "b3.s2": "m2",
+    "b3.s3": "m2",
+    "b3.s4": "m2",
+    "b3.s5": "m2",
+    "b3.s6": "m2",
+    "b3.s7": "m2",
+    "b3.s8": "m2",
+    "b3.s9": "m2",
+    "b3.s10": "m2",
+    "b3.s11": "m2",
+    "b3.s12": "m2",
+    "b3.s13": "m2",
+    "b3.s14": "m2",
+    "b3.s15": "m2",
+    "b3.s16": "m2",
+    "b3.s17": "m2",
+    "b3.s18": "m2",
+    "b3.s19": "m2",
+    "b3.s20": "m2",
+    "b3.s21": "m2",
+    "b3.s22": "m2",
+    "b3.s23": "m2",
+    "b3.s24": "m2",
+    "b3.s25": "m2",
+    "b4.s1": "m3",
+    "b4.s2": "m3",
+    "b4.s3": "m3",
+    "b4.s4": "m3",
+    "b5.s1": "m4",
+    "b5.s2": "m4",
+    "b5.s3": "m4",
+    "b5.s4": "m4",
+    "b6.s1": "m5",
+    "b6.s2": "m5",
+    "b6.s3": "m5",
+    "b6.s4": "m5",
+    "b6.s5": "m5",
+    "b6.s6": "m5",
+    "b6.s7": "m5",
+    "b6.s8": "m5",
+    "b6.s9": "m5",
+    "b6.s10": "m5",
+    "b6.s11": "m5",
+    "b6.s12": "m5",
+    "b6.s13": "m5",
+    "b7.s1": "m6",
+    "b7.s2": "m6",
+    "b7.s3": "m6",
+    "b7.s4": "m6",
+    "b8.s1": "m7",
+    "b8.s2": "m7",
+    "b8.s3": "m7",
+    "b8.s4": "m7",
+    "b8.s5": "m7",
+    "b8.s6": "m7",
+    "b8.s7": "m7",
+    "b8.s8": "m7",
+    "b8.s9": "m7",
+    "b9.s1": "m8",
+    "b9.s2": "m8",
+    "b9.s3": "m8",
+    "b9.s4": "m8",
+    "b9.s5": "m8",
+    "b9.s6": "m8",
+    "b9.s7": "m8",
+    "b9.s8": "m8",
+    "b9.s9": "m8",
+    "b9.s10": "m8",
+    "b9.s11": "m8",
+    "b9.s12": "m8",
+    "b10.s1": "m9",
+    "b10.s2": "m9",
+    "b10.s3": "m9",
+    "b10.s4": "m9",
+    "b10.s5": "m9",
+    "b10.s6": "m9",
+    "b10.s7": "m9",
+    "b10.s8": "m9",
+    "b10.s9": "m9",
+    "b11.s1": "m10",
+    "b11.s2": "m10",
+    "b11.s3": "m10",
+    "b11.s4": "m10",
+    "b11.s5": "m10",
+    "b11.s6": "m10",
+    "b12.s1": "m11",
+    "b13.s1": "m12"
+  },
+  "elements": [
+    {
+      "id": "q1",
+      "kind": "question",
+      "title": "How should the memo be structured for the Council discussion?",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s4",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt1",
+      "kind": "option",
+      "title": "Single combined memo",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s4",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s4"
+      ]
+    },
+    {
+      "id": "opt2",
+      "kind": "option",
+      "title": "Split into two memos (assumptions/long-term strategy and immediate leadership actions/decisions)",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s4",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s4"
+      ]
+    },
+    {
+      "id": "con1",
+      "kind": "constraint",
+      "title": "Final memo versions due 10am EST Monday",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s3",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b6.s3"
+      ]
+    },
+    {
+      "id": "clm1",
+      "kind": "claim",
+      "title": "Start the EPGC discussion with the assumptions and long-term strategy memo to get Council agreement on approach, assumptions, and five strategic areas to pressure test",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s5",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q2",
+      "kind": "question",
+      "title": "What must the September EPGC decide on September 24?",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s15",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm2",
+      "kind": "claim",
+      "title": "ETM (elevated trend management) was already approved in August, so it is not the September decision point",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s13",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s13"
+      ]
+    },
+    {
+      "id": "clm3",
+      "kind": "claim",
+      "title": "Re-emphasizing ETM as a September decision point is not recommended; reminding folks of the August ETM approval as part of the total response is acceptable",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s14",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s15"
+      ]
+    },
+    {
+      "id": "clm4",
+      "kind": "claim",
+      "title": "Re-emphasize new approvals, funding, scope, priorities, or accepted risks required on September 24",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s15",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s15"
+      ]
+    },
+    {
+      "id": "blk1",
+      "kind": "blocker",
+      "title": "Outstanding unanswered questions (enterprise changes, 25bp target path) may remain open and need to be stated by submitters",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s12",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "open_question"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s12"
+      ]
+    },
+    {
+      "id": "clm5",
+      "kind": "claim",
+      "title": "The proposed BEPMM decision is unclear: scope, funding, timing, owner, expected result, and changes are not defined, so the decision request is not usable yet",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s17",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s17"
+      ]
+    },
+    {
+      "id": "q3",
+      "kind": "question",
+      "title": "What must the enterprise do differently if elevated trend persists?",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s4",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm6",
+      "kind": "claim",
+      "title": "Memo states ETM's expanded ambition cannot be absorbed within current cost of care funding/capacity but does not address what changes or support the enterprise needs",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s5",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s5"
+      ]
+    },
+    {
+      "id": "q4",
+      "kind": "question",
+      "title": "Which pricing, product, network, benefit, operating, strategic, and investment assumptions change if elevated trend persists?",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s7",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q5",
+      "kind": "question",
+      "title": "Which no-regret actions and contingency triggers should enter the 2027 plan now?",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s8",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm7",
+      "kind": "claim",
+      "title": "The submitted memo does not address how the enterprise will exceed the relative 25-basis-point target",
+      "author": "Milloy, Abby",
+      "created_span": "b3.s10",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b3.s10"
+      ]
+    },
+    {
+      "id": "q6",
+      "kind": "question",
+      "title": "Are the five areas of focus the right strategic areas, as currently framed?",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s6",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm8",
+      "kind": "claim",
+      "title": "The five areas of focus need validation against historical experience across commercial, government, and Carelon (what worked, what did not, what would differ this time) before being accepted",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s6",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm9",
+      "kind": "claim",
+      "title": "Walle has firsthand experience building and launching several of the five strategic areas in Commercial",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s7",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm10",
+      "kind": "claim",
+      "title": "Group is trying to understand how expense trends across the work streams",
+      "author": "Ali, Kanwal (Walle)",
+      "created_span": "b6.s11",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q7",
+      "kind": "question",
+      "title": "Which approach should be taken to predict and manage benefit expense (the EPGC Enterprise Trend Management memo recommendation)?",
+      "author": "Tanal, Stephen",
+      "created_span": "b7.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt3",
+      "kind": "option",
+      "title": "Benefit Expense Projection & Management Modernization (BEPMM) as one coordinated project",
+      "author": "Tanal, Stephen",
+      "created_span": "b7.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s3"
+      ]
+    },
+    {
+      "id": "clm11",
+      "kind": "claim",
+      "title": "BEPMM would be funded by allocations/reallocations from related projects (Member Orchestration, Medical Cost Command Center, HealthOS)",
+      "author": "Tanal, Stephen",
+      "created_span": "b7.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q8",
+      "kind": "question",
+      "title": "Should BEPMM (or BEPMMCI) serve as a separate organizing body/funding vehicle for predictive models?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt4",
+      "kind": "option",
+      "title": "Fund predictive models under existing CoC funding and build via Clinical Intelligence",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "clm12",
+      "kind": "claim",
+      "title": "BEPMM as an organizing body would shift the discussion to governance rather than funding or predictive models",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm13",
+      "kind": "claim",
+      "title": "Predictive models should be prioritized as part of the CoC funding already being allocated",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm14",
+      "kind": "claim",
+      "title": "Predictive, retrospective and real-time models are all needed for CoC and clinical use",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm15",
+      "kind": "claim",
+      "title": "A horizontal Clinical Intelligence capability is already being created and can serve multiple areas",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b12.s1",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q9",
+      "kind": "question",
+      "title": "How should the BEPMM work be structured and funded (separate funded work stream vs. integrated into existing Strategic Finance/Technology capacity)?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s8",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt5",
+      "kind": "option",
+      "title": "Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s8",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s8",
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "opt6",
+      "kind": "option",
+      "title": "Approve BEPMM as a separate funded work stream: $15.0M one-time 2027 investment and $4.65M annual run rate, funded by reallocation",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s9",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "clm16",
+      "kind": "claim",
+      "title": "BEPMM proposal: $15.0M one-time 2027 investment and $4.65M annual run rate to modernize benefit-expense projections and management, funded by reallocation from existing initiatives, with Strategic Finance as business owner and governance lead",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s9",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm17",
+      "kind": "claim",
+      "title": "Stephen and Ratnakar share the same critical goal for the BEPMM work",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "consensus"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm18",
+      "kind": "claim",
+      "title": "BEPMM should not be a separate set of work; parallel workstreams should be integrated",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm19",
+      "kind": "claim",
+      "title": "BEPMM's purpose is to coordinate and track existing work and integrate parallel workstreams where sensible, not to create separate work",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "blk2",
+      "kind": "blocker",
+      "title": "What the Clinical Intelligence platform is and how it is funded is unresolved, and needed to decide whether it belongs in BEPMM",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s5",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "missing_info"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b9.s5"
+      ]
+    },
+    {
+      "id": "q10",
+      "kind": "question",
+      "title": "Is BEPMM a capability or a governing body?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "blk3",
+      "kind": "blocker",
+      "title": "Unclear what BEPMM is (capability vs governing body); needed before Ratnakar can align",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "missing_info"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm20",
+      "kind": "claim",
+      "title": "The related work is duplicative of BEPMM, so a separate effort is unnecessary",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s3",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "clm21",
+      "kind": "claim",
+      "title": "Clinical Intelligence is a horizontal capability that supports multiple use cases across the enterprise",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm22",
+      "kind": "claim",
+      "title": "Clinical Intelligence work is shaped by the different needs across programs, favoring integration over separation",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s5",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "causal"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm23",
+      "kind": "claim",
+      "title": "Enterprise already embeds dedicated data science resources in program owners (CoC, UM, Claims), so BEPMM's centralized resourcing is not different",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s8",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt7",
+      "kind": "option",
+      "title": "Integrate BEPMM work into existing programs and common platforms",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s3",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s6",
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "opt8",
+      "kind": "option",
+      "title": "Embed dedicated data science resources in program owners",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s8",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s8"
+      ]
+    },
+    {
+      "id": "opt9",
+      "kind": "option",
+      "title": "Centralized BEPMM-style team/funding structure proposed by Strategic Finance",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s8",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s8"
+      ]
+    },
+    {
+      "id": "q11",
+      "kind": "question",
+      "title": "Is the Clinical Intelligence platform a standalone SVRO project today?",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s6",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q12",
+      "kind": "question",
+      "title": "How to ensure transparency, no duplication of work/funding, and enterprise focus across related work (CoC, Member Orchestration, HealthOS/TMV)?",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s7",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt10",
+      "kind": "option",
+      "title": "Consolidate all related work in one place (BEPMM)",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s7",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s2"
+      ]
+    },
+    {
+      "id": "clm24",
+      "kind": "claim",
+      "title": "Bringing all related work into BEPMM ensures transparency, avoids duplication, and provides enterprise focus",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s7",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "causal"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt11",
+      "kind": "option",
+      "title": "Strategic Finance team does end-to-end BEPMM work independently",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s8",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm25",
+      "kind": "claim",
+      "title": "Stephen's team will not do end-to-end BEPMM-related work independently",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s8",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q13",
+      "kind": "question",
+      "title": "Where should iterative ML/AI model development for predictive capabilities happen?",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s10",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt12",
+      "kind": "option",
+      "title": "Embedded ML/AI model development close to Actuarial and Finance SMEs with embedded data scientists",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s10",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm26",
+      "kind": "claim",
+      "title": "Strategic Finance uniquely offers value to the cross-functional working group",
+      "author": "Tanal, Stephen",
+      "created_span": "b9.s11",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "priority"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "blk4",
+      "kind": "blocker",
+      "title": "BEPMM is not yet defined; Ratnakar cannot give alignment until it is explained",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s1",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "missing_info"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "q14",
+      "kind": "question",
+      "title": "Who provides the resources needed for BEPMM work: Technology or Strategic Finance embedding its own team?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s9",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt13",
+      "kind": "option",
+      "title": "Technology provides the resources (after defining what resources are needed)",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s9",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s9"
+      ]
+    },
+    {
+      "id": "opt14",
+      "kind": "option",
+      "title": "Strategic Finance embeds its own team for BEPMM work",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b10.s9",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b10.s9"
+      ]
+    },
+    {
+      "id": "q15",
+      "kind": "question",
+      "title": "Should predictive capabilities be built as one consolidated project/team (BEPMM) or scattered across individual SVRO projects?",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s2",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt15",
+      "kind": "option",
+      "title": "One consolidated project/team (BEPMM) scoped around predictive capabilities",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s2",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s2"
+      ]
+    },
+    {
+      "id": "opt16",
+      "kind": "option",
+      "title": "Build necessary predictive capabilities separately under each SVRO project",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s6",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s6"
+      ]
+    },
+    {
+      "id": "clm27",
+      "kind": "claim",
+      "title": "Much of what BEPMM needs for success could be called Clinical Intelligence",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "other"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm28",
+      "kind": "claim",
+      "title": "Clinical Intelligence feels abstract because related work is spread across pockets under different SVRO projects",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s4"
+      ]
+    },
+    {
+      "id": "clm29",
+      "kind": "claim",
+      "title": "No known project, governing body, or cross-functional group called Clinical Intelligence exists",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s5",
+      "status": "confirmed",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s5"
+      ]
+    },
+    {
+      "id": "blk5",
+      "kind": "blocker",
+      "title": "Full view of duplication across SVRO projects is still being compiled with SVRO",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s6",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "blocker_kind": "missing_info"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s6"
+      ]
+    },
+    {
+      "id": "clm30",
+      "kind": "claim",
+      "title": "Duplication today is uncertain, but building foundational capabilities separately under each SVRO project will create future duplication",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s6",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "predictive"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm31",
+      "kind": "claim",
+      "title": "Objection: building necessary predictive capabilities separately under each SVRO project risks duplication",
+      "author": "Tanal, Stephen",
+      "created_span": "b11.s6",
+      "status": "conflicting",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b11.s6"
+      ]
+    },
+    {
+      "id": "q16",
+      "kind": "question",
+      "title": "Should BEPMM be a separate body of work or integrated into existing team work (Member Orchestration, CoC, Clinical Intelligence)?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s3",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt17",
+      "kind": "option",
+      "title": "Separate BEPMM body of work",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s3",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s3",
+        "b8.s4",
+        "b10.s3",
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "opt18",
+      "kind": "option",
+      "title": "Integrate BEPMM into existing team work (Member Orchestration, CoC, Clinical Intelligence)",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s3",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s3",
+        "b8.s4",
+        "b10.s3",
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "q17",
+      "kind": "question",
+      "title": "Should BEPMM hire resources independently or build models collaboratively with existing teams?",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "open",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "opt19",
+      "kind": "option",
+      "title": "BEPMM hires resources independently",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s7",
+        "b10.s6"
+      ]
+    },
+    {
+      "id": "opt20",
+      "kind": "option",
+      "title": "Build models collaboratively on common enterprise platforms",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {},
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s6",
+        "b8.s7",
+        "b10.s6",
+        "b12.s1"
+      ]
+    },
+    {
+      "id": "clm32",
+      "kind": "claim",
+      "title": "Ratnakar has consulted Member Orchestration, CoC, and Clinical Intelligence teams about the BEPMM proposal",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s2",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm33",
+      "kind": "claim",
+      "title": "Member Orchestration, CoC, and Clinical Intelligence teams believe BEPMM should not be separate work but integrated into their existing efforts",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s3",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "consensus"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm34",
+      "kind": "claim",
+      "title": "Clinical Intelligence platform will provide predictive, reactive, and realtime models and algorithms",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm35",
+      "kind": "claim",
+      "title": "Clinical Intelligence platform will support ML and Gen AI models",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s5",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "factual"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm36",
+      "kind": "claim",
+      "title": "Models produced by Clinical Intelligence platform will be reused by CoC, Member Orchestration, and other use cases",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s6",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "predictive"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm37",
+      "kind": "claim",
+      "title": "Models must be deployed into production on common enterprise platforms being built out",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "constraint_based"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm38",
+      "kind": "claim",
+      "title": "Opposes BEPMM as a separate body of work; prefers integration into existing platform work",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s4",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "clm39",
+      "kind": "claim",
+      "title": "Opposes BEPMM hiring resources independently to build models",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "unverified",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "claim_kind": "objection"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": []
+    },
+    {
+      "id": "con2",
+      "kind": "constraint",
+      "title": "Models must be deployed into production leveraging common enterprise platforms",
+      "author": "Lavu, Ratnakar",
+      "created_span": "b8.s7",
+      "status": "active",
+      "question_id": null,
+      "aliases": [],
+      "attrs": {
+        "constraint_kind": "hard"
+      },
+      "merged_into": null,
+      "superseded_by": null,
+      "spans": [
+        "b8.s7"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s5",
+      "kind": "attach",
+      "element_id": "clm6",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 2,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s10",
+      "kind": "attach",
+      "element_id": "clm7",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 3,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s12",
+      "kind": "attach",
+      "element_id": "blk1",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 4,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s13",
+      "kind": "status",
+      "element_id": "clm2",
+      "participant": "Milloy, Abby",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 5,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s15",
+      "kind": "status",
+      "element_id": "clm3",
+      "participant": "Milloy, Abby",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 6,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s15",
+      "kind": "status",
+      "element_id": "clm4",
+      "participant": "Milloy, Abby",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 7,
+      "ts": "2026-09-16T20:21:00",
+      "span_id": "b3.s17",
+      "kind": "status",
+      "element_id": "clm5",
+      "participant": "Milloy, Abby",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 8,
+      "ts": "2026-09-18T14:04:00",
+      "span_id": "b6.s3",
+      "kind": "attach",
+      "element_id": "con1",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 9,
+      "ts": "2026-09-18T14:04:00",
+      "span_id": "b6.s4",
+      "kind": "stance",
+      "element_id": "opt2",
+      "participant": "Ali, Kanwal (Walle)",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 10,
+      "ts": "2026-09-18T14:04:00",
+      "span_id": "b6.s4",
+      "kind": "stance",
+      "element_id": "opt1",
+      "participant": "Ali, Kanwal (Walle)",
+      "payload": {
+        "stance": "withdrawn",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 11,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s3",
+      "kind": "stance",
+      "element_id": "opt17",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 12,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s3",
+      "kind": "stance",
+      "element_id": "opt18",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 13,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s4",
+      "kind": "stance",
+      "element_id": "opt17",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": "oppose",
+        "inferred": true,
+        "inferred_reason": "span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Separate BEPMM body of work'"
+      },
+      "because": []
+    },
+    {
+      "seq": 14,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s4",
+      "kind": "stance",
+      "element_id": "opt18",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": "support"
+      },
+      "because": []
+    },
+    {
+      "seq": 15,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s6",
+      "kind": "stance",
+      "element_id": "opt20",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Build models collaboratively on common enterprise platforms'"
+      },
+      "because": []
+    },
+    {
+      "seq": 16,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s7",
+      "kind": "stance",
+      "element_id": "opt19",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 17,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s7",
+      "kind": "stance",
+      "element_id": "opt20",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 18,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s7",
+      "kind": "attach",
+      "element_id": "con2",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 19,
+      "ts": "2026-09-20T13:35:00",
+      "span_id": "b8.s8",
+      "kind": "stance",
+      "element_id": "opt5",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "proposed",
+        "prev": null,
+        "conditions": "Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into the enterprise ecosystem"
+      },
+      "because": []
+    },
+    {
+      "seq": 20,
+      "ts": "2026-09-20T13:59:00",
+      "span_id": "b9.s3",
+      "kind": "stance",
+      "element_id": "opt3",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "conditions": "Coordinate and track existing work and integrate parallel workstreams where sensible, not create a separate set of work",
+        "inferred": true,
+        "inferred_reason": "span names 'Approve BEPMM as a separate funded work stream: $15.0M one-time 2027 investment and $4.65M annual run rate, funded by reallocation', not 'Benefit Expense Projection & Management Modernization (BEPMM) as one coordinated project'"
+      },
+      "because": []
+    },
+    {
+      "seq": 21,
+      "ts": "2026-09-20T13:59:00",
+      "span_id": "b9.s5",
+      "kind": "attach",
+      "element_id": "blk2",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 22,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s3",
+      "kind": "stance",
+      "element_id": "opt17",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": "oppose",
+        "inferred": true,
+        "inferred_reason": "span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Separate BEPMM body of work'"
+      },
+      "because": []
+    },
+    {
+      "seq": 23,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s3",
+      "kind": "stance",
+      "element_id": "opt18",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": "support",
+        "inferred": true,
+        "inferred_reason": "span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Integrate BEPMM into existing team work (Member Orchestration, CoC, Clinical Intelligence)'"
+      },
+      "because": []
+    },
+    {
+      "seq": 24,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s6",
+      "kind": "stance",
+      "element_id": "opt7",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'Embed dedicated data science resources in program owners', not 'Integrate BEPMM work into existing programs and common platforms'"
+      },
+      "because": []
+    },
+    {
+      "seq": 25,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s6",
+      "kind": "stance",
+      "element_id": "opt19",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": "oppose"
+      },
+      "because": []
+    },
+    {
+      "seq": 26,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s6",
+      "kind": "stance",
+      "element_id": "opt20",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": "support",
+        "inferred": true,
+        "inferred_reason": "span names 'Embed dedicated data science resources in program owners', not 'Build models collaboratively on common enterprise platforms'"
+      },
+      "because": []
+    },
+    {
+      "seq": 27,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s8",
+      "kind": "stance",
+      "element_id": "opt8",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 28,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s8",
+      "kind": "stance",
+      "element_id": "opt9",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Centralized BEPMM-style team/funding structure proposed by Strategic Finance'"
+      },
+      "because": []
+    },
+    {
+      "seq": 29,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s9",
+      "kind": "stance",
+      "element_id": "opt14",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Strategic Finance embeds its own team for BEPMM work'"
+      },
+      "because": []
+    },
+    {
+      "seq": 30,
+      "ts": "2026-09-20T14:29:24",
+      "span_id": "b10.s9",
+      "kind": "stance",
+      "element_id": "opt13",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "conditions": "after resources needed are defined"
+      },
+      "because": []
+    },
+    {
+      "seq": 31,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s2",
+      "kind": "stance",
+      "element_id": "opt15",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 32,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s2",
+      "kind": "stance",
+      "element_id": "opt10",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 33,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s6",
+      "kind": "stance",
+      "element_id": "opt16",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 34,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s6",
+      "kind": "status",
+      "element_id": "clm31",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "from": "unverified",
+        "to": "conflicting"
+      },
+      "because": []
+    },
+    {
+      "seq": 35,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s4",
+      "kind": "attach",
+      "element_id": "clm28",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 36,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s6",
+      "kind": "attach",
+      "element_id": "blk5",
+      "participant": null,
+      "payload": {},
+      "because": []
+    },
+    {
+      "seq": 37,
+      "ts": "2026-09-20T15:59:00",
+      "span_id": "b11.s5",
+      "kind": "status",
+      "element_id": "clm29",
+      "participant": "Tanal, Stephen",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    },
+    {
+      "seq": 38,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt4",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 39,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt17",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": "oppose"
+      },
+      "because": []
+    },
+    {
+      "seq": 40,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt5",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": "proposed"
+      },
+      "because": []
+    },
+    {
+      "seq": 41,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt7",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": null,
+        "inferred": true,
+        "inferred_reason": "span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Integrate BEPMM work into existing programs and common platforms'"
+      },
+      "because": []
+    },
+    {
+      "seq": 42,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt18",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": "support"
+      },
+      "because": []
+    },
+    {
+      "seq": 43,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt20",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "support",
+        "prev": "support"
+      },
+      "because": []
+    },
+    {
+      "seq": 44,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "stance",
+      "element_id": "opt6",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "stance": "oppose",
+        "prev": null
+      },
+      "because": []
+    },
+    {
+      "seq": 45,
+      "ts": "2026-09-20T22:02:00",
+      "span_id": "b12.s1",
+      "kind": "status",
+      "element_id": "clm20",
+      "participant": "Lavu, Ratnakar",
+      "payload": {
+        "from": "unverified",
+        "to": "confirmed"
+      },
+      "because": []
+    }
+  ],
+  "warnings": [
+    "bad supersede: {\"op\": \"supersede\", \"old\": \"clm1\", \"new\": \"clm1\", \"span\": \"b6.s5\"}",
+    "inferred stance (span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Separate BEPMM body of work'): {\"op\": \"stance\", \"option\": \"opt17\", \"stance\": \"oppose\", \"conditions\": \"\", \"span\": \"b8.s4\", \"because\": [\"Ratnakar opposes BEPMM as a separate body of work\"]}",
+    "inferred stance (span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Build models collaboratively on common enterprise platforms'): {\"op\": \"stance\", \"option\": \"opt20\", \"stance\": \"support\", \"conditions\": \"\", \"span\": \"b8.s6\", \"because\": [\"Ratnakar favors building models that are reused across CoC, Member Orchestration, and other use",
+    "inferred stance (span names 'Approve BEPMM as a separate funded work stream: $15.0M one-time 2027 investment and $4.65M annual run rate, funded by reallocation', not 'Benefit Expense Projection & Management Modernization (BEPMM) as one coordinated project'): {\"op\": \"stance\", \"option\": \"opt3\", \"stance\": \"support\", \"conditions\": \"Coordinate and track existing work and integrate parallel workstreams where sensible, not create a separate set of work\", \"span\":",
+    "inferred stance (span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Separate BEPMM body of work'): {\"op\": \"stance\", \"option\": \"opt17\", \"stance\": \"oppose\", \"conditions\": \"\", \"span\": \"b10.s3\", \"because\": [\"Ratnakar disputes the duplication rationale and opposes BEPMM as a separate effort\"]}",
+    "inferred stance (span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Integrate BEPMM into existing team work (Member Orchestration, CoC, Clinical Intelligence)'): {\"op\": \"stance\", \"option\": \"opt18\", \"stance\": \"support\", \"conditions\": \"\", \"span\": \"b10.s3\", \"because\": [\"Ratnakar prefers integration of the related work into existing team efforts\"]}",
+    "inferred stance (span names 'Embed dedicated data science resources in program owners', not 'Integrate BEPMM work into existing programs and common platforms'): {\"op\": \"stance\", \"option\": \"opt7\", \"stance\": \"support\", \"conditions\": \"\", \"span\": \"b10.s6\", \"because\": [\"Ratnakar's resourcing position favors integrating into existing programs and common platforms r",
+    "inferred stance (span names 'Embed dedicated data science resources in program owners', not 'Build models collaboratively on common enterprise platforms'): {\"op\": \"stance\", \"option\": \"opt20\", \"stance\": \"support\", \"conditions\": \"\", \"span\": \"b10.s6\", \"because\": [\"Ratnakar prefers joint model building on common platforms\"]}",
+    "inferred stance (span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Centralized BEPMM-style team/funding structure proposed by Strategic Finance'): {\"op\": \"stance\", \"option\": \"opt9\", \"stance\": \"oppose\", \"conditions\": \"\", \"span\": \"b10.s8\", \"because\": [\"Ratnakar objects to a centralized BEPMM-style team/funding structure for resources\"]}",
+    "inferred stance (span names 'Ask for approval to make BEPMM a priority, with Strategic Finance and Technology allocating capacity and integrating into enterprise ecosystem', not 'Strategic Finance embeds its own team for BEPMM work'): {\"op\": \"stance\", \"option\": \"opt14\", \"stance\": \"oppose\", \"conditions\": \"\", \"span\": \"b10.s9\", \"because\": [\"Ratnakar proposes Technology provides resources rather than Strategic Finance embedding its own",
+    "inferred stance (span names 'Fund predictive models under existing CoC funding and build via Clinical Intelligence', not 'Integrate BEPMM work into existing programs and common platforms'): {\"op\": \"stance\", \"option\": \"opt7\", \"stance\": \"support\", \"conditions\": \"\", \"span\": \"b12.s1\", \"because\": [\"Ratnakar says predictive work should be built once and leveraged through Clinical Intelligence,"
+  ],
+  "followups": 0,
+  "_enterprise": {
+    "source_type": "email",
+    "subject": "EPGC: Operating in a Sustained 10% Trend Environment Memo",
+    "speakers": [
+      "Klein, Josh",
+      "Milloy, Abby",
+      "Weber, Kyle",
+      "Ali, Kanwal (Walle)",
+      "Tanal, Stephen",
+      "Lavu, Ratnakar",
+      "Unknown"
+    ],
+    "observers": [
+      "Gaffigan, Catherine",
+      "Pols, Cynthia",
+      "McCoy, Paul",
+      "Wickiser, Maggie",
+      "Busaba, Joseph",
+      "Kaye, Mark",
+      "Chennuru, Ashok",
+      "Smith, Monique"
+    ],
+    "msg_meta": [
+      {
+        "id": "m1",
+        "author": "Klein, Josh",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark",
+          "Ali, Kanwal (Walle)",
+          "Weber, Kyle",
+          "Milloy, Abby",
+          "Gaffigan, Catherine",
+          "Pols, Cynthia",
+          "McCoy, Paul",
+          "Wickiser, Maggie",
+          "Busaba, Joseph",
+          "Klein, Josh"
+        ],
+        "subject": "EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m2",
+        "author": "Milloy, Abby",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark",
+          "Ali, Kanwal (Walle)",
+          "Weber, Kyle",
+          "Milloy, Abby",
+          "Gaffigan, Catherine",
+          "Pols, Cynthia",
+          "McCoy, Paul",
+          "Wickiser, Maggie",
+          "Busaba, Joseph",
+          "Klein, Josh"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m3",
+        "author": "Milloy, Abby",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark",
+          "Ali, Kanwal (Walle)",
+          "Weber, Kyle",
+          "Milloy, Abby",
+          "Gaffigan, Catherine",
+          "Pols, Cynthia",
+          "McCoy, Paul",
+          "Wickiser, Maggie",
+          "Busaba, Joseph",
+          "Klein, Josh"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m4",
+        "author": "Weber, Kyle",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark",
+          "Ali, Kanwal (Walle)",
+          "Weber, Kyle",
+          "Milloy, Abby",
+          "Gaffigan, Catherine",
+          "Pols, Cynthia",
+          "McCoy, Paul",
+          "Wickiser, Maggie",
+          "Busaba, Joseph",
+          "Klein, Josh"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m5",
+        "author": "Ali, Kanwal (Walle)",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark",
+          "Weber, Kyle",
+          "Milloy, Abby",
+          "Gaffigan, Catherine",
+          "Pols, Cynthia",
+          "McCoy, Paul",
+          "Wickiser, Maggie",
+          "Busaba, Joseph",
+          "Klein, Josh",
+          "Ali, Kanwal (Walle)"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m6",
+        "author": "Tanal, Stephen",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "FW: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m7",
+        "author": "Lavu, Ratnakar",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m8",
+        "author": "Tanal, Stephen",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "RE: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m9",
+        "author": "Lavu, Ratnakar",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m10",
+        "author": "Tanal, Stephen",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m11",
+        "author": "Lavu, Ratnakar",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Lavu, Ratnakar",
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Tanal, Stephen",
+          "Kaye, Mark"
+        ],
+        "subject": "Re: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m12",
+        "author": "Lavu, Ratnakar",
+        "restricted": true,
+        "restricted_reason": "'keep it to yourself' (Lavu, Ratnakar)",
+        "audience": [
+          "Chennuru, Ashok",
+          "Smith, Monique",
+          "Lavu, Ratnakar"
+        ],
+        "subject": "FW: EPGC: Operating in a Sustained 10% Trend Environment Memo"
+      },
+      {
+        "id": "m13",
+        "author": "Unknown",
+        "restricted": true,
+        "restricted_reason": "'Don't share' (cover note)",
+        "audience": [],
+        "subject": ""
+      }
+    ],
+    "spans": [
+      {
+        "id": "b1.s1",
+        "burst_id": "b1",
+        "author": "Unknown",
+        "ts": "0001-01-01T00:00:00",
+        "text": "Don't share",
+        "source_message_ids": [
+          "m13"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b1.s2",
+        "burst_id": "b1",
+        "author": "Unknown",
+        "ts": "0001-01-01T00:00:00",
+        "text": "We need to discuss this",
+        "source_message_ids": [
+          "m13"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'this' = the 'Don't share' item in the same message",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s1",
+        "burst_id": "b2",
+        "author": "Klein, Josh",
+        "ts": "2026-09-15T19:51:00",
+        "text": "Hi Walle, Abby",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b2.s2",
+        "burst_id": "b2",
+        "author": "Klein, Josh",
+        "ts": "2026-09-15T19:51:00",
+        "text": "I've attached the memo for the Operating in a Sustained 10% Trend Environment topic for EPGC",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b2.s3",
+        "burst_id": "b2",
+        "author": "Klein, Josh",
+        "ts": "2026-09-15T19:51:00",
+        "text": "Let us know if you have feedback or need anything else",
+        "source_message_ids": [
+          "m1"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s1",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Thanks so much for your submission.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s2",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Walle and I reviewed and have a few points of feedback we'd recommend incorporating if you can share another turn of the materials by 5pm EST tomorrow",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s3",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Reframe the paper around the four questions on the September agenda",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s4",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "What must the enterprise do differently if elevated trend persists?",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s5",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "The memo states \"ETM's expanded ambition cannot be absorbed within today's cost of care funding, capacity, etc.\" but does not acknowledge what changes or support the broader enterprise may need to ideate or execute differently.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s6",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "We'd recommend including additional detail about changes required to make effectively managing through elevated trend an embedded enterprise-wide capability.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s7",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Which pricing, product, network, benefit, operating, strategic, and investment assumptions change?",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s8",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Which no-regret actions and contingency triggers should enter the 2027 plan now?",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s9",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "How will the enterprise exceed the relative 25-basis-point target?",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s10",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "This question in particular remains unaddressed by what was submitted.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s11",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Anything you can do to clarify actions, timing, confidence level, etc. would be helpful.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s12",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "If we can't answer yet, provide some clarity about what is still outstanding.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s13",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Reinforce what the September EPGC must decide; ETM was already approved in August.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s14",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "We would not recommend too much re-emphasis on this as a decision point.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s15",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "It is fine to remind folks of what was already decided as part of the total response to elevated trend, but we recommend re-emphasizing new approvals, funding, scope, priorities, or accepted risks required on September 24.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s16",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Define the proposed BEPMM decision.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s17",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "It is unclear what scope, funding, timing, owner, expected result, or changes are implied with that decision.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s18",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Clarify how the five longer-term strategic moves were determined:",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s19",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Market intelligence",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s20",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Data",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s21",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Competitor insights",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s22",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Add measurable triggers\u2014for example, sustained trend, margin, utilization, affordability, membership, or market signals\u2014and state what strategic action each trigger activates.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s23",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Reduce the four-page main body to two pages, three pages maximum.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s24",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Feel free to move background and longer descriptions of the five strategic moves to an appendix to make the memo body more concise.",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b3.s25",
+        "burst_id": "b3",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-16T20:21:00",
+        "text": "Feel free to reach out to me or Walle with any questions or clarifications. Thanks again for your work!\n\nAbby",
+        "source_message_ids": [
+          "m2"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b4.s1",
+        "burst_id": "b4",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-17T21:50:00",
+        "text": "Just wanted to follow up to check in on timing for your next turn of the memo",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s2",
+        "burst_id": "b4",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-17T21:50:00",
+        "text": "We're reviewing pre-reads with Mark tomorrow late morning",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s3",
+        "burst_id": "b4",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-17T21:50:00",
+        "text": "If you can let me know if we should expect another turn by that time, I'd appreciate it very much",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b4.s4",
+        "burst_id": "b4",
+        "author": "Milloy, Abby",
+        "ts": "2026-09-17T21:50:00",
+        "text": "Thank you!\nAbby",
+        "source_message_ids": [
+          "m3"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b5.s1",
+        "burst_id": "b5",
+        "author": "Weber, Kyle",
+        "ts": "2026-09-18T00:28:00",
+        "text": "Here you go.",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s2",
+        "burst_id": "b5",
+        "author": "Weber, Kyle",
+        "ts": "2026-09-18T00:28:00",
+        "text": "Big thanks to this group on the email for the quick turnaround on this.",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s3",
+        "burst_id": "b5",
+        "author": "Weber, Kyle",
+        "ts": "2026-09-18T00:28:00",
+        "text": "I'm confident Abby and Walle will tell us this is the very best memo of all going to EPGC\u2026",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b5.s4",
+        "burst_id": "b5",
+        "author": "Weber, Kyle",
+        "ts": "2026-09-18T00:28:00",
+        "text": "\ud83d\ude0a\n\nGet Outlook for Mac",
+        "source_message_ids": [
+          "m4"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b6.s1",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "Thanks for the revisions to the memo",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s2",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "We just met with Mark and have a couple more points of feedback",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s3",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "We'd appreciate it if you can send back final versions of the memo(s) to us by 10am EST Monday",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s4",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "Split this memo into two separate memos. First with the assumptions and long-term strategy and second with the immediate leadership actions/decisions",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s5",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "For the discussion, start with the assumptions and long-term strategy memo to get agreement from the Council on the approach, assumptions and five strategic areas to pressure test",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s6",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "My push on the five areas of focus as they are currently framed out, is that we need to validate whether these are the right areas using actual historical experience from commercial, government, and Carelon on where we have tried some of these strategies, where they have or have not worked, and what would be different this time",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s7",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "Speaking from firsthand experience building/launching several of these in Commercial",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s8",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": ")\n\n    \u2022 For the immediate leadership actions/decisions memo\n        \u25e6",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b6.s9",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "Clarify upfront what work we have completed since the decision was made in August",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s10",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "For the budgeted positions ask, produce a table for CoC, MCCC, and ETM (separated out by each) that shows the expense ($) and number of positions supporting each work stream for 2024, 2025, 2026, and 2027 (projection)",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s11",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "We are seeking to understand the trajectory of expense across this work",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s12",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "For the proposed funding reallocation for BEPMM, confirm that Ratnakar is aligned with this ask",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b6.s13",
+        "burst_id": "b6",
+        "author": "Ali, Kanwal (Walle)",
+        "ts": "2026-09-18T14:04:00",
+        "text": "Please reach out with any questions",
+        "source_message_ids": [
+          "m5"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s1",
+        "burst_id": "b7",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T12:43:17",
+        "text": "Ratnakar, we are working to finalize the EPGC memo related to Enterprise Trend Management",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s2",
+        "burst_id": "b7",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T12:43:17",
+        "text": "including the recommendation to pursue further development of capabilities to predict and manage benefit expense in one coordinated project (Benefit Expense Projection & Management Modernization) funded by allocations from multiple projects requiring related capabilities (Member Orchestration, Medical Cost Command Center, HealthOS, etc.)",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s3",
+        "burst_id": "b7",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T12:43:17",
+        "text": "We would like to confirm whether you are aligned with this recommendation as well, per the highlight below and the callout in the memo attached",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b7.s4",
+        "burst_id": "b7",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T12:43:17",
+        "text": "Thank you,\nSteve",
+        "source_message_ids": [
+          "m6"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b8.s1",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "Thanks for sharing this with me.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s2",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "I have been talking to the various teams that you have been working with - member orchestration, CoC, Clinical Intelligence.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s3",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "They all believe this should not be a separate set of work, but should be integrated into the work that's being done.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s4",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "For example, the Clinical Intelligence platform will have the ability to have predictive, reactive, and realtime models and algorithms.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s5",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "ML models as well as Gen AI models.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s6",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "Those will then be used for CoC, Member Orchestration, and any other use cases.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s7",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "I also comeback to us working together to build these models out versus you hiring resources to do it independently as they all need to be deployed into production leveraging common platforms that we are building out for the enterprise.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s8",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "My recommendation is to change the below paragraph to ask for approval to make this a priority, and Strategic Finance and Technology will work together to allocate the right capacity to accomplish the work while integrating into the enterprise ecosystem.",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b8.s9",
+        "burst_id": "b8",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T13:35:00",
+        "text": "Thanks\nRatnakar\n\nApprove Benefit Expense Projection & Management Modernization (BEPMM). Approve the proposed $15.0M one-time 2027 investment and $4.65M annual run rate to modernize benefit-expense projections and management, including a common Trend Advantage methodology, forward-looking forecasts and glidepaths, trend-driver attribution, and Finance-certified value measurement and prioritization. Funding is proposed through reallocation from existing initiatives that require these capabilities, with Strategic Finance as business owner and governance lead, working in close collaboration with Health Solutions, Health Outcomes Organization and DPAIO",
+        "source_message_ids": [
+          "m7"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b9.s1",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "Ratnakar, thanks for your quick response and readiness to partner on the work.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s2",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "I want to clarify that we appear to be focused on the same critical goal",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s3",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "not making any of this work \u201ca separate set of work.\u201d",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s4",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "The purpose of the BEPMM proposal is in fact to coordinate and track the work that is being done and integrate parallel workstreams wherever it makes sense.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s5",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "The example you raise is a case in point \u2013 what exactly is the Clinical Intelligence platform and how is it being funded?",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s6",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "Is that a standalone SVRO project today?",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s7",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "Given that the capabilities you describe as being a part of this will be used for CoC, Member Orchestration and any other use cases (e.g. HealthOS/TMV), how do you propose we ensure transparency, lack of duplication of work and funding, and the appropriate degree of enterprise focus, if not by bringing all related work in one place (BEPMM)?",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s8",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "I also want to make clear my team has no intention of doing any end-to-end work independently.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s9",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "We are 100% aligned with deploying into production through DPAIO leveraging common platforms.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s10",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "My team would, however, like to ensure iterative ML/AI model development occurs close to our Actuarial and Finance SMEs who drive our predictive capabilities today, with embedded data scientists working closely together day-to-day.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s11",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "This is what Strategic Finance uniquely offers to the cross-functional working group.",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b9.s12",
+        "burst_id": "b9",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T13:59:00",
+        "text": "Thank you,\nSteve",
+        "source_message_ids": [
+          "m8"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b10.s1",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "Thanks Steve. What is BEPMM?",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s2",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "Is it a capability or a governing body?",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s3",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "Just because we keep saying there is duplication doesn't make it so.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s4",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "Clinical Intelligence is a horizontal capability that supports multiple use cases across the enterprise.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s5",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "The work in this is informed by the different needs across the various programs.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s6",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "As for resources",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b10.s7",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "I agree with your point of working closer to the teams that own the initiatives.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s8",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "I don't see this any different than how we do it across the enterprise - we embed dedicated resources including Data Science resources to program owners : CoC, UM, Claims etc.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b10.s9",
+        "burst_id": "b10",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T14:29:24",
+        "text": "Let's define what resources are needed and technology will provide the resources.",
+        "source_message_ids": [
+          "m9"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s1",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "Ok. Thanks Ratnakar.",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s2",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "The whole idea is to create one vehicle/project and coordinated team scoped around the predictive capabilities and translating them into care/CoC management",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s3",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "I think we could call much of what will be needed for success in Benefit Expense Projection & Management Modernization Clinical Intelligence",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s4",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "only today the latter feels like an abstract concept because the work is happening in pockets and pieces under different SVRO projects",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s5",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "To my knowledge, there is no project, governing body nor convening, cross-functional group called Clinical Intelligence",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b11.s6",
+        "burst_id": "b11",
+        "author": "Tanal, Stephen",
+        "ts": "2026-09-20T15:59:00",
+        "text": "If there were no duplication today (which I am not sure of because we are still working with SVRO to pull together a full view of all that is in the works), then we definitely will be at risk of creating duplication in the future if we proceed to develop necessary capabilities under each individual SVRO project that requires, in essence, just a few foundational capabilities across them",
+        "source_message_ids": [
+          "m10"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": "'duplication' = duplication of work and funding across SVRO projects",
+        "verified": true,
+        "recovered": false
+      },
+      {
+        "id": "b12.s1",
+        "burst_id": "b12",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-20T22:02:00",
+        "text": "Thanks Steve. I understand building more and better predictive capabilities, but predictive is not the only thing that we need for CoC or clinical, we also need retrospective and real-time models too. We need horizontal capabilities like Clinical Intelligence to manage this, which we are already creating. Now I think you are saying you need BEPMMCI ( we are adding more letters to this) to be an organizing body for the business. If that's the case, then the discussion should not be about funding or predictive models. Because the predictive models should be prioritized as part of the CoC funding we are already allocating - we will build it once and leverage it for Clinical or other areas that need it through Clinical Intelligence.\n\nThanks\nRatnakar",
+        "source_message_ids": [
+          "m11"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": true
+      },
+      {
+        "id": "b13.s1",
+        "burst_id": "b13",
+        "author": "Lavu, Ratnakar",
+        "ts": "2026-09-21T16:09:00",
+        "text": "FYI\u2026.keep it to yourself",
+        "source_message_ids": [
+          "m12"
+        ],
+        "status": "active",
+        "superseded_by": null,
+        "context_note": null,
+        "verified": true,
+        "recovered": false
+      }
+    ],
+    "classified": [
+      {
+        "span_id": "b1.s1",
+        "author": "Unknown",
+        "text": "Don't share",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.5,
+            "gist": "'Don't share' is a bare label/heading with no decision content on its own"
+          }
+        ]
+      },
+      {
+        "span_id": "b1.s2",
+        "author": "Unknown",
+        "text": "We need to discuss this",
+        "status": "active",
+        "context_note": "'this' = the 'Don't share' item in the same message",
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.6,
+            "gist": "Calls for group discussion of the 'Don't share' item before proceeding"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s1",
+        "author": "Klein, Josh",
+        "text": "Hi Walle, Abby",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.95,
+            "gist": "greeting to Walle and Abby, no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s2",
+        "author": "Klein, Josh",
+        "text": "I've attached the memo for the Operating in a Sustained 10% Trend Environment topic for EPGC",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.8,
+            "gist": "Josh shares an attached memo for an EPGC topic; administrative logistics, not a decision option or content in the deliberation"
+          }
+        ]
+      },
+      {
+        "span_id": "b2.s3",
+        "author": "Klein, Josh",
+        "text": "Let us know if you have feedback or need anything else",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.85,
+            "gist": "generic closing offer of further feedback or help; no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s1",
+        "author": "Milloy, Abby",
+        "text": "Thanks so much for your submission.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.95,
+            "gist": "thanks for submission; pleasantry, no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s2",
+        "author": "Milloy, Abby",
+        "text": "Walle and I reviewed and have a few points of feedback we'd recommend incorporating if you can share another turn of the materials by 5pm EST tomorrow",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Josh Klein to share another turn of the memo with feedback incorporated by 5pm EST tomorrow"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s3",
+        "author": "Milloy, Abby",
+        "text": "Reframe the paper around the four questions on the September agenda",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Josh/Klein asked to reframe the memo around the four questions on the September agenda"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s4",
+        "author": "Milloy, Abby",
+        "text": "What must the enterprise do differently if elevated trend persists?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "candidate_question",
+            "confidence": 0.5,
+            "gist": "What the enterprise must do differently if elevated trend persists (feedback framing the memo's content)"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s5",
+        "author": "Milloy, Abby",
+        "text": "The memo states \"ETM's expanded ambition cannot be absorbed within today's cost of care funding, capacity, etc.\" but does not acknowledge what changes or support the broader enterprise may need to ideate or execute differently.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Memo states ETM's expanded ambition cannot be absorbed within current cost of care funding/capacity but does not address what changes or support the enterprise needs"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s6",
+        "author": "Milloy, Abby",
+        "text": "We'd recommend including additional detail about changes required to make effectively managing through elevated trend an embedded enterprise-wide capability.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.5,
+            "gist": ""
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s7",
+        "author": "Milloy, Abby",
+        "text": "Which pricing, product, network, benefit, operating, strategic, and investment assumptions change?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "candidate_question",
+            "confidence": 0.5,
+            "gist": "Which pricing, product, network, benefit, operating, strategic, and investment assumptions change if elevated trend persists?"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s8",
+        "author": "Milloy, Abby",
+        "text": "Which no-regret actions and contingency triggers should enter the 2027 plan now?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "candidate_question",
+            "confidence": 0.5,
+            "gist": "Which no-regret actions and contingency triggers should enter the 2027 plan now"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s9",
+        "author": "Milloy, Abby",
+        "text": "How will the enterprise exceed the relative 25-basis-point target?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.5,
+            "gist": ""
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s10",
+        "author": "Milloy, Abby",
+        "text": "This question in particular remains unaddressed by what was submitted.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "The submitted memo does not address the question 'How will the enterprise exceed the relative 25-basis-point target?'"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s11",
+        "author": "Milloy, Abby",
+        "text": "Anything you can do to clarify actions, timing, confidence level, etc. would be helpful.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "Abby asks the presenter to clarify actions, timing, and confidence level in the revised materials (feedback request, not a decision option)"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s12",
+        "author": "Milloy, Abby",
+        "text": "If we can't answer yet, provide some clarity about what is still outstanding.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.35,
+            "gist": "Unanswered questions from the feedback (enterprise changes, 25bp target path) may remain outstanding; the author asks submitters to state what is still open"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s13",
+        "author": "Milloy, Abby",
+        "text": "Reinforce what the September EPGC must decide; ETM was already approved in August.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "ETM (elevated trend management) was already approved in August, so it is not the September decision point"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s14",
+        "author": "Milloy, Abby",
+        "text": "We would not recommend too much re-emphasis on this as a decision point.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Abby advises against heavily re-emphasizing ETM as a decision point for September EPGC"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s15",
+        "author": "Milloy, Abby",
+        "text": "It is fine to remind folks of what was already decided as part of the total response to elevated trend, but we recommend re-emphasizing new approvals, funding, scope, priorities, or accepted risks required on September 24.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Reminding folks of what was already decided (ETM approved in August) is acceptable as part of the total response; advice to re-emphasize new approvals, funding, scope, priorities or accepted risks needed on Sept 24"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s16",
+        "author": "Milloy, Abby",
+        "text": "Define the proposed BEPMM decision.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Josh/submitters asked to define the proposed BEPMM decision (scope, funding, timing, owner, expected result) in the revised materials"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s17",
+        "author": "Milloy, Abby",
+        "text": "It is unclear what scope, funding, timing, owner, expected result, or changes are implied with that decision.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "The proposed BEPMM decision is unclear: scope, funding, timing, owner, expected result, and changes are not defined, so the memo's decision request is not usable yet"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s18",
+        "author": "Milloy, Abby",
+        "text": "Clarify how the five longer-term strategic moves were determined:",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Submitter asked to clarify how the five longer-term strategic moves were determined in the revised materials"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s19",
+        "author": "Milloy, Abby",
+        "text": "Market intelligence",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.5,
+            "gist": "Listing one of the five strategic-move inputs being asked to be clarified; non-content list item of the feedback request"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s20",
+        "author": "Milloy, Abby",
+        "text": "Data",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "separate_issue",
+            "confidence": 0.35,
+            "gist": "Listed item 'Data' as one of the inputs used to determine the five longer-term strategic moves; part of a feedback list rather than a decision on an option"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s21",
+        "author": "Milloy, Abby",
+        "text": "Competitor insights",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "separate_issue",
+            "confidence": 0.5,
+            "gist": "Competitor insights listed as one of the five longer-term strategic moves whose determination needs clarifying; a list item, not a decision on the main question"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s22",
+        "author": "Milloy, Abby",
+        "text": "Add measurable triggers\u2014for example, sustained trend, margin, utilization, affordability, membership, or market signals\u2014and state what strategic action each trigger activates.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Add measurable triggers (trend, margin, utilization, affordability, membership, market signals) and state the strategic action each activates; requested revision to the memo"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s23",
+        "author": "Milloy, Abby",
+        "text": "Reduce the four-page main body to two pages, three pages maximum.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Josh Klein asked to reduce the four-page main body of the memo to two pages, three maximum"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s24",
+        "author": "Milloy, Abby",
+        "text": "Feel free to move background and longer descriptions of the five strategic moves to an appendix to make the memo body more concise.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Josh Klein's team to move background and longer descriptions of the five strategic moves to an appendix to make the memo body more concise"
+          }
+        ]
+      },
+      {
+        "span_id": "b3.s25",
+        "author": "Milloy, Abby",
+        "text": "Feel free to reach out to me or Walle with any questions or clarifications. Thanks again for your work!\n\nAbby",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "Closing courtesy: invites questions and thanks the submitter; no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s1",
+        "author": "Milloy, Abby",
+        "text": "Just wanted to follow up to check in on timing for your next turn of the memo",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.6,
+            "gist": "follow-up asking for timing of the next memo turn; discussion logistics, not a content decision"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s2",
+        "author": "Milloy, Abby",
+        "text": "We're reviewing pre-reads with Mark tomorrow late morning",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "separate_issue",
+            "confidence": 0.5,
+            "gist": "Abby says the team is reviewing pre-reads with Mark tomorrow late morning; scheduling side note, not a decision on the memo content"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s3",
+        "author": "Milloy, Abby",
+        "text": "If you can let me know if we should expect another turn by that time, I'd appreciate it very much",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Josh/memo team asked to confirm whether another memo turn will arrive by the requested time"
+          }
+        ]
+      },
+      {
+        "span_id": "b4.s4",
+        "author": "Milloy, Abby",
+        "text": "Thank you!\nAbby",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "thanks/sign-off message, no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s1",
+        "author": "Weber, Kyle",
+        "text": "Here you go.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "Brief acknowledgement/handoff greeting ('Here you go') with no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s2",
+        "author": "Weber, Kyle",
+        "text": "Big thanks to this group on the email for the quick turnaround on this.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "thanks to the group for quick turnaround on the memo; chit-chat, no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s3",
+        "author": "Weber, Kyle",
+        "text": "I'm confident Abby and Walle will tell us this is the very best memo of all going to EPGC\u2026",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "joking chit-chat about the memo being the best going to EPGC; no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b5.s4",
+        "author": "Weber, Kyle",
+        "text": "\ud83d\ude0a\n\nGet Outlook for Mac",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.95,
+            "gist": "emoji-only reply; chit-chat with no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s1",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "Thanks for the revisions to the memo",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "thanks for revisions to the memo; courtesy acknowledgement with no decision content"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s2",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "We just met with Mark and have a couple more points of feedback",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "Walle announces a meeting with Mark and that more feedback follows; signals the next step in the review, no content decision"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s3",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "We'd appreciate it if you can send back final versions of the memo(s) to us by 10am EST Monday",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Klein/Kyle team to send final memo version(s) to Walle and Abby by 10am EST Monday"
+          },
+          {
+            "type": "constraint",
+            "confidence": 0.5,
+            "gist": "Final memo versions due 10am EST Monday"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s4",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "Split this memo into two separate memos. First with the assumptions and long-term strategy and second with the immediate leadership actions/decisions",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.6,
+            "gist": "Split the memo into two separate memos (assumptions/long-term strategy memo and immediate leadership actions/decisions memo) \u2014 new alternative to single memo format"
+          },
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Walle supports splitting the memo into two separate memos"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s5",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "For the discussion, start with the assumptions and long-term strategy memo to get agreement from the Council on the approach, assumptions and five strategic areas to pressure test",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "Discussion framing: start the EPGC discussion with the assumptions and long-term strategy memo to get Council agreement on approach, assumptions, and five strategic areas to pressure test"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s6",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "My push on the five areas of focus as they are currently framed out, is that we need to validate whether these are the right areas using actual historical experience from commercial, government, and Carelon on where we have tried some of these strategies, where they have or have not worked, and what would be different this time",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "the five areas of focus as currently framed need validation before being accepted"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s7",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "Speaking from firsthand experience building/launching several of these in Commercial",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Walle speaks from firsthand experience building/launching several of the five strategic areas in Commercial"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s8",
+        "author": "Ali, Kanwal (Walle)",
+        "text": ")\n\n    \u2022 For the immediate leadership actions/decisions memo\n        \u25e6",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.6,
+            "gist": "stray bullet/formatting fragment ')' and bullet marker; no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s9",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "Clarify upfront what work we have completed since the decision was made in August",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Memo owner to clarify upfront the work completed since the August decision, for the immediate leadership actions memo"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s10",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "For the budgeted positions ask, produce a table for CoC, MCCC, and ETM (separated out by each) that shows the expense ($) and number of positions supporting each work stream for 2024, 2025, 2026, and 2027 (projection)",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.8,
+            "gist": "Team to produce a table of expense and positions for CoC, MCCC, and ETM across 2024-2027 for the budgeted positions ask"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s11",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "We are seeking to understand the trajectory of expense across this work",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Group is trying to understand how expense trends across the work streams, supporting the requested expense/position table"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s12",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "For the proposed funding reallocation for BEPMM, confirm that Ratnakar is aligned with this ask",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.6,
+            "gist": "Ratnakar asked to confirm alignment with the BEPMM funding reallocation ask"
+          }
+        ]
+      },
+      {
+        "span_id": "b6.s13",
+        "author": "Ali, Kanwal (Walle)",
+        "text": "Please reach out with any questions",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.8,
+            "gist": "closing request inviting the memo team to reach out with questions; no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s1",
+        "author": "Tanal, Stephen",
+        "text": "Ratnakar, we are working to finalize the EPGC memo related to Enterprise Trend Management",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "process",
+            "confidence": 0.6,
+            "gist": "status update framing the memo work before asking Ratnakar to confirm alignment; non-content coordination"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s2",
+        "author": "Tanal, Stephen",
+        "text": "including the recommendation to pursue further development of capabilities to predict and manage benefit expense in one coordinated project (Benefit Expense Projection & Management Modernization) funded by allocations from multiple projects requiring related capabilities (Member Orchestration, Medical Cost Command Center, HealthOS, etc.)",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "option",
+            "confidence": 0.55,
+            "gist": "Benefit Expense Projection & Management Modernization (BEPMM) as one coordinated project funded by reallocations from MO, MCCC, HealthOS"
+          },
+          {
+            "type": "position",
+            "confidence": 0.55,
+            "gist": "Recommends pursuing BEPMM as the coordinated project funded by allocations from related projects"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s3",
+        "author": "Tanal, Stephen",
+        "text": "We would like to confirm whether you are aligned with this recommendation as well, per the highlight below and the callout in the memo attached",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "action",
+            "confidence": 0.5,
+            "gist": "Ratnakar asked to confirm alignment with the BEPMM funding reallocation recommendation"
+          }
+        ]
+      },
+      {
+        "span_id": "b7.s4",
+        "author": "Tanal, Stephen",
+        "text": "Thank you,\nSteve",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "sign-off/closing pleasantry 'Thank you, Steve' with no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s1",
+        "author": "Lavu, Ratnakar",
+        "text": "Thanks for sharing this with me.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.8,
+            "gist": "polite acknowledgement 'Thanks for sharing this with me' with no content stance"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s2",
+        "author": "Lavu, Ratnakar",
+        "text": "I have been talking to the various teams that you have been working with - member orchestration, CoC, Clinical Intelligence.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Ratnakar reports he has consulted Member Orchestration, CoC, and Clinical Intelligence teams about the BEPMM proposal"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s3",
+        "author": "Lavu, Ratnakar",
+        "text": "They all believe this should not be a separate set of work, but should be integrated into the work that's being done.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Ratnakar opposes BEPMM as a separate body of work; prefers integrating it into existing team work (Member Orchestration, CoC, Clinical Intelligence)"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Member Orchestration, CoC, and Clinical Intelligence teams believe BEPMM should not be separate work but integrated into their existing efforts"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s4",
+        "author": "Lavu, Ratnakar",
+        "text": "For example, the Clinical Intelligence platform will have the ability to have predictive, reactive, and realtime models and algorithms.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Clinical Intelligence platform will provide predictive, reactive, and realtime models, so BEPMM work should be integrated rather than separate"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.5,
+            "gist": "Opposes BEPMM as a separate body of work; prefers integration into existing platform work"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s5",
+        "author": "Lavu, Ratnakar",
+        "text": "ML models as well as Gen AI models.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Clinical Intelligence platform will support ML and Gen AI models (factual description of platform capability)"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s6",
+        "author": "Lavu, Ratnakar",
+        "text": "Those will then be used for CoC, Member Orchestration, and any other use cases.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Clinical Intelligence platform will produce predictive, reactive, and real-time ML and GenAI models that will be reused by CoC, Member Orchestration, and other use cases"
+          },
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Ratnakar opposes a separate BEPMM body of work; favors integrating into existing platform work"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s7",
+        "author": "Lavu, Ratnakar",
+        "text": "I also comeback to us working together to build these models out versus you hiring resources to do it independently as they all need to be deployed into production leveraging common platforms that we are building out for the enterprise.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Ratnakar opposes BEPMM as a separate hiring effort; prefers building models collaboratively within common enterprise platforms"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.55,
+            "gist": "Against independent hiring of resources for BEPMM; models must be deployed on shared enterprise platforms"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s8",
+        "author": "Lavu, Ratnakar",
+        "text": "My recommendation is to change the below paragraph to ask for approval to make this a priority, and Strategic Finance and Technology will work together to allocate the right capacity to accomplish the work while integrating into the enterprise ecosystem.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Ratnakar proposes changing the memo's BEPMM paragraph to ask for approval to make it a priority, with Strategic Finance and Technology allocating capacity and integrating into the enterprise ecosystem, rather than a separate funded work stream"
+          }
+        ]
+      },
+      {
+        "span_id": "b8.s9",
+        "author": "Lavu, Ratnakar",
+        "text": "Thanks\nRatnakar\n\nApprove Benefit Expense Projection & Management Modernization (BEPMM). Approve the proposed $15.0M one-time 2027 investment and $4.65M annual run rate to modernize benefit-expense projections and management, including a common Trend Advantage methodology, forward-looking forecasts and glidepaths, trend-driver attribution, and Finance-certified value measurement and prioritization. Funding is proposed through reallocation from existing initiatives that require these capabilities, with Strategic Finance as business owner and governance lead, working in close collaboration with Health Solutions, Health Outcomes Organization and DPAIO",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Pasted memo paragraph asks approval of BEPMM with $15.0M one-time 2027 investment and $4.65M annual run rate, funded by reallocation; restates the proposal already on the table"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s1",
+        "author": "Tanal, Stephen",
+        "text": "Ratnakar, thanks for your quick response and readiness to partner on the work.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.85,
+            "gist": "Thanks/pleasantry acknowledging Ratnakar's quick response and readiness to partner; no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s2",
+        "author": "Tanal, Stephen",
+        "text": "I want to clarify that we appear to be focused on the same critical goal",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Steve asserts he and Ratnakar share the same critical goal for the BEPMM work"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s3",
+        "author": "Tanal, Stephen",
+        "text": "not making any of this work \u201ca separate set of work.\u201d",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Stephen says BEPMM should not be a separate set of work; supports integrating parallel workstreams rather than creating a standalone effort"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s4",
+        "author": "Tanal, Stephen",
+        "text": "The purpose of the BEPMM proposal is in fact to coordinate and track the work that is being done and integrate parallel workstreams wherever it makes sense.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "BEPMM's purpose is to coordinate and track existing work and integrate parallel workstreams, not to create separate work"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s5",
+        "author": "Tanal, Stephen",
+        "text": "The example you raise is a case in point \u2013 what exactly is the Clinical Intelligence platform and how is it being funded?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.7,
+            "gist": "What the Clinical Intelligence platform is and how it is funded is unresolved, needed before deciding whether it belongs in BEPMM"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s6",
+        "author": "Tanal, Stephen",
+        "text": "Is that a standalone SVRO project today?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.7,
+            "gist": "Unresolved question whether Clinical Intelligence platform is a standalone SVRO project today, needed to assess funding and duplication"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s7",
+        "author": "Tanal, Stephen",
+        "text": "Given that the capabilities you describe as being a part of this will be used for CoC, Member Orchestration and any other use cases (e.g. HealthOS/TMV), how do you propose we ensure transparency, lack of duplication of work and funding, and the appropriate degree of enterprise focus, if not by bringing all related work in one place (BEPMM)?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Stephen supports consolidating related work into one place (BEPMM) as the approach to ensure transparency and avoid duplication"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Stephen's rhetorical framing: bringing all related work into BEPMM is the way to ensure transparency, no duplication, and enterprise focus"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s8",
+        "author": "Tanal, Stephen",
+        "text": "I also want to make clear my team has no intention of doing any end-to-end work independently.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Stephen's team will not do end-to-end BEPMM-related work independently; disavows going it alone (responds to Ratnakar's concern about separate work)"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s9",
+        "author": "Tanal, Stephen",
+        "text": "We are 100% aligned with deploying into production through DPAIO leveraging common platforms.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "agreement",
+            "confidence": 0.5,
+            "gist": "Stephen affirms the requirement that models deploy into production through DPAIO on common enterprise platforms"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s10",
+        "author": "Tanal, Stephen",
+        "text": "My team would, however, like to ensure iterative ML/AI model development occurs close to our Actuarial and Finance SMEs who drive our predictive capabilities today, with embedded data scientists working closely together day-to-day.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Tanal's team should do iterative ML/AI model development embedded close to Actuarial and Finance SMEs, with embedded data scientists; supports Strategic Finance doing this work within BEPMM"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s11",
+        "author": "Tanal, Stephen",
+        "text": "This is what Strategic Finance uniquely offers to the cross-functional working group.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Stephen says Strategic Finance uniquely offers value to the cross-functional working group (supports Strategic Finance's role in BEPMM)"
+          }
+        ]
+      },
+      {
+        "span_id": "b9.s12",
+        "author": "Tanal, Stephen",
+        "text": "Thank you,\nSteve",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.9,
+            "gist": "Sign-off greeting ('Thank you, Steve') with no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s1",
+        "author": "Lavu, Ratnakar",
+        "text": "Thanks Steve. What is BEPMM?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.55,
+            "gist": "Ratnakar does not yet understand what BEPMM is, so alignment cannot be given until it is defined"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s2",
+        "author": "Lavu, Ratnakar",
+        "text": "Is it a capability or a governing body?",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "blocker",
+            "confidence": 0.5,
+            "gist": "Unclear what BEPMM is (capability vs governing body); needed before Ratnakar can align"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s3",
+        "author": "Lavu, Ratnakar",
+        "text": "Just because we keep saying there is duplication doesn't make it so.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.8,
+            "gist": "Ratnakar disputes that the related work is duplicative; rejects the duplication rationale for BEPMM"
+          },
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Ratnakar opposes BEPMM as a separate effort and prefers integration into existing work"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s4",
+        "author": "Lavu, Ratnakar",
+        "text": "Clinical Intelligence is a horizontal capability that supports multiple use cases across the enterprise.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Clinical Intelligence is a horizontal capability supporting multiple enterprise use cases (factual characterization, rebutting duplication concern)"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s5",
+        "author": "Lavu, Ratnakar",
+        "text": "The work in this is informed by the different needs across the various programs.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Ratnakar asserts the Clinical Intelligence work is shaped by varying needs across programs, a justification for integrating rather than separating the work"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s6",
+        "author": "Lavu, Ratnakar",
+        "text": "As for resources",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.5,
+            "gist": "Ratnakar's stance on resourcing: opposes separate hiring/independent resourcing for model work; prefers joint build on common platforms and integrated capacity"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s7",
+        "author": "Lavu, Ratnakar",
+        "text": "I agree with your point of working closer to the teams that own the initiatives.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "agreement",
+            "confidence": 0.5,
+            "gist": "Ratnakar agrees with Steve's point about working closer to initiative-owning teams; this is an agreement with a stated working-model point, not a vote on an option"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s8",
+        "author": "Lavu, Ratnakar",
+        "text": "I don't see this any different than how we do it across the enterprise - we embed dedicated resources including Data Science resources to program owners : CoC, UM, Claims etc.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Ratnakar opposes Strategic Finance's proposed BEPMM centralized approach; argues embedding dedicated data science resources in program owners is the normal enterprise model"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.5,
+            "gist": "Objects to a separate BEPMM-style team/funding structure for resources; prefers embedding in existing programs"
+          }
+        ]
+      },
+      {
+        "span_id": "b10.s9",
+        "author": "Lavu, Ratnakar",
+        "text": "Let's define what resources are needed and technology will provide the resources.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Ratnakar proposes Technology provides resources, versus Strategic Finance embedding its own team for BEPMM work"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s1",
+        "author": "Tanal, Stephen",
+        "text": "Ok. Thanks Ratnakar.",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.8,
+            "gist": "polite acknowledgement 'Ok. Thanks Ratnakar' with no content"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s2",
+        "author": "Tanal, Stephen",
+        "text": "The whole idea is to create one vehicle/project and coordinated team scoped around the predictive capabilities and translating them into care/CoC management",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Steve supports one consolidated project/team (BEPMM) scoped around predictive capabilities, rather than scattered work"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s3",
+        "author": "Tanal, Stephen",
+        "text": "I think we could call much of what will be needed for success in Benefit Expense Projection & Management Modernization Clinical Intelligence",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.6,
+            "gist": "Much of what BEPMM needs for success could be called Clinical Intelligence; the two are the same work under a different name"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s4",
+        "author": "Tanal, Stephen",
+        "text": "only today the latter feels like an abstract concept because the work is happening in pockets and pieces under different SVRO projects",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Clinical Intelligence concept feels abstract because the related work is currently spread across pockets and pieces under different SVRO projects"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s5",
+        "author": "Tanal, Stephen",
+        "text": "To my knowledge, there is no project, governing body nor convening, cross-functional group called Clinical Intelligence",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.8,
+            "gist": "Clinical Intelligence is not a known project, governing body, or cross-functional group; Steve says he knows of none under that name"
+          }
+        ]
+      },
+      {
+        "span_id": "b11.s6",
+        "author": "Tanal, Stephen",
+        "text": "If there were no duplication today (which I am not sure of because we are still working with SVRO to pull together a full view of all that is in the works), then we definitely will be at risk of creating duplication in the future if we proceed to develop necessary capabilities under each individual SVRO project that requires, in essence, just a few foundational capabilities across them",
+        "status": "active",
+        "context_note": "'duplication' = duplication of work and funding across SVRO projects",
+        "labels": [
+          {
+            "type": "claim",
+            "confidence": 0.7,
+            "gist": "Duplication today is uncertain (SVRO full view still being compiled), but risk of future duplication if each SVRO project builds the foundational capabilities separately"
+          },
+          {
+            "type": "objection",
+            "confidence": 0.6,
+            "gist": "Opposes building necessary predictive capabilities separately under each SVRO project; prefers one coordinated vehicle (BEPMM)"
+          }
+        ]
+      },
+      {
+        "span_id": "b12.s1",
+        "author": "Lavu, Ratnakar",
+        "text": "Thanks Steve. I understand building more and better predictive capabilities, but predictive is not the only thing that we need for CoC or clinical, we also need retrospective and real-time models too. We need horizontal capabilities like Clinical Intelligence to manage this, which we are already creating. Now I think you are saying you need BEPMMCI ( we are adding more letters to this) to be an organizing body for the business. If that's the case, then the discussion should not be about funding or predictive models. Because the predictive models should be prioritized as part of the CoC funding we are already allocating - we will build it once and leverage it for Clinical or other areas that need it through Clinical Intelligence.\n\nThanks\nRatnakar",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "objection",
+            "confidence": 0.7,
+            "gist": "BEPMM as an organizing body would make the discussion about governance rather than funding or predictive models; predictive work should sit within CoC funding"
+          },
+          {
+            "type": "position",
+            "confidence": 0.6,
+            "gist": "Ratnakar opposes BEPMM as a separate organizing body/funding vehicle; predictive models should be funded under existing CoC funding and built via Clinical Intelligence"
+          },
+          {
+            "type": "claim",
+            "confidence": 0.5,
+            "gist": "Predictive, retrospective and real-time models are all needed for CoC/clinical; horizontal Clinical Intelligence capability is already being created"
+          }
+        ]
+      },
+      {
+        "span_id": "b13.s1",
+        "author": "Lavu, Ratnakar",
+        "text": "FYI\u2026.keep it to yourself",
+        "status": "active",
+        "context_note": null,
+        "labels": [
+          {
+            "type": "irrelevant",
+            "confidence": 0.5,
+            "gist": "Side remark asking to keep information private; no decision content"
+          }
+        ]
+      }
+    ]
+  },
+  "summary": "No decision was reached. 17 open questions, 5 open blockers, 3 people took an explicit position on an option.\n\nStatus: No decision was reached. 17 open questions, 5 open blockers, 3 people took an explicit position on an option.\n\nMarked private: this summary is for people on the original distribution only.\n\n## The main point\n\nAbby Milloy and Kanwal Ali, who reviewed the Enterprise Trend Management memo with Mark, are asking an unidentified author to revise and resubmit materials by 10am EST Monday. Abby wants the memo reframed around four specific September agenda questions, condensed from four pages to two or three, and clarified on what the EPGC must decide in September versus what was already approved in August. Kanwal adds that the memo should be split into two documents \u2014 one on assumptions and long-term strategy, one on immediate decisions \u2014 and wants a table showing headcount and expense for CoC, MCCC, and ETM across 2024 through 2027, as well as validation that the five strategic focus areas are grounded in actual historical experience from commercial, government, and Carelon. Both Abby and Kanwal flag that the BEPMM proposal is unclear on scope, funding, timing, owner, and expected result. Stephen Tanal asked Ratnakar Lavu directly whether he is aligned with the proposed BEPMM funding reallocation; Ratnakar did not align, saying the teams he has spoken with believe the work should be integrated into existing programs rather than run as a separate workstream, and proposed changing the ask to one for prioritization with Strategic Finance and Technology jointly allocating capacity. Stephen pushed back, saying BEPMM is intended to coordinate parallel workstreams rather than create independent work, but Stephen and Ratnakar remain unresolved on whether BEPMM should exist as a distinct project at all and on who should provide data science resources \u2014 meaning the $15.0M one-time 2027 investment and $4.65M annual run-rate request cannot move forward without that being settled before the September EPGC meeting.\n\n## Presented, no challenge recorded\n\n- ETM was already approved in August and is not the September decision point; the September meeting should re-emphasize new approvals, funding, scope, priorities, or accepted risks (Abby Milloy).\n- The proposed BEPMM decision as written is not usable: scope, funding, timing, owner, and expected result are not defined (Abby Milloy).\n- The five strategic areas need validation against actual historical experience from commercial, government, and Carelon \u2014 what worked, what did not, and what would differ this time \u2014 before being accepted (Kanwal Ali).\n- The Council discussion should open with the assumptions and long-term strategy memo to get agreement on approach and the five strategic areas (Kanwal Ali).\n\n## Open questions\n\n- What must the enterprise do differently if elevated trend persists, and which pricing, product, network, benefit, operating, strategic, and investment assumptions change? (Abby Milloy)\n- Which no-regret actions and contingency triggers should enter the 2027 plan now? (Abby Milloy)\n- Are the five areas of focus the right strategic areas as currently framed? (Kanwal Ali)\n- Is BEPMM a capability or a governing body, and how should it be structured and funded \u2014 separate workstream or integrated into existing capacity? (Ratnakar Lavu)\n- What is the Clinical Intelligence platform, how is it funded today, and is it a standalone SVRO project? (Stephen Tanal)\n\n## Where people stand\n\n- Split into two memos (assumptions/long-term strategy and immediate actions/decisions): Kanwal Ali supports; Kanwal Ali withdrew support for a single combined memo.\n- Integrate BEPMM into existing team work (Member Orchestration, CoC, Clinical Intelligence) and build models on common enterprise platforms: Ratnakar Lavu supports.\n- Approve BEPMM as a separate funded workstream ($15.0M one-time 2027, $4.65M annual run rate): Ratnakar Lavu opposes.\n- Consolidate all related work in one project/team (BEPMM) scoped around predictive capabilities: Stephen Tanal supports.\n- Build necessary predictive capabilities separately under each SVRO project: Stephen Tanal opposes.\n- Technology provides resources after defining what is needed: Ratnakar Lavu supports if resources are first defined together.\n- BEPMM hires resources independently: Ratnakar Lavu opposes.\n- Abby Milloy said: \"We would not recommend too much re-emphasis on this as a decision point\" and \"It is unclear what scope, funding, timing, owner, expected result, or changes are implied.\"\n\nProposed, no reaction recorded: Embedded ML/AI model development close to Actuarial and Finance SMEs with embedded data scientists (Stephen Tanal); Strategic Finance embeds its own team for BEPMM work (Ratnakar Lavu); and 4 more.\n\n## What is blocking progress\n\n- The BEPMM concept is not defined (capability vs. governing body); Ratnakar Lavu said he cannot align until it is explained (Ratnakar Lavu).\n- The Clinical Intelligence platform's funding and governance are unresolved, making it impossible to determine whether it belongs in BEPMM (Stephen Tanal).\n- A full view of duplication across SVRO projects is still being compiled with SVRO (Stephen Tanal).\n- Outstanding questions about enterprise changes and the 25bp target path may remain open and need to be stated as such by the submitters (Abby Milloy).\n- Ratnakar Lavu's alignment on the proposed BEPMM funding reallocation has not been obtained, which Kanwal Ali flagged as a required step before the memo is finalized (Kanwal Ali).\n\n## Next steps\n\n- Abby Milloy asked the memo author to reframe the paper around the four September agenda questions, define the proposed BEPMM decision, clarify the five strategic moves and their measurable triggers, and reduce the body to two to three pages by 5pm EST the following day.\n- Kanwal Ali asked for final versions of the memo(s) by 10am EST Monday.\n- Kanwal Ali asked the memo author to clarify work completed since the August decision and to produce a table of expense and positions for CoC, MCCC, and ETM for 2024\u20132027.\n- Kanwal Ali asked the memo author to confirm that Ratnakar Lavu is aligned with the proposed BEPMM funding reallocation before finalizing.\n\n## Awaiting a reply\n\n- Stephen Tanal asked Ratnakar Lavu how the Clinical Intelligence platform is currently funded and governed, and whether it is a standalone SVRO project; no direct answer recorded.\n- Stephen Tanal asked Ratnakar Lavu how transparency and avoidance of duplication would be ensured across CoC, Member Orchestration, and HealthOS/TMV; no direct answer recorded.\n\n## Things people asserted that others may want to check\n\n- Stephen Tanal said BEPMM would be funded by reallocations from Member Orchestration, Medical Cost Command Center, and HealthOS (unverified).\n- Stephen Tanal said there is no known project, governing body, or cross-functional group currently called Clinical Intelligence.\n- Ratnakar Lavu said the teams he spoke with \u2014 member orchestration, CoC, Clinical Intelligence \u2014 all believe the work should be integrated, not run separately."
+}

@@ -689,10 +689,9 @@ def make_summary(d, call_llm, include_private: bool = True, audit: bool = True) 
         text = call_llm(AUDIT_SYSTEM, "CONVERSATION\n" + conv + "\n\nSUMMARY\n" + text).strip()
     want = status_line(d)
     lines = text.split("\n")
-    if lines and _norm_first(lines[0]) == want:
-        lines[0] = want                    # the model labelled or decorated it; keep one clean copy
-        return "\n".join(lines)
-    return want + "\n\n" + text
+    while lines and (not lines[0].strip() or _norm_first(lines[0]) == want):
+        lines.pop(0)                       # drop every copy the model wrote (labelled or not), then put back exactly one
+    return want + "\n\n" + "\n".join(lines)
 
 
 if __name__ == "__main__":

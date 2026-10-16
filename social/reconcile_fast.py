@@ -32,6 +32,8 @@ from typing import Any
 from llm import HAIKU, LLM
 from reconcile import (
     BATCH,
+    clean_op,
+    _as_str,
     CONTEXT_SPANS,
     DEFAULT_STATUS,
     PREFIX,
@@ -110,12 +112,24 @@ def _context_block(rows: list[dict], idx: list[int]) -> str:
     return "\n".join(render_span(r) for r in ctx) if ctx else "(none)"
 
 
+def _clean_cand(c) -> dict | None:
+    if not isinstance(c, dict):
+        return None
+    out = {k: _as_str(c.get(k)) for k in ("temp_id", "kind", "title", "span_id", "question_title", "claim_kind",
+                                          "constraint_kind", "blocker_kind")}
+    ab = c.get("about_options")
+    out["about_options"] = [x for x in (_as_str(i) for i in (ab if isinstance(ab, list) else [ab])) if x]
+    if not out["kind"] or not (out["title"] or "").strip() or not out["span_id"]:
+        return None
+    return out
+
+
 def _extract_batch(rows: list[dict], idx: list[int], llm: LLM) -> list[dict]:
     user = ("CONTEXT (do not extract from these):\n" + _context_block(rows, idx)
             + "\n\nSPANS:\n" + "\n".join(render_span(rows[i]) for i in idx))
     out = llm.structured(system=EXTRACT_SYSTEM, user=user, tool_name="extract_elements",
                          schema=EXTRACT_SCHEMA, max_tokens=2048)
-    return out.get("elements", [])
+    return [c for c in (_clean_cand(x) for x in out.get("elements", []) or []) if c]
 
 
 # ── Step 2: consolidate questions and options (one small call) ──────────────
@@ -161,12 +175,17 @@ def _consolidate(cands: list[dict], rows_by_span: dict[str, dict], llm: LLM) -> 
     try:
         out = llm.structured(system=CONSOLIDATE_SYSTEM, user=user, tool_name="consolidate",
                              schema=CONSOLIDATE_SCHEMA, max_tokens=4096)
+        ids = {c["cid"] for c in cands}
+        qs_out = [{"id": _as_str(q.get("id")), "merge": [m for m in (_as_str(x) for x in q.get("merge") or []) if m in ids]}
+                  for q in out.get("questions", []) if isinstance(q, dict)]
+        os_out = [{"id": _as_str(o.get("id")), "question": _as_str(o.get("question")), "merge_into": _as_str(o.get("merge_into")),
+                   "drop": o.get("drop") is True}
+                  for o in out.get("options", []) if isinstance(o, dict)]
+        if not all(q["id"] in ids for q in qs_out):
+            return None
+        return {"questions": qs_out, "options": [o for o in os_out if o["id"] in ids]}
     except Exception:
         return None
-    ids = {c["cid"] for c in cands}
-    if not isinstance(out, dict) or not all(q.get("id") in ids for q in out.get("questions", [])):
-        return None
-    return out
 
 
 # ── Step 3: build the registry (code only, deterministic) ───────────────────
@@ -332,7 +351,27 @@ def _stance_batch(rows: list[dict], idx: list[int], reg_snapshot: str, participa
             + "\n\nNEW SPANS:\n" + "\n".join(render_span(rows[i]) for i in idx))
     out = llm.structured(system=STANCE_SYSTEM, user=user, tool_name="stance_ops",
                          schema=STANCE_OPS_SCHEMA, max_tokens=2048)
-    return out.get("ops", [])
+    return _limit_ops(out.get("ops", []), {rows[i]["span_id"] for i in idx}, len(idx))
+
+
+MAX_OPS_PER_SPAN = 4
+
+
+def _limit_ops(ops, allowed: set[str], n_spans: int) -> list[dict]:
+    """Clean, drop ops for spans outside the batch, drop exact repeats, and cap a runaway batch (one returned 1513 ops
+    for 6 spans). A runaway keeps the first ops only; the caller is told through a warning op count."""
+    seen, out = set(), []
+    for op in ops if isinstance(ops, list) else []:
+        op = clean_op(op)
+        if op is None or (op.get("op") != "merge" and op.get("span") not in allowed):
+            continue
+        key = json.dumps(op, sort_keys=True)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(op)
+    cap = max(12, MAX_OPS_PER_SPAN * n_spans)
+    return out[:cap]
 
 
 # ── Driver ──────────────────────────────────────────────────────────────────
@@ -376,7 +415,7 @@ def reconcile_fast(
     for b in range(nb):
         allowed = {rows[i]["span_id"] for i in batches[b]}
         for c in got.get(b, []):
-            if c.get("kind") not in PREFIX or not (c.get("title") or "").strip():
+            if c.get("kind") not in PREFIX:
                 continue
             if c.get("span_id") not in allowed:
                 bad_spans += 1

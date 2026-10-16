@@ -50,7 +50,8 @@ def _to_rows(classified, spans) -> list[dict]:
 
 
 def run(path: Path, haiku_model: str = HAIKU, sonnet_model: str = SONNET,
-        batch: int = 6, workers: int = 12, log=print) -> dict:
+        batch: int = 6, workers: int = 12, consolidate: str = "sonnet", log=print) -> dict:
+    """consolidate: which model merges duplicate questions/options ("sonnet", "haiku", or "off" for code-only matching)."""
     text = path.read_text(encoding="utf-8")
 
     # 1. Ingest
@@ -63,6 +64,7 @@ def run(path: Path, haiku_model: str = HAIKU, sonnet_model: str = SONNET,
 
     # 2. Normalize (Haiku)
     haiku = AnthropicLLM(model=haiku_model)
+    sonnet = AnthropicLLM(model=sonnet_model)
     spans = normalize(src.transcript, haiku)
     log(f"  spans       : {len(spans)}")
 
@@ -71,7 +73,9 @@ def run(path: Path, haiku_model: str = HAIKU, sonnet_model: str = SONNET,
 
     # 4. Reconcile fast (3-pass parallel, Haiku)
     rows = _to_rows(classified, spans)
-    reg = reconcile_fast(rows, src.speakers, haiku, batch=batch, workers=workers, log=log)
+    reg = reconcile_fast(rows, src.speakers, haiku, batch=batch, workers=workers,
+                         consolidate=(consolidate != "off"),
+                         consolidate_llm=(sonnet if consolidate == "sonnet" else None), log=log)
 
     # 5. Assemble result
     result = dump(reg, src.speakers, str(path), haiku_model)
@@ -93,9 +97,8 @@ def run(path: Path, haiku_model: str = HAIKU, sonnet_model: str = SONNET,
         } for c in classified],
     }
 
-    # 6. Summarize (two Sonnet calls)
-    log(f"\n[summarize] two Sonnet passes ({sonnet_model})...")
-    sonnet = AnthropicLLM(model=sonnet_model)
+    # 6. Summarize (five Sonnet calls: main point, positions, summary, tighten, audit)
+    log(f"\n[summarize] Sonnet passes ({sonnet_model})...")
 
     def _call_llm(system, user):
         resp = sonnet.client.messages.create(
@@ -115,6 +118,8 @@ def main():
     ap.add_argument("--out", type=Path)
     ap.add_argument("--haiku-model", default=HAIKU)
     ap.add_argument("--sonnet-model", default=SONNET)
+    ap.add_argument("--consolidate", choices=["sonnet", "haiku", "off"], default="sonnet",
+                    help="model that merges duplicate questions/options (one call); off = code-only matching")
     ap.add_argument("--batch", type=int, default=6)
     ap.add_argument("--workers", type=int, default=12)
     a = ap.parse_args()
@@ -125,7 +130,7 @@ def main():
     print(f"\n[{a.source.name}]")
     t0 = time.time()
     result = run(a.source, haiku_model=a.haiku_model, sonnet_model=a.sonnet_model,
-                 batch=a.batch, workers=a.workers)
+                 batch=a.batch, workers=a.workers, consolidate=a.consolidate)
     elapsed = time.time() - t0
 
     out.write_text(json.dumps(result, indent=2))

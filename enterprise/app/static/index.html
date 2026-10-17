@@ -18,6 +18,7 @@
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.5;min-height:100vh}
 .hidden{display:none!important}
+.demo-banner{background:var(--accent-bg);color:var(--accent);font-size:var(--fs-sm);padding:9px 28px;text-align:center;border-bottom:1px solid #cfe4df}
 button{font-family:inherit}
 
 /* ── top bar ── */
@@ -56,6 +57,8 @@ button{font-family:inherit}
 .seg button{border:0;background:transparent;padding:6px 13px;border-radius:8px;font-size:var(--fs-sm);color:var(--ink2);cursor:pointer}
 .seg button.active{background:var(--card);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
 .sample-links{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:var(--fs-xs);color:var(--ink3)}
+.sample-links.demo{margin-left:0;width:100%;flex-wrap:wrap;gap:4px 18px;margin-top:10px}
+.sample-links.demo .linkbtn{text-align:left}
 .linkbtn{border:0;background:none;color:var(--accent);font-size:var(--fs-xs);cursor:pointer;padding:3px 4px;font-weight:600}
 .linkbtn:hover{text-decoration:underline}
 .dropzone{position:relative}
@@ -219,6 +222,8 @@ details.fold .inner{padding:0 24px 20px}
   <span class="session-pill" id="headerSession"></span>
 </div></div>
 
+<div class="demo-banner hidden" id="demoBanner"><b>Recorded demo.</b> These are real Pact runs on invented data. Pick a sample to see its decision record; pasting your own text needs the live app.</div>
+
 <div class="wrap">
 
   <section class="hero" id="hero">
@@ -357,10 +362,26 @@ let sourceType = 'auto', pollTimer = null, tickTimer = null, hasOpenRouter = fal
 const SAMPLES = JSON.parse($('samples').textContent || '{}');
 
 $('promptText').value = DEFAULT_PROMPT;
-fetch('/config').then(r => r.json()).then(d => {
-  hasOpenRouter = !!d.has_openrouter;
-  if (hasOpenRouter) show('compareTab');
-}).catch(() => {});
+let demoMode = false, demoSamples = [], demoPicked = null;
+async function initMode() {
+  let live = false;
+  if (!/[?&]demo=1/.test(location.search)) {
+    try { const d = await (await fetch('/config')).json(); live = true; hasOpenRouter = !!d.has_openrouter; if (hasOpenRouter) show('compareTab'); } catch (e) { live = false; }
+  }
+  if (live) return;
+  demoMode = true;
+  for (const u of ['demo/data.json', '/static/demo/data.json']) {
+    try { const r = await fetch(u); if (r.ok) { demoSamples = (await r.json()).samples || []; break; } } catch (e) {}
+  }
+  show('demoBanner'); hide('compareTab');
+  $('analyzeBtn').textContent = 'Show decision record';
+  $('inputText').placeholder = 'Pick a sample above to see a recorded run.';
+  document.querySelector('.sample-links').classList.add('demo');
+  document.querySelector('.sample-links').innerHTML = 'Try a recorded run:' + demoSamples.map((x, i) => `<button class="linkbtn" data-i="${i}" title="${esc(x.blurb)}">${esc(x.title)}</button>`).join('');
+  document.querySelectorAll('.sample-links [data-i]').forEach(b => b.onclick = () => { const x = demoSamples[+b.dataset.i]; demoPicked = x; setText(x.text); setType(x.type); });
+  document.querySelector('.formats').textContent = 'Synthetic meetings and emails only';
+}
+initMode();
 
 // ── tabs ──────────────────────────────────────────────────────────────────────
 function setTab(t) {
@@ -416,6 +437,11 @@ function resetAll() {
 $('analyzeBtn').addEventListener('click', async () => {
   const text = inputText.value.trim();
   if (!text) return;
+  if (demoMode) {
+    const x = demoSamples.find(v => v.text.trim() === text);
+    if (!x) { hide('results'); hide('tabs'); startStatus(''); endStatus('error', 'This is a recorded demo. Choose one of the recorded runs above to see its decision record.'); return; }
+    hide('statusBar'); hide('colAi'); renderResults(x.result, 'recorded', x.duration || 0); return;
+  }
   hide('results'); hide('colAi'); hide('tabs'); $('analyzeBtn').disabled = true;
   startStatus('Building the decision record — typically 30 to 90 seconds');
   let jobId;
@@ -597,8 +623,8 @@ function renderResults(r, jobId, duration) {
   const flagItems = [...(sec.flags || []), ...warnings.slice(0, 5)];
   fillFold('flagFold', 'flagList', flagItems, 'grey');
 
-  $('sessionMeta').textContent = `Session ${jobId.slice(0, 8)} · built in ${duration}s · ${inputText.value.length.toLocaleString()} characters in`;
-  $('headerSession').textContent = jobId.slice(0, 8);
+  $('sessionMeta').textContent = demoMode ? 'Recorded run on invented data' : `Session ${jobId.slice(0, 8)} · built in ${duration}s · ${inputText.value.length.toLocaleString()} characters in`;
+  $('headerSession').textContent = demoMode ? 'recorded demo' : jobId.slice(0, 8);
   $('analyzeBtn').disabled = false;
   hide('hero'); show('compactHero'); show('tabs'); setTab('record'); $('pactText').innerHTML = pactHtml(status, sec); $('inputCard').classList.add('collapsed');
   $('results').scrollIntoView({ behavior: 'smooth', block: 'start' });

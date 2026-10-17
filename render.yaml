@@ -1,0 +1,11 @@
+# Render Blueprint: free static site that replays recorded Pact runs (no server, no API keys).
+# Dashboard: New > Blueprint > pick this repo. The live app (FastAPI) is a separate service and is not deployed by this file.
+services:
+  - type: web
+    name: pact-demo
+    runtime: static
+    staticPublishPath: enterprise/app/static
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex

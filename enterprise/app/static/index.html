@@ -189,6 +189,14 @@ details.fold .inner{padding:0 24px 20px}
 .spin{width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;display:inline-block;vertical-align:-2px;margin-right:6px}
 @keyframes rot{to{transform:rotate(360deg)}}
 
+/* ── first screen: what it is, how to use it ── */
+.cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:var(--fs-sm);color:var(--ink2)}
+.how{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 28px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line2);font-size:var(--fs-sm);color:var(--ink2)}
+.how li{display:flex;align-items:flex-start;gap:9px}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.how b{flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-bg);color:var(--accent);font-size:var(--fs-xs);display:grid;place-items:center}
+.input-card.collapsed .how{display:none}
+
 /* ── roadmap ── */
 .nav{display:flex;gap:2px;margin-left:18px}
 .nav button{border:0;background:none;padding:6px 12px;border-radius:8px;font-size:var(--fs-sm);color:var(--ink2);cursor:pointer}
@@ -326,7 +334,8 @@ body.view-roadmap #demoBanner{display:none!important}
   <section class="hero" id="hero">
     <div class="eyebrow">The cost of meetings isn't the meeting</div>
     <h1>Meetings produce talk.<br/><em>Pact produces decisions.</em></h1>
-    <p class="lead">Teams spend their time discussing the same thing again, talking over each other, and leaving without owners or dates. Even when someone could act, they're missing details buried three calls and two threads ago. Pact tracks the decision itself: what is being decided, where each person actually stands, what is blocking it, and who owes what by when.</p>
+    <p class="lead">Pact reads a meeting transcript or an email thread and shows what is being decided, where each person actually stands, what is blocking it, and who owes what by when. It never decides for the group.</p>
+    <div class="cta"><button class="btn primary" id="tryBtn">Try a sample</button><span id="ctaNote">Or paste your own transcript or email thread below.</span></div>
     <div class="pains">
       <div class="pain"><span class="n">01</span><b>The same topic, again</b><span>Settled in one meeting, reopened in the next, because nobody can say what was decided.</span></div>
       <div class="pain"><span class="n">02</span><b>Talking past each other</b><span>Five people, five readings of "we're aligned." Silence gets counted as agreement.</span></div>
@@ -350,6 +359,11 @@ body.view-roadmap #demoBanner{display:none!important}
   </div>
 
   <div class="input-card" id="inputCard">
+    <ol class="how">
+      <li><b>1</b><span id="how1">Paste a transcript or email thread, or drop a file</span></li>
+      <li><b>2</b><span id="how2">Press Build decision record</span></li>
+      <li><b>3</b><span>Read what was decided, who stands where, what is blocked and who owes what</span></li>
+    </ol>
     <div class="input-top">
       <div class="seg" id="typeToggle" role="tablist">
         <button class="active" data-type="auto">Auto-detect</button>
@@ -477,6 +491,9 @@ async function initMode() {
   document.querySelector('.sample-links').innerHTML = 'Try a recorded run:' + demoSamples.map((x, i) => `<button class="linkbtn" data-i="${i}" title="${esc(x.blurb)}">${esc(x.title)}</button>`).join('');
   document.querySelectorAll('.sample-links [data-i]').forEach(b => b.onclick = () => { const x = demoSamples[+b.dataset.i]; demoPicked = x; setText(x.text); setType(x.type); });
   document.querySelector('.formats').textContent = 'Synthetic meetings and emails only';
+  $('ctaNote').textContent = 'Opens a recorded run on invented data.';
+  $('how1').textContent = 'Pick a recorded run, or press Try a sample';
+  $('how2').textContent = 'Press Show decision record';
 }
 initMode();
 
@@ -499,6 +516,11 @@ function setText(t) { inputText.value = t; updateCount(); }
 function updateCount() { const n = inputText.value.length; $('charCount').textContent = n.toLocaleString() + (n === 1 ? ' character' : ' characters'); }
 inputText.addEventListener('input', updateCount);
 $('sampleMeeting').onclick = () => { if (SAMPLES.meeting) { setText(SAMPLES.meeting); setType('transcript'); } };
+$('tryBtn').onclick = () => {
+  const first = demoMode ? document.querySelector('.sample-links [data-i]') : $('sampleMeeting');
+  if (first) first.click();
+  $('inputCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
 $('sampleEmail').onclick = () => { if (SAMPLES.email) { setText(SAMPLES.email); setType('email'); } };
 function setType(t) { document.querySelectorAll('#typeToggle button').forEach(b => { b.classList.toggle('active', b.dataset.type === t); }); sourceType = t; }
 

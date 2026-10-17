@@ -189,6 +189,47 @@ details.fold .inner{padding:0 24px 20px}
 .spin{width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;display:inline-block;vertical-align:-2px;margin-right:6px}
 @keyframes rot{to{transform:rotate(360deg)}}
 
+/* ── first screen: what it is, how to use it ── */
+.cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:var(--fs-sm);color:var(--ink2)}
+.how{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 28px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line2);font-size:var(--fs-sm);color:var(--ink2)}
+.how li{display:flex;align-items:flex-start;gap:9px}
+@media (max-width:760px){.how{grid-template-columns:1fr}}
+.how b{flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-bg);color:var(--accent);font-size:var(--fs-xs);display:grid;place-items:center}
+.input-card.collapsed .how{display:none}
+
+/* ── roadmap ── */
+.nav{display:flex;gap:2px;margin-left:18px}
+.nav button{border:0;background:none;padding:6px 12px;border-radius:8px;font-size:var(--fs-sm);color:var(--ink2);cursor:pointer}
+.nav button:hover{background:var(--grey-bg)}
+.nav button.active{color:var(--ink);font-weight:600;background:var(--grey-bg)}
+.logo{cursor:pointer}
+#roadmapView{display:none;padding:56px 0 8px}
+body.view-roadmap #roadmapView{display:block}
+body.view-roadmap .wrap > :not(#roadmapView){display:none!important}
+body.view-roadmap #demoBanner{display:none!important}
+.rm-head{max-width:760px}
+.rm-head h2{font-family:var(--serif);font-weight:600;font-size:var(--fs-xl);line-height:1.15;letter-spacing:-.01em}
+.rm-head p{margin-top:14px;font-size:var(--fs-md);color:var(--ink2)}
+.rm-legend{display:flex;flex-wrap:wrap;gap:8px 28px;margin:26px 0 22px;font-size:var(--fs-sm);color:var(--ink2)}
+.rm-chip{display:inline-block;font-size:var(--fs-xs);font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.rm-chip.live{background:var(--accent-bg);color:var(--accent)}
+.rm-chip.off{background:var(--amber-bg);color:var(--amber)}
+.rm-lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.rm-lane h3{font-size:var(--fs-xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid var(--line)}
+.rm-lane h3 span{color:var(--ink3);font-weight:400;letter-spacing:0;text-transform:none;margin-left:8px}
+.rm-lane.built h3{color:var(--accent);border-color:var(--accent)}
+.rm-lane.next h3{color:var(--blue);border-color:var(--blue)}
+.rm-lane.later h3{color:var(--ink3);border-color:var(--ink3)}
+.rm-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.rm-item b{display:block;font-size:var(--fs-sm);margin-bottom:4px}
+.rm-item p{font-size:var(--fs-sm);color:var(--ink2)}
+.rm-item .rm-chip{margin-top:10px}
+.rm-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.rm-two ul{padding-left:18px}
+.rm-two li{font-size:var(--fs-sm);color:var(--ink2);margin:6px 0}
+.rm-foot{margin-top:18px;font-size:var(--fs-xs);color:var(--ink3)}
+@media (max-width:900px){.rm-lanes,.rm-two{grid-template-columns:1fr}.nav{margin-left:6px}.tag{display:none}}
+
 /* ── tabs / compare ── */
 .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:6px 0 18px}
 .tab{border:0;background:none;padding:11px 16px;font-size:var(--fs-sm);color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
@@ -218,6 +259,7 @@ details.fold .inner{padding:0 24px 20px}
 <div class="topbar"><div class="topbar-in">
   <div class="logo"><span class="logo-mark"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.2 3L12 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pact</div>
   <span class="tag">Decision intelligence</span>
+  <nav class="nav" aria-label="Sections"><button data-view="product" class="active">Product</button><button data-view="roadmap">Roadmap</button></nav>
   <span class="spacer"></span>
   <span class="session-pill" id="headerSession"></span>
 </div></div>
@@ -226,10 +268,74 @@ details.fold .inner{padding:0 24px 20px}
 
 <div class="wrap">
 
+  <section id="roadmapView" aria-label="Roadmap">
+    <div class="rm-head">
+      <div class="eyebrow">Roadmap</div>
+      <h2>From tracking a decision to getting it made</h2>
+      <p>Today Pact reads a meeting or an email thread and shows where the decision stands. Next it works out what stands in the way and chases each person for a yes or no. It never decides for the group.</p>
+    </div>
+
+    <div class="rm-legend">
+      <span><span class="rm-chip live">Run on live models</span> &nbsp;ran through a live model on whole meetings</span>
+      <span><span class="rm-chip off">Built · tested offline</span> &nbsp;merged, not yet run on a live model</span>
+    </div>
+
+    <div class="rm-lanes">
+      <div class="rm-lane built">
+        <h3>Built <span>working today</span></h3>
+        <div class="rm-item"><b>Reads meetings and email threads</b><p>Teams-format transcripts and pasted email chains, auto-detected.</p><span class="rm-chip live">Run on live models</span></div>
+        <div class="rm-item"><b>Tracks the decision</b><p>Questions, options, claims and blockers, and who stands where. Silence is never counted as agreement.</p><span class="rm-chip live">Run on live models</span></div>
+        <div class="rm-item"><b>Decision record in plain words</b><p>Counts and statuses are set by code, the wording by the model, and every line names a person.</p><span class="rm-chip live">Run on live models</span></div>
+        <div class="rm-item"><b>"Doesn't add up" check</b><p>Flags a decision that contradicts a limit someone raised and nobody answered.</p><span class="rm-chip off">Built · tested offline</span></div>
+        <div class="rm-item"><b>Shorter summaries, no lost points</b><p>Repeated wording is cut, and a guard rejects any rewrite that drops a number, a quote or a name.</p><span class="rm-chip off">Built · tested offline</span></div>
+      </div>
+
+      <div class="rm-lane next">
+        <h3>Next <span>in this order</span></h3>
+        <div class="rm-item"><b>Run everything live and score it</b><p>Every sample through the live pipeline, checked against hand-written answers. Nothing below is trusted until this passes.</p></div>
+        <div class="rm-item"><b>Decision board</b><p>For each open decision, the checks that must clear first, one closed question per person, and what each reply changes. "Ready" is not "decided"; a named person makes the call.</p></div>
+        <div class="rm-item"><b>Owners and responses</b><p>An owner on every action, claim and blocker. People can agree, dispute a misreading of their own words, or counter someone else's.</p></div>
+        <div class="rm-item"><b>One decision across many uploads</b><p>The same thread uploaded twice counts once. Emails and meetings about one decision link into one record.</p></div>
+        <div class="rm-item"><b>More file types</b><p>.vtt, .srt, .eml and .docx.</p></div>
+      </div>
+
+      <div class="rm-lane later">
+        <h3>Later <span>after the board works</span></h3>
+        <div class="rm-item"><b>Teams first, Slack second</b><p>Pull the transcript after a meeting ends, post the board, send the questions. One adapter, so the engine does not care which.</p></div>
+        <div class="rm-item"><b>Agents send the confirmations</b><p>Pact drafts, a person approves, and only low-risk asks go out unattended.</p></div>
+        <div class="rm-item"><b>Executive decisions</b><p>A decision brief and "waiting on a named person for N days", with any dissent kept beside the decision.</p></div>
+        <div class="rm-item"><b>A graph that grows</b><p>Each question at the root, linked to the people and the kinds of evidence around it. It lives in the customer's own tenant.</p></div>
+        <div class="rm-item"><b>Decision-engine model</b><p>Quick decisions to a small model, hard ones to a large one. Measure live first, then train only the narrow steps that stay costly.</p></div>
+        <div class="rm-item"><b>Company rules</b><p>"Spend over a set amount needs finance" becomes a check that is added automatically.</p></div>
+      </div>
+    </div>
+
+    <div class="rm-two">
+      <div class="card"><h3>How it runs</h3>
+        <ul>
+          <li>A container that runs inside the customer's own cloud, not a hosted service.</li>
+          <li>Their model endpoint, their storage, their retention terms.</li>
+          <li>Nothing reaches in from our side. They pull updates when they choose.</li>
+          <li>Only a usage count leaves, never meeting content.</li>
+        </ul>
+      </div>
+      <div class="card"><h3>How it is priced</h3>
+        <ul>
+          <li>A platform fee, plus a charge for each decision tracked to a close, with a higher rate for hard ones.</li>
+          <li>Later, an optional tier tied to measured gains: topics reopened, days to decide, asks left unanswered.</li>
+          <li>Not per seat and not per token.</li>
+          <li>Pricing is not set yet.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="rm-foot">All meetings on this page are invented. The shorter-summary pass and the logic check are built but have not yet run on a live model.</p>
+  </section>
+
   <section class="hero" id="hero">
     <div class="eyebrow">The cost of meetings isn't the meeting</div>
     <h1>Meetings produce talk.<br/><em>Pact produces decisions.</em></h1>
-    <p class="lead">Teams spend their time discussing the same thing again, talking over each other, and leaving without owners or dates. Even when someone could act, they're missing details buried three calls and two threads ago. Pact tracks the decision itself: what is being decided, where each person actually stands, what is blocking it, and who owes what by when.</p>
+    <p class="lead">Pact reads a meeting transcript or an email thread and shows what is being decided, where each person actually stands, what is blocking it, and who owes what by when. It never decides for the group.</p>
+    <div class="cta"><button class="btn primary" id="tryBtn">Try a sample</button><span id="ctaNote">Or paste your own transcript or email thread below.</span></div>
     <div class="pains">
       <div class="pain"><span class="n">01</span><b>The same topic, again</b><span>Settled in one meeting, reopened in the next, because nobody can say what was decided.</span></div>
       <div class="pain"><span class="n">02</span><b>Talking past each other</b><span>Five people, five readings of "we're aligned." Silence gets counted as agreement.</span></div>
@@ -253,6 +359,11 @@ details.fold .inner{padding:0 24px 20px}
   </div>
 
   <div class="input-card" id="inputCard">
+    <ol class="how">
+      <li><b>1</b><span id="how1">Paste a transcript or email thread, or drop a file</span></li>
+      <li><b>2</b><span id="how2">Press Build decision record</span></li>
+      <li><b>3</b><span>Read what was decided, who stands where, what is blocked and who owes what</span></li>
+    </ol>
     <div class="input-top">
       <div class="seg" id="typeToggle" role="tablist">
         <button class="active" data-type="auto">Auto-detect</button>
@@ -380,6 +491,9 @@ async function initMode() {
   document.querySelector('.sample-links').innerHTML = 'Try a recorded run:' + demoSamples.map((x, i) => `<button class="linkbtn" data-i="${i}" title="${esc(x.blurb)}">${esc(x.title)}</button>`).join('');
   document.querySelectorAll('.sample-links [data-i]').forEach(b => b.onclick = () => { const x = demoSamples[+b.dataset.i]; demoPicked = x; setText(x.text); setType(x.type); });
   document.querySelector('.formats').textContent = 'Synthetic meetings and emails only';
+  $('ctaNote').textContent = 'Opens a recorded run on invented data.';
+  $('how1').textContent = 'Pick a recorded run, or press Try a sample';
+  $('how2').textContent = 'Press Show decision record';
 }
 initMode();
 
@@ -402,6 +516,11 @@ function setText(t) { inputText.value = t; updateCount(); }
 function updateCount() { const n = inputText.value.length; $('charCount').textContent = n.toLocaleString() + (n === 1 ? ' character' : ' characters'); }
 inputText.addEventListener('input', updateCount);
 $('sampleMeeting').onclick = () => { if (SAMPLES.meeting) { setText(SAMPLES.meeting); setType('transcript'); } };
+$('tryBtn').onclick = () => {
+  const first = demoMode ? document.querySelector('.sample-links [data-i]') : $('sampleMeeting');
+  if (first) first.click();
+  $('inputCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
 $('sampleEmail').onclick = () => { if (SAMPLES.email) { setText(SAMPLES.email); setType('email'); } };
 function setType(t) { document.querySelectorAll('#typeToggle button').forEach(b => { b.classList.toggle('active', b.dataset.type === t); }); sourceType = t; }
 
@@ -701,6 +820,20 @@ function renderMarkdown(text) {
     return `<p>${inline(t.replace(/\n/g, ' '))}</p>`;
   }).join('');
 }
+</script>
+<script>
+// ── product / roadmap views ───────────────────────────────────────────────────
+(function () {
+  function setView(v) {
+    document.body.classList.toggle('view-roadmap', v === 'roadmap');
+    document.querySelectorAll('.nav button').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    try { history.replaceState(null, '', v === 'roadmap' ? '#roadmap' : location.pathname + location.search); } catch (e) {}
+    window.scrollTo(0, 0);
+  }
+  document.querySelectorAll('.nav button').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+  document.querySelector('.logo').addEventListener('click', () => setView('product'));
+  setView(location.hash === '#roadmap' ? 'roadmap' : 'product');
+})();
 </script>
 </body>
 </html>

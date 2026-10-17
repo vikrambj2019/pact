@@ -1,0 +1,265 @@
+Transcript. Use arrow keys to navigate between transcript entries.
+
+
+Search
+
+AI-generated content may be incorrect
+
+Speaker 1 started transcription
+HR
+Hartwell, Rena
+12 seconds0:12
+Hartwell, Rena 12 seconds
+Okay, let's start. Two things today. First, the claims-data vendor for next year: renew Meridian or move to Lumen. Second, who owns the data quality checks after cutover. I want a direction on the first before we leave.
+
+DO
+Osei, Daniel
+35 seconds0:35
+Osei, Daniel 35 seconds
+Quick context. Meridian renewal is $410k for the year, same as now. Lumen came in at $355k but that is the first year only, and the integration work is on us.
+
+LP
+Pereira, Lucia
+58 seconds0:58
+Pereira, Lucia 58 seconds
+I'd renew Meridian. We know it, the finance team's reports are built on its field names, and I do not want to rebuild those in Q1.
+
+KB
+Brandt, Kiran
+1 minute 20 seconds1:20
+Brandt, Kiran 1 minute 20 seconds
+I lean Lumen. Their refresh is daily and Meridian's is weekly. That is the whole reason we are having this conversation.
+
+SN
+Nakamura, Sam
+1 minute 35 seconds1:35
+Nakamura, Sam 1 minute 35 seconds
+Yeah.
+
+HR
+Hartwell, Rena
+1 minute 44 seconds1:44
+Hartwell, Rena 1 minute 44 seconds
+Sam, anything from you?
+
+SN
+Nakamura, Sam
+1 minute 50 seconds1:50
+Nakamura, Sam 1 minute 50 seconds
+Not yet. I want to see the field mapping first.
+
+AV
+Varga, Anika
+2 minutes 11 seconds2:11
+Varga, Anika 2 minutes 11 seconds
+Can I add a third option? We could renew Meridian for six months only and run Lumen in parallel on one region. Then we decide with real numbers.
+
+DO
+Osei, Daniel
+2 minutes 30 seconds2:30
+Osei, Daniel 2 minutes 30 seconds
+That costs more in the short term. Roughly $205k for the half year plus a Lumen pilot, call it $60k. So about $265k before we choose anything.
+
+LP
+Pereira, Lucia
+2 minutes 52 seconds2:52
+Pereira, Lucia 2 minutes 52 seconds
+I can live with the six-month renewal if the Lumen pilot stays on one region and does not touch the finance reports.
+
+KB
+Brandt, Kiran
+3 minutes 10 seconds3:10
+Brandt, Kiran 3 minutes 10 seconds
+A pilot is fine but it delays the daily refresh by half a year. I'd still rather go straight to Lumen.
+
+HR
+Hartwell, Rena
+3 minutes 32 seconds3:32
+Hartwell, Rena 3 minutes 32 seconds
+Kiran, if the pilot showed the refresh fixed the lag, would that be enough for you?
+
+KB
+Brandt, Kiran
+3 minutes 46 seconds3:46
+Brandt, Kiran 3 minutes 46 seconds
+If it shows the lag is gone on real claims, yes. Then I'd drop my objection.
+
+DO
+Osei, Daniel
+4 minutes 5 seconds4:05
+Osei, Daniel 4 minutes 5 seconds
+One correction on my number. The Lumen pilot is $75k, not $60k. I had the old quote.
+
+AV
+Varga, Anika
+4 minutes 22 seconds4:22
+Varga, Anika 4 minutes 22 seconds
+That makes the six-month path about $280k. Still under a full year of Meridian.
+
+HR
+Hartwell, Rena
+4 minutes 40 seconds4:40
+Hartwell, Rena 4 minutes 40 seconds
+Right. Let me move to the second item and come back.
+
+LP
+Pereira, Lucia
+4 minutes 55 seconds4:55
+Pereira, Lucia 4 minutes 55 seconds
+Before that, who is the pilot region? Whoever picks it decides how fair the comparison is.
+
+SN
+Nakamura, Sam
+5 minutes 12 seconds5:12
+Nakamura, Sam 5 minutes 12 seconds
+I would pick the Midwest. It has the messiest provider data, so it is the hardest test.
+
+LP
+Pereira, Lucia
+5 minutes 30 seconds5:30
+Pereira, Lucia 5 minutes 30 seconds
+Midwest is also where the finance team does the most reporting. That is exactly what I said I did not want to touch.
+
+SN
+Nakamura, Sam
+5 minutes 48 seconds5:48
+Nakamura, Sam 5 minutes 48 seconds
+Then the Southeast. Smaller, and finance barely uses it.
+
+HR
+Hartwell, Rena
+6 minutes 2 seconds6:02
+Hartwell, Rena 6 minutes 2 seconds
+Southeast works for me. Anika, can you confirm with Lumen that they can start there?
+
+AV
+Varga, Anika
+6 minutes 15 seconds6:15
+Varga, Anika 6 minutes 15 seconds
+I will ask them this week and tell the group by Friday.
+
+HR
+Hartwell, Rena
+6 minutes 35 seconds6:35
+Hartwell, Rena 6 minutes 35 seconds
+Okay. On data quality checks. Daniel, your team runs them today.
+
+DO
+Osei, Daniel
+6 minutes 50 seconds6:50
+Osei, Daniel 6 minutes 50 seconds
+We do, but only because nobody else would. If Lumen comes in, the checks have to move closer to the data owners. I do not want to carry them after cutover.
+
+KB
+Brandt, Kiran
+7 minutes 12 seconds7:12
+Brandt, Kiran 7 minutes 12 seconds
+My team could take them, but only if we get the two analyst headcount we asked for in the budget. Without that, no.
+
+HR
+Hartwell, Rena
+7 minutes 30 seconds7:30
+Hartwell, Rena 7 minutes 30 seconds
+The headcount is not decided. That goes to the budget review on the 28th.
+
+LP
+Pereira, Lucia
+7 minutes 48 seconds7:48
+Pereira, Lucia 7 minutes 48 seconds
+I don't think the checks belong with Kiran at all. They should sit with Sam's group, since Sam owns the provider master.
+
+SN
+Nakamura, Sam
+8 minutes 5 seconds8:05
+Nakamura, Sam 8 minutes 5 seconds
+I can't take that on right now. My team is already behind on the master clean-up.
+
+AV
+Varga, Anika
+8 minutes 22 seconds8:22
+Varga, Anika 8 minutes 22 seconds
+Could we split it? Kiran's team takes the claims checks and Sam's takes the provider checks.
+
+KB
+Brandt, Kiran
+8 minutes 38 seconds8:38
+Brandt, Kiran 8 minutes 38 seconds
+A split I could do, still subject to the headcount.
+
+SN
+Nakamura, Sam
+8 minutes 50 seconds8:50
+Nakamura, Sam 8 minutes 50 seconds
+A split I could do too, but later, not before March.
+
+HR
+Hartwell, Rena
+9 minutes 8 seconds9:08
+Hartwell, Rena 9 minutes 8 seconds
+So for the checks nothing is settled. Daniel keeps them until at least March. Let me write that down.
+
+DO
+Osei, Daniel
+9 minutes 25 seconds9:25
+Osei, Daniel 9 minutes 25 seconds
+Fine, as long as it says until March and not forever.
+
+HR
+Hartwell, Rena
+9 minutes 42 seconds9:42
+Hartwell, Rena 9 minutes 42 seconds
+Back to the vendor. Here is where I land. We renew Meridian for six months, we run the Lumen pilot in the Southeast, and we decide in the spring. Any objection?
+
+LP
+Pereira, Lucia
+10 minutes 0 seconds10:00
+Pereira, Lucia 10 minutes 0 seconds
+No objection from me.
+
+KB
+Brandt, Kiran
+10 minutes 6 seconds10:06
+Brandt, Kiran 10 minutes 6 seconds
+I'll go along with that.
+
+SN
+Nakamura, Sam
+10 minutes 12 seconds10:12
+Nakamura, Sam 10 minutes 12 seconds
+Okay.
+
+DO
+Osei, Daniel
+10 minutes 20 seconds10:20
+Osei, Daniel 10 minutes 20 seconds
+I will draft the six-month renewal terms. One caution: Meridian may ask for a price increase on a short term. I have seen that before.
+
+HR
+Hartwell, Rena
+10 minutes 42 seconds10:42
+Hartwell, Rena 10 minutes 42 seconds
+If they ask for more than ten percent, come back to me before agreeing.
+
+AV
+Varga, Anika
+10 minutes 58 seconds10:58
+Varga, Anika 10 minutes 58 seconds
+I will also write down the pilot success measures, refresh lag and match rate, so we are not arguing about it in the spring.
+
+HR
+Hartwell, Rena
+11 minutes 16 seconds11:16
+Hartwell, Rena 11 minutes 16 seconds
+Good. Please send those to the group by the 25th.
+
+LP
+Pereira, Lucia
+11 minutes 30 seconds11:30
+Pereira, Lucia 11 minutes 30 seconds
+One more thing. Please do not share the Meridian pricing outside this group. Procurement has not seen it yet.
+
+HR
+Hartwell, Rena
+11 minutes 44 seconds11:44
+Hartwell, Rena 11 minutes 44 seconds
+Understood. That stays in this room. Thanks everyone.

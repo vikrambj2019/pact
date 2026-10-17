@@ -39,6 +39,7 @@ INPUT (computed from the transcript; the only source of truth)
   "supports" or "opposes".
 - POSITIONS DRAFT: each person's view in one or two lines, written from a full read of the exchange.
 - BLOCKERS, CONSTRAINTS, CRITERIA, PRESENTED, CLAIMS, FLAGS.
+- CONFLICTS: pairs of statements checked by code and judged unable to hold together, each with both quotes, speakers and times.
 - NEXT STEPS: commitments and requests, in the speakers' own words, in order.
 - AWAITING A REPLY: questions put to a named person who has not spoken since, and open calls for a volunteer with the replies that followed.
 - PRIVATE: items the sender asked to keep private. Only present if the reader may see them.
@@ -64,6 +65,9 @@ WRITE, in this order, using exactly these headings. Skip a heading whose section
    then <Y>". Options with no stance anywhere: one line "Proposed, no reaction recorded: ..." (at most six, then "and N more"). Say "no explicit position recorded", never "no position" or "no view".
    People under OTHER WORDS: one line quoting what they said, e.g. "Erik Lindqvist said 'I'm fine with the second then'."
 6. What is blocking progress -- up to five bullets, merged, each with who raised it. "Deferred to <follow-up>" gets its own bullet.
+6b. Doesn't add up -- only if CONFLICTS is present: one bullet per item, "<Name> said '<quote A>' (<time>); <Name> said '<quote B>' (<time>).
+   <why, as given>" then the question to resolve. Copy the quotes exactly. Never say who is right, never call anyone wrong, and use
+   "tension" items only as "may not fit". Place this section right after the blocking section.
 7. Next steps -- up to six bullets: "<Name> will <do X> by <date>" only when the words are a commitment; "<Name> asked <Name> to <X>"
    when they are a request; a short acceptance ("Will do") belongs to the ask before it. Keep dates and times exactly as written.
 8. Awaiting a reply -- only items that are NOT already a line under Next steps: "<Name> asked <Name> ...; no reply recorded."
@@ -297,6 +301,7 @@ def status_line(d, cx=None, rec=None, dec=None) -> str:
     people = _count_people(rec)
     tail = [_n(n("question", {"open", "reopened", "conditional"}), "open question"),
             _n(n("blocker", {"open"}), "open blocker"),
+            _n(sum(1 for c in d.get("conflicts") or [] if c.get("verdict") == "conflict"), "conflict") + " to resolve",
             (_n(people, "person", "people") + " took an explicit position on an option") if people else "no one took an explicit position on an option"]
     if dec:
         to = f" in a message sent only to {', '.join(dec['sent_to'])}" if dec["narrow"] else ""
@@ -647,6 +652,12 @@ def build_input(d, include_private: bool = True, budget: int = 6000, main_point:
                          f"the record shows '{m['actual']}'" + (f" (statement: {c['title']})" if c else ""))
     if flags:
         L += ["", "FLAGS"] + flags
+    conf = d.get("conflicts") or []
+    if conf:
+        L += ["", "CONFLICTS (judged unable to hold together; copy quotes exactly)"]
+        for c in conf:
+            L.append(f"- [{c['verdict']}] {c['a']['name']} at {c['a']['when']}: \"{c['a']['text']}\" | "
+                     f"{c['b']['name']} at {c['b']['when']}: \"{c['b']['text']}\" | why: {c['why']} | to resolve: {c['resolve']}")
 
     if private or (include_private and priv_acts):
         L += ["", "PRIVATE (each item was sent with a request to keep it private; write them only under 'Marked private')"]

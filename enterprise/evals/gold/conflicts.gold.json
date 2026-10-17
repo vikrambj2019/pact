@@ -1,0 +1,10 @@
+{
+  "note": "Logic-check gold. 'expect' items must appear as a conflict (both quotes contain the fragments). 'forbid' means no conflict may be returned. Tensions are allowed anywhere. Calendar facts are not assumed: ent-10 is a negative control because every dependency is recorded as a condition and Oct 23 + 5 business days (Oct 30) is before Nov 2.",
+  "ent-12-meeting-offsite-ignored-point": {
+    "expect": [{"kind": "decision_vs_constraint", "a_contains": "finance close", "b_contains": "Denver, October 29 to 31", "a_author": "Albrecht, Nina"}],
+    "forbid": false
+  },
+  "ent-10-meeting-golive-decision": {"expect": [], "forbid": true},
+  "ent-11-meeting-vendor-pilot-checks": {"expect": [], "forbid": true, "why": "Daniel corrects $60k to $75k himself; the six-month total of $280k is 205 + 75."},
+  "ent-09-email-offsite-reversal-forward": {"expect": [], "forbid": true, "why": "A reversal that is announced is a changed decision, not a contradiction."}
+}

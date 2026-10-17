@@ -26,6 +26,7 @@ from llm import HAIKU, SONNET, AnthropicLLM
 from normalize import normalize
 from reconcile import dump
 from reconcile_fast import reconcile_fast
+from consistency import find_conflicts
 from summarize import make_summary
 
 
@@ -96,6 +97,17 @@ def run(path: Path, haiku_model: str = HAIKU, sonnet_model: str = SONNET,
                              for l in c.labels],
         } for c in classified],
     }
+
+    # 5b. Logic check: statements that cannot both be true (one Sonnet call; failure never blocks the summary)
+    try:
+        result["conflicts"] = find_conflicts(result, sonnet)
+        log(f"[logic] {len(result['conflicts'])} item(s): "
+            f"{sum(c['verdict'] == 'conflict' for c in result['conflicts'])} conflict, "
+            f"{sum(c['verdict'] == 'tension' for c in result['conflicts'])} tension")
+    except Exception as exc:
+        result["conflicts"] = []
+        result.setdefault("warnings", []).append(f"logic check failed: {exc}")
+        log(f"[logic] failed: {exc}")
 
     # 6. Summarize (five Sonnet calls: main point, positions, summary, tighten, audit)
     log(f"\n[summarize] Sonnet passes ({sonnet_model})...")

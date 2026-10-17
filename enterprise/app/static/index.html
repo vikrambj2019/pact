@@ -3,530 +3,323 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pact</title>
+<title>Pact — Decision Intelligence</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#15181e; --ink2:#4b5260; --ink3:#8a909c; --line:#e7e3da; --line2:#efece4;
+  --accent:#0f6b5c; --accent-bg:#e4f1ee; --amber:#a35a00; --amber-bg:#fdf1dc; --rose:#b4232a; --rose-bg:#fbe7e7;
+  --blue:#2550a6; --blue-bg:#e6edfa; --grey-bg:#eceae3;
+  --serif: "Iowan Old Style","Charter","Palatino Linotype",Georgia,serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.5;min-height:100vh}
+.hidden{display:none!important}
+button{font-family:inherit}
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    background: #f4f4f5;
-    color: #18181b;
-    min-height: 100vh;
-  }
+/* ── top bar ── */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(246,244,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1180px;margin:0 auto;padding:0 28px;height:56px;display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.2px;font-size:17px}
+.logo-mark{width:26px;height:26px;border-radius:8px;background:var(--ink);display:grid;place-items:center}
+.logo-mark svg{display:block}
+.tag{font-size:12.5px;color:var(--ink3)}
+.spacer{flex:1}
+.session-pill{font-size:11.5px;color:var(--ink3);font-family:ui-monospace,Menlo,monospace}
 
-  /* ── header ── */
-  header {
-    background: #18181b;
-    padding: 0 32px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: -0.2px; }
-  header .tagline { font-size: 12px; color: #71717a; }
-  header .spacer { flex: 1; }
-  .header-session { font-size: 11px; color: #52525b; font-family: monospace; }
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px 80px}
 
-  /* ── main ── */
-  .main { max-width: 1360px; margin: 0 auto; padding: 28px 24px 64px; }
+/* ── hero ── */
+.hero{padding:64px 0 28px;max-width:860px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5.2vw,54px);line-height:1.06;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{margin-top:22px;font-size:18px;color:var(--ink2);max-width:720px}
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 8px}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px}
+.pain b{display:block;font-size:14.5px;margin-bottom:6px}
+.pain span{font-size:13.5px;color:var(--ink2)}
+.pain .n{font-family:var(--serif);font-size:13px;color:var(--ink3);margin-bottom:8px;display:block}
+.principles{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 4px;font-size:13.5px;color:var(--ink2)}
+.principles i{font-style:normal;color:var(--accent);font-weight:700;margin-right:6px}
+.compact-hero{padding:22px 0 4px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.compact-hero h2{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
+.compact-hero span{font-size:13.5px;color:var(--ink2)}
 
-  /* ── input card ── */
-  .input-card {
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04);
-  }
-  .input-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
-  .input-label { font-size: 13px; font-weight: 600; color: #3f3f46; margin-right: 4px; }
+/* ── input ── */
+.input-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:26px 0 22px;box-shadow:0 1px 0 rgba(20,20,10,.02),0 12px 30px -18px rgba(20,20,10,.18)}
+.input-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.seg{display:inline-flex;background:var(--grey-bg);border-radius:10px;padding:3px}
+.seg button{border:0;background:transparent;padding:6px 13px;border-radius:8px;font-size:13px;color:var(--ink2);cursor:pointer}
+.seg button.active{background:var(--card);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.sample-links{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--ink3)}
+.linkbtn{border:0;background:none;color:var(--accent);font-size:12.5px;cursor:pointer;padding:3px 4px;font-weight:600}
+.linkbtn:hover{text-decoration:underline}
+.dropzone{position:relative}
+.input-card.collapsed .dropzone,.input-card.collapsed .sample-links,.input-card.collapsed .formats,.input-card.collapsed .char-count{display:none}
+.input-card.collapsed{padding:14px 18px;margin:16px 0 20px}
+.input-card.collapsed .input-foot{margin-top:0}
+.input-card.collapsed .input-top{margin-bottom:0}
+#editInput{display:none}
+.input-card.collapsed #editInput{display:inline-block;margin-left:auto}
+textarea#inputText{width:100%;min-height:150px;max-height:340px;resize:vertical;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.55;color:var(--ink);background:#fbfaf7;outline:none}
+textarea#inputText:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.dropzone.drag textarea{border-color:var(--accent);background:var(--accent-bg)}
+.input-foot{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.char-count{font-size:12.5px;color:var(--ink3)}
+.formats{font-size:12.5px;color:var(--ink3)}
+.btn{border-radius:10px;border:1px solid var(--line);background:var(--card);padding:9px 16px;font-size:13.5px;cursor:pointer;color:var(--ink2)}
+.btn:hover{border-color:#cfc9bb}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:600;padding:10px 22px}
+.btn.primary:hover{background:#262b35}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.small{padding:6px 12px;font-size:12.5px}
 
-  .type-toggle { display: flex; gap: 6px; }
-  .type-toggle button {
-    padding: 5px 12px;
-    border-radius: 6px;
-    border: 1px solid #d4d4d8;
-    background: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    color: #52525b;
-    font-weight: 500;
-    transition: all .12s;
-  }
-  .type-toggle button.active { background: #18181b; border-color: #18181b; color: #fff; }
+/* ── status ── */
+.status{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:22px}
+.status.error{border-color:#f0c4c4;background:var(--rose-bg);color:var(--rose)}
+.bar{flex:1;height:4px;background:var(--grey-bg);border-radius:4px;overflow:hidden;position:relative}
+.bar::after{content:"";position:absolute;inset:0;width:35%;background:var(--accent);border-radius:4px;animation:slide 1.4s ease-in-out infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
+.status.error .bar{display:none}
+.elapsed{font-size:12.5px;color:var(--ink3);font-variant-numeric:tabular-nums}
 
-  textarea {
-    width: 100%;
-    height: 180px;
-    border: 1px solid #d4d4d8;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 13px;
-    font-family: inherit;
-    resize: vertical;
-    outline: none;
-    transition: border-color .12s;
-    color: #18181b;
-    background: #fafafa;
-    line-height: 1.6;
-  }
-  textarea:focus { border-color: #18181b; background: #fff; }
-  textarea::placeholder { color: #a1a1aa; }
+/* ── layout ── */
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;align-items:start}
+.grid.with-ai{grid-template-columns:minmax(0,1fr) 400px}
+.col{display:flex;flex-direction:column;gap:18px;min-width:0}
+.sticky{position:sticky;top:76px}
 
-  .input-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
-  .char-count { font-size: 11px; color: #a1a1aa; }
-  .btn-row { display: flex; gap: 8px; }
+/* ── decision card ── */
+.decision{border-radius:20px;padding:28px 30px 24px;border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+.decision::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--amber)}
+.decision.decided::before{background:var(--accent)}
+.badge-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:5px 11px;border-radius:99px;background:var(--amber-bg);color:var(--amber)}
+.decided .badge{background:var(--accent-bg);color:var(--accent)}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.by{font-size:13px;color:var(--ink2)}
+.decision h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3vw,30px);line-height:1.22;letter-spacing:-.012em}
+.decision .subline{margin-top:10px;color:var(--ink2);font-size:14.5px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:22px}
+.stat{background:var(--bg);border-radius:12px;padding:12px 14px}
+.stat b{display:block;font-family:var(--serif);font-size:26px;line-height:1;font-weight:600}
+.stat span{display:block;margin-top:5px;font-size:12px;color:var(--ink2)}
+.stat.warn b{color:var(--amber)} .stat.bad b{color:var(--rose)} .stat.good b{color:var(--accent)}
+.private-banner{display:flex;gap:12px;background:#f3f0fa;border:1px solid #ddd5f0;border-radius:14px;padding:12px 16px;font-size:13.5px;color:#4a3d7a}
+.private-banner svg{flex:none;margin-top:2px}
 
-  .btn {
-    border-radius: 8px;
-    padding: 9px 20px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all .12s;
-  }
-  .btn-primary { background: #18181b; color: #fff; }
-  .btn-primary:hover { background: #3f3f46; }
-  .btn-primary:disabled { background: #a1a1aa; cursor: default; }
-  .btn-ghost { background: #fff; color: #52525b; border: 1px solid #d4d4d8; }
-  .btn-ghost:hover { border-color: #a1a1aa; color: #18181b; }
+/* ── cards ── */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.card h3{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.card h3 .count{background:var(--grey-bg);color:var(--ink2);border-radius:99px;padding:1px 8px;font-size:11px;letter-spacing:0}
+.prose p{font-size:16px;line-height:1.65;color:#232831;margin-bottom:10px}
+.prose p:last-child{margin-bottom:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.list{display:flex;flex-direction:column}
+.row{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line2);font-size:14.5px;line-height:1.5}
+.row:first-child{border-top:0;padding-top:0}
+.row:last-child{padding-bottom:0}
+.dot{flex:none;width:8px;height:8px;border-radius:50%;margin-top:8px;background:var(--amber)}
+.dot.red{background:var(--rose)} .dot.green{background:var(--accent)} .dot.grey{background:#b9b5a8}
+.row .who{color:var(--ink3);font-size:12.5px}
+.person{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line2)}
+.person:first-child{border-top:0;padding-top:2px}
+.person:last-child{padding-bottom:0}
+.avatar{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:700;color:#fff}
+.person .nm{font-weight:650;font-size:14.5px}
+.person .tx{font-size:14.5px;color:#2b303a;margin-top:2px;line-height:1.55}
+.person .tx .q{color:var(--ink2);font-style:italic}
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:#fcfbf8}
+.opt.dim{opacity:.55}
+.opt-t{font-weight:650;font-size:14.5px}
+.opt-s{font-size:12.5px;color:var(--ink3);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:3px 10px 3px 4px;border-radius:99px;background:var(--grey-bg);color:var(--ink2)}
+.chip i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:9.5px;font-weight:700;color:#fff}
+.chip.support{background:var(--accent-bg);color:var(--accent)}
+.chip.oppose{background:var(--rose-bg);color:var(--rose)}
+.chip.conditional{background:var(--amber-bg);color:var(--amber)}
+.chip.proposed{background:var(--blue-bg);color:var(--blue)}
+.step{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line2);font-size:14.5px}
+.step:first-child{border-top:0;padding-top:0}
+.step:last-child{padding-bottom:0}
+.box{flex:none;width:18px;height:18px;border:1.7px solid #c9c4b5;border-radius:5px;margin-top:2px}
+.wait{background:var(--amber-bg);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#6d4300;margin-top:6px}
+details.fold{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0}
+details.fold>summary{list-style:none;cursor:pointer;padding:16px 24px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;gap:8px}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:"+";margin-left:auto;font-size:16px;color:var(--ink3)}
+details.fold[open]>summary::after{content:"–"}
+details.fold .inner{padding:0 24px 20px}
+.foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:12.5px;color:var(--ink3)}
+.foot .principle{margin-left:auto;font-family:var(--serif);font-style:italic;color:var(--ink2)}
 
-  /* ── status bar ── */
-  .status-bar {
-    display: flex; align-items: center; gap: 10px;
-    padding: 12px 18px;
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    font-size: 13px; color: #52525b;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04);
-  }
-  .status-bar.error { border-color: #fca5a5; background: #fff5f5; color: #b91c1c; }
-  .spinner {
-    width: 15px; height: 15px;
-    border: 2px solid #e4e4e7;
-    border-top-color: #18181b;
-    border-radius: 50%;
-    animation: spin .65s linear infinite;
-    flex-shrink: 0;
-  }
-  .status-bar.error .spinner { display: none; }
-  @keyframes spin { to { transform: rotate(360deg); } }
+/* ── comparison ── */
+.ai{background:#fbfaf6;border:1px dashed #d8d3c4;border-radius:16px;padding:18px 20px}
+.ai h3{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+.ai .cap{font-size:12.5px;color:var(--ink3);margin-bottom:12px}
+.ai-ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.ai select{flex:1;min-width:150px;padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:13px;color:var(--ink)}
+.ai textarea{width:100%;min-height:130px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12.5px;font-family:inherit;margin-bottom:10px}
+.ai-body{font-size:13.5px;line-height:1.6;color:#2b303a;max-height:560px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.ai-body h2{font-size:13px;margin:12px 0 4px}
+.ai-body h2:first-child{margin-top:0}
+.ai-body ul{padding-left:18px;margin:4px 0 8px}
+.ai-body p{margin-bottom:8px}
+.ai-placeholder{color:var(--ink3)}
+.spin{width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;display:inline-block;vertical-align:-2px;margin-right:6px}
+@keyframes rot{to{transform:rotate(360deg)}}
 
-  /* ── participants ── */
-  .participants { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-  .participant-chip {
-    font-size: 12px;
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 20px;
-    padding: 3px 10px;
-    color: #52525b;
-    font-weight: 500;
-  }
-
-  /* ── split layout ── */
-  .results-grid {
-    display: grid;
-    grid-template-columns: 55fr 45fr;
-    gap: 24px;
-    align-items: start;
-  }
-  @media (max-width: 1024px) {
-    .results-grid { grid-template-columns: 1fr; }
-  }
-
-  /* ── column headers ── */
-  .col-header {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 14px;
-  }
-  .col-title {
-    font-size: 11px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.6px;
-    color: #a1a1aa;
-  }
-  .col-badge {
-    font-size: 10px; font-weight: 700;
-    background: #f4f4f5; color: #71717a;
-    border-radius: 10px; padding: 2px 7px;
-    border: 1px solid #e4e4e7;
-  }
-  .col-badge.pact { background: #18181b; color: #fff; border-color: #18181b; }
-
-  /* ── cards ── */
-  .card {
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 12px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04);
-    overflow: hidden;
-  }
-  .card-header {
-    padding: 12px 18px 0;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .card-title {
-    font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.5px;
-    color: #a1a1aa;
-  }
-  .card-badge {
-    font-size: 10px; font-weight: 600;
-    background: #f4f4f5; color: #71717a;
-    border-radius: 8px; padding: 2px 6px;
-  }
-
-  /* summary */
-  .summary-body {
-    padding: 16px 18px;
-    font-size: 13.5px;
-    line-height: 1.75;
-    color: #27272a;
-  }
-  .summary-headline {
-    font-size: 15px; font-weight: 700;
-    line-height: 1.4; color: #18181b;
-    margin-bottom: 16px;
-  }
-  .summary-md h2 {
-    font-size: 11px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.5px;
-    color: #71717a; margin: 20px 0 8px;
-  }
-  .summary-md h2:first-child { margin-top: 0; }
-  .summary-md p { margin-bottom: 10px; color: #3f3f46; }
-  .summary-md p:last-child { margin-bottom: 0; }
-  .summary-md ul { padding-left: 18px; margin-bottom: 10px; }
-  .summary-md li { margin-bottom: 5px; color: #3f3f46; }
-  .summary-md strong { font-weight: 600; color: #18181b; }
-  .summary-md hr { border: none; border-top: 1px solid #f4f4f5; margin: 16px 0; }
-  .summary-meta {
-    padding: 10px 18px;
-    font-size: 11px; color: #a1a1aa;
-    border-top: 1px solid #f4f4f5;
-    background: #fafafa;
-  }
-
-  /* stance table */
-  .table-wrap { overflow-x: auto; }
-  table.stance {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12.5px;
-  }
-  table.stance th {
-    text-align: left;
-    padding: 9px 14px;
-    background: #fafafa;
-    font-weight: 600; font-size: 11px;
-    color: #71717a;
-    border-bottom: 1px solid #e4e4e7;
-    white-space: nowrap;
-  }
-  table.stance td {
-    padding: 10px 14px;
-    border-bottom: 1px solid #f4f4f5;
-    vertical-align: top;
-  }
-  table.stance tr:last-child td { border-bottom: none; }
-  .opt-title { font-weight: 500; max-width: 280px; color: #18181b; line-height: 1.4; }
-  .opt-sub { font-size: 11px; color: #a1a1aa; margin-top: 2px; }
-  .pill {
-    display: inline-block; font-size: 10px; font-weight: 700;
-    padding: 2px 7px; border-radius: 4px; white-space: nowrap;
-  }
-  .pill-active    { background: #f0fdf4; color: #15803d; }
-  .pill-decided   { background: #eff6ff; color: #1d4ed8; }
-  .pill-rejected  { background: #fef2f2; color: #dc2626; }
-  .pill-withdrawn { background: #f4f4f5; color: #71717a; }
-  .pill-support     { background: #f0fdf4; color: #15803d; }
-  .pill-oppose      { background: #fef2f2; color: #dc2626; }
-  .pill-conditional { background: #fffbeb; color: #b45309; }
-  .pill-abstain     { background: #f4f4f5; color: #71717a; }
-  .pill-withdrawn-s { background: #f4f4f5; color: #a1a1aa; text-decoration: line-through; }
-
-  /* list items */
-  .list-row {
-    display: flex; gap: 12px; align-items: flex-start;
-    padding: 11px 18px;
-    border-bottom: 1px solid #f4f4f5;
-    font-size: 13px;
-  }
-  .list-row:last-child { border-bottom: none; }
-  .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: #d4d4d8; margin-top: 6px; flex-shrink: 0;
-  }
-  .dot.open  { background: #f59e0b; }
-  .dot.block { background: #ef4444; }
-  .dot.done  { background: #10b981; }
-  .row-title { font-weight: 500; line-height: 1.45; color: #18181b; }
-  .row-meta  { font-size: 11px; color: #a1a1aa; margin-top: 2px; }
-
-  /* flags */
-  .flag-row {
-    display: flex; gap: 10px; align-items: flex-start;
-    padding: 10px 18px;
-    border-bottom: 1px solid #fde8c3;
-    font-size: 12px; color: #92400e; line-height: 1.5;
-    background: #fffbeb;
-  }
-  .flag-row:last-child { border-bottom: none; }
-  .flag-icon { flex-shrink: 0; margin-top: 1px; opacity: 0.7; }
-
-  /* ── AI panel ── */
-  .ai-controls {
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04);
-  }
-  .ai-controls-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-  .ai-label { font-size: 11px; font-weight: 700; color: #71717a; text-transform: uppercase; letter-spacing: 0.5px; }
-  select.model-pick {
-    flex: 1; min-width: 180px;
-    border: 1px solid #d4d4d8; border-radius: 6px;
-    padding: 6px 10px; font-size: 12px;
-    background: #fafafa; color: #18181b;
-    outline: none; cursor: pointer;
-  }
-  select.model-pick:focus { border-color: #18181b; }
-  select.model-pick optgroup { font-weight: 700; color: #71717a; font-size: 11px; }
-  select.model-pick option { font-weight: 400; color: #18181b; }
-
-  .prompt-toggle {
-    font-size: 11px; color: #a1a1aa;
-    cursor: pointer; text-decoration: underline;
-    text-underline-offset: 2px; white-space: nowrap;
-    background: none; border: none; padding: 0;
-  }
-  .prompt-toggle:hover { color: #52525b; }
-  .prompt-area {
-    margin-top: 12px;
-    border-top: 1px solid #f4f4f5;
-    padding-top: 12px;
-  }
-  .prompt-area textarea {
-    height: 120px; font-size: 12px; background: #fafafa;
-  }
-  .prompt-hint { font-size: 11px; color: #a1a1aa; margin-top: 6px; }
-
-  .ai-card {
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04);
-  }
-  .ai-card-header {
-    padding: 12px 18px;
-    border-bottom: 1px solid #f4f4f5;
-    display: flex; align-items: center; gap: 10px;
-    background: #fafafa;
-  }
-  .ai-model-name { font-size: 11px; color: #71717a; font-weight: 600; }
-  .ai-body {
-    padding: 16px 18px;
-    font-size: 13.5px; line-height: 1.75; color: #27272a;
-    min-height: 120px;
-  }
-  .ai-placeholder { color: #a1a1aa; font-size: 13px; }
-  .ai-body .summary-md h2 { color: #71717a; }
-
-  /* ── session footer ── */
-  .session-footer {
-    margin-top: 28px;
-    padding-top: 16px;
-    border-top: 1px solid #e4e4e7;
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  }
-  .session-meta { font-size: 11px; color: #a1a1aa; }
-  .session-meta b { color: #71717a; }
-
-  .hidden { display: none !important; }
+/* ── tabs / compare ── */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:6px 0 18px}
+.tab{border:0;background:none;padding:11px 16px;font-size:14px;color:var(--ink2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab.active{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
+.tab .ready{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-left:6px;vertical-align:2px}
+.cmp{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:start}
+.cmp-note{font-size:12.5px;color:var(--ink3);margin:-6px 0 12px}
+.cmp .prose p{font-size:15px}
+.cmp .ai{position:static}
+.cmp .ai-body{font-size:14px;max-height:none}
+.cmp .ai-body h2{font-size:13.5px}
+@media (max-width:1020px){.cmp{grid-template-columns:1fr}}
+@media (max-width:1020px){.grid.with-ai{grid-template-columns:minmax(0,1fr)}.sticky{position:static}}
+@media (max-width:720px){
+  .wrap,.topbar-in{padding-left:16px;padding-right:16px}
+  .pains,.two{grid-template-columns:1fr}
+  .hero{padding-top:40px}
+  .sample-links{margin-left:0;width:100%}
+  .decision{padding:22px 20px}
+  .card{padding:18px 18px}
+}
+@media print{.topbar,.input-card,.ai,.foot .principle,#hero{display:none!important}body{background:#fff}.card,.decision{break-inside:avoid}}
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Pact</h1>
-  <span class="tagline">Decision Intelligence</span>
-  <div class="spacer"></div>
-  <span class="header-session" id="headerSession"></span>
-</header>
+<div class="topbar"><div class="topbar-in">
+  <div class="logo"><span class="logo-mark"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.2 3L12 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pact</div>
+  <span class="tag">Decision intelligence</span>
+  <span class="spacer"></span>
+  <span class="session-pill" id="headerSession"></span>
+</div></div>
 
-<div class="main">
+<div class="wrap">
 
-  <!-- Input -->
-  <div class="input-card">
+  <section class="hero" id="hero">
+    <div class="eyebrow">The cost of meetings isn't the meeting</div>
+    <h1>Meetings produce talk.<br/><em>Pact produces decisions.</em></h1>
+    <p class="lead">Teams spend their time discussing the same thing again, talking over each other, and leaving without owners or dates. Even when someone could act, they're missing details buried three calls and two threads ago. Pact tracks the decision itself: what is being decided, where each person actually stands, what is blocking it, and who owes what by when.</p>
+    <div class="pains">
+      <div class="pain"><span class="n">01</span><b>The same topic, again</b><span>Settled in one meeting, reopened in the next, because nobody can say what was decided.</span></div>
+      <div class="pain"><span class="n">02</span><b>Talking past each other</b><span>Five people, five readings of "we're aligned." Silence gets counted as agreement.</span></div>
+      <div class="pain"><span class="n">03</span><b>Next steps nobody owns</b><span>"Someone should follow up." No name, no date, no way to see what is still waiting on a reply.</span></div>
+    </div>
+    <div class="principles">
+      <span><i>✓</i>Tracks decisions, not recaps</span>
+      <span><i>✓</i>Never decides for the group</span>
+      <span><i>✓</i>Every line traces to a named person</span>
+      <span><i>✓</i>Silence is never agreement</span>
+    </div>
+  </section>
+
+  <div class="compact-hero hidden" id="compactHero">
+    <h2>Decision record</h2><span>What is being decided, who stands where, and who owes what.</span>
+  </div>
+
+  <div class="tabs hidden" id="tabs">
+    <button class="tab active" data-tab="record">Decision record</button>
+    <button class="tab hidden" data-tab="compare" id="compareTab">Compare with a generic summary <span class="ready hidden" id="aiReady"></span></button>
+  </div>
+
+  <div class="input-card" id="inputCard">
     <div class="input-top">
-      <span class="input-label">Source</span>
-      <div class="type-toggle">
+      <div class="seg" id="typeToggle" role="tablist">
         <button class="active" data-type="auto">Auto-detect</button>
         <button data-type="email">Email chain</button>
         <button data-type="transcript">Transcript</button>
       </div>
+      <button class="btn small" id="editInput">Edit input</button>
+      <div class="sample-links">Try a sample:
+        <button class="linkbtn" id="sampleMeeting">Team meeting</button>
+        <button class="linkbtn" id="sampleEmail">Email chain</button>
+      </div>
     </div>
-    <textarea id="inputText" placeholder="Paste an email chain or meeting transcript…"></textarea>
-    <div class="input-footer">
+    <div class="dropzone" id="dropzone">
+      <textarea id="inputText" placeholder="Paste an email chain or a meeting transcript — or drop a file here."></textarea>
+    </div>
+    <div class="input-foot">
       <span class="char-count" id="charCount">0 characters</span>
-      <div class="btn-row">
-        <button class="btn btn-ghost" id="resetBtn">Reset</button>
-        <button class="btn btn-primary" id="analyzeBtn">Analyze</button>
-      </div>
+      <span class="formats">Teams, Zoom, Outlook · .txt .vtt .srt .eml</span>
+      <span class="spacer"></span>
+      <label class="btn small" style="cursor:pointer">Upload file<input type="file" id="fileInput" accept=".txt,.vtt,.srt,.eml,.md,.text,text/*" hidden></label>
+      <button class="btn" id="resetBtn">Reset</button>
+      <button class="btn primary" id="analyzeBtn">Build decision record</button>
     </div>
   </div>
 
-  <!-- Status -->
-  <div class="status-bar hidden" id="statusBar">
-    <div class="spinner" id="spinner"></div>
-    <span id="statusText"></span>
+  <div class="status hidden" id="statusBar">
+    <span id="statusText">Working…</span>
+    <div class="bar"></div>
+    <span class="elapsed" id="elapsed"></span>
   </div>
 
-  <!-- Results -->
-  <div id="results" class="hidden">
+  <div class="grid" id="mainGrid">
+    <div class="col hidden" id="results">
 
-    <!-- Participants -->
-    <div class="participants" id="participantsStrip"></div>
-
-    <div class="results-grid">
-
-      <!-- LEFT: Pact -->
-      <div id="colPact">
-        <div class="col-header">
-          <span class="col-title">Pact Analysis</span>
-          <span class="col-badge pact">Structured</span>
-        </div>
-
-        <!-- Summary -->
-        <div class="card" id="summaryCard">
-          <div class="summary-body">
-            <div class="summary-headline" id="summaryHeadline"></div>
-            <div class="summary-md" id="summaryBody"></div>
-          </div>
-          <div class="summary-meta hidden" id="summaryMeta"></div>
-        </div>
-
-        <!-- Options & Stances -->
-        <div class="card hidden" id="optionsCard">
-          <div class="card-header">
-            <span class="card-title">Options &amp; Stances</span>
-            <span class="card-badge" id="optionsBadge"></span>
-          </div>
-          <div class="table-wrap">
-            <table class="stance">
-              <thead id="stanceHead"></thead>
-              <tbody id="stanceBody"></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Questions -->
-        <div class="card hidden" id="questionsCard">
-          <div class="card-header">
-            <span class="card-title">Open Questions</span>
-            <span class="card-badge" id="questionsBadge"></span>
-          </div>
-          <div id="questionsList"></div>
-        </div>
-
-        <!-- Blockers -->
-        <div class="card hidden" id="blockersCard">
-          <div class="card-header">
-            <span class="card-title">Blockers &amp; Actions</span>
-            <span class="card-badge" id="blockersBadge"></span>
-          </div>
-          <div id="blockersList"></div>
-        </div>
-
-        <!-- Flags -->
-        <div class="card hidden" id="flagsCard" style="background:#fffbeb;border-color:#fde68a;">
-          <div class="card-header" style="background:#fffbeb;">
-            <span class="card-title" style="color:#b45309;">Flags</span>
-            <span class="card-badge" id="flagsBadge" style="background:#fef3c7;color:#b45309;border-color:#fde68a;"></span>
-          </div>
-          <div id="flagsList"></div>
-        </div>
+      <div class="decision" id="decision">
+        <div class="badge-row"><span class="badge" id="badge"></span><span class="by" id="by"></span></div>
+        <h2 id="decisionTitle"></h2>
+        <p class="subline" id="decisionSub"></p>
+        <div class="stats" id="stats"></div>
       </div>
 
-      <!-- RIGHT: AI Comparison -->
-      <div id="colAi" class="hidden">
-        <div class="col-header">
-          <span class="col-title">AI Comparison</span>
-          <span class="col-badge">Generic LLM</span>
-        </div>
+      <div class="private-banner hidden" id="privateBanner"></div>
 
-        <!-- Controls -->
-        <div class="ai-controls">
-          <div class="ai-controls-row">
-            <span class="ai-label">Model</span>
-            <select class="model-pick" id="modelPick">
-              <optgroup label="OpenAI">
-                <option value="openai/gpt-4o">GPT-4o</option>
-                <option value="openai/gpt-4o-mini">GPT-4o mini</option>
-                <option value="openai/gpt-4.1">GPT-4.1</option>
-                <option value="openai/gpt-4.1-mini">GPT-4.1 mini</option>
-              </optgroup>
-              <optgroup label="Google">
-                <option value="google/gemini-2.5-flash">Gemini 2.5 Flash</option>
-                <option value="google/gemini-2.5-pro">Gemini 2.5 Pro</option>
-              </optgroup>
-              <optgroup label="Meta">
-                <option value="meta-llama/llama-4-maverick">Llama 4 Maverick</option>
-                <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option>
-              </optgroup>
-              <optgroup label="Anthropic">
-                <option value="anthropic/claude-sonnet-4.6">Claude Sonnet 4.6</option>
-                <option value="anthropic/claude-haiku-4.5">Claude Haiku 4.5</option>
-              </optgroup>
-              <optgroup label="Mistral">
-                <option value="mistralai/mistral-medium-3">Mistral Medium 3</option>
-                <option value="mistralai/mistral-large-2512">Mistral Large</option>
-              </optgroup>
-            </select>
-            <button class="btn btn-ghost" id="rerunBtn" style="font-size:12px;padding:6px 12px;" disabled>Re-run</button>
-            <button class="prompt-toggle" id="promptToggle">Edit prompt</button>
-          </div>
-          <div class="prompt-area hidden" id="promptArea">
-            <textarea id="promptText"></textarea>
-            <div class="prompt-hint">This prompt is sent with your text to the selected model.</div>
-          </div>
-        </div>
+      <div class="card" id="mainCard"><h3>The main point</h3><div class="prose" id="mainBody"></div></div>
 
-        <!-- AI result card -->
-        <div class="ai-card">
-          <div class="ai-card-header">
-            <div class="spinner hidden" id="aiSpinner"></div>
-            <span class="ai-model-name" id="aiModelLabel">—</span>
-          </div>
-          <div class="ai-body" id="aiBody">
-            <span class="ai-placeholder">Result will appear here after analysis.</span>
-          </div>
-        </div>
+      <div class="card hidden" id="peopleCard"><h3>Where people stand <span class="count" id="peopleCount"></span></h3><div id="peopleList"></div></div>
+
+      <div class="card hidden" id="optionsCard"><h3>Options on the table <span class="count" id="optionsCount"></span></h3><div class="opts" id="optionsList"></div></div>
+
+      <div class="two" id="twoCol">
+        <div class="card hidden" id="questionsCard"><h3>Still open <span class="count" id="questionsCount"></span></h3><div class="list" id="questionsList"></div></div>
+        <div class="card hidden" id="blockersCard"><h3>Blocking progress <span class="count" id="blockersCount"></span></h3><div class="list" id="blockersList"></div></div>
       </div>
 
-    </div><!-- /results-grid -->
+      <div class="card hidden" id="stepsCard"><h3>Who owes what <span class="count" id="stepsCount"></span></h3><div id="stepsList"></div><div id="waitList"></div></div>
 
-    <!-- Footer -->
-    <div class="session-footer">
-      <div class="session-meta" id="sessionMeta"></div>
-      <button class="btn btn-ghost" id="resetBtnBottom">Reset &amp; start over</button>
+      <details class="fold hidden" id="rulesFold"><summary>Ground rules people set</summary><div class="inner"><div class="list" id="rulesList"></div></div></details>
+      <details class="fold hidden" id="checkFold"><summary>Said, and worth checking</summary><div class="inner"><div class="list" id="checkList"></div></div></details>
+      <details class="fold hidden" id="flagFold"><summary>Flags</summary><div class="inner"><div class="list" id="flagList"></div></div></details>
+
+      <div class="foot"><span id="sessionMeta"></span><span class="principle">Pact tracks the decision. The group makes it.</span></div>
     </div>
 
-  </div><!-- /results -->
+    <div class="hidden" id="colAi"><div class="cmp"><div class="card"><h3>Pact · the full summary</h3><div class="cmp-note">Same text, built as a decision record: stances attributed to names, silence never counted as agreement.</div><div class="prose" id="pactText"></div></div><div class="ai">
+      <h3>What a generic summary does</h3>
+      <p class="cap">The same text, sent to a general-purpose model with a standard summary prompt.</p>
+      <div class="ai-ctl">
+        <select id="modelPick">
+          <optgroup label="OpenAI"><option value="openai/gpt-4o">GPT-4o</option><option value="openai/gpt-4o-mini">GPT-4o mini</option><option value="openai/gpt-4.1">GPT-4.1</option><option value="openai/gpt-4.1-mini">GPT-4.1 mini</option></optgroup>
+          <optgroup label="Google"><option value="google/gemini-2.5-flash">Gemini 2.5 Flash</option><option value="google/gemini-2.5-pro" selected>Gemini 2.5 Pro</option></optgroup>
+          <optgroup label="Meta"><option value="meta-llama/llama-4-maverick">Llama 4 Maverick</option><option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option></optgroup>
+          <optgroup label="Anthropic"><option value="anthropic/claude-sonnet-4.6">Claude Sonnet 4.6</option><option value="anthropic/claude-haiku-4.5">Claude Haiku 4.5</option></optgroup>
+          <optgroup label="Mistral"><option value="mistralai/mistral-medium-3">Mistral Medium 3</option><option value="mistralai/mistral-large-2512">Mistral Large</option></optgroup>
+        </select>
+        <button class="btn small" id="rerunBtn" disabled>Re-run</button>
+        <button class="linkbtn" id="promptToggle">Edit prompt</button>
+      </div>
+      <div class="hidden" id="promptArea"><textarea id="promptText"></textarea></div>
+      <div class="cap" id="aiMeta"><span id="aiModelLabel"></span> <span class="hidden" id="aiSpinner"><span class="spin"></span>thinking…</span></div>
+      <div class="ai-body" id="aiBody"><span class="ai-placeholder">The comparison appears here after you build a decision record.</span></div>
+    </div></div></div>
+  </div>
 </div>
 
+<script id="samples" type="application/json">{"meeting": "Transcript. Use arrow keys to navigate between transcript entries.\n\n\nSearch\n\nAI-generated content may be incorrect\n\nSpeaker 1 started transcription\nHR\nHartwell, Rena\n12 seconds0:12\nHartwell, Rena 12 seconds\nOkay, let's start. Two things today. First, the claims-data vendor for next year: renew Meridian or move to Lumen. Second, who owns the data quality checks after cutover. I want a direction on the first before we leave.\n\nDO\nOsei, Daniel\n35 seconds0:35\nOsei, Daniel 35 seconds\nQuick context. Meridian renewal is $410k for the year, same as now. Lumen came in at $355k but that is the first year only, and the integration work is on us.\n\nLP\nPereira, Lucia\n58 seconds0:58\nPereira, Lucia 58 seconds\nI'd renew Meridian. We know it, the finance team's reports are built on its field names, and I do not want to rebuild those in Q1.\n\nKB\nBrandt, Kiran\n1 minute 20 seconds1:20\nBrandt, Kiran 1 minute 20 seconds\nI lean Lumen. Their refresh is daily and Meridian's is weekly. That is the whole reason we are having this conversation.\n\nSN\nNakamura, Sam\n1 minute 35 seconds1:35\nNakamura, Sam 1 minute 35 seconds\nYeah.\n\nHR\nHartwell, Rena\n1 minute 44 seconds1:44\nHartwell, Rena 1 minute 44 seconds\nSam, anything from you?\n\nSN\nNakamura, Sam\n1 minute 50 seconds1:50\nNakamura, Sam 1 minute 50 seconds\nNot yet. I want to see the field mapping first.\n\nAV\nVarga, Anika\n2 minutes 11 seconds2:11\nVarga, Anika 2 minutes 11 seconds\nCan I add a third option? We could renew Meridian for six months only and run Lumen in parallel on one region. Then we decide with real numbers.\n\nDO\nOsei, Daniel\n2 minutes 30 seconds2:30\nOsei, Daniel 2 minutes 30 seconds\nThat costs more in the short term. Roughly $205k for the half year plus a Lumen pilot, call it $60k. So about $265k before we choose anything.\n\nLP\nPereira, Lucia\n2 minutes 52 seconds2:52\nPereira, Lucia 2 minutes 52 seconds\nI can live with the six-month renewal if the Lumen pilot stays on one region and does not touch the finance reports.\n\nKB\nBrandt, Kiran\n3 minutes 10 seconds3:10\nBrandt, Kiran 3 minutes 10 seconds\nA pilot is fine but it delays the daily refresh by half a year. I'd still rather go straight to Lumen.\n\nHR\nHartwell, Rena\n3 minutes 32 seconds3:32\nHartwell, Rena 3 minutes 32 seconds\nKiran, if the pilot showed the refresh fixed the lag, would that be enough for you?\n\nKB\nBrandt, Kiran\n3 minutes 46 seconds3:46\nBrandt, Kiran 3 minutes 46 seconds\nIf it shows the lag is gone on real claims, yes. Then I'd drop my objection.\n\nDO\nOsei, Daniel\n4 minutes 5 seconds4:05\nOsei, Daniel 4 minutes 5 seconds\nOne correction on my number. The Lumen pilot is $75k, not $60k. I had the old quote.\n\nAV\nVarga, Anika\n4 minutes 22 seconds4:22\nVarga, Anika 4 minutes 22 seconds\nThat makes the six-month path about $280k. Still under a full year of Meridian.\n\nHR\nHartwell, Rena\n4 minutes 40 seconds4:40\nHartwell, Rena 4 minutes 40 seconds\nRight. Let me move to the second item and come back.\n\nLP\nPereira, Lucia\n4 minutes 55 seconds4:55\nPereira, Lucia 4 minutes 55 seconds\nBefore that, who is the pilot region? Whoever picks it decides how fair the comparison is.\n\nSN\nNakamura, Sam\n5 minutes 12 seconds5:12\nNakamura, Sam 5 minutes 12 seconds\nI would pick the Midwest. It has the messiest provider data, so it is the hardest test.\n\nLP\nPereira, Lucia\n5 minutes 30 seconds5:30\nPereira, Lucia 5 minutes 30 seconds\nMidwest is also where the finance team does the most reporting. That is exactly what I said I did not want to touch.\n\nSN\nNakamura, Sam\n5 minutes 48 seconds5:48\nNakamura, Sam 5 minutes 48 seconds\nThen the Southeast. Smaller, and finance barely uses it.\n\nHR\nHartwell, Rena\n6 minutes 2 seconds6:02\nHartwell, Rena 6 minutes 2 seconds\nSoutheast works for me. Anika, can you confirm with Lumen that they can start there?\n\nAV\nVarga, Anika\n6 minutes 15 seconds6:15\nVarga, Anika 6 minutes 15 seconds\nI will ask them this week and tell the group by Friday.\n\nHR\nHartwell, Rena\n6 minutes 35 seconds6:35\nHartwell, Rena 6 minutes 35 seconds\nOkay. On data quality checks. Daniel, your team runs them today.\n\nDO\nOsei, Daniel\n6 minutes 50 seconds6:50\nOsei, Daniel 6 minutes 50 seconds\nWe do, but only because nobody else would. If Lumen comes in, the checks have to move closer to the data owners. I do not want to carry them after cutover.\n\nKB\nBrandt, Kiran\n7 minutes 12 seconds7:12\nBrandt, Kiran 7 minutes 12 seconds\nMy team could take them, but only if we get the two analyst headcount we asked for in the budget. Without that, no.\n\nHR\nHartwell, Rena\n7 minutes 30 seconds7:30\nHartwell, Rena 7 minutes 30 seconds\nThe headcount is not decided. That goes to the budget review on the 28th.\n\nLP\nPereira, Lucia\n7 minutes 48 seconds7:48\nPereira, Lucia 7 minutes 48 seconds\nI don't think the checks belong with Kiran at all. They should sit with Sam's group, since Sam owns the provider master.\n\nSN\nNakamura, Sam\n8 minutes 5 seconds8:05\nNakamura, Sam 8 minutes 5 seconds\nI can't take that on right now. My team is already behind on the master clean-up.\n\nAV\nVarga, Anika\n8 minutes 22 seconds8:22\nVarga, Anika 8 minutes 22 seconds\nCould we split it? Kiran's team takes the claims checks and Sam's takes the provider checks.\n\nKB\nBrandt, Kiran\n8 minutes 38 seconds8:38\nBrandt, Kiran 8 minutes 38 seconds\nA split I could do, still subject to the headcount.\n\nSN\nNakamura, Sam\n8 minutes 50 seconds8:50\nNakamura, Sam 8 minutes 50 seconds\nA split I could do too, but later, not before March.\n\nHR\nHartwell, Rena\n9 minutes 8 seconds9:08\nHartwell, Rena 9 minutes 8 seconds\nSo for the checks nothing is settled. Daniel keeps them until at least March. Let me write that down.\n\nDO\nOsei, Daniel\n9 minutes 25 seconds9:25\nOsei, Daniel 9 minutes 25 seconds\nFine, as long as it says until March and not forever.\n\nHR\nHartwell, Rena\n9 minutes 42 seconds9:42\nHartwell, Rena 9 minutes 42 seconds\nBack to the vendor. Here is where I land. We renew Meridian for six months, we run the Lumen pilot in the Southeast, and we decide in the spring. Any objection?\n\nLP\nPereira, Lucia\n10 minutes 0 seconds10:00\nPereira, Lucia 10 minutes 0 seconds\nNo objection from me.\n\nKB\nBrandt, Kiran\n10 minutes 6 seconds10:06\nBrandt, Kiran 10 minutes 6 seconds\nI'll go along with that.\n\nSN\nNakamura, Sam\n10 minutes 12 seconds10:12\nNakamura, Sam 10 minutes 12 seconds\nOkay.\n\nDO\nOsei, Daniel\n10 minutes 20 seconds10:20\nOsei, Daniel 10 minutes 20 seconds\nI will draft the six-month renewal terms. One caution: Meridian may ask for a price increase on a short term. I have seen that before.\n\nHR\nHartwell, Rena\n10 minutes 42 seconds10:42\nHartwell, Rena 10 minutes 42 seconds\nIf they ask for more than ten percent, come back to me before agreeing.\n\nAV\nVarga, Anika\n10 minutes 58 seconds10:58\nVarga, Anika 10 minutes 58 seconds\nI will also write down the pilot success measures, refresh lag and match rate, so we are not arguing about it in the spring.\n\nHR\nHartwell, Rena\n11 minutes 16 seconds11:16\nHartwell, Rena 11 minutes 16 seconds\nGood. Please send those to the group by the 25th.\n\nLP\nPereira, Lucia\n11 minutes 30 seconds11:30\nPereira, Lucia 11 minutes 30 seconds\nOne more thing. Please do not share the Meridian pricing outside this group. Procurement has not seen it yet.\n\nHR\nHartwell, Rena\n11 minutes 44 seconds11:44\nHartwell, Rena 11 minutes 44 seconds\nUnderstood. That stays in this room. Thanks everyone.\n", "email": "From: Duarte, Ines <ines.duarte@dummycompany.com>\nSent: Thursday, October 8, 2026 4:00 PM\nTo: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nI am fine with A once security clears. The budget is only available in Q4, so the contract has to be signed by Nov 15 or we lose it. Priya, please own the signing date.\n\nInes\n\nFrom: Mendes, Carla <carla.mendes@dummycompany.com>\nSent: Wednesday, October 7, 2026 9:10 AM\nTo: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nQuote received: $54k a year on a three-year term. That is within my cap, so I support A, assuming security clears it.\n\nCarla\n\nFrom: Nair, Priya <priya.nair@dummycompany.com>\nSent: Tuesday, October 6, 2026 2:05 PM\nTo: Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nThanks Jun. All, I am holding the final call until Oct 21 because security still has to review Clauseline's data location. Carla, please still get the quote.\n\nPriya\n\nFrom: Okafor, Jun <jun.okafor@dummycompany.com>\nSent: Tuesday, October 6, 2026 11:20 AM\nTo: Nair, Priya <priya.nair@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nPriya, before anyone commits to A: their docs say contracts are processed in an EU region. We have a rule that vendor contract text stays in the US. Please keep this to yourself until I have read their SOC 2 report. I expect it by Oct 21.\n\nJun\n\nFrom: Mendes, Carla <carla.mendes@dummycompany.com>\nSent: Tuesday, October 6, 2026 8:45 AM\nTo: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nA works for procurement if the annual cost stays under $60k. I will ask Clauseline for a written quote by Oct 14.\n\nCarla\n\nFrom: Raman, Dev <dev.raman@dummycompany.com>\nSent: Monday, October 5, 2026 1:30 PM\nTo: Nair, Priya <priya.nair@dummycompany.com>; Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nI would pick B. Two engineers for 8 weeks and we keep the data in house. But I am not saying A is wrong, I just want the build cost on the table.\n\nDev\n\nFrom: Whitfield, Tom <tom.whitfield@dummycompany.com>\nSent: Monday, October 5, 2026 10:12 AM\nTo: Nair, Priya <priya.nair@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: RE: Contract review pilot: vendor or build?\n\nI support A. Legal reviews about 40 vendor contracts a month and redline turnaround is our biggest delay. Clauseline claims a 2-day turnaround. I do not have capacity to help with a build.\n\nTom\n\nFrom: Nair, Priya <priya.nair@dummycompany.com>\nSent: Monday, October 5, 2026 9:00 AM\nTo: Whitfield, Tom <tom.whitfield@dummycompany.com>; Mendes, Carla <carla.mendes@dummycompany.com>; Okafor, Jun <jun.okafor@dummycompany.com>; Raman, Dev <dev.raman@dummycompany.com>; Duarte, Ines <ines.duarte@dummycompany.com>\nSubject: Contract review pilot: vendor or build?\n\nTeam,\n\nWe have budget for one contract review pilot in Q4. Two options: A) buy Clauseline, a hosted tool, or B) build it on our internal platform. I would like a view from each of you by Thursday. Please reply all so we can see where everyone is.\n\nPriya\n"}</script>
 <script>
 // ── constants ─────────────────────────────────────────────────────────────────
 const DEFAULT_PROMPT =
@@ -542,395 +335,313 @@ Include:
 
 Be specific. Use names. Do not pad with generic phrases. Do not invent information not in the text.`;
 
-// ── state ─────────────────────────────────────────────────────────────────────
-let sourceType = 'auto';
-let pollTimer = null;
-let currentJobId = null;
-let hasOpenRouter = false;
-let lastAnalyzedText = '';
+const $ = id => document.getElementById(id);
+const show = id => $(id).classList.remove('hidden');
+const hide = id => $(id).classList.add('hidden');
+let sourceType = 'auto', pollTimer = null, tickTimer = null, hasOpenRouter = false, lastText = '';
+const SAMPLES = JSON.parse($('samples').textContent || '{}');
 
-// ── init ──────────────────────────────────────────────────────────────────────
-document.getElementById('promptText').value = DEFAULT_PROMPT;
-
+$('promptText').value = DEFAULT_PROMPT;
 fetch('/config').then(r => r.json()).then(d => {
-  hasOpenRouter = d.has_openrouter;
-  if (hasOpenRouter) show('colAi');
-});
+  hasOpenRouter = !!d.has_openrouter;
+  if (hasOpenRouter) show('compareTab');
+}).catch(() => {});
 
-// ── type toggle ───────────────────────────────────────────────────────────────
-document.querySelectorAll('.type-toggle button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.type-toggle button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    sourceType = btn.dataset.type;
-  });
-});
+// ── tabs ──────────────────────────────────────────────────────────────────────
+function setTab(t) {
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  $('results').classList.toggle('hidden', t !== 'record');
+  $('colAi').classList.toggle('hidden', t !== 'compare');
+  if (t === 'compare') hide('aiReady');
+}
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
 
-// ── char count ────────────────────────────────────────────────────────────────
-const inputText = document.getElementById('inputText');
-inputText.addEventListener('input', () => {
-  const n = inputText.value.length;
-  document.getElementById('charCount').textContent = n.toLocaleString() + ' char' + (n !== 1 ? 's' : '');
-});
+// ── input handling ────────────────────────────────────────────────────────────
+document.querySelectorAll('#typeToggle button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#typeToggle button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active'); sourceType = b.dataset.type;
+}));
+const inputText = $('inputText');
+function setText(t) { inputText.value = t; updateCount(); }
+function updateCount() { const n = inputText.value.length; $('charCount').textContent = n.toLocaleString() + (n === 1 ? ' character' : ' characters'); }
+inputText.addEventListener('input', updateCount);
+$('sampleMeeting').onclick = () => { if (SAMPLES.meeting) { setText(SAMPLES.meeting); setType('transcript'); } };
+$('sampleEmail').onclick = () => { if (SAMPLES.email) { setText(SAMPLES.email); setType('email'); } };
+function setType(t) { document.querySelectorAll('#typeToggle button').forEach(b => { b.classList.toggle('active', b.dataset.type === t); }); sourceType = t; }
 
-// ── prompt toggle ─────────────────────────────────────────────────────────────
-document.getElementById('promptToggle').addEventListener('click', () => {
-  const area = document.getElementById('promptArea');
-  const tog = document.getElementById('promptToggle');
-  if (area.classList.contains('hidden')) {
-    area.classList.remove('hidden');
-    tog.textContent = 'Hide prompt';
-  } else {
-    area.classList.add('hidden');
-    tog.textContent = 'Edit prompt';
-  }
-});
+function readFile(f) {
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { setText(String(r.result || '')); if (/\.eml$/i.test(f.name)) setType('email'); else if (/\.(vtt|srt)$/i.test(f.name)) setType('transcript'); };
+  r.readAsText(f);
+}
+$('fileInput').addEventListener('change', e => readFile(e.target.files[0]));
+const dz = $('dropzone');
+['dragenter','dragover'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('drag'); }));
+['dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('drag'); }));
+dz.addEventListener('drop', e => readFile(e.dataTransfer.files[0]));
 
-// ── reset ─────────────────────────────────────────────────────────────────────
+$('promptToggle').onclick = () => {
+  const a = $('promptArea'), hid = a.classList.contains('hidden');
+  a.classList.toggle('hidden', !hid); $('promptToggle').textContent = hid ? 'Hide prompt' : 'Edit prompt';
+};
+$('resetBtn').onclick = resetAll;
+$('editInput').onclick = () => { $('inputCard').classList.remove('collapsed'); };
+$('rerunBtn').onclick = () => { if (lastText) startAiCompare(lastText); };
+
 function resetAll() {
-  if (pollTimer) { clearTimeout(pollTimer); pollTimer = null; }
-  currentJobId = null;
-  inputText.value = '';
-  document.getElementById('charCount').textContent = '0 chars';
-  document.getElementById('analyzeBtn').disabled = false;
-  document.getElementById('headerSession').textContent = '';
-  hide('statusBar');
-  hide('results');
-  document.getElementById('aiBody').innerHTML = '<span class="ai-placeholder">Result will appear here after analysis.</span>';
+  clearTimeout(pollTimer); clearInterval(tickTimer);
+  setText(''); $('analyzeBtn').disabled = false; $('headerSession').textContent = '';
+  hide('statusBar'); hide('results'); hide('colAi'); hide('tabs'); hide('compactHero'); show('hero'); $('inputCard').classList.remove('collapsed');
+  $('aiBody').innerHTML = '<span class="ai-placeholder">The comparison appears here after you build a decision record.</span>';
   hide('aiSpinner');
 }
-document.getElementById('resetBtn').addEventListener('click', resetAll);
-document.getElementById('resetBtnBottom').addEventListener('click', resetAll);
-document.getElementById('rerunBtn').addEventListener('click', () => {
-  if (lastAnalyzedText) startAiCompare(lastAnalyzedText);
-});
 
 // ── analyze ───────────────────────────────────────────────────────────────────
-document.getElementById('analyzeBtn').addEventListener('click', async () => {
+$('analyzeBtn').addEventListener('click', async () => {
   const text = inputText.value.trim();
   if (!text) return;
-
-  resetResults();
-  setStatus('running', 'Analyzing — typically 30–90 seconds…');
-
-  // Start Pact job
+  hide('results'); hide('colAi'); hide('tabs'); $('analyzeBtn').disabled = true;
+  startStatus('Building the decision record — typically 30 to 90 seconds');
   let jobId;
   try {
-    const res = await fetch('/analyze', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, source_type: sourceType }),
-    });
+    const res = await fetch('/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, source_type: sourceType }) });
     const data = await res.json();
     if (!res.ok || !data.job_id) throw new Error(data.error || 'Server error');
     jobId = data.job_id;
-    currentJobId = jobId;
-  } catch (err) {
-    setStatus('error', 'Failed to start: ' + err.message);
-    return;
-  }
-
-  // Store for re-run
-  lastAnalyzedText = text;
-
-  // Start AI comparison simultaneously
-  if (hasOpenRouter) {
-    show('colAi');
-    startAiCompare(text);
-  }
-
-  poll(jobId, text);
+  } catch (err) { endStatus('error', 'Could not start: ' + err.message); $('analyzeBtn').disabled = false; return; }
+  lastText = text;
+  if (hasOpenRouter) startAiCompare(text);
+  poll(jobId);
 });
 
-function resetResults() {
-  document.getElementById('analyzeBtn').disabled = true;
-  ['optionsCard','questionsCard','blockersCard','flagsCard'].forEach(hide);
+function startStatus(msg) {
+  clearInterval(tickTimer);
+  const t0 = Date.now();
+  $('statusBar').className = 'status'; $('statusText').textContent = msg;
+  const tick = () => { const s = Math.round((Date.now() - t0) / 1000); $('elapsed').textContent = s + 's'; };
+  tick(); tickTimer = setInterval(tick, 1000);
+}
+function endStatus(type, msg) {
+  clearInterval(tickTimer);
+  if (type === 'ok') { hide('statusBar'); return; }
+  $('statusBar').className = 'status error'; $('statusText').textContent = msg; $('elapsed').textContent = '';
 }
 
-// ── Pact polling ──────────────────────────────────────────────────────────────
-function poll(jobId, text) {
+function poll(jobId) {
   pollTimer = setTimeout(async () => {
     try {
-      const res = await fetch('/jobs/' + jobId);
-      const data = await res.json();
-      if (data.status === 'done') {
-        hide('statusBar');
-        renderResults(data.result, jobId, data.duration_seconds);
-      } else if (data.status === 'failed') {
-        setStatus('error', 'Analysis failed: ' + (data.error || 'unknown'));
-        document.getElementById('analyzeBtn').disabled = false;
-      } else {
-        poll(jobId, text);
-      }
-    } catch (err) {
-      setStatus('error', 'Poll error: ' + err.message);
-      document.getElementById('analyzeBtn').disabled = false;
-    }
-  }, 2500);
+      const res = await fetch('/jobs/' + jobId); const data = await res.json();
+      if (data.status === 'done') { endStatus('ok'); renderResults(data.result, jobId, data.duration_seconds); }
+      else if (data.status === 'failed') { endStatus('error', 'Analysis failed: ' + (data.error || 'unknown')); $('analyzeBtn').disabled = false; }
+      else poll(jobId);
+    } catch (err) { endStatus('error', 'Lost contact with the server: ' + err.message); $('analyzeBtn').disabled = false; }
+  }, 2000);
 }
 
-// ── AI compare ────────────────────────────────────────────────────────────────
+// ── generic-model comparison ──────────────────────────────────────────────────
 async function startAiCompare(text) {
-  const model = document.getElementById('modelPick').value;
-  const prompt = document.getElementById('promptText').value;
-  const aiBody = document.getElementById('aiBody');
-  const aiSpinner = document.getElementById('aiSpinner');
-  const aiLabel = document.getElementById('aiModelLabel');
-
-  aiBody.innerHTML = '';
-  show('aiSpinner');
-  aiLabel.textContent = model;
-  document.getElementById('rerunBtn').disabled = true;
-
+  const model = $('modelPick').value, prompt = $('promptText').value, body = $('aiBody');
+  body.innerHTML = ''; show('aiSpinner'); $('aiModelLabel').textContent = model; $('rerunBtn').disabled = true;
   try {
-    const res = await fetch('/compare', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, prompt, model }),
-    });
-    const data = await res.json();
-    hide('aiSpinner');
-    if (data.error) {
-      aiBody.innerHTML = `<span style="color:#dc2626;font-size:13px;">Error: ${escHtml(data.error)}</span>`;
-    } else {
-      aiBody.innerHTML = `<div class="summary-md">${renderMarkdown(data.summary)}</div>`;
-    }
-  } catch (err) {
-    hide('aiSpinner');
-    aiBody.innerHTML = `<span style="color:#dc2626;font-size:13px;">Error: ${escHtml(err.message)}</span>`;
-  } finally {
-    document.getElementById('rerunBtn').disabled = false;
-  }
+    const res = await fetch('/compare', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, prompt, model }) });
+    const data = await res.json(); hide('aiSpinner');
+    body.innerHTML = data.error ? `<span style="color:var(--rose)">Error: ${esc(data.error)}</span>` : renderMarkdown(data.summary);
+  } catch (err) { hide('aiSpinner'); body.innerHTML = `<span style="color:var(--rose)">Error: ${esc(err.message)}</span>`; }
+  finally { $('rerunBtn').disabled = false; if ($('colAi').classList.contains('hidden')) show('aiReady'); }
 }
 
-// ── render Pact results ───────────────────────────────────────────────────────
-function renderResults(r, jobId, duration) {
-  // Participants
-  const strip = document.getElementById('participantsStrip');
-  strip.innerHTML = '';
-  (r.participants || []).filter(p => p !== 'Unknown').forEach(p => {
-    const chip = document.createElement('span');
-    chip.className = 'participant-chip';
-    chip.textContent = p;
-    strip.appendChild(chip);
-  });
+// ── parse the summary text into sections ──────────────────────────────────────
+const SECTION_KEYS = [
+  ['main', /^(the )?main point|^decision$/i], ['presented', /^presented/i], ['questions', /^open questions?/i],
+  ['stand', /^where people stand/i], ['blocking', /^what is blocking|^blocking|^blockers?/i], ['steps', /^next steps?/i],
+  ['awaiting', /^awaiting/i], ['rules', /^ground rules/i], ['check', /^things people asserted|^things to check/i],
+  ['flags', /^flags?$/i], ['private', /^marked private/i],
+];
+function sectionKey(h) { const t = h.replace(/[*#:]/g, '').trim(); for (const [k, re] of SECTION_KEYS) if (re.test(t)) return k; return null; }
 
-  // Summary
-  renderSummary(r.summary || '');
-
-  // Options & stances
-  renderOptions(r);
-
-  // Questions
-  const questions = (r.elements || []).filter(e => e.kind === 'question');
-  renderList('questionsCard', 'questionsBadge', 'questionsList', questions,
-    e => ({ title: e.title, meta: e.status || 'open', dot: 'open' }));
-
-  // Blockers + actions
-  const blockers = (r.elements || []).filter(e => e.kind === 'blocker' || e.kind === 'action');
-  renderList('blockersCard', 'blockersBadge', 'blockersList', blockers,
-    e => ({ title: e.title, meta: e.kind + (e.status ? ' · ' + e.status : ''), dot: e.kind === 'blocker' ? 'block' : 'open' }));
-
-  // Flags
-  const warnings = (r.warnings || []).filter(w => !w.startsWith('extract:') && !w.startsWith('bad ') && !w.startsWith('unknown op'));
-  renderFlags(warnings);
-
-  // Session footer
-  const chars = inputText.value.length;
-  document.getElementById('sessionMeta').innerHTML =
-    `<b>Session</b> ${jobId.slice(0,8)}… &nbsp;·&nbsp; <b>Duration</b> ${duration}s &nbsp;·&nbsp; <b>Input</b> ${chars.toLocaleString()} chars`;
-  document.getElementById('headerSession').textContent = jobId.slice(0,8) + '…';
-
-  document.getElementById('analyzeBtn').disabled = false;
-  show('results');
-}
-
-function renderSummary(raw) {
-  const lines = raw.split('\n');
-  let headline = '';
-  const bodyLines = [];
-  const meta = [];
-  let headlineSet = false;
-
+function parseSummary(raw) {
+  const lines = String(raw || '').split('\n');
+  let status = '', cur = 'main', started = false;
+  const sec = {};
   for (const line of lines) {
     const t = line.trim();
-    if (t.toLowerCase().startsWith('marked ')) { meta.push(t); continue; }
-    if (!headlineSet && t) { headline = t; headlineSet = true; continue; }
-    if (headlineSet) bodyLines.push(line);
+    if (!t) continue;
+    let h = null;
+    const m1 = t.match(/^#{1,4}\s*(.+)$/), m2 = t.match(/^\*\*(.+?)\*\*:?$/);
+    if (m1) h = m1[1]; else if (m2) h = m2[1];
+    if (h !== null) { const k = sectionKey(h); if (k) { cur = k; started = true; continue; } }
+    if (!status) { status = t.replace(/^status\s*:\s*/i, ''); continue; }
+    if (/^status\s*:/i.test(t)) continue;                       // a duplicated status line
+    if (/^marked private:/i.test(t) && !started) { (sec.private = sec.private || []).push(t.replace(/^marked private:\s*/i, '')); continue; }
+    (sec[cur] = sec[cur] || []).push(t.replace(/^[-*•]\s+/, ''));
   }
+  return { status, sec };
+}
 
-  while (bodyLines.length && !bodyLines[0].trim()) bodyLines.shift();
-
-  document.getElementById('summaryHeadline').textContent = headline;
-  document.getElementById('summaryBody').innerHTML = renderMarkdown(bodyLines.join('\n').trim());
-
-  const metaEl = document.getElementById('summaryMeta');
-  if (meta.length) {
-    metaEl.textContent = meta.join(' · ');
-    metaEl.classList.remove('hidden');
+function parseStatus(s) {
+  const decided = /^decision announced/i.test(s);
+  let head = s, tail = '';
+  const m = s.match(/\s((?:\d+ open question|\d+ open blocker|\d+ persons?|\d+ people|no one took|and no one took)[\s\S]*)$/i);
+  if (m) { head = s.slice(0, m.index).trim(); tail = m[1]; }
+  const num = re => { const x = tail.match(re); return x ? +x[1] : 0; };
+  let who = '', text = '', narrow = '';
+  if (decided) {
+    const d = head.match(/^Decision announced by (.+?)(?: in a message sent only to (.+?))?:\s*([\s\S]*)$/i);
+    if (d) { who = d[1]; narrow = d[2] || ''; text = d[3].replace(/\.$/, ''); }
   }
+  return { decided, who, narrow, text, head, q: num(/(\d+) open question/i), b: num(/(\d+) open blocker/i), p: num(/(\d+) (?:people|persons?)/i) };
+}
+
+// ── render ────────────────────────────────────────────────────────────────────
+const PALETTE = ['#0f6b5c','#2550a6','#a35a00','#7a3b8f','#b4232a','#3b6f9c','#5b7a2b','#8a5a44','#4b5563'];
+function colorFor(name) { let h = 0; for (const c of name) h = (h * 31 + c.charCodeAt(0)) >>> 0; return PALETTE[h % PALETTE.length]; }
+function initials(n) { const p = n.replace(/\(.*?\)/g, '').trim().split(/[\s,]+/).filter(Boolean); return ((p[0] || '?')[0] + ((p[1] || '')[0] || '')).toUpperCase(); }
+function flip(n) { const m = n.match(/^([^,]+),\s*(.+)$/); return m ? m[2] + ' ' + m[1] : n; }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function inline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/&quot;([^&]{3,}?)&quot;/g, '<span class="q">&ldquo;$1&rdquo;</span>'); }
+function setList(id, items, rowFn) {
+  const el = $(id); el.innerHTML = items.map(rowFn).join('');
+}
+
+function renderResults(r, jobId, duration) {
+  const { status, sec } = parseSummary(r.summary);
+  const st = parseStatus(status);
+  const els = r.elements || [];
+  const questions = els.filter(e => e.kind === 'question');
+
+  // decision card
+  const card = $('decision'); card.classList.toggle('decided', st.decided);
+  $('badge').textContent = st.decided ? 'Decision announced' : 'No decision yet';
+  $('by').textContent = st.decided && st.who ? 'by ' + st.who + (st.narrow ? ' · sent only to ' + st.narrow : '') : '';
+  if (st.decided) {
+    $('decisionTitle').textContent = st.text ? st.text.charAt(0).toUpperCase() + st.text.slice(1) : status;
+    $('decisionSub').textContent = st.narrow ? 'This announcement went to a subset of the group; others have not seen it.' : 'Announced to the group. Pact records who replied; it does not count silence as agreement.';
+  } else {
+    const q = (questions[0] || {}).title || ((sec.questions || [])[0] || '').replace(/^.{1,40}? raised:\s*/i, '').replace(/\s*\(.*?\)\s*$/, '');
+    $('decisionTitle').textContent = q || 'Nothing has been decided yet';
+    $('decisionSub').textContent = 'No one has announced a decision. Pact shows what is still open and what is in the way.';
+  }
+  const steps = sec.steps || [], waits = sec.awaiting || [];
+  const stats = [
+    [st.q, 'open questions', st.q ? 'warn' : 'good'], [st.b, 'blockers', st.b ? 'bad' : 'good'],
+    [st.p, 'positions taken', ''], [steps.length, 'next steps', ''], [waits.length, 'waiting on a reply', waits.length ? 'warn' : ''],
+  ];
+  $('stats').innerHTML = stats.map(([n, l, c]) => `<div class="stat ${c}"><b>${n}</b><span>${l}</span></div>`).join('');
+
+  // private banner
+  const priv = sec.private || [];
+  if (priv.length) {
+    $('privateBanner').innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2" stroke="currentColor" stroke-width="1.5"/></svg><div><b>Private, for the original recipients only.</b> ${priv.map(inline).join(' ')}</div>`;
+    show('privateBanner');
+  } else hide('privateBanner');
+
+  // main point
+  const main = sec.main || [];
+  $('mainBody').innerHTML = main.length ? main.map(p => `<p>${inline(p)}</p>`).join('') : '<p style="color:var(--ink3)">No narrative returned.</p>';
+
+  // people
+  const people = (sec.stand || []);
+  if (people.length) {
+    $('peopleCount').textContent = people.length;
+    $('peopleList').innerHTML = people.map(l => {
+      const m = l.match(/^([A-Z][\w.'’\- ]{1,40}?)(?::\s+| said | first said )([\s\S]+)$/);
+      if (m && !/^(Proposed|Options)/i.test(m[1])) {
+        const name = m[1].trim();
+        const body = /^[a-z]/.test(l.slice(name.length + 1).trim()) && / said /.test(l.slice(name.length, name.length + 12)) ? 'said ' + m[2] : m[2];
+        return `<div class="person"><div class="avatar" style="background:${colorFor(name)}">${esc(initials(name))}</div><div><div class="nm">${esc(name)}</div><div class="tx">${inline(body)}</div></div></div>`;
+      }
+      return `<div class="row" style="padding-left:2px"><span class="dot grey"></span><div>${inline(l)}</div></div>`;
+    }).join('');
+    show('peopleCard');
+  } else hide('peopleCard');
+
+  renderOptions(r);
+
+  // open questions + blockers
+  const qs = sec.questions || [], bl = sec.blocking || [];
+  fillList('questionsCard', 'questionsCount', 'questionsList', qs, '');
+  fillList('blockersCard', 'blockersCount', 'blockersList', bl, 'red');
+
+  // steps
+  if (steps.length || waits.length) {
+    $('stepsCount').textContent = steps.length || '';
+    $('stepsList').innerHTML = steps.map(s => `<div class="step"><span class="box"></span><div>${inline(s)}</div></div>`).join('');
+    $('waitList').innerHTML = waits.length ? `<div class="wait"><b>Waiting on a reply</b><br>${waits.map(w => inline(w)).join('<br>')}</div>` : '';
+    show('stepsCard');
+  } else hide('stepsCard');
+
+  fillFold('rulesFold', 'rulesList', sec.rules);
+  fillFold('checkFold', 'checkList', sec.check);
+  const warnings = (r.warnings || []).filter(w => !/^(extract:|bad |unknown op|consolidate)/.test(w));
+  const flagItems = [...(sec.flags || []), ...warnings.slice(0, 5)];
+  fillFold('flagFold', 'flagList', flagItems, 'grey');
+
+  $('sessionMeta').textContent = `Session ${jobId.slice(0, 8)} · built in ${duration}s · ${inputText.value.length.toLocaleString()} characters in`;
+  $('headerSession').textContent = jobId.slice(0, 8);
+  $('analyzeBtn').disabled = false;
+  hide('hero'); show('compactHero'); show('tabs'); setTab('record'); $('pactText').innerHTML = pactHtml(status, sec); $('inputCard').classList.add('collapsed');
+  $('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+const SEC_LABEL = {main:'The main point',presented:'Presented, no challenge recorded',questions:'Open questions',stand:'Where people stand',blocking:'Blocking progress',steps:'Next steps',awaiting:'Waiting on a reply',rules:'Ground rules',check:'Said, and worth checking',flags:'Flags',private:'Marked private'};
+function pactHtml(status, sec) {
+  let h = `<p><b>${esc(status)}</b></p>`;
+  for (const [k, items] of Object.entries(sec)) {
+    if (!items || !items.length) continue;
+    h += `<h4 style="font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);margin:16px 0 6px">${esc(SEC_LABEL[k] || k)}</h4>`;
+    h += k === 'main' ? items.map(t => `<p>${inline(t)}</p>`).join('') : '<ul style="padding-left:18px">' + items.map(t => `<li style="margin-bottom:5px">${inline(t)}</li>`).join('') + '</ul>';
+  }
+  return h;
+}
+
+function fillList(cardId, countId, listId, items, dot) {
+  if (!items.length) { hide(cardId); return; }
+  $(countId).textContent = items.length;
+  $(listId).innerHTML = items.map(t => `<div class="row"><span class="dot ${dot}"></span><div>${inline(t)}</div></div>`).join('');
+  show(cardId);
+}
+function fillFold(foldId, listId, items, dot) {
+  if (!items || !items.length) { hide(foldId); return; }
+  $(listId).innerHTML = items.map(t => `<div class="row"><span class="dot ${dot || 'grey'}"></span><div>${inline(t)}</div></div>`).join('');
+  show(foldId);
 }
 
 function renderOptions(r) {
   const options = (r.elements || []).filter(e => e.kind === 'option');
-  if (!options.length) return;
-
+  if (!options.length) { hide('optionsCard'); return; }
   const stanceMap = {};
   for (const ev of (r.events || [])) {
     if (ev.kind !== 'stance') continue;
-    if (!stanceMap[ev.element_id]) stanceMap[ev.element_id] = {};
-    stanceMap[ev.element_id][ev.participant] = ev.payload.stance;
+    (stanceMap[ev.element_id] = stanceMap[ev.element_id] || {})[ev.participant] = ev.payload.stance;
   }
-
   const qMap = {};
-  for (const e of (r.elements || [])) {
-    if (e.kind === 'question') qMap[e.id] = e.title;
-  }
-
-  const activeP = [...new Set(
-    Object.values(stanceMap).flatMap(m => Object.keys(m))
-  )].filter(p => p !== 'Unknown');
-
-  document.getElementById('optionsBadge').textContent = options.length;
-
-  document.getElementById('stanceHead').innerHTML = '<tr>' +
-    '<th>Option</th><th>Status</th>' +
-    activeP.map(p => `<th>${escHtml(shortName(p))}</th>`).join('') +
-    '</tr>';
-
-  const body = document.getElementById('stanceBody');
-  body.innerHTML = '';
-  for (const opt of options) {
-    const stances = stanceMap[opt.id] || {};
-    const qTitle = opt.question_id ? qMap[opt.question_id] : null;
-    const tr = document.createElement('tr');
-    tr.innerHTML =
-      `<td><div class="opt-title">${escHtml(opt.title)}</div>` +
-      (qTitle ? `<div class="opt-sub">re: ${escHtml(truncate(qTitle, 55))}</div>` : '') +
-      `</td>` +
-      `<td><span class="pill ${statusCls(opt.status)}">${escHtml(opt.status || 'active')}</span></td>` +
-      activeP.map(p => {
-        const s = stances[p];
-        return `<td>${s ? `<span class="pill ${stanceCls(s)}">${escHtml(s)}</span>` : ''}</td>`;
-      }).join('');
-    body.appendChild(tr);
-  }
-
+  for (const e of (r.elements || [])) if (e.kind === 'question') qMap[e.id] = e.title;
+  const shown = options.filter(o => !['withdrawn', 'rejected'].includes(o.status) || Object.keys(stanceMap[o.id] || {}).length).slice(0, 10);
+  $('optionsCount').textContent = shown.length;
+  $('optionsList').innerHTML = shown.map(o => {
+    const st = stanceMap[o.id] || {};
+    const chips = Object.entries(st).filter(([p]) => p !== 'Unknown').map(([p, s]) =>
+      `<span class="chip ${esc(s)}"><i style="background:${colorFor(p)}">${esc(initials(p))}</i>${esc(flip(p))} · ${esc(s)}</span>`).join('');
+    const q = o.question_id && qMap[o.question_id] ? `<div class="opt-s">for: ${esc(qMap[o.question_id].slice(0, 90))}</div>` : '';
+    const dim = ['withdrawn', 'rejected'].includes(o.status) ? ' dim' : '';
+    return `<div class="opt${dim}"><div class="opt-t">${esc(o.title)}${dim ? ' <span class="opt-s">(' + esc(o.status) + ')</span>' : ''}</div>${q}` +
+      (chips ? `<div class="chips">${chips}</div>` : `<div class="opt-s" style="margin-top:6px">No explicit position recorded</div>`) + `</div>`;
+  }).join('');
   show('optionsCard');
 }
 
-function renderList(cardId, badgeId, listId, items, mapper) {
-  if (!items.length) return;
-  document.getElementById(badgeId).textContent = items.length;
-  const list = document.getElementById(listId);
-  list.innerHTML = '';
-  for (const item of items) {
-    const m = mapper(item);
-    const div = document.createElement('div');
-    div.className = 'list-row';
-    div.innerHTML =
-      `<div class="dot ${m.dot || ''}"></div>` +
-      `<div><div class="row-title">${escHtml(m.title)}</div>` +
-      `<div class="row-meta">${escHtml(m.meta)}</div></div>`;
-    list.appendChild(div);
-  }
-  show(cardId);
-}
-
-function renderFlags(warnings) {
-  if (!warnings.length) return;
-  document.getElementById('flagsBadge').textContent = warnings.length;
-  const list = document.getElementById('flagsList');
-  list.innerHTML = '';
-  for (const w of warnings) {
-    const div = document.createElement('div');
-    div.className = 'flag-row';
-    div.innerHTML = `<span class="flag-icon">⚑</span><span>${escHtml(truncate(w, 200))}</span>`;
-    list.appendChild(div);
-  }
-  show('flagsCard');
-}
-
-// ── markdown renderer ─────────────────────────────────────────────────────────
+// ── small markdown renderer for the comparison panel ──────────────────────────
 function renderMarkdown(text) {
   if (!text) return '';
-  const blocks = text.split(/\n{2,}/);
-  return blocks.map(block => {
-    const t = block.trim();
-    if (!t) return '';
-
-    // Horizontal rule
-    if (/^---+$/.test(t)) return '<hr>';
-
-    // ## Heading
-    if (t.startsWith('## ')) {
-      return `<h2>${escHtml(t.slice(3).trim())}</h2>`;
-    }
-    if (t.startsWith('# ')) {
-      return `<h2>${escHtml(t.slice(2).trim())}</h2>`;
-    }
-
-    // Bullet list (lines starting with - or *)
+  return String(text).split(/\n{2,}/).map(block => {
+    const t = block.trim(); if (!t) return '';
+    const h = t.match(/^#{1,4}\s+(.+)/);
+    if (h) { const rest = t.slice(t.indexOf('\n') + 1); const first = `<h2>${inline(h[1])}</h2>`; return t.includes('\n') ? first + renderMarkdown(rest) : first; }
     const lines = t.split('\n');
-    if (lines.every(l => /^[-*] /.test(l.trim()) || l.trim() === '')) {
-      const items = lines.filter(l => /^[-*] /.test(l.trim()));
-      return '<ul>' + items.map(l =>
-        `<li>${inlineMarkdown(l.trim().replace(/^[-*] /, ''))}</li>`
-      ).join('') + '</ul>';
-    }
-
-    // Mixed block: might have heading then bullets
-    if (lines.some(l => /^[-*] /.test(l.trim())) && lines.some(l => !/^[-*]/.test(l.trim()) && l.trim())) {
-      let html = '';
-      let inList = false;
-      for (const line of lines) {
-        const lt = line.trim();
-        if (!lt) continue;
-        if (/^[-*] /.test(lt)) {
-          if (!inList) { html += '<ul>'; inList = true; }
-          html += `<li>${inlineMarkdown(lt.replace(/^[-*] /, ''))}</li>`;
-        } else {
-          if (inList) { html += '</ul>'; inList = false; }
-          html += `<p>${inlineMarkdown(lt)}</p>`;
-        }
-      }
-      if (inList) html += '</ul>';
-      return html;
-    }
-
-    // Plain paragraph
-    return `<p>${inlineMarkdown(t.replace(/\n/g, ' '))}</p>`;
+    if (lines.every(l => /^\s*[-*] /.test(l) || !l.trim())) return '<ul>' + lines.filter(l => l.trim()).map(l => `<li>${inline(l.replace(/^\s*[-*] /, ''))}</li>`).join('') + '</ul>';
+    return `<p>${inline(t.replace(/\n/g, ' '))}</p>`;
   }).join('');
-}
-
-function inlineMarkdown(s) {
-  return escHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-}
-
-// ── helpers ───────────────────────────────────────────────────────────────────
-function setStatus(type, msg) {
-  const bar = document.getElementById('statusBar');
-  bar.className = 'status-bar' + (type === 'error' ? ' error' : '');
-  document.getElementById('statusText').textContent = msg;
-  show('statusBar');
-}
-function show(id) { document.getElementById(id).classList.remove('hidden'); }
-function hide(id) { document.getElementById(id).classList.add('hidden'); }
-function escHtml(s) {
-  return String(s)
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function truncate(s, n) { return s.length > n ? s.slice(0, n) + '…' : s; }
-function shortName(full) {
-  const parts = full.split(',').map(s => s.trim());
-  if (parts.length === 2) return parts[1].split(' ')[0] + ' ' + parts[0][0] + '.';
-  return full.length > 14 ? full.split(' ')[0] : full;
-}
-function statusCls(s) {
-  return {'active':'pill-active','decided':'pill-decided','rejected':'pill-rejected','withdrawn':'pill-withdrawn'}[s]||'pill-active';
-}
-function stanceCls(s) {
-  return {'support':'pill-support','oppose':'pill-oppose','conditional':'pill-conditional','abstain':'pill-abstain','withdrawn':'pill-withdrawn-s'}[s]||'';
 }
 </script>
 </body>
